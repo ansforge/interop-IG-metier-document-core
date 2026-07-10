@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingInformateurCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts mappingInformateurCDAFHIR</b></p><a name="mappingInformateurCDAFHIR"> </a><a name="hcmappingInformateurCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMInformateur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>informant</td><td/></tr><tr><td>FRLMInformateur.informateur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>informant.assignedEntity</td><td>L'élément informateur est de type PersonneStructure.</td></tr><tr><td>FRLMInformateur.informateur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>informant.relatedEntity</td><td>L'élément informateur est de type PersonneStructure.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant</code> to <a href="http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-informant-extension.html">Informant Extensionversion : 1.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>informant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:InformantExtension</td><td/></tr><tr><td>informant.assignedEntity</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:InformantExtension.extension:party.ValueReference</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole or Patient)</td></tr><tr><td>informant.relatedEntity</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:InformantExtension.extension:party.ValueReference</td><td>extension:party.ValueReference.resolve().ofType(RelatedPerson)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingInformateurCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Informateur&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Informateur&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;informateur\&quot; et l'élément CDA \&quot;informant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informant\&quot; et l'extension FHIR \&quot;InformantExtension\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informateur"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant"/>
+    <element>
+      <code value="FRLMInformateur"/>
+      <target>
+        <code value="informant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMInformateur.informateur"/>
+      <target>
+        <code value="informant.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément informateur est de type PersonneStructure."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMInformateur.informateur"/>
+      <target>
+        <code value="informant.relatedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément informateur est de type PersonneStructure."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant"/>
+    <target value="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension"/>
+    <targetVersion value="1.1.0"/>
+    <element>
+      <code value="informant"/>
+      <target>
+        <code value="extension:InformantExtension"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="informant.assignedEntity"/>
+      <target>
+        <code value="extension:InformantExtension.extension:party.ValueReference"/>
+        <equivalence value="equivalent"/>
+        <comment value="extension:party.ValueReference.resolve().ofType(PractitionerRole or Patient)"/>
+      </target>
+    </element>
+    <element>
+      <code value="informant.relatedEntity"/>
+      <target>
+        <code value="extension:InformantExtension.extension:party.ValueReference"/>
+        <equivalence value="equivalent"/>
+        <comment value="extension:party.ValueReference.resolve().ofType(RelatedPerson)"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

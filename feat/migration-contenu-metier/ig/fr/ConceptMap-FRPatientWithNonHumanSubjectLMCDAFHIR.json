@@ -1,0 +1,104 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRPatientWithNonHumanSubjectLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRPatientWithNonHumanSubjectLMCDAFHIR</b></p><a name=\"FRPatientWithNonHumanSubjectLMCDAFHIR\"> </a><a name=\"hcFRPatientWithNonHumanSubjectLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMPatientSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAPatientAvecSujetNonHumain</td></tr><tr><td>FRLMPatientSujetNonHumain.sujet</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code</td></tr><tr><td>FRLMPatientSujetNonHumain.adresse</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.addr</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-record-target</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRCDARecordTarget.patientRole</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.subject</td><td>Subject = Reference(FRPatientINSDocument).</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRCDAPatientAvecSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen</td><td/></tr><tr><td>FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance</td><td>specimen.subject = Reference(Substance).</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/substance</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Substance.code</td></tr><tr><td>FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code.qualifier.value</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Substance.category</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRPatientWithNonHumanSubjectLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Metier/CDA/FHIR : \"Patient avec sujet non humain\"",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modele metier FRLMPatientSujetNonHumain vers l'element CDA FRCDAPatientAvecSujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance et Observation/subject.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain",
+    "element" : [{
+      "code" : "FRLMPatientSujetNonHumain",
+      "target" : [{
+        "code" : "FRCDAPatientAvecSujetNonHumain",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPatientSujetNonHumain.sujet",
+      "target" : [{
+        "code" : "FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPatientSujetNonHumain.adresse",
+      "target" : [{
+        "code" : "FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.addr",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-record-target",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document",
+    "element" : [{
+      "code" : "FRCDARecordTarget.patientRole",
+      "target" : [{
+        "code" : "FRObservationLaboratoryReportResultsDocument.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Subject = Reference(FRPatientINSDocument)."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document",
+    "element" : [{
+      "code" : "FRCDAPatientAvecSujetNonHumain",
+      "target" : [{
+        "code" : "FRObservationLaboratoryReportResultsDocument.specimen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code",
+      "target" : [{
+        "code" : "FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance",
+        "equivalence" : "equivalent",
+        "comment" : "specimen.subject = Reference(Substance)."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-patient-avec-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/substance",
+    "element" : [{
+      "code" : "FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code",
+      "target" : [{
+        "code" : "Substance.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAPatientAvecSujetNonHumain.subject.relatedSubject.code.qualifier.value",
+      "target" : [{
+        "code" : "Substance.category",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

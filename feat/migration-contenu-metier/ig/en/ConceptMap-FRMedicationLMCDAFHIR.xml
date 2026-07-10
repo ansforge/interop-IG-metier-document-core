@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRMedicationLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRMedicationLMCDAFHIR</b></p><a name="en-FRMedicationLMCDAFHIR"> </a><a name="en-hcFRMedicationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-produit-sante</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMProduitSante</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante</td></tr><tr><td>FRLMProduitSante.medicament</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial</td></tr><tr><td>FRLMProduitSante.medicament.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code</td></tr><tr><td>FRLMProduitSante.medicament.code.autreCodification</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code.translation</td></tr><tr><td>FRLMProduitSante.nomProduit</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name</td></tr><tr><td>FRLMProduitSante.formeGalenique</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode</td></tr><tr><td>FRLMProduitSante.numeroLot</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText</td></tr><tr><td>FRLMProduitSante.dateExpiration</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:expirationTime</td></tr><tr><td>FRLMProduitSante.conditionnement</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMProduitSante.equivalentGenerique</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asSpecializedKind</td></tr><tr><td>FRLMProduitSante.substanceActive</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:ingredient</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAProduitDeSante</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument</td></tr><tr><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.code</td></tr><tr><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code.translation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.code.coding</td></tr><tr><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-productname</td></tr><tr><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.form</td></tr><tr><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.batch.lotNumber</td></tr><tr><td>FRCDAProduitDeSante.pharm:expirationTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.batch.expirationDate</td></tr><tr><td>FRCDAProduitDeSante.pharm:asContent</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-characteristic</td></tr><tr><td>FRCDAProduitDeSante.pharm:asSpecializedKind</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-classification</td></tr><tr><td>FRCDAProduitDeSante.pharm:ingredient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive</td></tr><tr><td>FRCDAProduitDeSante.pharm:ingredient.pharm:quantity</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive.strength</td></tr><tr><td>FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive.itemCodeableConcept</td></tr><tr><td>FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive.itemCodeableConcept.text</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Produit de santé&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMProduitSante vers le profil CDA FRCDAProduitDeSante, puis vers le profil FHIR FRMedicationDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-produit-sante"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante"/>
+    <element>
+      <code value="FRLMProduitSante"/>
+      <target>
+        <code value="FRCDAProduitDeSante"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.medicament"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.medicament.code"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.medicament.code.autreCodification"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code.translation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.nomProduit"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.formeGalenique"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.numeroLot"/>
+      <target>
+        <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.dateExpiration"/>
+      <target>
+        <code value="FRCDAProduitDeSante.pharm:expirationTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.conditionnement"/>
+      <target>
+        <code value="FRCDAProduitDeSante.pharm:asContent"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.equivalentGenerique"/>
+      <target>
+        <code value="FRCDAProduitDeSante.pharm:asSpecializedKind"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMProduitSante.substanceActive"/>
+      <target>
+        <code value="FRCDAProduitDeSante.pharm:ingredient"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document"/>
+    <element>
+      <code value="FRCDAProduitDeSante"/>
+      <target>
+        <code value="FRMedicationDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code"/>
+      <target>
+        <code value="FRMedicationDocument.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code.translation"/>
+      <target>
+        <code value="FRMedicationDocument.code.coding"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name"/>
+      <target>
+        <code value="FRMedicationDocument.extension:ihe-ext-medication-productname"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode"/>
+      <target>
+        <code value="FRMedicationDocument.form"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText"/>
+      <target>
+        <code value="FRMedicationDocument.batch.lotNumber"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:expirationTime"/>
+      <target>
+        <code value="FRMedicationDocument.batch.expirationDate"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:asContent"/>
+      <target>
+        <code value="FRMedicationDocument.extension:ihe-ext-medication-characteristic"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:asSpecializedKind"/>
+      <target>
+        <code value="FRMedicationDocument.extension:ihe-ext-medication-classification"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:ingredient"/>
+      <target>
+        <code value="FRMedicationDocument.ingredient:substanceActive"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:ingredient.pharm:quantity"/>
+      <target>
+        <code value="FRMedicationDocument.ingredient:substanceActive.strength"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code"/>
+      <target>
+        <code value="FRMedicationDocument.ingredient:substanceActive.itemCodeableConcept"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:name"/>
+      <target>
+        <code value="FRMedicationDocument.ingredient:substanceActive.itemCodeableConcept.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionLaboratorySubChapterLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionLaboratorySubChapterLMCDAFHIR</b></p><a name="en-FRSectionLaboratorySubChapterLMCDAFHIR"> </a><a name="en-hcFRSectionLaboratorySubChapterLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-crbio-sous-chapitre</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-sous-chapitre</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMCRBIOSousChapitre</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDACRBIOSousChapitre</td></tr><tr><td>FRLMCRBIOSousChapitre.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDACRBIOSousChapitre.code</td></tr><tr><td>FRLMCRBIOSousChapitre.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDACRBIOSousChapitre.text</td></tr><tr><td>FRLMCRBIOSousChapitre.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDACRBIOSousChapitre.title</td></tr><tr><td>FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDACRBIOSousChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-sous-chapitre</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDACRBIOSousChapitre</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:avec-sous-sections.section</td></tr><tr><td>FRCDACRBIOSousChapitre.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:avec-sous-sections.section.code</td></tr><tr><td>FRCDACRBIOSousChapitre.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:avec-sous-sections.section.text</td></tr><tr><td>FRCDACRBIOSousChapitre.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:avec-sous-sections.section.title</td></tr><tr><td>FRCDACRBIOSousChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:avec-sous-sections.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Sous-chapitre de BIO&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-crbio-sous-chapitre"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-sous-chapitre"/>
+    <element>
+      <code value="FRLMCRBIOSousChapitre"/>
+      <target>
+        <code value="FRCDACRBIOSousChapitre"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMCRBIOSousChapitre.codeSection"/>
+      <target>
+        <code value="FRCDACRBIOSousChapitre.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMCRBIOSousChapitre.blocNarratif"/>
+      <target>
+        <code value="FRCDACRBIOSousChapitre.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMCRBIOSousChapitre.titreSection"/>
+      <target>
+        <code value="FRCDACRBIOSousChapitre.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale"/>
+      <target>
+        <code value="FRCDACRBIOSousChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-sous-chapitre"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDACRBIOSousChapitre"/>
+      <target>
+        <code value="FRCompositionDocument.section:avec-sous-sections.section"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDACRBIOSousChapitre.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:avec-sous-sections.section.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDACRBIOSousChapitre.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:avec-sous-sections.section.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDACRBIOSousChapitre.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:avec-sous-sections.section.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDACRBIOSousChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale"/>
+      <target>
+        <code value="FRCompositionDocument.section:avec-sous-sections.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRImagingProcedureLMCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRImagingProcedureLMCDAFHIR</b></p><a name="FRImagingProcedureLMCDAFHIR"> </a><a name="hcFRImagingProcedureLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMTechniqueImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie</td></tr><tr><td>FRLMTechniqueImagerie.identifiant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.id</td></tr><tr><td>FRLMTechniqueImagerie.codeActe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.code</td></tr><tr><td>FRLMTechniqueImagerie.description</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.text</td></tr><tr><td>FRLMTechniqueImagerie.date</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.effectiveTime</td></tr><tr><td>FRLMTechniqueImagerie.modaliteAcquisition</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.methodCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite.precisionTopographique</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td></tr><tr><td>FRLMTechniqueImagerie.participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.participant</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRCDADICOMTechniqueImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.identifier</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.code</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.note</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.effectiveTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.performed[x]</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.methodCode</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality.</td></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.bodySite</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td/><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td/><td/></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRImagingProcedureLMCDAFHIR</b></p><a name="en-FRImagingProcedureLMCDAFHIR"> </a><a name="en-hcFRImagingProcedureLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMTechniqueImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie</td></tr><tr><td>FRLMTechniqueImagerie.identifiant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.id</td></tr><tr><td>FRLMTechniqueImagerie.codeActe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.code</td></tr><tr><td>FRLMTechniqueImagerie.description</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.text</td></tr><tr><td>FRLMTechniqueImagerie.date</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.effectiveTime</td></tr><tr><td>FRLMTechniqueImagerie.modaliteAcquisition</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.methodCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite.precisionTopographique</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td></tr><tr><td>FRLMTechniqueImagerie.participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.participant</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRCDADICOMTechniqueImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.identifier</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.code</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.note</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.effectiveTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.performed[x]</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.methodCode</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality.</td></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRProcedureImagingDocument.bodySite</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td/><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td/><td/></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingProcedureLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Technique imagerie&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie"/>
+    <element>
+      <code value="FRLMTechniqueImagerie"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.identifiant"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.codeActe"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.description"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.date"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.modaliteAcquisition"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.methodCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.lateralite"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.targetSiteCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.lateralite.precisionTopographique"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMTechniqueImagerie.participant"/>
+      <target>
+        <code value="FRCDADICOMTechniqueImagerie.participant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document"/>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie"/>
+      <target>
+        <code value="FRProcedureImagingDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.id"/>
+      <target>
+        <code value="FRProcedureImagingDocument.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.code"/>
+      <target>
+        <code value="FRProcedureImagingDocument.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.text"/>
+      <target>
+        <code value="FRProcedureImagingDocument.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.effectiveTime"/>
+      <target>
+        <code value="FRProcedureImagingDocument.performed[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.methodCode"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.targetSiteCode"/>
+      <target>
+        <code value="FRProcedureImagingDocument.bodySite"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier"/>
+      <target>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMTechniqueImagerie.participant"/>
+      <target>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

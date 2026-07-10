@@ -1,0 +1,184 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionImagingClinicalInformationLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionImagingClinicalInformationLMCDAFHIR</b></p><a name=\"FRSectionImagingClinicalInformationLMCDAFHIR\"> </a><a name=\"hcFRSectionImagingClinicalInformationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informations-cliniques</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMInformationsCliniques</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical</td></tr><tr><td>FRLMInformationsCliniques.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.title</td></tr><tr><td>FRLMInformationsCliniques.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.text</td></tr><tr><td>FRLMInformationsCliniques.entree.antecedentsMedicaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.entry.observation:antecedentsMedicaux</td></tr><tr><td>FRLMInformationsCliniques.entree.antecedentsChirurgicaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.entry.observation:antecedentsChirurgicaux</td></tr><tr><td>FRLMInformationsCliniques.entree.statutGrossesse</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.entry.observation:grossesse</td></tr><tr><td>FRLMInformationsCliniques.entree.contreIndications</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMHistoriqueMedical.entry.observation:contreIndications</td></tr><tr><td>FRLMInformationsCliniques.entree.probleme</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMInformationsCliniques.entree.dispositifMedical</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMInformationsCliniques.entree.administrationProduitDeSante</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMInformationsCliniques.entree.sexeClinique</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/observation</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADICOMHistoriqueMedical</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history</td></tr><tr><td>FRCDADICOMHistoriqueMedical.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history.title</td></tr><tr><td>FRCDADICOMHistoriqueMedical.entry.observation:antecedentsMedicaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history.entry:Observation</td></tr><tr><td>FRCDADICOMHistoriqueMedical.entry.observation:antecedentsChirurgicaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history.entry:Observation</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADICOMHistoriqueMedical.entry.observation:grossesse</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history.entry:FRObservationPregnancyDocument</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-contra-indications-imaging-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADICOMHistoriqueMedical.entry.observation:contreIndications</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:history.entry:FRObservationContraIndicationsImagingDocument</td></tr></table><hr/><p><b>Groupe 5 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td/><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Groupe 6 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-condition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td/><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td/><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : Informations cliniques d'imagerie",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informations-cliniques",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "element" : [{
+      "code" : "FRLMInformationsCliniques",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.titreSection",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.blocNarratif",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.antecedentsMedicaux",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.entry.observation:antecedentsMedicaux",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.antecedentsChirurgicaux",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.entry.observation:antecedentsChirurgicaux",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.statutGrossesse",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.entry.observation:grossesse",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.contreIndications",
+      "target" : [{
+        "code" : "FRCDADICOMHistoriqueMedical.entry.observation:contreIndications",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.probleme",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.dispositifMedical",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.administrationProduitDeSante",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMInformationsCliniques.entree.sexeClinique",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/observation",
+    "element" : [{
+      "code" : "FRCDADICOMHistoriqueMedical",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMHistoriqueMedical.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMHistoriqueMedical.entry.observation:antecedentsMedicaux",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history.entry:Observation",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMHistoriqueMedical.entry.observation:antecedentsChirurgicaux",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history.entry:Observation",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-pregnancy-document",
+    "element" : [{
+      "code" : "FRCDADICOMHistoriqueMedical.entry.observation:grossesse",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history.entry:FRObservationPregnancyDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-contra-indications-imaging-document",
+    "element" : [{
+      "code" : "FRCDADICOMHistoriqueMedical.entry.observation:contreIndications",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:history.entry:FRObservationContraIndicationsImagingDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-auteur-document",
+    "element" : [{
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-condition-document",
+    "element" : [{
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  }]
+}

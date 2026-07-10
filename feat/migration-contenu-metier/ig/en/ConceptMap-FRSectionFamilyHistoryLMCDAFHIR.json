@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionFamilyHistoryLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionFamilyHistoryLMCDAFHIR</b></p><a name=\"en-FRSectionFamilyHistoryLMCDAFHIR\"> </a><a name=\"en-hcFRSectionFamilyHistoryLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-familiaux</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMAntecedentsFamiliaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsFamiliaux</td></tr><tr><td>FRLMAntecedentsFamiliaux.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsFamiliaux.code</td></tr><tr><td>FRLMAntecedentsFamiliaux.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsFamiliaux.title</td></tr><tr><td>FRLMAntecedentsFamiliaux.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsFamiliaux.text</td></tr><tr><td>FRLMAntecedentsFamiliaux.entree.antecedentsFamiliaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsFamiliaux.entry:FRCDAAntecedentsFamiliaux</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAAntecedentsFamiliaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:FamilyHistory</td></tr><tr><td>FRCDAAntecedentsFamiliaux.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:FamilyHistory.code</td></tr><tr><td>FRCDAAntecedentsFamiliaux.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:FamilyHistory.title</td></tr><tr><td>FRCDAAntecedentsFamiliaux.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:FamilyHistory.text</td></tr><tr><td>FRCDAAntecedentsFamiliaux.entry:FRCDAAntecedentsFamiliaux</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:FamilyHistory.entry:FRFamilyMemberHistoryDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionFamilyHistoryLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Antécédents familiaux\"",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-familiaux",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux",
+    "element" : [{
+      "code" : "FRLMAntecedentsFamiliaux",
+      "target" : [{
+        "code" : "FRCDAAntecedentsFamiliaux",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAntecedentsFamiliaux.codeSection",
+      "target" : [{
+        "code" : "FRCDAAntecedentsFamiliaux.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAntecedentsFamiliaux.titreSection",
+      "target" : [{
+        "code" : "FRCDAAntecedentsFamiliaux.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAntecedentsFamiliaux.blocNarratif",
+      "target" : [{
+        "code" : "FRCDAAntecedentsFamiliaux.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAntecedentsFamiliaux.entree.antecedentsFamiliaux",
+      "target" : [{
+        "code" : "FRCDAAntecedentsFamiliaux.entry:FRCDAAntecedentsFamiliaux",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDAAntecedentsFamiliaux",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:FamilyHistory",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAAntecedentsFamiliaux.code",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:FamilyHistory.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAAntecedentsFamiliaux.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:FamilyHistory.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAAntecedentsFamiliaux.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:FamilyHistory.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAAntecedentsFamiliaux.entry:FRCDAAntecedentsFamiliaux",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:FamilyHistory.entry:FRFamilyMemberHistoryDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

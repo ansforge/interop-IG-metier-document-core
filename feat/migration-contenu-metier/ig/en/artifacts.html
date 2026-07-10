@@ -1,0 +1,3553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - FR Document Core (Modèle métier) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">FR Document Core (Modèle métier)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+
+
+  <img alt="France (la) flag" src="../assets/images/fra.svg" height="16" title="France (la)"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Structure générale document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="exigencesSpecifiques.html">Exigences spécifiques</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-struc-gen.html">Mapping CDA / FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Entête document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-fr-lm-header-document.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-entete.html">Mapping Métier/CDA/FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Corps d&apos;un document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-fr-lm-corps-document.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-corps.html">Mapping Métier/CDA/FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/document-core/index.html">IG FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/cda/document-core/index.html">IG CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/fhir">Serveur Multi-terminologies / FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a href="securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/fhir/R4/index.html">Standard FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../fr/artifacts.html"><img class="flag" src="assets/images/lang-fr.png" alt="flag fr"/>Français</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="translationinfo.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="StructureDefinition-fr-lm-attester.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">FR Document Core (Modèle métier) - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/document-core/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  <p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+  
+  <p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+  
+  </p>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc"
+     data-fhir="generated">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Modèles logiques métier de l'entête d'un document</a>
+      </li>
+      <li>
+         <a href="#2"></a>
+      </li>
+      <li>
+         <a href="#3">Modèles logiques métier des composants communs</a>
+      </li>
+      <li>
+         <a href="#4"></a>
+      </li>
+      <li>
+         <a href="#5"></a>
+      </li>
+      <li>
+         <a href="#6"></a>
+      </li>
+      <li>
+         <a href="#7">Structures: Logical Models</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     data-fhir="generated">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Modèles logiques métier de l'entête d'un document </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-attester.html"
+                  title="StructureDefinition/fr-lm-attester">
+                  <span title="StructureDefinition/fr-lm-attester">Logical model - FR LM Attester
+</span>
+               </a>
+            </td>
+            <td>
+<p>Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-consent.html"
+                  title="StructureDefinition/fr-lm-consent">
+                  <span title="StructureDefinition/fr-lm-consent">Logical model - FR LM Consent
+</span>
+               </a>
+            </td>
+            <td>
+<p>Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-data-enterer.html"
+                  title="StructureDefinition/fr-lm-data-enterer">
+                  <span title="StructureDefinition/fr-lm-data-enterer">Logical model - FR LM Data Enterer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Opérateur de saisie de la totalité ou d'une partie du contenu du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-header-document.html"
+                  title="StructureDefinition/fr-lm-header-document">
+                  <span title="StructureDefinition/fr-lm-header-document">Logical model - FR LM Header Document
+</span>
+               </a>
+            </td>
+            <td>
+<p>Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-health-professional.html"
+                  title="StructureDefinition/fr-lm-health-professional">
+                  <span title="StructureDefinition/fr-lm-health-professional">Logical model - FR LM Health Professional
+</span>
+               </a>
+            </td>
+            <td>
+<p>Une personne (professionnel ou patient ou autre)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-human-name.html"
+                  title="StructureDefinition/fr-lm-human-name">
+                  <span title="StructureDefinition/fr-lm-human-name">Logical model - FR LM Human Name
+</span>
+               </a>
+            </td>
+            <td>
+<p>Modele logique metier - FR LM Human Name</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-informant.html"
+                  title="StructureDefinition/fr-lm-informant">
+                  <span title="StructureDefinition/fr-lm-informant">Logical model - FR LM Informant
+</span>
+               </a>
+            </td>
+            <td>
+<p>Informant (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-intended-recipient.html"
+                  title="StructureDefinition/fr-lm-intended-recipient">
+                  <span title="StructureDefinition/fr-lm-intended-recipient">Logical model - FR LM Intended Recipient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Personne déclarée comme destinataire prévu du document.</p>
+<ul>
+  <li>Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).
+ Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-legal-authentication.html"
+                  title="StructureDefinition/fr-lm-legal-authentication">
+                  <span title="StructureDefinition/fr-lm-legal-authentication">Logical model - FR LM Legal Authentication
+</span>
+               </a>
+            </td>
+            <td>
+<p>Représente le responsable du document, qui est :</p>
+<ul>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel.</li>
+  <li>soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …).</li>
+  <li>soit le patient/usager responsable du document d'expression personnelle</li>
+  <li>soit le SNR responsable du document produit via ce SNR.</li>
+  <li>Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-location.html"
+                  title="StructureDefinition/fr-lm-location">
+                  <span title="StructureDefinition/fr-lm-location">Logical model - FR LM Location
+</span>
+               </a>
+            </td>
+            <td>
+<p>Lieu</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-order.html"
+                  title="StructureDefinition/fr-lm-order">
+                  <span title="StructureDefinition/fr-lm-order">Logical model - FR LM Order
+</span>
+               </a>
+            </td>
+            <td>
+<p>Association to an order that is the origin of the act resulting in the document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-organisation.html"
+                  title="StructureDefinition/fr-lm-organisation">
+                  <span title="StructureDefinition/fr-lm-organisation">Logical model - FR LM Organisation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Une structure (organisation) pour les professionnels de santé.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-participant.html"
+                  title="StructureDefinition/fr-lm-participant">
+                  <span title="StructureDefinition/fr-lm-participant">Logical model - FR LM Participant
+</span>
+               </a>
+            </td>
+            <td>
+<p>Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-patient.html"
+                  title="StructureDefinition/fr-lm-patient">
+                  <span title="StructureDefinition/fr-lm-patient">Logical model - FR LM Patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Patient/Usager concerné par le document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-related-person.html"
+                  title="StructureDefinition/fr-lm-related-person">
+                  <span title="StructureDefinition/fr-lm-related-person">Logical model - FR LM Related Person
+</span>
+               </a>
+            </td>
+            <td>
+<p>Related Person</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3> </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-section-pregnancy-history.html"
+                  title="StructureDefinition/fr-lm-section-pregnancy-history">
+                  <span title="StructureDefinition/fr-lm-section-pregnancy-history">Logical model  - FR LM Pregnancy History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Historique des grossesses</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-addendum.html"
+                  title="StructureDefinition/fr-lm-addendum">
+                  <span title="StructureDefinition/fr-lm-addendum">Logical model - FR LM Addendum
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Addendum</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-admission-evaluation.html"
+                  title="StructureDefinition/fr-lm-admission-evaluation">
+                  <span title="StructureDefinition/fr-lm-admission-evaluation">Logical model - FR LM Admission Evaluation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Évaluation à l'admission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-advance-directives.html"
+                  title="StructureDefinition/fr-lm-advance-directives">
+                  <span title="StructureDefinition/fr-lm-advance-directives">Logical model - FR LM Advance Directives
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Directives anticipées</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-alerts.html"
+                  title="StructureDefinition/fr-lm-alerts">
+                  <span title="StructureDefinition/fr-lm-alerts">Logical model - FR LM Alerts
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Points de vigilance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-allergies-and-intolerances.html"
+                  title="StructureDefinition/fr-lm-allergies-and-intolerances">
+                  <span title="StructureDefinition/fr-lm-allergies-and-intolerances">Logical model - FR LM Allergies And Intolerances
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Allergies et hypersensibilités</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-attachments.html"
+                  title="StructureDefinition/fr-lm-attachments">
+                  <span title="StructureDefinition/fr-lm-attachments">Logical model - FR LM Attachments
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Documents ajoutés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-care-plans.html"
+                  title="StructureDefinition/fr-lm-care-plans">
+                  <span title="StructureDefinition/fr-lm-care-plans">Logical model - FR LM CarePlans
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Plan de soins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-comparison-study.html"
+                  title="StructureDefinition/fr-lm-comparison-study">
+                  <span title="StructureDefinition/fr-lm-comparison-study">Logical model - FR LM Comparison Study
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Comparaison d'examens d'imagerie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-result-data.html"
+                  title="StructureDefinition/fr-lm-result-data">
+                  <span title="StructureDefinition/fr-lm-result-data">Logical model - FR LM Compte rendu de biologie de 1er niveau
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Compte rendu de biologie de 1er niveau</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-conclusion.html"
+                  title="StructureDefinition/fr-lm-conclusion">
+                  <span title="StructureDefinition/fr-lm-conclusion">Logical model - FR LM Conclusion
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Conclusion</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-corps-document.html"
+                  title="StructureDefinition/fr-lm-corps-document">
+                  <span title="StructureDefinition/fr-lm-corps-document">Logical model - FR LM Corps document
+</span>
+               </a>
+            </td>
+            <td>
+<p>Eléments métier du corps d'un document contenant les sections du document.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-course-of-encounter.html"
+                  title="StructureDefinition/fr-lm-course-of-encounter">
+                  <span title="StructureDefinition/fr-lm-course-of-encounter">Logical model - FR LM Course of encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Résultats d'événements</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-dicom-study-metadata.html"
+                  title="StructureDefinition/fr-lm-dicom-study-metadata">
+                  <span title="StructureDefinition/fr-lm-dicom-study-metadata">Logical model - FR LM DICOM Study Metadata
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Object Catalog</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-encounter-information.html"
+                  title="StructureDefinition/fr-lm-encounter-information">
+                  <span title="StructureDefinition/fr-lm-encounter-information">Logical model - FR LM Encounter Information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Informations sur la rencontre</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-examination-report.html"
+                  title="StructureDefinition/fr-lm-examination-report">
+                  <span title="StructureDefinition/fr-lm-examination-report">Logical model - FR LM Examination Report
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Acte d'imagerie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-exposure-information.html"
+                  title="StructureDefinition/fr-lm-exposure-information">
+                  <span title="StructureDefinition/fr-lm-exposure-information">Logical model - FR LM Exposure Information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Exposition aux radiations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-family-medical-history.html"
+                  title="StructureDefinition/fr-lm-family-medical-history">
+                  <span title="StructureDefinition/fr-lm-family-medical-history">Logical model - FR LM Family Medical History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Antécédents familiaux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication-prescription.html"
+                  title="StructureDefinition/fr-lm-medication-prescription">
+                  <span title="StructureDefinition/fr-lm-medication-prescription">Logical model - FR LM FR LM Medication Prescription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Prescription de médicaments</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-history-of-past-illness.html"
+                  title="StructureDefinition/fr-lm-history-of-past-illness">
+                  <span title="StructureDefinition/fr-lm-history-of-past-illness">Logical model - FR LM FRLM History Of Past Illness
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Antécédents médicaux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-hazardous-working-conditions.html"
+                  title="StructureDefinition/fr-lm-hazardous-working-conditions">
+                  <span title="StructureDefinition/fr-lm-hazardous-working-conditions">Logical model - FR LM Hazardous Working Conditions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Facteurs de risque professionnels non codés</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-hospital-discharge-medications.html"
+                  title="StructureDefinition/fr-lm-hospital-discharge-medications">
+                  <span title="StructureDefinition/fr-lm-hospital-discharge-medications">Logical model - FR LM Hospital Discharge Medications
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Traitements à la sortie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-immunisations.html"
+                  title="StructureDefinition/fr-lm-immunisations">
+                  <span title="StructureDefinition/fr-lm-immunisations">Logical model - FR LM Immunisations
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Vaccinations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medical-device-prescriptions.html"
+                  title="StructureDefinition/fr-lm-medical-device-prescriptions">
+                  <span title="StructureDefinition/fr-lm-medical-device-prescriptions">Logical Model - FR LM Medical Device Prescriptions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Prescription de dispositifs médicaux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medical-devices-and-implants.html"
+                  title="StructureDefinition/fr-lm-medical-devices-and-implants">
+                  <span title="StructureDefinition/fr-lm-medical-devices-and-implants">Logical Model - FR LM Medical Devices and Implants
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Dispositifs Medicaux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication-dispensations.html"
+                  title="StructureDefinition/fr-lm-medication-dispensations">
+                  <span title="StructureDefinition/fr-lm-medication-dispensations">Logical model - FR LM Medication Dispensations
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Dispensation médicaments</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication-summary.html"
+                  title="StructureDefinition/fr-lm-medication-summary">
+                  <span title="StructureDefinition/fr-lm-medication-summary">Logical model - FR LM Medication Summary
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Traitements</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-note.html"
+                  title="StructureDefinition/fr-lm-note">
+                  <span title="StructureDefinition/fr-lm-note">Logical model - FR LM Note
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Commentaire (non-codé)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation-results.html"
+                  title="StructureDefinition/fr-lm-observation-results">
+                  <span title="StructureDefinition/fr-lm-observation-results">Logical model - FR LM ObservationResults
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Résultats</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-order-information.html"
+                  title="StructureDefinition/fr-lm-order-information">
+                  <span title="StructureDefinition/fr-lm-order-information">Logical model - FR LM Order Information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Demande d'examen d'imagerie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-patient-education.html"
+                  title="StructureDefinition/fr-lm-patient-education">
+                  <span title="StructureDefinition/fr-lm-patient-education">Logical model - FR LM Patient Education
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Education du patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-predictable-adverse-drug-reaction.html"
+                  title="StructureDefinition/fr-lm-predictable-adverse-drug-reaction">
+                  <span title="StructureDefinition/fr-lm-predictable-adverse-drug-reaction">Logical model - FR LM Predictable Adverse Drug Reaction
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Effets indesirables</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-presented-form.html"
+                  title="StructureDefinition/fr-lm-presented-form">
+                  <span title="StructureDefinition/fr-lm-presented-form">Logical model - FR LM Presented Form
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Document PDF-copie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-problems.html"
+                  title="StructureDefinition/fr-lm-problems">
+                  <span title="StructureDefinition/fr-lm-problems">Logical model - FR LM Problems
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Problems</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-procedures.html"
+                  title="StructureDefinition/fr-lm-procedures">
+                  <span title="StructureDefinition/fr-lm-procedures">logical model - FR LM Procedures
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Historique des actes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-qr-code.html"
+                  title="StructureDefinition/fr-lm-qr-code">
+                  <span title="StructureDefinition/fr-lm-qr-code">Logical model - FR LM QR Code
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Codes à barres</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-reason-for-referral.html"
+                  title="StructureDefinition/fr-lm-reason-for-referral">
+                  <span title="StructureDefinition/fr-lm-reason-for-referral">Logical model - FR LM Reason for referral
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Raison de la recommandation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-recommendation.html"
+                  title="StructureDefinition/fr-lm-recommendation">
+                  <span title="StructureDefinition/fr-lm-recommendation">Logical model - FR LM Recommendation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Recommandation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-section.html"
+                  title="StructureDefinition/fr-lm-section">
+                  <span title="StructureDefinition/fr-lm-section">Logical model - FR LM Section
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-social-history.html"
+                  title="StructureDefinition/fr-lm-social-history">
+                  <span title="StructureDefinition/fr-lm-social-history">Logical model - FR LM SocialHistory
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Habitus et modes de vie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-supporting-information.html"
+                  title="StructureDefinition/fr-lm-supporting-information">
+                  <span title="StructureDefinition/fr-lm-supporting-information">Logical model - FR LM Supporting Information
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Informations Cliniques</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-vital-signs.html"
+                  title="StructureDefinition/fr-lm-vital-signs">
+                  <span title="StructureDefinition/fr-lm-vital-signs">Logical model - FR LM Vital Signs
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Signes vitaux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-functional-status.html"
+                  title="StructureDefinition/fr-lm-functional-status">
+                  <span title="StructureDefinition/fr-lm-functional-status">logical model- FR LM Functional Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Statut fonctionnel</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Modèles logiques métier des composants communs </h3>
+    <p>Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-device.html"
+                  title="StructureDefinition/fr-lm-device">
+                  <span title="StructureDefinition/fr-lm-device">Logical model - Device
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dispositif médical</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-advance-directive.html"
+                  title="StructureDefinition/fr-lm-advance-directive">
+                  <span title="StructureDefinition/fr-lm-advance-directive">Logical model - FR LM Advance Directive
+</span>
+               </a>
+            </td>
+            <td>
+<p>Directive anticipée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-allergy-intolerance.html"
+                  title="StructureDefinition/fr-lm-allergy-intolerance">
+                  <span title="StructureDefinition/fr-lm-allergy-intolerance">Logical model - FR LM Allergy Intolerance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Allergie ou Hypersensibilité</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation-assessment.html"
+                  title="StructureDefinition/fr-lm-observation-assessment">
+                  <span title="StructureDefinition/fr-lm-observation-assessment">Logical model - FR LM Assessment
+</span>
+               </a>
+            </td>
+            <td>
+<p>Evaluation</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-attachment.html"
+                  title="StructureDefinition/fr-lm-attachment">
+                  <span title="StructureDefinition/fr-lm-attachment">Logical model - FR LM Attachment
+</span>
+               </a>
+            </td>
+            <td>
+<p>Document attaché</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-body-structure.html"
+                  title="StructureDefinition/fr-lm-body-structure">
+                  <span title="StructureDefinition/fr-lm-body-structure">Logical model - FR LM Body Structure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Localisation anatomique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-care-plan.html"
+                  title="StructureDefinition/fr-lm-care-plan">
+                  <span title="StructureDefinition/fr-lm-care-plan">Logical model - FR LM Care Plan
+</span>
+               </a>
+            </td>
+            <td>
+<p>Plan de soins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-condition.html"
+                  title="StructureDefinition/fr-lm-condition">
+                  <span title="StructureDefinition/fr-lm-condition">Logical model - FR LM Condition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Problème</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-device-use.html"
+                  title="StructureDefinition/fr-lm-device-use">
+                  <span title="StructureDefinition/fr-lm-device-use">Logical model - FR LM Device use
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dispositif médical usage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-dicom-medication-administration.html"
+                  title="StructureDefinition/fr-lm-dicom-medication-administration">
+                  <span title="StructureDefinition/fr-lm-dicom-medication-administration">Logical model - FR LM DICOM Medication Administration
+</span>
+               </a>
+            </td>
+            <td>
+<p>Administration de produit de santé dans le contexte de l'imagerie médicale</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-dose-number.html"
+                  title="StructureDefinition/fr-lm-dose-number">
+                  <span title="StructureDefinition/fr-lm-dose-number">Logical model - FR LM Dose Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>Rang de la vaccination</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-encounter.html"
+                  title="StructureDefinition/fr-lm-encounter">
+                  <span title="StructureDefinition/fr-lm-encounter">Logical model - FR LM Encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>Rencontre</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-entry.html"
+                  title="StructureDefinition/fr-lm-entry">
+                  <span title="StructureDefinition/fr-lm-entry">Logical model - FR LM Entry
+</span>
+               </a>
+            </td>
+            <td>
+<p>Modèle logique représentant l'entrée</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-family-member-history.html"
+                  title="StructureDefinition/fr-lm-family-member-history">
+                  <span title="StructureDefinition/fr-lm-family-member-history">Logical model - FR LM Family Member History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Antécédent familial</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-imaging-study.html"
+                  title="StructureDefinition/fr-lm-imaging-study">
+                  <span title="StructureDefinition/fr-lm-imaging-study">Logical model - FR LM Imaging Study
+</span>
+               </a>
+            </td>
+            <td>
+<p>DICOM Examen Imagerie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-immunisation.html"
+                  title="StructureDefinition/fr-lm-immunisation">
+                  <span title="StructureDefinition/fr-lm-immunisation">Logical model - FR LM Immunisation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Vaccination</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication.html"
+                  title="StructureDefinition/fr-lm-medication">
+                  <span title="StructureDefinition/fr-lm-medication">Logical model - FR LM Medication
+</span>
+               </a>
+            </td>
+            <td>
+<p>Produit de santé</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication-dispense.html"
+                  title="StructureDefinition/fr-lm-medication-dispense">
+                  <span title="StructureDefinition/fr-lm-medication-dispense">Logical model - FR LM Medication Dispense
+</span>
+               </a>
+            </td>
+            <td>
+<p>Traitement dispense</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-prescription-item.html"
+                  title="StructureDefinition/fr-lm-prescription-item">
+                  <span title="StructureDefinition/fr-lm-prescription-item">Logical model - FR LM Medication Prescription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Traitement prescrit</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-multidrug-resistant-microorganism-identification.html"
+                  title="StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification">
+                  <span title="StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification">Logical model - FR LM Multidrug Resistant Microorganism Identification
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identification de micro-organismes multirésistants</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation.html"
+                  title="StructureDefinition/fr-lm-observation">
+                  <span title="StructureDefinition/fr-lm-observation">Logical model - FR LM Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Résultat d'une observation réalisée sur le patient ou un dispositif médical.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation-vital-sign.html"
+                  title="StructureDefinition/fr-lm-observation-vital-sign">
+                  <span title="StructureDefinition/fr-lm-observation-vital-sign">Logical model - FR LM Observation Vital Sign
+</span>
+               </a>
+            </td>
+            <td>
+<p>Signe vital observé</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation-media.html"
+                  title="StructureDefinition/fr-lm-observation-media">
+                  <span title="StructureDefinition/fr-lm-observation-media">Logical model - FR LM ObservationMedia
+</span>
+               </a>
+            </td>
+            <td>
+<p>Image illustrative.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-patient-transfer.html"
+                  title="StructureDefinition/fr-lm-patient-transfer">
+                  <span title="StructureDefinition/fr-lm-patient-transfer">Logical model - FR LM Patient Transfer.
+</span>
+               </a>
+            </td>
+            <td>
+<p>Transfert du patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-prescription-entree.html"
+                  title="StructureDefinition/fr-lm-prescription-entree">
+                  <span title="StructureDefinition/fr-lm-prescription-entree">Logical model - FR LM Prescription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Prescription</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-quantity-exposure.html"
+                  title="StructureDefinition/fr-lm-quantity-exposure">
+                  <span title="StructureDefinition/fr-lm-quantity-exposure">Logical model - FR LM Quantity Exposure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Quantité exposition</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-resultats-examens-biologie-medicale.html"
+                  title="StructureDefinition/fr-lm-resultats-examens-biologie-medicale">
+                  <span title="StructureDefinition/fr-lm-resultats-examens-biologie-medicale">Logical model - FR LM Resultats d'examens de biologie medicale
+</span>
+               </a>
+            </td>
+            <td>
+<p>Resultats d'examens de biologie medicale</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-series.html"
+                  title="StructureDefinition/fr-lm-series">
+                  <span title="StructureDefinition/fr-lm-series">Logical model - FR LM Series
+</span>
+               </a>
+            </td>
+            <td>
+<p>Séries d'actes d'imagerie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-service-request.html"
+                  title="StructureDefinition/fr-lm-service-request">
+                  <span title="StructureDefinition/fr-lm-service-request">Logical model - FR LM Service Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>Demande d'examen ou de suivi / Objectif à atteindre</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-sop-instance.html"
+                  title="StructureDefinition/fr-lm-sop-instance">
+                  <span title="StructureDefinition/fr-lm-sop-instance">Logical model - FR LM SOP Instance
+</span>
+               </a>
+            </td>
+            <td>
+<p>SOP Instance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-specimen.html"
+                  title="StructureDefinition/fr-lm-specimen">
+                  <span title="StructureDefinition/fr-lm-specimen">Logical model - FR LM Specimen
+</span>
+               </a>
+            </td>
+            <td>
+<p>Prélèvement</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-transfusion-accidents.html"
+                  title="StructureDefinition/fr-lm-transfusion-accidents">
+                  <span title="StructureDefinition/fr-lm-transfusion-accidents">Logical model - FR LM Transfusion accidents
+</span>
+               </a>
+            </td>
+            <td>
+<p>Accidents transfusionnels</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-transfusion-de-produits-sanguins.html"
+                  title="StructureDefinition/fr-lm-transfusion-de-produits-sanguins">
+                  <span title="StructureDefinition/fr-lm-transfusion-de-produits-sanguins">Logical model - FR LM Transfusion de produits sanguins
+</span>
+               </a>
+            </td>
+            <td>
+<p>Transfusion de produits sanguins</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-travel-history.html"
+                  title="StructureDefinition/fr-lm-travel-history">
+                  <span title="StructureDefinition/fr-lm-travel-history">Logical model - FR LM TravelHistory
+</span>
+               </a>
+            </td>
+            <td>
+<p>Historique des voyages.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-laboratory-observation.html"
+                  title="StructureDefinition/fr-lm-laboratory-observation">
+                  <span title="StructureDefinition/fr-lm-laboratory-observation">Logical model - Laboratory Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Résultats d'examen de biologie médicale</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-dosageInstructions.html"
+                  title="StructureDefinition/fr-lm-dosageInstructions">
+                  <span title="StructureDefinition/fr-lm-dosageInstructions">Logical model- FR LM Dosage Instructions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Posologie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-medication-administration.html"
+                  title="StructureDefinition/fr-lm-medication-administration">
+                  <span title="StructureDefinition/fr-lm-medication-administration">Logical model- FR LM Medication Administration	
+</span>
+               </a>
+            </td>
+            <td>
+<p>Traitement</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-observation-social-history.html"
+                  title="StructureDefinition/fr-lm-observation-social-history">
+                  <span title="StructureDefinition/fr-lm-observation-social-history">Logical model- FR LM Observation Social History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Habitus Mode de vie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-pregnancy-history.html"
+                  title="StructureDefinition/fr-lm-pregnancy-history">
+                  <span title="StructureDefinition/fr-lm-pregnancy-history">Logical model- FR LM Pregnancy History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Historique de la grossesse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-pregnancy-observation.html"
+                  title="StructureDefinition/fr-lm-pregnancy-observation">
+                  <span title="StructureDefinition/fr-lm-pregnancy-observation">Logical model- FR LM Pregnancy Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Observation sur la grossesse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-pregnancy-status.html"
+                  title="StructureDefinition/fr-lm-pregnancy-status">
+                  <span title="StructureDefinition/fr-lm-pregnancy-status">Logical model- FR LM Pregnancy Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Statut de grossesse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-procedure.html"
+                  title="StructureDefinition/fr-lm-procedure">
+                  <span title="StructureDefinition/fr-lm-procedure">Logical model- FR LM Procedure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Acte</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-adverse-drug-reaction.html"
+                  title="StructureDefinition/fr-lm-adverse-drug-reaction">
+                  <span title="StructureDefinition/fr-lm-adverse-drug-reaction">Modèle logique métier - FR LM Adverse Drug Reaction
+</span>
+               </a>
+            </td>
+            <td>
+<p>Effet indésirable médicamenteux</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-batterie-examens-biologie-medicale.html"
+                  title="StructureDefinition/fr-lm-batterie-examens-biologie-medicale">
+                  <span title="StructureDefinition/fr-lm-batterie-examens-biologie-medicale">Modèle logique métier - FR LM Batterie d'examens de biologie médicale
+</span>
+               </a>
+            </td>
+            <td>
+<p>Entrée Batterie d'examens de biologie médicale</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-isolat-microbiologique.html"
+                  title="StructureDefinition/fr-lm-isolat-microbiologique">
+                  <span title="StructureDefinition/fr-lm-isolat-microbiologique">Modèle logique métier - FR LM Isolat microbiologique
+</span>
+               </a>
+            </td>
+            <td>
+<p>Isolat microbiologique</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-laboratoire-executant.html"
+                  title="StructureDefinition/fr-lm-laboratoire-executant">
+                  <span title="StructureDefinition/fr-lm-laboratoire-executant">Modèle logique métier - FR LM Laboratoire exécutant
+</span>
+               </a>
+            </td>
+            <td>
+<p>Laboratoire exécutant</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-resultat-examens-biologie-element-clinique-pertinent.html"
+                  title="StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent">
+                  <span title="StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent">Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent
+</span>
+               </a>
+            </td>
+            <td>
+<p>Résultat d'examens de biologie / élement clinique pertinent</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3> </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingmodelemetierCDAFHIR.html"
+                  title="ConceptMap/mappingmodelemetierCDAFHIR">
+                  <span title="ConceptMap/mappingmodelemetierCDAFHIR">Mapping Métier/CDA/FHIR  : Entête d'un document
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente trois groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "EnteteDocument" et l'élément CDA "clinicalDocument"</li>
+  <li>Mapping 2 : entre l'élément CDA "clinicalDocument" et le profil FHIR "FrBundleDocument"</li>
+  <li>Mapping 3 : entre l'élément CDA "clinicalDocument" et le profil FHIR "FrCompositionDocument"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingAuteurCDAFHIR.html"
+                  title="ConceptMap/mappingAuteurCDAFHIR">
+                  <span title="ConceptMap/mappingAuteurCDAFHIR">Mapping Métier/CDA/FHIR : "Auteur"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "Auteur" et l'élément CDA "author"</li>
+  <li>Mapping 2 : entre l'élément CDA "author" et l'élément FHIR "Composition.author"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingConsentementCDAFHIR.html"
+                  title="ConceptMap/mappingConsentementCDAFHIR">
+                  <span title="ConceptMap/mappingConsentementCDAFHIR">Mapping Métier/CDA/FHIR : "Consentement"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "ConsentementAssocie" et l'élément CDA "authorization"</li>
+  <li>Mapping 2 : entre l'élément CDA "authorization" et l'extension FHIR "ConsentExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingDestinatairePrevuCDAFHIR.html"
+                  title="ConceptMap/mappingDestinatairePrevuCDAFHIR">
+                  <span title="ConceptMap/mappingDestinatairePrevuCDAFHIR">Mapping Métier/CDA/FHIR : "Destinataire prévu"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "destinataire" et l'élément CDA "informationRecipient"</li>
+  <li>Mapping 2 : entre l'élément CDA "informationRecipient" et l'extension FHIR "InformationRecipientExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingDocumentDeReferenceCDAFHIR.html"
+                  title="ConceptMap/mappingDocumentDeReferenceCDAFHIR">
+                  <span title="ConceptMap/mappingDocumentDeReferenceCDAFHIR">Mapping Métier/CDA/FHIR : "DocumentDeReference"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "documentDeReference" et l'élément CDA "relatedDocument"</li>
+  <li>Mapping 2 : entre l'élément CDA "relatedDocument" et l'élément FHIR "Composition.relatesTo"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingEvenementCDAFHIR.html"
+                  title="ConceptMap/mappingEvenementCDAFHIR">
+                  <span title="ConceptMap/mappingEvenementCDAFHIR">Mapping Métier/CDA/FHIR : "Evènement documenté"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 :entre le modèle métier "evenement" et l'élément CDA "documentationOf"</li>
+  <li>Mapping 2 : entre l'élément CDA "documentationOf" et l'élément FHIR "Composition.event"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingInformateurCDAFHIR.html"
+                  title="ConceptMap/mappingInformateurCDAFHIR">
+                  <span title="ConceptMap/mappingInformateurCDAFHIR">Mapping Métier/CDA/FHIR : "Informateur"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "informateur" et l'élément CDA "informant"</li>
+  <li>Mapping 2 : entre l'élément CDA "informant" et l'extension FHIR "InformantExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingOperateurSaisieCDAFHIR.html"
+                  title="ConceptMap/mappingOperateurSaisieCDAFHIR">
+                  <span title="ConceptMap/mappingOperateurSaisieCDAFHIR">Mapping Métier/CDA/FHIR : "Opérateur de saisie"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "operateurSaisie" et l'élément CDA "dataEnterer"</li>
+  <li>Mapping 2 : entre l'élément CDA "dataEnterer" et l'extension FHIR "DataEntererExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingParticipantCDAFHIR.html"
+                  title="ConceptMap/mappingParticipantCDAFHIR">
+                  <span title="ConceptMap/mappingParticipantCDAFHIR">Mapping Métier/CDA/FHIR : "Participant"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "participant" et l'élément CDA "participant"</li>
+  <li>Mapping 2 : entre l'élément CDA "participant" et l'extension FHIR "ParticipantExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPatientCDAFHIR.html"
+                  title="ConceptMap/mappingPatientCDAFHIR">
+                  <span title="ConceptMap/mappingPatientCDAFHIR">Mapping Métier/CDA/FHIR : "Patient/Usager"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "patient" et l'élément CDA "recordTarget"</li>
+  <li>Mapping 2 : entre l'élément CDA "recordTarget" et le profil FHIR "FrPatientDocument"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureAssignedEntityFHIR">
+                  <span title="ConceptMap/mappingPersonneStructureAssignedEntityFHIR">Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "PersonneStructure" et l'élément CDA "assignedEntity"</li>
+  <li>Mapping 2 : entre l'élément CDA "assignedEntity" et le profil FHIR "FrPractitionerRoleDocument"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureAuteurFHIR">
+                  <span title="ConceptMap/mappingPersonneStructureAuteurFHIR">Mapping Métier/CDA/FHIR : "Personne / Structure (Auteur)"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "PersonneStructureAuteur" et l'élément CDA "assignedAuthor"</li>
+  <li>Mapping 2 : entre l'élément CDA "assignedAuthor" et le profil FHIR "FrPractitionerRoleDocument"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html"
+                  title="ConceptMap/mappingPersonneStructureRelatedEntityFHIR">
+                  <span title="ConceptMap/mappingPersonneStructureRelatedEntityFHIR">Mapping Métier/CDA/FHIR : "Personne / Structure (RelatedEntity)"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "FRLMPersonneStructure" et l'élément CDA "relatedEntity"</li>
+  <li>Mapping 2 : entre l'élément CDA "relatedEntity" et le profil FHIR "FrRelatedPersonDocument"</li>
+  <li>Mapping 3 : entre l'élément CDA "relatedEntity" et l'élément FHIR "Patient.contact"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPrescriptionCDAFHIR.html"
+                  title="ConceptMap/mappingPrescriptionCDAFHIR">
+                  <span title="ConceptMap/mappingPrescriptionCDAFHIR">Mapping Métier/CDA/FHIR : "Prescription"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "prescription" et l'élément CDA "inFulfillmentOf"</li>
+  <li>Mapping 2 : entre l'élément CDA "inFulfillmentOf" et l'extension FHIR "OrderExtension"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingPriseEnchargeCDAFHIR.html"
+                  title="ConceptMap/mappingPriseEnchargeCDAFHIR">
+                  <span title="ConceptMap/mappingPriseEnchargeCDAFHIR">Mapping Métier/CDA/FHIR : "Prise en charge"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "prise en charge" et l'élément CDA "componentOf"</li>
+  <li>Mapping 2 : entre l'élément CDA "componentOf" et l'élément FHIR "Composition.encounter(Encounter)"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingResponsableCDAFHIR.html"
+                  title="ConceptMap/mappingResponsableCDAFHIR">
+                  <span title="ConceptMap/mappingResponsableCDAFHIR">Mapping Métier/CDA/FHIR : "Responsable du document"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "responsable" et l'élément CDA "legalAuthenticator"</li>
+  <li>Mapping 2 : entre l'élément CDA "legalAuthenticator" et l'élément FHIR "Composition.attester"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingStructureConservationCDAFHIR.html"
+                  title="ConceptMap/mappingStructureConservationCDAFHIR">
+                  <span title="ConceptMap/mappingStructureConservationCDAFHIR">Mapping Métier/CDA/FHIR : "Structure chargée de la conservation du document"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "structureConservation" et l'élément CDA "custodian"</li>
+  <li>Mapping 2 : entre l'élément CDA "custodian" et l'élément FHIR "Composition.custodian"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingSystemeFHIR.html"
+                  title="ConceptMap/mappingSystemeFHIR">
+                  <span title="ConceptMap/mappingSystemeFHIR">Mapping Métier/CDA/FHIR : "Système / Structure Auteur"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "SystemeStructureAuteur" et l'élément CDA "assignedAuthor"</li>
+  <li>Mapping 2 : entre l'élément CDA "assignedAuthor" et le profil FHIR "FrDeviceDocument"</li>
+</ul>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-mappingValidateurCDAFHIR.html"
+                  title="ConceptMap/mappingValidateurCDAFHIR">
+                  <span title="ConceptMap/mappingValidateurCDAFHIR">Mapping Métier/CDA/FHIR : "Validateur"
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+  <li>Mapping 1 : entre le modèle métier "validateur" et l'élément CDA "authenticator"</li>
+  <li>Mapping 2 : entre l'élément CDA "authenticator" et l'élément FHIR "Composition.attester"</li>
+</ul>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3> </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingAddendumLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingAddendumLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingAddendumLMCDAFHIR">Mapping FRLMAddendum → FRCDAdicomAddendum → FRCompositionDocument.section:Addendum
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum puis vers le profil FHIR FRCompositionDocument.section:Addendum.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingComparisonLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingComparisonLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingComparisonLMCDAFHIR">Mapping FRLMComparaisonExamensImagerie → FRCDADICOMExamenComparatif → FRCompositionDocument.section:Comparison
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMComparaisonExamensImagerie vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section Comparison du profil FHIR FRCompositionDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingComplicationsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingComplicationsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingComplicationsLMCDAFHIR">Mapping FRLMComplicationsActe → FRCDADICOMComplications → FRProcedureImagingDocument.complication.text
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingConclusionLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingConclusionLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingConclusionLMCDAFHIR">Mapping FRLMConclusionExamenImagerie → FRCDADICOMConclusion → FRDiagnosticReportImagingDocument.conclusion
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionLaboratoryChapterLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionLaboratoryChapterLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionLaboratoryChapterLMCDAFHIR">Mapping FRLMCRBIOChapitre → FRCDACRBIOChapitre → FRCompositionDocument.section
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRCompositionDocument.section.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionLaboratorySubChapterLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR">Mapping FRLMCRBIOSousChapitre → FRCDACRBIOSousChapitre → FRCompositionDocument.section:avec-sous-sections.section
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingServiceRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR">Mapping FRLMDemandeExamenImagerie → FRCDADICOMDemandeExamen → FRServiceRequestDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionAdvanceDirectiveLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionAdvanceDirectiveLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionAdvanceDirectiveLMCDAFHIR">Mapping FRLMDirectivesAnticipees → FRCDADirectivesAnticipees → FRAdvanceDirectiveDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDirectivesAnticipees vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR FRAdvanceDirectiveDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicationDispenseLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicationDispenseLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicationDispenseLMCDAFHIR">Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicalDeviceLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicalDeviceLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicalDeviceLMCDAFHIR">Mapping FRLMDispositifsMedicaux → FRCDADispositifsMedicaux → FRCompositionDocument.section:medicalDevice
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDispositifsMedicaux vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevice.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionPDFDocumentCopyLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR">Mapping FRLMDocumentPDFCopie → FRCDADocumentPDFCopie → FRCompositionDocument.section:pdfDocumentCopy
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionAddedDocumentsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionAddedDocumentsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionAddedDocumentsLMCDAFHIR">Mapping FRLMDocumentsAjoutes → FRCDADocumentsAjoutes → FRCompositionDocument.section:addedDocuments
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDocumentsAjoutes vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:addedDocuments.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionPatientEducationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionPatientEducationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionPatientEducationLMCDAFHIR">Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionAdverseEventLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionAdverseEventLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionAdverseEventLMCDAFHIR">Mapping FRLMEffetsIndesirables → FRCDAEffetsIndesirables → FRCompositionDocument.section:adverseEvent
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionExposureRadiationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionExposureRadiationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionExposureRadiationLMCDAFHIR">Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:exposureRadiation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:exposureRadiation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingRadiationExposureLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingRadiationExposureLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingRadiationExposureLMCDAFHIR">Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:radiationExposure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations puis vers le profil FHIR FRCompositionDocument.section:radiationExposure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR">Mapping FRLMFacteursDeRisqueProfessionnelsNonCode → FRCDAFacteursDeRisqueProfessionnelsNonCode → FRCompositionDocument.section:uncodedOccupationalRiskFactors
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMFacteursDeRisqueProfessionnelsNonCode vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedOccupationalRiskFactors.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionPhysicalFunctionsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionPhysicalFunctionsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionPhysicalFunctionsLMCDAFHIR">Mapping FRLMFonctionsPhysiques → FRCDAFonctionsPhysiques → FRCompositionDocument.section:PhysicalFunctions
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section CDA FRCDAFonctionsPhysiques, puis vers le profil FHIR FRCompositionDocument.section:PhysicalFunctions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionSocialHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionSocialHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionSocialHistoryLMCDAFHIR">Mapping FRLMHabitusModeDeVie → FRCDAHabitusModeDeVieSection → FRCompositionDocument.section:socialHistory
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHabitusModeDeVie vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:socialHistory.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionHistoryActsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionHistoryActsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionHistoryActsLMCDAFHIR">Mapping FRLMHistoriqueDesActes → FRCDAHistoriqueDesActes → FRCompositionDocument.section:historyActs
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionPregnancyHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR">Mapping FRLMHistoriqueDesGrossesses → FRCDAHistoriqueDesGrossesses → FRCompositionDocument.section:pregnancyHistory
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHistoriqueDesGrossesses vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:pregnancyHistory.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingClinicalInformationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR">Mapping FRLMInformationsCliniques → FRCDADICOMHistoriqueMedical → FRCompositionDocument.section:History (Observation / FRConditionDocument/ FRObservationPregnancyDocument / FRObservationContraIndicationsImagingDocument / FRDeviceAuteurDocument / FRMedicationAdministrationDocument)
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingObjectCatalogLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR">Mapping FRLMObjectCatalog → FRCDADICOMObjectCatalog → FRCompositionDocument.section:imagingStudy
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionCarePlanLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionCarePlanLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionCarePlanLMCDAFHIR">Mapping FRLMPlanSoins → FRCDAPlanDeSoins → FRCompositionDocument.section:planOfCare
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMPlanSoins vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:planOfCare.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionUncodedPointsOfVigilanceLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionUncodedPointsOfVigilanceLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionUncodedPointsOfVigilanceLMCDAFHIR">Mapping FRLMPointsDeVigilancesNonCode → FRCDAPointsDeVigilancesNonCode → FRCompositionDocument.section:uncodedPointsOfVigilance
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMPointsDeVigilancesNonCode vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedPointsOfVigilance.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR">Mapping FRLMPrescriptionDispositifsMedicaux → FRCDAPrescriptionDispositifsMedicaux → FRCompositionDocument.section:medicalDevicePrescription
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicationRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicationRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicationRequestLMCDAFHIR">Mapping FRLMPrescriptionMedicaments → FRCDAPrescriptionMedicaments → FRCompositionDocument.section:medicationRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionActiveProblemsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionActiveProblemsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionActiveProblemsLMCDAFHIR">Mapping FRLMProblemesActifs → FRCDAProblemesActifs → FRCompositionDocument.section:activeProblems
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMProblemesActifs vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:activeProblems.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionReasonForRecommendationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR">Mapping FRLMRaisonRecommandation → FRCDARaisonDeLaRecommandation → FRCompositionDocument.section:reasonForRecommendation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionUncodedReasonForRecommendationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionUncodedReasonForRecommendationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionUncodedReasonForRecommendationLMCDAFHIR">Mapping FRLMRaisonRecommandationNonCode → FRCDARaisonDeLaRecommandationNonCode → FRCompositionDocument.section:reasonForRecommendation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMRaisonRecommandationNonCode vers la section CDA FRCDARaisonDeLaRecommandationNonCode, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionResultsLMCDAFHIR">Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionExaminationResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionExaminationResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionExaminationResultsLMCDAFHIR">Mapping FRLMResultatsExamens → FRCDAResultatsExamens → FRCompositionDocument.section:Results
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsExamens vers la section CDA FRCDAResultatsExamens puis vers le profil FHIR FRCompositionDocument.section:Results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionUncodedExaminationResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionUncodedExaminationResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionUncodedExaminationResultsLMCDAFHIR">Mapping FRLMResultatsExamensNonCode → FRCDAResultatsExamensNonCode → FRCompositionDocument.section:Results
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsExamensNonCode vers la section CDA FRCDAResultatsExamensNonCode puis vers le profil FHIR FRCompositionDocument.section:Results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionLaboratorySecondIntentionResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR">Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionVitalSignsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionVitalSignsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionVitalSignsLMCDAFHIR">Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionDocumentStatusLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionDocumentStatusLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionDocumentStatusLMCDAFHIR">Mapping FRLMStatutDocument -&gt; FRCDAStatutDuDocument -&gt; FRComposition.section
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMStatutDocument vers la section CDA FRCDAStatutDuDocument, puis vers la section FHIR FRCompositionDocument.section:documentStatus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionFunctionalStatusLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionFunctionalStatusLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionFunctionalStatusLMCDAFHIR">Mapping FRLMStatutFonctionnel → FRCDAStatutFonctionnel → FRCompositionDocument.section:FRFunctionalStatus
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMStatutFonctionnel vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:FRFunctionalStatus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicationsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicationsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicationsLMCDAFHIR">Mapping FRLMTraitements → FRCDATraitements → FRCompositionDocument.section:medications
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitements vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:medications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicationAdministrationLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR">Mapping FRLMTraitementsAdministres → FRCDATraitementsAdministres → FRCompositionDocument.section:medicationAdministration
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionHospitalDischargeMedicationsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR">Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImmunizationsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImmunizationsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImmunizationsLMCDAFHIR">Mapping FRLMVaccinations → FRCDAVaccinations → FRCompositionDocument.section:immunizations
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMVaccinations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:immunizations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingActLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingActLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingActLMCDAFHIR">Mapping Métier/CDA/FHIR : Acte d'imagerie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMActeImagerie vers la section CDA FRCDADICOMActeImagerie, puis vers le profil FHIR FRCompositionDocument.section:ImagingStudy.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionAllergyIntoleranceLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionAllergyIntoleranceLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionAllergyIntoleranceLMCDAFHIR">Mapping Métier/CDA/FHIR : Allergies et intolérances
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:AllergyIntolerance.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionFamilyHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionFamilyHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionFamilyHistoryLMCDAFHIR">Mapping Métier/CDA/FHIR : Antécédents familiaux
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionMedicalHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionMedicalHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionMedicalHistoryLMCDAFHIR">Mapping Métier/CDA/FHIR : Antécédents médicaux
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionBarCodesLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionBarCodesLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionBarCodesLMCDAFHIR">Mapping Métier/CDA/FHIR : Codes-barres
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMCodesAbarres vers la section CDA FRCDACodeABarres, puis vers la section FHIR FRCompositionDocument.section:barCodes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionNoteLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionNoteLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionNoteLMCDAFHIR">Mapping Métier/CDA/FHIR : Commentaire ER
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMCommentaireNonCode vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:note.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSectionImagingResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRSectionImagingResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRSectionImagingResultsLMCDAFHIR">Mapping Métier/CDA/FHIR : Résultats d'imagerie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3> </h3>
+    
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationTransfusionAccidentsLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationTransfusionAccidentsLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationTransfusionAccidentsLMCDAFHIR">Mapping FRLMAccidentsTransfusionnels → FRCDAAccidentsTransfusionnels → FRObservationTransfusionAccidentsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAccidentsTransfusionnels vers le profil CDA FRCDAAccidentsTransfusionnels, puis vers le profil FHIR FRObservationTransfusionAccidentsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRProcedureLMCDAFHIR.html"
+                  title="ConceptMap/FRProcedureLMCDAFHIR">
+                  <span title="ConceptMap/FRProcedureLMCDAFHIR">Mapping FRLMActe → FRCDAActe → FRProcedureDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRActSubstitutionLMCDAFHIR.html"
+                  title="ConceptMap/FRActSubstitutionLMCDAFHIR">
+                  <span title="ConceptMap/FRActSubstitutionLMCDAFHIR">Mapping FRLMActeSubstitution → FRCDAActeSubstitution → FRMedicationDispenseDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMActeSubstitution vers le profil CDA FRCDAActeSubstitution, puis vers le profil FHIR FRMedicationDispenseDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationAdministrationBloodDerivativesLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationAdministrationBloodDerivativesLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationAdministrationBloodDerivativesLMCDAFHIR">Mapping FRLMAdministrationDeDerivesDuSang → FRCDAAdministrationDeDerivesDuSang → FRObservationAdministrationBloodDerivativesDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAdministrationDeDerivesDuSang vers le profil CDA FRCDAAdministrationDeDerivesDuSang, puis vers le profil FHIR FRObservationAdministrationBloodDerivativesDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingMedicationAministrationLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingMedicationAministrationLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingMedicationAministrationLMCDAFHIR">Mapping FRLMAdministrationProduitDeSante -&gt; FRCDADICOMAdministrationProduitDeSante -&gt; FRMedicationAdministrationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMAdministrationProduitDeSante vers le profil CDA FRCDADICOMAdministrationProduitDeSante, puis vers le profil FHIR FRMedicationAdministrationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRAllergyIntoleranceLMCDAFHIR.html"
+                  title="ConceptMap/FRAllergyIntoleranceLMCDAFHIR">
+                  <span title="ConceptMap/FRAllergyIntoleranceLMCDAFHIR">Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -&gt; FRAllergyIntoleranceDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRFamilyMemberHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRFamilyMemberHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRFamilyMemberHistoryLMCDAFHIR">Mapping FRLMAntecedentFamilialObserve → FRCDAAntecedentFamilialObserve → FRFamilyMemberHistoryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAntecedentFamilialObserve vers le profil CDA FRCDAAntecedentFamilialObserve, puis vers le profil FHIR FRFamilyMemberHistoryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRFamilyMemberHistoriesLMCDAFHIR.html"
+                  title="ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR">
+                  <span title="ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR">Mapping FRLMAntecedentsFamiliauxEntree → FRCDAAntecedentsFamiliaux → FRFamilyMemberHistoryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAntecedentsFamiliauxEntree vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingRadiationExposureAuthorizationLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingRadiationExposureAuthorizationLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingRadiationExposureAuthorizationLMCDAFHIR">Mapping FRLMAutorisationExposition → FRCDADICOMExpositionPatient → FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAutorisationExposition vers le profil CDA FRCDADICOMExpositionPatient, puis vers le profil FHIR FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRAllowedSubstitutionLMCDAFHIR.html"
+                  title="ConceptMap/FRAllowedSubstitutionLMCDAFHIR">
+                  <span title="ConceptMap/FRAllowedSubstitutionLMCDAFHIR">Mapping FRLMAutorisationSubstitution → FRCDAAutorisationSubstitution → FRMedicationRequestDocument.substitution.allowedCodeableConcept
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMAutorisationSubstitution vers le profil CDA FRCDAAutorisationSubstitution, puis vers l'élément substitution.allowedCodeableConcept du profil FHIR FRMedicationRequestDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRLaboratoryBatteryResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR">Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale vers le profil CDA FRCDABatterieExamensDeBiologieMedicale, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRCertitudeLMCDAFHIR.html"
+                  title="ConceptMap/FRCertitudeLMCDAFHIR">
+                  <span title="ConceptMap/FRCertitudeLMCDAFHIR">Mapping FRLMCertitude → FRCDACertitude → FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMCertitude vers le profil CDA FRCDACertitude, puis vers les profils FHIR FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRNoteLMCDAFHIR.html"
+                  title="ConceptMap/FRNoteLMCDAFHIR">
+                  <span title="ConceptMap/FRNoteLMCDAFHIR">Mapping FRLMCommentaireER -&gt; FRCDACommentaireER -&gt; Annotation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMCommentaireER vers l'element CDA FRCDACommentaireER, puis vers l'element FHIR Annotation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRConditionLMCDAFHIR.html"
+                  title="ConceptMap/FRConditionLMCDAFHIR">
+                  <span title="ConceptMap/FRConditionLMCDAFHIR">Mapping FRLMCondition → FRCDACondition → FRConditionDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRCriticiteLMCDAFHIR.html"
+                  title="ConceptMap/FRCriticiteLMCDAFHIR">
+                  <span title="ConceptMap/FRCriticiteLMCDAFHIR">Mapping FRLMCriticite -&gt; FRCDACriticite -&gt; FRAllergyIntoleranceDocument.criticality
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMCriticite vers le profil CDA FRCDACriticite, puis vers le profil FHIR FRAllergyIntoleranceDocument.criticality.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRServiceRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRServiceRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRServiceRequestLMCDAFHIR">Mapping FRLMDemandeExamenOuSuivi → FRCDADemandeDExamenOuDeSuivi → FRServiceRequestDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDemandeExamenOuSuivi vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRAdvanceDirectiveLMCDAFHIR.html"
+                  title="ConceptMap/FRAdvanceDirectiveLMCDAFHIR">
+                  <span title="ConceptMap/FRAdvanceDirectiveLMCDAFHIR">Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRDeviceRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRDeviceRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRDeviceRequestLMCDAFHIR">Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceRequestDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRDeviceUseStatementLMCDAFHIR.html"
+                  title="ConceptMap/FRDeviceUseStatementLMCDAFHIR">
+                  <span title="ConceptMap/FRDeviceUseStatementLMCDAFHIR">Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le
+profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRDocumentReferenceLMCDAFHIR.html"
+                  title="ConceptMap/FRDocumentReferenceLMCDAFHIR">
+                  <span title="ConceptMap/FRDocumentReferenceLMCDAFHIR">Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationWorkRelatedAccidentLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationWorkRelatedAccidentLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationWorkRelatedAccidentLMCDAFHIR">Mapping FRLMEnRapportAvecAccidentTravail → FRCDAEnRapportAvecAccidentTravail → FRObservationWorkRelatedAccidentDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEnRapportAvecAccidentTravail vers le profil CDA FRCDAEnRapportAvecAccidentTravail, puis vers le profil FHIR FRObservationWorkRelatedAccidentDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationSurveyLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationSurveyLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationSurveyLMCDAFHIR">Mapping FRLMEvaluation → FRCDAEvaluation → FRObservationSurveyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEvaluation vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationSurveyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationSurveyComponentLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationSurveyComponentLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationSurveyComponentLMCDAFHIR">Mapping FRLMEvaluationComposant → FRCDAEvaluationComposant → FRObservationSurveyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEvaluationComposant vers le profil CDA FRCDAEvaluationComposant, puis vers le profil FHIR FRObservationSurveyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationSurveyComponentN2LMCDAFHIR.html"
+                  title="ConceptMap/FRObservationSurveyComponentN2LMCDAFHIR">
+                  <span title="ConceptMap/FRObservationSurveyComponentN2LMCDAFHIR">Mapping FRLMEvaluationComposantN2 → FRCDAEvaluationComposantN2 → FRObservationSurveyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEvaluationComposantN2 vers le profil CDA FRCDAEvaluationComposantN2, puis vers le profil FHIR FRObservationSurveyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRAdverseEventLMCDAFHIR.html"
+                  title="ConceptMap/FRAdverseEventLMCDAFHIR">
+                  <span title="ConceptMap/FRAdverseEventLMCDAFHIR">Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingStudyLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingStudyLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingStudyLMCDAFHIR">Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationSurveyPannelLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationSurveyPannelLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationSurveyPannelLMCDAFHIR">Mapping FRLMGroupDeQuestionnairesDevaluation → FRCDAGroupeDeQuestionnairesDEvaluation → FRObservationSurveyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMGroupDeQuestionnairesDevaluation vers le profil CDA FRCDAGroupeDeQuestionnairesDEvaluation, puis vers le profil FHIR FRObservationSurveyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationSocialHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationSocialHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationSocialHistoryLMCDAFHIR">Mapping FRLMHabitusModeDeVieEntree → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationPregnancyHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationPregnancyHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationPregnancyHistoryLMCDAFHIR">Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRObservationPregnancyHistoryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRObservationPregnancyHistoryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRPregnancyHistoryLMCDAFHIR.html"
+                  title="ConceptMap/FRPregnancyHistoryLMCDAFHIR">
+                  <span title="ConceptMap/FRPregnancyHistoryLMCDAFHIR">Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRPregnancyHistoryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR">Mapping FRLMIdentificationDeMicroOrganismesMultiresistants → FRCDAIdentificationMicroOrganismesMultiresistants → FRObservationMultiresistantMicroorganismsIdentificationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMultiresistants vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMediaLMCDAFHIR.html"
+                  title="ConceptMap/FRMediaLMCDAFHIR">
+                  <span title="ConceptMap/FRMediaLMCDAFHIR">Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRLaboratoryIsolateResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRLaboratoryIsolateResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRLaboratoryIsolateResultsLMCDAFHIR">Mapping FRLMIsolatMicrobiologique → FRCDAIsolatMicrobiologique → FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationBirthEventLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationBirthEventLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationBirthEventLMCDAFHIR">Mapping FRLMNaissance → FRCDANaissance → FRObservationBirthEventDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMNaissance vers le profil CDA FRCDANaissance, puis vers le profil FHIR FRObservationBirthEventDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationLMCDAFHIR">Mapping FRLMObservation -&gt; FRCDASimpleObservation -&gt; Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationPregnancyLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationPregnancyLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationPregnancyLMCDAFHIR">Mapping FRLMObservationGrossesse → FRCDAObservationSurLaGrossesse → FRObservationPregnancyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMObservationGrossesse vers le profil CDA FRCDAObservationSurLaGrossesse, puis vers le profil FHIR FRObservationPregnancyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationResultLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationResultLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationResultLMCDAFHIR">Mapping FRLMObservationResult → FRCDAResultat → FRObservationResultDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMObservationResult vers le profil CDA FRCDAResultat, puis vers le profil FHIR FRObservationResultDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRParticipantCorpsLMCDAFHIR.html"
+                  title="ConceptMap/FRParticipantCorpsLMCDAFHIR">
+                  <span title="ConceptMap/FRParticipantCorpsLMCDAFHIR">Mapping FRLMParticipantCorps -&gt; FRCDAParticipant -&gt; FRActorExtension
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRPatientWithNonHumanSubjectLMCDAFHIR.html"
+                  title="ConceptMap/FRPatientWithNonHumanSubjectLMCDAFHIR">
+                  <span title="ConceptMap/FRPatientWithNonHumanSubjectLMCDAFHIR">Mapping FRLMPatientSujetNonHumain -&gt; FRCDAPatientAvecSujetNonHumain -&gt; FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMPatientSujetNonHumain vers l'element CDA FRCDAPatientAvecSujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance et Observation/subject.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRSpecimenLMCDAFHIR.html"
+                  title="ConceptMap/FRSpecimenLMCDAFHIR">
+                  <span title="ConceptMap/FRSpecimenLMCDAFHIR">Mapping FRLMPrelevement → FRCDAPrelevement → FRSpecimenDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationLMCDAFHIR">Mapping FRLMProduitSante → FRCDAProduitDeSante → FRMedicationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMProduitSante vers le profil CDA FRCDAProduitDeSante, puis vers le profil FHIR FRMedicationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationMicroorganismDetectionLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR">Mapping FRLMRechercheDeMicroOrganismes → FRCDARechercheDeMicroOrganismes → FRObservationMicroorganismDetectionDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMRechercheDeMicroOrganismes vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRCarePlanLMCDAFHIR.html"
+                  title="ConceptMap/FRCarePlanLMCDAFHIR">
+                  <span title="ConceptMap/FRCarePlanLMCDAFHIR">Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FREncounterLMCDAFHIR.html"
+                  title="ConceptMap/FREncounterLMCDAFHIR">
+                  <span title="ConceptMap/FREncounterLMCDAFHIR">Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRLaboratoryResultClinicalElementLMCDAFHIR.html"
+                  title="ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR">
+                  <span title="ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR">Mapping FRLMResultatExamensBiologieElementCliniquePertinent → Profile: FRCDAResultatExamensDeBiologieElementCliniquePertinent
+ → FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRDiagnosticReportLMCDAFHIR.html"
+                  title="ConceptMap/FRDiagnosticReportLMCDAFHIR">
+                  <span title="ConceptMap/FRDiagnosticReportLMCDAFHIR">Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRResultsLMCDAFHIR">Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRLaboratoryResultsLMCDAFHIR.html"
+                  title="ConceptMap/FRLaboratoryResultsLMCDAFHIR">
+                  <span title="ConceptMap/FRLaboratoryResultsLMCDAFHIR">Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale vers le profil CDA FRCDAResultatExamensDeBiologie, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingSeriesLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingSeriesLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingSeriesLMCDAFHIR">Mapping FRLMSerieImagerie → FRCDADICOMSerieImagerie → FRImagingStudyDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMSerieImagerie vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationVitalSignsPanelLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationVitalSignsPanelLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationVitalSignsPanelLMCDAFHIR">Mapping FRLMSigneVital → FRCDASignesVitaux → FRObservationVitalSignsPanelDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMSigneVital vers le profil CDA FRCDASignesVitaux, puis vers le profil FHIR FRObservationVitalSignsPanelDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationVitalSignsLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationVitalSignsLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationVitalSignsLMCDAFHIR">Mapping FRLMSigneVitalObserve → FRCDASigneVitalObserve → FRObservationVitalSignsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMSigneVitalObserve vers le profil CDA FRCDASigneVitalObserve, puis vers le profil FHIR FRObservationVitalSignsDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRNonHumanSubjectLMCDAFHIR.html"
+                  title="ConceptMap/FRNonHumanSubjectLMCDAFHIR">
+                  <span title="ConceptMap/FRNonHumanSubjectLMCDAFHIR">Mapping FRLMSujetNonHumain -&gt; FRCDASujetNonHumain -&gt; FRObservationLaboratoryReportResultsDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modele metier FRLMSujetNonHumain vers l'element CDA FRCDASujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationMedicalSummaryLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationMedicalSummaryLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationMedicalSummaryLMCDAFHIR">Mapping FRLMSyntheseMedicaleSejour → FRCDASyntheseMedicaleSejour → FRObservationMedicalSummaryDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMSyntheseMedicaleSejour vers la sous-entrée CDA FRCDASyntheseMedicaleSejour puis vers le profil FHIR FRObservationMedicalSummaryDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingProcedureLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingProcedureLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingProcedureLMCDAFHIR">Mapping FRLMTechniqueImagerie → FRCDADICOMTechniqueImagerie → FRProcedureImagingDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationAdministrationLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationAdministrationLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationAdministrationLMCDAFHIR">Mapping FRLMTraitement → FRCDATraitement → FRMedicationAdministrationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitement vers le profil CDA FRCDATraitement, puis vers le profil FHIR FRMedicationAdministrationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationStatementLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationStatementLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationStatementLMCDAFHIR">Mapping FRLMTraitement → FRCDATraitement → FRMedicationStatementDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitement vers la sous-entrée CDA FRCDATraitement puis vers le profil FHIR FRMedicationStatementDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationDispenseLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationDispenseLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationDispenseLMCDAFHIR">Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementDispense vers le profil CDA FRCDATraitementDispense, puis vers le profil FHIR FRMedicationDispenseDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationRequestLMCDAFHIR">Mapping FRLMTraitementPrescrit → FRCDATraitementPrescrit → FRMedicationRequestDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationsCombinaisonRequestLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationsCombinaisonRequestLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationsCombinaisonRequestLMCDAFHIR">Mapping FRLMTraitementPrescritSubordonne → FRCDATraitementPrescritSubordonne → FRMedicationsCombinaisonDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementPrescritSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRMedicationsCombinaisonLMCDAFHIR.html"
+                  title="ConceptMap/FRMedicationsCombinaisonLMCDAFHIR">
+                  <span title="ConceptMap/FRMedicationsCombinaisonLMCDAFHIR">Mapping FRLMTraitementSubordonne → FRCDATraitementSubordonne → FRMedicationsCombinaisonDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTraitementSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRObservationBloodProductTransfusionLMCDAFHIR.html"
+                  title="ConceptMap/FRObservationBloodProductTransfusionLMCDAFHIR">
+                  <span title="ConceptMap/FRObservationBloodProductTransfusionLMCDAFHIR">Mapping FRLMTransfusionDeProduitsSanguins → FRCDATransfusionDeProduitsSanguins → FRObservationBloodProductTransfusionDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMTransfusionDeProduitsSanguins vers la sous-entrée CDA FRCDATransfusionDeProduitsSanguins puis vers le profil FHIR FRObservationBloodProductTransfusionDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImmunizationLMCDAFHIR.html"
+                  title="ConceptMap/FRImmunizationLMCDAFHIR">
+                  <span title="ConceptMap/FRImmunizationLMCDAFHIR">Mapping FRLMVaccination → FRCDAVaccination → FRImmunizationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMVaccination vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImmunizationRecommendationLMCDAFHIR.html"
+                  title="ConceptMap/FRImmunizationRecommendationLMCDAFHIR">
+                  <span title="ConceptMap/FRImmunizationRecommendationLMCDAFHIR">Mapping FRLMVaccinRecommande → FRCDAVaccinRecommande → FRImmunizationRecommendationDocument
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CDA FRCDAVaccinRecommande, puis vers le profil FHIR FRImmunizationRecommendationDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ConceptMap-FRImagingQuantityLMCDAFHIR.html"
+                  title="ConceptMap/FRImagingQuantityLMCDAFHIR">
+                  <span title="ConceptMap/FRImagingQuantityLMCDAFHIR">Mapping Métier/CDA/FHIR : Quantité d'exposition aux radiations
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mapping des éléments du modèle métier FRLMQuantiteExposition vers l'entrée CDA FRCDADICOMQuantite puis vers le composant FHIR FRObservationRadiationExposureDocument.component.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-patient-history.html"
+                  title="StructureDefinition/fr-lm-patient-history">
+                  <span title="StructureDefinition/fr-lm-patient-history">Logical model  - FR LM Patient History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Historique du patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-section-travel-history.html"
+                  title="StructureDefinition/fr-lm-section-travel-history">
+                  <span title="StructureDefinition/fr-lm-section-travel-history">Logical model  - FR LM Travel History
+</span>
+               </a>
+            </td>
+            <td>
+<p>Section Historique des voyages</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-alert.html"
+                  title="StructureDefinition/fr-lm-alert">
+                  <span title="StructureDefinition/fr-lm-alert">Logical model - FR LM Alert
+</span>
+               </a>
+            </td>
+            <td>
+<p>Points de vigilances</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-endpoint.html"
+                  title="StructureDefinition/fr-lm-endpoint">
+                  <span title="StructureDefinition/fr-lm-endpoint">Logical model - FR LM Endpoint
+</span>
+               </a>
+            </td>
+            <td>
+<p>Référence Wado d'un objet DICOM (SOP Instance)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-micro-organism-search.html"
+                  title="StructureDefinition/fr-lm-micro-organism-search">
+                  <span title="StructureDefinition/fr-lm-micro-organism-search">Logical model - FR LM Micro Organism Search
+</span>
+               </a>
+            </td>
+            <td>
+<p>Recherche de micro organismes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-patient-story.html"
+                  title="StructureDefinition/fr-lm-patient-story">
+                  <span title="StructureDefinition/fr-lm-patient-story">Logical model - FR LM Patient Story
+</span>
+               </a>
+            </td>
+            <td>
+<p>Récit du patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-lm-technique-imagerie.html"
+                  title="StructureDefinition/fr-lm-technique-imagerie">
+                  <span title="StructureDefinition/fr-lm-technique-imagerie">Logical model- FR LM Technique imagerie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Entrée Technique imagerie</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="translationinfo.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="StructureDefinition-fr-lm-attester.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
+          Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-10 14:07:00 +0000">
+    2026-07-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/document-core/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+

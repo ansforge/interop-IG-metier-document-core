@@ -1,0 +1,73 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionImagingComplicationsLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionImagingComplicationsLMCDAFHIR</b></p><a name=\"FRSectionImagingComplicationsLMCDAFHIR\"> </a><a name=\"hcFRSectionImagingComplicationsLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-complications-acte</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-complications</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMComplicationsActe</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMComplications</td></tr><tr><td>FRLMComplicationsActe.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMComplications.code</td></tr><tr><td>FRLMComplicationsActe.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMComplications.text</td></tr><tr><td>FRLMComplicationsActe.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMComplications.title</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-complications</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADICOMComplications</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.complication.text</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingComplicationsLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Complications survenues au cours de l'acte d'imagerie\"",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-complications-acte",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-complications",
+    "element" : [{
+      "code" : "FRLMComplicationsActe",
+      "target" : [{
+        "code" : "FRCDADICOMComplications",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMComplicationsActe.codeSection",
+      "target" : [{
+        "code" : "FRCDADICOMComplications.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMComplicationsActe.blocNarratif",
+      "target" : [{
+        "code" : "FRCDADICOMComplications.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMComplicationsActe.titreSection",
+      "target" : [{
+        "code" : "FRCDADICOMComplications.title",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-complications",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document",
+    "element" : [{
+      "code" : "FRCDADICOMComplications",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.complication.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

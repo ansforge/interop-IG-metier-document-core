@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionHistoryActsLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionHistoryActsLMCDAFHIR</b></p><a name="en-FRSectionHistoryActsLMCDAFHIR"> </a><a name="en-hcFRSectionHistoryActsLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-actes</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-des-actes</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMHistoriqueDesActes</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes</td></tr><tr><td>FRLMHistoriqueDesActes.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes.code</td></tr><tr><td>FRLMHistoriqueDesActes.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes.title</td></tr><tr><td>FRLMHistoriqueDesActes.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes.text</td></tr><tr><td>FRLMHistoriqueDesActes.entree.actes</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes.entry:FRCDAActe</td></tr><tr><td>FRLMHistoriqueDesActes.entree.references</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAHistoriqueDesActes.entry:FRCDAReferencesExternes</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-des-actes</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAHistoriqueDesActes</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs</td></tr><tr><td>FRCDAHistoriqueDesActes.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs.code</td></tr><tr><td>FRCDAHistoriqueDesActes.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs.title</td></tr><tr><td>FRCDAHistoriqueDesActes.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs.text</td></tr><tr><td>FRCDAHistoriqueDesActes.entry:FRCDAActe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs.entry:FRProcedureDocument</td></tr><tr><td>FRCDAHistoriqueDesActes.entry:FRCDAReferencesExternes</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:historyActs.entry:FRDocumentReferenceDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionHistoryActsLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Historique des actes&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-des-actes"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-des-actes"/>
+    <element>
+      <code value="FRLMHistoriqueDesActes"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHistoriqueDesActes.codeSection"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHistoriqueDesActes.titreSection"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHistoriqueDesActes.blocNarratif"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHistoriqueDesActes.entree.actes"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes.entry:FRCDAActe"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHistoriqueDesActes.entree.references"/>
+      <target>
+        <code value="FRCDAHistoriqueDesActes.entry:FRCDAReferencesExternes"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-des-actes"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDAHistoriqueDesActes"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAHistoriqueDesActes.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAHistoriqueDesActes.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAHistoriqueDesActes.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAHistoriqueDesActes.entry:FRCDAActe"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs.entry:FRProcedureDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAHistoriqueDesActes.entry:FRCDAReferencesExternes"/>
+      <target>
+        <code value="FRCompositionDocument.section:historyActs.entry:FRDocumentReferenceDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

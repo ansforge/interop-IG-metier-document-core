@@ -1,0 +1,80 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRActSubstitutionLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRActSubstitutionLMCDAFHIR</b></p><a name=\"FRActSubstitutionLMCDAFHIR\"> </a><a name=\"hcFRActSubstitutionLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-acte-substitution</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-acte-substitution</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMActeSubstitution</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAActeSubstitution</td></tr><tr><td>FRLMActeSubstitution.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAActeSubstitution.code</td></tr><tr><td>FRLMActeSubstitution.statut</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAActeSubstitution.statusCode</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-acte-substitution</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDAActeSubstitution</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDispenseDocument</td></tr><tr><td>FRCDAActeSubstitution.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDispenseDocument.substitution.type</td></tr><tr><td>FRCDAActeSubstitution.statusCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDispenseDocument.status</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRActSubstitutionLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Acte substitution\"",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMActeSubstitution vers le profil CDA FRCDAActeSubstitution, puis vers le profil FHIR FRMedicationDispenseDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-acte-substitution",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-acte-substitution",
+    "element" : [{
+      "code" : "FRLMActeSubstitution",
+      "target" : [{
+        "code" : "FRCDAActeSubstitution",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMActeSubstitution.code",
+      "target" : [{
+        "code" : "FRCDAActeSubstitution.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMActeSubstitution.statut",
+      "target" : [{
+        "code" : "FRCDAActeSubstitution.statusCode",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-acte-substitution",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document",
+    "element" : [{
+      "code" : "FRCDAActeSubstitution",
+      "target" : [{
+        "code" : "FRMedicationDispenseDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAActeSubstitution.code",
+      "target" : [{
+        "code" : "FRMedicationDispenseDocument.substitution.type",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAActeSubstitution.statusCode",
+      "target" : [{
+        "code" : "FRMedicationDispenseDocument.status",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

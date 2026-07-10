@@ -1,0 +1,82 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingDocumentDeReferenceCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingDocumentDeReferenceCDAFHIR</b></p><a name=\"mappingDocumentDeReferenceCDAFHIR\"> </a><a name=\"hcmappingDocumentDeReferenceCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-reference</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMDocumentDeReference</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>relatedDocument</td></tr><tr><td>FRLMDocumentDeReference.typeReference</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>relatedDocument@typeCode</td></tr><tr><td>FRLMDocumentDeReference.identifiantUniqueDocument</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>relatedDocument.parentDocument.id</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>relatedDocument</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.relatesTo</td></tr><tr><td>relatedDocument@typeCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.relatesTo.code</td></tr><tr><td>relatedDocument.parentDocument.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.relatesTo.targetIdentifier</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingDocumentDeReferenceCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-reference",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document",
+    "element" : [{
+      "code" : "FRLMDocumentDeReference",
+      "target" : [{
+        "code" : "relatedDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDocumentDeReference.typeReference",
+      "target" : [{
+        "code" : "relatedDocument@typeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDocumentDeReference.identifiantUniqueDocument",
+      "target" : [{
+        "code" : "relatedDocument.parentDocument.id",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-document",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "relatedDocument",
+      "target" : [{
+        "code" : "Composition.relatesTo",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "relatedDocument@typeCode",
+      "target" : [{
+        "code" : "Composition.relatesTo.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "relatedDocument.parentDocument.id",
+      "target" : [{
+        "code" : "Composition.relatesTo.targetIdentifier",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

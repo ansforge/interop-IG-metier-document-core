@@ -1,0 +1,3756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ans.fr.document-core"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.fr.document-core</b></p><a name="en-ans.fr.document-core"> </a><a name="en-hcans.fr.document-core"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: fr</p></div><h2>FRDocumentCore</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/document-core/ImplementationGuide/ans.fr.document-core</pre><div><p>Volet modèle métier du guide d'implémentation Document Core.</p>
+</div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ImplementationGuide/ans.fr.document-core"/>
+  <version value="0.1.0"/>
+  <name value="FRDocumentCore"/>
+  <title value="FR Document Core (Modèle métier)"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Volet modèle métier du guide d'implémentation Document Core."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="ans.fr.document-core"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.11.1"/>
+  </dependsOn>
+  <dependsOn id="ans_fhir_fr_document_core">
+    <uri value="https://interop.esante.gouv.fr/ig/fhir/document-core/ImplementationGuide/ans.fhir.fr.document-core"/>
+    <packageId value="ans.fhir.fr.document-core"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="ans_cda_fr_document_core">
+    <uri value="https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core"/>
+    <packageId value="ans.cda.fr.document-core"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../expansion-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-all"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="tx"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="generate"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="init"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="progress"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="fr"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="translation-sources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/translations/en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://interop.esante.gouv.fr/ig/document-core/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters">
+      <valueReference>
+        <reference value="Parameters/expansion-parameters"/>
+      </valueReference>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="shownav"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../expansion-params.json"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-all"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="tx"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="generate"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="init"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="logging"/>
+      </extension>
+      <extension url="value">
+        <valueString value="progress"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="fr"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="translation-sources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/translations/en"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://interop.esante.gouv.fr/ig/document-core/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <grouping id="Modèles logiques métier de l'entête d'un document">
+      <name value="Modèles logiques métier de l'entête d'un document"/>
+    </grouping>
+    <grouping id="Modèles logiques métier des sections d'un document">
+      <name value="Modèles logiques métier des sections d'un document"/>
+    </grouping>
+    <grouping id="Modèles logiques métier des composants communs">
+      <name value="Modèles logiques métier des composants communs"/>
+      <description value="Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR."/>
+    </grouping>
+    <grouping id="Mapping ML-CDA-FHIR entête">
+      <name value="Concept Maps de l'entête du document"/>
+    </grouping>
+    <grouping id="Mapping ML-CDA-FHIR des sections d'un document">
+      <name value="Concept Maps des sections d'un document"/>
+    </grouping>
+    <grouping id="Mapping ML-CDA-FHIR des composants communs d'un document">
+      <name value="Concept Maps des composants communs d'un Document"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-history"/>
+      </reference>
+      <name value="Logical model  - FR LM Patient History"/>
+      <description value="Section Historique du patient"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-section-pregnancy-history"/>
+      </reference>
+      <name value="Logical model  - FR LM Pregnancy History"/>
+      <description value="Section Historique des grossesses"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-section-travel-history"/>
+      </reference>
+      <name value="Logical model  - FR LM Travel History"/>
+      <description value="Section Historique des voyages"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-device"/>
+      </reference>
+      <name value="Logical model - Device"/>
+      <description value="Dispositif médical"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-addendum"/>
+      </reference>
+      <name value="Logical model - FR LM Addendum"/>
+      <description value="Section Addendum"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-admission-evaluation"/>
+      </reference>
+      <name value="Logical model - FR LM Admission Evaluation"/>
+      <description value="Section Évaluation à l'admission"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-advance-directive"/>
+      </reference>
+      <name value="Logical model - FR LM Advance Directive"/>
+      <description value="Directive anticipée"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-advance-directives"/>
+      </reference>
+      <name value="Logical model - FR LM Advance Directives"/>
+      <description value="Section Directives anticipées"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-alert"/>
+      </reference>
+      <name value="Logical model - FR LM Alert"/>
+      <description value="Points de vigilances"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-alerts"/>
+      </reference>
+      <name value="Logical model - FR LM Alerts"/>
+      <description value="Section Points de vigilance"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-allergies-and-intolerances"/>
+      </reference>
+      <name value="Logical model - FR LM Allergies And Intolerances"/>
+      <description value="Section Allergies et hypersensibilités"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-allergy-intolerance"/>
+      </reference>
+      <name value="Logical model - FR LM Allergy Intolerance"/>
+      <description value="Allergie ou Hypersensibilité"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-assessment"/>
+      </reference>
+      <name value="Logical model - FR LM Assessment"/>
+      <description value="Evaluation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-attachment"/>
+      </reference>
+      <name value="Logical model - FR LM Attachment"/>
+      <description value="Document attaché"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-attachments"/>
+      </reference>
+      <name value="Logical model - FR LM Attachments"/>
+      <description value="Section Documents ajoutés"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-attester"/>
+      </reference>
+      <name value="Logical model - FR LM Attester"/>
+      <description value="Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-body-structure"/>
+      </reference>
+      <name value="Logical model - FR LM Body Structure"/>
+      <description value="Localisation anatomique"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-care-plan"/>
+      </reference>
+      <name value="Logical model - FR LM Care Plan"/>
+      <description value="Plan de soins"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-care-plans"/>
+      </reference>
+      <name value="Logical model - FR LM CarePlans"/>
+      <description value="Section Plan de soins"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-comparison-study"/>
+      </reference>
+      <name value="Logical model - FR LM Comparison Study"/>
+      <description value="Section Comparaison d'examens d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-result-data"/>
+      </reference>
+      <name value="Logical model - FR LM Compte rendu de biologie de 1er niveau"/>
+      <description value="Section Compte rendu de biologie de 1er niveau"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-conclusion"/>
+      </reference>
+      <name value="Logical model - FR LM Conclusion"/>
+      <description value="Section Conclusion"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-condition"/>
+      </reference>
+      <name value="Logical model - FR LM Condition"/>
+      <description value="Problème"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-consent"/>
+      </reference>
+      <name value="Logical model - FR LM Consent"/>
+      <description value="Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-corps-document"/>
+      </reference>
+      <name value="Logical model - FR LM Corps document"/>
+      <description value="Eléments métier du corps d'un document contenant les sections du document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-course-of-encounter"/>
+      </reference>
+      <name value="Logical model - FR LM Course of encounter"/>
+      <description value="Section Résultats d'événements"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-data-enterer"/>
+      </reference>
+      <name value="Logical model - FR LM Data Enterer"/>
+      <description value="Opérateur de saisie de la totalité ou d'une partie du contenu du document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-device-use"/>
+      </reference>
+      <name value="Logical model - FR LM Device use"/>
+      <description value="Dispositif médical usage"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dicom-medication-administration"/>
+      </reference>
+      <name value="Logical model - FR LM DICOM Medication Administration"/>
+      <description value="Administration de produit de santé dans le contexte de l'imagerie médicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dicom-study-metadata"/>
+      </reference>
+      <name value="Logical model - FR LM DICOM Study Metadata"/>
+      <description value="Section Object Catalog"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dose-number"/>
+      </reference>
+      <name value="Logical model - FR LM Dose Number"/>
+      <description value="Rang de la vaccination"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-encounter"/>
+      </reference>
+      <name value="Logical model - FR LM Encounter"/>
+      <description value="Rencontre"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-encounter-information"/>
+      </reference>
+      <name value="Logical model - FR LM Encounter Information"/>
+      <description value="Section Informations sur la rencontre"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-endpoint"/>
+      </reference>
+      <name value="Logical model - FR LM Endpoint"/>
+      <description value="Référence Wado d'un objet DICOM (SOP Instance)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-entry"/>
+      </reference>
+      <name value="Logical model - FR LM Entry"/>
+      <description value="Modèle logique représentant l'entrée"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-examination-report"/>
+      </reference>
+      <name value="Logical model - FR LM Examination Report"/>
+      <description value="Section Acte d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-exposure-information"/>
+      </reference>
+      <name value="Logical model - FR LM Exposure Information"/>
+      <description value="Section Exposition aux radiations"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-family-medical-history"/>
+      </reference>
+      <name value="Logical model - FR LM Family Medical History"/>
+      <description value="Section Antécédents familiaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-family-member-history"/>
+      </reference>
+      <name value="Logical model - FR LM Family Member History"/>
+      <description value="Antécédent familial"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication-prescription"/>
+      </reference>
+      <name value="Logical model - FR LM FR LM Medication Prescription"/>
+      <description value="Section Prescription de médicaments"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-history-of-past-illness"/>
+      </reference>
+      <name value="Logical model - FR LM FRLM History Of Past Illness"/>
+      <description value="Section Antécédents médicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-hazardous-working-conditions"/>
+      </reference>
+      <name value="Logical model - FR LM Hazardous Working Conditions"/>
+      <description value="Section Facteurs de risque professionnels non codés"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-header-document"/>
+      </reference>
+      <name value="Logical model - FR LM Header Document"/>
+      <description value="Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-health-professional"/>
+      </reference>
+      <name value="Logical model - FR LM Health Professional"/>
+      <description value="Une personne (professionnel ou patient ou autre)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-hospital-discharge-medications"/>
+      </reference>
+      <name value="Logical model - FR LM Hospital Discharge Medications"/>
+      <description value="Section Traitements à la sortie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-human-name"/>
+      </reference>
+      <name value="Logical model - FR LM Human Name"/>
+      <description value="Modele logique metier - FR LM Human Name"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-imaging-study"/>
+      </reference>
+      <name value="Logical model - FR LM Imaging Study"/>
+      <description value="DICOM Examen Imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-immunisation"/>
+      </reference>
+      <name value="Logical model - FR LM Immunisation"/>
+      <description value="Vaccination"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-immunisations"/>
+      </reference>
+      <name value="Logical model - FR LM Immunisations"/>
+      <description value="Section Vaccinations"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-informant"/>
+      </reference>
+      <name value="Logical model - FR LM Informant"/>
+      <description value="Informant (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-intended-recipient"/>
+      </reference>
+      <name value="Logical model - FR LM Intended Recipient"/>
+      <description value="Personne déclarée comme destinataire prévu du document.&#xA;- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).&#xA; Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-legal-authentication"/>
+      </reference>
+      <name value="Logical model - FR LM Legal Authentication"/>
+      <description value="Représente le responsable du document, qui est : &#xA; - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. &#xA; - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). &#xA; - soit le patient/usager responsable du document d'expression personnelle &#xA; - soit le SNR responsable du document produit via ce SNR. &#xA; - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-location"/>
+      </reference>
+      <name value="Logical model - FR LM Location"/>
+      <description value="Lieu"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medical-device-prescriptions"/>
+      </reference>
+      <name value="Logical Model - FR LM Medical Device Prescriptions"/>
+      <description value="Section Prescription de dispositifs médicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medical-devices-and-implants"/>
+      </reference>
+      <name value="Logical Model - FR LM Medical Devices and Implants"/>
+      <description value="Section Dispositifs Medicaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication"/>
+      </reference>
+      <name value="Logical model - FR LM Medication"/>
+      <description value="Produit de santé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication-dispensations"/>
+      </reference>
+      <name value="Logical model - FR LM Medication Dispensations"/>
+      <description value="Section Dispensation médicaments"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication-dispense"/>
+      </reference>
+      <name value="Logical model - FR LM Medication Dispense"/>
+      <description value="Traitement dispense"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prescription-item"/>
+      </reference>
+      <name value="Logical model - FR LM Medication Prescription"/>
+      <description value="Traitement prescrit"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication-summary"/>
+      </reference>
+      <name value="Logical model - FR LM Medication Summary"/>
+      <description value="Section Traitements"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-micro-organism-search"/>
+      </reference>
+      <name value="Logical model - FR LM Micro Organism Search"/>
+      <description value="Recherche de micro organismes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification"/>
+      </reference>
+      <name value="Logical model - FR LM Multidrug Resistant Microorganism Identification"/>
+      <description value="Identification de micro-organismes multirésistants"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-note"/>
+      </reference>
+      <name value="Logical model - FR LM Note"/>
+      <description value="Section Commentaire (non-codé)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation"/>
+      </reference>
+      <name value="Logical model - FR LM Observation"/>
+      <description value="Résultat d'une observation réalisée sur le patient ou un dispositif médical."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-vital-sign"/>
+      </reference>
+      <name value="Logical model - FR LM Observation Vital Sign"/>
+      <description value="Signe vital observé"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-media"/>
+      </reference>
+      <name value="Logical model - FR LM ObservationMedia"/>
+      <description value="Image illustrative."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-results"/>
+      </reference>
+      <name value="Logical model - FR LM ObservationResults"/>
+      <description value="Section Résultats"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-order"/>
+      </reference>
+      <name value="Logical model - FR LM Order"/>
+      <description value="Association to an order that is the origin of the act resulting in the document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-order-information"/>
+      </reference>
+      <name value="Logical model - FR LM Order Information"/>
+      <description value="Section Demande d'examen d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-organisation"/>
+      </reference>
+      <name value="Logical model - FR LM Organisation"/>
+      <description value="Une structure (organisation) pour les professionnels de santé."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-participant"/>
+      </reference>
+      <name value="Logical model - FR LM Participant"/>
+      <description value="Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient"/>
+      </reference>
+      <name value="Logical model - FR LM Patient"/>
+      <description value="Patient/Usager concerné par le document."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-education"/>
+      </reference>
+      <name value="Logical model - FR LM Patient Education"/>
+      <description value="Section Education du patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-story"/>
+      </reference>
+      <name value="Logical model - FR LM Patient Story"/>
+      <description value="Récit du patient"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-patient-transfer"/>
+      </reference>
+      <name value="Logical model - FR LM Patient Transfer."/>
+      <description value="Transfert du patient"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-predictable-adverse-drug-reaction"/>
+      </reference>
+      <name value="Logical model - FR LM Predictable Adverse Drug Reaction"/>
+      <description value="Section Effets indesirables"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-prescription-entree"/>
+      </reference>
+      <name value="Logical model - FR LM Prescription"/>
+      <description value="Prescription"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-presented-form"/>
+      </reference>
+      <name value="Logical model - FR LM Presented Form"/>
+      <description value="Section Document PDF-copie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-problems"/>
+      </reference>
+      <name value="Logical model - FR LM Problems"/>
+      <description value="Section Problems"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-procedures"/>
+      </reference>
+      <name value="logical model - FR LM Procedures"/>
+      <description value="Section Historique des actes"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-qr-code"/>
+      </reference>
+      <name value="Logical model - FR LM QR Code"/>
+      <description value="Section Codes à barres"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-quantity-exposure"/>
+      </reference>
+      <name value="Logical model - FR LM Quantity Exposure"/>
+      <description value="Quantité exposition"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-reason-for-referral"/>
+      </reference>
+      <name value="Logical model - FR LM Reason for referral"/>
+      <description value="Section Raison de la recommandation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-recommendation"/>
+      </reference>
+      <name value="Logical model - FR LM Recommendation"/>
+      <description value="Section Recommandation"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-related-person"/>
+      </reference>
+      <name value="Logical model - FR LM Related Person"/>
+      <description value="Related Person"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier de l'entête d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultats-examens-biologie-medicale"/>
+      </reference>
+      <name value="Logical model - FR LM Resultats d'examens de biologie medicale"/>
+      <description value="Resultats d'examens de biologie medicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-section"/>
+      </reference>
+      <name value="Logical model - FR LM Section"/>
+      <description value="Section"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-series"/>
+      </reference>
+      <name value="Logical model - FR LM Series"/>
+      <description value="Séries d'actes d'imagerie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-service-request"/>
+      </reference>
+      <name value="Logical model - FR LM Service Request"/>
+      <description value="Demande d'examen ou de suivi / Objectif à atteindre"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-social-history"/>
+      </reference>
+      <name value="Logical model - FR LM SocialHistory"/>
+      <description value="Section Habitus et modes de vie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-sop-instance"/>
+      </reference>
+      <name value="Logical model - FR LM SOP Instance"/>
+      <description value="SOP Instance"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-specimen"/>
+      </reference>
+      <name value="Logical model - FR LM Specimen"/>
+      <description value="Prélèvement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-supporting-information"/>
+      </reference>
+      <name value="Logical model - FR LM Supporting Information"/>
+      <description value="Section Informations Cliniques"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-transfusion-accidents"/>
+      </reference>
+      <name value="Logical model - FR LM Transfusion accidents"/>
+      <description value="Accidents transfusionnels"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-transfusion-de-produits-sanguins"/>
+      </reference>
+      <name value="Logical model - FR LM Transfusion de produits sanguins"/>
+      <description value="Transfusion de produits sanguins"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-travel-history"/>
+      </reference>
+      <name value="Logical model - FR LM TravelHistory"/>
+      <description value="Historique des voyages."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-vital-signs"/>
+      </reference>
+      <name value="Logical model - FR LM Vital Signs"/>
+      <description value="Section Signes vitaux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-laboratory-observation"/>
+      </reference>
+      <name value="Logical model - Laboratory Observation"/>
+      <description value="Résultats d'examen de biologie médicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-dosageInstructions"/>
+      </reference>
+      <name value="Logical model- FR LM Dosage Instructions"/>
+      <description value="Posologie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-functional-status"/>
+      </reference>
+      <name value="logical model- FR LM Functional Status"/>
+      <description value="Section Statut fonctionnel"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-medication-administration"/>
+      </reference>
+      <name value="Logical model- FR LM Medication Administration&#x9;"/>
+      <description value="Traitement"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-observation-social-history"/>
+      </reference>
+      <name value="Logical model- FR LM Observation Social History"/>
+      <description value="Habitus Mode de vie"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-pregnancy-history"/>
+      </reference>
+      <name value="Logical model- FR LM Pregnancy History"/>
+      <description value="Historique de la grossesse"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-pregnancy-observation"/>
+      </reference>
+      <name value="Logical model- FR LM Pregnancy Observation"/>
+      <description value="Observation sur la grossesse"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-pregnancy-status"/>
+      </reference>
+      <name value="Logical model- FR LM Pregnancy Status"/>
+      <description value="Statut de grossesse"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-procedure"/>
+      </reference>
+      <name value="Logical model- FR LM Procedure"/>
+      <description value="Acte"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-technique-imagerie"/>
+      </reference>
+      <name value="Logical model- FR LM Technique imagerie"/>
+      <description value="Entrée Technique imagerie"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationTransfusionAccidentsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAccidentsTransfusionnels → FRCDAAccidentsTransfusionnels → FRObservationTransfusionAccidentsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAccidentsTransfusionnels vers le profil CDA FRCDAAccidentsTransfusionnels, puis vers le profil FHIR FRObservationTransfusionAccidentsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRProcedureLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMActe → FRCDAActe → FRProcedureDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRActSubstitutionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMActeSubstitution → FRCDAActeSubstitution → FRMedicationDispenseDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMActeSubstitution vers le profil CDA FRCDAActeSubstitution, puis vers le profil FHIR FRMedicationDispenseDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingAddendumLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAddendum → FRCDAdicomAddendum → FRCompositionDocument.section:Addendum"/>
+      <description value="Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum puis vers le profil FHIR FRCompositionDocument.section:Addendum."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationAdministrationBloodDerivativesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAdministrationDeDerivesDuSang → FRCDAAdministrationDeDerivesDuSang → FRObservationAdministrationBloodDerivativesDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAdministrationDeDerivesDuSang vers le profil CDA FRCDAAdministrationDeDerivesDuSang, puis vers le profil FHIR FRObservationAdministrationBloodDerivativesDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingMedicationAministrationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAdministrationProduitDeSante -&gt; FRCDADICOMAdministrationProduitDeSante -&gt; FRMedicationAdministrationDocument"/>
+      <description value="Mapping des éléments du modele metier FRLMAdministrationProduitDeSante vers le profil CDA FRCDADICOMAdministrationProduitDeSante, puis vers le profil FHIR FRMedicationAdministrationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAllergyIntoleranceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -&gt; FRAllergyIntoleranceDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRFamilyMemberHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAntecedentFamilialObserve → FRCDAAntecedentFamilialObserve → FRFamilyMemberHistoryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAntecedentFamilialObserve vers le profil CDA FRCDAAntecedentFamilialObserve, puis vers le profil FHIR FRFamilyMemberHistoryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAntecedentsFamiliauxEntree → FRCDAAntecedentsFamiliaux → FRFamilyMemberHistoryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMAntecedentsFamiliauxEntree vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingRadiationExposureAuthorizationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAutorisationExposition → FRCDADICOMExpositionPatient → FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition"/>
+      <description value="Mapping des éléments du modèle métier FRLMAutorisationExposition vers le profil CDA FRCDADICOMExpositionPatient, puis vers le profil FHIR FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAllowedSubstitutionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAutorisationSubstitution → FRCDAAutorisationSubstitution → FRMedicationRequestDocument.substitution.allowedCodeableConcept"/>
+      <description value="Mapping des éléments du modèle métier FRLMAutorisationSubstitution vers le profil CDA FRCDAAutorisationSubstitution, puis vers l'élément substitution.allowedCodeableConcept du profil FHIR FRMedicationRequestDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale vers le profil CDA FRCDABatterieExamensDeBiologieMedicale, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRCertitudeLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCertitude → FRCDACertitude → FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus"/>
+      <description value="Mapping des éléments du modèle métier FRLMCertitude vers le profil CDA FRCDACertitude, puis vers les profils FHIR FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRNoteLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCommentaireER -&gt; FRCDACommentaireER -&gt; Annotation"/>
+      <description value="Mapping des éléments du modele metier FRLMCommentaireER vers l'element CDA FRCDACommentaireER, puis vers l'element FHIR Annotation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingComparisonLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMComparaisonExamensImagerie → FRCDADICOMExamenComparatif → FRCompositionDocument.section:Comparison"/>
+      <description value="Mapping des éléments du modèle métier FRLMComparaisonExamensImagerie vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section Comparison du profil FHIR FRCompositionDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingComplicationsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMComplicationsActe → FRCDADICOMComplications → FRProcedureImagingDocument.complication.text"/>
+      <description value="Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingConclusionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMConclusionExamenImagerie → FRCDADICOMConclusion → FRDiagnosticReportImagingDocument.conclusion"/>
+      <description value="Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRConditionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCondition → FRCDACondition → FRConditionDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionLaboratoryChapterLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCRBIOChapitre → FRCDACRBIOChapitre → FRCompositionDocument.section"/>
+      <description value="Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRCompositionDocument.section."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCRBIOSousChapitre → FRCDACRBIOSousChapitre → FRCompositionDocument.section:avec-sous-sections.section"/>
+      <description value="Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRCriticiteLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMCriticite -&gt; FRCDACriticite -&gt; FRAllergyIntoleranceDocument.criticality"/>
+      <description value="Mapping des éléments du modele metier FRLMCriticite vers le profil CDA FRCDACriticite, puis vers le profil FHIR FRAllergyIntoleranceDocument.criticality."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDemandeExamenImagerie → FRCDADICOMDemandeExamen → FRServiceRequestDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRServiceRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDemandeExamenOuSuivi → FRCDADemandeDExamenOuDeSuivi → FRServiceRequestDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDemandeExamenOuSuivi vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAdvanceDirectiveLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAdvanceDirectiveLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDirectivesAnticipees → FRCDADirectivesAnticipees → FRAdvanceDirectiveDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDirectivesAnticipees vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR FRAdvanceDirectiveDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationDispenseLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDeviceRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceRequestDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDeviceUseStatementLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le&#xA;profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicalDeviceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDispositifsMedicaux → FRCDADispositifsMedicaux → FRCompositionDocument.section:medicalDevice"/>
+      <description value="Mapping des éléments du modèle métier FRLMDispositifsMedicaux vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevice."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDocumentReferenceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDocumentPDFCopie → FRCDADocumentPDFCopie → FRCompositionDocument.section:pdfDocumentCopy"/>
+      <description value="Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAddedDocumentsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMDocumentsAjoutes → FRCDADocumentsAjoutes → FRCompositionDocument.section:addedDocuments"/>
+      <description value="Mapping des éléments du modèle métier FRLMDocumentsAjoutes vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:addedDocuments."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionPatientEducationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation"/>
+      <description value="Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAdverseEventLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEffetsIndesirables → FRCDAEffetsIndesirables → FRCompositionDocument.section:adverseEvent"/>
+      <description value="Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationWorkRelatedAccidentLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEnRapportAvecAccidentTravail → FRCDAEnRapportAvecAccidentTravail → FRObservationWorkRelatedAccidentDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEnRapportAvecAccidentTravail vers le profil CDA FRCDAEnRapportAvecAccidentTravail, puis vers le profil FHIR FRObservationWorkRelatedAccidentDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationSurveyLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEvaluation → FRCDAEvaluation → FRObservationSurveyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEvaluation vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationSurveyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationSurveyComponentLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEvaluationComposant → FRCDAEvaluationComposant → FRObservationSurveyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEvaluationComposant vers le profil CDA FRCDAEvaluationComposant, puis vers le profil FHIR FRObservationSurveyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationSurveyComponentN2LMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEvaluationComposantN2 → FRCDAEvaluationComposantN2 → FRObservationSurveyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEvaluationComposantN2 vers le profil CDA FRCDAEvaluationComposantN2, puis vers le profil FHIR FRObservationSurveyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRAdverseEventLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingStudyLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionExposureRadiationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:exposureRadiation"/>
+      <description value="Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:exposureRadiation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingRadiationExposureLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:radiationExposure"/>
+      <description value="Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations puis vers le profil FHIR FRCompositionDocument.section:radiationExposure."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMFacteursDeRisqueProfessionnelsNonCode → FRCDAFacteursDeRisqueProfessionnelsNonCode → FRCompositionDocument.section:uncodedOccupationalRiskFactors"/>
+      <description value="Mapping des éléments du modèle métier FRLMFacteursDeRisqueProfessionnelsNonCode vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedOccupationalRiskFactors."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionPhysicalFunctionsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMFonctionsPhysiques → FRCDAFonctionsPhysiques → FRCompositionDocument.section:PhysicalFunctions"/>
+      <description value="Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section CDA FRCDAFonctionsPhysiques, puis vers le profil FHIR FRCompositionDocument.section:PhysicalFunctions."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationSurveyPannelLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMGroupDeQuestionnairesDevaluation → FRCDAGroupeDeQuestionnairesDEvaluation → FRObservationSurveyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMGroupDeQuestionnairesDevaluation vers le profil CDA FRCDAGroupeDeQuestionnairesDEvaluation, puis vers le profil FHIR FRObservationSurveyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionSocialHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHabitusModeDeVie → FRCDAHabitusModeDeVieSection → FRCompositionDocument.section:socialHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMHabitusModeDeVie vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:socialHistory."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationSocialHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHabitusModeDeVieEntree → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionHistoryActsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHistoriqueDesActes → FRCDAHistoriqueDesActes → FRCompositionDocument.section:historyActs"/>
+      <description value="Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHistoriqueDesGrossesses → FRCDAHistoriqueDesGrossesses → FRCompositionDocument.section:pregnancyHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMHistoriqueDesGrossesses vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:pregnancyHistory."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationPregnancyHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRObservationPregnancyHistoryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRObservationPregnancyHistoryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRPregnancyHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRPregnancyHistoryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMIdentificationDeMicroOrganismesMultiresistants → FRCDAIdentificationMicroOrganismesMultiresistants → FRObservationMultiresistantMicroorganismsIdentificationDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMultiresistants vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMediaLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMInformationsCliniques → FRCDADICOMHistoriqueMedical → FRCompositionDocument.section:History (Observation / FRConditionDocument/ FRObservationPregnancyDocument / FRObservationContraIndicationsImagingDocument / FRDeviceAuteurDocument / FRMedicationAdministrationDocument)"/>
+      <description value="Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRLaboratoryIsolateResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMIsolatMicrobiologique → FRCDAIsolatMicrobiologique → FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationBirthEventLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMNaissance → FRCDANaissance → FRObservationBirthEventDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMNaissance vers le profil CDA FRCDANaissance, puis vers le profil FHIR FRObservationBirthEventDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMObjectCatalog → FRCDADICOMObjectCatalog → FRCompositionDocument.section:imagingStudy"/>
+      <description value="Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMObservation -&gt; FRCDASimpleObservation -&gt; Observation"/>
+      <description value="Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationPregnancyLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMObservationGrossesse → FRCDAObservationSurLaGrossesse → FRObservationPregnancyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMObservationGrossesse vers le profil CDA FRCDAObservationSurLaGrossesse, puis vers le profil FHIR FRObservationPregnancyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationResultLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMObservationResult → FRCDAResultat → FRObservationResultDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMObservationResult vers le profil CDA FRCDAResultat, puis vers le profil FHIR FRObservationResultDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRParticipantCorpsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMParticipantCorps -&gt; FRCDAParticipant -&gt; FRActorExtension"/>
+      <description value="Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRPatientWithNonHumanSubjectLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPatientSujetNonHumain -&gt; FRCDAPatientAvecSujetNonHumain -&gt; FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modele metier FRLMPatientSujetNonHumain vers l'element CDA FRCDAPatientAvecSujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance et Observation/subject."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionCarePlanLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPlanSoins → FRCDAPlanDeSoins → FRCompositionDocument.section:planOfCare"/>
+      <description value="Mapping des éléments du modèle métier FRLMPlanSoins vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:planOfCare."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionUncodedPointsOfVigilanceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPointsDeVigilancesNonCode → FRCDAPointsDeVigilancesNonCode → FRCompositionDocument.section:uncodedPointsOfVigilance"/>
+      <description value="Mapping des éléments du modèle métier FRLMPointsDeVigilancesNonCode vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedPointsOfVigilance."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSpecimenLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPrelevement → FRCDAPrelevement → FRSpecimenDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPrescriptionDispositifsMedicaux → FRCDAPrescriptionDispositifsMedicaux → FRCompositionDocument.section:medicalDevicePrescription"/>
+      <description value="Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMPrescriptionMedicaments → FRCDAPrescriptionMedicaments → FRCompositionDocument.section:medicationRequest"/>
+      <description value="Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionActiveProblemsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMProblemesActifs → FRCDAProblemesActifs → FRCompositionDocument.section:activeProblems"/>
+      <description value="Mapping des éléments du modèle métier FRLMProblemesActifs vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:activeProblems."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMProduitSante → FRCDAProduitDeSante → FRMedicationDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMProduitSante vers le profil CDA FRCDAProduitDeSante, puis vers le profil FHIR FRMedicationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMRaisonRecommandation → FRCDARaisonDeLaRecommandation → FRCompositionDocument.section:reasonForRecommendation"/>
+      <description value="Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionUncodedReasonForRecommendationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMRaisonRecommandationNonCode → FRCDARaisonDeLaRecommandationNonCode → FRCompositionDocument.section:reasonForRecommendation"/>
+      <description value="Mapping des éléments du modèle métier FRLMRaisonRecommandationNonCode vers la section CDA FRCDARaisonDeLaRecommandationNonCode, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMRechercheDeMicroOrganismes → FRCDARechercheDeMicroOrganismes → FRObservationMicroorganismDetectionDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMRechercheDeMicroOrganismes vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRCarePlanLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FREncounterLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatExamensBiologieElementCliniquePertinent → Profile: FRCDAResultatExamensDeBiologieElementCliniquePertinent&#xA; → FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRDiagnosticReportLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionExaminationResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsExamens → FRCDAResultatsExamens → FRCompositionDocument.section:Results"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsExamens vers la section CDA FRCDAResultatsExamens puis vers le profil FHIR FRCompositionDocument.section:Results."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRLaboratoryResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale vers le profil CDA FRCDAResultatExamensDeBiologie, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionUncodedExaminationResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsExamensNonCode → FRCDAResultatsExamensNonCode → FRCompositionDocument.section:Results"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsExamensNonCode vers la section CDA FRCDAResultatsExamensNonCode puis vers le profil FHIR FRCompositionDocument.section:Results."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingSeriesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSerieImagerie → FRCDADICOMSerieImagerie → FRImagingStudyDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSerieImagerie vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionVitalSignsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section"/>
+      <description value="Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationVitalSignsPanelLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSigneVital → FRCDASignesVitaux → FRObservationVitalSignsPanelDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSigneVital vers le profil CDA FRCDASignesVitaux, puis vers le profil FHIR FRObservationVitalSignsPanelDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationVitalSignsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSigneVitalObserve → FRCDASigneVitalObserve → FRObservationVitalSignsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSigneVitalObserve vers le profil CDA FRCDASigneVitalObserve, puis vers le profil FHIR FRObservationVitalSignsDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionDocumentStatusLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMStatutDocument -&gt; FRCDAStatutDuDocument -&gt; FRComposition.section"/>
+      <description value="Mapping des éléments du modèle métier FRLMStatutDocument vers la section CDA FRCDAStatutDuDocument, puis vers la section FHIR FRCompositionDocument.section:documentStatus."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionFunctionalStatusLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMStatutFonctionnel → FRCDAStatutFonctionnel → FRCompositionDocument.section:FRFunctionalStatus"/>
+      <description value="Mapping des éléments du modèle métier FRLMStatutFonctionnel vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:FRFunctionalStatus."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRNonHumanSubjectLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSujetNonHumain -&gt; FRCDASujetNonHumain -&gt; FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modele metier FRLMSujetNonHumain vers l'element CDA FRCDASujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationMedicalSummaryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSyntheseMedicaleSejour → FRCDASyntheseMedicaleSejour → FRObservationMedicalSummaryDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSyntheseMedicaleSejour vers la sous-entrée CDA FRCDASyntheseMedicaleSejour puis vers le profil FHIR FRObservationMedicalSummaryDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingProcedureLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTechniqueImagerie → FRCDADICOMTechniqueImagerie → FRProcedureImagingDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationAdministrationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitement → FRCDATraitement → FRMedicationAdministrationDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitement vers le profil CDA FRCDATraitement, puis vers le profil FHIR FRMedicationAdministrationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationStatementLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitement → FRCDATraitement → FRMedicationStatementDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitement vers la sous-entrée CDA FRCDATraitement puis vers le profil FHIR FRMedicationStatementDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationDispenseLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementDispense vers le profil CDA FRCDATraitementDispense, puis vers le profil FHIR FRMedicationDispenseDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementPrescrit → FRCDATraitementPrescrit → FRMedicationRequestDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationsCombinaisonRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementPrescritSubordonne → FRCDATraitementPrescritSubordonne → FRMedicationsCombinaisonDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementPrescritSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitements → FRCDATraitements → FRCompositionDocument.section:medications"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitements vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:medications."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementsAdministres → FRCDATraitementsAdministres → FRCompositionDocument.section:medicationAdministration"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRMedicationsCombinaisonLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTraitementSubordonne → FRCDATraitementSubordonne → FRMedicationsCombinaisonDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTraitementSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRObservationBloodProductTransfusionLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMTransfusionDeProduitsSanguins → FRCDATransfusionDeProduitsSanguins → FRObservationBloodProductTransfusionDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMTransfusionDeProduitsSanguins vers la sous-entrée CDA FRCDATransfusionDeProduitsSanguins puis vers le profil FHIR FRObservationBloodProductTransfusionDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImmunizationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMVaccination → FRCDAVaccination → FRImmunizationDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMVaccination vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImmunizationsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMVaccinations → FRCDAVaccinations → FRCompositionDocument.section:immunizations"/>
+      <description value="Mapping des éléments du modèle métier FRLMVaccinations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:immunizations."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImmunizationRecommendationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMVaccinRecommande → FRCDAVaccinRecommande → FRImmunizationRecommendationDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CDA FRCDAVaccinRecommande, puis vers le profil FHIR FRImmunizationRecommendationDocument."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingmodelemetierCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR  : Entête d'un document"/>
+      <description value="Ce ConceptMap présente trois groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;EnteteDocument\&quot; et l'élément CDA \&quot;clinicalDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrBundleDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;clinicalDocument\&quot; et le profil FHIR \&quot;FrCompositionDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingAuteurCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Auteur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;Auteur\&quot; et l'élément CDA \&quot;author\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;author\&quot; et l'élément FHIR \&quot;Composition.author\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingConsentementCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Consentement&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;ConsentementAssocie\&quot; et l'élément CDA \&quot;authorization\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authorization\&quot; et l'extension FHIR \&quot;ConsentExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingDestinatairePrevuCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Destinataire prévu&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;destinataire\&quot; et l'élément CDA \&quot;informationRecipient\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informationRecipient\&quot; et l'extension FHIR \&quot;InformationRecipientExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingDocumentDeReferenceCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;DocumentDeReference&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;documentDeReference\&quot; et l'élément CDA \&quot;relatedDocument\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedDocument\&quot; et l'élément FHIR \&quot;Composition.relatesTo\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingEvenementCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Evènement documenté&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 :entre le modèle métier \&quot;evenement\&quot; et l'élément CDA \&quot;documentationOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;documentationOf\&quot; et l'élément FHIR \&quot;Composition.event\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingInformateurCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Informateur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;informateur\&quot; et l'élément CDA \&quot;informant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;informant\&quot; et l'extension FHIR \&quot;InformantExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingOperateurSaisieCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;operateurSaisie\&quot; et l'élément CDA \&quot;dataEnterer\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;dataEnterer\&quot; et l'extension FHIR \&quot;DataEntererExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingParticipantCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Participant&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;participant\&quot; et l'élément CDA \&quot;participant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;participant\&quot; et l'extension FHIR \&quot;ParticipantExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPatientCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;patient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;recordTarget\&quot; et le profil FHIR \&quot;FrPatientDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPersonneStructureAssignedEntityFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;"/>
+      <description value="Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructure\&quot; et l'élément CDA \&quot;assignedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedEntity\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPersonneStructureAuteurFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;"/>
+      <description value="Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPersonneStructureRelatedEntityFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;"/>
+      <description value="Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: &#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMPersonneStructure\&quot; et l'élément CDA \&quot;relatedEntity\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;relatedEntity\&quot; et le profil FHIR \&quot;FrRelatedPersonDocument\&quot;&#xA; - Mapping 3 : entre l'élément CDA \&quot;relatedEntity\&quot; et l'élément FHIR \&quot;Patient.contact\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPrescriptionCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prescription\&quot; et l'élément CDA \&quot;inFulfillmentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;inFulfillmentOf\&quot; et l'extension FHIR \&quot;OrderExtension\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingPriseEnchargeCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Prise en charge&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;prise en charge\&quot; et l'élément CDA \&quot;componentOf\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;componentOf\&quot; et l'élément FHIR \&quot;Composition.encounter(Encounter)\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingResponsableCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;responsable\&quot; et l'élément CDA \&quot;legalAuthenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;legalAuthenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingStructureConservationCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;structureConservation\&quot; et l'élément CDA \&quot;custodian\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;custodian\&quot; et l'élément FHIR \&quot;Composition.custodian\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingSystemeFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;"/>
+      <description value="Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;SystemeStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrDeviceDocument\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/mappingValidateurCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
+      <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;validateur\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR entête"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingActLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Acte d'imagerie"/>
+      <description value="Mapping des éléments du modèle métier FRLMActeImagerie vers la section CDA FRCDADICOMActeImagerie, puis vers le profil FHIR FRCompositionDocument.section:ImagingStudy."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAllergyIntoleranceLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Allergies et intolérances"/>
+      <description value="Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:AllergyIntolerance."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionFamilyHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Antécédents familiaux"/>
+      <description value="Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicalHistoryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Antécédents médicaux"/>
+      <description value="Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionBarCodesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Codes-barres"/>
+      <description value="Mapping des éléments du modèle métier FRLMCodesAbarres vers la section CDA FRCDACodeABarres, puis vers la section FHIR FRCompositionDocument.section:barCodes."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionNoteLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Commentaire ER"/>
+      <description value="Mapping des éléments du modèle métier FRLMCommentaireNonCode vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:note."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRImagingQuantityLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Quantité d'exposition aux radiations"/>
+      <description value="Mapping des éléments du modèle métier FRLMQuantiteExposition vers l'entrée CDA FRCDADICOMQuantite puis vers le composant FHIR FRObservationRadiationExposureDocument.component."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des composants communs d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionImagingResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping Métier/CDA/FHIR : Résultats d'imagerie"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Mapping ML-CDA-FHIR des sections d'un document"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-adverse-drug-reaction"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Adverse Drug Reaction"/>
+      <description value="Effet indésirable médicamenteux"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-batterie-examens-biologie-medicale"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Batterie d'examens de biologie médicale"/>
+      <description value="Entrée Batterie d'examens de biologie médicale"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-isolat-microbiologique"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Isolat microbiologique"/>
+      <description value="Isolat microbiologique"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-laboratoire-executant"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Laboratoire exécutant"/>
+      <description value="Laboratoire exécutant"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"/>
+      </reference>
+      <name value="Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent"/>
+      <description value="Résultat d'examens de biologie / élement clinique pertinent"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="Modèles logiques métier des composants communs"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Accueil"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="structureGenerale.html"/>
+        </extension>
+        <nameUrl value="structureGenerale.html"/>
+        <title value="Structure générale document"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="introduction.html"/>
+          </extension>
+          <nameUrl value="introduction.html"/>
+          <title value="Introduction"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="exigencesSpecifiques.html"/>
+          </extension>
+          <nameUrl value="exigencesSpecifiques.html"/>
+          <title value="Exigences spécifiques"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-struc-gen.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-struc-gen.html"/>
+          <title value="Mapping CDA / FHIR"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="enteteDocument.html"/>
+        </extension>
+        <nameUrl value="enteteDocument.html"/>
+        <title value="Entête document"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-entete.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-entete.html"/>
+          <title value="Mapping Métier/CDA/FHIR"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="corpsDocument.html"/>
+        </extension>
+        <nameUrl value="corpsDocument.html"/>
+        <title value="Corps d'un document"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="mappingCDA-FHIR-corps.html"/>
+          </extension>
+          <nameUrl value="mappingCDA-FHIR-corps.html"/>
+          <title value="Mapping Métier/CDA/FHIR"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="autres_ressources.html"/>
+        </extension>
+        <nameUrl value="autres_ressources.html"/>
+        <title value="Autres Ressources"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="securite.html"/>
+          </extension>
+          <nameUrl value="securite.html"/>
+          <title value="Sécurité"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="downloads.html"/>
+          </extension>
+          <nameUrl value="downloads.html"/>
+          <title value="Téléchargements et usages"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="translationinfo.html"/>
+        </extension>
+        <nameUrl value="translationinfo.html"/>
+        <title value="Informations sur la traduction"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/assets"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

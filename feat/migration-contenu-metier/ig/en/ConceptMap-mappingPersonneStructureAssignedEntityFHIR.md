@@ -1,0 +1,278 @@
+# Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" - FR Document Core (Modèle métier) v0.1.0
+
+## ConceptMap: Mapping Métier/CDA/FHIR : "Personne / Structure (AssignedEntity)" 
+
+ 
+Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : 
+* Mapping 1 : entre le modèle métier "PersonneStructure" et l'élément CDA "assignedEntity"
+* Mapping 2 : entre l'élément CDA "assignedEntity" et le profil FHIR "FrPractitionerRoleDocument"
+ 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingPersonneStructureAssignedEntityFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPersonneStructureAssignedEntityFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity",
+    "element" : [{
+      "code" : "FRLMPersonneStructure",
+      "target" : [{
+        "code" : "assignedEntity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.identifiantPersonne",
+      "target" : [{
+        "code" : "assignedEntity.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.professionRole",
+      "target" : [{
+        "code" : "assignedEntity.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.adresse",
+      "target" : [{
+        "code" : "assignedEntity.addr",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.coordonneesTelecom",
+      "target" : [{
+        "code" : "assignedEntity.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.IdentitePersonne",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.IdentitePersonne.nomPersonne",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.IdentitePersonne.prenomPersonne",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.IdentitePersonne.civilite",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.personne.IdentitePersonne.titre",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure.identifiantStructure",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure.nomStructure",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure.adresse",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization.addr",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure.coordonneesTelecom",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPersonneStructure.structure.secteurActivite",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization.standardIndustryClassCode",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document",
+    "element" : [{
+      "code" : "assignedEntity",
+      "target" : [{
+        "code" : "PractitionerRole",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.id",
+      "target" : [{
+        "code" : "PractitionerRole.practitioner.identifier",
+        "equivalence" : "equivalent",
+        "comment" : "PractitionerRole.practitioner.resolve().ofType(Practitioner)"
+      }]
+    },
+    {
+      "code" : "assignedEntity.code",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.qualification.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.addr",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.telecom",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.assignedPerson.name",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.assignedPerson.name.family",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.assignedPerson.name.given",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.assignedPerson.name.prefix",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.assignedPerson.name.suffix",
+      "target" : [{
+        "code" : "PractitionerRole.Practitioner.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization",
+      "target" : [{
+        "code" : "PractitionerRole.Organization",
+        "equivalence" : "equivalent",
+        "comment" : "PractitionerRole.organization.resolve().ofType(Organization)"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization.id",
+      "target" : [{
+        "code" : "PractitionerRole.Organization.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization.name",
+      "target" : [{
+        "code" : "PractitionerRole.Organization.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization.addr",
+      "target" : [{
+        "code" : "PractitionerRole.Organization.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization.telecom",
+      "target" : [{
+        "code" : "PractitionerRole.Organization.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "assignedEntity.representedOrganization.standardIndustryClassCode",
+      "target" : [{
+        "code" : "PractitionerRole.Organization.type",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

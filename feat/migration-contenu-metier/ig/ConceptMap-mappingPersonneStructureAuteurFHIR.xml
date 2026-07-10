@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingPersonneStructureAuteurFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts mappingPersonneStructureAuteurFHIR</b></p><a name="mappingPersonneStructureAuteurFHIR"> </a><a name="hcmappingPersonneStructureAuteurFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMPersonneStructureAuteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.identifiantPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.id</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.professionRole</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.code</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.adresse</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.addr</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.coordonneesTelecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.telecom</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.nomPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.family</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.given</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.civilite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.prefix</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.titre</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.suffix</td></tr><tr><td>FRLMPersonneStructureAuteur.structure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.identifiantStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.id</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.nomStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.name</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.adresse</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.addr</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.coordonneesTelecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.telecom</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.secteurActivite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.standardIndustryClassCode</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>assignedAuthor</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner</td><td>PractitionerRole.practitioner.resolve().ofType(Practitioner)</td></tr><tr><td>assignedAuthor.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.identifier</td><td/></tr><tr><td>assignedAuthor.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>assignedAuthor.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.address</td><td/></tr><tr><td>assignedAuthor.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.family</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.given</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.prefix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.suffix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>assignedAuthor.representedOrganization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization</td><td>PractitionerRole.organization.resolve().ofType(Organization)</td></tr><tr><td>assignedAuthor.representedOrganization.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.identifier</td><td/></tr><tr><td>assignedAuthor.representedOrganization.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.name</td><td/></tr><tr><td>assignedAuthor.representedOrganization.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.address</td><td/></tr><tr><td>assignedAuthor.representedOrganization.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.telecom</td><td/></tr><tr><td>assignedAuthor.representedOrganization.standardIndustryClassCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.type</td><td/></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mappingPersonneStructureAuteurFHIR</b></p><a name="en-mappingPersonneStructureAuteurFHIR"> </a><a name="en-hcmappingPersonneStructureAuteurFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMPersonneStructureAuteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.identifiantPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.id</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.professionRole</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.code</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.adresse</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.addr</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.coordonneesTelecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.telecom</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.nomPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.family</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.given</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.civilite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.prefix</td></tr><tr><td>FRLMPersonneStructureAuteur.personne.IdentitePersonne.titre</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.assignedPerson.name.suffix</td></tr><tr><td>FRLMPersonneStructureAuteur.structure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.identifiantStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.id</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.nomStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.name</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.adresse</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.addr</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.coordonneesTelecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.telecom</td></tr><tr><td>FRLMPersonneStructureAuteur.structure.secteurActivite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedAuthor.representedOrganization.standardIndustryClassCode</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>assignedAuthor</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner</td><td>PractitionerRole.practitioner.resolve().ofType(Practitioner)</td></tr><tr><td>assignedAuthor.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.identifier</td><td/></tr><tr><td>assignedAuthor.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>assignedAuthor.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.address</td><td/></tr><tr><td>assignedAuthor.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.family</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.given</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.prefix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>assignedAuthor.assignedPerson.name.suffix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>assignedAuthor.representedOrganization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization</td><td>PractitionerRole.organization.resolve().ofType(Organization)</td></tr><tr><td>assignedAuthor.representedOrganization.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.identifier</td><td/></tr><tr><td>assignedAuthor.representedOrganization.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.name</td><td/></tr><tr><td>assignedAuthor.representedOrganization.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.address</td><td/></tr><tr><td>assignedAuthor.representedOrganization.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.telecom</td><td/></tr><tr><td>assignedAuthor.representedOrganization.standardIndustryClassCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>PractitionerRole.Organization.type</td><td/></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPersonneStructureAuteurFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;PersonneStructureAuteur\&quot; et l'élément CDA \&quot;assignedAuthor\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;assignedAuthor\&quot; et le profil FHIR \&quot;FrPractitionerRoleDocument\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-personne-structure-auteur"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author"/>
+    <element>
+      <code value="FRLMPersonneStructureAuteur"/>
+      <target>
+        <code value="assignedAuthor"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.identifiantPersonne"/>
+      <target>
+        <code value="assignedAuthor.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.professionRole"/>
+      <target>
+        <code value="assignedAuthor.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.adresse"/>
+      <target>
+        <code value="assignedAuthor.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.coordonneesTelecom"/>
+      <target>
+        <code value="assignedAuthor.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.IdentitePersonne"/>
+      <target>
+        <code value="assignedAuthor.assignedPerson"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.IdentitePersonne.nomPersonne"/>
+      <target>
+        <code value="assignedAuthor.assignedPerson.name.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.IdentitePersonne.prenomPersonne"/>
+      <target>
+        <code value="assignedAuthor.assignedPerson.name.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.IdentitePersonne.civilite"/>
+      <target>
+        <code value="assignedAuthor.assignedPerson.name.prefix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.personne.IdentitePersonne.titre"/>
+      <target>
+        <code value="assignedAuthor.assignedPerson.name.suffix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure.identifiantStructure"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure.nomStructure"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure.adresse"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure.coordonneesTelecom"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPersonneStructureAuteur.structure.secteurActivite"/>
+      <target>
+        <code value="assignedAuthor.representedOrganization.standardIndustryClassCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-author"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document"/>
+    <element>
+      <code value="assignedAuthor"/>
+      <target>
+        <code value="PractitionerRole.Practitioner"/>
+        <equivalence value="equivalent"/>
+        <comment value="PractitionerRole.practitioner.resolve().ofType(Practitioner)"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.id"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.code"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.qualification.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.addr"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.telecom"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.assignedPerson.name"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.assignedPerson.name.family"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.name.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.assignedPerson.name.given"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.name.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.assignedPerson.name.prefix"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.name.prefix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.assignedPerson.name.suffix"/>
+      <target>
+        <code value="PractitionerRole.Practitioner.name.suffix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization"/>
+      <target>
+        <code value="PractitionerRole.Organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="PractitionerRole.organization.resolve().ofType(Organization)"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization.id"/>
+      <target>
+        <code value="PractitionerRole.Organization.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization.name"/>
+      <target>
+        <code value="PractitionerRole.Organization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization.addr"/>
+      <target>
+        <code value="PractitionerRole.Organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization.telecom"/>
+      <target>
+        <code value="PractitionerRole.Organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="assignedAuthor.representedOrganization.standardIndustryClassCode"/>
+      <target>
+        <code value="PractitionerRole.Organization.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR</b></p><a name="en-FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"> </a><a name="en-hcFRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-dispositifs-medicaux</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-dispositifs-medicaux</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux</td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux.auteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux.author</td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux.code</td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux.title</td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux.text</td></tr><tr><td>FRLMPrescriptionDispositifsMedicaux.entree.dispositifMedical</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionDispositifsMedicaux.entry:FRCDADispositifMedical</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-dispositifs-medicaux</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription</td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux.author</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription.author</td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription.code</td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription.title</td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription.text</td></tr><tr><td>FRCDAPrescriptionDispositifsMedicaux.entry:FRCDADispositifMedical</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicalDevicePrescription.entry:FRDeviceRequestDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Prescription de dispositifs médicaux&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-dispositifs-medicaux"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-dispositifs-medicaux"/>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux.auteur"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux.codeSection"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux.titreSection"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux.blocNarratif"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionDispositifsMedicaux.entree.dispositifMedical"/>
+      <target>
+        <code value="FRCDAPrescriptionDispositifsMedicaux.entry:FRCDADispositifMedical"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-dispositifs-medicaux"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux.author"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionDispositifsMedicaux.entry:FRCDADispositifMedical"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicalDevicePrescription.entry:FRDeviceRequestDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

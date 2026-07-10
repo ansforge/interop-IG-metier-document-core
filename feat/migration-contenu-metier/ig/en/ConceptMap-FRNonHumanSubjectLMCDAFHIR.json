@@ -1,0 +1,92 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRNonHumanSubjectLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRNonHumanSubjectLMCDAFHIR</b></p><a name=\"en-FRNonHumanSubjectLMCDAFHIR\"> </a><a name=\"en-hcFRNonHumanSubjectLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDASujetNonHumain</td></tr><tr><td>FRLMSujetNonHumain.sujet</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDASujetNonHumain.subject.relatedSubject.code</td></tr><tr><td>FRLMSujetNonHumain.adresse</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDASujetNonHumain.subject.relatedSubject.addr</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRCDASujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen</td><td/></tr><tr><td>FRCDASujetNonHumain.subject.relatedSubject.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance</td><td>specimen.subject = Reference(Substance).</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/substance</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDASujetNonHumain.subject.relatedSubject.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Substance.code</td></tr><tr><td>FRCDASujetNonHumain.subject.relatedSubject.code.qualifier.value</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Substance.category</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRNonHumanSubjectLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Metier/CDA/FHIR : \"Sujet non humain\"",
+  "status" : "draft",
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modele metier FRLMSujetNonHumain vers l'element CDA FRCDASujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain",
+    "element" : [{
+      "code" : "FRLMSujetNonHumain",
+      "target" : [{
+        "code" : "FRCDASujetNonHumain",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSujetNonHumain.sujet",
+      "target" : [{
+        "code" : "FRCDASujetNonHumain.subject.relatedSubject.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSujetNonHumain.adresse",
+      "target" : [{
+        "code" : "FRCDASujetNonHumain.subject.relatedSubject.addr",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document",
+    "element" : [{
+      "code" : "FRCDASujetNonHumain",
+      "target" : [{
+        "code" : "FRObservationLaboratoryReportResultsDocument.specimen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDASujetNonHumain.subject.relatedSubject.code",
+      "target" : [{
+        "code" : "FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance",
+        "equivalence" : "equivalent",
+        "comment" : "specimen.subject = Reference(Substance)."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-sujet-non-humain",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/substance",
+    "element" : [{
+      "code" : "FRCDASujetNonHumain.subject.relatedSubject.code",
+      "target" : [{
+        "code" : "Substance.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDASujetNonHumain.subject.relatedSubject.code.qualifier.value",
+      "target" : [{
+        "code" : "Substance.category",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingValidateurCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts mappingValidateurCDAFHIR</b></p><a name="mappingValidateurCDAFHIR"> </a><a name="hcmappingValidateurCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-validateur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMValidateur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>authenticator</td><td/></tr><tr><td>FRLMValidateur.dateHeureAttestationValidite</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>authenticator.time</td><td/></tr><tr><td>FRLMValidateur.validateur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>authenticator.assignedEntity</td><td>L'élément validateur est de type : PersonneStructure</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>authenticator</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester</td><td>attester.where(mode='professional')</td></tr><tr><td>authenticator.time</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.time</td><td/></tr><tr><td>authenticator.assignedEntity</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole)</td></tr><tr><td>authenticator.assignedEntity.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.identifier</td><td>attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>authenticator.assignedEntity.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>authenticator.assignedEntity.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>authenticator.assignedEntity.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>authenticator.assignedEntity.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>authenticator.assignedEntity.name.family</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>authenticator.assignedEntity.name.given</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>authenticator.assignedEntity.name.prefix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>authenticator.assignedEntity.name.suffix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>authenticator.assignedEntity.representedOrganization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization</td><td>attester.party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>authenticator.assignedEntity.representedOrganization.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>authenticator.assignedEntity.representedOrganization.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>authenticator.assignedEntity.representedOrganization.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>authenticator.assignedEntity.representedOrganization.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.address</td><td/></tr><tr><td>authenticator.assignedEntity.representedOrganization.standardIndustryClassCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.type</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingValidateurCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-07-10T14:07:21+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;validateur\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-validateur"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator"/>
+    <element>
+      <code value="FRLMValidateur"/>
+      <target>
+        <code value="authenticator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMValidateur.dateHeureAttestationValidite"/>
+      <target>
+        <code value="authenticator.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMValidateur.validateur"/>
+      <target>
+        <code value="authenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément validateur est de type : PersonneStructure"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-authenticator"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="authenticator"/>
+      <target>
+        <code value="Composition.attester"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional')"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.time"/>
+      <target>
+        <code value="Composition.attester.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.id"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.code"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.qualification.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.addr"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.telecom"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.name"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.name.family"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.name.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.name.given"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.name.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.name.prefix"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.name.prefix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.name.suffix"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Practitioner.name.suffix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(PractitionerRole).organization.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization.id"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization.name"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization.telecom"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization.addr"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="authenticator.assignedEntity.representedOrganization.standardIndustryClassCode"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole.Organization.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

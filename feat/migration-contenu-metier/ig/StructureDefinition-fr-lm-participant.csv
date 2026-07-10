@@ -1,0 +1,21 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-participant","fr-lm-participant","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Participant","Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-participant.identifier","fr-lm-participant.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiants de la personne","Identifiants de la personne","","","","","","","","","",,,,,"",,,,"fr-lm-participant.identifier",0,*,"",""
+"fr-lm-participant.name","fr-lm-participant.name","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-human-name {[]} {[]}
+","Nom de la personne","Nom de la personne","","","","","","","","","",,,,,"",,,,"fr-lm-participant.name",0,*,"",""
+"fr-lm-participant.type","fr-lm-participant.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de participation","Type de participation","","","","","","","","","",,"","jdv-hl7-v3-ParticipationType-cisis (2.16.840.1.113883.1.11.10901)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis|20260420150251","",,,,"fr-lm-participant.type",1,1,"",""
+"fr-lm-participant.role","fr-lm-participant.role","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Rôle fonctionnel","Rôle fonctionnel","","","","","","","","","",,"","JDV_J47_FunctionCode_CISIS (1.2.250.1.213.1.1.5.124)","https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS|20250523120000","",,,,"fr-lm-participant.role",0,1,"",""
+"fr-lm-participant.period","fr-lm-participant.period","","","",0,1,"","","","Period {[]} {[]}
+","Période de la participation","Période de la participation","","","","","","","","","",,,,,"",,,,"fr-lm-participant.period",0,1,"",""
+"fr-lm-participant.participant","fr-lm-participant.participant","","","",1,1,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-participant.participant",1,1,"",""
+"fr-lm-participant.participant.participantProfessional","fr-lm-participant.participant.participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-participant.participant.participantProfessional",0,*,"",""
+"fr-lm-participant.participant.participantOrganisation","fr-lm-participant.participant.participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-participant.participant.participantOrganisation",0,*,"",""
+"fr-lm-participant.participant.participantDevice","fr-lm-participant.participant.participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-participant.participant.participantDevice",0,*,"",""

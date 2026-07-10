@@ -1,0 +1,219 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingParticipantCDAFHIR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingParticipantCDAFHIR</b></p><a name=\"mappingParticipantCDAFHIR\"> </a><a name=\"hcmappingParticipantCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMParticipant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant</td><td/></tr><tr><td>FRLMParticipant.typeParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant@typeCode</td><td/></tr><tr><td>FRLMParticipant.roleFonctionnel</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.functionCode</td><td/></tr><tr><td>FRLMParticipant.dateDebutEtOuFinParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.time</td><td/></tr><tr><td>FRLMParticipant.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.associatedEntity</td><td>L'élément participant est de type PersonneStructure</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-ParticipantExtension.html\">Participant Extensionversion : 1.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension</td><td/></tr><tr><td>participant@typeCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:type</td><td/></tr><tr><td>participant.functionCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:function.coding</td><td/></tr><tr><td>participant.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:time</td><td/></tr><tr><td>participant.associatedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole)</td></tr><tr><td>participant.associatedEntity@classCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>participant.associatedEntity.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>participant.associatedEntity.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>participant.associatedEntity.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>participant.associatedEntity.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>participant.associatedEntity.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>participant.associatedEntity.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>participant.associatedEntity.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>participant.associatedEntity.scopingOrganization.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.address</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mappingParticipantCDAFHIR</b></p><a name=\"en-mappingParticipantCDAFHIR\"> </a><a name=\"en-hcmappingParticipantCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMParticipant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant</td><td/></tr><tr><td>FRLMParticipant.typeParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant@typeCode</td><td/></tr><tr><td>FRLMParticipant.roleFonctionnel</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.functionCode</td><td/></tr><tr><td>FRLMParticipant.dateDebutEtOuFinParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.time</td><td/></tr><tr><td>FRLMParticipant.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>participant.associatedEntity</td><td>L'élément participant est de type PersonneStructure</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-ParticipantExtension.html\">Participant Extensionversion: 1.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension</td><td/></tr><tr><td>participant@typeCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:type</td><td/></tr><tr><td>participant.functionCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:function.coding</td><td/></tr><tr><td>participant.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.extention:time</td><td/></tr><tr><td>participant.associatedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole)</td></tr><tr><td>participant.associatedEntity@classCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>participant.associatedEntity.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>participant.associatedEntity.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>participant.associatedEntity.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>participant.associatedEntity.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>participant.associatedEntity.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>participant.associatedEntity.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>participant.associatedEntity.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>participant.associatedEntity.scopingOrganization.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.address</td><td/></tr></table></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingParticipantCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Participant\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-10T14:07:21+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
+    "element" : [{
+      "code" : "FRLMParticipant",
+      "target" : [{
+        "code" : "participant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.typeParticipation",
+      "target" : [{
+        "code" : "participant@typeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.roleFonctionnel",
+      "target" : [{
+        "code" : "participant.functionCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.dateDebutEtOuFinParticipation",
+      "target" : [{
+        "code" : "participant.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.participant",
+      "target" : [{
+        "code" : "participant.associatedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'élément participant est de type PersonneStructure"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
+    "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension",
+    "targetVersion" : "1.1.0",
+    "element" : [{
+      "code" : "participant",
+      "target" : [{
+        "code" : "extension:ParticipantExtension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant@typeCode",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.extention:type",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.functionCode",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.extention:function.coding",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.time",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.extention:time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party",
+        "equivalence" : "equivalent",
+        "comment" : "extension:party.ValueReference.resolve().ofType(PractitionerRole)"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity@classCode",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.qualification.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.id",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier",
+        "equivalence" : "equivalent",
+        "comment" : "extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.code",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.addr",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.telecom",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.name",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.name.family",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.name.given",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.name.prefix",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.name.suffix",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.scopingOrganization",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Organization",
+        "equivalence" : "equivalent",
+        "comment" : "extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.scopingOrganization.id",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Organization.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.scopingOrganization.name",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Organization.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.scopingOrganization.telecom",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Organization.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "participant.associatedEntity.scopingOrganization.addr",
+      "target" : [{
+        "code" : "extension:ParticipantExtension.party.PractitionerRole.Organization.address",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
