@@ -65,7 +65,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-laborator
   "name" : "FRLMLaboratoryObservation",
   "title" : "Logical model - Laboratory Observation",
   "status" : "draft",
-  "date" : "2026-07-10T14:07:21+00:00",
+  "date" : "2026-07-16T15:38:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
