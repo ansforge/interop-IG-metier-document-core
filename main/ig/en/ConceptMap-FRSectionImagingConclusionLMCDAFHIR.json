@@ -1,0 +1,73 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionImagingConclusionLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionImagingConclusionLMCDAFHIR</b></p><a name=\"en-FRSectionImagingConclusionLMCDAFHIR\"> </a><a name=\"en-hcFRSectionImagingConclusionLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-conclusion-examen-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-conclusion</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMConclusionExamenImagerie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMConclusion</td></tr><tr><td>FRLMConclusionExamenImagerie.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMConclusion.code</td></tr><tr><td>FRLMConclusionExamenImagerie.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMConclusion.text</td></tr><tr><td>FRLMConclusionExamenImagerie.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMConclusion.title</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-conclusion</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDADICOMConclusion</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDiagnosticReportImagingDocument.conclusion</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingConclusionLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Conclusion de l'examen d'imagerie\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-conclusion-examen-imagerie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-conclusion",
+    "element" : [{
+      "code" : "FRLMConclusionExamenImagerie",
+      "target" : [{
+        "code" : "FRCDADICOMConclusion",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConclusionExamenImagerie.codeSection",
+      "target" : [{
+        "code" : "FRCDADICOMConclusion.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConclusionExamenImagerie.blocNarratif",
+      "target" : [{
+        "code" : "FRCDADICOMConclusion.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConclusionExamenImagerie.titreSection",
+      "target" : [{
+        "code" : "FRCDADICOMConclusion.title",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-conclusion",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document",
+    "element" : [{
+      "code" : "FRCDADICOMConclusion",
+      "target" : [{
+        "code" : "FRDiagnosticReportImagingDocument.conclusion",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

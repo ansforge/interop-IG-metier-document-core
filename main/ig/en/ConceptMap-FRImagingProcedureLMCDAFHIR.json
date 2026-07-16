@@ -1,0 +1,162 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRImagingProcedureLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRImagingProcedureLMCDAFHIR</b></p><a name=\"en-FRImagingProcedureLMCDAFHIR\"> </a><a name=\"en-hcFRImagingProcedureLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMTechniqueImagerie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie</td></tr><tr><td>FRLMTechniqueImagerie.identifiant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.id</td></tr><tr><td>FRLMTechniqueImagerie.codeActe</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.code</td></tr><tr><td>FRLMTechniqueImagerie.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.text</td></tr><tr><td>FRLMTechniqueImagerie.date</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.effectiveTime</td></tr><tr><td>FRLMTechniqueImagerie.modaliteAcquisition</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.methodCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td></tr><tr><td>FRLMTechniqueImagerie.lateralite.precisionTopographique</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td></tr><tr><td>FRLMTechniqueImagerie.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.participant</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRCDADICOMTechniqueImagerie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.identifier</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.code</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.note</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.performed[x]</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.methodCode</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality.</td></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRProcedureImagingDocument.bodySite</td><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td/><td/></tr><tr><td>FRCDADICOMTechniqueImagerie.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td/><td/></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingProcedureLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Technique imagerie\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie",
+    "element" : [{
+      "code" : "FRLMTechniqueImagerie",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.identifiant",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.codeActe",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.description",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.date",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.modaliteAcquisition",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.methodCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.lateralite",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.lateralite.precisionTopographique",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTechniqueImagerie.participant",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.participant",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document",
+    "element" : [{
+      "code" : "FRCDADICOMTechniqueImagerie",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.id",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.code",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.text",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.note",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.performed[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.methodCode",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality."
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
+      "target" : [{
+        "code" : "FRProcedureImagingDocument.bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
+      "target" : [{
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMTechniqueImagerie.participant",
+      "target" : [{
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

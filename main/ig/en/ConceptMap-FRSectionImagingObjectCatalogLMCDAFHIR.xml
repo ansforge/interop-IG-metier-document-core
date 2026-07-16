@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionImagingObjectCatalogLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionImagingObjectCatalogLMCDAFHIR</b></p><a name="en-FRSectionImagingObjectCatalogLMCDAFHIR"> </a><a name="en-hcFRSectionImagingObjectCatalogLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-object-catalog</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-object-catalog</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMObjectCatalog</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMObjectCatalog</td></tr><tr><td>FRLMObjectCatalog.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMObjectCatalog.title</td></tr><tr><td>FRLMObjectCatalog.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMObjectCatalog.code</td></tr><tr><td>FRLMObjectCatalog.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMObjectCatalog.text</td></tr><tr><td>FRLMObjectCatalog.entree.examenImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMObjectCatalog.entry:FRCDADICOMExamenImagerie</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-object-catalog</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDADICOMObjectCatalog</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:imagingStudy</td></tr><tr><td>FRCDADICOMObjectCatalog.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:imagingStudy.code</td></tr><tr><td>FRCDADICOMObjectCatalog.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:imagingStudy.title</td></tr><tr><td>FRCDADICOMObjectCatalog.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:imagingStudy.text</td></tr><tr><td>FRCDADICOMObjectCatalog.entry:FRCDADICOMExamenImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:imagingStudy.entry:FRImagingStudyDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Catalogue des objets d'imagerie&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-object-catalog"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-object-catalog"/>
+    <element>
+      <code value="FRLMObjectCatalog"/>
+      <target>
+        <code value="FRCDADICOMObjectCatalog"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObjectCatalog.titreSection"/>
+      <target>
+        <code value="FRCDADICOMObjectCatalog.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObjectCatalog.codeSection"/>
+      <target>
+        <code value="FRCDADICOMObjectCatalog.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObjectCatalog.blocNarratif"/>
+      <target>
+        <code value="FRCDADICOMObjectCatalog.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObjectCatalog.entree.examenImagerie"/>
+      <target>
+        <code value="FRCDADICOMObjectCatalog.entry:FRCDADICOMExamenImagerie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-object-catalog"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDADICOMObjectCatalog"/>
+      <target>
+        <code value="FRCompositionDocument.section:imagingStudy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMObjectCatalog.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:imagingStudy.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMObjectCatalog.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:imagingStudy.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMObjectCatalog.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:imagingStudy.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMObjectCatalog.entry:FRCDADICOMExamenImagerie"/>
+      <target>
+        <code value="FRCompositionDocument.section:imagingStudy.entry:FRImagingStudyDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

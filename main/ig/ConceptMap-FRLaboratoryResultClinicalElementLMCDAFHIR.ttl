@@ -1,0 +1,333 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRLaboratoryResultClinicalElementLMCDAFHIR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRLaboratoryResultClinicalElementLMCDAFHIR</b></p><a name=\"FRLaboratoryResultClinicalElementLMCDAFHIR\"> </a><a name=\"hcFRLaboratoryResultClinicalElementLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.identifiant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.id</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.codeAnalyseObservation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.code</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.dateHeureResultat</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.valeurResultat</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.value</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.interpretation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode.code</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.methode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMPatientSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.auteur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.author</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.valideur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.responsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Device (CDA participant) : participant/@typeCode='DEV')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.commentaire</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.prelevement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.identifier</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.code</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.effectivePeriod</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.value</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.value[x]</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.interpretation</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.method</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.subject</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.author</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:author</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.note</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.extension:workflow-supportingInfo</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.valueRange</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRLaboratoryResultClinicalElementLMCDAFHIR</b></p><a name=\"en-FRLaboratoryResultClinicalElementLMCDAFHIR\"> </a><a name=\"en-hcFRLaboratoryResultClinicalElementLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.identifiant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.id</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.codeAnalyseObservation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.code</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.dateHeureResultat</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.valeurResultat</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.value</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.interpretation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode.code</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.methode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMPatientSujetNonHumain</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.auteur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.author</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.valideur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.responsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant (Device (CDA participant) : participant/@typeCode='DEV')</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.commentaire</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.prelevement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation</td></tr><tr><td>FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.identifier</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.code</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.effectivePeriod</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.value</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.value[x]</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.interpretation</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.method</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.subject</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.author</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:author</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.specimen</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.note</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.extension:workflow-supportingInfo</td></tr><tr><td>FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRObservationLaboratoryReportResultsDocument.valueRange</td></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Résultat d'examens de biologie - Élément clinique pertinent\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.date [ fhir:value "2026-07-16T15:39:37+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.identifiant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.codeAnalyseObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.dateHeureResultat" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.valeurResultat" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.value" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.methode" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMSujetNonHumain" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMPatientSujetNonHumain" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.auteur" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.valideur" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Authenticator (CDA participant) : participant/@typeCode='AUTHEN'" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.responsable" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Responsible Party (CDA participant) : participant/@typeCode='RESP'" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Device (CDA participant) : participant/@typeCode='DEV'" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.commentaire" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.prelevement" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.id" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.code" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.effectivePeriod" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.value" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.value[x]" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.interpretation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.method" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.author" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.performer.extension:author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.specimen" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.note" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.extension:workflow-supportingInfo" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRObservationLaboratoryReportResultsDocument.valueRange" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

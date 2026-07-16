@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionReasonForRecommendationLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRSectionReasonForRecommendationLMCDAFHIR</b></p><a name="FRSectionReasonForRecommendationLMCDAFHIR"> </a><a name="hcFRSectionReasonForRecommendationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-raison-de-la-recommandation</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMRaisonRecommandation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation</td></tr><tr><td>FRLMRaisonRecommandation.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation.code</td></tr><tr><td>FRLMRaisonRecommandation.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation.title</td></tr><tr><td>FRLMRaisonRecommandation.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation.text</td></tr><tr><td>FRLMRaisonRecommandation.entree.observation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation.entry:FRCDASimpleObservation</td></tr><tr><td>FRLMRaisonRecommandation.entree.problemes</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-raison-de-la-recommandation</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDARaisonDeLaRecommandation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation</td></tr><tr><td>FRCDARaisonDeLaRecommandation.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation.code</td></tr><tr><td>FRCDARaisonDeLaRecommandation.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation.title</td></tr><tr><td>FRCDARaisonDeLaRecommandation.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation.text</td></tr><tr><td>FRCDARaisonDeLaRecommandation.entry:FRCDASimpleObservation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation.entry:Observation</td></tr><tr><td>FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:reasonForRecommendation.entry:FRConditionDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Raison de la recommandation&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-raison-recommandation"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-raison-de-la-recommandation"/>
+    <element>
+      <code value="FRLMRaisonRecommandation"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMRaisonRecommandation.codeSection"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMRaisonRecommandation.titreSection"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMRaisonRecommandation.blocNarratif"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMRaisonRecommandation.entree.observation"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation.entry:FRCDASimpleObservation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMRaisonRecommandation.entree.problemes"/>
+      <target>
+        <code value="FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-raison-de-la-recommandation"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation.entry:FRCDASimpleObservation"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation.entry:Observation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme"/>
+      <target>
+        <code value="FRCompositionDocument.section:reasonForRecommendation.entry:FRConditionDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

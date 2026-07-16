@@ -1,0 +1,92 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-procedure","fr-lm-procedure","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Procedure","Acte","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-procedure.header","fr-lm-procedure.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-procedure.header.subject","fr-lm-procedure.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-procedure.header.identifier","fr-lm-procedure.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-procedure.header.author[x]","fr-lm-procedure.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-procedure.header.author[x].authorProfessional","fr-lm-procedure.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-procedure.header.author[x].authorOrganisation","fr-lm-procedure.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-procedure.header.author[x].authorDevice","fr-lm-procedure.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-procedure.header.performer[x]","fr-lm-procedure.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-procedure.header.participant[x]","fr-lm-procedure.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-procedure.header.participant[x].participantProfessional","fr-lm-procedure.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-procedure.header.participant[x].participantOrganisation","fr-lm-procedure.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-procedure.header.participant[x].participantDevice","fr-lm-procedure.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-procedure.header.informant","fr-lm-procedure.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-procedure.header.date","fr-lm-procedure.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-procedure.header.status","fr-lm-procedure.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'acte","Statut","","","","","","","","","",,"","jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-procedure.header.source","fr-lm-procedure.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-procedure.header.language","fr-lm-procedure.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-procedure.code","fr-lm-procedure.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de l'acte","Code de l'acte","","","","","","","","","",,"","CCAM (1.2.250.1.215.300.1)","","",,,,"fr-lm-procedure.code",1,1,"",""
+"fr-lm-procedure.procedureDate[x]","fr-lm-procedure.procedureDate[x]","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période de l'acte","Période de l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.procedureDate[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-procedure.procedureDate[x].id","fr-lm-procedure.procedureDate[x].id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-procedure.procedureDate[x].extension","fr-lm-procedure.procedureDate[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-procedure.procedureDate[x].url","fr-lm-procedure.procedureDate[x].url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"fr-lm-procedure.procedureDate[x].value[x]","fr-lm-procedure.procedureDate[x].value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-procedure.procedureDate[x].procedureDateDateTime","fr-lm-procedure.procedureDate[x].procedureDateDateTime","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début de l'acte","Date de début de l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.procedureDate[x].procedureDateDateTime",0,1,"",""
+"fr-lm-procedure.procedureDate[x].procedureDatePeriod","fr-lm-procedure.procedureDate[x].procedureDatePeriod","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin de l'acte","Date de fin de l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.procedureDate[x].procedureDatePeriod",0,1,"",""
+"fr-lm-procedure.priority","fr-lm-procedure.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priorité","Priorité","","","","","","","","","",,"","jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV","","",,,,"fr-lm-procedure.priority",0,1,"",""
+"fr-lm-procedure.bodySite","fr-lm-procedure.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
+","localisation anatomique","localisation anatomique","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-procedure.bodySite",0,1,"",""
+"fr-lm-procedure.approachSiteCode","fr-lm-procedure.approachSiteCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d’abord","Voie d’abord","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-procedure.approachSiteCode",0,1,"",""
+"fr-lm-procedure.difficulty","fr-lm-procedure.difficulty","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Difficulté","Difficulté","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.difficulty",0,1,"",""
+"fr-lm-procedure.reason[x]","fr-lm-procedure.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter {[]} {[]}","Motif de l’acte.
+- motif codé (spécifique à un  contexte)
+- motif : un problème
+- motif : une observation
+- motif : un acte
+- motif : une rencontre (consultation, etc…)","Motif de l’acte.
+- motif codé (spécifique à un  contexte)
+- motif : un problème
+- motif : une observation
+- motif : un acte
+- motif : une rencontre (consultation, etc…)","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.reason[x]",0,*,"",""
+"fr-lm-procedure.outcome","fr-lm-procedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.outcome",0,1,"",""
+"fr-lm-procedure.complication","fr-lm-procedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Complication survenue pendant l'acte ou immédiatement après uniquement.","Complication survenue pendant l'acte ou immédiatement après uniquement.","","","","","","","","","",,"","(preferred): ICD-10, SNOMED CT","","",,,,"fr-lm-procedure.complication",0,*,"",""
+"fr-lm-procedure.deviceUsed","fr-lm-procedure.deviceUsed","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Dispositif médical utilisé pendant l'acte","Dispositif médical utilisé pendant l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.deviceUsed",0,*,"",""
+"fr-lm-procedure.focalDevice","fr-lm-procedure.focalDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Dispositif implanté, retiré ou manipulé chez le patient (étalonnage, remplacement de la batterie, pose d'une prothèse, fixation d'un système de drainage des plaies par aspiration, etc.).","Dispositif implanté, retiré ou manipulé chez le patient (étalonnage, remplacement de la batterie, pose d'une prothèse, fixation d'un système de drainage des plaies par aspiration, etc.).","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.focalDevice",0,*,"",""
+"fr-lm-procedure.note","fr-lm-procedure.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.note",0,1,"",""

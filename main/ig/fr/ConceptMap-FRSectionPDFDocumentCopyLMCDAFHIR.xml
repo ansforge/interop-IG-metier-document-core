@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionPDFDocumentCopyLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRSectionPDFDocumentCopyLMCDAFHIR</b></p><a name="FRSectionPDFDocumentCopyLMCDAFHIR"> </a><a name="hcFRSectionPDFDocumentCopyLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-pdf-copie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-document-pdf-copie</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMDocumentPDFCopie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADocumentPDFCopie</td></tr><tr><td>FRLMDocumentPDFCopie.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADocumentPDFCopie.code</td></tr><tr><td>FRLMDocumentPDFCopie.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADocumentPDFCopie.title</td></tr><tr><td>FRLMDocumentPDFCopie.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADocumentPDFCopie.text</td></tr><tr><td>FRLMDocumentPDFCopie.entree.documentAttache</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADocumentPDFCopie.entry:FRCDADocumentAttache</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-document-pdf-copie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADocumentPDFCopie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:pdfDocumentCopy</td></tr><tr><td>FRCDADocumentPDFCopie.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:pdfDocumentCopy.code</td></tr><tr><td>FRCDADocumentPDFCopie.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:pdfDocumentCopy.title</td></tr><tr><td>FRCDADocumentPDFCopie.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:pdfDocumentCopy.text</td></tr><tr><td>FRCDADocumentPDFCopie.entry:FRCDADocumentAttache</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:pdfDocumentCopy.entry:FRDocumentReferenceDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Document PDF-copie&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-document-pdf-copie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-document-pdf-copie"/>
+    <element>
+      <code value="FRLMDocumentPDFCopie"/>
+      <target>
+        <code value="FRCDADocumentPDFCopie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDocumentPDFCopie.codeSection"/>
+      <target>
+        <code value="FRCDADocumentPDFCopie.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDocumentPDFCopie.titreSection"/>
+      <target>
+        <code value="FRCDADocumentPDFCopie.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDocumentPDFCopie.blocNarratif"/>
+      <target>
+        <code value="FRCDADocumentPDFCopie.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDocumentPDFCopie.entree.documentAttache"/>
+      <target>
+        <code value="FRCDADocumentPDFCopie.entry:FRCDADocumentAttache"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-document-pdf-copie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDADocumentPDFCopie"/>
+      <target>
+        <code value="FRCompositionDocument.section:pdfDocumentCopy"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADocumentPDFCopie.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:pdfDocumentCopy.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADocumentPDFCopie.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:pdfDocumentCopy.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADocumentPDFCopie.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:pdfDocumentCopy.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADocumentPDFCopie.entry:FRCDADocumentAttache"/>
+      <target>
+        <code value="FRCompositionDocument.section:pdfDocumentCopy.entry:FRDocumentReferenceDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

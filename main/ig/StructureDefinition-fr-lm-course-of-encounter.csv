@@ -1,0 +1,43 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-course-of-encounter","fr-lm-course-of-encounter","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Course of encounter","Section Résultats d'événements","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-course-of-encounter.codeSection","fr-lm-course-of-encounter.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"fr-lm-section.codeSection",1,1,"",""
+"fr-lm-course-of-encounter.titleSection","fr-lm-course-of-encounter.titleSection","","","",0,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"fr-lm-section.titleSection",0,1,"",""
+"fr-lm-course-of-encounter.description","fr-lm-course-of-encounter.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"fr-lm-section.description",1,1,"",""
+"fr-lm-course-of-encounter.author[x]","fr-lm-course-of-encounter.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-section.author[x]",0,*,"",""
+"fr-lm-course-of-encounter.author[x].authorProfessional","fr-lm-course-of-encounter.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-section.author[x].authorProfessional",0,*,"",""
+"fr-lm-course-of-encounter.author[x].authorOrganisation","fr-lm-course-of-encounter.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-section.author[x].authorOrganisation",0,*,"",""
+"fr-lm-course-of-encounter.author[x].authorDevice","fr-lm-course-of-encounter.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-section.author[x].authorDevice",0,*,"",""
+"fr-lm-course-of-encounter.informant","fr-lm-course-of-encounter.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-section.informant",0,*,"",""
+"fr-lm-course-of-encounter.subSection","fr-lm-course-of-encounter.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"fr-lm-section.subSection",0,*,"",""
+"fr-lm-course-of-encounter.entry","fr-lm-course-of-encounter.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"fr-lm-section.entry",0,*,"",""
+"fr-lm-course-of-encounter.entry.testResults","fr-lm-course-of-encounter.entry.testResults","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}
+","Résultats","Résultats","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.testResults",1,*,"",""
+"fr-lm-course-of-encounter.entry.patientTransfer","fr-lm-course-of-encounter.entry.patientTransfer","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient-transfer {[]} {[]}
+","Transfert du patient","Transfert du patient","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.patientTransfer",0,*,"",""
+"fr-lm-course-of-encounter.entry.diagnosticSummary","fr-lm-course-of-encounter.entry.diagnosticSummary","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}
+","Problème","Problème","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.diagnosticSummary",0,*,"",""
+"fr-lm-course-of-encounter.entry.procedures","fr-lm-course-of-encounter.entry.procedures","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}
+","Acte","Acte","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.procedures",0,*,"",""
+"fr-lm-course-of-encounter.entry.medicalDevicesAndImplants","fr-lm-course-of-encounter.entry.medicalDevicesAndImplants","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device-use {[]} {[]}
+","Dispositif médical et implant","Dispositif médical et implant","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.medicalDevicesAndImplants",0,*,"",""
+"fr-lm-course-of-encounter.entry.medications","fr-lm-course-of-encounter.entry.medications","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration {[]} {[]}
+","Traitement administré pendant le séjour","Traitement administré pendant le séjour","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.medications",0,*,"",""
+"fr-lm-course-of-encounter.entry.reactions","fr-lm-course-of-encounter.entry.reactions","","","",0,*,"","","","Base {[]} {[]}
+","événement indésirable","événement indésirable","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.reactions",0,*,"",""
+"fr-lm-course-of-encounter.entry.reactions.reactionDuringEncounter","fr-lm-course-of-encounter.entry.reactions.reactionDuringEncounter","","","",0,1,"","","","string {[]} {[]}
+","Description sous forme textuelle des évènements indésirables survenus pendant l'hospitalisation","Description sous forme textuelle des évènements indésirables survenus pendant l'hospitalisation","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.reactions.reactionDuringEncounter",0,1,"",""
+"fr-lm-course-of-encounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives","fr-lm-course-of-encounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives","","","",0,1,"","","","string {[]} {[]}
+","Description sous forme textuelle des réactions indésirables survenues après l'administration de dérivés sanguins","Description sous forme textuelle des réactions indésirables survenues après l'administration de dérivés sanguins","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives",0,1,"",""
+"fr-lm-course-of-encounter.entry.notes","fr-lm-course-of-encounter.entry.notes","","","",0,1,"","","","string {[]} {[]}
+","Note","Note","","","","","","","","","",,,,,"",,,,"fr-lm-course-of-encounter.entry.notes",0,1,"",""

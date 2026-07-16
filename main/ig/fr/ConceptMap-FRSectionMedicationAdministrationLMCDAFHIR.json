@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionMedicationAdministrationLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionMedicationAdministrationLMCDAFHIR</b></p><a name=\"FRSectionMedicationAdministrationLMCDAFHIR\"> </a><a name=\"hcFRSectionMedicationAdministrationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitements-administres</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-administres</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMTraitementsAdministres</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsAdministres</td></tr><tr><td>FRLMTraitementsAdministres.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsAdministres.code</td></tr><tr><td>FRLMTraitementsAdministres.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsAdministres.title</td></tr><tr><td>FRLMTraitementsAdministres.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsAdministres.text</td></tr><tr><td>FRLMTraitementsAdministres.entree.traitementAdministre</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsAdministres.entry.FRCDATraitement</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-administres</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDATraitementsAdministres</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:medicationAdministration</td></tr><tr><td>FRCDATraitementsAdministres.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:medicationAdministration.code</td></tr><tr><td>FRCDATraitementsAdministres.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:medicationAdministration.title</td></tr><tr><td>FRCDATraitementsAdministres.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:medicationAdministration.text</td></tr><tr><td>FRCDATraitementsAdministres.entry.FRCDATraitement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:medicationAdministration.entry:FRMedicationAdministrationDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Traitements administrés\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitements-administres",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-administres",
+    "element" : [{
+      "code" : "FRLMTraitementsAdministres",
+      "target" : [{
+        "code" : "FRCDATraitementsAdministres",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementsAdministres.codeSection",
+      "target" : [{
+        "code" : "FRCDATraitementsAdministres.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementsAdministres.titreSection",
+      "target" : [{
+        "code" : "FRCDATraitementsAdministres.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementsAdministres.blocNarratif",
+      "target" : [{
+        "code" : "FRCDATraitementsAdministres.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementsAdministres.entree.traitementAdministre",
+      "target" : [{
+        "code" : "FRCDATraitementsAdministres.entry.FRCDATraitement",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-administres",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDATraitementsAdministres",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:medicationAdministration",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsAdministres.code",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:medicationAdministration.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsAdministres.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:medicationAdministration.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsAdministres.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:medicationAdministration.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsAdministres.entry.FRCDATraitement",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:medicationAdministration.entry:FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

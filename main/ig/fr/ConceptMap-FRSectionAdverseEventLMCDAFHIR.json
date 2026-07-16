@@ -1,0 +1,101 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionAdverseEventLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionAdverseEventLMCDAFHIR</b></p><a name=\"FRSectionAdverseEventLMCDAFHIR\"> </a><a name=\"hcFRSectionAdverseEventLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-effets-indesirables</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-effets-indesirables</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMEffetsIndesirables</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAEffetsIndesirables</td></tr><tr><td>FRLMEffetsIndesirables.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAEffetsIndesirables.title</td></tr><tr><td>FRLMEffetsIndesirables.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAEffetsIndesirables.text</td></tr><tr><td>FRLMEffetsIndesirables.entree.effetIndesirable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAEffetsIndesirables.entry:FRCDAEffetIndesirable</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-effets-indesirables</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDAEffetsIndesirables</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:adverseEvent</td></tr><tr><td>FRCDAEffetsIndesirables.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:adverseEvent.code</td></tr><tr><td>FRCDAEffetsIndesirables.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:adverseEvent.title</td></tr><tr><td>FRCDAEffetsIndesrables.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:adverseEvent.text</td></tr><tr><td>FRCDAEffetsIndesirables.entry:FRCDAEffetIndesirable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:adverseEvent.entry:FRAdverseEventDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAdverseEventLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Effets indésirables\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-effets-indesirables",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-effets-indesirables",
+    "element" : [{
+      "code" : "FRLMEffetsIndesirables",
+      "target" : [{
+        "code" : "FRCDAEffetsIndesirables",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMEffetsIndesirables.titreSection",
+      "target" : [{
+        "code" : "FRCDAEffetsIndesirables.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMEffetsIndesirables.blocNarratif",
+      "target" : [{
+        "code" : "FRCDAEffetsIndesirables.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMEffetsIndesirables.entree.effetIndesirable",
+      "target" : [{
+        "code" : "FRCDAEffetsIndesirables.entry:FRCDAEffetIndesirable",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-effets-indesirables",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDAEffetsIndesirables",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:adverseEvent",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAEffetsIndesirables.code",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:adverseEvent.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAEffetsIndesirables.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:adverseEvent.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAEffetsIndesrables.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:adverseEvent.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDAEffetsIndesirables.entry:FRCDAEffetIndesirable",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:adverseEvent.entry:FRAdverseEventDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

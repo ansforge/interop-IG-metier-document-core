@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionHospitalDischargeMedicationsLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionHospitalDischargeMedicationsLMCDAFHIR</b></p><a name=\"FRSectionHospitalDischargeMedicationsLMCDAFHIR\"> </a><a name=\"hcFRSectionHospitalDischargeMedicationsLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-sortie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMTraitementSortie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsALaSortie</td></tr><tr><td>FRLMTraitementSortie.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsALaSortie.code</td></tr><tr><td>FRLMTraitementSortie.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsALaSortie.title</td></tr><tr><td>FRLMTraitementSortie.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsALaSortie.text</td></tr><tr><td>FRLMTraitementSortie.entree.traitementSortie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDATraitementsALaSortie.entry.FRCDATraitement</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDATraitementsALaSortie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:hospitalDischargeMedications</td></tr><tr><td>FRCDATraitementsALaSortie.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:hospitalDischargeMedications.code</td></tr><tr><td>FRCDATraitementsALaSortie.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:hospitalDischargeMedications.title</td></tr><tr><td>FRCDATraitementsALaSortie.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:hospitalDischargeMedications.text</td></tr><tr><td>FRCDATraitementsALaSortie.entry.FRCDATraitement</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:hospitalDischargeMedications.entry:FRMedicationAdministrationDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Traitements à la sortie\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-sortie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie",
+    "element" : [{
+      "code" : "FRLMTraitementSortie",
+      "target" : [{
+        "code" : "FRCDATraitementsALaSortie",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementSortie.codeSection",
+      "target" : [{
+        "code" : "FRCDATraitementsALaSortie.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementSortie.titreSection",
+      "target" : [{
+        "code" : "FRCDATraitementsALaSortie.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementSortie.blocNarratif",
+      "target" : [{
+        "code" : "FRCDATraitementsALaSortie.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMTraitementSortie.entree.traitementSortie",
+      "target" : [{
+        "code" : "FRCDATraitementsALaSortie.entry.FRCDATraitement",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDATraitementsALaSortie",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:hospitalDischargeMedications",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsALaSortie.code",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsALaSortie.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsALaSortie.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDATraitementsALaSortie.entry.FRCDATraitement",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.entry:FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

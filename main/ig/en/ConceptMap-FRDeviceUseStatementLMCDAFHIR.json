@@ -1,0 +1,157 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRDeviceUseStatementLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRDeviceUseStatementLMCDAFHIR</b></p><a name=\"en-FRDeviceUseStatementLMCDAFHIR\"> </a><a name=\"en-hcFRDeviceUseStatementLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical-entree</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMDispositifMedicalEntree</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical</td></tr><tr><td>FRLMDispositifMedicalEntree.identifiant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.id</td></tr><tr><td>FRLMDispositifMedicalEntree.date</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.effectiveTime</td></tr><tr><td>FRLMDispositifMedicalEntree.dispensateur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.performer</td></tr><tr><td>FRLMDispositifMedicalEntree.dispositifMedical</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.participant</td></tr><tr><td>FRLMDispositifMedicalEntree.affectionLongueDuree</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD</td></tr><tr><td>FRLMDispositifMedicalEntree.accidentTravail</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail</td></tr><tr><td>FRLMDispositifMedicalEntree.prevention</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-use-statement-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDADispositifMedical</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument</td></tr><tr><td>FRCDADispositifMedical.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.identifier</td></tr><tr><td>FRCDADispositifMedical.effectiveTime</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.timing[x]</td></tr><tr><td>FRCDADispositifMedical.performer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.source.extension:performer</td></tr><tr><td>FRCDADispositifMedical.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.device</td></tr><tr><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.reasonReference:EnRapportAvecALD</td></tr><tr><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.reasonReference:EnRapportAvecAccidentTravail</td></tr><tr><td>FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.reasonReference:EnRapportAvecLaPrevention</td></tr><tr><td>FRCDADispositifMedical.entryRelationship:frNonRemboursable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRDeviceUseStatementDocument.extension:notCovered</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceUseStatementLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\"",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le\nprofil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispositif-medical-entree",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical",
+    "element" : [{
+      "code" : "FRLMDispositifMedicalEntree",
+      "target" : [{
+        "code" : "FRCDADispositifMedical",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.identifiant",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.date",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.dispensateur",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.performer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.dispositifMedical",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.participant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.affectionLongueDuree",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.accidentTravail",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDispositifMedicalEntree.prevention",
+      "target" : [{
+        "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-use-statement-document",
+    "element" : [{
+      "code" : "FRCDADispositifMedical",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.id",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.effectiveTime",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.timing[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.performer",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.source.extension:performer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.participant",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.device",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecALD",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.reasonReference:EnRapportAvecALD",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecAccidentTravail",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.reasonReference:EnRapportAvecAccidentTravail",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.entryRelationship:frEnRapportAvecPrevention",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.reasonReference:EnRapportAvecLaPrevention",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADispositifMedical.entryRelationship:frNonRemboursable",
+      "target" : [{
+        "code" : "FRDeviceUseStatementDocument.extension:notCovered",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

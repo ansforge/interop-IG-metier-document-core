@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingParticipantCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap mappingParticipantCDAFHIR</b></p><a name="en-mappingParticipantCDAFHIR"> </a><a name="en-hcmappingParticipantCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMParticipant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant</td><td/></tr><tr><td>FRLMParticipant.typeParticipation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant@typeCode</td><td/></tr><tr><td>FRLMParticipant.roleFonctionnel</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant.functionCode</td><td/></tr><tr><td>FRLMParticipant.dateDebutEtOuFinParticipation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant.time</td><td/></tr><tr><td>FRLMParticipant.participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>participant.associatedEntity</td><td>L'élément participant est de type PersonneStructure</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code> to <a href="http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-ParticipantExtension.html">Participant Extensionversion: 1.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>participant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension</td><td/></tr><tr><td>participant@typeCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.extention:type</td><td/></tr><tr><td>participant.functionCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.extention:function.coding</td><td/></tr><tr><td>participant.time</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.extention:time</td><td/></tr><tr><td>participant.associatedEntity</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole)</td></tr><tr><td>participant.associatedEntity@classCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>participant.associatedEntity.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>participant.associatedEntity.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>participant.associatedEntity.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>participant.associatedEntity.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>participant.associatedEntity.name.family</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>participant.associatedEntity.name.given</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>participant.associatedEntity.name.prefix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix</td><td/></tr><tr><td>participant.associatedEntity.name.suffix</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>participant.associatedEntity.scopingOrganization.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>participant.associatedEntity.scopingOrganization.addr</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>extension:ParticipantExtension.party.PractitionerRole.Organization.address</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingParticipantCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Participant&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Participant&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;participant\&quot; et l'élément CDA \&quot;participant\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;participant\&quot; et l'extension FHIR \&quot;ParticipantExtension\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant"/>
+    <element>
+      <code value="FRLMParticipant"/>
+      <target>
+        <code value="participant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.typeParticipation"/>
+      <target>
+        <code value="participant@typeCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.roleFonctionnel"/>
+      <target>
+        <code value="participant.functionCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.dateDebutEtOuFinParticipation"/>
+      <target>
+        <code value="participant.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant"/>
+      <target>
+        <code value="participant.associatedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément participant est de type PersonneStructure"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant"/>
+    <target value="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension"/>
+    <targetVersion value="1.1.0"/>
+    <element>
+      <code value="participant"/>
+      <target>
+        <code value="extension:ParticipantExtension"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant@typeCode"/>
+      <target>
+        <code value="extension:ParticipantExtension.extention:type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.functionCode"/>
+      <target>
+        <code value="extension:ParticipantExtension.extention:function.coding"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.time"/>
+      <target>
+        <code value="extension:ParticipantExtension.extention:time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity"/>
+      <target>
+        <code value="extension:ParticipantExtension.party"/>
+        <equivalence value="equivalent"/>
+        <comment value="extension:party.ValueReference.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity@classCode"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.qualification.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.id"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="extension:party.ValueReference.resolve().ofType(PractitionerRole).practitioner.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.code"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.qualification.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.addr"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.telecom"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.name"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.name.family"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.name.given"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.name.prefix"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.prefix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.name.suffix"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Practitioner.name.suffix"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.scopingOrganization"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="extension:party.ValueReference.resolve().ofType(PractitionerRole).organization.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.scopingOrganization.id"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Organization.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.scopingOrganization.name"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Organization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.scopingOrganization.telecom"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="participant.associatedEntity.scopingOrganization.addr"/>
+      <target>
+        <code value="extension:ParticipantExtension.party.PractitionerRole.Organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

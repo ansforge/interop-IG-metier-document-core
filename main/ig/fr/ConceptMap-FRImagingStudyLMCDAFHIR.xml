@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRImagingStudyLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRImagingStudyLMCDAFHIR</b></p><a name="FRImagingStudyLMCDAFHIR"> </a><a name="hcFRImagingStudyLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examen-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMExamenImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie</td></tr><tr><td>FRLMExamenImagerie.uuidInstanceExamen</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.id</td></tr><tr><td>FRLMExamenImagerie.codeActe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.code</td></tr><tr><td>FRLMExamenImagerie.description</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.text</td></tr><tr><td>FRLMExamenImagerie.dateActe</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.effectiveTime</td></tr><tr><td>FRLMExamenImagerie.serieImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie</td></tr><tr><td>FRLMExamenImagerie.objectifsReferences</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRCDADICOMExamenImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument</td><td/></tr><tr><td>FRCDADICOMExamenImagerie.id</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument.identifier:studyInstanceUid</td><td/></tr><tr><td>FRCDADICOMExamenImagerie.code</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">FRImagingStudyDocument ne possède pas d'élément 'code' pour mapper cette donnée.</td></tr><tr><td>FRCDADICOMExamenImagerie.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument.description</td><td/></tr><tr><td>FRCDADICOMExamenImagerie.effectiveTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument.started</td><td/></tr><tr><td>FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument.series</td><td/></tr><tr><td>FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRImagingStudyDocument.reasonCode</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Examen d'imagerie&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examen-imagerie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie"/>
+    <element>
+      <code value="FRLMExamenImagerie"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.uuidInstanceExamen"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.codeActe"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.description"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.dateActe"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.serieImagerie"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMExamenImagerie.objectifsReferences"/>
+      <target>
+        <code value="FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document"/>
+    <element>
+      <code value="FRCDADICOMExamenImagerie"/>
+      <target>
+        <code value="FRImagingStudyDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.id"/>
+      <target>
+        <code value="FRImagingStudyDocument.identifier:studyInstanceUid"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.code"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="FRImagingStudyDocument ne possède pas d'élément 'code' pour mapper cette donnée."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.text"/>
+      <target>
+        <code value="FRImagingStudyDocument.description"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.effectiveTime"/>
+      <target>
+        <code value="FRImagingStudyDocument.started"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie"/>
+      <target>
+        <code value="FRImagingStudyDocument.series"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference"/>
+      <target>
+        <code value="FRImagingStudyDocument.reasonCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

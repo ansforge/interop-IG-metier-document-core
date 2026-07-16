@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionMedicationRequestLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionMedicationRequestLMCDAFHIR</b></p><a name="en-FRSectionMedicationRequestLMCDAFHIR"> </a><a name="en-hcFRSectionMedicationRequestLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-medicaments</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-medicaments</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMPrescriptionMedicaments</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments</td></tr><tr><td>FRLMPrescriptionMedicaments.auteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments.author</td></tr><tr><td>FRLMPrescriptionMedicaments.codeSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments.code</td></tr><tr><td>FRLMPrescriptionMedicaments.titreSection</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments.title</td></tr><tr><td>FRLMPrescriptionMedicaments.blocNarratif</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments.text</td></tr><tr><td>FRLMPrescriptionMedicaments.entree.traitementPrescrit</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAPrescriptionMedicaments.entry:FRCDATraitementPrescrit</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-medicaments</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDAPrescriptionMedicaments</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest</td></tr><tr><td>FRCDAPrescriptionMedicaments.author</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest.author</td></tr><tr><td>FRCDAPrescriptionMedicaments.code</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest.code</td></tr><tr><td>FRCDAPrescriptionMedicaments.title</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest.title</td></tr><tr><td>FRCDAPrescriptionMedicaments.text</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest.text</td></tr><tr><td>FRCDAPrescriptionMedicaments.entry:FRCDATraitementPrescrit</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCompositionDocument.section:medicationRequest.entry:FRMedicationRequestDocument</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationRequestLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Prescription de médicaments&quot;"/>
+  <status value="draft"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-medicaments"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-medicaments"/>
+    <element>
+      <code value="FRLMPrescriptionMedicaments"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionMedicaments.auteur"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionMedicaments.codeSection"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionMedicaments.titreSection"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionMedicaments.blocNarratif"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPrescriptionMedicaments.entree.traitementPrescrit"/>
+      <target>
+        <code value="FRCDAPrescriptionMedicaments.entry:FRCDATraitementPrescrit"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-medicaments"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments.author"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments.code"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments.title"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments.text"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRCDAPrescriptionMedicaments.entry:FRCDATraitementPrescrit"/>
+      <target>
+        <code value="FRCompositionDocument.section:medicationRequest.entry:FRMedicationRequestDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

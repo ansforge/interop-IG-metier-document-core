@@ -1,0 +1,123 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingAuteurCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingAuteurCDAFHIR</b></p><a name=\"mappingAuteurCDAFHIR\"> </a><a name=\"hcmappingAuteurCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMAuteur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author</td><td/></tr><tr><td>FRLMAuteur.roleFonctionnel</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author.functionCode</td><td/></tr><tr><td>FRLMAuteur.horodatageParticipation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author.time</td><td/></tr><tr><td>FRLMAuteur.FRLMPersonneStructure</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'élément PersonneStructure est de type PersonneStructure.</td></tr><tr><td>FRLMAuteur.FRLMSystemeStructureAuteur</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'élément SystemeStructureAuteur est de type Systeme</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>author</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author</td><td/></tr><tr><td>author.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author.extension:time</td><td/></tr><tr><td>author.functionCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author.PractitionerRole.code</td><td>Auteur du document est un professionnel et author.ofType(PractitionerRole)</td></tr><tr><td>author.assignedAuthor</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author.Practitioner</td><td>Composition.author.resolve().ofType(Practitioner)</td></tr><tr><td>author.assignedAuthor</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author.Patient</td><td>Composition.author.resolve().ofType(Patient)</td></tr><tr><td>author.assignedAuthor</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.author.Device</td><td>Composition.author.resolve().ofType(Device)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingAuteurCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author",
+    "element" : [{
+      "code" : "FRLMAuteur",
+      "target" : [{
+        "code" : "author",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAuteur.roleFonctionnel",
+      "target" : [{
+        "code" : "author.functionCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAuteur.horodatageParticipation",
+      "target" : [{
+        "code" : "author.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAuteur.FRLMPersonneStructure",
+      "target" : [{
+        "code" : "author.assignedAuthor",
+        "equivalence" : "equivalent",
+        "comment" : "L'élément PersonneStructure est de type PersonneStructure."
+      }]
+    },
+    {
+      "code" : "FRLMAuteur.FRLMSystemeStructureAuteur",
+      "target" : [{
+        "code" : "author.assignedAuthor",
+        "equivalence" : "equivalent",
+        "comment" : "L'élément SystemeStructureAuteur est de type Systeme"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "author",
+      "target" : [{
+        "code" : "Composition.author",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "author.time",
+      "target" : [{
+        "code" : "Composition.author.extension:time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "author.functionCode",
+      "target" : [{
+        "code" : "Composition.author.PractitionerRole.code",
+        "equivalence" : "equivalent",
+        "comment" : "Auteur du document est un professionnel et author.ofType(PractitionerRole)"
+      }]
+    },
+    {
+      "code" : "author.assignedAuthor",
+      "target" : [{
+        "code" : "Composition.author.Practitioner",
+        "equivalence" : "equivalent",
+        "comment" : "Composition.author.resolve().ofType(Practitioner)"
+      }]
+    },
+    {
+      "code" : "author.assignedAuthor",
+      "target" : [{
+        "code" : "Composition.author.Patient",
+        "equivalence" : "equivalent",
+        "comment" : "Composition.author.resolve().ofType(Patient)"
+      }]
+    },
+    {
+      "code" : "author.assignedAuthor",
+      "target" : [{
+        "code" : "Composition.author.Device",
+        "equivalence" : "equivalent",
+        "comment" : "Composition.author.resolve().ofType(Device)"
+      }]
+    }]
+  }]
+}

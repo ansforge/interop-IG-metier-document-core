@@ -1,0 +1,85 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingOperateurSaisieCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mappingOperateurSaisieCDAFHIR</b></p><a name=\"en-mappingOperateurSaisieCDAFHIR\"> </a><a name=\"en-hcmappingOperateurSaisieCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-operateur-saisie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMOperateurSaisie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>dataEnterer</td><td/></tr><tr><td>FRLMOperateurSaisie.dateSaisie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>dataEnterer.time</td><td/></tr><tr><td>FRLMOperateurSaisie.operateurSaisie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>dataEnterer.assignedEntity</td><td>L'élément operateurSaisie est de type PersonneStructure.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer</code> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-data-enterer-extension.html\">Data Enterer Extensionversion: 1.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>dataEnterer</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DataEntererExtension</td><td/></tr><tr><td>dataEnterer.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DataEntererExtension.extension:time</td><td/></tr><tr><td>dataEnterer.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DataEntererExtension.extension:party.ValueReference</td><td>extension:party.ValueReference.resolve().ofType(PractitionerRole)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingOperateurSaisieCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-operateur-saisie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer",
+    "element" : [{
+      "code" : "FRLMOperateurSaisie",
+      "target" : [{
+        "code" : "dataEnterer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOperateurSaisie.dateSaisie",
+      "target" : [{
+        "code" : "dataEnterer.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOperateurSaisie.operateurSaisie",
+      "target" : [{
+        "code" : "dataEnterer.assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'élément operateurSaisie est de type PersonneStructure."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer",
+    "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension",
+    "targetVersion" : "1.1.0",
+    "element" : [{
+      "code" : "dataEnterer",
+      "target" : [{
+        "code" : "DataEntererExtension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dataEnterer.time",
+      "target" : [{
+        "code" : "DataEntererExtension.extension:time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "dataEnterer.assignedEntity",
+      "target" : [{
+        "code" : "DataEntererExtension.extension:party.ValueReference",
+        "equivalence" : "equivalent",
+        "comment" : "extension:party.ValueReference.resolve().ofType(PractitionerRole)"
+      }]
+    }]
+  }]
+}

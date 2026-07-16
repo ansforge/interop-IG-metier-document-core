@@ -11,7 +11,7 @@
   "name" : "FRDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-07-10T13:01:43+00:00",
+  "date" : "2026-07-16T15:39:37+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -50,6 +50,24 @@
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
     "version" : "5.3.0"
+  },
+  {
+    "id" : "ans_fr_terminologies",
+    "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
+    "packageId" : "ans.fr.terminologies",
+    "version" : "1.11.1"
+  },
+  {
+    "id" : "ans_fhir_fr_document_core",
+    "uri" : "https://interop.esante.gouv.fr/ig/fhir/document-core/ImplementationGuide/ans.fhir.fr.document-core",
+    "packageId" : "ans.fhir.fr.document-core",
+    "version" : "current"
+  },
+  {
+    "id" : "ans_cda_fr_document_core",
+    "uri" : "https://interop.esante.gouv.fr/ig/cda/document-core/ImplementationGuide/ans.cda.fr.document-core",
+    "packageId" : "ans.cda.fr.document-core",
+    "version" : "current"
   }],
   "definition" : {
     "extension" : [{
@@ -854,113 +872,3182 @@
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
+    "grouping" : [{
+      "id" : "Modèles logiques métier de l'entête d'un document",
+      "name" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "id" : "Modèles logiques métier des sections d'un document",
+      "name" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "id" : "Modèles logiques métier des composants communs",
+      "name" : "Modèles logiques métier des composants communs",
+      "description" : "Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR."
+    },
+    {
+      "id" : "Mapping ML-CDA-FHIR entête",
+      "name" : "Concept Maps de l'entête du document"
+    },
+    {
+      "id" : "Mapping ML-CDA-FHIR des sections d'un document",
+      "name" : "Concept Maps des sections d'un document"
+    },
+    {
+      "id" : "Mapping ML-CDA-FHIR des composants communs d'un document",
+      "name" : "Concept Maps des composants communs d'un Document"
+    }],
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "CodeSystem/competence-code-system"
+        "reference" : "StructureDefinition/fr-lm-patient-history"
       },
-      "name" : "Compétences CodeSystem",
-      "description" : "Compétences des professionnels de santé.",
+      "name" : "Logical model  - FR LM Patient History",
+      "description" : "Section Historique du patient",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/EyeColor"
+        "reference" : "StructureDefinition/fr-lm-section-pregnancy-history"
       },
-      "name" : "EyeColor",
-      "description" : "Eye color extension",
+      "name" : "Logical model  - FR LM Pregnancy History",
+      "description" : "Section Historique des grossesses",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-section-travel-history"
+      },
+      "name" : "Logical model  - FR LM Travel History",
+      "description" : "Section Historique des voyages",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "ValueSet/EyeColorVS"
+        "reference" : "StructureDefinition/fr-lm-device"
       },
-      "name" : "EyeColor Value Set",
-      "description" : "Different eye colors.",
+      "name" : "Logical model - Device",
+      "description" : "Dispositif médical",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-addendum"
+      },
+      "name" : "Logical model - FR LM Addendum",
+      "description" : "Section Addendum",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-admission-evaluation"
+      },
+      "name" : "Logical model - FR LM Admission Evaluation",
+      "description" : "Section Évaluation à l'admission",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-advance-directive"
+      },
+      "name" : "Logical model - FR LM Advance Directive",
+      "description" : "Directive anticipée",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-advance-directives"
+      },
+      "name" : "Logical model - FR LM Advance Directives",
+      "description" : "Section Directives anticipées",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-alert"
+      },
+      "name" : "Logical model - FR LM Alert",
+      "description" : "Points de vigilances",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "Patient/frpatient-exemple"
+        "reference" : "StructureDefinition/fr-lm-alerts"
       },
-      "name" : "frpatient-exemple",
-      "description" : "Exemple d'un patient français",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-patient|0.1.0"
+      "name" : "Logical model - FR LM Alerts",
+      "description" : "Section Points de vigilance",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "ValueSet/MeltingPotVS"
+        "reference" : "StructureDefinition/fr-lm-allergies-and-intolerances"
       },
-      "name" : "Melting Pot Value Set",
-      "description" : "Melting Pot Value Set.",
+      "name" : "Logical model - FR LM Allergies And Intolerances",
+      "description" : "Section Allergies et hypersensibilités",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-allergy-intolerance"
+      },
+      "name" : "Logical model - FR LM Allergy Intolerance",
+      "description" : "Allergie ou Hypersensibilité",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation-assessment"
+      },
+      "name" : "Logical model - FR LM Assessment",
+      "description" : "Evaluation",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-attachment"
+      },
+      "name" : "Logical model - FR LM Attachment",
+      "description" : "Document attaché",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-attachments"
+      },
+      "name" : "Logical model - FR LM Attachments",
+      "description" : "Section Documents ajoutés",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-attester"
+      },
+      "name" : "Logical model - FR LM Attester",
+      "description" : "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-body-structure"
+      },
+      "name" : "Logical model - FR LM Body Structure",
+      "description" : "Localisation anatomique",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-care-plan"
+      },
+      "name" : "Logical model - FR LM Care Plan",
+      "description" : "Plan de soins",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-care-plans"
+      },
+      "name" : "Logical model - FR LM CarePlans",
+      "description" : "Section Plan de soins",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-comparison-study"
+      },
+      "name" : "Logical model - FR LM Comparison Study",
+      "description" : "Section Comparaison d'examens d'imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-result-data"
+      },
+      "name" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
+      "description" : "Section Compte rendu de biologie de 1er niveau",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-conclusion"
+      },
+      "name" : "Logical model - FR LM Conclusion",
+      "description" : "Section Conclusion",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-condition"
+      },
+      "name" : "Logical model - FR LM Condition",
+      "description" : "Problème",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-consent"
+      },
+      "name" : "Logical model - FR LM Consent",
+      "description" : "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-corps-document"
+      },
+      "name" : "Logical model - FR LM Corps document",
+      "description" : "Eléments métier du corps d'un document contenant les sections du document.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-course-of-encounter"
+      },
+      "name" : "Logical model - FR LM Course of encounter",
+      "description" : "Section Résultats d'événements",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-data-enterer"
+      },
+      "name" : "Logical model - FR LM Data Enterer",
+      "description" : "Opérateur de saisie de la totalité ou d'une partie du contenu du document.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-device-use"
+      },
+      "name" : "Logical model - FR LM Device use",
+      "description" : "Dispositif médical usage",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-dicom-medication-administration"
+      },
+      "name" : "Logical model - FR LM DICOM Medication Administration",
+      "description" : "Administration de produit de santé dans le contexte de l'imagerie médicale",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-dicom-study-metadata"
+      },
+      "name" : "Logical model - FR LM DICOM Study Metadata",
+      "description" : "Section Object Catalog",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-dose-number"
+      },
+      "name" : "Logical model - FR LM Dose Number",
+      "description" : "Rang de la vaccination",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-encounter"
+      },
+      "name" : "Logical model - FR LM Encounter",
+      "description" : "Rencontre",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-encounter-information"
+      },
+      "name" : "Logical model - FR LM Encounter Information",
+      "description" : "Section Informations sur la rencontre",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-endpoint"
+      },
+      "name" : "Logical model - FR LM Endpoint",
+      "description" : "Référence Wado d'un objet DICOM (SOP Instance)",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "ValueSet/ModifiedAdministrativeGender"
+        "reference" : "StructureDefinition/fr-lm-entry"
       },
-      "name" : "ModifiedAdministrativeGender",
-      "description" : "AdministrativeGender without unknown code",
+      "name" : "Logical model - FR LM Entry",
+      "description" : "Modèle logique représentant l'entrée",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-examination-report"
+      },
+      "name" : "Logical model - FR LM Examination Report",
+      "description" : "Section Acte d'imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-exposure-information"
+      },
+      "name" : "Logical model - FR LM Exposure Information",
+      "description" : "Section Exposition aux radiations",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-family-medical-history"
+      },
+      "name" : "Logical model - FR LM Family Medical History",
+      "description" : "Section Antécédents familiaux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-family-member-history"
+      },
+      "name" : "Logical model - FR LM Family Member History",
+      "description" : "Antécédent familial",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication-prescription"
+      },
+      "name" : "Logical model - FR LM FR LM Medication Prescription",
+      "description" : "Section Prescription de médicaments",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-history-of-past-illness"
+      },
+      "name" : "Logical model - FR LM FRLM History Of Past Illness",
+      "description" : "Section Antécédents médicaux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-hazardous-working-conditions"
+      },
+      "name" : "Logical model - FR LM Hazardous Working Conditions",
+      "description" : "Section Facteurs de risque professionnels non codés",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-header-document"
+      },
+      "name" : "Logical model - FR LM Header Document",
+      "description" : "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-health-professional"
+      },
+      "name" : "Logical model - FR LM Health Professional",
+      "description" : "Une personne (professionnel ou patient ou autre)",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-hospital-discharge-medications"
+      },
+      "name" : "Logical model - FR LM Hospital Discharge Medications",
+      "description" : "Section Traitements à la sortie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-human-name"
+      },
+      "name" : "Logical model - FR LM Human Name",
+      "description" : "Modele logique metier - FR LM Human Name",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-imaging-study"
+      },
+      "name" : "Logical model - FR LM Imaging Study",
+      "description" : "DICOM Examen Imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-immunisation"
+      },
+      "name" : "Logical model - FR LM Immunisation",
+      "description" : "Vaccination",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-immunisations"
+      },
+      "name" : "Logical model - FR LM Immunisations",
+      "description" : "Section Vaccinations",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-informant"
+      },
+      "name" : "Logical model - FR LM Informant",
+      "description" : "Informant (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-intended-recipient"
+      },
+      "name" : "Logical model - FR LM Intended Recipient",
+      "description" : "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-legal-authentication"
+      },
+      "name" : "Logical model - FR LM Legal Authentication",
+      "description" : "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-location"
+      },
+      "name" : "Logical model - FR LM Location",
+      "description" : "Lieu",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medical-device-prescriptions"
+      },
+      "name" : "Logical Model - FR LM Medical Device Prescriptions",
+      "description" : "Section Prescription de dispositifs médicaux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medical-devices-and-implants"
+      },
+      "name" : "Logical Model - FR LM Medical Devices and Implants",
+      "description" : "Section Dispositifs Medicaux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication"
+      },
+      "name" : "Logical model - FR LM Medication",
+      "description" : "Produit de santé",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication-dispensations"
+      },
+      "name" : "Logical model - FR LM Medication Dispensations",
+      "description" : "Section Dispensation médicaments",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication-dispense"
+      },
+      "name" : "Logical model - FR LM Medication Dispense",
+      "description" : "Traitement dispense",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-prescription-item"
+      },
+      "name" : "Logical model - FR LM Medication Prescription",
+      "description" : "Traitement prescrit",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication-summary"
+      },
+      "name" : "Logical model - FR LM Medication Summary",
+      "description" : "Section Traitements",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-micro-organism-search"
+      },
+      "name" : "Logical model - FR LM Micro Organism Search",
+      "description" : "Recherche de micro organismes",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/fr-patient"
+        "reference" : "StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification"
       },
-      "name" : "Patient français",
-      "description" : "Description du patient français",
+      "name" : "Logical model - FR LM Multidrug Resistant Microorganism Identification",
+      "description" : "Identification de micro-organismes multirésistants",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-note"
+      },
+      "name" : "Logical model - FR LM Note",
+      "description" : "Section Commentaire (non-codé)",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation"
+      },
+      "name" : "Logical model - FR LM Observation",
+      "description" : "Résultat d'une observation réalisée sur le patient ou un dispositif médical.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation-vital-sign"
+      },
+      "name" : "Logical model - FR LM Observation Vital Sign",
+      "description" : "Signe vital observé",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation-media"
+      },
+      "name" : "Logical model - FR LM ObservationMedia",
+      "description" : "Image illustrative.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation-results"
+      },
+      "name" : "Logical model - FR LM ObservationResults",
+      "description" : "Section Résultats",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-order"
+      },
+      "name" : "Logical model - FR LM Order",
+      "description" : "Association to an order that is the origin of the act resulting in the document.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-order-information"
+      },
+      "name" : "Logical model - FR LM Order Information",
+      "description" : "Section Demande d'examen d'imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-organisation"
+      },
+      "name" : "Logical model - FR LM Organisation",
+      "description" : "Une structure (organisation) pour les professionnels de santé.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-participant"
+      },
+      "name" : "Logical model - FR LM Participant",
+      "description" : "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-patient"
+      },
+      "name" : "Logical model - FR LM Patient",
+      "description" : "Patient/Usager concerné par le document.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-patient-education"
+      },
+      "name" : "Logical model - FR LM Patient Education",
+      "description" : "Section Education du patient",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-patient-story"
+      },
+      "name" : "Logical model - FR LM Patient Story",
+      "description" : "Récit du patient",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "StructureDefinition:logical"
       }],
       "reference" : {
-        "reference" : "ValueSet/TypeCarteVS"
+        "reference" : "StructureDefinition/fr-lm-patient-transfer"
       },
-      "name" : "Type Carte Value Set",
-      "description" : "Type Carte Value Set.",
+      "name" : "Logical model - FR LM Patient Transfer.",
+      "description" : "Transfert du patient",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-predictable-adverse-drug-reaction"
+      },
+      "name" : "Logical model - FR LM Predictable Adverse Drug Reaction",
+      "description" : "Section Effets indesirables",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-prescription-entree"
+      },
+      "name" : "Logical model - FR LM Prescription",
+      "description" : "Prescription",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-presented-form"
+      },
+      "name" : "Logical model - FR LM Presented Form",
+      "description" : "Section Document PDF-copie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-problems"
+      },
+      "name" : "Logical model - FR LM Problems",
+      "description" : "Section Problems",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-procedures"
+      },
+      "name" : "logical model - FR LM Procedures",
+      "description" : "Section Historique des actes",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-qr-code"
+      },
+      "name" : "Logical model - FR LM QR Code",
+      "description" : "Section Codes à barres",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-quantity-exposure"
+      },
+      "name" : "Logical model - FR LM Quantity Exposure",
+      "description" : "Quantité exposition",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-reason-for-referral"
+      },
+      "name" : "Logical model - FR LM Reason for referral",
+      "description" : "Section Raison de la recommandation",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-recommendation"
+      },
+      "name" : "Logical model - FR LM Recommendation",
+      "description" : "Section Recommandation",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-related-person"
+      },
+      "name" : "Logical model - FR LM Related Person",
+      "description" : "Related Person",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-resultats-examens-biologie-medicale"
+      },
+      "name" : "Logical model - FR LM Resultats d'examens de biologie medicale",
+      "description" : "Resultats d'examens de biologie medicale",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-section"
+      },
+      "name" : "Logical model - FR LM Section",
+      "description" : "Section",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-series"
+      },
+      "name" : "Logical model - FR LM Series",
+      "description" : "Séries d'actes d'imagerie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-service-request"
+      },
+      "name" : "Logical model - FR LM Service Request",
+      "description" : "Demande d'examen ou de suivi / Objectif à atteindre",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-social-history"
+      },
+      "name" : "Logical model - FR LM SocialHistory",
+      "description" : "Section Habitus et modes de vie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-sop-instance"
+      },
+      "name" : "Logical model - FR LM SOP Instance",
+      "description" : "SOP Instance",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-specimen"
+      },
+      "name" : "Logical model - FR LM Specimen",
+      "description" : "Prélèvement",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-supporting-information"
+      },
+      "name" : "Logical model - FR LM Supporting Information",
+      "description" : "Section Informations Cliniques",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-transfusion-accidents"
+      },
+      "name" : "Logical model - FR LM Transfusion accidents",
+      "description" : "Accidents transfusionnels",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-transfusion-de-produits-sanguins"
+      },
+      "name" : "Logical model - FR LM Transfusion de produits sanguins",
+      "description" : "Transfusion de produits sanguins",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-travel-history"
+      },
+      "name" : "Logical model - FR LM TravelHistory",
+      "description" : "Historique des voyages.",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-vital-signs"
+      },
+      "name" : "Logical model - FR LM Vital Signs",
+      "description" : "Section Signes vitaux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-laboratory-observation"
+      },
+      "name" : "Logical model - Laboratory Observation",
+      "description" : "Résultats d'examen de biologie médicale",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-dosageInstructions"
+      },
+      "name" : "Logical model- FR LM Dosage Instructions",
+      "description" : "Posologie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-functional-status"
+      },
+      "name" : "logical model- FR LM Functional Status",
+      "description" : "Section Statut fonctionnel",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-medication-administration"
+      },
+      "name" : "Logical model- FR LM Medication Administration\t",
+      "description" : "Traitement",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-observation-social-history"
+      },
+      "name" : "Logical model- FR LM Observation Social History",
+      "description" : "Habitus Mode de vie",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-pregnancy-history"
+      },
+      "name" : "Logical model- FR LM Pregnancy History",
+      "description" : "Historique de la grossesse",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-pregnancy-observation"
+      },
+      "name" : "Logical model- FR LM Pregnancy Observation",
+      "description" : "Observation sur la grossesse",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-pregnancy-status"
+      },
+      "name" : "Logical model- FR LM Pregnancy Status",
+      "description" : "Statut de grossesse",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-procedure"
+      },
+      "name" : "Logical model- FR LM Procedure",
+      "description" : "Acte",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-technique-imagerie"
+      },
+      "name" : "Logical model- FR LM Technique imagerie",
+      "description" : "Entrée Technique imagerie",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "ConceptMap"
       }],
       "reference" : {
-        "reference" : "CodeSystem/type-carte-code-system"
+        "reference" : "ConceptMap/FRObservationTransfusionAccidentsLMCDAFHIR"
       },
-      "name" : "Type de carte",
-      "description" : "Type de carte professionnelle et personnelle.",
-      "exampleBoolean" : false
+      "name" : "Mapping FRLMAccidentsTransfusionnels → FRCDAAccidentsTransfusionnels → FRObservationTransfusionAccidentsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMAccidentsTransfusionnels vers le profil CDA FRCDAAccidentsTransfusionnels, puis vers le profil FHIR FRObservationTransfusionAccidentsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRProcedureLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMActe → FRCDAActe → FRProcedureDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMActe vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRActSubstitutionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMActeSubstitution → FRCDAActeSubstitution → FRMedicationDispenseDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMActeSubstitution vers le profil CDA FRCDAActeSubstitution, puis vers le profil FHIR FRMedicationDispenseDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingAddendumLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAddendum → FRCDAdicomAddendum → FRCompositionDocument.section:Addendum",
+      "description" : "Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum puis vers le profil FHIR FRCompositionDocument.section:Addendum.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationAdministrationBloodDerivativesLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAdministrationDeDerivesDuSang → FRCDAAdministrationDeDerivesDuSang → FRObservationAdministrationBloodDerivativesDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMAdministrationDeDerivesDuSang vers le profil CDA FRCDAAdministrationDeDerivesDuSang, puis vers le profil FHIR FRObservationAdministrationBloodDerivativesDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingMedicationAministrationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAdministrationProduitDeSante -> FRCDADICOMAdministrationProduitDeSante -> FRMedicationAdministrationDocument",
+      "description" : "Mapping des éléments du modele metier FRLMAdministrationProduitDeSante vers le profil CDA FRCDADICOMAdministrationProduitDeSante, puis vers le profil FHIR FRMedicationAdministrationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAllergyIntoleranceLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAllergieOuHypersensibilite / FRCDAAllergieOuHypersensibilite -> FRAllergyIntoleranceDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMAllergieOuHypersensibilite vers le profil CDA FRCDAAllergieOuHypersensibilite,puis vers le profil FHIR FRAllergyIntoleranceDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRFamilyMemberHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAntecedentFamilialObserve → FRCDAAntecedentFamilialObserve → FRFamilyMemberHistoryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMAntecedentFamilialObserve vers le profil CDA FRCDAAntecedentFamilialObserve, puis vers le profil FHIR FRFamilyMemberHistoryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRFamilyMemberHistoriesLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAntecedentsFamiliauxEntree → FRCDAAntecedentsFamiliaux → FRFamilyMemberHistoryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMAntecedentsFamiliauxEntree vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingRadiationExposureAuthorizationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAutorisationExposition → FRCDADICOMExpositionPatient → FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition",
+      "description" : "Mapping des éléments du modèle métier FRLMAutorisationExposition vers le profil CDA FRCDADICOMExpositionPatient, puis vers le profil FHIR FRObservationRadiationExposureDocument.performer:professionnelAutorisantExposition.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAllowedSubstitutionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAutorisationSubstitution → FRCDAAutorisationSubstitution → FRMedicationRequestDocument.substitution.allowedCodeableConcept",
+      "description" : "Mapping des éléments du modèle métier FRLMAutorisationSubstitution vers le profil CDA FRCDAAutorisationSubstitution, puis vers l'élément substitution.allowedCodeableConcept du profil FHIR FRMedicationRequestDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale vers le profil CDA FRCDABatterieExamensDeBiologieMedicale, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRCertitudeLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCertitude → FRCDACertitude → FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus",
+      "description" : "Mapping des éléments du modèle métier FRLMCertitude vers le profil CDA FRCDACertitude, puis vers les profils FHIR FRConditionDocument.verificationStatus et FRAllergyIntoleranceDocument.verificationStatus.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRNoteLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCommentaireER -> FRCDACommentaireER -> Annotation",
+      "description" : "Mapping des éléments du modele metier FRLMCommentaireER vers l'element CDA FRCDACommentaireER, puis vers l'element FHIR Annotation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingComparisonLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMComparaisonExamensImagerie → FRCDADICOMExamenComparatif → FRCompositionDocument.section:Comparison",
+      "description" : "Mapping des éléments du modèle métier FRLMComparaisonExamensImagerie vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section Comparison du profil FHIR FRCompositionDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingComplicationsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMComplicationsActe → FRCDADICOMComplications → FRProcedureImagingDocument.complication.text",
+      "description" : "Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingConclusionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMConclusionExamenImagerie → FRCDADICOMConclusion → FRDiagnosticReportImagingDocument.conclusion",
+      "description" : "Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRConditionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCondition → FRCDACondition → FRConditionDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionLaboratoryChapterLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCRBIOChapitre → FRCDACRBIOChapitre → FRCompositionDocument.section",
+      "description" : "Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRCompositionDocument.section.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCRBIOSousChapitre → FRCDACRBIOSousChapitre → FRCompositionDocument.section:avec-sous-sections.section",
+      "description" : "Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRCriticiteLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMCriticite -> FRCDACriticite -> FRAllergyIntoleranceDocument.criticality",
+      "description" : "Mapping des éléments du modele metier FRLMCriticite vers le profil CDA FRCDACriticite, puis vers le profil FHIR FRAllergyIntoleranceDocument.criticality.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDemandeExamenImagerie → FRCDADICOMDemandeExamen → FRServiceRequestDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRServiceRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDemandeExamenOuSuivi → FRCDADemandeDExamenOuDeSuivi → FRServiceRequestDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDemandeExamenOuSuivi vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAdvanceDirectiveLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionAdvanceDirectiveLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDirectivesAnticipees → FRCDADirectivesAnticipees → FRAdvanceDirectiveDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDirectivesAnticipees vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicationDispenseLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRDeviceRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceRequestDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceRequestDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRDeviceUseStatementLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDispositifMedicalEntree → FRCDADispositifMedical → FRDeviceUseStatement",
+      "description" : "Mapping des éléments du modèle métier FRLMDispositifMedicalEntree vers le\nprofil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicalDeviceLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDispositifsMedicaux → FRCDADispositifsMedicaux → FRCompositionDocument.section:medicalDevice",
+      "description" : "Mapping des éléments du modèle métier FRLMDispositifsMedicaux vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevice.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRDocumentReferenceLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDocumentAttache → FRCDADocumentAttache → FRDocumentReferenceDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMDocumentAttache vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDocumentPDFCopie → FRCDADocumentPDFCopie → FRCompositionDocument.section:pdfDocumentCopy",
+      "description" : "Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionAddedDocumentsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDocumentsAjoutes → FRCDADocumentsAjoutes → FRCompositionDocument.section:addedDocuments",
+      "description" : "Mapping des éléments du modèle métier FRLMDocumentsAjoutes vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:addedDocuments.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionPatientEducationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation",
+      "description" : "Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionAdverseEventLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEffetsIndesirables → FRCDAEffetsIndesirables → FRCompositionDocument.section:adverseEvent",
+      "description" : "Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationWorkRelatedAccidentLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEnRapportAvecAccidentTravail → FRCDAEnRapportAvecAccidentTravail → FRObservationWorkRelatedAccidentDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMEnRapportAvecAccidentTravail vers le profil CDA FRCDAEnRapportAvecAccidentTravail, puis vers le profil FHIR FRObservationWorkRelatedAccidentDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationSurveyLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEvaluation → FRCDAEvaluation → FRObservationSurveyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMEvaluation vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationSurveyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationSurveyComponentLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEvaluationComposant → FRCDAEvaluationComposant → FRObservationSurveyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMEvaluationComposant vers le profil CDA FRCDAEvaluationComposant, puis vers le profil FHIR FRObservationSurveyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationSurveyComponentN2LMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEvaluationComposantN2 → FRCDAEvaluationComposantN2 → FRObservationSurveyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMEvaluationComposantN2 vers le profil CDA FRCDAEvaluationComposantN2, puis vers le profil FHIR FRObservationSurveyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAdverseEventLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMEvenementIndesirable → FRCDAEvenementIndesirable → FRAdverseEventDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMEvenementIndesirable vers le profil CDA FRCDAEvenementIndesirable, puis vers le profil FHIR FRAdverseEvent.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingStudyLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionExposureRadiationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:exposureRadiation",
+      "description" : "Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:exposureRadiation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingRadiationExposureLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:radiationExposure",
+      "description" : "Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations puis vers le profil FHIR FRCompositionDocument.section:radiationExposure.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMFacteursDeRisqueProfessionnelsNonCode → FRCDAFacteursDeRisqueProfessionnelsNonCode → FRCompositionDocument.section:uncodedOccupationalRiskFactors",
+      "description" : "Mapping des éléments du modèle métier FRLMFacteursDeRisqueProfessionnelsNonCode vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedOccupationalRiskFactors.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionPhysicalFunctionsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMFonctionsPhysiques → FRCDAFonctionsPhysiques → FRCompositionDocument.section:PhysicalFunctions",
+      "description" : "Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section CDA FRCDAFonctionsPhysiques, puis vers le profil FHIR FRCompositionDocument.section:PhysicalFunctions.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationSurveyPannelLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMGroupDeQuestionnairesDevaluation → FRCDAGroupeDeQuestionnairesDEvaluation → FRObservationSurveyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMGroupDeQuestionnairesDevaluation vers le profil CDA FRCDAGroupeDeQuestionnairesDEvaluation, puis vers le profil FHIR FRObservationSurveyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionSocialHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHabitusModeDeVie → FRCDAHabitusModeDeVieSection → FRCompositionDocument.section:socialHistory",
+      "description" : "Mapping des éléments du modèle métier FRLMHabitusModeDeVie vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:socialHistory.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationSocialHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHabitusModeDeVieEntree → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionHistoryActsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHistoriqueDesActes → FRCDAHistoriqueDesActes → FRCompositionDocument.section:historyActs",
+      "description" : "Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHistoriqueDesGrossesses → FRCDAHistoriqueDesGrossesses → FRCompositionDocument.section:pregnancyHistory",
+      "description" : "Mapping des éléments du modèle métier FRLMHistoriqueDesGrossesses vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:pregnancyHistory.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationPregnancyHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRObservationPregnancyHistoryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRObservationPregnancyHistoryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRPregnancyHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRPregnancyHistoryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMIdentificationDeMicroOrganismesMultiresistants → FRCDAIdentificationMicroOrganismesMultiresistants → FRObservationMultiresistantMicroorganismsIdentificationDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMultiresistants vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMediaLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMInformationsCliniques → FRCDADICOMHistoriqueMedical → FRCompositionDocument.section:History (Observation / FRConditionDocument/ FRObservationPregnancyDocument / FRObservationContraIndicationsImagingDocument / FRDeviceAuteurDocument / FRMedicationAdministrationDocument)",
+      "description" : "Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRLaboratoryIsolateResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMIsolatMicrobiologique → FRCDAIsolatMicrobiologique → FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationBirthEventLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMNaissance → FRCDANaissance → FRObservationBirthEventDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMNaissance vers le profil CDA FRCDANaissance, puis vers le profil FHIR FRObservationBirthEventDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMObjectCatalog → FRCDADICOMObjectCatalog → FRCompositionDocument.section:imagingStudy",
+      "description" : "Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMObservation -> FRCDASimpleObservation -> Observation",
+      "description" : "Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationPregnancyLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMObservationGrossesse → FRCDAObservationSurLaGrossesse → FRObservationPregnancyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMObservationGrossesse vers le profil CDA FRCDAObservationSurLaGrossesse, puis vers le profil FHIR FRObservationPregnancyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationResultLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMObservationResult → FRCDAResultat → FRObservationResultDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMObservationResult vers le profil CDA FRCDAResultat, puis vers le profil FHIR FRObservationResultDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRParticipantCorpsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMParticipantCorps -> FRCDAParticipant -> FRActorExtension",
+      "description" : "Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRPatientWithNonHumanSubjectLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPatientSujetNonHumain -> FRCDAPatientAvecSujetNonHumain -> FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modele metier FRLMPatientSujetNonHumain vers l'element CDA FRCDAPatientAvecSujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance et Observation/subject.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionCarePlanLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPlanSoins → FRCDAPlanDeSoins → FRCompositionDocument.section:planOfCare",
+      "description" : "Mapping des éléments du modèle métier FRLMPlanSoins vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:planOfCare.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionUncodedPointsOfVigilanceLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPointsDeVigilancesNonCode → FRCDAPointsDeVigilancesNonCode → FRCompositionDocument.section:uncodedPointsOfVigilance",
+      "description" : "Mapping des éléments du modèle métier FRLMPointsDeVigilancesNonCode vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedPointsOfVigilance.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSpecimenLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPrelevement → FRCDAPrelevement → FRSpecimenDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPrescriptionDispositifsMedicaux → FRCDAPrescriptionDispositifsMedicaux → FRCompositionDocument.section:medicalDevicePrescription",
+      "description" : "Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicationRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPrescriptionMedicaments → FRCDAPrescriptionMedicaments → FRCompositionDocument.section:medicationRequest",
+      "description" : "Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionActiveProblemsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMProblemesActifs → FRCDAProblemesActifs → FRCompositionDocument.section:activeProblems",
+      "description" : "Mapping des éléments du modèle métier FRLMProblemesActifs vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:activeProblems.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMProduitSante → FRCDAProduitDeSante → FRMedicationDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMProduitSante vers le profil CDA FRCDAProduitDeSante, puis vers le profil FHIR FRMedicationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMRaisonRecommandation → FRCDARaisonDeLaRecommandation → FRCompositionDocument.section:reasonForRecommendation",
+      "description" : "Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionUncodedReasonForRecommendationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMRaisonRecommandationNonCode → FRCDARaisonDeLaRecommandationNonCode → FRCompositionDocument.section:reasonForRecommendation",
+      "description" : "Mapping des éléments du modèle métier FRLMRaisonRecommandationNonCode vers la section CDA FRCDARaisonDeLaRecommandationNonCode, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMRechercheDeMicroOrganismes → FRCDARechercheDeMicroOrganismes → FRObservationMicroorganismDetectionDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMRechercheDeMicroOrganismes vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRCarePlanLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FREncounterLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMRencontre → FRCDARencontre → FREncounterDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMRencontre vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatExamensBiologieElementCliniquePertinent → Profile: FRCDAResultatExamensDeBiologieElementCliniquePertinent\n → FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results",
+      "description" : "Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRDiagnosticReportLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsEntry → FRCDAResultats → FRDiagnosticReportDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsEntry vers le profil CDA FRCDAResultats, puis vers le profil FHIR FRDiagnosticReportDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionExaminationResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsExamens → FRCDAResultatsExamens → FRCompositionDocument.section:Results",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsExamens vers la section CDA FRCDAResultatsExamens puis vers le profil FHIR FRCompositionDocument.section:Results.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRLaboratoryResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale vers le profil CDA FRCDAResultatExamensDeBiologie, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionUncodedExaminationResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsExamensNonCode → FRCDAResultatsExamensNonCode → FRCompositionDocument.section:Results",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsExamensNonCode vers la section CDA FRCDAResultatsExamensNonCode puis vers le profil FHIR FRCompositionDocument.section:Results.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingSeriesLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSerieImagerie → FRCDADICOMSerieImagerie → FRImagingStudyDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMSerieImagerie vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionVitalSignsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section",
+      "description" : "Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationVitalSignsPanelLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSigneVital → FRCDASignesVitaux → FRObservationVitalSignsPanelDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMSigneVital vers le profil CDA FRCDASignesVitaux, puis vers le profil FHIR FRObservationVitalSignsPanelDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationVitalSignsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSigneVitalObserve → FRCDASigneVitalObserve → FRObservationVitalSignsDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMSigneVitalObserve vers le profil CDA FRCDASigneVitalObserve, puis vers le profil FHIR FRObservationVitalSignsDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionDocumentStatusLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMStatutDocument -> FRCDAStatutDuDocument -> FRComposition.section",
+      "description" : "Mapping des éléments du modèle métier FRLMStatutDocument vers la section CDA FRCDAStatutDuDocument, puis vers la section FHIR FRCompositionDocument.section:documentStatus.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionFunctionalStatusLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMStatutFonctionnel → FRCDAStatutFonctionnel → FRCompositionDocument.section:FRFunctionalStatus",
+      "description" : "Mapping des éléments du modèle métier FRLMStatutFonctionnel vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:FRFunctionalStatus.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRNonHumanSubjectLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSujetNonHumain -> FRCDASujetNonHumain -> FRObservationLaboratoryReportResultsDocument",
+      "description" : "Mapping des éléments du modele metier FRLMSujetNonHumain vers l'element CDA FRCDASujetNonHumain, puis vers les ressources FHIR Observation/Specimen/Substance.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationMedicalSummaryLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMSyntheseMedicaleSejour → FRCDASyntheseMedicaleSejour → FRObservationMedicalSummaryDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMSyntheseMedicaleSejour vers la sous-entrée CDA FRCDASyntheseMedicaleSejour puis vers le profil FHIR FRObservationMedicalSummaryDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingProcedureLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTechniqueImagerie → FRCDADICOMTechniqueImagerie → FRProcedureImagingDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationAdministrationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitement → FRCDATraitement → FRMedicationAdministrationDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitement vers le profil CDA FRCDATraitement, puis vers le profil FHIR FRMedicationAdministrationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationStatementLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitement → FRCDATraitement → FRMedicationStatementDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitement vers la sous-entrée CDA FRCDATraitement puis vers le profil FHIR FRMedicationStatementDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationDispenseLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementDispense vers le profil CDA FRCDATraitementDispense, puis vers le profil FHIR FRMedicationDispenseDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementPrescrit → FRCDATraitementPrescrit → FRMedicationRequestDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationsCombinaisonRequestLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementPrescritSubordonne → FRCDATraitementPrescritSubordonne → FRMedicationsCombinaisonDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementPrescritSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicationsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitements → FRCDATraitements → FRCompositionDocument.section:medications",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitements vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:medications.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementsAdministres → FRCDATraitementsAdministres → FRCompositionDocument.section:medicationAdministration",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRMedicationsCombinaisonLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTraitementSubordonne → FRCDATraitementSubordonne → FRMedicationsCombinaisonDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTraitementSubordonne vers la sous-entrée CDA FRCDATraitementSubordonne puis vers le profil FHIR FRMedicationsCombinaisonDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRObservationBloodProductTransfusionLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMTransfusionDeProduitsSanguins → FRCDATransfusionDeProduitsSanguins → FRObservationBloodProductTransfusionDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMTransfusionDeProduitsSanguins vers la sous-entrée CDA FRCDATransfusionDeProduitsSanguins puis vers le profil FHIR FRObservationBloodProductTransfusionDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImmunizationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMVaccination → FRCDAVaccination → FRImmunizationDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMVaccination vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImmunizationsLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMVaccinations → FRCDAVaccinations → FRCompositionDocument.section:immunizations",
+      "description" : "Mapping des éléments du modèle métier FRLMVaccinations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:immunizations.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImmunizationRecommendationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMVaccinRecommande → FRCDAVaccinRecommande → FRImmunizationRecommendationDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMVaccinRecommande vers le profil CDA FRCDAVaccinRecommande, puis vers le profil FHIR FRImmunizationRecommendationDocument.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingmodelemetierCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
+      "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingAuteurCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingConsentementCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingDestinatairePrevuCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingDocumentDeReferenceCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingEvenementCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingInformateurCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingOperateurSaisieCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingParticipantCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Participant\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPatientCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPersonneStructureAssignedEntityFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
+      "description" : "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPersonneStructureAuteurFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
+      "description" : "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPersonneStructureRelatedEntityFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
+      "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPrescriptionCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingPriseEnchargeCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingResponsableCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingStructureConservationCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingSystemeFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"",
+      "description" : "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/mappingValidateurCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
+      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingActLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Acte d'imagerie",
+      "description" : "Mapping des éléments du modèle métier FRLMActeImagerie vers la section CDA FRCDADICOMActeImagerie, puis vers le profil FHIR FRCompositionDocument.section:ImagingStudy.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionAllergyIntoleranceLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Allergies et intolérances",
+      "description" : "Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:AllergyIntolerance.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionFamilyHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Antécédents familiaux",
+      "description" : "Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionMedicalHistoryLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Antécédents médicaux",
+      "description" : "Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionBarCodesLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Codes-barres",
+      "description" : "Mapping des éléments du modèle métier FRLMCodesAbarres vers la section CDA FRCDACodeABarres, puis vers la section FHIR FRCompositionDocument.section:barCodes.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionNoteLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Commentaire ER",
+      "description" : "Mapping des éléments du modèle métier FRLMCommentaireNonCode vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:note.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRImagingQuantityLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Quantité d'exposition aux radiations",
+      "description" : "Mapping des éléments du modèle métier FRLMQuantiteExposition vers l'entrée CDA FRCDADICOMQuantite puis vers le composant FHIR FRObservationRadiationExposureDocument.component.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRSectionImagingResultsLMCDAFHIR"
+      },
+      "name" : "Mapping Métier/CDA/FHIR : Résultats d'imagerie",
+      "description" : "Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings.",
+      "exampleBoolean" : false,
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-adverse-drug-reaction"
+      },
+      "name" : "Modèle logique métier - FR LM Adverse Drug Reaction",
+      "description" : "Effet indésirable médicamenteux",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
+      },
+      "name" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
+      "description" : "Entrée Batterie d'examens de biologie médicale",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-isolat-microbiologique"
+      },
+      "name" : "Modèle logique métier - FR LM Isolat microbiologique",
+      "description" : "Isolat microbiologique",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-laboratoire-executant"
+      },
+      "name" : "Modèle logique métier - FR LM Laboratoire exécutant",
+      "description" : "Laboratoire exécutant",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
+      },
+      "name" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
+      "description" : "Résultat d'examens de biologie / élement clinique pertinent",
+      "exampleBoolean" : false,
+      "groupingId" : "Modèles logiques métier des composants communs"
     }],
     "page" : {
       "extension" : [{
@@ -982,65 +4069,74 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "spec-fonctionnelle-intro.html"
+          "valueUrl" : "structureGenerale.html"
         }],
-        "nameUrl" : "spec-fonctionnelle-intro.html",
-        "title" : "Vue d'ensemble",
+        "nameUrl" : "structureGenerale.html",
+        "title" : "Structure générale document",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "spec-fonctionnelle-alimentation.html"
+            "valueUrl" : "introduction.html"
           }],
-          "nameUrl" : "spec-fonctionnelle-alimentation.html",
-          "title" : "Alimentation",
+          "nameUrl" : "introduction.html",
+          "title" : "Introduction",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "exigencesSpecifiques.html"
+          }],
+          "nameUrl" : "exigencesSpecifiques.html",
+          "title" : "Exigences spécifiques",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mappingCDA-FHIR-struc-gen.html"
+          }],
+          "nameUrl" : "mappingCDA-FHIR-struc-gen.html",
+          "title" : "Mapping CDA / FHIR",
           "generation" : "markdown"
         }]
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "spec-technique-intro.html"
+          "valueUrl" : "enteteDocument.html"
         }],
-        "nameUrl" : "spec-technique-intro.html",
-        "title" : "Introduction",
+        "nameUrl" : "enteteDocument.html",
+        "title" : "Entête document",
         "generation" : "markdown",
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "spec-technique-vue-ensemble.html"
+            "valueUrl" : "mappingCDA-FHIR-entete.html"
           }],
-          "nameUrl" : "spec-technique-vue-ensemble.html",
-          "title" : "Vue d'ensemble",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "spec-technique-flux-alimentation.html"
-          }],
-          "nameUrl" : "spec-technique-flux-alimentation.html",
-          "title" : "Flux d'alimentation",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "spec-technique-flux-consommation.html"
-          }],
-          "nameUrl" : "spec-technique-flux-consommation.html",
-          "title" : "Flux de consommation",
+          "nameUrl" : "mappingCDA-FHIR-entete.html",
+          "title" : "Mapping Métier/CDA/FHIR",
           "generation" : "markdown"
         }]
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "change-log.html"
+          "valueUrl" : "corpsDocument.html"
         }],
-        "nameUrl" : "change-log.html",
-        "title" : "Historique des versions",
-        "generation" : "markdown"
+        "nameUrl" : "corpsDocument.html",
+        "title" : "Corps d'un document",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mappingCDA-FHIR-corps.html"
+          }],
+          "nameUrl" : "mappingCDA-FHIR-corps.html",
+          "title" : "Mapping Métier/CDA/FHIR",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{
@@ -1053,18 +4149,18 @@
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "annexe-securite.html"
+            "valueUrl" : "securite.html"
           }],
-          "nameUrl" : "annexe-securite.html",
+          "nameUrl" : "securite.html",
           "title" : "Sécurité",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "annexe-downloads.html"
+            "valueUrl" : "downloads.html"
           }],
-          "nameUrl" : "annexe-downloads.html",
+          "nameUrl" : "downloads.html",
           "title" : "Téléchargements et usages",
           "generation" : "markdown"
         }]

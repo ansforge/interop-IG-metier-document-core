@@ -1,0 +1,73 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-dicom-medication-administration","fr-lm-dicom-medication-administration","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM DICOM Medication Administration","Administration de produit de santé dans le contexte de l'imagerie médicale","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-dicom-medication-administration.header","fr-lm-dicom-medication-administration.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-dicom-medication-administration.header.subject","fr-lm-dicom-medication-administration.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-dicom-medication-administration.header.identifier","fr-lm-dicom-medication-administration.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-dicom-medication-administration.header.author[x]","fr-lm-dicom-medication-administration.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-dicom-medication-administration.header.author[x].authorProfessional","fr-lm-dicom-medication-administration.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-dicom-medication-administration.header.author[x].authorOrganisation","fr-lm-dicom-medication-administration.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-dicom-medication-administration.header.author[x].authorDevice","fr-lm-dicom-medication-administration.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-dicom-medication-administration.header.performer[x]","fr-lm-dicom-medication-administration.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-dicom-medication-administration.header.participant[x]","fr-lm-dicom-medication-administration.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-dicom-medication-administration.header.participant[x].participantProfessional","fr-lm-dicom-medication-administration.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-dicom-medication-administration.header.participant[x].participantOrganisation","fr-lm-dicom-medication-administration.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-dicom-medication-administration.header.participant[x].participantDevice","fr-lm-dicom-medication-administration.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-dicom-medication-administration.header.informant","fr-lm-dicom-medication-administration.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-dicom-medication-administration.header.date","fr-lm-dicom-medication-administration.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-dicom-medication-administration.header.status","fr-lm-dicom-medication-administration.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-dicom-medication-administration.header.source","fr-lm-dicom-medication-administration.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-dicom-medication-administration.header.language","fr-lm-dicom-medication-administration.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-dicom-medication-administration.voieAdministration","fr-lm-dicom-medication-administration.voieAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d'administration","Voie d'administration","","","","","","","","","",,"","EDQM (0.4.0.127.0.16.1.1.2.1)","","",,,,"fr-lm-dicom-medication-administration.voieAdministration",0,1,"",""
+"fr-lm-dicom-medication-administration.dose","fr-lm-dicom-medication-administration.dose","","","",0,1,"","","","Quantity {[]} {[]}
+","Dose à administrer","Dose à administrer","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.dose",0,1,"",""
+"fr-lm-dicom-medication-administration.rythme","fr-lm-dicom-medication-administration.rythme","","","",0,1,"","","","Range {[]} {[]}
+","Rythme d'administration","Rythme d'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.rythme",0,1,"",""
+"fr-lm-dicom-medication-administration.medicament","fr-lm-dicom-medication-administration.medicament","","","",1,1,"","","","Base {[]} {[]}
+","Médicament","Médicament","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.medicament",1,1,"",""
+"fr-lm-dicom-medication-administration.medicament.produit","fr-lm-dicom-medication-administration.medicament.produit","","","",1,1,"","","","Base {[]} {[]}
+","Produit de santé","Produit de santé","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.medicament.produit",1,1,"",""
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit","fr-lm-dicom-medication-administration.medicament.produit.codeProduit","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code du produit","Code du produit","","","","","","","","","",,"","UCD (1.2.250.1.213.2.61) + code ATC","","",,,,"fr-lm-dicom-medication-administration.medicament.produit.codeProduit",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.id","fr-lm-dicom-medication-administration.medicament.produit.codeProduit.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.extension","fr-lm-dicom-medication-administration.medicament.produit.codeProduit.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.coding","fr-lm-dicom-medication-administration.medicament.produit.codeProduit.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.text","fr-lm-dicom-medication-administration.medicament.produit.codeProduit.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.autreCodification","fr-lm-dicom-medication-administration.medicament.produit.codeProduit.autreCodification","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Autre(s) codification(s)","Autre(s) codification(s)","","","","","","","","","",,"","ATC (2.16.840.1.113883.6.73) or CIS (1.2.250.1.213.2.3.1) or MV (1.2.250.1.213.2.59)","","",,,,"fr-lm-dicom-medication-administration.medicament.produit.codeProduit.autreCodification",0,1,"",""
+"fr-lm-dicom-medication-administration.medicament.produit.nomMarque","fr-lm-dicom-medication-administration.medicament.produit.nomMarque","","","",0,1,"","","","string {[]} {[]}
+","Nom de marque du produit","Nom de marque du produit","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.medicament.produit.nomMarque",0,1,"",""
+"fr-lm-dicom-medication-administration.medicament.produit.numeroLot","fr-lm-dicom-medication-administration.medicament.produit.numeroLot","","","",0,1,"","","","string {[]} {[]}
+","Numéro de lot","Numéro de lot","","","","","","","","","",,,,,"",,,,"fr-lm-dicom-medication-administration.medicament.produit.numeroLot",0,1,"",""

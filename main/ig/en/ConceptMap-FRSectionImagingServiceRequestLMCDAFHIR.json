@@ -1,0 +1,87 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionImagingServiceRequestLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionImagingServiceRequestLMCDAFHIR</b></p><a name=\"en-FRSectionImagingServiceRequestLMCDAFHIR\"> </a><a name=\"en-hcFRSectionImagingServiceRequestLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMDemandeExamenImagerie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen</td></tr><tr><td>FRLMDemandeExamenImagerie.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen.title</td></tr><tr><td>FRLMDemandeExamenImagerie.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen.text</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRCDADICOMDemandeExamen</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument</td></tr><tr><td>FRCDADICOMDemandeExamen.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:serviceRequest.title</td></tr><tr><td>FRCDADICOMDemandeExamen.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument.note:finaliteExamen</td></tr><tr><td>FRCDADICOMDemandeExamen.text</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument.note:justificationDemande</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : Demande d'examen d'imagerie",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-demande-examen-imagerie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen",
+    "element" : [{
+      "code" : "FRLMDemandeExamenImagerie",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDemandeExamenImagerie.titreSection",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDemandeExamenImagerie.blocNarratif",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDADICOMDemandeExamen",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMDemandeExamen.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:serviceRequest.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMDemandeExamen.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument.note:finaliteExamen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMDemandeExamen.text",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:serviceRequest.FRServiceRequestDocument.note:justificationDemande",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

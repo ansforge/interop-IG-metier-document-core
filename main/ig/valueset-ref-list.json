@@ -1,46 +1,579 @@
 {
   "codeSystems" : [{
-    "url" : "https://interop.esante.gouv.fr/ig/document-core/ValueSet/EyeColorVS",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "EyeColorVS",
-    "title" : "EyeColor Value Set",
-    "description" : "Different eye colors.",
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-human-name.html" : "Logical model - FR LM Human Name"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS",
+    "version" : "20260223120000",
+    "status" : "active",
+    "name" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS",
+    "title" : null,
+    "description" : "XDS healthcareFacilityTypeCode CI-SIS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_A00-ProducteurDocNonPS/FHIR/TRE-A00-ProducteurDocNonPS",
+    "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite"],
+    "oids" : ["1.2.250.1.213.1.1.5.466"],
+    "sources" : ["1.2.250.1.213.1.1.5.466"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-organisation.html" : "Logical model - FR LM Organisation"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS",
+    "version" : "20230331120000",
+    "status" : "active",
+    "name" : "JDV_J245_Civilite_CISIS",
+    "title" : null,
+    "description" : "Civilités CI-SIS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite"],
+    "oids" : ["1.2.250.1.213.1.1.5.718"],
+    "sources" : ["1.2.250.1.213.1.1.5.718"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-human-name.html" : "Logical model - FR LM Human Name"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS",
+    "version" : "20240126120000",
+    "status" : "active",
+    "name" : "JDV_J246_Titre_CISIS",
+    "title" : null,
+    "description" : "Civilités CI-SIS",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice"],
+    "oids" : ["1.2.250.1.213.1.1.5.719"],
+    "sources" : ["1.2.250.1.213.1.1.5.719"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-human-name.html" : "Logical model - FR LM Human Name"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS",
+    "version" : "20250523120000",
+    "status" : "active",
+    "name" : "JDV_J47_FunctionCode_CISIS",
+    "title" : null,
+    "description" : "Rôles fonctionnels",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+    "https://mos.esante.gouv.fr/NOS/TRE_R258-RelationPriseCharge/FHIR/TRE-R258-RelationPriseCharge",
+    "https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction"],
+    "oids" : ["1.2.250.1.213.1.1.5.124"],
+    "sources" : ["1.2.250.1.213.1.1.5.124"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-participant.html" : "Logical model - FR LM Participant"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-age-gestationnel-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvAgeGestationnelCisis",
+    "title" : "JDV Age Gestationnel CISIS",
+    "description" : "JDV Age Gestationnel CISIS",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.250.1.213.1.1.5.854"],
+    "sources" : ["1.2.250.1.213.1.1.5.854"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-status.html" : "Logical model- FR LM Pregnancy Status"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis",
+    "version" : "20260619134043",
+    "status" : "active",
+    "name" : "JdvCodeProblemeCisis",
+    "title" : "JDV Code Probleme CISIS",
+    "description" : "JDV Code Probleme CISIS",
     "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.172"],
+    "sources" : ["1.2.250.1.213.1.1.5.172"],
     "uses" : {
     },
-    "StructureDefinition-EyeColor.html" : "EyeColor"
+    "StructureDefinition-fr-lm-condition.html" : "Logical model - FR LM Condition"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/document-core/ValueSet/MeltingPotVS",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "MeltingPotVS",
-    "title" : "Melting Pot Value Set",
-    "description" : "Melting Pot Value Set.",
-    "systems" : ["https://interop.esante.gouv.fr/ig/document-core/CodeSystem/competence-code-system",
-    "https://interop.esante.gouv.fr/ig/document-core/CodeSystem/type-carte-code-system",
-    "http://snomed.info/sct"]
-  },
-  {
-    "url" : "https://interop.esante.gouv.fr/ig/document-core/ValueSet/ModifiedAdministrativeGender",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "ModifiedAdministrativeGender",
-    "title" : "ModifiedAdministrativeGender",
-    "description" : "AdministrativeGender without unknown code",
-    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis",
+    "version" : "20260619134041",
+    "status" : "active",
+    "name" : "JdvCompletudeDispensationCisis",
+    "title" : "JDV Completude Dispensation CISIS",
+    "description" : "JDV Completude Dispensation CISIS",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "oids" : ["1.2.250.1.213.1.1.5.765"],
+    "sources" : ["1.2.250.1.213.1.1.5.765"],
     "uses" : {
     },
-    "StructureDefinition-fr-patient.html" : "Patient français"
+    "StructureDefinition-fr-lm-medication-dispense.html" : "Logical model - FR LM Medication Dispense"
   },
   {
-    "url" : "https://interop.esante.gouv.fr/ig/document-core/ValueSet/TypeCarteVS",
-    "version" : "0.1.0",
-    "status" : "draft",
-    "name" : "TypeCarteVS",
-    "title" : "Type Carte Value Set",
-    "description" : "Type Carte Value Set.",
-    "systems" : ["https://interop.esante.gouv.fr/ig/document-core/CodeSystem/type-carte-code-system"]
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-date-accouchement-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvDateAccouchementCisis",
+    "title" : "JDV Date Accouchement CISIS",
+    "description" : "JDV Date Accouchement CISIS",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.250.1.213.1.1.5.853"],
+    "sources" : ["1.2.250.1.213.1.1.5.853"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-status.html" : "Logical model- FR LM Pregnancy Status"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvEvolutionCisis",
+    "title" : "JDV Evolution CISIS",
+    "description" : "JDV Evolution CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.788"],
+    "sources" : ["1.2.250.1.213.1.1.5.788"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-adverse-drug-reaction.html" : "Modèle logique métier - FR LM Adverse Drug Reaction"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-gravite-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvGraviteCisis",
+    "title" : "JDV Gravite CISIS",
+    "description" : "JDV Gravite CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.787"],
+    "sources" : ["1.2.250.1.213.1.1.5.787"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-adverse-drug-reaction.html" : "Modèle logique métier - FR LM Adverse Drug Reaction"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvHealthStatusCodeCisis",
+    "title" : "JDV Health Status Code CISIS",
+    "description" : "JDV Health Status Code CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.4.2.283.1"],
+    "sources" : ["1.2.250.1.213.1.1.4.2.283.1"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-family-member-history.html" : "Logical model - FR LM Family Member History"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-historique-grossesses-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvHistoriqueGrossessesCisis",
+    "title" : "JDV Historique Grossesses CISIS",
+    "description" : "JDV Historique Grossesses CISIS",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.250.1.213.1.1.5.852"],
+    "sources" : ["1.2.250.1.213.1.1.5.852"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-history.html" : "Logical model- FR LM Pregnancy History"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-criticality-cisis",
+    "version" : "20260619134041",
+    "status" : "active",
+    "name" : "AllergyIntoleranceCriticality",
+    "title" : "Allergy Intolerance Criticality",
+    "description" : "Allergy Intolerance Criticality",
+    "systems" : ["http://hl7.org/fhir/allergy-intolerance-criticality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.129"],
+    "sources" : ["2.16.840.1.113883.4.642.3.129"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-allergy-intolerance.html" : "Logical model - FR LM Allergy Intolerance"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergyintolerance-clinical-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "AllergyIntoleranceClinicalStatusCodes",
+    "title" : "AllergyIntolerance Clinical Status Codes",
+    "description" : "AllergyIntolerance Clinical Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1372"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1372"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-allergy-intolerance.html" : "Logical model - FR LM Allergy Intolerance"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Condition Clinical Status Codes",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.164"],
+    "sources" : ["2.16.840.1.113883.4.642.3.164"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-condition.html" : "Logical model - FR LM Condition"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "ConditionVerificationStatus",
+    "title" : "Condition Verification Status",
+    "description" : "Condition Verification Status",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-allergy-intolerance.html" : "Logical model - FR LM Allergy Intolerance",
+    "StructureDefinition-fr-lm-condition.html" : "Logical model - FR LM Condition"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "ActStatus",
+    "title" : "ActStatus",
+    "description" : "ActStatus",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActStatus"],
+    "oids" : ["2.16.840.1.113883.1.11.15933"],
+    "sources" : ["2.16.840.1.113883.1.11.15933"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-procedure.html" : "Logical model- FR LM Procedure"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "ActSubstanceAdminSubstitutionCode",
+    "title" : "ActSubstanceAdminSubstitutionCode",
+    "description" : "ActSubstanceAdminSubstitutionCode",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"],
+    "oids" : ["2.16.840.1.113883.1.11.16621"],
+    "sources" : ["2.16.840.1.113883.1.11.16621"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-prescription-item.html" : "Logical model - FR LM Medication Prescription"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "AdministrativeGender",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"],
+    "oids" : ["2.16.840.1.113883.1.11.1"],
+    "sources" : ["2.16.840.1.113883.1.11.1"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-related-person.html" : "Logical model - FR LM Related Person"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "ObservationInterpretation",
+    "title" : "ObservationInterpretation",
+    "description" : "ObservationInterpretation",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
+    "oids" : ["2.16.840.1.113883.1.11.78"],
+    "sources" : ["2.16.840.1.113883.1.11.78"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-observation.html" : "Logical model - FR LM Observation",
+    "StructureDefinition-fr-lm-observation-vital-sign.html" : "Logical model - FR LM Observation Vital Sign",
+    "StructureDefinition-fr-lm-laboratory-observation.html" : "Logical model - Laboratory Observation"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis",
+    "version" : "20260420150251",
+    "status" : "active",
+    "name" : "ParticipationType",
+    "title" : "ParticipationType",
+    "description" : "ParticipationType",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ParticipationType"],
+    "oids" : ["2.16.840.1.113883.1.11.10901"],
+    "sources" : ["2.16.840.1.113883.1.11.10901"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-participant.html" : "Logical model - FR LM Participant"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis",
+    "version" : "20260619134041",
+    "status" : "active",
+    "name" : "PersonalRelationshipRoleType",
+    "title" : "PersonalRelationshipRoleType",
+    "description" : "PersonalRelationshipRoleType",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+    "oids" : ["2.16.840.1.113883.1.11.19563"],
+    "sources" : ["2.16.840.1.113883.1.11.19563"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-related-person.html" : "Logical model - FR LM Related Person"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imputabilite-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvImputabiliteCisis",
+    "title" : "JDV Imputabilite CISIS",
+    "description" : "JDV Imputabilite CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.786"],
+    "sources" : ["1.2.250.1.213.1.1.5.786"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-adverse-drug-reaction.html" : "Modèle logique métier - FR LM Adverse Drug Reaction"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-issue-grossesse-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvIssueGrossesseCisis",
+    "title" : "JDV Issue Grossesse CISIS",
+    "description" : "JDV Issue Grossesse CISIS",
+    "systems" : ["http://hl7.org/fhir/sid/icd-10", "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.731"],
+    "sources" : ["1.2.250.1.213.1.1.5.731"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-observation.html" : "Logical model- FR LM Pregnancy Observation"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis",
+    "version" : "20260505120000",
+    "status" : "active",
+    "name" : "JdvJ368CategorieEtablissementCisis",
+    "title" : "Jdv J368 Categorie Etablissement Cisis",
+    "description" : "JDV pour le CISIS reprenant l'ensemble des valeurs actives et obsolètes de niveau 4 dans la TreR397CategorieEntiteGeographiqueExercice",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/tre-r397-categorie-entite-geographique-exercice"],
+    "oids" : ["1.2.250.1.213.1.1.5.823"],
+    "sources" : ["1.2.250.1.213.1.1.5.823"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-organisation.html" : "Logical model - FR LM Organisation"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis",
+    "version" : "20260420150250",
+    "status" : "active",
+    "name" : "JdvModaliteAcquisitionCisis",
+    "title" : "JDV Modalite Acquisition CISIS",
+    "description" : "JDV Modalite Acquisition CISIS",
+    "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+    "oids" : ["1.2.250.1.213.1.1.5.618"],
+    "sources" : ["1.2.250.1.213.1.1.5.618"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-series.html" : "Logical model - FR LM Series",
+    "StructureDefinition-fr-lm-imaging-study.html" : "Logical model - FR LM Imaging Study"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis",
+    "version" : "20260619134043",
+    "status" : "active",
+    "name" : "JdvModaliteEntreeCisis",
+    "title" : "JDV Modalite Entree CISIS",
+    "description" : "JDV Modalite Entree CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.73"],
+    "sources" : ["1.2.250.1.213.1.1.5.73"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-encounter.html" : "Logical model - FR LM Encounter"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mode-accouchement-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvModeAccouchementCisis",
+    "title" : "JDV Mode Accouchement CISIS",
+    "description" : "JDV Mode Accouchement CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.735"],
+    "sources" : ["1.2.250.1.213.1.1.5.735"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-observation.html" : "Logical model- FR LM Pregnancy Observation"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvModificateurTopographiqueCisis",
+    "title" : "JDV Modificateur Topographique CISIS",
+    "description" : "JDV Modificateur Topographique CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.688"],
+    "sources" : ["1.2.250.1.213.1.1.5.688"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-body-structure.html" : "Logical model - FR LM Body Structure"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvOrigineEffetIndesirableCisis",
+    "title" : "JDV Origine Effet Indesirable CISIS",
+    "description" : "JDV Origine Effet Indesirable CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.785"],
+    "sources" : ["1.2.250.1.213.1.1.5.785"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-adverse-drug-reaction.html" : "Modèle logique métier - FR LM Adverse Drug Reaction"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-quantite-exposition-rayonnements-cisis",
+    "version" : "20260619134041",
+    "status" : "active",
+    "name" : "JdvQuantiteExpositionRayonnementsCisis",
+    "title" : "JDV Quantite Exposition Rayonnements CISIS",
+    "description" : "JDV Quantite Exposition Rayonnements CISIS",
+    "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+    "oids" : ["1.2.250.1.213.1.1.5.620"],
+    "sources" : ["1.2.250.1.213.1.1.5.620"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-quantity-exposure.html" : "Logical model - FR LM Quantity Exposure"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvSeveriteObservationCisis",
+    "title" : "JDV Severite Observation CISIS",
+    "description" : "JDV Severite Observation CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.675"],
+    "sources" : ["1.2.250.1.213.1.1.5.675"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-allergy-intolerance.html" : "Logical model - FR LM Allergy Intolerance",
+    "StructureDefinition-fr-lm-condition.html" : "Logical model - FR LM Condition"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-signe-vital-cisis",
+    "version" : "20260619134043",
+    "status" : "active",
+    "name" : "JdvSigneVitalCisis",
+    "title" : "JDV Signe Vital CISIS",
+    "description" : "JDV Signe Vital CISIS",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.250.1.213.1.1.5.171"],
+    "sources" : ["1.2.250.1.213.1.1.5.171"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-observation-vital-sign.html" : "Logical model - FR LM Observation Vital Sign"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvSocialHistoryCodeCisis",
+    "title" : "JDV Social History Code CISIS",
+    "description" : "JDV Social History Code CISIS",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["1.2.250.1.213.1.1.4.2.283.4"],
+    "sources" : ["1.2.250.1.213.1.1.4.2.283.4"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-observation-social-history.html" : "Logical model- FR LM Observation Social History"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvSopClassCisis",
+    "title" : "JDV Sop Class CISIS",
+    "description" : "JDV Sop Class CISIS",
+    "systems" : ["https://dicom.nema.org/medical/dicom/current/output/chtml/part06/chapter_a.html"],
+    "oids" : ["1.2.250.1.213.1.1.5.689"],
+    "sources" : ["1.2.250.1.213.1.1.5.689"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-sop-instance.html" : "Logical model - FR LM SOP Instance"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvSpecimenTypeCisis",
+    "title" : "JDV Specimen Type CISIS",
+    "description" : "JDV Specimen Type CISIS",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-SpecimenType",
+    "http://terminology.hl7.org/CodeSystem/v2-0487"],
+    "oids" : ["1.2.250.1.213.1.1.5.819"],
+    "sources" : ["1.2.250.1.213.1.1.5.819"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-specimen.html" : "Logical model - FR LM Specimen"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvStatutGrossesseCisis",
+    "title" : "JDV Statut Grossesse CISIS",
+    "description" : "JDV Statut Grossesse CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.671"],
+    "sources" : ["1.2.250.1.213.1.1.5.671"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-pregnancy-status.html" : "Logical model- FR LM Pregnancy Status"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis",
+    "version" : "20260619134043",
+    "status" : "active",
+    "name" : "JdvTypeDirectiveAnticipeeCisis",
+    "title" : "JDV Type Directive Anticipee CISIS",
+    "description" : "JDV Type Directive Anticipee CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://loinc.org",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.136"],
+    "sources" : ["1.2.250.1.213.1.1.5.136"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-advance-directive.html" : "Logical model - FR LM Advance Directive"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis",
+    "version" : "20260619134042",
+    "status" : "active",
+    "name" : "JdvTypeEvenementIndesirablePrevisibleCisis",
+    "title" : "JDV Type Evenement Indesirable Previsible CISIS",
+    "description" : "JDV Type Evenement Indesirable Previsible CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.794"],
+    "sources" : ["1.2.250.1.213.1.1.5.794"],
+    "uses" : {
+    },
+    "StructureDefinition-fr-lm-allergy-intolerance.html" : "Logical model - FR LM Allergy Intolerance"
   }]
 }

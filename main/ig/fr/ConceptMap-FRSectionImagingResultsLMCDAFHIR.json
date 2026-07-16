@@ -1,0 +1,79 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionImagingResultsLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionImagingResultsLMCDAFHIR</b></p><a name=\"FRSectionImagingResultsLMCDAFHIR\"> </a><a name=\"hcFRSectionImagingResultsLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examen-imagerie</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-resultats</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMResultatsExamenImagerie</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMResultats</td></tr><tr><td>FRLMResultatsExamenImagerie.titreSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMResultats.title</td></tr><tr><td>FRLMResultatsExamenImagerie.blocNarratif</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMResultats.text</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-resultats</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRCDADICOMResultats</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:Findings</td></tr><tr><td>FRCDADICOMResultats.title</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:Findings.title</td></tr><tr><td>FRCDADICOMResultats.text</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImagingResultsLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : Résultats d'imagerie",
+  "status" : "draft",
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-examen-imagerie",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-resultats",
+    "element" : [{
+      "code" : "FRLMResultatsExamenImagerie",
+      "target" : [{
+        "code" : "FRCDADICOMResultats",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMResultatsExamenImagerie.titreSection",
+      "target" : [{
+        "code" : "FRCDADICOMResultats.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMResultatsExamenImagerie.blocNarratif",
+      "target" : [{
+        "code" : "FRCDADICOMResultats.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-resultats",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRCDADICOMResultats",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:Findings",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMResultats.title",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:Findings.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRCDADICOMResultats.text",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  }]
+}

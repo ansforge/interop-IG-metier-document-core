@@ -1,0 +1,191 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "mappingResponsableCDAFHIR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts mappingResponsableCDAFHIR</b></p><a name=\"mappingResponsableCDAFHIR\"> </a><a name=\"hcmappingResponsableCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMResponsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator</td><td/></tr><tr><td>FRLMResponsable.dateHeureAttestationPriseResponsabilite</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator.time</td><td/></tr><tr><td>FRLMResponsable.responsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>L'élément responsable est de type PersonneStructure.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>legalAuthenticator</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester</td><td>attester.where(mode='legal')</td></tr><tr><td>legalAuthenticator.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.time</td><td/></tr><tr><td>legalAuthenticator.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole)</td></tr><tr><td>legalAuthenticator.assignedEntity.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.identifier</td><td>attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>legalAuthenticator.assignedEntity.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.name.prefix</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization</td><td>attester.party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.address</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.standardIndustryClassCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.type</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap mappingResponsableCDAFHIR</b></p><a name=\"en-mappingResponsableCDAFHIR\"> </a><a name=\"en-hcmappingResponsableCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMResponsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator</td><td/></tr><tr><td>FRLMResponsable.dateHeureAttestationPriseResponsabilite</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator.time</td><td/></tr><tr><td>FRLMResponsable.responsable</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>L'élément responsable est de type PersonneStructure.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>legalAuthenticator</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester</td><td>attester.where(mode='legal')</td></tr><tr><td>legalAuthenticator.time</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.time</td><td/></tr><tr><td>legalAuthenticator.assignedEntity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole)</td></tr><tr><td>legalAuthenticator.assignedEntity.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.identifier</td><td>attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()</td></tr><tr><td>legalAuthenticator.assignedEntity.code</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.qualification.code</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.address</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.telecom</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.family</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.given</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.name.prefix</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Practitioner.name.suffix</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization</td><td>attester.party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.id</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.identifier</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.name</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.telecom</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.addr</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.address</td><td/></tr><tr><td>legalAuthenticator.assignedEntity.representedOrganization.standardIndustryClassCode</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole.Organization.type</td><td/></tr></table></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingResponsableCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-07-16T15:39:37+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-responsable",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator",
+    "element" : [{
+      "code" : "FRLMResponsable",
+      "target" : [{
+        "code" : "legalAuthenticator",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMResponsable.dateHeureAttestationPriseResponsabilite",
+      "target" : [{
+        "code" : "legalAuthenticator.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMResponsable.responsable",
+      "target" : [{
+        "code" : "legalAuthenticator.assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'élément responsable est de type PersonneStructure."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "legalAuthenticator",
+      "target" : [{
+        "code" : "Composition.attester",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='legal')"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.time",
+      "target" : [{
+        "code" : "Composition.attester.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole",
+        "equivalence" : "equivalent",
+        "comment" : "attester.party.resolve().ofType(PractitionerRole)"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.id",
+      "target" : [{
+        "code" : "Composition.attester.party.Practitioner.identifier",
+        "equivalence" : "equivalent",
+        "comment" : "attester.party.resolve().ofType(PractitionerRole).practitioner.resolve()"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.code",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.qualification.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.addr",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.telecom",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.name",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.name.family",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.name.given",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.name.prefix",
+      "target" : [{
+        "code" : "Composition.attester.party.Practitioner.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.name.suffix",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Practitioner.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization",
+        "equivalence" : "equivalent",
+        "comment" : "attester.party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization.id",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization.name",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization.telecom",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization.addr",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "legalAuthenticator.assignedEntity.representedOrganization.standardIndustryClassCode",
+      "target" : [{
+        "code" : "Composition.attester.party.PractitionerRole.Organization.type",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

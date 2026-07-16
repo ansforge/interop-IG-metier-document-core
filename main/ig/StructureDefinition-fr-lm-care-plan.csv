@@ -1,0 +1,47 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-care-plan","fr-lm-care-plan","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Care Plan","Plan de soins","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-care-plan.header","fr-lm-care-plan.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-care-plan.header.subject","fr-lm-care-plan.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-care-plan.header.identifier","fr-lm-care-plan.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-care-plan.header.author[x]","fr-lm-care-plan.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-care-plan.header.author[x].authorProfessional","fr-lm-care-plan.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-care-plan.header.author[x].authorOrganisation","fr-lm-care-plan.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-care-plan.header.author[x].authorDevice","fr-lm-care-plan.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-care-plan.header.performer[x]","fr-lm-care-plan.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-care-plan.header.participant[x]","fr-lm-care-plan.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-care-plan.header.participant[x].participantProfessional","fr-lm-care-plan.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-care-plan.header.participant[x].participantOrganisation","fr-lm-care-plan.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-care-plan.header.participant[x].participantDevice","fr-lm-care-plan.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-care-plan.header.informant","fr-lm-care-plan.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-care-plan.header.date","fr-lm-care-plan.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-care-plan.header.status","fr-lm-care-plan.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut du plan de soin (projet, actif, suspendu, annulé, terminé, erreur, inconnu)","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-care-plan.header.source","fr-lm-care-plan.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-care-plan.header.language","fr-lm-care-plan.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-care-plan.addresses","fr-lm-care-plan.addresses","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}
+","Problèmes de santé traités par ce plan","Problèmes de santé traités par ce plan","","","","","","","","","",,,,,"",,,,"fr-lm-care-plan.addresses",0,*,"",""
+"fr-lm-care-plan.goal","fr-lm-care-plan.goal","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Résultat souhaité du plan","Résultat souhaité du plan","","","","","","","","","",,,,,"",,,,"fr-lm-care-plan.goal",0,*,"",""
+"fr-lm-care-plan.activity","fr-lm-care-plan.activity","","","",0,*,"","","","Reference {[]} {[]}
+","Action incluse dans ce plan de soins","Action incluse dans ce plan de soins","","","","","","","","","",,,,,"",,,,"fr-lm-care-plan.activity",0,*,"",""

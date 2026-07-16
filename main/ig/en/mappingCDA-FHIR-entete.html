@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Mapping Métier/CDA/FHIR - FR Document Core (Modèle métier) v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3.1"}
+    h3,h4,h5,h6{--heading-prefix:"3.1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">FR Document Core (Modèle métier)</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+
+
+  <img alt="France (la) flag" src="../assets/images/fra.svg" height="16" title="France (la)"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Structure générale document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="introduction.html">Introduction</a>
+      </li>
+      <li>
+        <a href="exigencesSpecifiques.html">Exigences spécifiques</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-struc-gen.html">Mapping CDA / FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Entête document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-fr-lm-header-document.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-entete.html">Mapping Métier/CDA/FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Corps d&apos;un document
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-fr-lm-corps-document.html">Modèle logique métier</a>
+      </li>
+      <li>
+        <a href="mappingCDA-FHIR-corps.html">Mapping Métier/CDA/FHIR</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/document-core/index.html">IG FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/cda/document-core/index.html">IG CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/offres-services/ci-sis/espace-publication">Espace de publication du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/">Serveur Multi-terminologies</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://smt.esante.gouv.fr/fhir">Serveur Multi-terminologies / FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html">IG terminologies et jeux de valeurs du CI-SIS</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/">Espace de tests du CI-SIS</a>
+      </li>
+      <li>
+        <a href="securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/cda/stds/online-navigation/index.html">Standard CDA</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://hl7.org/fhir/R4/index.html">Standard FHIR</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/index.html">Documentation des guides d&apos;implémentation de l&apos;ANS</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../fr/mappingCDA-FHIR-entete.html"><img class="flag" src="assets/images/lang-fr.png" alt="flag fr"/>Français</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='enteteDocument.html'><b>Entête document</b></a></li><li><b>Mapping Métier/CDA/FHIR</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="enteteDocument.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="corpsDocument.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">FR Document Core (Modèle métier) - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/document-core/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Mapping Métier/CDA/FHIR</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#mapping-entre-les-éléments-de-lentête--modèle-métier--cda--fhir" id="markdown-toc-mapping-entre-les-éléments-de-lentête--modèle-métier--cda--fhir">Mapping entre les éléments de l'entête : Modèle métier / CDA / FHIR</a></li>
+</ul>
+
+</div>
+<p>Liste des ConceptMap détaillant le mapping entre les éléments du modèle métier, du CDA et de FHIR.</p>
+
+<h3 id="mapping-entre-les-éléments-de-lentête--modèle-métier--cda--fhir">Mapping entre les éléments de l'entête : Modèle métier / CDA / FHIR</h3>
+
+<!-- Solution 1 -->
+<!-- <table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="ConceptMap-mappingAuteurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Auteur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;Auteur&quot; et l'élément CDA &quot;author&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;author&quot; et l'élément FHIR &quot;Composition.author&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingConsentementCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Consentement&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;ConsentementAssocie&quot; et l'élément CDA &quot;authorization&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;authorization&quot; et l'extension FHIR &quot;ConsentExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingDestinatairePrevuCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Destinataire prévu&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;destinataire&quot; et l'élément CDA &quot;informationRecipient&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;informationRecipient&quot; et l'extension FHIR &quot;InformationRecipientExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingDocumentDeReferenceCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;DocumentDeReference&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;documentDeReference&quot; et l'élément CDA &quot;relatedDocument&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;relatedDocument&quot; et l'élément FHIR &quot;Composition.relatesTo&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingEvenementCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Evènement documenté&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 :entre le modèle métier &quot;evenement&quot; et l'élément CDA &quot;documentationOf&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;documentationOf&quot; et l'élément FHIR &quot;Composition.event&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingInformateurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Informateur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;informateur&quot; et l'élément CDA &quot;informant&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;informant&quot; et l'extension FHIR &quot;InformantExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingOperateurSaisieCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;operateurSaisie&quot; et l'élément CDA &quot;dataEnterer&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;dataEnterer&quot; et l'extension FHIR &quot;DataEntererExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingParticipantCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Participant&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;participant&quot; et l'élément CDA &quot;participant&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;participant&quot; et l'extension FHIR &quot;ParticipantExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPatientCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;patient&quot; et l'élément CDA &quot;recordTarget&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;recordTarget&quot; et le profil FHIR &quot;FrPatientDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;PersonneStructure&quot; et l'élément CDA &quot;assignedEntity&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedEntity&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;PersonneStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMPersonneStructure&quot; et l'élément CDA &quot;relatedEntity&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;relatedEntity&quot; et le profil FHIR &quot;FrRelatedPersonDocument&quot;</li>
+<li>Mapping 3 : entre l'élément CDA &quot;relatedEntity&quot; et l'élément FHIR &quot;Patient.contact&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPrescriptionCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Prescription&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;prescription&quot; et l'élément CDA &quot;inFulfillmentOf&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;inFulfillmentOf&quot; et l'extension FHIR &quot;OrderExtension&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPriseEnchargeCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Prise en charge&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;prise en charge&quot; et l'élément CDA &quot;componentOf&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;componentOf&quot; et l'élément FHIR &quot;Composition.encounter(Encounter)&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingResponsableCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;responsable&quot; et l'élément CDA &quot;legalAuthenticator&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;legalAuthenticator&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingStructureConservationCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;structureConservation&quot; et l'élément CDA &quot;custodian&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;custodian&quot; et l'élément FHIR &quot;Composition.custodian&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingSystemeFHIR.html">Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;</a></td><td><div><p>Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;SystemeStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrDeviceDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingValidateurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Validateur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;validateur&quot; et l'élément CDA &quot;authenticator&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;authenticator&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingmodelemetierCDAFHIR.html">Mapping Métier/CDA/FHIR  : Entête d'un document</a></td><td><div><p>Ce ConceptMap présente trois groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;EnteteDocument&quot; et l'élément CDA &quot;clinicalDocument&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;clinicalDocument&quot; et le profil FHIR &quot;FrBundleDocument&quot;</li>
+<li>Mapping 3 : entre l'élément CDA &quot;clinicalDocument&quot; et le profil FHIR &quot;FrCompositionDocument&quot;</li>
+</ul>
+</div></td></tr></table>
+
+### Éléments de 2ᵉ niveau
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;PersonneStructure&quot; et l'élément CDA &quot;assignedEntity&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedEntity&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;PersonneStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMPersonneStructure&quot; et l'élément CDA &quot;relatedEntity&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;relatedEntity&quot; et le profil FHIR &quot;FrRelatedPersonDocument&quot;</li>
+<li>Mapping 3 : entre l'élément CDA &quot;relatedEntity&quot; et l'élément FHIR &quot;Patient.contact&quot;</li>
+</ul>
+</div></td></tr><tr><td><a href="ConceptMap-mappingSystemeFHIR.html">Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;</a></td><td><div><p>Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping :</p>
+<ul>
+<li>Mapping 1 : entre le modèle métier &quot;SystemeStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
+<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrDeviceDocument&quot;</li>
+</ul>
+</div></td></tr></table>
+ -->
+
+<!--solution 2 -->
+<table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMEnteteDocument</strong></p>
+</div></td><td><div><p><strong>ClinicalDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMEnteteDocument.identifiantUniqueDocument</p>
+</div></td><td><div><p>ClinicalDocument.id</p>
+</div></td><td><div><p>Bundle.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.modeleDocument</p>
+</div></td><td><div><p>ClinicalDocument.templateId</p>
+</div></td><td><div><p>Composition.meta.profile</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.typeDocument</p>
+</div></td><td><div><p>ClinicalDocument.code</p>
+</div></td><td><div><p>Composition.type</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.titreDocument</p>
+</div></td><td><div><p>ClinicalDocument.title</p>
+</div></td><td><div><p>Composition.title</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.dateDeCreationDocument</p>
+</div></td><td><div><p>ClinicalDocument.effectiveTime</p>
+</div></td><td><div><p>Composition.date</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.niveauConfidentialiteDocument</p>
+</div></td><td><div><p>ClinicalDocument.confidentialityCode</p>
+</div></td><td><div><p>Composition.confidentiality</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.languePrincipaleDocument</p>
+</div></td><td><div><p>ClinicalDocument.languageCode</p>
+</div></td><td><div><p>Composition.language</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.identifiantLotDeVersionsDocument</p>
+</div></td><td><div><p>ClinicalDocument.setId</p>
+</div></td><td><div><p>Composition.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.versionDocument</p>
+</div></td><td><div><p>ClinicalDocument.versionNumber</p>
+</div></td><td><div><p>Composition.extension:R5-Composition-version</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.StatutDocument</p>
+</div></td><td><div><p>ClinicalDocument.documentationOf.
+serviceEvent.lab:statusCode</p>
+</div></td><td><div><p>Composition.status</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.patient</p>
+</div></td><td><div><p>ClinicalDocument.recordTarget</p>
+</div></td><td><div><p>Composition.subject</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.auteur</p>
+</div></td><td><div><p>ClinicalDocument.author</p>
+</div></td><td><div><p>Composition.author</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.operateurSaisie</p>
+</div></td><td><div><p>ClinicalDocument.dataEnterer</p>
+</div></td><td><div><p>Composition.extension:data-enterer</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.informateur</p>
+</div></td><td><div><p>ClinicalDocument.informant</p>
+</div></td><td><div><p>Composition.extension:informant</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.structureConservation</p>
+</div></td><td><div><p>ClinicalDocument.custodian</p>
+</div></td><td><div><p>Composition.custodian</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.destinataire</p>
+</div></td><td><div><p>ClinicalDocument.informationRecipient</p>
+</div></td><td><div><p>Composition.extension:informationRecipient</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.responsable</p>
+</div></td><td><div><p>ClinicalDocument.legalAuthenticator</p>
+</div></td><td><div><p>Composition.attester</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.validateur</p>
+</div></td><td><div><p>ClinicalDocument.authenticator</p>
+</div></td><td><div><p>Composition.attester</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.participant</p>
+</div></td><td><div><p>ClinicalDocument.participant</p>
+</div></td><td><div><p>Composition.extension:participant</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.prescription</p>
+</div></td><td><div><p>ClinicalDocument.inFulfillmentOf</p>
+</div></td><td><div><p>Composition.extension:order</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.evenement</p>
+</div></td><td><div><p>ClinicalDocument.documentationOf</p>
+</div></td><td><div><p>Composition.event</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.documentDeReference</p>
+</div></td><td><div><p>ClinicalDocument.relatedDocument</p>
+</div></td><td><div><p>Composition.relatesTo</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.consentementAssocie</p>
+</div></td><td><div><p>ClinicalDocument.authorization</p>
+</div></td><td><div><p>Composition.extension:consent</p>
+</div></td></tr><tr><td><div><p>FRLMEnteteDocument.priseEncharge</p>
+</div></td><td><div><p>ClinicalDocument.componentOf</p>
+</div></td><td><div><p>Composition.encounter</p>
+</div></td></tr><tr><td><div><p><strong>FRLMAuteur</strong></p>
+</div></td><td><div><p><strong>author</strong></p>
+</div></td><td><div><p>Composition.author</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.roleFonctionnel</p>
+</div></td><td><div><p>author.functionCode</p>
+</div></td><td><div><p>Composition.author.PractitionerRole.code</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.horodatageParticipation</p>
+</div></td><td><div><p>author.time</p>
+</div></td><td><div><p>Composition.author.extension:time</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Device</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Patient</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Practitioner</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Device</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Patient</p>
+</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td><div><p>Composition.author.Practitioner</p>
+</div></td></tr><tr><td><div><p><strong>FRLMConsentement</strong></p>
+</div></td><td><div><p><strong>authorization</strong></p>
+</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent</p>
+</div></td></tr><tr><td><div><p>FRLMConsentement.identifiantConsentement</p>
+</div></td><td><div><p>authorization.consent.id</p>
+</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMConsentement.typeConsentement</p>
+</div></td><td><div><p>authorization.consent.code</p>
+</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.category</p>
+</div></td></tr><tr><td><div><p>FRLMConsentement.statutConsentement</p>
+</div></td><td><div><p>authorization.consent.statusCode=&quot;completed&quot;</p>
+</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.status:active</p>
+</div></td></tr><tr><td><div><p><strong>FRLMDestinatairePrevu</strong></p>
+</div></td><td><div><p><strong>informationRecipient</strong></p>
+</div></td><td><div><p><strong>extension:InformationRecipientExtension</strong></p>
+</div></td></tr><tr><td><div><p>FRLMDestinatairePrevu.destinataire</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td><div><p>extension:InformationRecipientExtension.extension:party.PractitionerRole</p>
+</div></td></tr><tr><td><div><p><strong>FRLMDocumentDeReference</strong></p>
+</div></td><td><div><p><strong>relatedDocument</strong></p>
+</div></td><td><div><p>Composition.relatesTo</p>
+</div></td></tr><tr><td><div><p>FRLMDocumentDeReference.typeReference</p>
+</div></td><td><div><p>relatedDocument@typeCode</p>
+</div></td><td><div><p>Composition.relatesTo.code</p>
+</div></td></tr><tr><td><div><p>FRLMDocumentDeReference.identifiantUniqueDocument</p>
+</div></td><td><div><p>relatedDocument.parentDocument.id</p>
+</div></td><td><div><p>Composition.relatesTo.targetIdentifier</p>
+</div></td></tr><tr><td><div><p><strong>FRLMEvenement</strong></p>
+</div></td><td><div><p><strong>documentationOf</strong></p>
+</div></td><td><div><p>Composition.event</p>
+</div></td></tr><tr><td><div><p>FRLMEvenement.identifiantEvenement</p>
+</div></td><td><div><p>documentationOf.serviceEvent.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMEvenement.codeEvenement</p>
+</div></td><td><div><p>documentationOf.serviceEvent.code</p>
+</div></td><td><div><p>Composition.event.code</p>
+</div></td></tr><tr><td><div><p>FRLMEvenement.dateHeureEvenement</p>
+</div></td><td><div><p>documentationOf.serviceEvent.effectiveTime</p>
+</div></td><td><div><p>Composition.event.period</p>
+</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement</p>
+</div></td><td><div><p>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</p>
+</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole</p>
+</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement.roleFonctionnel</p>
+</div></td><td><div><p>documentationOf.serviceEvent.
+performer.functionCode</p>
+</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole.code</p>
+</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement.dateHeureParticipation</p>
+</div></td><td><div><p>documentationOf.serviceEvent.
+performer.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMEvenement.executantEvenement.executant</p>
+</div></td><td><div><p>documentationOf.serviceEvent.
+performer.assignedEntity</p>
+</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole.Practitioner</p>
+</div></td></tr><tr><td><div><p><strong>FRLMInformateur</strong></p>
+</div></td><td><div><p><strong>informant</strong></p>
+</div></td><td><div><p><strong>extension:InformantExtension</strong></p>
+</div></td></tr><tr><td><div><p>FRLMInformateur.informateur</p>
+</div></td><td><div><p>informant.assignedEntity</p>
+</div></td><td><div><p>extension:InformantExtension.extension:party.ValueReference</p>
+</div></td></tr><tr><td><div><p>FRLMInformateur.informateur</p>
+</div></td><td><div><p>informant.relatedEntity</p>
+</div></td><td><div><p>extension:InformantExtension.extension:party.ValueReference</p>
+</div></td></tr><tr><td><div><p><strong>FRLMOperateurSaisie</strong></p>
+</div></td><td><div><p><strong>dataEnterer</strong></p>
+</div></td><td><div><p><strong>DataEntererExtension</strong></p>
+</div></td></tr><tr><td><div><p>FRLMOperateurSaisie.dateSaisie</p>
+</div></td><td><div><p>dataEnterer.time</p>
+</div></td><td><div><p>DataEntererExtension.extension:time</p>
+</div></td></tr><tr><td><div><p>FRLMOperateurSaisie.operateurSaisie</p>
+</div></td><td><div><p>dataEnterer.assignedEntity</p>
+</div></td><td><div><p>DataEntererExtension.extension:party.ValueReference</p>
+</div></td></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
+</div></td><td><div><p><strong>participant</strong></p>
+</div></td><td><div><p><strong>extension:ParticipantExtension</strong></p>
+</div></td></tr><tr><td><div><p>FRLMParticipant.typeParticipation</p>
+</div></td><td><div><p>participant@typeCode</p>
+</div></td><td><div><p>extension:ParticipantExtension.extention:type</p>
+</div></td></tr><tr><td><div><p>FRLMParticipant.roleFonctionnel</p>
+</div></td><td><div><p>participant.functionCode</p>
+</div></td><td><div><p>extension:ParticipantExtension.extention:function.coding</p>
+</div></td></tr><tr><td><div><p>FRLMParticipant.dateDebutEtOuFinParticipation</p>
+</div></td><td><div><p>participant.time</p>
+</div></td><td><div><p>extension:ParticipantExtension.extention:time</p>
+</div></td></tr><tr><td><div><p>FRLMParticipant.participant</p>
+</div></td><td><div><p>participant.associatedEntity</p>
+</div></td><td><div><p>extension:ParticipantExtension.party</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPatientUsager</strong></p>
+</div></td><td><div><p><strong>recordTarget</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatientUsager.identifiantPatient</p>
+</div></td><td><div><p>recordTarget.patientRole.id</p>
+</div></td><td><div><p>Patient.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.adresse</p>
+</div></td><td><div><p>recordTarget.patientRole.addr</p>
+</div></td><td><div><p>Patient.address</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.coordonneesTelecom</p>
+</div></td><td><div><p>recordTarget.patientRole.telecom</p>
+</div></td><td><div><p>Patient.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.nomsPrenomsPatient</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name</p>
+</div></td><td><div><p>Patient.name</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.nom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.family</p>
+</div></td><td><div><p>Patient.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.nom.nomNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.family@qualifier='BR'</p>
+</div></td><td><div><p>Patient.name:officialname.family</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.nom.nomUtilise</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.family@qualifier='CL'</p>
+</div></td><td><div><p>Patient.name:usualname.family</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given</p>
+</div></td><td><div><p>Patient.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given</p>
+</div></td><td><div><p>Patient.name:officialname.birth-list-given-name</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom.listePrenoms</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given</p>
+</div></td><td><div><p>Patient.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom.listePrenoms</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given</p>
+</div></td><td><div><p>Patient.name:officialname.birth-list-given-name</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom.premierPrenom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given@qualifier='BR'</p>
+</div></td><td><div><p>Patient.name:officialname.given</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+nomsPrenomsPatient.prenom.prenomUtilise</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.name.given@qualifier='CL'</p>
+</div></td><td><div><p>Patient.name:usualname.given</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.sexe</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.administrativeGenderCode</p>
+</div></td><td><div><p>Patient.gender</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.dateNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.birthTime</p>
+</div></td><td><div><p>Patient.birthDate</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.indicateurDeces</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.sdtc:deceasedInd</p>
+</div></td><td><div><p>Patient.deceasedBoolean</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.dateDeces</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.sdtc:deceasedTime</p>
+</div></td><td><div><p>Patient.deceasedDateTime</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.grossesseMultiple</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.sdtc:multipleBirthInd</p>
+</div></td><td><div><p>Patient.multipleBirthBoolean</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.numeroOrdreNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.sdtc:multipleBirthOrderNumber</p>
+</div></td><td><div><p>Patient.multipleBirthInteger</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.representantPatient</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian</p>
+</div></td><td><div><p>Patient.contact.relationship:Role='GUARD'</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.adresse</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.addr</p>
+</div></td><td><div><p>Patient.contact.address</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.coordonneesTelecom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.telecom</p>
+</div></td><td><div><p>Patient.contact.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.name</p>
+</div></td><td><div><p>Patient.contact.name</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.family</p>
+</div></td><td><div><p>Patient.contact.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.given</p>
+</div></td><td><div><p>Patient.contact.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.structureRepresentantPatient</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianOrganization</p>
+</div></td><td><div><p>Patient.contact.organization</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.structureRepresentantPatient.identifiant</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianOrganization.id</p>
+</div></td><td><div><p>Patient.contact.organization.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+representantPatient.structureRepresentantPatient.nom</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianOrganization.name</p>
+</div></td><td><div><p>Patient.contact.organization.name</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.lieuNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.birthPlace</p>
+</div></td><td><div><p>Patient.extension:birthPlace</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+lieuNaissance.nomLieuNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.birthPlace.place.name</p>
+</div></td><td><div><p>Patient.extension:birthPlace.value[FRCoreAddressProfile].text</p>
+</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+lieuNaissance.adresseLieuNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.birthPlace.place.addr</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
+lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.birthPlace.place.addr.county</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
+</div></td><td><div><p><strong>assignedEntity</strong></p>
+</div></td><td><div><p><strong>PractitionerRole</strong></p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.identifiantPersonne</p>
+</div></td><td><div><p>assignedEntity.id</p>
+</div></td><td><div><p>PractitionerRole.practitioner.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
+</div></td><td><div><p>assignedEntity.code</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.qualification.code</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
+</div></td><td><div><p>assignedEntity.addr</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
+</div></td><td><div><p>assignedEntity.telecom</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.IdentitePersonne</p>
+</div></td><td><div><p>assignedEntity.assignedPerson</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.nomPersonne</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.family</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.prenomPersonne</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.given</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.civilite</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.prefix</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.prefix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.titre</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.suffix</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.suffix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure</p>
+</div></td><td><div><p>assignedEntity.representedOrganization</p>
+</div></td><td><div><p>PractitionerRole.Organization</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.identifiantStructure</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.id</p>
+</div></td><td><div><p>PractitionerRole.Organization.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.nomStructure</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.name</p>
+</div></td><td><div><p>PractitionerRole.Organization.name</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.adresse</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.addr</p>
+</div></td><td><div><p>PractitionerRole.Organization.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.coordonneesTelecom</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.telecom</p>
+</div></td><td><div><p>PractitionerRole.Organization.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.secteurActivite</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.standardIndustryClassCode</p>
+</div></td><td><div><p>PractitionerRole.Organization.type</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructureAuteur</strong></p>
+</div></td><td><div><p><strong>assignedAuthor</strong></p>
+</div></td><td><div><p>PractitionerRole.Practitioner</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.identifiantPersonne</p>
+</div></td><td><div><p>assignedAuthor.id</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.professionRole</p>
+</div></td><td><div><p>assignedAuthor.code</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.qualification.code</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.adresse</p>
+</div></td><td><div><p>assignedAuthor.addr</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.coordonneesTelecom</p>
+</div></td><td><div><p>assignedAuthor.telecom</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.IdentitePersonne</p>
+</div></td><td><div><p>assignedAuthor.assignedPerson</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
+IdentitePersonne.nomPersonne</p>
+</div></td><td><div><p>assignedAuthor.assignedPerson.
+name.family</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
+IdentitePersonne.prenomPersonne</p>
+</div></td><td><div><p>assignedAuthor.assignedPerson.
+name.given</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
+IdentitePersonne.civilite</p>
+</div></td><td><div><p>assignedAuthor.assignedPerson.
+name.prefix</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.prefix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
+IdentitePersonne.titre</p>
+</div></td><td><div><p>assignedAuthor.assignedPerson.
+name.suffix</p>
+</div></td><td><div><p>PractitionerRole.Practitioner.name.suffix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization</p>
+</div></td><td><div><p>PractitionerRole.Organization</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.identifiantStructure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.id</p>
+</div></td><td><div><p>PractitionerRole.Organization.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.nomStructure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.name</p>
+</div></td><td><div><p>PractitionerRole.Organization.name</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.adresse</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.addr</p>
+</div></td><td><div><p>PractitionerRole.Organization.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.coordonneesTelecom</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.telecom</p>
+</div></td><td><div><p>PractitionerRole.Organization.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.secteurActivite</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.standardIndustryClassCode</p>
+</div></td><td><div><p>PractitionerRole.Organization.type</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
+</div></td><td><div><p><strong>relatedEntity</strong></p>
+</div></td><td><div><p>Patient.contact</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
+</div></td><td><div><p><strong>relatedEntity</strong></p>
+</div></td><td><div><p><strong>RelatedPerson</strong></p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
+</div></td><td><div><p>relatedEntity@classCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
+</div></td><td><div><p>relatedEntity@classCode</p>
+</div></td><td><div><p>Patient.contact.relationship:Role</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.lien</p>
+</div></td><td><div><p>relatedEntity.code</p>
+</div></td><td><div><p>Patient.contact.relationship:RelationType.coding</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.lien</p>
+</div></td><td><div><p>relatedEntity.code</p>
+</div></td><td><div><p>RelatedPerson.relationship.coding</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
+</div></td><td><div><p>relatedEntity.addr</p>
+</div></td><td><div><p>Patient.contact.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
+</div></td><td><div><p>relatedEntity.addr</p>
+</div></td><td><div><p>RelatedPerson.address</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
+</div></td><td><div><p>relatedEntity.telecom</p>
+</div></td><td><div><p>Patient.contact.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
+</div></td><td><div><p>relatedEntity.telecom</p>
+</div></td><td><div><p>RelatedPerson.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.IdentitePersonne</p>
+</div></td><td><div><p>relatedEntity.relatedPerson</p>
+</div></td><td><div><p>RelatedPerson.name</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.nomPersonne</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.family</p>
+</div></td><td><div><p>Patient.contact.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.nomPersonne</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.family</p>
+</div></td><td><div><p>RelatedPerson.name.family</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.prenomPersonne</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.given</p>
+</div></td><td><div><p>Patient.contact.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.prenomPersonne</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.given</p>
+</div></td><td><div><p>RelatedPerson.name.given</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.civilite</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.prefix</p>
+</div></td><td><div><p>Patient.contact.name.prefix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.civilite</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.prefix</p>
+</div></td><td><div><p>RelatedPerson.name.prefix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.titre</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.suffix</p>
+</div></td><td><div><p>Patient.contact.name.suffix</p>
+</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
+IdentitePersonne.titre</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.suffix</p>
+</div></td><td><div><p>RelatedPerson.name.suffix</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPrescription</strong></p>
+</div></td><td><div><p><strong>inFulfillmentOf</strong></p>
+</div></td><td><div><p><strong>extension:basedOn</strong></p>
+</div></td></tr><tr><td><div><p>FRLMPrescription.identifiantPrescription</p>
+</div></td><td><div><p>inFulfillmentOf.order.id</p>
+</div></td><td><div><p>extension:basedOnExtension.ValueReference.ServiceRequest.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPrescription.accessionNumber</p>
+</div></td><td><div><p>inFulfillmentOf.order.ps3-20:accessionNumber</p>
+</div></td><td><div><p>extension:basedOn.ValueReference.ServiceRequest.identifier</p>
+</div></td></tr><tr><td><div><p><strong>FRLMPriseEncharge</strong></p>
+</div></td><td><div><p><strong>componentOf</strong></p>
+</div></td><td><div><p>Composition.encounter.Encounter</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.identifiantPriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.id</p>
+</div></td><td><div><p>Encounter.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.typePriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.code</p>
+</div></td><td><div><p>Encounter.type</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.dateDebutFinPriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.effectiveTime</p>
+</div></td><td><div><p>Encounter.period</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.typeSortie</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.dischargeDispositionCode</p>
+</div></td><td><div><p>Encounter.hospitalization.dischargeDisposition</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.responsablePriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+responsibleParty.assignedEntity</p>
+</div></td><td><div><p>Encounter.participant.type=&quot;DIS&quot;.individual</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.encounterParticipant</p>
+</div></td><td><div><p>Encounter.participant</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.encounterParticipant@typeCode</p>
+</div></td><td><div><p>Encounter.participant.type</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+encounterParticipant.time</p>
+</div></td><td><div><p>Encounter.participant.period</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+encounterParticipant.assignedEntity</p>
+</div></td><td><div><p>Encounter.participant.individual</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.location</p>
+</div></td><td><div><p>Encounter.location</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.structure</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+location.healthcareFacility</p>
+</div></td><td><div><p>Encounter.location.Location</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
+structure.secteurActivite</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+location.healthcareFacility.code</p>
+</div></td><td><div><p>Encounter.location.Location.type</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
+structure.secteurActivite.categorieEtablissement</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+location.healthcareFacility.code.translation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
+structure.nomStructure</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+location.healthcareFacility.location.name</p>
+</div></td><td><div><p>Encounter.location.Location.name</p>
+</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
+structure.adresse</p>
+</div></td><td><div><p>componentOf.encompassingEncounter.
+location.healthcareFacility.location.addr</p>
+</div></td><td><div><p>Encounter.location.Location.address</p>
+</div></td></tr><tr><td><div><p><strong>FRLMResponsable</strong></p>
+</div></td><td><div><p><strong>legalAuthenticator</strong></p>
+</div></td><td><div><p>Composition.attester</p>
+</div></td></tr><tr><td><div><p>FRLMResponsable.dateHeureAttestationPriseResponsabilite</p>
+</div></td><td><div><p>legalAuthenticator.time</p>
+</div></td><td><div><p>Composition.attester.time</p>
+</div></td></tr><tr><td><div><p>FRLMResponsable.responsable</p>
+</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party.PractitionerRole</p>
+</div></td></tr><tr><td><div><p><strong>FRLMStructureConservation</strong></p>
+</div></td><td><div><p><strong>custodian</strong></p>
+</div></td><td><div><p>Composition.custodian</p>
+</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure</p>
+</div></td><td><div><p>custodian.assignedCustodian</p>
+</div></td><td><div><p>Composition.custodian.organization</p>
+</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.identifiantStructure</p>
+</div></td><td><div><p>custodian.assignedCustodian.
+representedCustodianOrganization.id</p>
+</div></td><td><div><p>Composition.custodian.organization.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.nomStructure</p>
+</div></td><td><div><p>custodian.assignedCustodian.
+representedCustodianOrganization.name</p>
+</div></td><td><div><p>Composition.custodian.organization.name</p>
+</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.adresse</p>
+</div></td><td><div><p>custodian.assignedCustodian.
+representedCustodianOrganization.addr</p>
+</div></td><td><div><p>Composition.custodian.organization.address</p>
+</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.coordonneesTelecom</p>
+</div></td><td><div><p>custodian.assignedCustodian.
+representedCustodianOrganization.telecom</p>
+</div></td><td><div><p>Composition.custodian.organization.telecom</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur</p>
+</div></td><td><div><p><strong>assignedAuthor</strong></p>
+</div></td><td><div><p><strong>Device</strong></p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.identifiantAuteur</p>
+</div></td><td><div><p>assignedAuthor.id</p>
+</div></td><td><div><p>Device.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.professionSavoirFaireRole</p>
+</div></td><td><div><p>assignedAuthor.code</p>
+</div></td><td><div><p>Device.type</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.systeme</p>
+</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+systeme.nomModeleSysteme</p>
+</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice.manufacturerModelName</p>
+</div></td><td><div><p>Device.deviceName.name</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+systeme.nomSysteme</p>
+</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice.softwareName</p>
+</div></td><td><div><p>Device.deviceName.type</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.structure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization</p>
+</div></td><td><div><p>Device.owner.organization</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+structure.identifiantStructure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.id</p>
+</div></td><td><div><p>Device.owner.organization.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+structure.nomStructure</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.name</p>
+</div></td><td><div><p>Device.owner.organization.name</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+structure.adresse</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.addr</p>
+</div></td><td><div><p>Device.owner.organization.address</p>
+</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
+structure.coordonneesTelecom</p>
+</div></td><td><div><p>assignedAuthor.representedOrganization.telecom</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMValidateur</strong></p>
+</div></td><td><div><p><strong>authenticator</strong></p>
+</div></td><td><div><p>Composition.attester</p>
+</div></td></tr><tr><td><div><p>FRLMValidateur.dateHeureAttestationValidite</p>
+</div></td><td><div><p>authenticator.time</p>
+</div></td><td><div><p>Composition.attester.time</p>
+</div></td></tr><tr><td><div><p>FRLMValidateur.validateur</p>
+</div></td><td><div><p>authenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party.PractitionerRole</p>
+</div></td></tr></table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="enteteDocument.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="corpsDocument.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
+          Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-16 15:39:00 +0000">
+    2026-07-16
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/document-core/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+

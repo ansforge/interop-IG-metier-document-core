@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="mappingAuteurCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts mappingAuteurCDAFHIR</b></p><a name="mappingAuteurCDAFHIR"> </a><a name="hcmappingAuteurCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMAuteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author</td><td/></tr><tr><td>FRLMAuteur.roleFonctionnel</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.functionCode</td><td/></tr><tr><td>FRLMAuteur.horodatageParticipation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.time</td><td/></tr><tr><td>FRLMAuteur.FRLMPersonneStructure</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'élément PersonneStructure est de type PersonneStructure.</td></tr><tr><td>FRLMAuteur.FRLMSystemeStructureAuteur</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'élément SystemeStructureAuteur est de type Systeme</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>author</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author</td><td/></tr><tr><td>author.time</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.extension:time</td><td/></tr><tr><td>author.functionCode</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.PractitionerRole.code</td><td>Auteur du document est un professionnel et author.ofType(PractitionerRole)</td></tr><tr><td>author.assignedAuthor</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Practitioner</td><td>Composition.author.resolve().ofType(Practitioner)</td></tr><tr><td>author.assignedAuthor</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Patient</td><td>Composition.author.resolve().ofType(Patient)</td></tr><tr><td>author.assignedAuthor</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Device</td><td>Composition.author.resolve().ofType(Device)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingAuteurCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="Mapping Métier/CDA/FHIR : &quot;Auteur&quot;"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Auteur&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-07-16T15:39:37+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;Auteur\&quot; et l'élément CDA \&quot;author\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;author\&quot; et l'élément FHIR \&quot;Composition.author\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-auteur"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author"/>
+    <element>
+      <code value="FRLMAuteur"/>
+      <target>
+        <code value="author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAuteur.roleFonctionnel"/>
+      <target>
+        <code value="author.functionCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAuteur.horodatageParticipation"/>
+      <target>
+        <code value="author.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAuteur.FRLMPersonneStructure"/>
+      <target>
+        <code value="author.assignedAuthor"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément PersonneStructure est de type PersonneStructure."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAuteur.FRLMSystemeStructureAuteur"/>
+      <target>
+        <code value="author.assignedAuthor"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'élément SystemeStructureAuteur est de type Systeme"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="author"/>
+      <target>
+        <code value="Composition.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="author.time"/>
+      <target>
+        <code value="Composition.author.extension:time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="author.functionCode"/>
+      <target>
+        <code value="Composition.author.PractitionerRole.code"/>
+        <equivalence value="equivalent"/>
+        <comment value="Auteur du document est un professionnel et author.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="author.assignedAuthor"/>
+      <target>
+        <code value="Composition.author.Practitioner"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(Practitioner)"/>
+      </target>
+    </element>
+    <element>
+      <code value="author.assignedAuthor"/>
+      <target>
+        <code value="Composition.author.Patient"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(Patient)"/>
+      </target>
+    </element>
+    <element>
+      <code value="author.assignedAuthor"/>
+      <target>
+        <code value="Composition.author.Device"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(Device)"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
