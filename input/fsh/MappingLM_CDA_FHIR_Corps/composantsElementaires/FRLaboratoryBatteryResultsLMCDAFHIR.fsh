@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMBatterieExamensBiolo
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMBatterieExamensBiologieMedicale"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale"
 // Élément racine
 * group[=].element[+].code = #FRLMBatterieExamensBiologieMedicale

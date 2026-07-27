@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMTransfusionDeProduit
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA (sous-entrée)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-transfusion-de-produits-sanguins"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMTransfusionDeProduitsSanguins"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-transfusion-de-produits-sanguins"
 
 // élément racine

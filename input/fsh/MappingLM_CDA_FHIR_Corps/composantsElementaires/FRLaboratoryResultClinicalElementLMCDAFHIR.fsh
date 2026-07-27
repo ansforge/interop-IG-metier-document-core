@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMResultatExamensBiolo
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent"
 // Élément racine
 * group[=].element[+].code = #FRLMResultatExamensBiologieElementCliniquePertinent

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMTechniqueImagerie ve
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMTechniqueImagerie"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie"
 // Élément racine
 * group[=].element[+].code = #FRLMTechniqueImagerie
