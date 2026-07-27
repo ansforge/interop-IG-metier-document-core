@@ -1,5 +1,5 @@
 Logical: FRLMAttachments 
-Id: fr-lm-attachments
+Id: FRLMAttachments
 Parent: FRLMSection
 Title: "Logical model - FR LM Attachments"
 Description: """Section Documents ajoutés"""

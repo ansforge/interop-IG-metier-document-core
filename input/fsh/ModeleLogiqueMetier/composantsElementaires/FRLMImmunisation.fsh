@@ -1,5 +1,5 @@
 Logical: FRLMImmunisation
-Id: fr-lm-immunisation
+Id: FRLMImmunisation
 Parent: FRLMEntry
 Title: "Logical model - FR LM Immunisation"
 Description: """Vaccination"""

@@ -1,5 +1,5 @@
 Logical: FRLMMedicationDispense
-Id: fr-lm-medication-dispense
+Id: FRLMMedicationDispense
 Parent: FRLMEntry
 Title: "Logical model - FR LM Medication Dispense"
 Description: """Traitement dispense"""

@@ -1,5 +1,5 @@
 Logical: FRLMSeries
-Id: fr-lm-series
+Id: FRLMSeries
 Parent: FRLMEntry
 Title: "Logical model - FR LM Series"
 Description: """Séries d'actes d'imagerie"""

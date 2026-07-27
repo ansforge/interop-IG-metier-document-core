@@ -1,5 +1,5 @@
 Logical: FRLMPatientHistory
-Id: fr-lm-patient-history
+Id: FRLMPatientHistory
 Parent: FRLMSection
 Title: "Logical model  - FR LM Patient History"
 Description: """Section Historique du patient"""

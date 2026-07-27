@@ -1,5 +1,5 @@
 Logical: FRLMCorpsDocument		
-Id: fr-lm-corps-document					
+Id: FRLMCorpsDocument					
 Title: "Logical model - FR LM Corps document"				
 Description: "Eléments métier du corps d'un document contenant les sections du document."	
 

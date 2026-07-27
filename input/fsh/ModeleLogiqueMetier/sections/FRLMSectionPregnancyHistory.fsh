@@ -1,5 +1,5 @@
 Logical: FRLMSectionPregnancyHistory
-Id: fr-lm-section-pregnancy-history
+Id: FRLMSectionPregnancyHistory
 Parent: FRLMSection
 Title: "Logical model  - FR LM Pregnancy History"
 Description: """Section Historique des grossesses"""

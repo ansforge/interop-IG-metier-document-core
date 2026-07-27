@@ -1,5 +1,5 @@
 Logical: FRLMLocation
-Id: fr-lm-location
+Id: FRLMLocation
 Title: "Logical model - FR LM Location"
 Description: """Lieu"""
 Characteristics: #can-be-target

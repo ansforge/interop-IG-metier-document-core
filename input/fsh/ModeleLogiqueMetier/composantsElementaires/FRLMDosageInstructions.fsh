@@ -1,5 +1,5 @@
 Logical: FRLMDosageInstructions
-Id: fr-lm-dosageInstructions
+Id: FRLMDosageInstructions
 Title: "Logical model- FR LM Dosage Instructions"
 Description: """Posologie"""
 Characteristics: #can-be-target

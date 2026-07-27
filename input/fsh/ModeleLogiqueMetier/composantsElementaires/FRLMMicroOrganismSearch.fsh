@@ -1,5 +1,5 @@
 Logical: FRLMMicroOrganismSearch
-Id: fr-lm-micro-organism-search
+Id: FRLMMicroOrganismSearch
 Parent: FRLMEntry
 Title: "Logical model - FR LM Micro Organism Search"
 Description: """Recherche de micro organismes"""

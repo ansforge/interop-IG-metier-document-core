@@ -1,5 +1,5 @@
 Logical: FRLMDeviceUse
-Id: fr-lm-device-use
+Id: FRLMDeviceUse
 Parent: FRLMEntry
 Title: "Logical model - FR LM Device use"
 Description: """Dispositif médical usage"""

@@ -1,5 +1,5 @@
 Logical: FRLMQuantityExposure
-Id: fr-lm-quantity-exposure
+Id: FRLMQuantityExposure
 Parent: FRLMEntry
 Title: "Logical model - FR LM Quantity Exposure"
 Description: """Quantité exposition"""

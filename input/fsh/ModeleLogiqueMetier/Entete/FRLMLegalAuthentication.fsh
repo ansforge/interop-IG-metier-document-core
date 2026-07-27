@@ -1,5 +1,5 @@
 Logical: FRLMLegalAuthentication	
-Id: fr-lm-legal-authentication
+Id: FRLMLegalAuthentication
 Title: "Logical model - FR LM Legal Authentication"	
 Description: "Représente le responsable du document, qui est : 
  - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. 

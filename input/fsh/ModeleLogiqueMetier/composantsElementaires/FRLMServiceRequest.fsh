@@ -1,5 +1,5 @@
 Logical: FRLMServiceRequest
-Id: fr-lm-service-request
+Id: FRLMServiceRequest
 Parent: FRLMEntry
 Title: "Logical model - FR LM Service Request"
 Description: """Demande d'examen ou de suivi / Objectif à atteindre"""

@@ -1,5 +1,5 @@
 Logical: FRLMCourseOfEncounter
-Id: fr-lm-course-of-encounter
+Id: FRLMCourseOfEncounter
 Parent: FRLMSection
 Title: "Logical model - FR LM Course of encounter"
 Description: """Section Résultats d'événements"""

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMAddendum vers la sec
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-addendum"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/FRLMAddendum"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-addendum"
 // Élément racine
 * group[=].element[+].code = #FRLMAddendum

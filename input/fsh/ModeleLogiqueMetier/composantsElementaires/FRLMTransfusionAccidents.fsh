@@ -1,5 +1,5 @@
 Logical: FRLMTransfusionAccidents
-Id: fr-lm-transfusion-accidents
+Id: FRLMTransfusionAccidents
 Parent: FRLMEntry
 Title: "Logical model - FR LM Transfusion accidents"
 Description: """Accidents transfusionnels"""

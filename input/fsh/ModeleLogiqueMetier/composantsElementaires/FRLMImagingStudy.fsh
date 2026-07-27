@@ -1,5 +1,5 @@
 Logical: FRLMImagingStudy
-Id: fr-lm-imaging-study
+Id: FRLMImagingStudy
 Parent: FRLMEntry
 Title: "Logical model - FR LM Imaging Study"
 Description: """DICOM Examen Imagerie"""
