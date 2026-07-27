@@ -1,5 +1,5 @@
 Logical: FRLMOrder	
-Id: fr-lm-order	
+Id: FRLMOrder	
 Title: "Logical model - FR LM Order"	
 Description: "Association to an order that is the origin of the act resulting in the document." 	
 Characteristics: #can-be-target	

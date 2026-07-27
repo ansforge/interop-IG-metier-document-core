@@ -1,5 +1,5 @@
 Logical: FRLMObservation
-Id: fr-lm-observation
+Id: FRLMObservation
 Parent: FRLMEntry
 Title: "Logical model - FR LM Observation"
 Description: """Résultat d'une observation réalisée sur le patient ou un dispositif médical."""

@@ -1,5 +1,5 @@
 Logical: FRLMPrescriptionItem
-Id: fr-lm-prescription-item
+Id: FRLMPrescriptionItem
 Parent: FRLMEntry
 Title: "Logical model - FR LM Medication Prescription"
 Description: """Traitement prescrit"""

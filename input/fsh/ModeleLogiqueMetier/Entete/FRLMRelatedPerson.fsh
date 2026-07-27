@@ -1,5 +1,5 @@
 Logical: FRLMRelatedPerson
-Id: fr-lm-related-person
+Id: FRLMRelatedPerson
 Parent: Base
 Title: "Logical model - FR LM Related Person"
 Description: "Related Person"

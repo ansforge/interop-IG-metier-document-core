@@ -1,5 +1,5 @@
 Logical: FRLMComparisonStudy
-Id: fr-lm-comparison-study
+Id: FRLMComparisonStudy
 Parent: FRLMSection
 Title: "Logical model - FR LM Comparison Study"
 Description: """Section Comparaison d'examens d'imagerie"""

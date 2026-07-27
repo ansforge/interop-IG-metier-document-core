@@ -1,5 +1,5 @@
 Logical: FRLMCarePlans
-Id: fr-lm-care-plans
+Id: FRLMCarePlans
 Parent: FRLMSection
 Title: "Logical model - FR LM CarePlans"
 Description: """Section Plan de soins"""

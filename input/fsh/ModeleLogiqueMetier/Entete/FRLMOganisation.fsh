@@ -1,5 +1,5 @@
 Logical: FRLMOrganisation		
-Id: fr-lm-organisation
+Id: FRLMOrganisation
 Title: "Logical model - FR LM Organisation"			
 Description: "Une structure (organisation) pour les professionnels de santé." 
 * . 1..1

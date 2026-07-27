@@ -1,5 +1,5 @@
 Logical: FRLMVitalSigns
-Id: fr-lm-vital-signs
+Id: FRLMVitalSigns
 Parent: FRLMSection
 Title: "Logical model - FR LM Vital Signs"
 Description: """Section Signes vitaux"""

@@ -1,5 +1,5 @@
 Logical: FRLMObservationSocialHistory
-Id: fr-lm-observation-social-history
+Id: FRLMObservationSocialHistory
 Parent: FRLMEntry
 Title: "Logical model- FR LM Observation Social History"
 Description: """Habitus Mode de vie"""

@@ -1,5 +1,5 @@
 Logical: FRLMExposureInformation
-Id: fr-lm-exposure-information
+Id: FRLMExposureInformation
 Parent: FRLMSection
 Title: "Logical model - FR LM Exposure Information"
 Description: """Section Exposition aux radiations"""

@@ -1,5 +1,5 @@
 Logical: FRLMReasonForReferral
-Id: fr-lm-reason-for-referral
+Id: FRLMReasonForReferral
 Parent: FRLMSection
 Title: "Logical model - FR LM Reason for referral"
 Description: """Section Raison de la recommandation"""

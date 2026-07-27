@@ -1,5 +1,5 @@
 Logical: FRLMMedicationDispensations
-Id: fr-lm-medication-dispensations
+Id: FRLMMedicationDispensations
 Parent: FRLMSection
 Title: "Logical model - FR LM Medication Dispensations"
 Description: """Section Dispensation médicaments"""

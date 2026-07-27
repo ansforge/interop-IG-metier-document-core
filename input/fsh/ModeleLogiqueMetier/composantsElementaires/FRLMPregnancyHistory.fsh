@@ -1,5 +1,5 @@
 Logical: FRLMPregnancyHistory
-Id: fr-lm-pregnancy-history
+Id: FRLMPregnancyHistory
 Parent: FRLMEntry
 Title: "Logical model- FR LM Pregnancy History"
 Description: """Historique de la grossesse"""

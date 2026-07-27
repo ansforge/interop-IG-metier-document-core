@@ -1,5 +1,5 @@
 Logical: FRLMDICOMMedicationAdministration
-Id: fr-lm-dicom-medication-administration
+Id: FRLMDICOMMedicationAdministration
 Parent: FRLMEntry
 Title: "Logical model - FR LM DICOM Medication Administration"
 Description: """Administration de produit de santé dans le contexte de l'imagerie médicale"""

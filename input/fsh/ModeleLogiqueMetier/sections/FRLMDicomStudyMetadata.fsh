@@ -1,5 +1,5 @@
 Logical: FRLMDicomStudyMetadata
-Id: fr-lm-dicom-study-metadata
+Id: FRLMDicomStudyMetadata
 Parent: FRLMSection
 Title: "Logical model - FR LM DICOM Study Metadata"
 Description: """Section Object Catalog"""

@@ -1,5 +1,5 @@
 Logical: FRLMDoseNumber
-Id: fr-lm-dose-number
+Id: FRLMDoseNumber
 Title: "Logical model - FR LM Dose Number"
 Description: """Rang de la vaccination"""
 Characteristics: #can-be-target

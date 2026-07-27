@@ -1,5 +1,5 @@
 Logical: FRLMCarePlan
-Id: fr-lm-care-plan
+Id: FRLMCarePlan
 Parent: FRLMEntry
 Title: "Logical model - FR LM Care Plan"
 Description: """Plan de soins"""

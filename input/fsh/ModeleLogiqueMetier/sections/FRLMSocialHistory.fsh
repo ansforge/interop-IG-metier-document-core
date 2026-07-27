@@ -1,5 +1,5 @@
 Logical: FRLMSocialHistory
-Id: fr-lm-social-history
+Id: FRLMSocialHistory
 Parent: FRLMSection
 Title: "Logical model - FR LM SocialHistory"
 Description: """Section Habitus et modes de vie"""

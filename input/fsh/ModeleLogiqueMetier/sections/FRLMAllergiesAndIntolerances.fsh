@@ -1,5 +1,5 @@
 Logical: FRLMAllergiesAndIntolerances
-Id: fr-lm-allergies-and-intolerances
+Id: FRLMAllergiesAndIntolerances
 Parent : FRLMSection
 Title: "Logical model - FR LM Allergies And Intolerances"
 Description: """Section Allergies et hypersensibilités"""

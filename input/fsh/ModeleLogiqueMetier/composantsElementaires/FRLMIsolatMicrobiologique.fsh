@@ -1,6 +1,6 @@
 // En attente de validation par APE concernant la création d’un modèle logique unique ObservationLab, ainsi que le choix du parent : FRLMEntry ou un FRLMObservationLab commun.
 Logical: FRLMIsolatMicrobiologique
-Id: fr-lm-isolat-microbiologique
+Id: FRLMIsolatMicrobiologique
 Parent: FRLMEntry
 Title: "Modèle logique métier - FR LM Isolat microbiologique"
 Description: """Isolat microbiologique"""

@@ -1,5 +1,5 @@
 Logical: FRLMAdverseDrugReaction
-Id: fr-lm-adverse-drug-reaction
+Id: FRLMAdverseDrugReaction
 Parent: FRLMEntry
 Title: "Modèle logique métier - FR LM Adverse Drug Reaction"
 Description: """Effet indésirable médicamenteux"""

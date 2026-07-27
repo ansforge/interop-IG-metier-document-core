@@ -1,5 +1,5 @@
 Logical: FRLMSpecimen
-Id: fr-lm-specimen
+Id: FRLMSpecimen
 Parent: FRLMEntry
 Title: "Logical model - FR LM Specimen"
 Description: """Prélèvement"""

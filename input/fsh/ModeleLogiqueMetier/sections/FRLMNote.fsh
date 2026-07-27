@@ -1,5 +1,5 @@
 Logical: FRLMNote 
-Id: fr-lm-note
+Id: FRLMNote
 Parent: FRLMSection
 Title: "Logical model - FR LM Note"
 Description: """Section Commentaire (non-codé)"""

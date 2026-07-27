@@ -1,5 +1,5 @@
 Logical: FRLMEncounterInformation
-Id: fr-lm-encounter-information
+Id: FRLMEncounterInformation
 Parent: FRLMSection
 Title: "Logical model - FR LM Encounter Information"
 Description: """Section Informations sur la rencontre"""

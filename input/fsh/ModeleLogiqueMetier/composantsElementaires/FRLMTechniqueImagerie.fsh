@@ -1,5 +1,5 @@
 Logical: FRLMTechniqueImagerie
-Id: fr-lm-technique-imagerie
+Id: FRLMTechniqueImagerie
 Parent: FRLMEntry
 Title: "Logical model- FR LM Technique imagerie"
 Description: """Entrée Technique imagerie"""

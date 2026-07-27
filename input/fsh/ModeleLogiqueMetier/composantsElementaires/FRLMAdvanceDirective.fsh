@@ -1,5 +1,5 @@
 Logical: FRLMAdvanceDirective
-Id: fr-lm-advance-directive
+Id: FRLMAdvanceDirective
 Parent: FRLMEntry
 Title: "Logical model - FR LM Advance Directive"
 Description: """Directive anticipée"""

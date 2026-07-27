@@ -1,5 +1,5 @@
 Logical: FRLMRecommendation
-Id: fr-lm-recommendation
+Id: FRLMRecommendation
 Parent: FRLMSection
 Title: "Logical model - FR LM Recommendation"
 Description: """Section Recommandation"""

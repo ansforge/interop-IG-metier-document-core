@@ -1,5 +1,5 @@
 Logical: FRLMConsent
-Id: fr-lm-consent
+Id: FRLMConsent
 Title: "Logical model - FR LM Consent"			
 Description: "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni." 	
 Characteristics: #can-be-target	
