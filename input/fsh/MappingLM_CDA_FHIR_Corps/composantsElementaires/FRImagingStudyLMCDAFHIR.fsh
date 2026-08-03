@@ -1,73 +1,116 @@
 Instance: FRImagingStudyLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument"
-Description: "Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."
+Title: "Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument"
+Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."
 * title = "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examen-imagerie"    
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie"
 
 // Élément racine
-* group[=].element[+].code = #FRLMExamenImagerie
+* group[=].element[+].code = #FRLMImagingStudy
 * group[=].element[=].target.code = #FRCDADICOMExamenImagerie
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
-* group[=].element[+].code = #FRLMExamenImagerie.uuidInstanceExamen
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.id
+* group[=].element[+].code = #FRLMImagingStudy.header.identifier
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.id
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'acte
-* group[=].element[+].code = #FRLMExamenImagerie.codeActe
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.code
+// Modalité de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.modality
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.methodCode
 * group[=].element[=].target.equivalence = #equivalent
-// Description narrative de l'entrée
-* group[=].element[+].code = #FRLMExamenImagerie.description
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.text
+// Localisation anatomique de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.bodySite
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
-// Date de l'acte
-* group[=].element[+].code = #FRLMExamenImagerie.dateActe
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.effectiveTime
+// précision topographique de la localisation anatomique
+* group[=].element[+].code = #FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier
 * group[=].element[=].target.equivalence = #equivalent
-// Série d'imagerie
-* group[=].element[+].code = #FRLMExamenImagerie.serieImagerie
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie
+// Rencontre associée à l'examen
+* group[=].element[+].code = #FRLMImagingStudy.encounter
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter."
+// Date de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.started
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-// Objectifs de référence
-* group[=].element[+].code = #FRLMExamenImagerie.objectifsReferences
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference
-* group[=].element[=].target.equivalence = #equivalent
+// demande d'examen
+* group[=].element[+].code = #FRLMImagingStudy.basedOn
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)."
+// Nombre de séries
+* group[=].element[+].code = #FRLMImagingStudy.numberOfSeries
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries."
+// Nombre d'instances
+* group[=].element[+].code = #FRLMImagingStudy.numberOfInstances
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances."
+// Organisation responsable de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.studyCustodian
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation."
+// Endpoint
+* group[=].element[+].code = #FRLMImagingStudy.studyEndpoint
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ."
+// series
+* group[=].element[+].code = #FRLMImagingStudy.series
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."
 
-// Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie"    
+// Groupe Mapping 2 : métier → FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document"
 // Élément racine
-* group[=].element[+].code = #FRCDADICOMExamenImagerie
+* group[=].element[+].code = #FRLMImagingStudy
 * group[=].element[=].target.code = #FRImagingStudyDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.id
-* group[=].element[=].target.code = #FRImagingStudyDocument.identifier:studyInstanceUid
+* group[=].element[+].code = #FRLMImagingStudy.header.identifier
+* group[=].element[=].target.code = #FRImagingStudyDocument.identifier
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'examen (pas de mapping possible car FRImagingStudyDocument.code n'existe pas)
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.code
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "FRImagingStudyDocument ne possède pas d'élément 'code' pour mapper cette donnée."
-
-// Description narrative de l'examen
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.text
-* group[=].element[=].target.code = #FRImagingStudyDocument.description
+// Modalité de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.modality
+* group[=].element[=].target.code = #FRImagingStudyDocument.modality
+* group[=].element[=].target.equivalence = #equivalent
+// Localisation anatomique de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.bodySite
+* group[=].element[=].target.code = #FRImagingStudyDocument.bodySite
+* group[=].element[=].target.equivalence = #equivalent
+// Rencontre associée à l'examen
+* group[=].element[+].code = #FRLMImagingStudy.encounter
+* group[=].element[=].target.code = #FRImagingStudyDocument.encounter
 * group[=].element[=].target.equivalence = #equivalent
 // Date de l'examen
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.effectiveTime
+* group[=].element[+].code = #FRLMImagingStudy.started
 * group[=].element[=].target.code = #FRImagingStudyDocument.started
 * group[=].element[=].target.equivalence = #equivalent
-// série
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie
-* group[=].element[=].target.code = #FRImagingStudyDocument.series
+// demande d'examen
+* group[=].element[+].code = #FRLMImagingStudy.basedOn
+* group[=].element[=].target.code = #FRImagingStudyDocument.basedOn
 * group[=].element[=].target.equivalence = #equivalent
-// Objectifs de référence
-* group[=].element[+].code = #FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference
-* group[=].element[=].target.code = #FRImagingStudyDocument.reasonCode
+// Nombre de séries
+* group[=].element[+].code = #FRLMImagingStudy.numberOfSeries
+* group[=].element[=].target.code = #FRImagingStudyDocument.numberOfSeries
+* group[=].element[=].target.equivalence = #equivalent
+// Nombre d'instances
+* group[=].element[+].code = #FRLMImagingStudy.numberOfInstances
+* group[=].element[=].target.code = #FRImagingStudyDocument.numberOfInstances
+* group[=].element[=].target.equivalence = #equivalent
+// Organisation responsable de l'examen
+* group[=].element[+].code = #FRLMImagingStudy.studyCustodian
+* group[=].element[=].target.code = #FRImagingStudyDocument.series.performer.actor:Organization
+* group[=].element[=].target.equivalence = #equivalent
+// Endpoint
+* group[=].element[+].code = #FRLMImagingStudy.studyEndpoint
+* group[=].element[=].target.code = #FRImagingStudyDocument.endpoint
+* group[=].element[=].target.equivalence = #equivalent
+// series
+* group[=].element[+].code = #FRLMImagingStudy.series   
+* group[=].element[=].target.code = #FRImagingStudyDocument.series
 * group[=].element[=].target.equivalence = #equivalent

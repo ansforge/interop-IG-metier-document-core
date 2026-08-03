@@ -1,103 +1,98 @@
 Instance: FRFamilyMemberHistoryLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMAntecedentFamilialObserve → FRCDAAntecedentFamilialObserve → FRFamilyMemberHistoryDocument"
-Description: "Mapping des éléments du modèle métier FRLMAntecedentFamilialObserve vers le profil CDA FRCDAAntecedentFamilialObserve, puis vers le profil FHIR FRFamilyMemberHistoryDocument."
-* title = "Mapping Métier/CDA/FHIR : \"Antécédent familial observé\""
+Title: "Mapping FRLMFamilyMemberHistory → FRCDAAntecedentsFamiliaux / FRLMFamilyMemberHistory → FRFamilyMemberHistoryDocument"
+Description: "Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument."
+* title = "Mapping Métier/CDA/FHIR : \"Antécédent familial\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedent-familial-observe"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedent-familial-observe"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-family-member-history"
+* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux"
 // Élément racine
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve
+* group[=].element[+].code = #FRLMFamilyMemberHistory
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux
 * group[=].element[=].target.equivalence = #equivalent
-// Identifiant
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.identifiant
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.id
+// Statut de l'entrée
+* group[=].element[+].code = #FRLMFamilyMemberHistory.header.status
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.statusCode
 * group[=].element[=].target.equivalence = #equivalent
-// Statut de l'observation
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.statut
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.statusCode
+// Membre de la famille concerné
+* group[=].element[+].code = #FRLMFamilyMemberHistory.relatedPerson
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.subject.relatedSubject
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'observation
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.code
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.code
+// Problème du membre de la famille
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve
 * group[=].element[=].target.equivalence = #equivalent
-// Description narrative de l'observation
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.descriptionNarrative
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.text
+// Code du problème
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.code
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve.code
 * group[=].element[=].target.equivalence = #equivalent
-// Horodatage de l'entrée
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.horodatage
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.effectiveTime
+// Outcome du problème
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.outcome
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve.value
 * group[=].element[=].target.equivalence = #equivalent
-// Résultat de l'observation effectuée
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.resultat
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.value
+// Le problème a contribué au décès
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.contributedToDeath
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve.value
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "La contribution au décès est rapprochée de la valeur d'observation faute d'attribut CDA dédié explicite."
+// Date/période de survenue
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.onset[x]
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-// Interprétation
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.interpretation
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.interpretationCode
+// Site de l'observation
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.bodySite
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.component:frAntecedentFamilialObserve.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
-// Méthode utilisée
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.methode
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.methodCode
-* group[=].element[=].target.equivalence = #equivalent
-// Site
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.site
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.targetSiteCode
-* group[=].element[=].target.equivalence = #equivalent
-// Auteur de l'observation
-* group[=].element[+].code = #FRLMAntecedentFamilialObserve.auteur
-* group[=].element[=].target.code = #FRCDAAntecedentFamilialObserve.author
-* group[=].element[=].target.equivalence = #equivalent
+// Commentaire
+* group[=].element[+].code = #FRLMFamilyMemberHistory.note
+* group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux.text
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "Le commentaire métier est porté dans la narration CDA."
 
-// Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedent-familial-observe"
+// Groupe Mapping 2 : modèle métier → FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-family-member-history"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-document"
 // Élément racine
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition
+* group[=].element[+].code = #FRLMFamilyMemberHistory
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument
 * group[=].element[=].target.equivalence = #equivalent
-// Identification de l'observation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.id
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.identifier
-* group[=].element[=].target.equivalence = #equivalent
-// Statut de l'observation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.statusCode
+// Statut de l'entrée
+* group[=].element[+].code = #FRLMFamilyMemberHistory.header.status
 * group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.status
 * group[=].element[=].target.equivalence = #equivalent
-// Horodatage de l'entrée
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.effectiveTime
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.onset[x]
+// Membre de la famille concerné
+* group[=].element[+].code = #FRLMFamilyMemberHistory.relatedPerson
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.relationship
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "relatedPerson contient plus d'information que relationship; la relation familiale est conservée."
+// Problème du membre de la famille
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'observation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.code
+// Code du problème
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.code
 * group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.code
 * group[=].element[=].target.equivalence = #equivalent
-// Description narrative de l'observation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.text
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.note
-* group[=].element[=].target.equivalence = #equivalent
-// Résultat de l'observation effectuée  
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.value
+// Outcome du problème
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.outcome
 * group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.outcome
 * group[=].element[=].target.equivalence = #equivalent
-// Interprétation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.interpretationCode
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.extension:FRInterpretationExtension
-* group[=].element[=].target.equivalence = #equivalent  
-// Méthode utilisée
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.methodCode
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.extension:FRMethodExtension
+// Le problème a contribué au décès
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.contributedToDeath
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.contributedToDeath
 * group[=].element[=].target.equivalence = #equivalent
-// Site
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.targetSiteCode
+// Date/période de survenue
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.onset[x]
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.onset[x]
+* group[=].element[=].target.equivalence = #equivalent  
+// Site de l'observation
+* group[=].element[+].code = #FRLMFamilyMemberHistory.condition.bodySite
 * group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.extension:FRFamilyMemberHistoryBodySiteExtension
 * group[=].element[=].target.equivalence = #equivalent
-// Auteur de l'observation
-* group[=].element[+].code = #FRCDAAntecedentFamilialObserve.author 
-* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.condition.extension:FRActorExtension
+// Commentaire
+* group[=].element[+].code = #FRLMFamilyMemberHistory.note
+* group[=].element[=].target.code = #FRFamilyMemberHistoryDocument.note
 * group[=].element[=].target.equivalence = #equivalent

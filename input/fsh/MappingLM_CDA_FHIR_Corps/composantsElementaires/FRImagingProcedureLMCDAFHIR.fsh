@@ -1,87 +1,139 @@
 Instance: FRImagingProcedureLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMTechniqueImagerie → FRCDADICOMTechniqueImagerie → FRProcedureImagingDocument"
-Description: "Mapping des éléments du modèle métier FRLMTechniqueImagerie vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument."
+Title: "Mapping FRLMProcedure → FRCDADICOMTechniqueImagerie / FRLMProcedure → FRProcedureImagingDocument"
+Description: "Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument."
 * title = "Mapping Métier/CDA/FHIR : \"Technique imagerie\""
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-technique-imagerie"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-procedure"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie"
 // Élément racine
-* group[=].element[+].code = #FRLMTechniqueImagerie
+* group[=].element[+].code = #FRLMProcedure
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie
 * group[=].element[=].target.equivalence = #equivalent
-// Identifiant de l'observation
-* group[=].element[+].code = #FRLMTechniqueImagerie.identifiant
+// Identifiant de l'entrée
+* group[=].element[+].code = #FRLMProcedure.header.identifier
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.id
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'acte d'imagerie
-* group[=].element[+].code = #FRLMTechniqueImagerie.codeActe
+// Code de l'acte
+* group[=].element[+].code = #FRLMProcedure.code
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.code
 * group[=].element[=].target.equivalence = #equivalent
-// Partie narrative de l'observation
-* group[=].element[+].code = #FRLMTechniqueImagerie.description
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.text
+// Statut de l'acte
+* group[=].element[+].code = #FRLMProcedure.header.status
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.statusCode
 * group[=].element[=].target.equivalence = #equivalent
-// Date de l'acte
-* group[=].element[+].code = #FRLMTechniqueImagerie.date
+// Période de l'acte
+* group[=].element[+].code = #FRLMProcedure.procedureDate[x]
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-// Modalité d’acquisition
-* group[=].element[+].code = #FRLMTechniqueImagerie.modaliteAcquisition
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.methodCode
+// Date de début de l'acte
+* group[=].element[+].code = #FRLMProcedure.procedureDateDateTime
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.effectiveTime.low
 * group[=].element[=].target.equivalence = #equivalent
-// Latéralité et topographie
-* group[=].element[+].code = #FRLMTechniqueImagerie.lateralite
+// Date de fin de l'acte
+* group[=].element[+].code = #FRLMProcedure.procedureDatePeriod
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.effectiveTime.high
+* group[=].element[=].target.equivalence = #equivalent
+// Priorité
+* group[=].element[+].code = #FRLMProcedure.priority
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.priorityCode
+* group[=].element[=].target.equivalence = #equivalent
+// Localisation anatomique
+* group[=].element[+].code = #FRLMProcedure.bodySite
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
-// Précision topographique
-* group[=].element[+].code = #FRLMTechniqueImagerie.lateralite.precisionTopographique
+// précision topographique de la localisation anatomique
+* group[=].element[+].code = #FRLMProcedure.bodySite:FRLMBodyStructure.locationQualifier
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier
 * group[=].element[=].target.equivalence = #equivalent
+// Voie d'abord
+* group[=].element[+].code = #FRLMProcedure.approachSiteCode
+* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.approachSiteCode
+* group[=].element[=].target.equivalence = #equivalent
 // Participant
-* group[=].element[+].code = #FRLMTechniqueImagerie.participant
+* group[=].element[+].code = #FRLMProcedure.header.participant[x]
 * group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.participant
 * group[=].element[=].target.equivalence = #equivalent
 
-// Groupe Mapping 3 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-technique-imagerie"
+// Groupe Mapping 2 : modèle métier → FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-procedure"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-procedure-imaging-document"
 // Élément racine
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie
+* group[=].element[+].code = #FRLMProcedure
 * group[=].element[=].target.code = #FRProcedureImagingDocument
 * group[=].element[=].target.equivalence = #equivalent
-// Identifiant de l'observation
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.id
+// Identifiant de l'entrée
+* group[=].element[+].code = #FRLMProcedure.header.identifier
 * group[=].element[=].target.code = #FRProcedureImagingDocument.identifier
 * group[=].element[=].target.equivalence = #equivalent
-// Code de l'acte d'imagerie
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.code
+// Code de l'acte
+* group[=].element[+].code = #FRLMProcedure.code
 * group[=].element[=].target.code = #FRProcedureImagingDocument.code
 * group[=].element[=].target.equivalence = #equivalent
-// Partie narrative de l'observation
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.text
-* group[=].element[=].target.code = #FRProcedureImagingDocument.note
+// Statut de l'acte
+* group[=].element[+].code = #FRLMProcedure.header.status
+* group[=].element[=].target.code = #FRProcedureImagingDocument.status
 * group[=].element[=].target.equivalence = #equivalent
-// Date de l'acte
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.effectiveTime
+// Période de l'acte
+* group[=].element[+].code = #FRLMProcedure.procedureDate[x]
 * group[=].element[=].target.code = #FRProcedureImagingDocument.performed[x]
 * group[=].element[=].target.equivalence = #equivalent
-// Modalité d’acquisition
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.methodCode
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Pas de correspondance directe dans FRProcedureImagingDocument pour la modalité d’acquisition. Cette donnée est incluse dans le profil FRImagingStudyDocument.modality."
-// Latéralité et topographie
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.targetSiteCode
+// Priorité
+* group[=].element[+].code = #FRLMProcedure.priority
+* group[=].element[=].target.code = #FRProcedureImagingDocument.extension:priority
+* group[=].element[=].target.equivalence = #equivalent
+// Localisation anatomique
+* group[=].element[+].code = #FRLMProcedure.bodySite
 * group[=].element[=].target.code = #FRProcedureImagingDocument.bodySite
 * group[=].element[=].target.equivalence = #equivalent
-// Précision topographique
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier
-* group[=].element[=].target.equivalence = #FRProcedureImagingDocument.bodySite.extension:precisionTopographique
+// Voie d'abord
+* group[=].element[+].code = #FRLMProcedure.approachSiteCode
+* group[=].element[=].target.code = #FRProcedureImagingDocument.extension:approachBodySite
+* group[=].element[=].target.equivalence = #equivalent
+// Difficulté
+* group[=].element[+].code = #FRLMProcedure.difficulty
+* group[=].element[=].target.code = #FRProcedureImagingDocument.extension:difficulte
+* group[=].element[=].target.equivalence = #equivalent
+// Motif de l'acte
+* group[=].element[+].code = #FRLMProcedure.reason[x]
+* group[=].element[=].target.code = #FRProcedureImagingDocument.reasonReference
+* group[=].element[=].target.equivalence = #equivalent
+// Résultat immédiat
+* group[=].element[+].code = #FRLMProcedure.outcome
+* group[=].element[=].target.code = #FRProcedureImagingDocument.outcome
+* group[=].element[=].target.equivalence = #equivalent
+// Complication
+* group[=].element[+].code = #FRLMProcedure.complication
+* group[=].element[=].target.code = #FRProcedureImagingDocument.complication
+* group[=].element[=].target.equivalence = #equivalent
+// Dispositif médical utilisé
+* group[=].element[+].code = #FRLMProcedure.deviceUsed
+* group[=].element[=].target.code = #FRProcedureImagingDocument.usedReference
+* group[=].element[=].target.equivalence = #equivalent
+// Dispositif focal
+* group[=].element[+].code = #FRLMProcedure.focalDevice
+* group[=].element[=].target.code = #FRProcedureImagingDocument.focalDevice.manipulated
+* group[=].element[=].target.equivalence = #equivalent
+// Commentaire
+* group[=].element[+].code = #FRLMProcedure.note
+* group[=].element[=].target.code = #FRProcedureImagingDocument.note
+* group[=].element[=].target.equivalence = #equivalent
+// Exécutant
+* group[=].element[+].code = #FRLMProcedure.header.performer[x]
+* group[=].element[=].target.code = #FRProcedureImagingDocument.performer:Intervenant.actor
+* group[=].element[=].target.equivalence = #equivalent
+// Auteur
+* group[=].element[+].code = #FRLMProcedure.header.author[x]
+* group[=].element[=].target.code = #FRProcedureImagingDocument.recorder
+* group[=].element[=].target.equivalence = #equivalent
+// Informateur
+* group[=].element[+].code = #FRLMProcedure.header.informant
+* group[=].element[=].target.code = #FRProcedureImagingDocument.asserter
 * group[=].element[=].target.equivalence = #equivalent
 // Participant
-* group[=].element[+].code = #FRCDADICOMTechniqueImagerie.participant
-* group[=].element[=].target.equivalence = #FRProcedureImagingDocument.performer:participant.actor
+* group[=].element[+].code = #FRLMProcedure.header.participant[x]
+* group[=].element[=].target.code = #FRProcedureImagingDocument.extension:participant
 * group[=].element[=].target.equivalence = #equivalent
