@@ -21,5 +21,5 @@ Characteristics: #can-be-target
 * interpretation 0..*	CodeableConcept	"Interpretation du resultat"
 * note 0..1	string	"Commentaire"
 * component	0..* Base	"Composant detaillé de l'observation"
-* derivedFrom[x]	0..*	FRLMObservation or FRLMLaboratoryObservation	or FRLMImagingStudy	"Observation ou examen source dont derive cette information"
-* hasMember[x] 0..*		FRLMLaboratoryObservation or FRLMObservation "Observations associées et rattachées à cette entree"
+* derivedFrom[x] 0..* FRLMObservation or FRLMLaboratoryObservation or FRLMImagingStudy	"Observation ou examen source dont derive cette information"
+* hasMember[x] 0..*	FRLMLaboratoryObservation or FRLMObservation "Observations associées"
