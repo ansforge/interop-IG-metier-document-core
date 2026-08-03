@@ -1,7 +1,7 @@
 Instance: FRObservationLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMObservation -> FRCDASimpleObservation -> Observation"
+Title: "Mapping FRLMObservation -> FRCDASimpleObservation / FRLMObservation -> Observation"
 Description: "Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation."
 * title = "Mapping Metier/CDA/FHIR : \"Observation\""
 * status = #draft
@@ -13,95 +13,154 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[+].code = #FRLMObservation
 * group[=].element[=].target.code = #FRCDASimpleObservation
 * group[=].element[=].target.equivalence = #equivalent
-// Identifiant de l'observation
-* group[=].element[+].code = #FRLMObservation.observationIdentifiant
-* group[=].element[=].target.code = #FRCDASimpleObservation.id
-* group[=].element[=].target.equivalence = #equivalent
-// Code de l'observation
-* group[=].element[+].code = #FRLMObservation.observationCode
-* group[=].element[=].target.code = #FRCDASimpleObservation.code
-* group[=].element[=].target.equivalence = #equivalent
-// Description narrative de l'observation
-* group[=].element[+].code = #FRLMObservation.observationDescription
-* group[=].element[=].target.code = #FRCDASimpleObservation.text
-* group[=].element[=].target.equivalence = #equivalent
-// Statut de l'observation
-* group[=].element[+].code = #FRLMObservation.observationStatut
+// Statut
+* group[=].element[+].code = #FRLMObservation.header.status
 * group[=].element[=].target.code = #FRCDASimpleObservation.statusCode
 * group[=].element[=].target.equivalence = #equivalent
-// Date de l'observation
-* group[=].element[+].code = #FRLMObservation.observationDate
+// Sujet direct
+* group[=].element[+].code = #FRLMObservation.header.directSubject[x]
+* group[=].element[=].target.code = #FRCDASimpleObservation.subject
+* group[=].element[=].target.equivalence = #equivalent
+// Date
+* group[=].element[+].code = #FRLMObservation.observationDate[x]
 * group[=].element[=].target.code = #FRCDASimpleObservation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-// Valeur de l'observation
-* group[=].element[+].code = #FRLMObservation.observationResultat
-* group[=].element[=].target.code = #FRCDASimpleObservation.value
+// Type d'observation
+* group[=].element[+].code = #FRLMObservation.type
+* group[=].element[=].target.code = #FRCDASimpleObservation.code
 * group[=].element[=].target.equivalence = #equivalent
-// Interpretation
-* group[=].element[+].code = #FRLMObservation.observationInterpretation
-* group[=].element[=].target.code = #FRCDASimpleObservation.interpretationCode
+// Nom de l'observation
+* group[=].element[+].code = #FRLMObservation.originalName
+* group[=].element[=].target.code = #FRCDASimpleObservation.text
 * group[=].element[=].target.equivalence = #equivalent
-// Methode
-* group[=].element[+].code = #FRLMObservation.observationMethode
+// Méthode
+* group[=].element[+].code = #FRLMObservation.method
 * group[=].element[=].target.code = #FRCDASimpleObservation.methodCode
 * group[=].element[=].target.equivalence = #equivalent
+// Prélèvement
+* group[=].element[+].code = #FRLMObservation.specimen
+* group[=].element[=].target.code = #FRCDASimpleObservation.specimen
+* group[=].element[=].target.equivalence = #equivalent
+// Demande d'examen
+* group[=].element[+].code = #FRLMObservation.order
+* group[=].element[=].target.code = #FRCDASimpleObservation.inFulfillmentOf
+* group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique
-* group[=].element[+].code = #FRLMObservation.observationLocalisationAnatomique
+* group[=].element[+].code = #FRLMObservation.bodySite
 * group[=].element[=].target.code = #FRCDASimpleObservation.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
-// Auteur
-* group[=].element[+].code = #FRLMObservation.observationAuteur
-* group[=].element[=].target.code = #FRCDASimpleObservation.author
+// Résultat
+* group[=].element[+].code = #FRLMObservation.result
+* group[=].element[=].target.code = #FRCDASimpleObservation.value
 * group[=].element[=].target.equivalence = #equivalent
-// Nombre de renouvellements
-* group[=].element[+].code = #FRLMObservation.observationNombreRenouvellements
-* group[=].element[=].target.code = #FRCDASimpleObservation.repeatNumber
+// Intervalle de référence
+* group[=].element[+].code = #FRLMObservation.referenceRange
+* group[=].element[=].target.code = #FRCDASimpleObservation.referenceRange
+* group[=].element[=].target.equivalence = #equivalent
+// Interprétation
+* group[=].element[+].code = #FRLMObservation.interpretation
+* group[=].element[=].target.code = #FRCDASimpleObservation.interpretationCode
+* group[=].element[=].target.equivalence = #equivalent
+// Note
+* group[=].element[+].code = #FRLMObservation.note
+* group[=].element[=].target.code = #FRCDASimpleObservation.text
+* group[=].element[=].target.equivalence = #equivalent
+// Composants
+* group[=].element[+].code = #FRLMObservation.component
+* group[=].element[=].target.equivalence = #unmatched
+// Observation source
+* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
+* group[=].element[=].target.code = #FRCDASimpleObservation.entryRelationship
+* group[=].element[=].target.equivalence = #equivalent
+// Membres
+* group[=].element[+].code = #FRLMObservation.hasMember[x]
+* group[=].element[=].target.code = #FRCDASimpleObservation.entryRelationship
 * group[=].element[=].target.equivalence = #equivalent
 
-// Groupe Mapping 2 : CDA -> FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-simple-observation"
+// Groupe Mapping 2 : ML -> FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-observation"
 * group[=].target = "http://hl7.org/fhir/R4/StructureDefinition/Observation"
 // Element racine
-* group[=].element[+].code = #FRCDASimpleObservation
+* group[=].element[+].code = #FRMLObservation
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.equivalence = #equivalent
-// Identifiant
-* group[=].element[+].code = #FRCDASimpleObservation.id
-* group[=].element[=].target.code = #Observation.identifier
-* group[=].element[=].target.equivalence = #equivalent
-// Code
-* group[=].element[+].code = #FRCDASimpleObservation.code
-* group[=].element[=].target.code = #Observation.code
-* group[=].element[=].target.equivalence = #equivalent
-// Description narrative
-* group[=].element[+].code = #FRCDASimpleObservation.text
-* group[=].element[=].target.code = #Observation.note
-* group[=].element[=].target.equivalence = #equivalent
+
 // Statut
-* group[=].element[+].code = #FRCDASimpleObservation.statusCode
+* group[=].element[+].code = #FRLMObservation.header.status
 * group[=].element[=].target.code = #Observation.status
 * group[=].element[=].target.equivalence = #equivalent
-// Date de l'observation
-* group[=].element[+].code = #FRCDASimpleObservation.effectiveTime
+
+// Sujet direct
+* group[=].element[+].code = #FRLMObservation.header.directSubject[x]
+* group[=].element[=].target.code = #Observation.focus
+* group[=].element[=].target.equivalence = #equivalent
+
+// Date
+* group[=].element[+].code = #FRLMObservation.observationDate[x]
 * group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.equivalence = #equivalent
-// Valeur de l'observation
-* group[=].element[+].code = #FRCDASimpleObservation.value
-* group[=].element[=].target.code = #Observation.value[x]
+
+// Type
+* group[=].element[+].code = #FRLMObservation.type
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
-// Interpretation
-* group[=].element[+].code = #FRCDASimpleObservation.interpretationCode
-* group[=].element[=].target.code = #Observation.interpretation
+
+// Nom observation
+* group[=].element[+].code = #FRLMObservation.originalName
+* group[=].element[=].target.code = #Observation.note
 * group[=].element[=].target.equivalence = #equivalent
-// Methode
-* group[=].element[+].code = #FRCDASimpleObservation.methodCode
+
+// Méthode
+* group[=].element[+].code = #FRLMObservation.method
 * group[=].element[=].target.code = #Observation.method
 * group[=].element[=].target.equivalence = #equivalent
-// Localisation anatomique
-* group[=].element[+].code = #FRCDASimpleObservation.targetSiteCode
+
+// Prélèvement
+* group[=].element[+].code = #FRLMObservation.specimen
+* group[=].element[=].target.code = #Observation.specimen
+* group[=].element[=].target.equivalence = #equivalent
+
+// Demande
+* group[=].element[+].code = #FRLMObservation.order
+* group[=].element[=].target.code = #Observation.basedOn
+* group[=].element[=].target.equivalence = #equivalent
+
+// Localisation
+* group[=].element[+].code = #FRLMObservation.bodySite
 * group[=].element[=].target.code = #Observation.bodySite
 * group[=].element[=].target.equivalence = #equivalent
-// Auteur
-* group[=].element[+].code = #FRCDASimpleObservation.author
-* group[=].element[=].target.code = #Observation.performer
+
+// Résultat
+* group[=].element[+].code = #FRLMObservation.result
+* group[=].element[=].target.code = #Observation.value[x]
+* group[=].element[=].target.equivalence = #equivalent
+
+// Intervalle de référence
+* group[=].element[+].code = #FRLMObservation.referenceRange
+* group[=].element[=].target.code = #Observation.referenceRange
+* group[=].element[=].target.equivalence = #equivalent
+
+// Interprétation
+* group[=].element[+].code = #FRLMObservation.interpretation
+* group[=].element[=].target.code = #Observation.interpretation
+* group[=].element[=].target.equivalence = #equivalent
+
+// Note
+* group[=].element[+].code = #FRLMObservation.note
+* group[=].element[=].target.code = #Observation.note
+* group[=].element[=].target.equivalence = #equivalent
+
+// Composants
+* group[=].element[+].code = #FRLMObservation.component
+* group[=].element[=].target.code = #Observation.component
+* group[=].element[=].target.equivalence = #equivalent
+
+// Dérivé de
+* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
+* group[=].element[=].target.code = #Observation.derivedFrom
+* group[=].element[=].target.equivalence = #equivalent
+
+// Membres
+* group[=].element[+].code = #FRLMObservation.hasMember[x]
+* group[=].element[=].target.code = #Observation.hasMember
 * group[=].element[=].target.equivalence = #equivalent
