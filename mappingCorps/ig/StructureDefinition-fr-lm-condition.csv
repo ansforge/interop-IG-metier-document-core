@@ -1,0 +1,88 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-condition","fr-lm-condition","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Condition","Problème","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-condition.header","fr-lm-condition.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-condition.header.subject","fr-lm-condition.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-condition.header.identifier","fr-lm-condition.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-condition.header.author[x]","fr-lm-condition.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-condition.header.author[x].authorProfessional","fr-lm-condition.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-condition.header.author[x].authorOrganisation","fr-lm-condition.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-condition.header.author[x].authorDevice","fr-lm-condition.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-condition.header.performer[x]","fr-lm-condition.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-condition.header.participant[x]","fr-lm-condition.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-condition.header.participant[x].participantProfessional","fr-lm-condition.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-condition.header.participant[x].participantOrganisation","fr-lm-condition.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-condition.header.participant[x].participantDevice","fr-lm-condition.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-condition.header.informant","fr-lm-condition.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-condition.header.date","fr-lm-condition.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-condition.header.status","fr-lm-condition.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut du problème","Statut","","","","","","","","","",,"","Valeur issue du jdv-hl7-condition-clinical-cisis (2.16.840.1.113883.4.642.3.164)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-condition.header.source","fr-lm-condition.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-condition.header.language","fr-lm-condition.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-condition.type","fr-lm-condition.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type d'observation","Type d'observation","","","","","","","","","",,"","Valeur issue du jdv-code-probleme-cisis (1.2.250.1.213.1.1.5.172)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260619134043","",,,,"fr-lm-condition.type",1,1,"",""
+"fr-lm-condition.problem","fr-lm-condition.problem","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Problème observé :
+ - CIM-10 (2.16.840.1.113883.6.3) ; 
+ - CISP-2 (2.16.840.1.113883.6.139) ;
+ - CISP-3 / DRC (1.2.250.1.213.2.9) ;
+ - OrphaCodes (1.2.250.1.213.2.49)","Problème observé :
+ - CIM-10 (2.16.840.1.113883.6.3) ; 
+ - CISP-2 (2.16.840.1.113883.6.139) ;
+ - CISP-3 / DRC (1.2.250.1.213.2.9) ;
+ - OrphaCodes (1.2.250.1.213.2.49)","","","","","","","","","",,,,,"",,,,"fr-lm-condition.problem",1,1,"",""
+"fr-lm-condition.period","fr-lm-condition.period","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période","Période","","","","","","","","","",,,,,"",,,,"fr-lm-condition.period",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-condition.period.id","fr-lm-condition.period.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-condition.period.extension","fr-lm-condition.period.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-condition.period.url","fr-lm-condition.period.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"fr-lm-condition.period.value[x]","fr-lm-condition.period.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-condition.period.onsetDate","fr-lm-condition.period.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début","Date de début","","","","","","","","","",,,,,"",,,,"fr-lm-condition.period.onsetDate",0,1,"",""
+"fr-lm-condition.period.endDate","fr-lm-condition.period.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin","Date de fin","","","","","","","","","",,,,,"",,,,"fr-lm-condition.period.endDate",0,1,"",""
+"fr-lm-condition.severity","fr-lm-condition.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Sévérité de la manifestion","Sévérité de la manifestion","","","","","","","","","",,"","(preferred): SNOMED_CT => Valeur issue du jdv-severite-observation-cisis (1.2.250.1.213.1.1.5.675)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260619134042","",,,,"fr-lm-condition.severity",0,1,"",""
+"fr-lm-condition.clinicalStatus","fr-lm-condition.clinicalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut clinique du patient","Statut clinique du patient","","","","","","","","","",,,,,"",,,,"fr-lm-condition.clinicalStatus",0,1,"",""
+"fr-lm-condition.bodySite","fr-lm-condition.bodySite","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
+","Localisation anatomique","Localisation anatomique","","","","","","","","","",,,,,"",,,,"fr-lm-condition.bodySite",0,*,"",""
+"fr-lm-condition.stage","fr-lm-condition.stage","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Stade/Grade. codeSystem spécifique au contexte.
+Binding Description: (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …","Stade/Grade. codeSystem spécifique au contexte.
+Binding Description: (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …","","","","","","","","","",,,,,"",,,,"fr-lm-condition.stage",0,*,"",""
+"fr-lm-condition.diagnosisAssertionStatus","fr-lm-condition.diagnosisAssertionStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Certitude","Certitude","","","","","","","","","",,"","Valeur issue du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260619134042","",,,,"fr-lm-condition.diagnosisAssertionStatus",0,1,"",""
+"fr-lm-condition.reference","fr-lm-condition.reference","","","",1,*,"","","","uri {[]} {[]}
+","Cet élément contient l’URL du document","Cet élément contient l’URL du document","","","","","","","","","",,,,,"",,,,"fr-lm-condition.reference",1,*,"",""
+"fr-lm-condition.note","fr-lm-condition.note","","","",0,1,"","","","string {[]} {[]}
+","commentaire","commentaire","","","","","","","","","",,,,,"",,,,"fr-lm-condition.note",0,1,"",""
