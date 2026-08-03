@@ -50,11 +50,11 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 // Unité de présentation (regroupe, avec containedQuantity/amount/packageType)
 * group[=].element[+].code = #FRLMMedication.item.unitOfPresentation
 * group[=].element[=].target.code = #FRCDAProduitDeSante.pharm:asContent
-* group[=].element[=].target.equivalence = #related-to
+* group[=].element[=].target.equivalence = #relatedto
 // Quantité de produit par unité
 * group[=].element[+].code = #FRLMMedication.item.containedQuantity
 * group[=].element[=].target.code = #FRCDAProduitDeSante.pharm:asContent
-* group[=].element[=].target.equivalence = #related-to
+* group[=].element[=].target.equivalence = #relatedto
 // Nombre d'unités dans le package
 * group[=].element[+].code = #FRLMMedication.item.amount
 * group[=].element[=].target.code = #FRCDAProduitDeSante.pharm:asContent

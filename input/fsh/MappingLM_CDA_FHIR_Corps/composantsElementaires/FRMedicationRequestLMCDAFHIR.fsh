@@ -470,7 +470,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 // Fréquence de prise
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency
 * group[=].element[=].target.code = #FRMedicationRequestDocument.dosageInstruction.timing.repeat
-* group[=].element[=].target.equivalence = #related-to
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Regroupement porté par les éléments détaillés numberOfTimes, period, dayOfWeek, timeOfDay et additionalInstructions."
 // Nombre de prises par période
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.numberOfTimes
@@ -492,7 +492,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 // Instruction additionnelle liée à la fréquence
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.additionalInstructions
 * group[=].element[=].target.code = #FRMedicationRequestDocument.dosageInstruction.additionalInstruction
-* group[=].element[=].target.equivalence = #related-to
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text."
 // Date précise de prise
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.dateOfAdministration
@@ -509,7 +509,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 // Durée d'administration
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration
 * group[=].element[=].target.code = #FRMedicationRequestDocument.dosageInstruction.timing.repeat
-* group[=].element[=].target.equivalence = #related-to
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Regroupement porté par les éléments détaillés durationValue, durationUnit et durationMax."
 // Durée de l'administration
 * group[=].element[+].code = #FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration.durationValue
