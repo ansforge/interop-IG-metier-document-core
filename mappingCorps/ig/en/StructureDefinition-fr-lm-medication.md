@@ -7,7 +7,7 @@ Produit de santé
 
 **Usages:**
 
-* Use this Logical Model: [Logical model - FR LM Immunisation](StructureDefinition-fr-lm-immunisation.md), [Logical model- FR LM Medication Administration ](StructureDefinition-fr-lm-medication-administration.md), [Logical model - FR LM Medication Dispense](StructureDefinition-fr-lm-medication-dispense.md), [Logical model - FR LM Medication Prescription](StructureDefinition-fr-lm-prescription-item.md) and [Logical model - FR LM Service Request](StructureDefinition-fr-lm-service-request.md)
+* Use this Logical Model: [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md), [Logical model - FR LM Immunisation](StructureDefinition-fr-lm-immunisation.md), [Logical model- FR LM Medication Administration ](StructureDefinition-fr-lm-medication-administration.md), [Logical model - FR LM Medication Dispense](StructureDefinition-fr-lm-medication-dispense.md)... Show 2 more, [Logical model - FR LM Medication Prescription](StructureDefinition-fr-lm-prescription-item.md) and [Logical model - FR LM Service Request](StructureDefinition-fr-lm-service-request.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-fr-lm-medication.json)
 
@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-medication.
   "name" : "FRLMMedication",
   "title" : "Logical model - FR LM Medication",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

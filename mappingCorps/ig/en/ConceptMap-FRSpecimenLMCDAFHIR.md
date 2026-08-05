@@ -1,9 +1,9 @@
-# Mapping FRLMPrelevement → FRCDAPrelevement → FRSpecimenDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMSpecimen → FRCDAPrelevement / FRLMSpecimen → FRSpecimenDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMPrelevement → FRCDAPrelevement → FRSpecimenDocument 
+## ConceptMap: Mapping FRLMSpecimen → FRCDAPrelevement / FRLMSpecimen → FRSpecimenDocument 
 
  
-Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument. 
+Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRC
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Prélèvement\"",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRC
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,135 +35,294 @@ Mapping des éléments du modèle métier FRLMPrelevement vers le profil CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prelevement",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-specimen",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prelevement",
     "element" : [{
-      "code" : "FRLMPrelevement",
+      "code" : "FRLMSpecimen",
       "target" : [{
         "code" : "FRCDAPrelevement",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.actePrelevement",
+      "code" : "FRLMSpecimen.identifier",
+      "target" : [{
+        "code" : "FRCDAPrelevement.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.header.status",
+      "target" : [{
+        "code" : "FRCDAPrelevement.statusCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.type",
       "target" : [{
         "code" : "FRCDAPrelevement.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.datePrelevement",
+      "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
-        "code" : "FRCDAPrelevement.effectiveTime",
+        "code" : "FRCDAPrelevement.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.localisationPrelevement",
-      "target" : [{
-        "code" : "FRCDAPrelevement.targetSiteCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPrelevement.performer",
-      "target" : [{
-        "code" : "FRCDAPrelevement.performer",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPrelevement.echantillonPreleve",
+      "code" : "FRLMSpecimen.parentSpecimen",
       "target" : [{
         "code" : "FRCDAPrelevement.participant:echantillonPreleve",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.dispositifUtilise",
+      "code" : "FRLMSpecimen.request",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.combined",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.performer[x]",
+      "target" : [{
+        "code" : "FRCDAPrelevement.performer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.collected[x]",
+      "target" : [{
+        "code" : "FRCDAPrelevement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.quantity",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.method",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.device",
       "target" : [{
         "code" : "FRCDAPrelevement.participant:dispositifUtilise",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.produitUtilise",
+      "code" : "FRLMSpecimen.collection.additive[x]",
       "target" : [{
         "code" : "FRCDAPrelevement.participant:produitUtilise",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPrelevement.dateReceptionEchantillon",
+      "code" : "FRLMSpecimen.collection.bodySite",
       "target" : [{
-        "code" : "FRCDAPrelevement.entryRelationship.act",
+        "code" : "FRCDAPrelevement.targetSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.receivedDate",
+      "target" : [{
+        "code" : "FRCDAPrelevement.entryRelationship.act.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.container.specimenQuantity",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.container.containerDevice",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.condition",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.note",
+      "target" : [{
+        "code" : "FRCDAPrelevement.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prelevement",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-specimen",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-specimen-document",
     "element" : [{
-      "code" : "FRCDAPrelevement",
+      "code" : "FRLMSpecimen",
       "target" : [{
         "code" : "FRSpecimenDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.code",
+      "code" : "FRLMSpecimen.identifier",
       "target" : [{
-        "code" : "FRSpecimenDocument.processing.procedure.coding.code",
+        "code" : "FRSpecimenDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.effectiveTime",
+      "code" : "FRLMSpecimen.header.status",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.collected[x]",
+        "code" : "FRSpecimenDocument.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.targetSiteCode",
-      "target" : [{
-        "code" : "FRSpecimenDocument.collection.bodySite",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAPrelevement.performer",
-      "target" : [{
-        "code" : "FRSpecimenDocument.collection.collector",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAPrelevement.participant:echantillonPreleve",
+      "code" : "FRLMSpecimen.type",
       "target" : [{
         "code" : "FRSpecimenDocument.type",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.participant:dispositifUtilise",
+      "code" : "FRLMSpecimen.specimenSource:Patient",
       "target" : [{
-        "code" : "FRSpecimenDocument.container",
+        "code" : "FRSpecimenDocument.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.participant:produitUtilise",
+      "code" : "FRLMSpecimen.specimenSource:Location",
       "target" : [{
-        "code" : "FRSpecimenDocument.processing.additive:Substance",
+        "code" : "FRSpecimenDocument.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPrelevement.entryRelationship.act",
+      "code" : "FRLMSpecimen.specimenSource:Device",
+      "target" : [{
+        "code" : "FRSpecimenDocument.subject",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.parentSpecimen",
+      "target" : [{
+        "code" : "FRSpecimenDocument.parent",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.request",
+      "target" : [{
+        "code" : "FRSpecimenDocument.request",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.combined",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.performer[x]",
+      "target" : [{
+        "code" : "FRSpecimenDocument.collection.collector",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.collected[x]",
+      "target" : [{
+        "code" : "FRSpecimenDocument.collection.collected[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.quantity",
+      "target" : [{
+        "code" : "FRSpecimenDocument.collection.quantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.method",
+      "target" : [{
+        "code" : "FRSpecimenDocument.collection.method",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.device",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.bodySite",
+      "target" : [{
+        "code" : "FRSpecimenDocument.collection.bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.receivedDate",
       "target" : [{
         "code" : "FRSpecimenDocument.receivedTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.collection.additive[x]",
+      "target" : [{
+        "code" : "FRSpecimenDocument.processing.additive",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.container.specimenQuantity",
+      "target" : [{
+        "code" : "FRSpecimenDocument.container.specimenQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.container.containerDevice",
+      "target" : [{
+        "code" : "FRSpecimenDocument.container.extension:device",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.condition",
+      "target" : [{
+        "code" : "FRSpecimenDocument.condition",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSpecimen.note",
+      "target" : [{
+        "code" : "FRSpecimenDocument.note",
         "equivalence" : "equivalent"
       }]
     }]

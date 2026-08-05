@@ -7,7 +7,7 @@ Traitement prescrit
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Logical model - FR LM FR LM Medication Prescription](StructureDefinition-fr-lm-medication-prescription.md)
+* Utilise ce/t/te Modèle logique: [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md) and [Logical model - FR LM FR LM Medication Prescription](StructureDefinition-fr-lm-medication-prescription.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/fr-lm-prescription-item)
 
@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-prescript
   "name" : "FRLMPrescriptionItem",
   "title" : "Logical model - FR LM Medication Prescription",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

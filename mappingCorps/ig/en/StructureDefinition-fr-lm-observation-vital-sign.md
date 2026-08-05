@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-observation
   "name" : "FRLMObservationVitalSign",
   "title" : "Logical model - FR LM Observation Vital Sign",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

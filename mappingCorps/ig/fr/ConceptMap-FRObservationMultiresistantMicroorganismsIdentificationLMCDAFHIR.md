@@ -1,9 +1,9 @@
-# Mapping FRLMIdentificationDeMicroOrganismesMultiresistants → FRCDAIdentificationMicroOrganismesMultiresistants → FRObservationMultiresistantMicroorganismsIdentificationDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMMultidrugResistantMicroorganismIdentification → FRCDAIdentificationMicroOrganismesMultiresistants / FRLMMultidrugResistantMicroorganismIdentification → FRObservationMultiresistantMicroorganismsIdentificationDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMIdentificationDeMicroOrganismesMultiresistants → FRCDAIdentificationMicroOrganismesMultiresistants → FRObservationMultiresistantMicroorganismsIdentificationDocument 
+## ConceptMap: Mapping FRLMMultidrugResistantMicroorganismIdentification → FRCDAIdentificationMicroOrganismesMultiresistants / FRLMMultidrugResistantMicroorganismIdentification → FRObservationMultiresistantMicroorganismsIdentificationDocument 
 
  
-Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMultiresistants vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument. 
+Mapping des éléments du modèle métier FRLMMultidrugResistantMicroorganismIdentification vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMul
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Identification de micro-organismes multirésistants",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMul
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMultiresistants vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMMultidrugResistantMicroorganismIdentification vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,114 +35,190 @@ Mapping des éléments du modèle métier FRLMIdentificationDeMicroOrganismesMul
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-identification-de-micro-organismes-multiresistants",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-identification-micro-organismes-multiresistants",
     "element" : [{
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification",
       "target" : [{
         "code" : "FRCDAIdentificationMicroOrganismesMultiresistants",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.identifiant",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.identifier",
       "target" : [{
         "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.code",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.subject",
       "target" : [{
-        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.code",
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.description",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.author[x]",
       "target" : [{
-        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.text",
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.statut",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.performer[x]",
+      "target" : [{
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.performer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.participant[x]",
+      "target" : [{
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.participant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.informant",
+      "target" : [{
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.informant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.date",
+      "target" : [{
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.author.time",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.status",
       "target" : [{
         "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.date",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.language",
+      "target" : [{
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.languageCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.source",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.observationDate",
       "target" : [{
         "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.valeur",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.type",
       "target" : [{
-        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.value",
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIdentificationDeMicroOrganismesMultiresistants.auteur",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.result",
       "target" : [{
-        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.author",
+        "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.value",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-identification-micro-organismes-multiresistants",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-multidrug-resistant-microorganism-identification",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-multiresistant-microorganism-document",
     "element" : [{
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.id",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.identifier",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.code",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.identifier",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.code",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.text",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.subject",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.code.text",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.statusCode",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.author[x]",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.status",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.effectiveTime",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.performer[x]",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.effective[x]",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.value",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.participant[x]",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.valueString",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAIdentificationMicroOrganismesMultiresistants.author",
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.informant",
       "target" : [{
-        "code" : "FRObservationMultiresistantMicroorganismsIdentificationDocument.performer.extension:author",
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.extension:author",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.date",
+      "target" : [{
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.issued",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.status",
+      "target" : [{
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.status",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.header.language",
+      "target" : [{
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.language",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.type",
+      "target" : [{
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMultidrugResistantMicroorganismIdentification.result",
+      "target" : [{
+        "code" : "FRObservationMultidrugResistantMicroorganismIdentification.valueString",
         "equivalence" : "equivalent"
       }]
     }]

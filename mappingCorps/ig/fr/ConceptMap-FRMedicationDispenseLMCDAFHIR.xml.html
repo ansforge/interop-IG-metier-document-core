@@ -9,7 +9,7 @@
 <html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument - XML Representation - FR Document Core (Modèle métier) v0.1.0</title>
+    <title>Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument - XML Representation - FR Document Core (Modèle métier) v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -52,8 +52,8 @@
 	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"7.224"}
-    h3,h4,h5,h6{--heading-prefix:"7.224"}</style>
+    <style type="text/css">h2{--heading-prefix:"7.190"}
+    h3,h4,h5,h6{--heading-prefix:"7.190"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -228,7 +228,7 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Résumé des artefacts</b></a></li><li><b>Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Résumé des artefacts</b></a></li><li><b>Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument</b></li>
 
           <span style="float: var(--ig-right);">
 
@@ -301,7 +301,7 @@
 
 
 
-<h2 id="root">: Mapping FRLMTraitementDispense → FRCDATraitementDispense → FRMedicationDispenseDocument</h2>
+<h2 id="root">: Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument</h2>
 
   <table class="colsd" data-fhir="generated">
     <tr>
@@ -312,7 +312,7 @@
           
 
             à partir de 
-2026-08-03
+2026-08-05
 
           
         
@@ -329,20 +329,20 @@
 
 
 
-  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap">ConceptMap</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/resource.html#ConceptMap.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FRMedicationDispenseLMCDAFHIR&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/resource.html#ConceptMap.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;fr&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#ConceptMap.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : CarteDeConcepts FRMedicationDispenseLMCDAFHIR&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;FRMedicationDispenseLMCDAFHIR&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcFRMedicationDispenseLMCDAFHIR&quot;&gt; &lt;/a&gt;&lt;p&gt;This mapping does not specify any particular context of use.&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Groupe 1 &lt;/b&gt;Mapping de &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-dispense&lt;/code&gt; to &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code source&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;relation&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code cible&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.identifiant&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.code&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.description&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.quantite&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.quantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.medicamentDelivre&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.product:frProduitDeSante&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.referencePrescription&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frReferenceItemPrescription&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.traitement&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.instructionsPatient&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship.frInstructionsAuPatient&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.notesDispensateur&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship.frNotesDuDispensateur&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMTraitementDispense.substitution&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship.frActeSubstitution&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Groupe 2 &lt;/b&gt;Mapping de &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&lt;/code&gt; to &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Détails du concept source&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;relation&lt;/b&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Détails du concept cible&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; de https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&lt;/td&gt;&lt;td/&gt;&lt;td colspan=&quot;2&quot;&gt;&lt;b&gt;Codes&lt;/b&gt; de https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.id&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.identifier&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.code&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.type&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.text&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.type.text&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.quantity&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.quantity&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.product:frProduitDeSante&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.medication[x]&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.entryRelationship:frReferenceItemPrescription&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.authorizingPrescription&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.entryRelationship:frTraitement&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.supportingInformation&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px; border-bottom-style: none&quot;&gt;FRCDATraitementDispense.entryRelationship:frInstructionsAuPatient&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px; border-bottom-style: none&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.dosageInstruction.patientInstruction&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px; border-top-style: none&quot;/&gt;&lt;td style=&quot;border-top-style: none; border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.dosageInstruction.additionalInstruction&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.entryRelationship:frNotesDuDispensateur&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.dosageInstruction.text&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRCDATraitementDispense.entryRelationship:frActeSubstitution&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;border-right-width: 0px&quot;&gt;FRMedicationDispenseDocument.substitution&lt;/td&gt;&lt;td style=&quot;border-left-width: 0px&quot;/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xml:lang=&quot;fr&quot; lang=&quot;fr&quot;&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;French&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Narratif généré : CarteDeConcepts FRMedicationDispenseLMCDAFHIR&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;FRMedicationDispenseLMCDAFHIR&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcFRMedicationDispenseLMCDAFHIR&quot;&gt; &lt;/a&gt;&lt;p&gt;This mapping does not specify any particular context of use.&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;b&gt;Groupe 1 &lt;/b&gt;Mapping de &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense&lt;/code&gt; to &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code source&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;relation&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code cible&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.identifier&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.author[x]&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.status&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.statusCode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.receiver[x]&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.relatedRequest&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frReferenceItemPrescription&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.medicament&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.product:frProduitDeSante&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dispensedQuantity&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.quantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.timeOfDispensation&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.substitutionOccurred&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frActeSubstitution&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.sequence&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.note&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.dose[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.doseQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.rate[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.rateQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.numberOfTimes&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.frequency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.period&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.period&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.dayOfWeek&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.timeOfDay&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.additionalInstructions&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.dateOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.conditionOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.precondition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.date[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventEndSequence&lt;/td&gt;&lt;td colspan=&quot;2&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.bodySite&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.approachSiteCode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.routeOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.routeCode&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.duration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxLifetimeDose&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.note&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frNotesDuDispensateur&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;p&gt;&lt;b&gt;Groupe 2 &lt;/b&gt;Mapping de &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense&lt;/code&gt; to &lt;code&gt;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document&lt;/code&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code source&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;relation&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code cible&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Commentaire&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.identifier&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.identifier&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.author[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.performer.actor&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.header.status&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.status&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.receiver[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.receiver&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.relatedRequest&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.authorizingPrescription&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.medicament&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.medication[x]&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dispensedQuantity&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.quantity&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.timeOfDispensation&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.whenHandedOver&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.substitutionOccurred&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.substitution.wasSubstituted&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.text&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.sequence&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.sequence&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.note&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.patientInstruction&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.dose[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.doseAndRate.dose[x]&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.rate[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.doseAndRate.rate[x]&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto&quot; title=&quot;relatedto&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&lt;/td&gt;&lt;td&gt;Regroupement porté par les éléments détaillés numberOfTimes, period, dayOfWeek, timeOfDay et additionalInstructions.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.numberOfTimes&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.frequency&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.period&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.period&lt;/td&gt;&lt;td&gt;L'unité (periodUnit) est portée par le code de la Quantity source.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.dayOfWeek&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.dayOfWeek&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.timeOfDay&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.timeOfDay&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.additionalInstructions&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto&quot; title=&quot;relatedto&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.additionalInstruction&lt;/td&gt;&lt;td&gt;Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.dateOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.event&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.conditionOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.asNeededCodeableConcept&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.date[x]&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.bounds[x]&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto&quot; title=&quot;relatedto&quot;&gt;is related to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&lt;/td&gt;&lt;td&gt;Regroupement porté par les éléments détaillés durationValue, durationUnit et durationMax.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationValue&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.duration&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationUnit&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.durationUnit&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationMax&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.durationMax&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider&quot; title=&quot;wider&quot;&gt;maps to wider concept&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&lt;/td&gt;&lt;td&gt;Regroupement porté par les éléments détaillés eventTimeCode et offset.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime.eventTimeCode&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.when&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime.offset&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.offset&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventEndSequence&lt;/td&gt;&lt;td colspan=&quot;3&quot; style=&quot;background-color: #efefef&quot;&gt;(not mapped)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.bodySite&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.site&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.routeOfAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.route&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.maxDosePerPeriod.numerator&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.duration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.maxDosePerPeriod.denominator&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerAdministration&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.maxDosePerAdministration&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxLifetimeDose&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.dosageInstruction.maxDosePerLifetime&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FRLMMedicationDispense.note&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent&quot; title=&quot;equivalent&quot;&gt;is equivalent to&lt;/a&gt;&lt;/td&gt;&lt;td&gt;FRMedicationDispenseDocument.note&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#ConceptMap.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationDispenseLMCDAFHIR&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mapping Métier/CDA/FHIR : &amp;quot;Traitement dispensé&amp;quot;&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-08-03T08:18:14+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2026-08-05T09:34:27+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.publisher">publisher</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>&gt;
@@ -354,7 +354,7 @@
     &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.contact">contact</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.description">description</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Mapping des éléments du modèle métier FRLMTraitementDispense vers le profil CDA FRCDATraitementDispense, puis vers le profil FHIR FRMedicationDispenseDocument.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil CDA FRCDATraitementDispense (Groupe 1), et vers le profil FHIR FRMedicationDispenseDocument (Groupe 2).&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
@@ -364,170 +364,388 @@
   &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.jurisdiction">jurisdiction</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-dispense&quot;/&gt;
+            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>
             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.identifiant&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.id&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.code&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.code&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.description&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.text&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.quantite&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.quantity&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.medicamentDelivre&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.product:frProduitDeSante&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.referencePrescription&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frReferenceItemPrescription&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.traitement&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.instructionsPatient&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.identifier&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship.frInstructionsAuPatient&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.id&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.notesDispensateur&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.author[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.status&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship.frNotesDuDispensateur&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.statusCode&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMTraitementDispense.substitution&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.receiver[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.relatedRequest&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship.frActeSubstitution&quot;/&gt;
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frReferenceItemPrescription&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.medicament&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.product:frProduitDeSante&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dispensedQuantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.quantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.timeOfDispensation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.substitutionOccurred&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frActeSubstitution&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.text&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.sequence&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.note&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.dose[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.doseQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.rate[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.rateQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.numberOfTimes&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.frequency&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.period&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.period&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.dayOfWeek&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.timeOfDay&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.additionalInstructions&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.dateOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.conditionOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.precondition&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.date[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventEndSequence&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.bodySite&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.approachSiteCode&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.routeOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.routeCode&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.duration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxLifetimeDose&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.note&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frNotesDuDispensateur&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group">group</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.source">source</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense&quot;/&gt;
+            <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.target">target</a>
             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.id&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.identifier&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.identifier&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.code&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.author[x]&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.performer.actor&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.text&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.header.status&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.type.text&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.status&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.receiver[x]&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.quantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.receiver&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.product:frProduitDeSante&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.medication[x]&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frReferenceItemPrescription&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.relatedRequest&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.authorizingPrescription&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frTraitement&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.medicament&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.supportingInformation&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.medication[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dispensedQuantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.quantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.timeOfDispensation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.whenHandedOver&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.substitutionOccurred&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.substitution.wasSubstituted&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frInstructionsAuPatient&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.patientInstruction&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
-              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.additionalInstruction&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frNotesDuDispensateur&quot;/&gt;
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.text&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
@@ -535,9 +753,257 @@
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
-            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRCDATraitementDispense.entryRelationship:frActeSubstitution&quot;/&gt;
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.sequence&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.substitution&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.sequence&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.note&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.patientInstruction&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.dose[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.doseAndRate.dose[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.doseAndRate.rate[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.doseAndRate.rate[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;relatedto&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Regroupement porté par les éléments détaillés numberOfTimes, period, dayOfWeek, timeOfDay et additionalInstructions.&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.numberOfTimes&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.frequency&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.period&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.period&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;L'unité (periodUnit) est portée par le code de la Quantity source.&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.dayOfWeek&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.dayOfWeek&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.timeOfDay&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.timeOfDay&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.frequency.additionalInstructions&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.additionalInstruction&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;relatedto&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text.&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.dateOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.event&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.conditionOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.asNeededCodeableConcept&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.date[x]&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.bounds[x]&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;relatedto&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Regroupement porté par les éléments détaillés durationValue, durationUnit et durationMax.&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationValue&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.duration&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationUnit&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.durationUnit&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.duration.durationMax&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.durationMax&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;wider&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.comment">comment</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Regroupement porté par les éléments détaillés eventTimeCode et offset.&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime.eventTimeCode&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.when&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventTime.offset&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.timing.repeat.offset&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.eventEndSequence&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unmatched&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.bodySite&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.site&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.routeOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.route&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.maxDosePerPeriod.numerator&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerPeriod.duration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.maxDosePerPeriod.denominator&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxDosePerAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.maxDosePerAdministration&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a>
+            <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.dosageInstructions.dosageDetails.maxLifetimeDose&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.dosageInstruction.maxDosePerLifetime&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRLMMedicationDispense.note&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FRMedicationDispenseDocument.note&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target.equivalence">equivalence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;equivalent&quot;/&gt;
       &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element.target">target</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/conceptmap.html#ConceptMap.group.element">element</a>&gt;
@@ -596,8 +1062,8 @@
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fr.document-core#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-08-03 08:18:00 +0000">
-    2026-08-03
+  <span title="2026-08-05 09:34:00 +0000">
+    2026-08-05
   </span>
 
           <br/>

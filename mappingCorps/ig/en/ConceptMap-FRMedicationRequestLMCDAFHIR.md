@@ -1,9 +1,9 @@
-# Mapping FRLMTraitementPrescrit → FRCDATraitementPrescrit → FRMedicationRequestDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMPrescriptionItem → FRCDATraitementPrescrit / FRLMPrescriptionItem → FRMedicationRequestDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMTraitementPrescrit → FRCDATraitementPrescrit → FRMedicationRequestDocument 
+## ConceptMap: Mapping FRLMPrescriptionItem → FRCDATraitementPrescrit / FRLMPrescriptionItem → FRMedicationRequestDocument 
 
  
-Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument. 
+Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Traitement prescrit",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée 
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,442 +35,1001 @@ Mapping des éléments du modèle métier FRLMTraitementPrescrit vers l'entrée 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-prescrit",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-item",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-prescrit",
     "element" : [{
-      "code" : "FRLMTraitementPrescrit",
+      "code" : "FRLMPrescriptionItem",
       "target" : [{
         "code" : "FRCDATraitementPrescrit",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.identifiant",
+      "code" : "FRLMPrescriptionItem.header.identifier",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.code",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.description",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.status",
+      "code" : "FRLMPrescriptionItem.header.status",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.dureeTraitement",
+      "code" : "FRLMPrescriptionItem.header.author[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.effectiveTime[not(@operator='A')]",
+        "code" : "FRCDATraitementPrescrit.author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.frequenceAdministration",
+      "code" : "FRLMPrescriptionItem.statusReason[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.effectiveTime[@operator='A']",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.nombreRenouvellement",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.repeatNumber",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.voieAdministration",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.routeCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.regionAnatomique",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.approachSiteCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.dose",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.doseQuantity",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.rythmeAdministration",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.rateQuantity",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.doseMaximale",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.maxDoseQuantity",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.produitSante",
+      "code" : "FRLMPrescriptionItem.medication",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.consumable",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.prescripteur",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.author",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.auteur",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.author",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.motifTraitement",
+      "code" : "FRLMPrescriptionItem.indication[x]",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.entryRelationship:frReferenceInterne",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.traitementPrescritSubordonnee",
+      "code" : "FRLMPrescriptionItem.intendedUseType",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitementPrescritSubordonnee",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.periodOfUse",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.effectiveTime[not(@operator='A')]",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.referenceItemPlanTraitement",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frReferenceItemPlanTraitement",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.instructionsPatient",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.sequence",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.note",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.instructionsDispensateur",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.dose[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.doseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.quantiteProduit",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.rateQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.numberOfTimes",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime.frequency",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.period",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime.period",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.dayOfWeek",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.timeOfDay",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.additionalInstructions",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.dateOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.conditionOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.precondition",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.date[x]",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventTime",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventEndSequence",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.approachSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.routeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.duration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxLifetimeDose",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.quantityPrescribed",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.entryRelationship:frQuantiteDeProduit",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.autorisationSubstitution",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.periodeRenouvellement",
+      "code" : "FRLMPrescriptionItem.validityPeriod",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.entryRelationship:frPeriodeDeRenouvellement",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.enRapportAvecALD",
+      "code" : "FRLMPrescriptionItem.substitution.allowed[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.enRapportAvecAccidentTravail",
+      "code" : "FRLMPrescriptionItem.substitution.reason[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.numberOfRepeats",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.repeatNumber",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.enRapportAvecPrevention",
+      "code" : "FRLMPrescriptionItem.minimumDispenseInterval",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.nonRemboursable",
-      "target" : [{
-        "code" : "FRCDATraitementPrescrit.entryRelationship:frNonRemboursable",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMTraitementPrescrit.horsAMM",
+      "code" : "FRLMPrescriptionItem.offLabel.isOffLabelUse",
       "target" : [{
         "code" : "FRCDATraitementPrescrit.entryRelationship:frHorsAMM",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.referencePrescription",
+      "code" : "FRLMPrescriptionItem.offLabel.reason[x]",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.frReferenceInterne.externalDocument",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.note",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementPrescrit.precondition",
+      "code" : "FRLMPrescriptionItem.enRapportAvecALD",
       "target" : [{
-        "code" : "FRCDATraitementPrescrit.precondition",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecAccidentTravail",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecPrevention",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.nonRemboursable",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frNonRemboursable",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-prescrit",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-item",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-request-document",
     "element" : [{
-      "code" : "FRCDATraitementPrescrit",
+      "code" : "FRLMPrescriptionItem",
       "target" : [{
         "code" : "FRMedicationRequestDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.id",
+      "code" : "FRLMPrescriptionItem.header.identifier",
       "target" : [{
         "code" : "FRMedicationRequestDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.code",
-      "target" : [{
-        "equivalence" : "unmatched"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.text",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.note",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.statusCode",
+      "code" : "FRLMPrescriptionItem.header.status",
       "target" : [{
         "code" : "FRMedicationRequestDocument.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.effectiveTime[not(@operator='A')]",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.boundsPeriod",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.effectiveTime[@operator='A']",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.frequency",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.repeatNumber",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dispenseRequest.numberOfRepeatsAllowed",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.routeCode",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.route",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.approachSiteCode",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.site",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.doseQuantity",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.doseAndRate.doseRange",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.rateQuantity",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.doseAndRate.rateRange",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.maxDoseQuantity",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.maxDosePerPeriod",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.consumable",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.medication:FRMedicationDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.author",
+      "code" : "FRLMPrescriptionItem.header.author[x]",
       "target" : [{
         "code" : "FRMedicationRequestDocument.requester",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.author",
+      "code" : "FRLMPrescriptionItem.header.author[x]",
       "target" : [{
         "code" : "FRMedicationRequestDocument.extension:FRActorExtension",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frReferenceInterne",
+      "code" : "FRLMPrescriptionItem.statusReason[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.statusReason",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.medication",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.medication:FRMedicationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.indication[x]",
       "target" : [{
         "code" : "FRMedicationRequestDocument.reasonReference",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitementPrescritSubordonnee",
+      "code" : "FRLMPrescriptionItem.intendedUseType",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.medication:FRMedicationsCombinaisonDocument",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.periodOfUse",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frReferenceItemPlanTraitement",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.sequence",
       "target" : [{
-        "code" : "basedOn:FRMedicationRequestDocument",
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.note",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuPatient",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.dose[x]",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.additionalInstruction:instructionsPatient",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.doseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.rate[x]",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.dispenseRequest.extension:medicationRequest-dispenseRequest-dispenserInstruction-r5",
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.rateQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frQuantiteDeProduit",
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.numberOfTimes",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.frequency",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.period",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime.period",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.dayOfWeek",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.timeOfDay",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.additionalInstructions",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.dateOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.conditionOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.precondition",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.date[x]",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventTime",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventEndSequence",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.approachSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.routeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.duration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerAdministration",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxLifetimeDose",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.quantityPrescribed",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frQuantiteDeProduit",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.validityPeriod",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frPeriodeDeRenouvellement",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.substitution.allowed[x]",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.substitution.reason[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.numberOfRepeats",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.repeatNumber",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.minimumDispenseInterval",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.offLabel.isOffLabelUse",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frHorsAMM",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.offLabel.reason[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.note",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecALD",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecAccidentTravail",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecPrevention",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.nonRemboursable",
+      "target" : [{
+        "code" : "FRCDATraitementPrescrit.entryRelationship:frNonRemboursable",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-item",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-request-document",
+    "element" : [{
+      "code" : "FRLMPrescriptionItem",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.header.identifier",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.header.status",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.status",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.header.author[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.requester",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.header.author[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.extension:FRActorExtension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.statusReason[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.statusReason",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.medication",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.medication:FRMedicationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.indication[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.reasonReference",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.intendedUseType",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.periodOfUse",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.sequence",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.sequence",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.note",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.patientInstruction",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.doseAndRate.dose[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.doseAndRate.rate[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat",
+        "equivalence" : "relatedto",
+        "comment" : "Regroupement porté par les éléments détaillés numberOfTimes, period, dayOfWeek, timeOfDay et additionalInstructions."
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.numberOfTimes",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.frequency",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.period",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.period",
+        "equivalence" : "equivalent",
+        "comment" : "L'unité (periodUnit) est portée par le code de la Quantity source."
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.dayOfWeek",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.dayOfWeek",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.timeOfDay",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.timeOfDay",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.frequency.additionalInstructions",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.additionalInstruction",
+        "equivalence" : "relatedto",
+        "comment" : "Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text."
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.dateOfAdministration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.event",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.conditionOfAdministration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.asNeededCodeableConcept",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.date[x]",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.bounds[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat",
+        "equivalence" : "relatedto",
+        "comment" : "Regroupement porté par les éléments détaillés durationValue, durationUnit et durationMax."
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration.durationValue",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.duration",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration.durationUnit",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.durationUnit",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.duration.durationMax",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.durationMax",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventTime",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat",
+        "equivalence" : "wider",
+        "comment" : "Regroupement porté par les éléments détaillés eventTimeCode et offset."
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventTime.eventTimeCode",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.when",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventTime.offset",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.timing.repeat.offset",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.eventEndSequence",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.site",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.route",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.maxDosePerPeriod.numerator",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerPeriod.duration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.maxDosePerPeriod.denominator",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxDosePerAdministration",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.maxDosePerAdministration",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.dosageInstructions.dosageDetails.maxLifetimeDose",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dosageInstruction.maxDosePerLifetime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.quantityPrescribed",
       "target" : [{
         "code" : "FRMedicationRequestDocument.dispenseRequest.quantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.substitution.allowedCodeableConcept",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frPeriodeDeRenouvellement",
+      "code" : "FRLMPrescriptionItem.validityPeriod",
       "target" : [{
         "code" : "FRMedicationRequestDocument.dispenseRequest.validityPeriod",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD",
+      "code" : "FRLMPrescriptionItem.substitution.allowed[x]",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.reasonReference:ald",
+        "code" : "FRMedicationRequestDocument.substitution.allowedCodeableConcept",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail",
+      "code" : "FRLMPrescriptionItem.substitution.reason[x]",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.reasonReference:accidentTravail",
+        "code" : "FRMedicationRequestDocument.substitution.reason",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention",
+      "code" : "FRLMPrescriptionItem.numberOfRepeats",
       "target" : [{
-        "code" : "FRMedicationRequestDocument.reasonReference:prevention",
+        "code" : "FRMedicationRequestDocument.dispenseRequest.numberOfRepeatsAllowed",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frNonRemboursable",
+      "code" : "FRLMPrescriptionItem.minimumDispenseInterval",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dispenseRequest.dispenseInterval",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.offLabel.isOffLabelUse",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.extension:offLabelUse",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.offLabel.reason[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.note",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.dispenseRequest.extension:medicationRequest-dispenseRequest-dispenserInstruction-r5",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecALD",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.reasonReference:FRObservationALDDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecAccidentTravail",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.reasonReference:FRObservationWorkRelatedAccidentDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.enRapportAvecPrevention",
+      "target" : [{
+        "code" : "FRMedicationRequestDocument.reasonReference:FRObservationPreventionDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPrescriptionItem.nonRemboursable",
       "target" : [{
         "code" : "FRMedicationRequestDocument.extension:FRNotCoveredExtension",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.entryRelationship:frHorsAMM",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.extension:FRMedicationRequestOutOfNomenclatureExtension",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.frReferenceInterne.externalDocument",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.instantiatesUri",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDATraitementPrescrit.precondition",
-      "target" : [{
-        "code" : "FRMedicationRequestDocument.dosageInstruction.additionalInstruction:precondition",
         "equivalence" : "equivalent"
       }]
     }]

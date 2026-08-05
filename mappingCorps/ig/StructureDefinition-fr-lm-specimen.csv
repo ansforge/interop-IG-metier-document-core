@@ -1,46 +1,10 @@
 "Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
 "fr-lm-specimen","fr-lm-specimen","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Specimen","Prélèvement","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"fr-lm-specimen.header","fr-lm-specimen.header","","","",1,1,"","","","Base {[]} {[]}
-","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
-"fr-lm-specimen.header.subject","fr-lm-specimen.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
-","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
-"fr-lm-specimen.header.identifier","fr-lm-specimen.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
-","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
-"fr-lm-specimen.header.author[x]","fr-lm-specimen.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
-","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
-"fr-lm-specimen.header.author[x].authorProfessional","fr-lm-specimen.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
-"fr-lm-specimen.header.author[x].authorOrganisation","fr-lm-specimen.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
-","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
-"fr-lm-specimen.header.author[x].authorDevice","fr-lm-specimen.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
-","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
-"fr-lm-specimen.header.performer[x]","fr-lm-specimen.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
-"fr-lm-specimen.header.participant[x]","fr-lm-specimen.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
-","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
-"fr-lm-specimen.header.participant[x].participantProfessional","fr-lm-specimen.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
-"fr-lm-specimen.header.participant[x].participantOrganisation","fr-lm-specimen.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
-","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
-"fr-lm-specimen.header.participant[x].participantDevice","fr-lm-specimen.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
-","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
-"fr-lm-specimen.header.informant","fr-lm-specimen.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
-","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
-"fr-lm-specimen.header.date","fr-lm-specimen.header.date","","","",0,1,"","","","dateTime {[]} {[]}
-","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
-"fr-lm-specimen.header.status","fr-lm-specimen.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Disponibilité du prélèvement","Statut","","","","","","","","","",,"","(preferred): HL7 specimen-status","","",,,,"fr-lm-entry.header.status",0,1,"",""
-"fr-lm-specimen.header.source","fr-lm-specimen.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
-"fr-lm-specimen.header.language","fr-lm-specimen.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
-La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
-La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
-La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
-La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
 "fr-lm-specimen.identifier","fr-lm-specimen.identifier","","","",1,*,"","","","Identifier {[]} {[]}
 ","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.identifier",1,*,"",""
+"fr-lm-specimen.status","fr-lm-specimen.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Disponibilité du prélèvement","Disponibilité du prélèvement","","","","","","","","","",,"","(preferred): HL7 specimen-status","","",,,,"fr-lm-specimen.status",0,1,"",""
 "fr-lm-specimen.type","fr-lm-specimen.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Échantillon prélevé","Échantillon prélevé","","","","","","","","","",,"","jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042","",,,,"fr-lm-specimen.type",0,1,"",""
 "fr-lm-specimen.specimenSource[x]","fr-lm-specimen.specimenSource[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}

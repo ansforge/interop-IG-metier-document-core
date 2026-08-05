@@ -1061,171 +1061,80 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td></tr></table>
 
 <h3 id="mapping-des-entrées-entre--modèle-métier--cda--fhir">Mapping des entrées entre : Modèle métier / CDA / FHIR</h3>
-<table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMCommentaireER</strong></p>
-</div></td><td><div><p><strong>FRCDACommentaireER</strong></p>
-</div></td><td><div><p><strong>Annotation</strong></p>
-</div></td></tr><tr><td><div><p>FRLMCommentaireER.codeCommentaireER</p>
-</div></td><td><div><p>FRCDACommentaireER.code</p>
-</div></td><td /></tr><tr><td><div><p>FRLMCommentaireER.texteCommentaireER</p>
-</div></td><td><div><p>FRCDACommentaireER.text</p>
-</div></td><td><div><p>Annotation.text</p>
-</div></td></tr><tr><td><div><p>FRLMCommentaireER.statutCommentaireER</p>
-</div></td><td><div><p>FRCDACommentaireER.statusCode</p>
-</div></td><td /></tr><tr><td><div><p>FRLMCommentaireER.auteurCommentaireER</p>
-</div></td><td><div><p>FRCDACommentaireER.author</p>
-</div></td><td><div><p>Annotation.author[x]</p>
-</div></td></tr><tr><td><div><p><strong>FRLMObservation</strong></p>
+<table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMObservation</strong></p>
 </div></td><td><div><p><strong>FRCDASimpleObservation</strong></p>
-</div></td><td><div><p><strong>Observation</strong></p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationIdentifiant</p>
-</div></td><td><div><p>FRCDASimpleObservation.id</p>
-</div></td><td><div><p>Observation.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationCode</p>
-</div></td><td><div><p>FRCDASimpleObservation.code</p>
-</div></td><td><div><p>Observation.code</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationDescription</p>
-</div></td><td><div><p>FRCDASimpleObservation.text</p>
-</div></td><td><div><p>Observation.note</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationStatut</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.status</p>
 </div></td><td><div><p>FRCDASimpleObservation.statusCode</p>
-</div></td><td><div><p>Observation.status</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationDate</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.directSubject[x]</p>
+</div></td><td><div><p>FRCDASimpleObservation.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.observationDate[x]</p>
 </div></td><td><div><p>FRCDASimpleObservation.effectiveTime</p>
-</div></td><td><div><p>Observation.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationResultat</p>
-</div></td><td><div><p>FRCDASimpleObservation.value</p>
-</div></td><td><div><p>Observation.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationInterpretation</p>
-</div></td><td><div><p>FRCDASimpleObservation.interpretationCode</p>
-</div></td><td><div><p>Observation.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationMethode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.type</p>
+</div></td><td><div><p>FRCDASimpleObservation.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.originalName</p>
+</div></td><td><div><p>FRCDASimpleObservation.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.method</p>
 </div></td><td><div><p>FRCDASimpleObservation.methodCode</p>
-</div></td><td><div><p>Observation.method</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationLocalisationAnatomique</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.specimen</p>
+</div></td><td><div><p>FRCDASimpleObservation.specimen</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.order</p>
+</div></td><td><div><p>FRCDASimpleObservation.inFulfillmentOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.bodySite</p>
 </div></td><td><div><p>FRCDASimpleObservation.targetSiteCode</p>
-</div></td><td><div><p>Observation.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationAuteur</p>
-</div></td><td><div><p>FRCDASimpleObservation.author</p>
-</div></td><td><div><p>Observation.performer</p>
-</div></td></tr><tr><td><div><p>FRLMObservation.observationNombreRenouvellements</p>
-</div></td><td><div><p>FRCDASimpleObservation.repeatNumber</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMParticipantCorps</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.result</p>
+</div></td><td><div><p>FRCDASimpleObservation.value</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.referenceRange</p>
+</div></td><td><div><p>FRCDASimpleObservation.referenceRange</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.interpretation</p>
+</div></td><td><div><p>FRCDASimpleObservation.interpretationCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.note</p>
+</div></td><td><div><p>FRCDASimpleObservation.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.component</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
+</div></td><td><div><p>FRCDASimpleObservation.entryRelationship</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td><div><p>FRCDASimpleObservation.entryRelationship</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
 </div></td><td><div><p><strong>FRCDAParticipant</strong></p>
-</div></td><td><div><p><strong>FRActorExtension</strong></p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.dateEtHeureParticipation</p>
-</div></td><td><div><p>FRCDAParticipant.time</p>
-</div></td><td /></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.IdentifiantParticipant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.identifier</p>
 </div></td><td><div><p>FRCDAParticipant.participantRole.id</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.typeParticipant</p>
-</div></td><td><div><p>FRCDAParticipant.code</p>
-</div></td><td><div><p>FRActorExtension.extension[typeCode].value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.adresses</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.addr</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.address</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.coordonneesTelecom</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.telecom</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-identiteParticipant.nom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.name</p>
 </div></td><td><div><p>FRCDAParticipant.participantRole.
 playingEntity.name</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.name</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-identiteParticipant.ProfessionSpecialite</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.type</p>
+</div></td><td><div><p>FRCDAParticipant.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.role</p>
 </div></td><td><div><p>FRCDAParticipant.participantRole.
 playingEntity.code</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.practitioner.qualification</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-identiteParticipant.description</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-playingEntity.desc</p>
-</div></td><td /></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.Organisation</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.scopingEntity</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FROrganizationDocument</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-Organisation.identifiant</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-scopingEntity.id</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FROrganizationDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-Organisation.code</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-scopingEntity.code</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FROrganizationDocument.type</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.
-Organisation.description</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-scopingEntity.desc</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FROrganizationDocument.extension:description</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.dispositifAutomatique</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.period</p>
+</div></td><td><div><p>FRCDAParticipant.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantProfessional</p>
+</div></td><td><div><p>FRCDAParticipant.participantRole.playingEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantDevice</p>
 </div></td><td><div><p>FRCDAParticipant.participantRole.playingDevice</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantOrganisation</p>
+</div></td><td><div><p>FRCDAParticipant.participantRole.scopingEntity</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
+</div></td><td><div><p><strong>FRActorExtension</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.type</p>
+</div></td><td><div><p>FRActorExtension.extension[typeCode].value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.identifier</p>
+</div></td><td><div><p>FRActorExtension.extension[actor].
+value[x]:FRPractitionerRoleDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.name</p>
+</div></td><td><div><p>FRActorExtension.extension[actor].
+value[x]:FRPractitionerRoleDocument.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.role</p>
+</div></td><td><div><p>FRActorExtension.extension[actor].
+value[x]:FRPractitionerRoleDocument.practitioner.qualification</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.period</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantProfessional</p>
+</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantDevice</p>
 </div></td><td><div><p>FRActorExtension.extension[actor].value[x]:Device</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.categorie</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-playingDevice.code</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:Device.type</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.nomModele</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-playingDevice.manufacturerModelName</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:Device.manufacturer</p>
-</div></td></tr><tr><td><div><p>FRLMParticipantCorps.participantRole.nomLogiciel</p>
-</div></td><td><div><p>FRCDAParticipant.participantRole.
-playingDevice.softwareName</p>
-</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:Device.deviceName.name</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPatientSujetNonHumain</strong></p>
-</div></td><td><div><p><strong>FRCDAPatientAvecSujetNonHumain</strong></p>
-</div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.specimen</p>
-</div></td></tr><tr><td><div><p>FRLMPatientSujetNonHumain.sujet</p>
-</div></td><td><div><p>FRCDAPatientAvecSujetNonHumain.subject.
-relatedSubject.code</p>
-</div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance</p>
-</div></td></tr><tr><td><div><p>FRLMPatientSujetNonHumain.sujet</p>
-</div></td><td><div><p>FRCDAPatientAvecSujetNonHumain.subject.
-relatedSubject.code</p>
-</div></td><td><div><p>Substance.code</p>
-</div></td></tr><tr><td><div><p>FRLMPatientSujetNonHumain.adresse</p>
-</div></td><td><div><p>FRCDAPatientAvecSujetNonHumain.subject.
-relatedSubject.addr</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMSujetNonHumain</strong></p>
-</div></td><td><div><p><strong>FRCDASujetNonHumain</strong></p>
-</div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.specimen</p>
-</div></td></tr><tr><td><div><p>FRLMSujetNonHumain.sujet</p>
-</div></td><td><div><p>FRCDASujetNonHumain.subject.
-relatedSubject.code</p>
-</div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.specimen.subject:Substance</p>
-</div></td></tr><tr><td><div><p>FRLMSujetNonHumain.sujet</p>
-</div></td><td><div><p>FRCDASujetNonHumain.subject.
-relatedSubject.code</p>
-</div></td><td><div><p>Substance.code</p>
-</div></td></tr><tr><td><div><p>FRLMSujetNonHumain.adresse</p>
-</div></td><td><div><p>FRCDASujetNonHumain.subject.
-relatedSubject.addr</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMAccidentsTransfusionnels</strong></p>
-</div></td><td><div><p><strong>FRCDAAccidentsTransfusionnels</strong></p>
-</div></td><td><div><p><strong>FRObservationTransfusionAccidentsDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.identifiant</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.id</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.code</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.code</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.description</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.text</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.statut</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.statusCode</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.date</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.effectiveTime</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.valeur</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.value</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.valueString</p>
-</div></td></tr><tr><td><div><p>FRLMAccidentsTransfusionnels.auteur</p>
-</div></td><td><div><p>FRCDAAccidentsTransfusionnels.author</p>
-</div></td><td><div><p>FRObservationTransfusionAccidentsDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMActeImagerie</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant.participantOrganisation</p>
+</div></td><td><div><p>FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMActeImagerie</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMActeImagerie</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:ImagingStudy</p>
 </div></td></tr><tr><td><div><p>FRLMActeImagerie.codeSection</p>
@@ -1248,62 +1157,7 @@ relatedSubject.addr</p>
 </div></td><td><div><p>FRCDADICOMActeImagerie.entry.frDICOMTechniqueImagerie</p>
 </div></td><td /></tr><tr><td><div><p>FRLMActeImagerie.entree.administrationProduits</p>
 </div></td><td><div><p>FRCDADICOMActeImagerie.entry.frDICOMAdministrationProduitDeSante</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMActe</strong></p>
-</div></td><td><div><p><strong>FRCDAActe</strong></p>
-</div></td><td><div><p><strong>FRProcedureDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMActe.identifiant</p>
-</div></td><td><div><p>FRCDAActe.id</p>
-</div></td><td><div><p>FRProcedureDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMActe.description</p>
-</div></td><td><div><p>FRCDAActe.text</p>
-</div></td><td><div><p>FRProcedureDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMActe.code</p>
-</div></td><td><div><p>FRCDAActe.code</p>
-</div></td><td><div><p>FRProcedureDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMActe.titre</p>
-</div></td><td /><td /></tr><tr><td><div><p>FRLMActe.statut</p>
-</div></td><td><div><p>FRCDAActe.statusCode</p>
-</div></td><td><div><p>FRProcedureDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMActe.date</p>
-</div></td><td><div><p>FRCDAActe.effectiveTime</p>
-</div></td><td><div><p>FRProcedureDocument.performed[x]</p>
-</div></td></tr><tr><td><div><p>FRLMActe.priorite</p>
-</div></td><td><div><p>FRCDAActe.priorityCode</p>
-</div></td><td><div><p>FRProcedureDocument.extension:priority</p>
-</div></td></tr><tr><td><div><p>FRLMActe.localisationAnatomique</p>
-</div></td><td><div><p>FRCDAActe.targetSiteCode</p>
-</div></td><td><div><p>FRProcedureDocument.bodySite.TargetSiteCode</p>
-</div></td></tr><tr><td><div><p>FRLMActe.voieDAbord</p>
-</div></td><td><div><p>FRCDAActe.approachSiteCode</p>
-</div></td><td><div><p>FRProcedureDocument.bodySite.ApproachSiteCode</p>
-</div></td></tr><tr><td><div><p>FRLMActe.perfomer</p>
-</div></td><td><div><p>FRCDAActe.performer</p>
-</div></td><td><div><p>FRProcedureDocument.performer.actor.extension:Intervenant</p>
-</div></td></tr><tr><td><div><p>FRLMActe.auteur</p>
-</div></td><td><div><p>FRCDAActe.author</p>
-</div></td><td><div><p>FRProcedureDocument.recorder.extension:author</p>
-</div></td></tr><tr><td><div><p>FRLMActe.informateur</p>
-</div></td><td><div><p>FRCDAActe.informant</p>
-</div></td><td><div><p>FRProcedureDocument.performer.actor.extension:Informateur</p>
-</div></td></tr><tr><td><div><p>FRLMActe.participant</p>
-</div></td><td><div><p>FRCDAActe.participant</p>
-</div></td><td><div><p>FRProcedureDocument.performer.actor.extension:Participant</p>
-</div></td></tr><tr><td><div><p>FRLMActe.circonstances</p>
-</div></td><td><div><p>FRCDAActe.entryRelationship:frReferenceInterneCirconstances</p>
-</div></td><td><div><p>FRProcedureDocument.encounter</p>
-</div></td></tr><tr><td><div><p>FRLMActe.reason</p>
-</div></td><td><div><p>FRCDAActe.entryRelationship:frReferenceInterneMotifActe</p>
-</div></td><td><div><p>FRProcedureDocument.reasonReference</p>
-</div></td></tr><tr><td><div><p>FRLMActe.dispositifMedical</p>
-</div></td><td><div><p>FRCDAActe.entryRelationship:frReferenceInterneDM</p>
-</div></td><td><div><p>FRProcedureDocument.usedReference</p>
-</div></td></tr><tr><td><div><p>FRLMActe.difficulte</p>
-</div></td><td><div><p>FRCDAActe.entryRelationship:frSimpleObservationDifficulte</p>
-</div></td><td><div><p>FRProcedureDocument.extension:difficulte</p>
-</div></td></tr><tr><td><div><p>FRLMActe.scores</p>
-</div></td><td><div><p>FRCDAActe.entryRelationship:frSimpleObservationScores</p>
-</div></td><td><div><p>FRProcedureDocument.partOf</p>
-</div></td></tr><tr><td><div><p><strong>FRLMAddendum</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMAddendum</strong></p>
 </div></td><td><div><p><strong>FRCDADicomAddendum</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:Addendum</p>
 </div></td></tr><tr><td><div><p>FRLMAddendum.codeSection</p>
@@ -1318,30 +1172,6 @@ relatedSubject.addr</p>
 </div></td></tr><tr><td><div><p>FRLMAddendum.auteur</p>
 </div></td><td><div><p>FRCDADicomAddendum.author</p>
 </div></td><td><div><p>FRCompositionDocument.section:Addendum.author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMAdministrationDeDerivesDuSang</strong></p>
-</div></td><td><div><p><strong>FRCDAAdministrationDeDerivesDuSang</strong></p>
-</div></td><td><div><p><strong>FRObservationAdministrationBloodDerivativesDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.identifiant</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.id</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.code</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.code</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.description</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.text</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.statut</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.statusCode</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.date</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.effectiveTime</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.valeur</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.value</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.valueBoolean</p>
-</div></td></tr><tr><td><div><p>FRLMAdministrationDeDerivesDuSang.auteur</p>
-</div></td><td><div><p>FRCDAAdministrationDeDerivesDuSang.author</p>
-</div></td><td><div><p>FRObservationAdministrationBloodDerivativesDocument.performer.extension:author</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAllergyIntolerance</strong></p>
 </div></td><td><div><p><strong>FRCDAAllergieOuHypersensibilite</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMAllergyIntolerance.header.identifier</p>
@@ -1499,7 +1329,50 @@ period.endDate</p>
 </div></td></tr><tr><td><div><p>FRLMAntecedentsMedicaux.entree.problemes</p>
 </div></td><td><div><p>FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes</p>
 </div></td><td><div><p>FRCompositionDocument.section:MedicalHistory.entry:FRConditionDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMBatterieExamensBiologieMedicale</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMObservationAssessment</strong></p>
+</div></td><td><div><p><strong>FRCDAEvaluation</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.header.identifier</p>
+</div></td><td><div><p>FRCDAEvaluation.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.header.status</p>
+</div></td><td><div><p>FRCDAEvaluation.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.observationDate[x]</p>
+</div></td><td><div><p>FRCDAEvaluation.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.type</p>
+</div></td><td><div><p>FRCDAEvaluation.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.method</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMObservationAssessment.bodySite</p>
+</div></td><td><div><p>FRLMObservationAssessment.targetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.result</p>
+</div></td><td><div><p>FRCDAEvaluation.value</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.interpretation</p>
+</div></td><td><div><p>FRCDAEvaluation.interpretationCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.note</p>
+</div></td><td><div><p>FRCDAEvaluation.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.component</p>
+</div></td><td><div><p>FRCDAEvaluation.entryRelationship:frEvaluationComposant</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMObservationAssessment</strong></p>
+</div></td><td><div><p><strong>FRObservationAssessmentDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.header.identifier</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.header.status</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.status.extension:statusReason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.observationDate[x]</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.effectiveDateTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.type</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.method</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.method</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.bodySite</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.bodySite</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.result</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.interpretation</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.interpretation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.note</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.note</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationAssessment.component</p>
+</div></td><td><div><p>FRObservationAssessmentDocument.component</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMBatterieExamensBiologieMedicale</strong></p>
 </div></td><td><div><p><strong>FRCDABatterieExamensDeBiologieMedicale</strong></p>
 </div></td><td><div><p><strong>FRObservationLaboratoryReportResultsDocument</strong></p>
 </div></td></tr><tr><td><div><p>FRLMBatterieExamensBiologieMedicale.identifiant</p>
@@ -1628,64 +1501,7 @@ period.endDate</p>
 </div></td><td><div><p>FRCDADICOMComplications.text</p>
 </div></td><td /></tr><tr><td><div><p>FRLMComplicationsActe.titreSection</p>
 </div></td><td><div><p>FRCDADICOMComplications.title</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMEvaluationComposantN2</strong></p>
-</div></td><td><div><p><strong>FRCDAEvaluationComposantN2</strong></p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.identifiant</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.id</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.id</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.codeEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.code</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.code</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.description</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.text</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.statut</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.statusCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.horodatage</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.effectiveTime</p>
-</div></td><td><div><p>FRObservationSurveyDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.resultat</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.value</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.interpretation</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.interpretationCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposantN2.commentaire</p>
-</div></td><td><div><p>FRCDAEvaluationComposantN2.entryRelationship:frCommentaireER</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2.extension:note.value[x]</p>
-</div></td></tr><tr><td><div><p><strong>FRLMEvaluationComposant</strong></p>
-</div></td><td><div><p><strong>FRCDAEvaluationComposant</strong></p>
-</div></td><td><div><p><strong>FRObservationSurveyDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.identifiant</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.id</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.id</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.codeEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.code</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.code</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.description</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.text</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.statut</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.statusCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.horodatage</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.effectiveTime</p>
-</div></td><td><div><p>FRObservationSurveyDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.resultat</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.value</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.interpretation</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.interpretationCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.composantEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.entryRelationship:frEvaluationComposantN2</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN2</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluationComposant.commentaire</p>
-</div></td><td><div><p>FRCDAEvaluationComposant.entryRelationship:frCommentaireER</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component:ComposantN1.extension:note.value[x]</p>
-</div></td></tr><tr><td><div><p><strong>FRLMConclusionExamenImagerie</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMConclusionExamenImagerie</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMConclusion</strong></p>
 </div></td><td><div><p>FRDiagnosticReportImagingDocument.conclusion</p>
 </div></td></tr><tr><td><div><p>FRLMConclusionExamenImagerie.codeSection</p>
@@ -1694,40 +1510,54 @@ period.endDate</p>
 </div></td><td><div><p>FRCDADICOMConclusion.text</p>
 </div></td><td /></tr><tr><td><div><p>FRLMConclusionExamenImagerie.titreSection</p>
 </div></td><td><div><p>FRCDADICOMConclusion.title</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMDemandeExamenOuSuivi</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMServiceRequest</strong></p>
 </div></td><td><div><p><strong>FRCDADemandeDExamenOuDeSuivi</strong></p>
-</div></td><td><div><p><strong>FRServiceRequestDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.identifiant</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.id</p>
-</div></td><td><div><p>FRServiceRequestDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.typeDemande</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.code</p>
-</div></td><td><div><p>FRServiceRequestDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.description</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.text</p>
-</div></td><td><div><p>FRServiceRequestDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.statutDemande</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.header.status</p>
 </div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.statusCode</p>
-</div></td><td><div><p>FRServiceRequestDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.date</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.effectiveTime</p>
-</div></td><td><div><p>FRServiceRequestDocument.occurrence[x]</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.resultat</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.value</p>
-</div></td><td><div><p>FRServiceRequestDocument.orderDetail.coding</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.interpretation</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.interpretationCode</p>
-</div></td><td><div><p>FRServiceRequestDocument.extension:interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.methode</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.methodCode</p>
-</div></td><td><div><p>FRServiceRequestDocument.extension:method</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.cible</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.code</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.quantity</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMServiceRequest.bodySite</p>
 </div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.targetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.reason[x]</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.reasonCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.priority</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.priorityCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.supportingInformation[x]</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.specimen</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.specimen</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.encounter</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.entryRelationship.encounter</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.occurrence[x]</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.patientInstructions</p>
+</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMServiceRequest</strong></p>
+</div></td><td><div><p><strong>FRServiceRequestDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.header.status</p>
+</div></td><td><div><p>FRServiceRequestDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.code</p>
+</div></td><td><div><p>FRServiceRequestDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.quantity</p>
+</div></td><td><div><p>FRServiceRequestDocument.quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.bodySite</p>
 </div></td><td><div><p>FRServiceRequestDocument.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMDemandeExamenOuSuivi.auteur</p>
-</div></td><td><div><p>FRCDADemandeDExamenOuDeSuivi.author</p>
-</div></td><td><div><p>FRServiceRequestDocument.requester.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMAdvanceDirective</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.reason[x]</p>
+</div></td><td><div><p>FRServiceRequestDocument.reasonCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.priority</p>
+</div></td><td><div><p>FRServiceRequestDocument.priority</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.supportingInformation[x]</p>
+</div></td><td><div><p>FRServiceRequestDocument.supportingInfo</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.specimen</p>
+</div></td><td><div><p>FRServiceRequestDocument.specimen</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.encounter</p>
+</div></td><td><div><p>FRServiceRequestDocument.encounter</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.occurrence[x]</p>
+</div></td><td><div><p>FRServiceRequestDocument.occurrence[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMServiceRequest.patientInstructions</p>
+</div></td><td><div><p>FRServiceRequestDocument.note</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMAdvanceDirective</strong></p>
 </div></td><td><div><p><strong>FRCDADirectiveAnticipee</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMAdvanceDirective.header.identifier</p>
 </div></td><td><div><p>FRCDADirectiveAnticipee.id</p>
@@ -2026,27 +1856,6 @@ attachment.title</p>
 </div></td><td /></tr><tr><td><div><p>FRLMEffetsIndesirables.entree.effetIndesirable</p>
 </div></td><td><div><p>FRCDAEffetsIndesirables.entry:FRCDAEffetIndesirable</p>
 </div></td><td><div><p>FRCompositionDocument.section:adverseEvent.entry:FRAdverseEventDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMEnRapportAvecAccidentTravail</strong></p>
-</div></td><td><div><p><strong>FRCDAEnRapportAvecAccidentTravail</strong></p>
-</div></td><td><div><p><strong>FRObservationWorkRelatedAccidentDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.identifiant</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.id</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.code</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.code</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.description</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.text</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.statut</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.statusCode</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.horodatage</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.effectiveTime</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMEnRapportAvecAccidentTravail.resultat</p>
-</div></td><td><div><p>FRCDAEnRapportAvecAccidentTravail.value</p>
-</div></td><td><div><p>FRObservationWorkRelatedAccidentDocument.valueBoolean</p>
 </div></td></tr><tr><td><div><p><strong>FRLMEncounter</strong></p>
 </div></td><td><div><p><strong>FRCDARencontre</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMEncounter.header.identifier</p>
@@ -2132,49 +1941,7 @@ assignedEntity.representedOrganization</p>
 </div></td><td /></tr><tr><td><div><p>FRLMEncounter.subEncounter</p>
 </div></td><td><div><p>FREncounterDocument.partOf</p>
 </div></td><td /></tr><tr><td><div><p>FRLMEncounter.note</p>
-</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMEvaluation</strong></p>
-</div></td><td><div><p><strong>FRCDAEvaluation</strong></p>
-</div></td><td><div><p><strong>FRObservationSurveyDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.identifiant</p>
-</div></td><td><div><p>FRCDAEvaluation.id</p>
-</div></td><td /></tr><tr><td><div><p>FRLMEvaluation.typeEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluation.code</p>
-</div></td><td><div><p>FRObservationSurveyDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.description</p>
-</div></td><td><div><p>FRCDAEvaluation.text</p>
-</div></td><td><div><p>FRObservationSurveyDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.statut</p>
-</div></td><td><div><p>FRCDAEvaluation.statusCode</p>
-</div></td><td /></tr><tr><td><div><p>FRLMEvaluation.date</p>
-</div></td><td><div><p>FRCDAEvaluation.effectiveTime</p>
-</div></td><td /></tr><tr><td><div><p>FRLMEvaluation.valeur</p>
-</div></td><td><div><p>FRCDAEvaluation.value</p>
-</div></td><td><div><p>FRObservationSurveyDocument.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.interpretation</p>
-</div></td><td><div><p>FRCDAEvaluation.interpretationCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.evaluateur</p>
-</div></td><td><div><p>FRCDAEvaluation.performer</p>
-</div></td><td><div><p>FRObservationSurveyDocument.performer.extension:Evaluateur</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.auteurEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluation.author</p>
-</div></td><td><div><p>FRObservationSurveyDocument.performer.extension:Auteur</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.responsableEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluation.participant</p>
-</div></td><td><div><p>FRObservationSurveyDocument.performer.extension:Participant</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.evaluationComposant</p>
-</div></td><td><div><p>FRCDAEvaluation.entryRelationship:frEvaluationComposant</p>
-</div></td><td><div><p>FRObservationSurveyDocument.component</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.statutEvaluation</p>
-</div></td><td><div><p>FRCDAEvaluation.entryRelationship:frStatut</p>
-</div></td><td><div><p>FRObservationSurveyDocument.status.extension:statusReason</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.commentaire</p>
-</div></td><td><div><p>FRCDAEvaluation.entryRelationship:frCommentaireER</p>
-</div></td><td><div><p>FRObservationSurveyDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMEvaluation.referenceInterne</p>
-</div></td><td><div><p>FRCDAEvaluation.entryRelationship:frReferenceInterne</p>
-</div></td><td><div><p>FRObservationSurveyDocument.hasMember</p>
-</div></td></tr><tr><td><div><p><strong>FRLMImagingStudy</strong></p>
+</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMImagingStudy</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMExamenImagerie</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMImagingStudy.header.identifier</p>
 </div></td><td><div><p>FRCDADICOMTechniqueImagerie.id</p>
@@ -2277,99 +2044,58 @@ performer.actor:Organization</p>
 </div></td></tr><tr><td><div><p>FRLMFonctionsPhysiques.entree.evalutation</p>
 </div></td><td><div><p>FRCDAFonctionsPhysiques.entry:FRCDAEvaluation</p>
 </div></td><td><div><p>FRCompositionDocument.section:PhysicalFunctions.entry:FRObservationSurveyDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMGroupDeQuestionnairesDevaluation</strong></p>
-</div></td><td><div><p><strong>FRCDAGroupeDeQuestionnairesDEvaluation</strong></p>
-</div></td><td><div><p><strong>FRObservationSurveyDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMGroupDeQuestionnairesDevaluation.identifiant</p>
-</div></td><td><div><p>FRCDAGroupeDeQuestionnairesDEvaluation.id</p>
-</div></td><td><div><p>FRObservationSurveyDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMGroupDeQuestionnairesDevaluation.code</p>
-</div></td><td><div><p>FRCDAGroupeDeQuestionnairesDEvaluation.code</p>
-</div></td><td><div><p>FRObservationSurveyDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMGroupDeQuestionnairesDevaluation.statut</p>
-</div></td><td><div><p>FRCDAGroupeDeQuestionnairesDEvaluation.statusCode</p>
-</div></td><td><div><p>FRObservationSurveyDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMGroupDeQuestionnairesDevaluation.horodatage</p>
-</div></td><td><div><p>FRCDAGroupeDeQuestionnairesDEvaluation.effectiveTime</p>
-</div></td><td><div><p>FRObservationSurveyDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMGroupDeQuestionnairesDevaluation.evaluation</p>
-</div></td><td><div><p>FRCDAGroupeDeQuestionnairesDEvaluation.component:frEvaluation</p>
-</div></td><td><div><p>FRObservationSurveyDocument.hasMember:FRObservationSurveyDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMHabitusModeDeVieEntree</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMObservationSocialHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHabitusModeDeVie</strong></p>
-</div></td><td><div><p><strong>FRObservationSocialHistoryDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.identifiant</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.id</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.code</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.code</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.code.precision</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.code.qualifier</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.component</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.code.
-precision.name</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.code.
-qualifier.name</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.component.code</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.code.
-precision.value</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.code.
-qualifier.value</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.component.value</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.description</p>
-</div></td><td><div><p>FRCDAHabitusModeDeVie.text</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.statut</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.header.status</p>
 </div></td><td><div><p>FRCDAHabitusModeDeVie.statusCode</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.horodatage</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.observationDate[x]</p>
 </div></td><td><div><p>FRCDAHabitusModeDeVie.effectiveTime</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMHabitusModeDeVieEntree.resultat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.type</p>
+</div></td><td><div><p>FRCDAHabitusModeDeVie.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.result</p>
 </div></td><td><div><p>FRCDAHabitusModeDeVie.value</p>
-</div></td><td><div><p>FRObservationSocialHistoryDocument.value</p>
-</div></td></tr><tr><td><div><p><strong>FRLMHistoriqueGrossesse</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.note</p>
+</div></td><td><div><p>FRCDAHabitusModeDeVie.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMObservationSocialHistory</strong></p>
+</div></td><td><div><p><strong>FRObservationSocialHistoryDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.header.status</p>
+</div></td><td><div><p>FRObservationSocialHistoryDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.observationDate[x]</p>
+</div></td><td><div><p>FRObservationSocialHistoryDocument.effectiveDateTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.type</p>
+</div></td><td><div><p>FRObservationSocialHistoryDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.result</p>
+</div></td><td><div><p>FRObservationSocialHistoryDocument.valueCodeableConcept</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationSocialHistory.note</p>
+</div></td><td><div><p>FRObservationSocialHistoryDocument.note</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPregnancyHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDeLaGrossesse</strong></p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMHistoriqueGrossesse</strong></p>
-</div></td><td><div><p><strong>FRCDAHistoriqueDeLaGrossesse</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.header.status</p>
+</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.directSubject[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPregnancyHistory.type</p>
+</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.observationDate[x]</p>
+</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.result</p>
+</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frObservationSurLaGrossesse</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.component</p>
+</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frNaissance</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.derivedFrom[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPregnancyHistory.hasMember[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMPregnancyHistory</strong></p>
 </div></td><td><div><p><strong>FRPregnancyHistoryDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.identifiant</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.id</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.identifiant</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.header.identifier</p>
 </div></td><td><div><p>FRPregnancyHistoryDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.code</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.code</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.code</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.type</p>
 </div></td><td><div><p>FRPregnancyHistoryDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.statut</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.statusCode</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.statut</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.statusCode</p>
-</div></td><td /></tr><tr><td><div><p>FRLMHistoriqueGrossesse.periodeGrossesse</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.effectiveTime</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.effectivePeriod</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.periodeGrossesse</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.effectiveTime</p>
-</div></td><td><div><p>FRPregnancyHistoryDocument.date</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.choice:FRLMNaissance</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frNaissance</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.hasMember:FRObservationBirthEventDocument</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.choice[x]</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frObservationSurLaGrossesse</p>
-</div></td><td><div><p>FRPregnancyHistoryDocument.entry.item:FRObservationPregnancyDocument</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.choice:FRLMObservationGrossesse</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frObservationSurLaGrossesse</p>
-</div></td><td><div><p>FRObservationPregnancyHistoryDocument.hasMember:FRObservationPregnancyDocument</p>
-</div></td></tr><tr><td><div><p>FRLMHistoriqueGrossesse.choice[x]</p>
-</div></td><td><div><p>FRCDAHistoriqueDeLaGrossesse.entryRelationship:frNaissance</p>
-</div></td><td><div><p>FRPregnancyHistoryDocument.entry.item:FRObservationBirthEventDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMHistoriqueDesActes</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.observationDate[x]</p>
+</div></td><td><div><p>FRPregnancyHistoryDocument.effective[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.result</p>
+</div></td><td><div><p>FRPregnancyHistoryDocument.hasMember:FRObservationPregnancyDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyHistory.component</p>
+</div></td><td><div><p>FRPregnancyHistoryDocument.component</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMHistoriqueDesActes</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDesActes</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:historyActs</p>
 </div></td></tr><tr><td><div><p>FRLMHistoriqueDesActes.codeSection</p>
@@ -2528,27 +2254,104 @@ specimenRole.specimenPlayingEntity.code</p>
 </div></td></tr><tr><td><div><p>FRLMIsolatMicrobiologique.commentaire</p>
 </div></td><td><div><p>FRCDAIsolatMicrobiologique.component:frCommentaireER</p>
 </div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.note</p>
-</div></td></tr><tr><td><div><p><strong>FRLMObservationGrossesse</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMObservationVitalSign</strong></p>
+</div></td><td><div><p><strong>FRCDASigneVitalObserve</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.identifier</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.observationDate[x]</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.type</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.status</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.method</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.methodCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.bodySite</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.targetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.result</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.value</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.interpretation</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.interpretationCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.note</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.author</p>
+</div></td><td><div><p>FRCDASigneVitalObserve.author</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMObservationVitalSign</strong></p>
+</div></td><td><div><p><strong>FRObservationVitalSignsDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.identifier</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.observationDate[x]</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.effectiveDateTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.type</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.status</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.method</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.method</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.bodySite</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.bodySite</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.result</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.component.valueQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.interpretation</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.interpretation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.note</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.note</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservationVitalSign.header.author</p>
+</div></td><td><div><p>FRObservationVitalSignsDocument.extension:author</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPregnancyObservation</strong></p>
 </div></td><td><div><p><strong>FRCDAObservationSurLaGrossesse</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMObservationGrossesse.identifiant</p>
-</div></td><td><div><p>FRCDAObservationSurLaGrossesse.id</p>
-</div></td><td><div><p>FRObservationPregnancyDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMObservationGrossesse.code</p>
-</div></td><td><div><p>FRCDAObservationSurLaGrossesse.code</p>
-</div></td><td><div><p>FRObservationPregnancyDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMObservationGrossesse.description</p>
-</div></td><td><div><p>FRCDAObservationSurLaGrossesse.text</p>
-</div></td><td><div><p>FRObservationPregnancyDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMObservationGrossesse.statut</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.header.status</p>
 </div></td><td><div><p>FRCDAObservationSurLaGrossesse.statusCode</p>
-</div></td><td><div><p>FRObservationPregnancyDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMObservationGrossesse.date</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.directSubject[x]</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.observationDate[x]</p>
 </div></td><td><div><p>FRCDAObservationSurLaGrossesse.effectiveTime</p>
-</div></td><td><div><p>FRObservationPregnancyDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMObservationGrossesse.resultat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.type</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.method</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.methodCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result</p>
 </div></td><td><div><p>FRCDAObservationSurLaGrossesse.value</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result.dataAbsentReason</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.nullFlavor</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result.referenceRange</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.referenceRange</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.interpretation</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.interpretationCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.note</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.component</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPregnancyObservation.derivedFrom[x]</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.entryRelationship</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.hasMember[x]</p>
+</div></td><td><div><p>FRCDAObservationSurLaGrossesse.entryRelationship</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPregnancyObservation</strong></p>
+</div></td><td><div><p><strong>FRObservationPregnancyDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.directSubject[x]</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.observationDate[x]</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.effective[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.type</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.method</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.method</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result</p>
 </div></td><td><div><p>FRObservationPregnancyDocument.value</p>
-</div></td></tr><tr><td><div><p><strong>FRLMCarePlan</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result.dataAbsentReason</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.dataAbsentReason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.result.referenceRange</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.referenceRange</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.interpretation</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.interpretation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.note</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.note</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.component</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.component</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.derivedFrom[x]</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.derivedFrom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPregnancyObservation.hasMember[x]</p>
+</div></td><td><div><p>FRObservationPregnancyDocument.hasMember</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMCarePlan</strong></p>
 </div></td><td><div><p><strong>FRCDAReferenceItemPlanTraitement</strong></p>
 </div></td><td /></tr><tr><td><div><p><strong>FRLMPlanSoins</strong></p>
 </div></td><td><div><p><strong>FRCDAPlanDeSoins</strong></p>
@@ -2719,72 +2522,217 @@ detail:FRDocumentReferenceDocument.content.attachment.url</p>
 </div></td></tr><tr><td><div><p>FRLMProblemesActifs.entree.problemes</p>
 </div></td><td><div><p>FRCDAProblemesActifs.entry:FRCDAListeDesProblemes</p>
 </div></td><td><div><p>FRCompositionDocument.section:activeProblems.entry:FRConditionDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMProduitSante</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMProcedure</strong></p>
+</div></td><td><div><p><strong>FRCDAActe</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.code</p>
+</div></td><td><div><p>FRCDAActe.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.header.status</p>
+</div></td><td><div><p>FRCDAActe.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.procedureDate[x]</p>
+</div></td><td><div><p>FRCDAActe.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.priority</p>
+</div></td><td><div><p>FRCDAActe.priorityCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.bodySite</p>
+</div></td><td><div><p>FRCDAActe.targetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.approachSiteCode</p>
+</div></td><td><div><p>FRCDAActe.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.difficulty</p>
+</div></td><td><div><p>FRCDAActe.entryRelationship:frSimpleObservationDifficulte</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.reason[x]</p>
+</div></td><td><div><p>FRCDAActe.entryRelationship:frReferenceInterneMotifActe</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.outcome</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMProcedure.complication</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMProcedure.deviceUsed</p>
+</div></td><td><div><p>FRCDAActe.entryRelationship:frReferenceInterneDM</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.focalDevice</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMProcedure.note</p>
+</div></td><td><div><p>FRCDAActe.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMProcedure</strong></p>
+</div></td><td><div><p><strong>FRProcedureDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.code</p>
+</div></td><td><div><p>FRProcedureDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.header.status</p>
+</div></td><td><div><p>FRProcedureDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.procedureDate[x]</p>
+</div></td><td><div><p>FRProcedureDocument.performed[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.priority</p>
+</div></td><td><div><p>FRProcedureDocument.extension:priority</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.bodySite</p>
+</div></td><td><div><p>FRProcedureDocument.bodySite.TargetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.approachSiteCode</p>
+</div></td><td><div><p>FRProcedureDocument.bodySite.ApproachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.difficulty</p>
+</div></td><td><div><p>FRProcedureDocument.extension:difficulte</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.reason[x]</p>
+</div></td><td><div><p>FRProcedureDocument.reasonCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.reason[x]</p>
+</div></td><td><div><p>FRProcedureDocument.reasonReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.outcome</p>
+</div></td><td><div><p>FRProcedureDocument.outcome</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.complication</p>
+</div></td><td><div><p>FRProcedureDocument.complication</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.deviceUsed</p>
+</div></td><td><div><p>FRProcedureDocument.usedReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.focalDevice</p>
+</div></td><td><div><p>FRProcedureDocument.focalDevice.
+manipulated.device</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.note</p>
+</div></td><td><div><p>FRProcedureDocument.note</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedication</strong></p>
 </div></td><td><div><p><strong>FRCDAProduitDeSante</strong></p>
-</div></td><td><div><p><strong>FRMedicationDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.medicament</p>
-</div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial</p>
-</div></td><td /></tr><tr><td><div><p>FRLMProduitSante.medicament.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.identifyingCode[x]</p>
 </div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.
 manufacturedMaterial.code</p>
-</div></td><td><div><p>FRMedicationDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.medicament.
-code.autreCodification</p>
-</div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.
-manufacturedMaterial.code.translation</p>
-</div></td><td><div><p>FRMedicationDocument.code.coding</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.nomProduit</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.classification</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:asSpecializedKind</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.productName</p>
 </div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.
 manufacturedMaterial.name</p>
-</div></td><td><div><p>FRMedicationDocument.extension:ihe-ext-medication-productname</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.formeGalenique</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.marketingAuthorisationHolder</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.doseForm</p>
 </div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.
 manufacturedMaterial.pharm:formCode</p>
-</div></td><td><div><p>FRMedicationDocument.form</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.numeroLot</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.isActive</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.substance</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:ingredient.
+pharm:ingredient.pharm:code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.strengthInfo.strength</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:ingredient.pharm:quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.strengthInfo.basisOfStrengthSubstance</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.unitOfPresentation</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:asContent</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.containedQuantity</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:asContent</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.amount</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:asContent</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.packageType</p>
+</div></td><td><div><p>FRCDAProduitDeSante.pharm:asContent.pharm:containerPackagedMedicine</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.device</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.characteristic</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.batch.lotNumber</p>
 </div></td><td><div><p>FRCDAProduitDeSante.manufacturedProduct.
 manufacturedMaterial.lotNumberText</p>
-</div></td><td><div><p>FRMedicationDocument.batch.lotNumber</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.dateExpiration</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.batch.expirationDate</p>
 </div></td><td><div><p>FRCDAProduitDeSante.pharm:expirationTime</p>
-</div></td><td><div><p>FRMedicationDocument.batch.expirationDate</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.conditionnement</p>
-</div></td><td><div><p>FRCDAProduitDeSante.pharm:asContent</p>
-</div></td><td><div><p>FRMedicationDocument.extension:ihe-ext-medication-characteristic</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.equivalentGenerique</p>
-</div></td><td><div><p>FRCDAProduitDeSante.pharm:asSpecializedKind</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedication</strong></p>
+</div></td><td><div><p><strong>FRMedicationDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.identifyingCode[x]</p>
+</div></td><td><div><p>FRMedicationDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.classification</p>
 </div></td><td><div><p>FRMedicationDocument.extension:ihe-ext-medication-classification</p>
-</div></td></tr><tr><td><div><p>FRLMProduitSante.substanceActive</p>
-</div></td><td><div><p>FRCDAProduitDeSante.pharm:ingredient</p>
-</div></td><td><div><p>FRMedicationDocument.ingredient:substanceActive</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPrelevement</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.productName</p>
+</div></td><td><div><p>FRMedicationDocument.extension:ihe-ext-medication-productname</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.marketingAuthorisationHolder</p>
+</div></td><td><div><p>FRMedicationDocument.manufacturer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item</p>
+</div></td><td><div><p>FRMedicationDocument.ingredient.itemReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.doseForm</p>
+</div></td><td><div><p>FRMedicationDocument.form</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.ingredient</p>
+</div></td><td><div><p>FRMedicationDocument.ingredient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.isActive</p>
+</div></td><td><div><p>FRMedicationDocument.ingredient.isActive</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.substance</p>
+</div></td><td><div><p>FRMedicationDocument.ingredient.itemCodeableConcept</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.strengthInfo.strength</p>
+</div></td><td><div><p>FRMedicationDocument.ingredient:substanceActive.strength</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.
+ingredient.strengthInfo.basisOfStrengthSubstance</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.unitOfPresentation</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.containedQuantity</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.item.amount</p>
+</div></td><td><div><p>FRMedicationDocument.amount</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.item.packageType</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.device</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.characteristic</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedication.batch.lotNumber</p>
+</div></td><td><div><p>FRMedicationDocument.batch.lotNumber</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedication.batch.expirationDate</p>
+</div></td><td><div><p>FRMedicationDocument.batch.expirationDate</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMSpecimen</strong></p>
 </div></td><td><div><p><strong>FRCDAPrelevement</strong></p>
-</div></td><td><div><p><strong>FRSpecimenDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.actePrelevement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.identifier</p>
+</div></td><td><div><p>FRCDAPrelevement.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.header.status</p>
+</div></td><td><div><p>FRCDAPrelevement.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.type</p>
 </div></td><td><div><p>FRCDAPrelevement.code</p>
-</div></td><td><div><p>FRSpecimenDocument.processing.procedure.coding.code</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.datePrelevement</p>
-</div></td><td><div><p>FRCDAPrelevement.effectiveTime</p>
-</div></td><td><div><p>FRSpecimenDocument.collection.collected[x]</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.localisationPrelevement</p>
-</div></td><td><div><p>FRCDAPrelevement.targetSiteCode</p>
-</div></td><td><div><p>FRSpecimenDocument.collection.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.performer</p>
-</div></td><td><div><p>FRCDAPrelevement.performer</p>
-</div></td><td><div><p>FRSpecimenDocument.collection.collector</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.echantillonPreleve</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.specimenSource[x]</p>
+</div></td><td><div><p>FRCDAPrelevement.participant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.parentSpecimen</p>
 </div></td><td><div><p>FRCDAPrelevement.participant:echantillonPreleve</p>
-</div></td><td><div><p>FRSpecimenDocument.type</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.dispositifUtilise</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.request</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.combined</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.collection.performer[x]</p>
+</div></td><td><div><p>FRCDAPrelevement.performer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.collected[x]</p>
+</div></td><td><div><p>FRCDAPrelevement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.quantity</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.collection.method</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.collection.device</p>
 </div></td><td><div><p>FRCDAPrelevement.participant:dispositifUtilise</p>
-</div></td><td><div><p>FRSpecimenDocument.container</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.produitUtilise</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.additive[x]</p>
 </div></td><td><div><p>FRCDAPrelevement.participant:produitUtilise</p>
-</div></td><td><div><p>FRSpecimenDocument.processing.additive:Substance</p>
-</div></td></tr><tr><td><div><p>FRLMPrelevement.dateReceptionEchantillon</p>
-</div></td><td><div><p>FRCDAPrelevement.entryRelationship.act</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.bodySite</p>
+</div></td><td><div><p>FRCDAPrelevement.targetSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.receivedDate</p>
+</div></td><td><div><p>FRCDAPrelevement.entryRelationship.
+act.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.container.specimenQuantity</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.container.containerDevice</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.condition</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.note</p>
+</div></td><td><div><p>FRCDAPrelevement.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMSpecimen</strong></p>
+</div></td><td><div><p><strong>FRSpecimenDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.identifier</p>
+</div></td><td><div><p>FRSpecimenDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.header.status</p>
+</div></td><td><div><p>FRSpecimenDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.type</p>
+</div></td><td><div><p>FRSpecimenDocument.type</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.specimenSource:Patient</p>
+</div></td><td><div><p>FRSpecimenDocument.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.specimenSource:Location</p>
+</div></td><td><div><p>FRSpecimenDocument.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.specimenSource:Device</p>
+</div></td><td><div><p>FRSpecimenDocument.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.parentSpecimen</p>
+</div></td><td><div><p>FRSpecimenDocument.parent</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.request</p>
+</div></td><td><div><p>FRSpecimenDocument.request</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.combined</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.collection.performer[x]</p>
+</div></td><td><div><p>FRSpecimenDocument.collection.collector</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.collected[x]</p>
+</div></td><td><div><p>FRSpecimenDocument.collection.collected[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.quantity</p>
+</div></td><td><div><p>FRSpecimenDocument.collection.quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.method</p>
+</div></td><td><div><p>FRSpecimenDocument.collection.method</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.device</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMSpecimen.collection.bodySite</p>
+</div></td><td><div><p>FRSpecimenDocument.collection.bodySite</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.receivedDate</p>
 </div></td><td><div><p>FRSpecimenDocument.receivedTime</p>
-</div></td></tr><tr><td><div><p><strong>FRLMRaisonRecommandation</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.collection.additive[x]</p>
+</div></td><td><div><p>FRSpecimenDocument.processing.additive</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.container.specimenQuantity</p>
+</div></td><td><div><p>FRSpecimenDocument.container.specimenQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.container.containerDevice</p>
+</div></td><td><div><p>FRSpecimenDocument.container.extension:device</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.condition</p>
+</div></td><td><div><p>FRSpecimenDocument.condition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.note</p>
+</div></td><td><div><p>FRSpecimenDocument.note</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMRaisonRecommandation</strong></p>
 </div></td><td><div><p><strong>FRCDARaisonDeLaRecommandation</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:reasonForRecommendation</p>
 </div></td></tr><tr><td><div><p><strong>FRLMRaisonRecommandationNonCode</strong></p>
@@ -2814,30 +2762,34 @@ manufacturedMaterial.lotNumberText</p>
 </div></td></tr><tr><td><div><p>FRLMRaisonRecommandation.entree.problemes</p>
 </div></td><td><div><p>FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme</p>
 </div></td><td><div><p>FRCompositionDocument.section:reasonForRecommendation.entry:FRConditionDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMRechercheDeMicroOrganismes</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMMicroOrganismSearch</strong></p>
 </div></td><td><div><p><strong>FRCDARechercheDeMicroOrganismes</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.identifiant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.identifier</p>
 </div></td><td><div><p>FRCDARechercheDeMicroOrganismes.id</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.code</p>
-</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.code</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.description</p>
-</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.text</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.statut</p>
-</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.statusCode</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.date</p>
-</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.effectiveTime</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.valeur</p>
-</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.value</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.valueBoolean</p>
-</div></td></tr><tr><td><div><p>FRLMRechercheDeMicroOrganismes.auteur</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.subject</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.author[x]</p>
 </div></td><td><div><p>FRCDARechercheDeMicroOrganismes.author</p>
-</div></td><td><div><p>FRObservationMicroorganismDetectionDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMResultatExamensBiologieElementCliniquePertinent</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.performer[x]</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.performer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.participant[x]</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.participant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.informant</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.informant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.date</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.author.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.status</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.language</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.languageCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.source</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.observationDate</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.type</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMicroOrganismSearch.result</p>
+</div></td><td><div><p>FRCDARechercheDeMicroOrganismes.value</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMResultatExamensBiologieElementCliniquePertinent</strong></p>
 </div></td><td><div><p><strong>FRCDAResultatExamensDeBiologieElementCliniquePertinent</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.identifiant</p>
 </div></td><td><div><p>FRCDAResultatExamensDeBiologieElementCliniquePertinent.id</p>
@@ -2907,66 +2859,76 @@ manufacturedMaterial.lotNumberText</p>
 </div></td></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference</p>
 </div></td><td><div><p>FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange</p>
 </div></td><td><div><p>FRObservationLaboratoryReportResultsDocument.valueRange</p>
-</div></td></tr><tr><td><div><p><strong>FRLMObservationResult</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMObservation</strong></p>
 </div></td><td><div><p><strong>FRCDAResultat</strong></p>
-</div></td><td><div><p><strong>FRObservationResultDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.identifiant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.identifier</p>
 </div></td><td><div><p>FRCDAResultat.id</p>
-</div></td><td><div><p>FRObservationResultDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.code</p>
-</div></td><td><div><p>FRCDAResultat.code</p>
-</div></td><td><div><p>FRObservationResultDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.description</p>
-</div></td><td><div><p>FRCDAResultat.text</p>
-</div></td><td><div><p>FRObservationResultDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.statut</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.status</p>
 </div></td><td><div><p>FRCDAResultat.statusCode</p>
-</div></td><td><div><p>FRObservationResultDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.date</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.directSubject[x]</p>
+</div></td><td><div><p>FRCDAResultat.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.observationDate[x]</p>
 </div></td><td><div><p>FRCDAResultat.effectiveTime</p>
-</div></td><td><div><p>FRObservationResultDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.valeur</p>
-</div></td><td><div><p>FRCDAResultat.value</p>
-</div></td><td><div><p>FRObservationResultDocument.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.interpretation</p>
-</div></td><td><div><p>FRCDAResultat.interpretationCode</p>
-</div></td><td><div><p>FRObservationResultDocument.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.site</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.type</p>
+</div></td><td><div><p>FRCDAResultat.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.originalName</p>
+</div></td><td><div><p>FRCDAResultat.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.method</p>
+</div></td><td><div><p>FRCDAResultat.methodCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.specimen</p>
+</div></td><td><div><p>FRCDAResultat.specimen</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.order</p>
+</div></td><td><div><p>FRCDAResultat.inFulfillmentOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.bodySite</p>
 </div></td><td><div><p>FRCDAResultat.targetSiteCode</p>
-</div></td><td><div><p>FRObservationResultDocument.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.auteur</p>
-</div></td><td><div><p>FRCDAResultat.author</p>
-</div></td><td><div><p>FRObservationResultDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.intervalleReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.result</p>
+</div></td><td><div><p>FRCDAResultat.value</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.referenceRange</p>
 </div></td><td><div><p>FRCDAResultat.referenceRange</p>
-</div></td><td><div><p>FRObservationResultDocument.referenceRange</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResult.commentaires</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.interpretation</p>
+</div></td><td><div><p>FRCDAResultat.interpretationCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.note</p>
 </div></td><td><div><p>FRCDAResultat.entryRelationship:frCommentaireER</p>
-</div></td><td /></tr><tr><td><div><p>FRLMObservationResult.demandeExamen</p>
-</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMResultatsEntry</strong></p>
-</div></td><td><div><p><strong>FRCDAResultats</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMResultatsEntry.identifiant</p>
-</div></td><td><div><p>FRCDAResultats.id</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.code</p>
-</div></td><td><div><p>FRCDAResultats.code</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.statut</p>
-</div></td><td><div><p>FRCDAResultats.statusCode</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.date</p>
-</div></td><td><div><p>FRCDAResultats.effectiveTime</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.executant</p>
-</div></td><td><div><p>FRCDAResultats.performer</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.performer</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.auteur</p>
-</div></td><td><div><p>FRCDAResultats.author</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.resultsInterpreter</p>
-</div></td></tr><tr><td><div><p>FRLMResultatsEntry.resultat</p>
-</div></td><td><div><p>FRCDAResultats.component:frResultat</p>
-</div></td><td><div><p>FRDiagnosticReportDocument.result:FRObservationResultDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMResultatsExamensBiologieMedicale</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.component</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMObservation</strong></p>
+</div></td><td><div><p><strong>FRObservationResultDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.identifier</p>
+</div></td><td><div><p>FRObservationResultDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.status</p>
+</div></td><td><div><p>FRObservationResultDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.directSubject[x]</p>
+</div></td><td><div><p>FRObservationResultDocument.focus</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.observationDate[x]</p>
+</div></td><td><div><p>FRObservationResultDocument.effective[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.type</p>
+</div></td><td><div><p>FRObservationResultDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.originalName</p>
+</div></td><td><div><p>FRObservationResultDocument.code.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.method</p>
+</div></td><td><div><p>FRObservationResultDocument.method</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.specimen</p>
+</div></td><td><div><p>FRObservationResultDocument.specimen</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.order</p>
+</div></td><td><div><p>FRObservationResultDocument.basedOn:FRServiceRequestDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.bodySite</p>
+</div></td><td><div><p>FRObservationResultDocument.bodySite</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.result</p>
+</div></td><td><div><p>FRObservationResultDocument.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.referenceRange</p>
+</div></td><td><div><p>FRObservationResultDocument.referenceRange</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.interpretation</p>
+</div></td><td><div><p>FRObservationResultDocument.interpretation</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.note</p>
+</div></td><td><div><p>FRObservationResultDocument.note</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.component</p>
+</div></td><td><div><p>FRObservationResultDocument.component</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
+</div></td><td><div><p>FRObservationResultDocument.derivedFrom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td><div><p>FRObservationResultDocument.hasMember</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMResultatsExamensBiologieMedicale</strong></p>
 </div></td><td><div><p><strong>FRCDAResultatExamensDeBiologie</strong></p>
 </div></td><td><div><p><strong>FRObservationLaboratoryReportResultsDocument</strong></p>
 </div></td></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.code</p>
@@ -3050,60 +3012,6 @@ manufacturedMaterial.lotNumberText</p>
 </div></td></tr><tr><td><div><p>FRLMResultats.entree.resultatsEntry</p>
 </div></td><td><div><p>FRCDAResultats.entry:FRCDAResultats</p>
 </div></td><td><div><p>FRCompositionDocument.section:results.entry:FRDiagnosticReportDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMSigneVitalObserve</strong></p>
-</div></td><td><div><p><strong>FRCDASigneVitalObserve</strong></p>
-</div></td><td><div><p><strong>FRObservationVitalSignsDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.identifiant</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.id</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.code</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.code</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.description</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.text</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.statut</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.statusCode</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.date</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.effectiveTime</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.observationEffectuee</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.value</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.component.valueQuantity</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.interpretation</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.interpretationCode</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.interpretation</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.methodeUtilisee</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.methodCode</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.method</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.siteObservation</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.targetSiteCode</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVitalObserve.auteur</p>
-</div></td><td><div><p>FRCDASigneVitalObserve.author</p>
-</div></td><td><div><p>FRObservationVitalSignsDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMSigneVital</strong></p>
-</div></td><td><div><p><strong>FRCDASignesVitaux</strong></p>
-</div></td><td><div><p><strong>FRObservationVitalSignsPanelDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.identifiant</p>
-</div></td><td><div><p>FRCDASignesVitaux.id</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.id</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.code</p>
-</div></td><td><div><p>FRCDASignesVitaux.code</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.statut</p>
-</div></td><td><div><p>FRCDASignesVitaux.statusCode</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.date</p>
-</div></td><td><div><p>FRCDASignesVitaux.effectiveTime</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.auteur</p>
-</div></td><td><div><p>FRCDASignesVitaux.author</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p>FRLMSigneVital.signeVital</p>
-</div></td><td><div><p>FRCDASignesVitaux.component:frSigneVitalObserve</p>
-</div></td><td><div><p>FRObservationVitalSignsPanelDocument.hasMember:FRObservationVitalSignsDocument</p>
 </div></td></tr><tr><td><div><p><strong>FRLMCRBIOSousChapitre</strong></p>
 </div></td><td><div><p><strong>FRCDACRBIOSousChapitre</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:avec-sous-sections.section</p>
@@ -3291,144 +3199,410 @@ endpoint.address</p>
 </div></td><td><div><p>FRProcedureImagingDocument.asserter</p>
 </div></td><td /></tr><tr><td><div><p>FRLMProcedure.header.participant[x]</p>
 </div></td><td><div><p>FRProcedureImagingDocument.extension:participant</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMTraitement</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedicationUse</strong></p>
 </div></td><td><div><p><strong>FRCDATraitement</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitement.identifiant</p>
-</div></td><td><div><p>FRCDATraitement.id</p>
-</div></td><td><div><p>FRMedicationStatementDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.code</p>
-</div></td><td><div><p>FRCDATraitement.code</p>
-</div></td><td><div><p>FRMedicationStatementDocument.category</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.note</p>
-</div></td><td><div><p>FRCDATraitement.text</p>
-</div></td><td><div><p>FRMedicationStatementDocument.category.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.header.status</p>
 </div></td><td><div><p>FRCDATraitement.statusCode</p>
-</div></td><td><div><p>FRMedicationStatementDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.occurancePeriod</p>
-</div></td><td><div><p>FRCDATraitement.effectiveTime[not(@operator='A')]</p>
-</div></td><td><div><p>FRMedicationStatementDocument.effectivePeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.occuranceDateTim</p>
-</div></td><td><div><p>FRCDATraitement.effectiveTime[@operator='A']</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.timing</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.route</p>
-</div></td><td><div><p>FRCDATraitement.routeCode</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.route</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.site</p>
-</div></td><td><div><p>FRCDATraitement.approachSiteCode</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.site</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.dose</p>
-</div></td><td><div><p>FRCDATraitement.doseQuantity</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.doseAndRate.doseQuantity</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.rate[x]</p>
-</div></td><td><div><p>FRCDATraitement.rateQuantity</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.doseAndRate.rateQuantity</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.doseMaximale</p>
-</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.maxDosePerPeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.medicament</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.header.author[x]</p>
+</div></td><td><div><p>FRCDATraitement.author</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.treatmentStatus</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationUse.changeType</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationUse.medication</p>
 </div></td><td><div><p>FRCDATraitement.consumable</p>
-</div></td><td><div><p>FRMedicationStatementDocument.medication:FRMedicationDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.reason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.reason[x]</p>
 </div></td><td><div><p>FRCDATraitement.entryRelationship:frReferenceInterne</p>
-</div></td><td><div><p>FRMedicationStatementDocument.reasonReference</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.prescription</p>
-</div></td><td><div><p>FRCDATraitement.entryRelationship:frPrescription</p>
-</div></td><td><div><p>FRMedicationStatementDocument.basedOn:FRMedicationRequestDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.subordinateTreatment</p>
-</div></td><td><div><p>FRCDATraitement.entryRelationship:frTraitementSubordonne</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitement.instructionsPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRCDATraitement.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRCDATraitement.doseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRCDATraitement.rateQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
 </div></td><td><div><p>FRCDATraitement.entryRelationship:frInstructionsAuPatient</p>
-</div></td><td><div><p>FRMedicationStatementDocument.dosage.additionalInstruction</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
 </div></td><td><div><p>FRCDATraitement.precondition</p>
-</div></td><td><div><p>FRMedicationStatementDocument.note</p>
-</div></td></tr><tr><td><div><p><strong>FRLMTraitementDispense</strong></p>
-</div></td><td><div><p><strong>FRCDATraitementDispense</strong></p>
-</div></td><td><div><p><strong>FRMedicationDispenseDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.identifiant</p>
-</div></td><td><div><p>FRCDATraitementDispense.id</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.code</p>
-</div></td><td><div><p>FRCDATraitementDispense.code</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.type</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.description</p>
-</div></td><td><div><p>FRCDATraitementDispense.text</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.type.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.quantite</p>
-</div></td><td><div><p>FRCDATraitementDispense.quantity</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.quantity</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.medicamentDelivre</p>
-</div></td><td><div><p>FRCDATraitementDispense.product:frProduitDeSante</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.medication[x]</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.referencePrescription</p>
-</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frReferenceItemPrescription</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.authorizingPrescription</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.traitement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRCDATraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRCDATraitement.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRCDATraitement.routeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.derivedFrom[x]</p>
+</div></td><td><div><p>FRCDATraitement.entryRelationship:frPrescription</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationUse.note</p>
+</div></td><td><div><p>FRCDATraitement.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedicationDispense</strong></p>
 </div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement</p>
-</div></td><td><div><p>FRMedicationDispenseDocument.supportingInformation</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementDispense.instructionsPatient</p>
-</div></td><td><div><p>FRCDATraitementDispense.entryRelationship.frInstructionsAuPatient</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementDispense.notesDispensateur</p>
-</div></td><td><div><p>FRCDATraitementDispense.entryRelationship.frNotesDuDispensateur</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementDispense.substitution</p>
-</div></td><td><div><p>FRCDATraitementDispense.entryRelationship.frActeSubstitution</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMTraitement</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.identifier</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.author[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.status</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.receiver[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.relatedRequest</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frReferenceItemPrescription</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.medicament</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.product:frProduitDeSante</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dispensedQuantity</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.timeOfDispensation</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.substitutionOccurred</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frActeSubstitution</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frTraitement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.note</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.doseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.rateQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.routeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.note</p>
+</div></td><td><div><p>FRCDATraitementDispense.entryRelationship:frTraitement.entryRelationship:frNotesDuDispensateur</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedicationDispense</strong></p>
+</div></td><td><div><p><strong>FRMedicationDispenseDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.identifier</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.author[x]</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.performer.actor</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.header.status</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.receiver[x]</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.receiver</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.relatedRequest</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.authorizingPrescription</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.medicament</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.medication[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dispensedQuantity</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.timeOfDispensation</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.whenHandedOver</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.substitutionOccurred</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.substitution.wasSubstituted</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.sequence</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.note</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.patientInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+doseAndRate.dose[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+doseAndRate.rate[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.dayOfWeek</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.timeOfDay</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.additionalInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.event</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.asNeededCodeableConcept</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.bounds[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.duration.durationValue</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.duration</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.duration.durationUnit</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.durationUnit</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.duration.durationMax</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.durationMax</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventTime.eventTimeCode</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.when</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventTime.offset</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+timing.repeat.offset</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.site</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.route</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+maxDosePerPeriod.numerator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.
+maxDosePerPeriod.denominator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.maxDosePerAdministration</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.dosageInstruction.maxDosePerLifetime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationDispense.note</p>
+</div></td><td><div><p>FRMedicationDispenseDocument.note</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedicationAdministration</strong></p>
 </div></td><td><div><p><strong>FRCDATraitement</strong></p>
-</div></td><td><div><p><strong>FRMedicationAdministrationDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.identifiant</p>
-</div></td><td><div><p>FRCDATraitement.id</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.code</p>
-</div></td><td><div><p>FRCDATraitement.code</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.category</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.note</p>
-</div></td><td><div><p>FRCDATraitement.text</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.category.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.status</p>
-</div></td><td><div><p>FRCDATraitement.statusCode</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.occurancePeriod</p>
-</div></td><td><div><p>FRCDATraitement.effectiveTime[not(@operator='A')]</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.effectivePeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.occuranceDateTim</p>
-</div></td><td><div><p>FRCDATraitement.effectiveTime[@operator='A']</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.extension:medicationAdministration-occurence-r5</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage</p>
-</div></td><td /><td /></tr><tr><td><div><p>FRLMTraitement.dosage.route</p>
-</div></td><td><div><p>FRCDATraitement.routeCode</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.route</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.site</p>
-</div></td><td><div><p>FRCDATraitement.approachSiteCode</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.site</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.dose</p>
-</div></td><td><div><p>FRCDATraitement.doseQuantity</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.dose</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.rate[x]</p>
-</div></td><td><div><p>FRCDATraitement.rateQuantity</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.rate[x]</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.dosage.doseMaximale</p>
-</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.rateRatio</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.medicament</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.medication</p>
 </div></td><td><div><p>FRCDATraitement.consumable</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.medication:FRMedicationDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.reason</p>
-</div></td><td><div><p>FRCDATraitement.entryRelationship:frReferenceInterne</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.reasonReference</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.prescription</p>
-</div></td><td><div><p>FRCDATraitement.entryRelationship:frPrescription</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.request</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.subordinateTreatment</p>
-</div></td><td><div><p>FRCDATraitement.entryRelationship:frTraitementSubordonne</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.medication:FRMedicationsCombinaisonDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.instructionsPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.occurrence[x]</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime[not(@operator='A')]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.occurrence[x]</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime[@operator='A']</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.reason[x]</p>
+</div></td><td><div><p>FRCDATraitement.entryRelationship:frTraitement.entryRelationship:frReferenceInterne</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRCDATraitement.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.note</p>
 </div></td><td><div><p>FRCDATraitement.entryRelationship:frInstructionsAuPatient</p>
-</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRCDATraitement.doseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRCDATraitement.rateQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRCDATraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
 </div></td><td><div><p>FRCDATraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRCDATraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRCDATraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRCDATraitement.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRCDATraitement.routeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRCDATraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.note</p>
+</div></td><td><div><p>FRCDATraitement.text</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMMedicationAdministration</strong></p>
+</div></td><td><div><p><strong>FRMedicationAdministrationDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.medication</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.medication:FRMedicationDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.occurrence[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.effectivePeriod</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.occurrence[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.extension:medicationAdministration-occurence-r5</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.reason[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.reasonReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.reason[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.reasonCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.dosage</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage.renderedDosageInstruction</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.route</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.dose</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRMedicationAdministrationDocument.dosage.rate[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.dosage.
+dosageDetails.sequence</p>
+</div></td><td><div><p>FRLMMedicationAdministration.dosage.extension:FRMedicationAdministrationSequenceExtension</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMedicationAdministration.note</p>
 </div></td><td><div><p>FRMedicationAdministrationDocument.note</p>
-</div></td></tr><tr><td><div><p><strong>FRLMTraitementsAdministres</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMTraitementsAdministres</strong></p>
 </div></td><td><div><p><strong>FRCDATraitementsAdministres</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:medicationAdministration</p>
 </div></td></tr><tr><td><div><p>FRLMTraitementsAdministres.codeSection</p>
@@ -3657,30 +3831,34 @@ endpoint.address</p>
 </div></td></tr><tr><td><div><p>FRLMHabitusModeDeVie.entree.habitusModeDeVieEntry</p>
 </div></td><td><div><p>FRCDAHabitusModeDeVieSection.entry:FRCDAHabitusModeDeVie</p>
 </div></td><td><div><p>FRCompositionDocument.section:socialHistory.entry:FRObservationSocialHistoryDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMIdentificationDeMicroOrganismesMultiresistants</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMMultidrugResistantMicroorganismIdentification</strong></p>
 </div></td><td><div><p><strong>FRCDAIdentificationMicroOrganismesMultiresistants</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.identifiant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.identifier</p>
 </div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.id</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.code</p>
-</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.code</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.description</p>
-</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.text</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.statut</p>
-</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.statusCode</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.date</p>
-</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.effectiveTime</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.valeur</p>
-</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.value</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.valueString</p>
-</div></td></tr><tr><td><div><p>FRLMIdentificationDeMicroOrganismesMultiresistants.auteur</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.subject</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.author[x]</p>
 </div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.author</p>
-</div></td><td><div><p>FRObservationMultiresistantMicroorganismsIdentificationDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMInformationsCliniques</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.performer[x]</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.performer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.participant[x]</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.participant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.informant</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.informant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.date</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.author.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.status</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.language</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.languageCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.header.source</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.observationDate</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.type</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMMultidrugResistantMicroorganismIdentification.result</p>
+</div></td><td><div><p>FRCDAIdentificationMicroOrganismesMultiresistants.value</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMInformationsCliniques</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMHistoriqueMedical</strong></p>
 </div></td><td><div><p>FRCompositionDocument.section:history</p>
 </div></td></tr><tr><td><div><p>FRLMInformationsCliniques.titreSection</p>
@@ -3704,27 +3882,7 @@ endpoint.address</p>
 </div></td><td /><td /></tr><tr><td><div><p>FRLMInformationsCliniques.entree.dispositifMedical</p>
 </div></td><td /><td /></tr><tr><td><div><p>FRLMInformationsCliniques.entree.administrationProduitDeSante</p>
 </div></td><td /><td /></tr><tr><td><div><p>FRLMInformationsCliniques.entree.sexeClinique</p>
-</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMNaissance</strong></p>
-</div></td><td><div><p><strong>FRCDANaissance</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMNaissance.identifiant</p>
-</div></td><td><div><p>FRCDANaissance.id</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMNaissance.Code</p>
-</div></td><td><div><p>FRCDANaissance.code</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMNaissance.statut</p>
-</div></td><td><div><p>FRCDANaissance.status</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMNaissance.periode</p>
-</div></td><td><div><p>FRCDANaissance.effectiveTime</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMNaissance.identificationNouveauNe</p>
-</div></td><td><div><p>FRCDANaissance.subject</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.focus:RelatedPerson</p>
-</div></td></tr><tr><td><div><p>FRLMNaissance.observationNaissance</p>
-</div></td><td><div><p>FRCDANaissance.component:frObservationSurLaGrossesse</p>
-</div></td><td><div><p>FRObservationBirthEventDocument.hasMember:FRObservationPregnancyDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMQuantityExposure</strong></p>
+</div></td><td /><td /></tr><tr><td><div><p><strong>FRLMQuantityExposure</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMQuantite</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMQuantityExposure.header.
 participant[x].participantProfessional</p>
@@ -3820,194 +3978,373 @@ participant[x].participantProfessional</p>
 </div></td></tr><tr><td><div><p>FRLMSignesVitaux.entree.signesVitauxEntry:FRLMSigneVital</p>
 </div></td><td><div><p>FRCDASignesVitaux.entry:FRCDASignesVitauxEntry</p>
 </div></td><td><div><p>FRCompositionDocument.section:VitalSigns.entry:FRObservationVitalSignsDocument</p>
-</div></td></tr><tr><td><div><p><strong>FRLMSyntheseMedicaleSejour</strong></p>
-</div></td><td><div><p><strong>FRCDASyntheseMedicaleSejour</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.identifiant</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.id</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.code</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.code</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.description</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.text</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.statut</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.statusCode</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.date</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.effectiveTime</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.effective[x]</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.statutDocument</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.value</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.valueString</p>
-</div></td></tr><tr><td><div><p>FRLMSyntheseMedicaleSejour.auteur</p>
-</div></td><td><div><p>FRCDASyntheseMedicaleSejour.author</p>
-</div></td><td><div><p>FRObservationMedicalSummaryDocument.performer.extension:author</p>
-</div></td></tr><tr><td><div><p><strong>FRLMTraitementPrescrit</strong></p>
+</div></td></tr><tr><td><div><p><strong>FRLMPrescriptionItem</strong></p>
 </div></td><td><div><p><strong>FRCDATraitementPrescrit</strong></p>
-</div></td><td><div><p><strong>FRMedicationRequestDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.identifiant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.identifier</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.id</p>
-</div></td><td><div><p>FRMedicationRequestDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.code</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.code</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescrit.description</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.text</p>
-</div></td><td><div><p>FRMedicationRequestDocument.note</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.status</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.statusCode</p>
-</div></td><td><div><p>FRMedicationRequestDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.dureeTraitement</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.effectiveTime[not(@operator='A')]</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.timing.repeat.boundsPeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.frequenceAdministration</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.effectiveTime[@operator='A']</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.timing.repeat.frequency</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.nombreRenouvellement</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.repeatNumber</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.numberOfRepeatsAllowed</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.voieAdministration</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.routeCode</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.route</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.regionAnatomique</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.approachSiteCode</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.site</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.dose</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.doseQuantity</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.doseAndRate.doseRange</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.rythmeAdministration</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.rateQuantity</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.doseAndRate.rateRange</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.doseMaximale</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.maxDoseQuantity</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.maxDosePerPeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.produitSante</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.author[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.author</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.statusReason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.medication</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.consumable</p>
-</div></td><td><div><p>FRMedicationRequestDocument.medication:FRMedicationDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.prescripteur</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.author</p>
-</div></td><td><div><p>FRMedicationRequestDocument.extension:FRActorExtension</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.prescripteur</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.author</p>
-</div></td><td><div><p>FRMedicationRequestDocument.requester</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.auteur</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.author</p>
-</div></td><td><div><p>FRMedicationRequestDocument.extension:FRActorExtension</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.auteur</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.author</p>
-</div></td><td><div><p>FRMedicationRequestDocument.requester</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.motifTraitement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.indication[x]</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frReferenceInterne</p>
-</div></td><td><div><p>FRMedicationRequestDocument.reasonReference</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.traitementPrescritSubordonnee</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitementPrescritSubordonnee</p>
-</div></td><td><div><p>FRMedicationRequestDocument.medication:FRMedicationsCombinaisonDocument</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.referenceItemPlanTraitement</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frReferenceItemPlanTraitement</p>
-</div></td><td><div><p><strong>basedOn:FRMedicationRequestDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.instructionsPatient</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frInstructionsAuPatient</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.additionalInstruction:instructionsPatient</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.instructionsDispensateur</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.extension:medicationRequest-dispenseRequest-dispenserInstruction-r5</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.quantiteProduit</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.intendedUseType</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.periodOfUse</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.effectiveTime[not(@operator='A')]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.note</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.doseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.rateQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+effectiveTime.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+effectiveTime.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.routeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.quantityPrescribed</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frQuantiteDeProduit</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.quantity</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.autorisationSubstitution</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution</p>
-</div></td><td><div><p>FRMedicationRequestDocument.substitution.allowedCodeableConcept</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.periodeRenouvellement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.validityPeriod</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frPeriodeDeRenouvellement</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.validityPeriod</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.enRapportAvecALD</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD</p>
-</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:ald</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.enRapportAvecAccidentTravail</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail</p>
-</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:accidentTravail</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.enRapportAvecPrevention</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention</p>
-</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:prevention</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.nonRemboursable</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frNonRemboursable</p>
-</div></td><td><div><p>FRMedicationRequestDocument.extension:FRNotCoveredExtension</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.horsAMM</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.allowed[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.reason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.numberOfRepeats</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.repeatNumber</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.minimumDispenseInterval</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.isOffLabelUse</p>
 </div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frHorsAMM</p>
-</div></td><td><div><p>FRMedicationRequestDocument.extension:FRMedicationRequestOutOfNomenclatureExtension</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.referencePrescription</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.frReferenceInterne.externalDocument</p>
-</div></td><td><div><p>FRMedicationRequestDocument.instantiatesUri</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescrit.precondition</p>
-</div></td><td><div><p>FRCDATraitementPrescrit.precondition</p>
-</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.additionalInstruction:precondition</p>
-</div></td></tr><tr><td><div><p><strong>FRLMTraitementPrescritSubordonne</strong></p>
-</div></td><td><div><p><strong>FRCDATraitementPrescritSubordonne</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.identifiant</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.id</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.description</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.text</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.status</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.statusCode</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.frequenceAdministration</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.effectiveTime</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.dose</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.doseQuantity</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.rythmeAdministration</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.rateQuantity</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.produitSante</p>
-</div></td><td><div><p>FRCDAProduitDeSante.consumable</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementPrescritSubordonne.precondition</p>
-</div></td><td><div><p>FRCDATraitementPrescritSubordonne.precondition</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMTraitementSubordonne</strong></p>
-</div></td><td><div><p><strong>FRCDATraitementSubordonne</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementSubordonne.identifiantTraitement</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.id</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementSubordonne.descriptionTraitement</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.text</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.code.text</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementSubordonne.statutTraitement</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.statusCode</p>
-</div></td><td><div><p>FRMedicationsCombinaisonDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTraitementSubordonne.frequenceAdministration</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.effectiveTime</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementSubordonne.doseAadministrer</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.doseQuantity</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementSubordonne.rythmeAdministration</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.rateQuantity</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementSubordonne.medicamentTraitement</p>
-</div></td><td><div><p>FRCDAProduitDeSante.consumable</p>
-</div></td><td /></tr><tr><td><div><p>FRLMTraitementSubordonne.preconditionTraitement</p>
-</div></td><td><div><p>FRCDATraitementSubordonne.precondition</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMTransfusionDeProduitsSanguins</strong></p>
-</div></td><td><div><p><strong>FRCDATransfusionDeProduitsSanguins</strong></p>
-</div></td><td><div><p><strong>FRObservationBloodProductTransfusionDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.identifiant</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.id</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.code</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.code</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.code</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.description</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.text</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.note.text</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.statut</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.statusCode</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.status</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.date</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.effectiveTime</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.effectiveDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.transfusionProduitSanguin</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.value</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.valueBoolean</p>
-</div></td></tr><tr><td><div><p>FRLMTransfusionDeProduitsSanguins.auteur</p>
-</div></td><td><div><p>FRCDATransfusionDeProduitsSanguins.author</p>
-</div></td><td><div><p>FRObservationBloodProductTransfusionDocument.performer.extension:author</p>
-</div></td></tr></table>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.reason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.note</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecALD</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecAccidentTravail</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecPrevention</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.nonRemboursable</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frNonRemboursable</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPrescriptionItem</strong></p>
+</div></td><td><div><p><strong>FRMedicationRequestDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.identifier</p>
+</div></td><td><div><p>FRMedicationRequestDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.status</p>
+</div></td><td><div><p>FRMedicationRequestDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.author[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.requester</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.author[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.extension:FRActorExtension</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.statusReason[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.statusReason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.medication</p>
+</div></td><td><div><p>FRMedicationRequestDocument.medication:FRMedicationDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.indication[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.reasonReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.intendedUseType</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.periodOfUse</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.note</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.doseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.rateQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.
+entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.precondition</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.approachSiteCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.routeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frTraitement.maxDoseQuantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.quantityPrescribed</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frQuantiteDeProduit</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.validityPeriod</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frPeriodeDeRenouvellement</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.allowed[x]</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frAutorisationSubstitution</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.reason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.numberOfRepeats</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.repeatNumber</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.minimumDispenseInterval</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.isOffLabelUse</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frHorsAMM</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.reason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.note</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frInstructionsAuDispensateur</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecALD</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecALD</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecAccidentTravail</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecAccidentTravail</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecPrevention</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frEnRapportAvecPrevention</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.nonRemboursable</p>
+</div></td><td><div><p>FRCDATraitementPrescrit.entryRelationship:frNonRemboursable</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPrescriptionItem</strong></p>
+</div></td><td><div><p><strong>FRMedicationRequestDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.identifier</p>
+</div></td><td><div><p>FRMedicationRequestDocument.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.status</p>
+</div></td><td><div><p>FRMedicationRequestDocument.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.author[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.requester</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.header.author[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.extension:FRActorExtension</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.statusReason[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.statusReason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.medication</p>
+</div></td><td><div><p>FRMedicationRequestDocument.medication:FRMedicationDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.indication[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.reasonReference</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.intendedUseType</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.periodOfUse</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.text</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.sequence</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.sequence</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.note</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.patientInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.dose[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+doseAndRate.dose[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.doseAndRate.rate[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+doseAndRate.rate[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.numberOfTimes</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.frequency</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.period</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.dayOfWeek</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.dayOfWeek</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.timeOfDay</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.timeOfDay</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.frequency.additionalInstructions</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.additionalInstruction</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.dateOfAdministration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.event</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.conditionOfAdministration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.asNeededCodeableConcept</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.date[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.bounds[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration.durationValue</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.duration</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration.durationUnit</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.durationUnit</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.duration.durationMax</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.durationMax</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventTime</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventTime.eventTimeCode</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.when</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventTime.offset</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+timing.repeat.offset</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.eventEndSequence</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.bodySite</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.site</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.routeOfAdministration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.route</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.quantity</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+maxDosePerPeriod.numerator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerPeriod.duration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.
+maxDosePerPeriod.denominator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxDosePerAdministration</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.maxDosePerAdministration</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.dosageInstructions.
+dosageDetails.maxLifetimeDose</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dosageInstruction.maxDosePerLifetime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.quantityPrescribed</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.quantity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.validityPeriod</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.validityPeriod</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.allowed[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.substitution.allowedCodeableConcept</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.substitution.reason[x]</p>
+</div></td><td><div><p>FRMedicationRequestDocument.substitution.reason</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.numberOfRepeats</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.numberOfRepeatsAllowed</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.minimumDispenseInterval</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.dispenseInterval</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.isOffLabelUse</p>
+</div></td><td><div><p>FRMedicationRequestDocument.extension:offLabelUse</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.offLabel.reason[x]</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPrescriptionItem.note</p>
+</div></td><td><div><p>FRMedicationRequestDocument.dispenseRequest.extension:medicationRequest-dispenseRequest-dispenserInstruction-r5</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecALD</p>
+</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:FRObservationALDDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecAccidentTravail</p>
+</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:FRObservationWorkRelatedAccidentDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.enRapportAvecPrevention</p>
+</div></td><td><div><p>FRMedicationRequestDocument.reasonReference:FRObservationPreventionDocument</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPrescriptionItem.nonRemboursable</p>
+</div></td><td><div><p>FRMedicationRequestDocument.extension:FRNotCoveredExtension</p>
+</div></td><td /></tr></table>
 
 
 
@@ -4057,8 +4394,8 @@ participant[x].participantProfessional</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-08-03 08:18:00 +0000">
-    2026-08-03
+  <span title="2026-08-05 09:34:00 +0000">
+    2026-08-05
   </span>
 
           <br/>

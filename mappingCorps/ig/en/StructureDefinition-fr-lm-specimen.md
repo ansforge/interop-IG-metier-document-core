@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
   "name" : "FRLMSpecimen",
   "title" : "Logical model - FR LM Specimen",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -58,7 +58,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
   "kind" : "logical",
   "abstract" : false,
   "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-entry|0.1.0",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -66,14 +66,6 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
       "path" : "fr-lm-specimen",
       "short" : "Logical model - FR LM Specimen",
       "definition" : "Prélèvement"
-    },
-    {
-      "id" : "fr-lm-specimen.header.status",
-      "path" : "fr-lm-specimen.header.status",
-      "short" : "Disponibilité du prélèvement",
-      "binding" : {
-        "description" : "(preferred): HL7 specimen-status"
-      }
     },
     {
       "id" : "fr-lm-specimen.identifier",
@@ -85,6 +77,20 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
       "type" : [{
         "code" : "Identifier"
       }]
+    },
+    {
+      "id" : "fr-lm-specimen.status",
+      "path" : "fr-lm-specimen.status",
+      "short" : "Disponibilité du prélèvement",
+      "definition" : "Disponibilité du prélèvement",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "description" : "(preferred): HL7 specimen-status"
+      }
     },
     {
       "id" : "fr-lm-specimen.type",

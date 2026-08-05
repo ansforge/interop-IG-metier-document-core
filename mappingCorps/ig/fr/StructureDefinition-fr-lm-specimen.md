@@ -21,13 +21,13 @@ Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https:/
 *  [Statistiques/Références](#tabs-summ) 
 *  [Tous](#tabs-all) 
 
-Cette structure est dérivée de [FRLMEntry](StructureDefinition-fr-lm-entry.md) 
+Cette structure est dérivée de [Base](http://build.fhir.org/types.html#Base) 
 
 #### Bindings terminologiques (différentiel)
 
 #### Bindings terminologiques
 
-Cette structure est dérivée de [FRLMEntry](StructureDefinition-fr-lm-entry.md) 
+Cette structure est dérivée de [Base](http://build.fhir.org/types.html#Base) 
 
 ** Résumé **
 
@@ -35,7 +35,7 @@ Obligatoire : 0 élément(4 éléments obligatoire(s) imbriqué(s))
 
  **Vue différentielle** 
 
-Cette structure est dérivée de [FRLMEntry](StructureDefinition-fr-lm-entry.md) 
+Cette structure est dérivée de [Base](http://build.fhir.org/types.html#Base) 
 
 #### Bindings terminologiques (différentiel)
 
@@ -43,7 +43,7 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-fr-lm-entry.md)
 
 #### Bindings terminologiques
 
-Cette structure est dérivée de [FRLMEntry](StructureDefinition-fr-lm-entry.md) 
+Cette structure est dérivée de [Base](http://build.fhir.org/types.html#Base) 
 
 ** Résumé **
 
@@ -70,7 +70,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-specimen.
   "name" : "FRLMSpecimen",
   "title" : "Logical model - FR LM Specimen",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -91,7 +91,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-specimen.
   "kind" : "logical",
   "abstract" : false,
   "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-entry|0.1.0",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -99,14 +99,6 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-specimen.
       "path" : "fr-lm-specimen",
       "short" : "Logical model - FR LM Specimen",
       "definition" : "Prélèvement"
-    },
-    {
-      "id" : "fr-lm-specimen.header.status",
-      "path" : "fr-lm-specimen.header.status",
-      "short" : "Disponibilité du prélèvement",
-      "binding" : {
-        "description" : "(preferred): HL7 specimen-status"
-      }
     },
     {
       "id" : "fr-lm-specimen.identifier",
@@ -118,6 +110,20 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-specimen.
       "type" : [{
         "code" : "Identifier"
       }]
+    },
+    {
+      "id" : "fr-lm-specimen.status",
+      "path" : "fr-lm-specimen.status",
+      "short" : "Disponibilité du prélèvement",
+      "definition" : "Disponibilité du prélèvement",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "description" : "(preferred): HL7 specimen-status"
+      }
     },
     {
       "id" : "fr-lm-specimen.type",

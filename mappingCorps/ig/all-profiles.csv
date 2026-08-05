@@ -1,4 +1,60 @@
 "Profile","Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMMedicationUse","FRLMMedicationUse","FRLMMedicationUse","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Medication Use","Déclaration de l'utilisation d'un médicament, faisant partie d'une synthèse des traitements médicamenteux du patient.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header","FRLMMedicationUse.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.subject","FRLMMedicationUse.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.identifier","FRLMMedicationUse.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.author[x]","FRLMMedicationUse.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","Auteur de la déclaration d'utilisation du médicament","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.author[x].authorProfessional","FRLMMedicationUse.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.author[x].authorOrganisation","FRLMMedicationUse.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.author[x].authorDevice","FRLMMedicationUse.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.performer[x]","FRLMMedicationUse.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.participant[x]","FRLMMedicationUse.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.participant[x].participantProfessional","FRLMMedicationUse.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.participant[x].participantOrganisation","FRLMMedicationUse.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.participant[x].participantDevice","FRLMMedicationUse.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.informant","FRLMMedicationUse.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.date","FRLMMedicationUse.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.status","FRLMMedicationUse.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la déclaration d'utilisation du médicament (par exemple : enregistré)","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.source","FRLMMedicationUse.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.header.language","FRLMMedicationUse.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.treatmentStatus","FRLMMedicationUse.treatmentStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut actuel de la prise du médicament (par exemple : en cours, suspendu, arrêté)","Statut actuel de la prise du médicament (par exemple : en cours, suspendu, arrêté)","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.treatmentStatus",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.changeType","FRLMMedicationUse.changeType","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type de changement relatif à l'utilisation du médicament dans une synthèse médicamenteuse (par exemple : ajouté, supprimé, modifié). Pertinent au moment de la sortie d'hospitalisation ou lors d'une modification de la liste des médicaments actifs.","Type de changement relatif à l'utilisation du médicament dans une synthèse médicamenteuse (par exemple : ajouté, supprimé, modifié). Pertinent au moment de la sortie d'hospitalisation ou lors d'une modification de la liste des médicaments actifs.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.changeType",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.medication","FRLMMedicationUse.medication","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication {[]} {[]}
+","Décrit le produit médicamenteux.","Décrit le produit médicamenteux.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.medication",1,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.reason[x]","FRLMMedicationUse.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Motif de l'utilisation du médicament.","Motif de l'utilisation du médicament.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.reason[x]",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.dosageInstructions","FRLMMedicationUse.dosageInstructions","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dosageInstructions {[]} {[]}
+","Détails sur la manière dont le médicament est ou a été pris, ou doit être pris.","Détails sur la manière dont le médicament est ou a été pris, ou doit être pris.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.dosageInstructions",1,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.periodOfUse","FRLMMedicationUse.periodOfUse","","","",0,1,"","","","Period {[]} {[]}
+","Période pendant laquelle le patient a pris, prend ou est susceptible de prendre le médicament.","Période pendant laquelle le patient a pris, prend ou est susceptible de prendre le médicament.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.periodOfUse",0,1,"",""
+"FRLMMedicationUse","FRLMMedicationUse.derivedFrom[x]","FRLMMedicationUse.derivedFrom[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-prescription-item {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispense {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration {[]} {[]}","Prescriptions, délivrances ou administrations à l'origine de cette déclaration d'utilisation du médicament.","Prescriptions, délivrances ou administrations à l'origine de cette déclaration d'utilisation du médicament.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.derivedFrom[x]",0,*,"",""
+"FRLMMedicationUse","FRLMMedicationUse.note","FRLMMedicationUse.note","","","",0,1,"","","","string {[]} {[]}
+","Informations complémentaires concernant la déclaration d'utilisation du médicament.","Informations complémentaires concernant la déclaration d'utilisation du médicament.","","","","","","","","","",,,,,"",,,,"FRLMMedicationUse.note",0,1,"",""
 "fr-lm-addendum","fr-lm-addendum","fr-lm-addendum","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Addendum","Section Addendum","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-lm-addendum","fr-lm-addendum.codeSection","fr-lm-addendum.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
@@ -1982,6 +2038,21 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organi
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
 "fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status","fr-lm-laboratory-observation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Statut de l'observation","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status.id","fr-lm-laboratory-observation.header.status.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status.extension","fr-lm-laboratory-observation.header.status.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status.coding","fr-lm-laboratory-observation.header.status.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status.text","fr-lm-laboratory-observation.header.status.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.status.directSubject[x]","fr-lm-laboratory-observation.header.status.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.header.status.directSubject[x]",0,1,"",""
 "fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.source","fr-lm-laboratory-observation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
 "fr-lm-laboratory-observation","fr-lm-laboratory-observation.header.language","fr-lm-laboratory-observation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -1990,8 +2061,6 @@ La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
-"fr-lm-laboratory-observation","fr-lm-laboratory-observation.directSubject[x]","fr-lm-laboratory-observation.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.directSubject[x]",0,1,"",""
 "fr-lm-laboratory-observation","fr-lm-laboratory-observation.observationDate[x]","fr-lm-laboratory-observation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
 Period {[]} {[]}","Date de l'observation","Date de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.observationDate[x]",1,1,"",""
 "fr-lm-laboratory-observation","fr-lm-laboratory-observation.type","fr-lm-laboratory-observation.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
@@ -2421,10 +2490,10 @@ La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
-"fr-lm-micro-organism-search","fr-lm-micro-organism-search.code","fr-lm-micro-organism-search.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Code de l’observation","Code de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-micro-organism-search.code",1,1,"",""
-"fr-lm-micro-organism-search","fr-lm-micro-organism-search.value","fr-lm-micro-organism-search.value","","","",1,1,"","","","boolean {[]} {[]}
-","Valeur de l’observation","Valeur de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-micro-organism-search.value",1,1,"",""
+"fr-lm-micro-organism-search","fr-lm-micro-organism-search.type","fr-lm-micro-organism-search.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de l’observation","Code de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-micro-organism-search.type",1,1,"",""
+"fr-lm-micro-organism-search","fr-lm-micro-organism-search.result","fr-lm-micro-organism-search.result","","","",1,1,"","","","boolean {[]} {[]}
+","Valeur de l’observation","Valeur de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-micro-organism-search.result",1,1,"",""
 "fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Multidrug Resistant Microorganism Identification","Identification de micro-organismes multirésistants","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification.header","fr-lm-multidrug-resistant-microorganism-identification.header","","","",1,1,"","","","Base {[]} {[]}
@@ -2465,10 +2534,10 @@ La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
-"fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification.code","fr-lm-multidrug-resistant-microorganism-identification.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Code de l’observation","Code de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-multidrug-resistant-microorganism-identification.code",1,1,"",""
-"fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification.value","fr-lm-multidrug-resistant-microorganism-identification.value","","","",1,1,"","","","string {[]} {[]}
-","Description sous forme textuelle des micro-organismes identifiés","Description sous forme textuelle des micro-organismes identifiés","","","","","","","","","",,,,,"",,,,"fr-lm-multidrug-resistant-microorganism-identification.value",1,1,"",""
+"fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification.type","fr-lm-multidrug-resistant-microorganism-identification.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de l’observation","Code de l’observation","","","","","","","","","",,,,,"",,,,"fr-lm-multidrug-resistant-microorganism-identification.type",1,1,"",""
+"fr-lm-multidrug-resistant-microorganism-identification","fr-lm-multidrug-resistant-microorganism-identification.result","fr-lm-multidrug-resistant-microorganism-identification.result","","","",1,1,"","","","string {[]} {[]}
+","Description sous forme textuelle des micro-organismes identifiés","Description sous forme textuelle des micro-organismes identifiés","","","","","","","","","",,,,,"",,,,"fr-lm-multidrug-resistant-microorganism-identification.result",1,1,"",""
 "fr-lm-note","fr-lm-note","fr-lm-note","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Note","Section Commentaire (non-codé)","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-lm-note","fr-lm-note.codeSection","fr-lm-note.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
@@ -2819,6 +2888,21 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organi
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
 "fr-lm-observation","fr-lm-observation.header.status","fr-lm-observation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Statut de l'observation","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-observation","fr-lm-observation.header.status.id","fr-lm-observation.header.status.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-observation","fr-lm-observation.header.status.extension","fr-lm-observation.header.status.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-observation","fr-lm-observation.header.status.coding","fr-lm-observation.header.status.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-observation","fr-lm-observation.header.status.text","fr-lm-observation.header.status.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-observation","fr-lm-observation.header.status.directSubject[x]","fr-lm-observation.header.status.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.header.status.directSubject[x]",0,1,"",""
 "fr-lm-observation","fr-lm-observation.header.source","fr-lm-observation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
 "fr-lm-observation","fr-lm-observation.header.language","fr-lm-observation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -2827,8 +2911,6 @@ La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
-"fr-lm-observation","fr-lm-observation.directSubject[x]","fr-lm-observation.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.directSubject[x]",0,1,"",""
 "fr-lm-observation","fr-lm-observation.observationDate[x]","fr-lm-observation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
 Period {[]} {[]}","Date de l'observation","Date de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.observationDate[x]",1,1,"",""
 "fr-lm-observation","fr-lm-observation.type","fr-lm-observation.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
@@ -3194,7 +3276,7 @@ Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}CodeableConcept {[]} {[]}","Vale
 "fr-lm-pregnancy-history","fr-lm-pregnancy-history.derivedFrom[x]","fr-lm-pregnancy-history.derivedFrom[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}
 https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-laboratory-observation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study {[]} {[]}","Observation ou examen source dont derive cette information","Observation ou examen source dont derive cette information","","","","","","","","","",,,,,"",,,,"fr-lm-pregnancy-history.derivedFrom[x]",0,*,"",""
 "fr-lm-pregnancy-history","fr-lm-pregnancy-history.hasMember[x]","fr-lm-pregnancy-history.hasMember[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-laboratory-observation {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}","Observations associées et rattachées à cette entree","Observations associées et rattachées à cette entree","","","","","","","","","",,,,,"",,,,"fr-lm-pregnancy-history.hasMember[x]",0,*,"",""
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}","Observations associées","Observations associées","","","","","","","","","",,,,,"",,,,"fr-lm-pregnancy-history.hasMember[x]",0,*,"",""
 "fr-lm-pregnancy-observation","fr-lm-pregnancy-observation","fr-lm-pregnancy-observation","","","",0,*,"","","","null {[]} {[]}
 ","Logical model- FR LM Pregnancy Observation","Observation sur la grossesse","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "fr-lm-pregnancy-observation","fr-lm-pregnancy-observation.header","fr-lm-pregnancy-observation.header","","","",1,1,"","","","Base {[]} {[]}
@@ -4250,46 +4332,10 @@ La partie en majuscules indique le code pays (ISO-3166)","","","","","","","",""
 ","Nombre de cadres composant l'instance","Nombre de cadres composant l'instance","","","","","","","","","",,,,,"",,,,"fr-lm-sop-instance.numberOfFrames",0,1,"",""
 "fr-lm-specimen","fr-lm-specimen","fr-lm-specimen","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Specimen","Prélèvement","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header","fr-lm-specimen.header","","","",1,1,"","","","Base {[]} {[]}
-","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
-"fr-lm-specimen","fr-lm-specimen.header.subject","fr-lm-specimen.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
-","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
-"fr-lm-specimen","fr-lm-specimen.header.identifier","fr-lm-specimen.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
-","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.author[x]","fr-lm-specimen.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
-","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.author[x].authorProfessional","fr-lm-specimen.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.author[x].authorOrganisation","fr-lm-specimen.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
-","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.author[x].authorDevice","fr-lm-specimen.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
-","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.performer[x]","fr-lm-specimen.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.participant[x]","fr-lm-specimen.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
-","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.participant[x].participantProfessional","fr-lm-specimen.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
-","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.participant[x].participantOrganisation","fr-lm-specimen.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
-","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.participant[x].participantDevice","fr-lm-specimen.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
-","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.informant","fr-lm-specimen.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
-","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
-"fr-lm-specimen","fr-lm-specimen.header.date","fr-lm-specimen.header.date","","","",0,1,"","","","dateTime {[]} {[]}
-","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
-"fr-lm-specimen","fr-lm-specimen.header.status","fr-lm-specimen.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Disponibilité du prélèvement","Statut","","","","","","","","","",,"","(preferred): HL7 specimen-status","","",,,,"fr-lm-entry.header.status",0,1,"",""
-"fr-lm-specimen","fr-lm-specimen.header.source","fr-lm-specimen.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
-"fr-lm-specimen","fr-lm-specimen.header.language","fr-lm-specimen.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
-La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
-La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
-La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
-La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
 "fr-lm-specimen","fr-lm-specimen.identifier","fr-lm-specimen.identifier","","","",1,*,"","","","Identifier {[]} {[]}
 ","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.identifier",1,*,"",""
+"fr-lm-specimen","fr-lm-specimen.status","fr-lm-specimen.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Disponibilité du prélèvement","Disponibilité du prélèvement","","","","","","","","","",,"","(preferred): HL7 specimen-status","","",,,,"fr-lm-specimen.status",0,1,"",""
 "fr-lm-specimen","fr-lm-specimen.type","fr-lm-specimen.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Échantillon prélevé","Échantillon prélevé","","","","","","","","","",,"","jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042","",,,,"fr-lm-specimen.type",0,1,"",""
 "fr-lm-specimen","fr-lm-specimen.specimenSource[x]","fr-lm-specimen.specimenSource[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}

@@ -73,7 +73,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-family-me
   "name" : "FRLMFamilyMemberHistory",
   "title" : "Logical model - FR LM Family Member History",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

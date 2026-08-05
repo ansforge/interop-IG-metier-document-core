@@ -7,7 +7,7 @@ Traitement
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-fr-lm-adverse-drug-reaction.md), [Logical model - FR LM Course of encounter](StructureDefinition-fr-lm-course-of-encounter.md), [Logical model - FR LM Examination Report](StructureDefinition-fr-lm-examination-report.md), [Logical model - FR LM Exposure Information](StructureDefinition-fr-lm-exposure-information.md)... Show 3 more, [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-fr-lm-hospital-discharge-medications.md), [Logical model - FR LM Medication Summary](StructureDefinition-fr-lm-medication-summary.md) and [Logical model - FR LM Service Request](StructureDefinition-fr-lm-service-request.md)
+* Utilise ce/t/te Modèle logique: [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md), [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-fr-lm-adverse-drug-reaction.md), [Logical model - FR LM Course of encounter](StructureDefinition-fr-lm-course-of-encounter.md), [Logical model - FR LM Examination Report](StructureDefinition-fr-lm-examination-report.md)... Show 4 more, [Logical model - FR LM Exposure Information](StructureDefinition-fr-lm-exposure-information.md), [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-fr-lm-hospital-discharge-medications.md), [Logical model - FR LM Medication Summary](StructureDefinition-fr-lm-medication-summary.md) and [Logical model - FR LM Service Request](StructureDefinition-fr-lm-service-request.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/fr-lm-medication-administration)
 
@@ -61,7 +61,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-medicatio
   "name" : "FRLMMedicationAdministration",
   "title" : "Logical model- FR LM Medication Administration\t",
   "status" : "draft",
-  "date" : "2026-08-03T08:18:14+00:00",
+  "date" : "2026-08-05T09:34:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
