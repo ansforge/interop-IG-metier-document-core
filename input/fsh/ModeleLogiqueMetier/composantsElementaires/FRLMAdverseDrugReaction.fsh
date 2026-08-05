@@ -6,8 +6,9 @@ Description: """Effet indésirable médicamenteux"""
 Characteristics: #can-be-target
 
 * adverseDrugReactionType 1..1 CodeableConcept "Type d'effet indésirable"
-  * ^binding.description = "Type d'effet indésirable provenant du jdv-type-effet-indesirable-cisis"
+  * ^binding.description = "Type d'effet indésirable provenant du jdv-origine-effet-indesirable-cisis"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis"
+* detected 0..1 dateTime "Date de détection de l'effet indésirable"
 * value 1..1 CodeableConcept "Valeur de l'observation"
 * medicationAdministration 1..1 FRLMMedicationAdministration "Médicament, substance incriminée, posologie"
 * reaction 0..* FRLMCondition "Réaction observée"

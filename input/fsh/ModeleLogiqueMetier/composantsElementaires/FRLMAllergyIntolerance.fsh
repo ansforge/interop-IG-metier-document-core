@@ -9,8 +9,8 @@ Characteristics: #can-be-target
   * ^binding.description = " jdv-type-event-indesirable-previsible-cisis (1.2.250.1.213.1.1.5.842)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis"
 * category 1..1 CodeableConcept "food | medication | environment | biologic"
-  * ^binding.description = " jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)"
-  * ^binding.valueSet = ""
+  * ^binding.description = "jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)"
+  * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-category-cisis"
 * agentOrAllergen 1..1 CodeableConcept "Agent responsable
 - Médicaments : CIP ou UCD
 - Substances : SMS

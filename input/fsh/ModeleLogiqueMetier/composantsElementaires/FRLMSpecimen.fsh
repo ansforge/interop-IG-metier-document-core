@@ -1,13 +1,11 @@
 Logical: FRLMSpecimen
 Id: fr-lm-specimen
-Parent: FRLMEntry
 Title: "Logical model - FR LM Specimen"
 Description: """Prélèvement"""
 Characteristics: #can-be-target
 
 * identifier 1..* Identifier "Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés."
-* header.status
-  * ^short = "Disponibilité du prélèvement"
+* status 0..1 CodeableConcept "Disponibilité du prélèvement"
   * ^binding.description = "(preferred): HL7 specimen-status"
 * type 0..1 CodeableConcept "Échantillon prélevé"
   * ^binding.description = "jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)"
