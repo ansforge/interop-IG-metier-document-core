@@ -80,7 +80,8 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #unmatched
 // Commentaire
 * group[=].element[+].code = #FRLMSpecimen.note
-* group[=].element[=].target.equivalence = #FRCDAPrelevement.text
+* group[=].element[=].target.code = #FRCDAPrelevement.text
+* group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-specimen"
