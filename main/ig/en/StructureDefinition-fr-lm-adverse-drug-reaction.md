@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-adverse-dru
   "name" : "FRLMAdverseDrugReaction",
   "title" : "Modèle logique métier - FR LM Adverse Drug Reaction",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -77,9 +77,20 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-adverse-dru
         "code" : "CodeableConcept"
       }],
       "binding" : {
-        "description" : "Type d'effet indésirable provenant du jdv-type-effet-indesirable-cisis",
+        "description" : "Type d'effet indésirable provenant du jdv-origine-effet-indesirable-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis|20260619134042"
       }
+    },
+    {
+      "id" : "fr-lm-adverse-drug-reaction.detected",
+      "path" : "fr-lm-adverse-drug-reaction.detected",
+      "short" : "Date de détection de l'effet indésirable",
+      "definition" : "Date de détection de l'effet indésirable",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
     },
     {
       "id" : "fr-lm-adverse-drug-reaction.value",

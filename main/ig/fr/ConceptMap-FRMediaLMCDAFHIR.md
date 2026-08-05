@@ -1,9 +1,9 @@
-# Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMObservationMedia → FRCDAImageIllustrative / FRLMObservationMedia → FRMediaDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMImageIllustrative → FRCDAImageIllustrative → FRMediaDocument 
+## ConceptMap: Mapping FRLMObservationMedia → FRCDAImageIllustrative / FRLMObservationMedia → FRMediaDocument 
 
  
-Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument. 
+Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil C
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Image illustrative\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil C
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,219 +35,161 @@ Mapping des éléments du modèle métier FRLMImageIllustrative vers le profil C
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-image-illustrative",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-media",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-image-illustrative",
     "element" : [{
-      "code" : "FRLMImageIllustrative",
+      "code" : "FRLMObservationMedia",
       "target" : [{
         "code" : "FRCDAImageIllustrative",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.identifiant",
+      "code" : "FRLMObservationMedia.identifiant",
       "target" : [{
         "code" : "FRCDAImageIllustrative.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.langue",
-      "target" : [{
-        "code" : "FRCDAImageIllustrative.languageCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImageIllustrative.imageEncodee",
+      "code" : "FRLMObservationMedia.content.data",
       "target" : [{
         "code" : "FRCDAImageIllustrative.value",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.mediaType",
+      "code" : "FRLMObservationMedia.content.contentType",
       "target" : [{
         "code" : "FRCDAImageIllustrative.value.mediaType",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.representation",
-      "target" : [{
-        "code" : "FRCDAImageIllustrative.value.representation",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImageIllustrative.subject",
+      "code" : "FRLMObservationMedia.subject:FRLMPatient",
       "target" : [{
         "code" : "FRCDAImageIllustrative.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.specimen",
+      "code" : "FRLMObservationMedia.subject:FRLMSpecimen",
       "target" : [{
         "code" : "FRCDAImageIllustrative.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.performer",
+      "code" : "FRLMObservationMedia.note",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Le profil CDA ne comporte pas d'élément dédié pour représenter une note."
+      }]
+    },
+    {
+      "code" : "FRLMObservationMedia.header.performer[x]",
       "target" : [{
         "code" : "FRCDAImageIllustrative.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.auteur",
-      "target" : [{
-        "code" : "FRCDAImageIllustrative.author",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImageIllustrative.informant",
-      "target" : [{
-        "code" : "FRCDAImageIllustrative.informant",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImageIllustrative.participant",
+      "code" : "FRLMObservationMedia.header.participant[x]",
       "target" : [{
         "code" : "FRCDAImageIllustrative.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.entryRelationship",
+      "code" : "FRLMObservationMedia.header.author[x]",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.entryRelationship",
+        "code" : "FRCDAImageIllustrative.author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImageIllustrative.reference",
+      "code" : "FRLMObservationMedia.header.informant[x]",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.reference",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImageIllustrative.precondition",
-      "target" : [{
-        "code" : "FRCDAImageIllustrative.precondition",
+        "code" : "FRCDAImageIllustrative.informant",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-image-illustrative",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-media",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-media-document",
     "element" : [{
-      "code" : "FRCDAImageIllustrative",
+      "code" : "FRLMObservationMedia",
       "target" : [{
         "code" : "FRMediaDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.id",
+      "code" : "FRLMObservationMedia.identifiant",
       "target" : [{
         "code" : "FRMediaDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.languageCode",
-      "target" : [{
-        "code" : "FRMediaDocument.content.language",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.value",
+      "code" : "FRLMObservationMedia.content.data",
       "target" : [{
         "code" : "FRMediaDocument.content.data",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.value.mediaType",
+      "code" : "FRLMObservationMedia.content.contentType",
       "target" : [{
         "code" : "FRMediaDocument.content.contentType",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.value.representation",
+      "code" : "FRLMObservationMedia.subject:FRLMPatient",
+      "target" : [{
+        "code" : "FRMediaDocument.subject",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationMedia.subject:FRLMSpecimen",
+      "target" : [{
+        "code" : "FRMediaDocument.specimen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationMedia.note",
+      "target" : [{
+        "code" : "FRMediaDocument.note",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationMedia.header.performer[x]",
+      "target" : [{
+        "code" : "FRMediaDocument.operator",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationMedia.header.participant[x]",
       "target" : [{
         "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.subject",
+      "code" : "FRLMObservationMedia.header.author[x]",
       "target" : [{
-        "code" : "FRMediaDocument.subject:Patient",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRCDAImageIllustrative.specimen",
+      "code" : "FRLMObservationMedia.header.informant[x]",
       "target" : [{
-        "code" : "FRMediaDocument.subject:Specimen",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.performer",
-      "target" : [{
-        "code" : "FRMediaDocument.operator.extension:performer",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.author",
-      "target" : [{
-        "code" : "FRMediaDocument.operator.extension:author",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.informant",
-      "target" : [{
-        "code" : "FRMediaDocument.operator.extension:informant",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.participant",
-      "target" : [{
-        "code" : "FRMediaDocument.operator.extension:participant",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.entryRelationship",
-      "target" : [{
-        "code" : "FRMediaDocument.basedOn",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.reference",
-      "target" : [{
-        "code" : "FRMediaDocument.partOf",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAImageIllustrative.precondition",
-      "target" : [{
-        "code" : "FRMediaDocument.reasonCode",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     }]
   }]

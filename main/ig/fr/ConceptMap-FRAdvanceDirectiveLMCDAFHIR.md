@@ -1,9 +1,9 @@
-# Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMAdvanceDirective → FRCDADirectiveAnticipee / FRLMAdvanceDirective → FRAdvanceDirectiveDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMDirectiveAnticipee → FRCDADirectiveAnticipee → FRAdvanceDirectiveDocument 
+## ConceptMap: Mapping FRLMAdvanceDirective → FRCDADirectiveAnticipee / FRLMAdvanceDirective → FRAdvanceDirectiveDocument 
 
  
-Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument. 
+Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Directive Anticipee\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil 
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,59 +35,59 @@ Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-directive-anticipee",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-advance-directive",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-directive-anticipee",
     "element" : [{
-      "code" : "FRLMDirectiveAnticipee",
+      "code" : "FRLMAdvanceDirective",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.identifiant",
+      "code" : "FRLMAdvanceDirective.header.identifier",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.code",
+      "code" : "FRLMAdvanceDirective.category",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.description",
-      "target" : [{
-        "code" : "FRCDADirectiveAnticipee.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMDirectiveAnticipee.statut",
+      "code" : "FRLMAdvanceDirective.header.status",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.date",
+      "code" : "FRLMAdvanceDirective.header.date",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.valeurDirectiveIdentifiee",
+      "code" : "FRLMAdvanceDirective.value",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.valueBoolean",
+        "code" : "FRCDADirectiveAnticipee.value",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.reference",
+      "code" : "FRLMAdvanceDirective.note",
+      "target" : [{
+        "code" : "FRCDADirectiveAnticipee.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAdvanceDirective.attachment.url",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.reference.externalDocument.text.reference",
         "equivalence" : "equivalent",
@@ -95,28 +95,21 @@ Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil 
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.documentEncapsule",
-      "target" : [{
-        "code" : "FRCDADirectiveAnticipee.entryRelationship",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMDirectiveAnticipee.documentEncapsule.observationMedia",
+      "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.documentEncapsule.observationMedia.identifiant",
+      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDirectiveAnticipee.documentEncapsule.observationMedia.documentEncapsuleEncode",
+      "code" : "FRLMAdvanceDirective.attachment.data",
       "target" : [{
         "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.value",
         "equivalence" : "equivalent"
@@ -124,96 +117,82 @@ Mapping des éléments du modèle métier FRLMDirectiveAnticipee vers le profil 
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-directive-anticipee",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-advance-directive",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-advance-directive-document",
     "element" : [{
-      "code" : "FRCDADirectiveAnticipee",
+      "code" : "FRLMAdvanceDirective",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.id",
+      "code" : "FRLMAdvanceDirective.header.identifier",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "L'élément scope en CDA n'a pas d'équivalent direct en FHIR. Le concept de 'scope' est ajouté pour indiquer le type de consentement."
+        "code" : "FRAdvanceDirectiveDocument.identifier",
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.code",
+      "code" : "FRLMAdvanceDirective.category",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.provision.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.text",
+      "code" : "FRLMAdvanceDirective.note",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.provision.code.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.statusCode",
+      "code" : "FRLMAdvanceDirective.header.status",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.effectiveTime",
+      "code" : "FRLMAdvanceDirective.date",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.dateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.valueBoolean",
+      "code" : "FRLMAdvanceDirective.value",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.provision.type",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.reference.externalDocument.text.reference",
+      "code" : "FRLMAdvanceDirective.attachment.url",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.sourceReference",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.entryRelationship",
+      "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.sourceAttachment",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia",
-      "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceAttachment",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.id",
+      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.sourceAttachment.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.value",
+      "code" : "FRLMAdvanceDirective.attachment.data",
       "target" : [{
         "code" : "FRAdvanceDirectiveDocument.sourceAttachment.data",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.value",
-      "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceAttachment.url",
         "equivalence" : "equivalent"
       }]
     }]

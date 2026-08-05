@@ -1,9 +1,9 @@
-# Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRPregnancyHistoryDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMPregnancyHistory → FRCDAHistoriqueDeLaGrossesse / FRLMPregnancyHistory → FRPregnancyHistoryDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMHistoriqueGrossesse → FRCDAHistoriqueDeLaGrossesse → FRPregnancyHistoryDocument 
+## ConceptMap: Mapping FRLMPregnancyHistory → FRCDAHistoriqueDeLaGrossesse / FRLMPregnancyHistory → FRPregnancyHistoryDocument 
 
  
-Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument. 
+Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument. 
 
 
 
@@ -15,9 +15,9 @@ Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil
   "id" : "FRPregnancyHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRPregnancyHistoryLMCDAFHIR",
   "version" : "0.1.0",
-  "title" : "Mapping Métier/CDA/FHIR : \"Historique de la grossesse\"",
+  "title" : "Mapping Métier/CDA/FHIR : \"Historique de la grossesse \"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,100 +35,111 @@ Mapping des éléments du modèle métier FRLMHistoriqueGrossesse vers le profil
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-historique-grossesse",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-pregnancy-history",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-de-la-grossesse",
     "element" : [{
-      "code" : "FRLMHistoriqueGrossesse",
+      "code" : "FRLMPregnancyHistory",
       "target" : [{
         "code" : "FRCDAHistoriqueDeLaGrossesse",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoriqueGrossesse.identifiant",
-      "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHistoriqueGrossesse.code",
-      "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHistoriqueGrossesse.statut",
+      "code" : "FRLMPregnancyHistory.header.status",
       "target" : [{
         "code" : "FRCDAHistoriqueDeLaGrossesse.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoriqueGrossesse.periodeGrossesse",
+      "code" : "FRLMPregnancyHistory.directSubject[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyHistory.type",
+      "target" : [{
+        "code" : "FRCDAHistoriqueDeLaGrossesse.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyHistory.observationDate[x]",
       "target" : [{
         "code" : "FRCDAHistoriqueDeLaGrossesse.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoriqueGrossesse.choice[x]",
+      "code" : "FRLMPregnancyHistory.result",
       "target" : [{
         "code" : "FRCDAHistoriqueDeLaGrossesse.entryRelationship:frObservationSurLaGrossesse",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoriqueGrossesse.choice[x]",
+      "code" : "FRLMPregnancyHistory.component",
       "target" : [{
         "code" : "FRCDAHistoriqueDeLaGrossesse.entryRelationship:frNaissance",
         "equivalence" : "equivalent"
       }]
+    },
+    {
+      "code" : "FRLMPregnancyHistory.derivedFrom[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyHistory.hasMember[x]",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-historique-de-la-grossesse",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-pregnancy-history",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-pregnancy-history-document",
     "element" : [{
-      "code" : "FRCDAHistoriqueDeLaGrossesse",
+      "code" : "FRLMPregnancyHistory",
       "target" : [{
         "code" : "FRPregnancyHistoryDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHistoriqueDeLaGrossesse.id",
+      "code" : "FRLMPregnancyHistory.header.identifier",
       "target" : [{
         "code" : "FRPregnancyHistoryDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHistoriqueDeLaGrossesse.code",
+      "code" : "FRLMPregnancyHistory.type",
       "target" : [{
         "code" : "FRPregnancyHistoryDocument.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHistoriqueDeLaGrossesse.effectiveTime",
+      "code" : "FRLMPregnancyHistory.observationDate[x]",
       "target" : [{
-        "code" : "FRPregnancyHistoryDocument.date",
+        "code" : "FRPregnancyHistoryDocument.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHistoriqueDeLaGrossesse.entryRelationship:frObservationSurLaGrossesse",
+      "code" : "FRLMPregnancyHistory.result",
       "target" : [{
-        "code" : "FRPregnancyHistoryDocument.entry.item:FRObservationPregnancyDocument",
+        "code" : "FRPregnancyHistoryDocument.hasMember:FRObservationPregnancyDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHistoriqueDeLaGrossesse.entryRelationship:frNaissance",
+      "code" : "FRLMPregnancyHistory.component",
       "target" : [{
-        "code" : "FRPregnancyHistoryDocument.entry.item:FRObservationBirthEventDocument",
+        "code" : "FRPregnancyHistoryDocument.component",
         "equivalence" : "equivalent"
       }]
     }]

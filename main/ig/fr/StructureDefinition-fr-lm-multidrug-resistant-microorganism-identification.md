@@ -61,7 +61,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-multidrug
   "name" : "FRLMMultidrugResistantMicroorganismIdentification",
   "title" : "Logical model - FR LM Multidrug Resistant Microorganism Identification",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -92,8 +92,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-multidrug
       "definition" : "Identification de micro-organismes multirésistants"
     },
     {
-      "id" : "fr-lm-multidrug-resistant-microorganism-identification.code",
-      "path" : "fr-lm-multidrug-resistant-microorganism-identification.code",
+      "id" : "fr-lm-multidrug-resistant-microorganism-identification.type",
+      "path" : "fr-lm-multidrug-resistant-microorganism-identification.type",
       "short" : "Code de l’observation",
       "definition" : "Code de l’observation",
       "min" : 1,
@@ -103,8 +103,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-multidrug
       }]
     },
     {
-      "id" : "fr-lm-multidrug-resistant-microorganism-identification.value",
-      "path" : "fr-lm-multidrug-resistant-microorganism-identification.value",
+      "id" : "fr-lm-multidrug-resistant-microorganism-identification.result",
+      "path" : "fr-lm-multidrug-resistant-microorganism-identification.result",
       "short" : "Description sous forme textuelle des micro-organismes identifiés",
       "definition" : "Description sous forme textuelle des micro-organismes identifiés",
       "min" : 1,

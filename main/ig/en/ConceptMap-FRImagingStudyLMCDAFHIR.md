@@ -1,9 +1,9 @@
-# Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMExamenImagerie → FRCDADICOMExamenImagerie → FRImagingStudyDocument 
+## ConceptMap: Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument 
 
  
-Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument. 
+Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA 
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,107 +35,184 @@ Mapping des éléments du modèle métier FRLMExamenImagerie vers le profil CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examen-imagerie",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie",
     "element" : [{
-      "code" : "FRLMExamenImagerie",
+      "code" : "FRLMImagingStudy",
       "target" : [{
         "code" : "FRCDADICOMExamenImagerie",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.uuidInstanceExamen",
+      "code" : "FRLMImagingStudy.header.identifier",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.id",
+        "code" : "FRCDADICOMTechniqueImagerie.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.codeActe",
+      "code" : "FRLMImagingStudy.modality",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.code",
+        "code" : "FRCDADICOMTechniqueImagerie.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.description",
+      "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.text",
+        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.dateActe",
+      "code" : "FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.effectiveTime",
+        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.serieImagerie",
+      "code" : "FRLMImagingStudy.encounter",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie",
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.started",
+      "target" : [{
+        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExamenImagerie.objectifsReferences",
+      "code" : "FRLMImagingStudy.basedOn",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.numberOfSeries",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.numberOfInstances",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.studyCustodian",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.studyEndpoint",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ."
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.series",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document",
     "element" : [{
-      "code" : "FRCDADICOMExamenImagerie",
+      "code" : "FRLMImagingStudy",
       "target" : [{
         "code" : "FRImagingStudyDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADICOMExamenImagerie.id",
+      "code" : "FRLMImagingStudy.header.identifier",
       "target" : [{
-        "code" : "FRImagingStudyDocument.identifier:studyInstanceUid",
+        "code" : "FRImagingStudyDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADICOMExamenImagerie.code",
+      "code" : "FRLMImagingStudy.modality",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "FRImagingStudyDocument ne possède pas d'élément 'code' pour mapper cette donnée."
-      }]
-    },
-    {
-      "code" : "FRCDADICOMExamenImagerie.text",
-      "target" : [{
-        "code" : "FRImagingStudyDocument.description",
+        "code" : "FRImagingStudyDocument.modality",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADICOMExamenImagerie.effectiveTime",
+      "code" : "FRLMImagingStudy.bodySite",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.encounter",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.encounter",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.started",
       "target" : [{
         "code" : "FRImagingStudyDocument.started",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie",
+      "code" : "FRLMImagingStudy.basedOn",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series",
+        "code" : "FRImagingStudyDocument.basedOn",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADICOMExamenImagerie.entryRelationship:frDICOMSerieImagerie.entryRelationship:frDICOMSOPInstanceObservation.entryRelationship:frDICOMObjectifsDeReference",
+      "code" : "FRLMImagingStudy.numberOfSeries",
       "target" : [{
-        "code" : "FRImagingStudyDocument.reasonCode",
+        "code" : "FRImagingStudyDocument.numberOfSeries",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.numberOfInstances",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.numberOfInstances",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.studyCustodian",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.series.performer.actor:Organization",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.studyEndpoint",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.endpoint",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMImagingStudy.series",
+      "target" : [{
+        "code" : "FRImagingStudyDocument.series",
         "equivalence" : "equivalent"
       }]
     }]

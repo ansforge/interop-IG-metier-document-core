@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-observation
   "name" : "FRLMObservation",
   "title" : "Logical model - FR LM Observation",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -74,8 +74,8 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-observation
       "min" : 1
     },
     {
-      "id" : "fr-lm-observation.directSubject[x]",
-      "path" : "fr-lm-observation.directSubject[x]",
+      "id" : "fr-lm-observation.header.status.directSubject[x]",
+      "path" : "fr-lm-observation.header.status.directSubject[x]",
       "short" : "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.",
       "definition" : "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.",
       "min" : 0,

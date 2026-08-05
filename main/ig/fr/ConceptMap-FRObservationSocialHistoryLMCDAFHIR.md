@@ -1,9 +1,9 @@
-# Mapping FRLMHabitusModeDeVieEntree → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMObservationSocialHistory → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMHabitusModeDeVieEntree → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument 
+## ConceptMap: Mapping FRLMObservationSocialHistory → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument 
 
  
-Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument. 
+Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le pro
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Habitus Mode de vie\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le pro
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,149 +35,93 @@ Mapping des éléments du modèle métier FRLMHabitusModeDeVieEntree vers le pro
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-habitus-mode-de-vie-entree",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-social-history",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-habitus-mode-de-vie",
     "element" : [{
-      "code" : "FRLMHabitusModeDeVieEntree",
+      "code" : "FRLMObservationSocialHistory",
       "target" : [{
         "code" : "FRCDAHabitusModeDeVie",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHabitusModeDeVieEntree.identifiant",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.code",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.code.precision",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.code.qualifier",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.code.precision.name",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.code.qualifier.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.code.precision.value",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.code.qualifier.value",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.description",
-      "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHabitusModeDeVieEntree.statut",
+      "code" : "FRLMObservationSocialHistory.header.status",
       "target" : [{
         "code" : "FRCDAHabitusModeDeVie.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHabitusModeDeVieEntree.horodatage",
+      "code" : "FRLMObservationSocialHistory.observationDate[x]",
       "target" : [{
         "code" : "FRCDAHabitusModeDeVie.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHabitusModeDeVieEntree.resultat",
+      "code" : "FRLMObservationSocialHistory.type",
+      "target" : [{
+        "code" : "FRCDAHabitusModeDeVie.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationSocialHistory.result",
       "target" : [{
         "code" : "FRCDAHabitusModeDeVie.value",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationSocialHistory.note",
+      "target" : [{
+        "code" : "FRCDAHabitusModeDeVie.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-habitus-mode-de-vie",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-social-history",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-social-history-document",
     "element" : [{
-      "code" : "FRCDAHabitusModeDeVie",
+      "code" : "FRLMObservationSocialHistory",
       "target" : [{
         "code" : "FRObservationSocialHistoryDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHabitusModeDeVie.id",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.identifier",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.code",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.code.qualifier",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.component",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.code.qualifier.name",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.component.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.code.qualifier.value",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.component.value",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.text",
-      "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.note",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAHabitusModeDeVie.statusCode",
+      "code" : "FRLMObservationSocialHistory.header.status",
       "target" : [{
         "code" : "FRObservationSocialHistoryDocument.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHabitusModeDeVie.effectiveTime",
+      "code" : "FRLMObservationSocialHistory.observationDate[x]",
       "target" : [{
         "code" : "FRObservationSocialHistoryDocument.effectiveDateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAHabitusModeDeVie.value",
+      "code" : "FRLMObservationSocialHistory.type",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.value",
+        "code" : "FRObservationSocialHistoryDocument.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationSocialHistory.result",
+      "target" : [{
+        "code" : "FRObservationSocialHistoryDocument.valueCodeableConcept",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservationSocialHistory.note",
+      "target" : [{
+        "code" : "FRObservationSocialHistoryDocument.note",
         "equivalence" : "equivalent"
       }]
     }]

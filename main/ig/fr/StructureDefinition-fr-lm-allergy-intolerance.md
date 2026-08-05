@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-allergy-i
   "name" : "FRLMAllergyIntolerance",
   "title" : "Logical model - FR LM Allergy Intolerance",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -150,7 +150,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-allergy-i
         "code" : "CodeableConcept"
       }],
       "binding" : {
-        "description" : " jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)"
+        "description" : "jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)",
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-category-cisis|20260619134041"
       }
     },
     {

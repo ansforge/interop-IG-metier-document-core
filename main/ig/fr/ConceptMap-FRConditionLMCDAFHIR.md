@@ -1,9 +1,9 @@
-# Mapping FRLMCondition → FRCDACondition → FRConditionDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMCondition → FRCDAProbleme / FRLMCondition → FRConditionDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMCondition → FRCDACondition → FRConditionDocument 
+## ConceptMap: Mapping FRLMCondition → FRCDAProbleme / FRLMCondition → FRConditionDocument 
 
  
-Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument. 
+Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Problème\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,115 +35,108 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-probleme",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-condition",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-probleme",
     "element" : [{
-      "code" : "FRLMProbleme",
+      "code" : "FRLMCondition",
       "target" : [{
         "code" : "FRCDAProbleme",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.identifiant",
+      "code" : "FRLMCondition.header.identifier",
       "target" : [{
         "code" : "FRCDAProbleme.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.type",
+      "code" : "FRLMCondition.type",
       "target" : [{
         "code" : "FRCDAProbleme.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.description",
-      "target" : [{
-        "code" : "FRCDAProbleme.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMProbleme.problemeObserve",
+      "code" : "FRLMCondition.problem",
       "target" : [{
         "code" : "FRCDAProbleme.value",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.statut",
+      "code" : "FRLMCondition.period",
       "target" : [{
-        "code" : "FRCDAProbleme.statusCode",
+        "code" : "FRCDAProbleme.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.dateDebutProbleme",
+      "code" : "FRLMCondition.period.onsetDate",
       "target" : [{
         "code" : "FRCDAProbleme.effectiveTime.low",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.dateFinProbleme",
+      "code" : "FRLMCondition.period.endDate",
       "target" : [{
         "code" : "FRCDAProbleme.effectiveTime.high",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.statutProbleme",
+      "code" : "FRLMCondition.header.status",
       "target" : [{
         "code" : "FRCDAProbleme.entryRelationship:frStatutDuProbleme",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.severite",
+      "code" : "FRLMCondition.severity",
       "target" : [{
         "code" : "FRCDAProbleme.entryRelationship:frSeverite",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.certitude",
+      "code" : "FRLMCondition.diagnosisAssertionStatus",
       "target" : [{
         "code" : "FRCDAProbleme.entryRelationship:frCertitude",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.statutClinique",
+      "code" : "FRLMCondition.clinicalStatus",
       "target" : [{
         "code" : "FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.reference",
+      "code" : "FRLMCondition.bodySite",
       "target" : [{
-        "code" : "FRCDAProbleme.reference",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite de bodySite dans le profil CDA FRCDAProbleme."
       }]
     },
     {
-      "code" : "FRLMProbleme.reference.externalDocument.identifiant",
+      "code" : "FRLMCondition.stage",
       "target" : [{
-        "code" : "FRCDAProbleme.reference.externalDocument.id",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite de stage dans le profil CDA FRCDAProbleme."
       }]
     },
     {
-      "code" : "FRLMProbleme.reference.externalDocument.text.reference",
+      "code" : "FRLMCondition.reference",
       "target" : [{
         "code" : "FRCDAProbleme.reference.externalDocument.text.reference",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProbleme.commentaire",
+      "code" : "FRLMCondition.note",
       "target" : [{
         "code" : "FRCDAProbleme.entryRelationship:frCommentaireER",
         "equivalence" : "equivalent"
@@ -151,115 +144,108 @@ Mapping des éléments du modèle métier FRLMProbleme vers le profil CDA FRCDAP
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-probleme",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-condition",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-condition-document",
     "element" : [{
-      "code" : "FRCDAProbleme",
+      "code" : "FRLMCondition",
       "target" : [{
         "code" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.id",
+      "code" : "FRLMCondition.header.identifier",
       "target" : [{
         "code" : "FRConditionDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.code",
+      "code" : "FRLMCondition.type",
       "target" : [{
         "code" : "FRConditionDocument.category",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.text",
-      "target" : [{
-        "code" : "FRConditionDocument.category.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAProbleme.value",
+      "code" : "FRLMCondition.problem",
       "target" : [{
         "code" : "FRConditionDocument.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.statusCode",
+      "code" : "FRLMCondition.header.status",
       "target" : [{
         "code" : "FRConditionDocument.clinicalStatus",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.effectiveTime.low",
+      "code" : "FRLMCondition.period",
+      "target" : [{
+        "equivalence" : "relatedto",
+        "comment" : "La période source est portée par deux éléments FHIR distincts: onsetDateTime et abatementDateTime."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period.onsetDate",
       "target" : [{
         "code" : "FRConditionDocument.onsetDateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.effectiveTime.high",
+      "code" : "FRLMCondition.period.endDate",
       "target" : [{
         "code" : "FRConditionDocument.abatementDateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.entryRelationship:frStatutDuProbleme",
-      "target" : [{
-        "code" : "FRConditionDocument.clinicalStatus",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAProbleme.entryRelationship:frSeverite",
+      "code" : "FRLMCondition.severity",
       "target" : [{
         "code" : "FRConditionDocument.severity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.entryRelationship:frCertitude",
+      "code" : "FRLMCondition.diagnosisAssertionStatus",
       "target" : [{
         "code" : "FRConditionDocument.verificationStatus",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient",
+      "code" : "FRLMCondition.clinicalStatus",
       "target" : [{
         "code" : "FRConditionDocument.stage.summary",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.reference",
+      "code" : "FRLMCondition.bodySite",
       "target" : [{
-        "code" : "FRConditionDocument.evidence.detail",
+        "code" : "FRConditionDocument.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.reference.externalDocument.id",
+      "code" : "FRLMCondition.stage",
       "target" : [{
-        "code" : "FRConditionDocument.evidence.detail:FRDocumentReferenceDocument.identifier",
+        "code" : "FRConditionDocument.stage.summary",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.reference.externalDocument.text.reference",
+      "code" : "FRLMCondition.reference",
       "target" : [{
         "code" : "FRConditionDocument.evidence.detail:FRDocumentReferenceDocument.content.attachment.url",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAProbleme.entryRelationship:frCommentaireER",
+      "code" : "FRLMCondition.note",
       "target" : [{
         "code" : "FRConditionDocument.note",
         "equivalence" : "equivalent"

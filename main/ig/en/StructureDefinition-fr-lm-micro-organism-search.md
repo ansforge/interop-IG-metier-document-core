@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-micro-organ
   "name" : "FRLMMicroOrganismSearch",
   "title" : "Logical model - FR LM Micro Organism Search",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -67,8 +67,8 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-micro-organ
       "definition" : "Recherche de micro organismes"
     },
     {
-      "id" : "fr-lm-micro-organism-search.code",
-      "path" : "fr-lm-micro-organism-search.code",
+      "id" : "fr-lm-micro-organism-search.type",
+      "path" : "fr-lm-micro-organism-search.type",
       "short" : "Code de l’observation",
       "definition" : "Code de l’observation",
       "min" : 1,
@@ -78,8 +78,8 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-micro-organ
       }]
     },
     {
-      "id" : "fr-lm-micro-organism-search.value",
-      "path" : "fr-lm-micro-organism-search.value",
+      "id" : "fr-lm-micro-organism-search.result",
+      "path" : "fr-lm-micro-organism-search.result",
       "short" : "Valeur de l’observation",
       "definition" : "Valeur de l’observation",
       "min" : 1,

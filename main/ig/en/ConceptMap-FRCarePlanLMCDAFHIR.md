@@ -1,9 +1,9 @@
-# Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMCarePlan → FRCDAReferenceItemPlanTraitement / FRLMCarePlan → FRCarePlanDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMReferenceItemPlanTraitement → FRCDAReferenceItemPlanTraitement → FRCarePlanDocument 
+## ConceptMap: Mapping FRLMCarePlan → FRCDAReferenceItemPlanTraitement / FRLMCarePlan → FRCarePlanDocument 
 
  
-Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument. 
+Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAReferenceItemPlanTraitement (équivalent CDA le plus proche), puis vers le profil FHIR FRCarePlanDocument. 
 
 
 
@@ -15,9 +15,9 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
   "id" : "FRCarePlanLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCarePlanLMCDAFHIR",
   "version" : "0.1.0",
-  "title" : "Mapping Métier/CDA/FHIR : \"Référence Item Plan Traitement\"",
-  "status" : "active",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
+  "status" : "draft",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers le profil CDA FRCDAReferenceItemPlanTraitement, puis vers le profil FHIR FRCarePlanDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAReferenceItemPlanTraitement (équivalent CDA le plus proche), puis vers le profil FHIR FRCarePlanDocument.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,122 +35,96 @@ Mapping des éléments du modèle métier FRLMReferenceItemPlanTraitement vers l
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-reference-item-plan-traitement",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement",
     "element" : [{
-      "code" : "FRLMReferenceItemPlanTraitement",
+      "code" : "FRLMCarePlan",
       "target" : [{
         "code" : "FRCDAReferenceItemPlanTraitement",
-        "equivalence" : "equivalent"
+        "equivalence" : "narrower"
       }]
     },
     {
-      "code" : "FRLMReferenceItemPlanTraitement.identifiant",
+      "code" : "FRLMCarePlan.header.identifier",
       "target" : [{
         "code" : "FRCDAReferenceItemPlanTraitement.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMReferenceItemPlanTraitement.code",
+      "code" : "FRLMCarePlan.header.status",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.code",
+        "code" : "FRCDAReferenceItemPlanTraitement.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMReferenceItemPlanTraitement.produitSante",
+      "code" : "FRLMCarePlan.addresses",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.consumable",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les problèmes adressés par le plan."
       }]
     },
     {
-      "code" : "FRLMReferenceItemPlanTraitement.auteur",
+      "code" : "FRLMCarePlan.goal",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.author",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les objectifs du plan."
       }]
     },
     {
-      "code" : "FRLMReferenceItemPlanTraitement.traitementPrescrit",
+      "code" : "FRLMCarePlan.activity",
       "target" : [{
         "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMReferenceItemPlanTraitement.reference",
-      "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.reference",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMReferenceItemPlanTraitement.reference.externalDocument.identifiant",
-      "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.reference.externalDocument.id",
-        "equivalence" : "equivalent"
+        "equivalence" : "relatedto",
+        "comment" : "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document",
     "element" : [{
-      "code" : "FRCDAReferenceItemPlanTraitement",
+      "code" : "FRLMCarePlan",
       "target" : [{
         "code" : "FRCarePlanDocument",
-        "equivalence" : "equivalent"
+        "equivalence" : "narrower"
       }]
     },
     {
-      "code" : "FRCDAReferenceItemPlanTraitement.id",
+      "code" : "FRLMCarePlan.header.identifier",
       "target" : [{
         "code" : "FRCarePlanDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAReferenceItemPlanTraitement.code",
+      "code" : "FRLMCarePlan.header.status",
       "target" : [{
-        "code" : "FRCarePlanDocument.category",
+        "code" : "FRCarePlanDocument.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAReferenceItemPlanTraitement.consumable",
+      "code" : "FRLMCarePlan.addresses",
       "target" : [{
-        "code" : "FRCarePlanDocument.activity.detail.productReference",
+        "code" : "FRCarePlanDocument.addresses",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAReferenceItemPlanTraitement.author",
+      "code" : "FRLMCarePlan.goal",
       "target" : [{
-        "code" : "FRCarePlanDocument.author",
+        "code" : "FRCarePlanDocument.goal",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
+      "code" : "FRLMCarePlan.activity",
       "target" : [{
         "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAReferenceItemPlanTraitement.reference",
-      "target" : [{
-        "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAReferenceItemPlanTraitement.reference.externalDocument.id",
-      "target" : [{
-        "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument.identifier",
-        "equivalence" : "equivalent"
+        "equivalence" : "narrower",
+        "comment" : "Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument."
       }]
     }]
   }]

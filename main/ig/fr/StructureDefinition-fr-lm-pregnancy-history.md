@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-pregnancy
   "name" : "FRLMPregnancyHistory",
   "title" : "Logical model- FR LM Pregnancy History",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -298,8 +298,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-pregnancy
     {
       "id" : "fr-lm-pregnancy-history.hasMember[x]",
       "path" : "fr-lm-pregnancy-history.hasMember[x]",
-      "short" : "Observations associées et rattachées à cette entree",
-      "definition" : "Observations associées et rattachées à cette entree",
+      "short" : "Observations associées",
+      "definition" : "Observations associées",
       "min" : 0,
       "max" : "*",
       "type" : [{

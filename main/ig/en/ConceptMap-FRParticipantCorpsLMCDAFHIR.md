@@ -1,9 +1,9 @@
-# Mapping FRLMParticipantCorps -> FRCDAParticipant -> FRActorExtension - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMParticipant -> FRCDAParticipant / FRLMParticipant -> FRActorExtension - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMParticipantCorps -> FRCDAParticipant -> FRActorExtension 
+## ConceptMap: Mapping FRLMParticipant -> FRCDAParticipant / FRLMParticipant -> FRActorExtension 
 
  
-Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension. 
+Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA 
   "version" : "0.1.0",
   "title" : "Mapping Metier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
-  "date" : "2026-07-16T15:39:37+00:00",
+  "date" : "2026-08-05T12:15:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA 
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.",
+  "description" : "Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,239 +35,135 @@ Mapping des éléments du modele metier FRLMParticipantCorps vers le profil CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant-corps",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
     "element" : [{
-      "code" : "FRLMParticipantCorps",
+      "code" : "FRLMParticipant",
       "target" : [{
         "code" : "FRCDAParticipant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.dateEtHeureParticipation",
-      "target" : [{
-        "code" : "FRCDAParticipant.time",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.IdentifiantParticipant",
+      "code" : "FRLMParticipant.identifier",
       "target" : [{
         "code" : "FRCDAParticipant.participantRole.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.typeParticipant",
-      "target" : [{
-        "code" : "FRCDAParticipant.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.adresses",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.addr",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.coordonneesTelecom",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.telecom",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.identiteParticipant.nom",
+      "code" : "FRLMParticipant.name",
       "target" : [{
         "code" : "FRCDAParticipant.participantRole.playingEntity.name",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.identiteParticipant.ProfessionSpecialite",
+      "code" : "FRLMParticipant.type",
+      "target" : [{
+        "code" : "FRCDAParticipant.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.role",
       "target" : [{
         "code" : "FRCDAParticipant.participantRole.playingEntity.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.identiteParticipant.description",
+      "code" : "FRLMParticipant.period",
       "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingEntity.desc",
+        "code" : "FRCDAParticipant.time",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.Organisation",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
-        "code" : "FRCDAParticipant.participantRole.scopingEntity",
+        "code" : "FRCDAParticipant.participantRole.playingEntity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.Organisation.identifiant",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.scopingEntity.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.Organisation.code",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.scopingEntity.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.Organisation.description",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.scopingEntity.desc",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.dispositifAutomatique",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
         "code" : "FRCDAParticipant.participantRole.playingDevice",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipantCorps.participantRole.categorie",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingDevice.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.nomModele",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingDevice.manufacturerModelName",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipantCorps.participantRole.nomLogiciel",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingDevice.softwareName",
+        "code" : "FRCDAParticipant.participantRole.scopingEntity",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension",
     "element" : [{
-      "code" : "FRCDAParticipant",
+      "code" : "FRLMParticipant",
       "target" : [{
         "code" : "FRActorExtension",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.code",
+      "code" : "FRLMParticipant.type",
       "target" : [{
         "code" : "FRActorExtension.extension[typeCode].value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.id",
+      "code" : "FRLMParticipant.identifier",
       "target" : [{
         "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.addr",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.address",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.telecom",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.telecom",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.playingEntity.name",
+      "code" : "FRLMParticipant.name",
       "target" : [{
         "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.name",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.playingEntity.code",
+      "code" : "FRLMParticipant.role",
       "target" : [{
         "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.practitioner.qualification",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.playingEntity.desc",
+      "code" : "FRLMParticipant.period",
       "target" : [{
-        "equivalence" : "unmatched"
+        "equivalence" : "unmatched",
+        "comment" : "Période sans équivalent direct dans l'extension FRActorExtension."
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.scopingEntity",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationDocument",
+        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.scopingEntity.id",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationDocument.identifier",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.scopingEntity.code",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationDocument.type",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.scopingEntity.desc",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationDocument.extension:description",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.playingDevice",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
         "code" : "FRActorExtension.extension[actor].value[x]:Device",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAParticipant.participantRole.playingDevice.code",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:Device.type",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.playingDevice.manufacturerModelName",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:Device.manufacturer",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDAParticipant.participantRole.playingDevice.softwareName",
-      "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:Device.deviceName.name",
+        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument",
         "equivalence" : "equivalent"
       }]
     }]
