@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionOrderInformationLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionOrderInformationLMCDAFHIR</b></p><a name=\"FRSectionOrderInformationLMCDAFHIR\"> </a><a name=\"hcFRSectionOrderInformationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order-information</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMOrderInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen</td><td/></tr><tr><td>FRLMOrderInformation.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen.title</td><td/></tr><tr><td>FRLMOrderInformation.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen.text</td><td/></tr><tr><td>FRLMOrderInformation.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMDemandeExamen.code</td><td/></tr><tr><td>FRLMOrderInformation.entry.orderInformation</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune cible CDA explicite identifiee dans FRCDADICOMDemandeExamen pour FRLMOrderInformation.entry.orderInformation.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order-information</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMOrderInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionOrder</td></tr><tr><td>FRLMOrderInformation.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionOrder.code</td></tr><tr><td>FRLMOrderInformation.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionOrder.title</td></tr><tr><td>FRLMOrderInformation.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionOrder.text</td></tr><tr><td>FRLMOrderInformation.entry.orderInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionOrder.entry:FRServiceRequestImagingDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionOrderInformationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : Demande d'examen d'imagerie",
+  "status" : "draft",
+  "date" : "2026-08-05T13:43:59+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMOrderInformation vers la section CDA FRCDADICOMDemandeExamen, puis vers la section FHIR FRCompositionDocument.section:sectionOrder.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order-information",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-demande-examen",
+    "element" : [{
+      "code" : "FRLMOrderInformation",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.titleSection",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.description",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.codeSection",
+      "target" : [{
+        "code" : "FRCDADICOMDemandeExamen.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.entry.orderInformation",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune cible CDA explicite identifiee dans FRCDADICOMDemandeExamen pour FRLMOrderInformation.entry.orderInformation."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order-information",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRLMOrderInformation",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionOrder",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.codeSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionOrder.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.titleSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionOrder.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.description",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionOrder.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrderInformation.entry.orderInformation",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionOrder.entry:FRServiceRequestImagingDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
