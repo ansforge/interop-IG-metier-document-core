@@ -1,0 +1,124 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRCarePlanLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRCarePlanLMCDAFHIR</b></p><a name=\"en-FRCarePlanLMCDAFHIR\"> </a><a name=\"en-hcFRCarePlanLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMCarePlan</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>FRCDAReferenceItemPlanTraitement</td><td/></tr><tr><td>FRLMCarePlan.header.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAReferenceItemPlanTraitement.id</td><td/></tr><tr><td>FRLMCarePlan.header.status</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAReferenceItemPlanTraitement.statusCode</td><td/></tr><tr><td>FRLMCarePlan.addresses</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les problèmes adressés par le plan.</td></tr><tr><td>FRLMCarePlan.goal</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les objectifs du plan.</td></tr><tr><td>FRLMCarePlan.activity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement</td><td>Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMCarePlan</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>FRCarePlanDocument</td><td/></tr><tr><td>FRLMCarePlan.header.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCarePlanDocument.identifier</td><td/></tr><tr><td>FRLMCarePlan.header.status</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCarePlanDocument.status</td><td/></tr><tr><td>FRLMCarePlan.addresses</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCarePlanDocument.addresses</td><td/></tr><tr><td>FRLMCarePlan.goal</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCarePlanDocument.goal</td><td/></tr><tr><td>FRLMCarePlan.activity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#narrower\" title=\"narrower\">narrower</a></td><td>FRCarePlanDocument.activity.reference:FRMedicationRequestDocument</td><td>Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument.</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCarePlanLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
+  "status" : "draft",
+  "date" : "2026-08-10T11:41:07+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAReferenceItemPlanTraitement (équivalent CDA le plus proche), puis vers le profil FHIR FRCarePlanDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement",
+    "element" : [{
+      "code" : "FRLMCarePlan",
+      "target" : [{
+        "code" : "FRCDAReferenceItemPlanTraitement",
+        "equivalence" : "narrower"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.header.identifier",
+      "target" : [{
+        "code" : "FRCDAReferenceItemPlanTraitement.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.header.status",
+      "target" : [{
+        "code" : "FRCDAReferenceItemPlanTraitement.statusCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.addresses",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les problèmes adressés par le plan."
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.goal",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun élément CDA explicite de FRCDAReferenceItemPlanTraitement ne porte les objectifs du plan."
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.activity",
+      "target" : [{
+        "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
+        "equivalence" : "relatedto",
+        "comment" : "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document",
+    "element" : [{
+      "code" : "FRLMCarePlan",
+      "target" : [{
+        "code" : "FRCarePlanDocument",
+        "equivalence" : "narrower"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.header.identifier",
+      "target" : [{
+        "code" : "FRCarePlanDocument.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.header.status",
+      "target" : [{
+        "code" : "FRCarePlanDocument.status",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.addresses",
+      "target" : [{
+        "code" : "FRCarePlanDocument.addresses",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.goal",
+      "target" : [{
+        "code" : "FRCarePlanDocument.goal",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCarePlan.activity",
+      "target" : [{
+        "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
+        "equivalence" : "narrower",
+        "comment" : "Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument."
+      }]
+    }]
+  }]
+}
