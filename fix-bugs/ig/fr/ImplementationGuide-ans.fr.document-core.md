@@ -14,7 +14,7 @@
   "name" : "FRDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-08-10T11:41:07+00:00",
+  "date" : "2026-08-10T14:36:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -914,8 +914,7 @@
       },
       "name" : "Logical model  - FR LM Patient History",
       "description" : "Section Historique du patient",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -931,8 +930,7 @@
       },
       "name" : "Logical model  - FR LM Pregnancy History",
       "description" : "Section Historique des grossesses",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -948,8 +946,7 @@
       },
       "name" : "Logical model  - FR LM Travel History",
       "description" : "Section Historique des voyages",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -982,8 +979,7 @@
       },
       "name" : "Logical model - FR LM Addendum",
       "description" : "Section Addendum",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -999,8 +995,7 @@
       },
       "name" : "Logical model - FR LM Admission Evaluation",
       "description" : "Section Évaluation à l'admission",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1033,8 +1028,7 @@
       },
       "name" : "Logical model - FR LM Advance Directives",
       "description" : "Section Directives anticipées",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1066,8 +1060,7 @@
       },
       "name" : "Logical model - FR LM Alerts",
       "description" : "Section Points de vigilance",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1083,8 +1076,7 @@
       },
       "name" : "Logical model - FR LM Allergies And Intolerances",
       "description" : "Section Allergies et hypersensibilités",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1151,8 +1143,7 @@
       },
       "name" : "Logical model - FR LM Attachments",
       "description" : "Section Documents ajoutés",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1219,8 +1210,7 @@
       },
       "name" : "Logical model - FR LM CarePlans",
       "description" : "Section Plan de soins",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1236,8 +1226,7 @@
       },
       "name" : "Logical model - FR LM Comparison Study",
       "description" : "Section Comparaison d'examens d'imagerie",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1253,8 +1242,7 @@
       },
       "name" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
       "description" : "Section Compte rendu de biologie de 1er niveau",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1270,8 +1258,7 @@
       },
       "name" : "Logical model - FR LM Conclusion",
       "description" : "Section Conclusion",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1321,8 +1308,7 @@
       },
       "name" : "Logical model - FR LM Corps document",
       "description" : "Eléments métier du corps d'un document contenant les sections du document.",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1338,8 +1324,7 @@
       },
       "name" : "Logical model - FR LM Course of encounter",
       "description" : "Section Résultats d'événements",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1505,8 +1490,7 @@
       },
       "name" : "Logical model - FR LM Examination Report",
       "description" : "Section Acte d'imagerie",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1522,8 +1506,7 @@
       },
       "name" : "Logical model - FR LM Exposure Information",
       "description" : "Section Exposition aux radiations",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1539,8 +1522,7 @@
       },
       "name" : "Logical model - FR LM Family Medical History",
       "description" : "Section Antécédents familiaux",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1573,8 +1555,7 @@
       },
       "name" : "Logical model - FR LM FR LM Medication Prescription",
       "description" : "Section Prescription de médicaments",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1590,8 +1571,7 @@
       },
       "name" : "Logical model - FR LM FRLM History Of Past Illness",
       "description" : "Section Antécédents médicaux",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1607,8 +1587,7 @@
       },
       "name" : "Logical model - FR LM Hazardous Working Conditions",
       "description" : "Section Facteurs de risque professionnels non codés",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1658,8 +1637,7 @@
       },
       "name" : "Logical model - FR LM Hospital Discharge Medications",
       "description" : "Section Traitements à la sortie",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1726,8 +1704,7 @@
       },
       "name" : "Logical model - FR LM Immunisations",
       "description" : "Section Vaccinations",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1811,8 +1788,7 @@
       },
       "name" : "Logical Model - FR LM Medical Device Prescriptions",
       "description" : "Section Prescription de dispositifs médicaux",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1828,8 +1804,7 @@
       },
       "name" : "Logical Model - FR LM Medical Devices and Implants",
       "description" : "Section Dispositifs Medicaux",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1862,8 +1837,7 @@
       },
       "name" : "Logical model - FR LM Medication Dispensations",
       "description" : "Section Dispensation médicaments",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1913,8 +1887,7 @@
       },
       "name" : "Logical model - FR LM Medication Summary",
       "description" : "Section Traitements",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1979,8 +1952,7 @@
       },
       "name" : "Logical model - FR LM Note",
       "description" : "Section Commentaire (non-codé)",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2047,8 +2019,7 @@
       },
       "name" : "Logical model - FR LM ObservationResults",
       "description" : "Section Résultats",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2081,8 +2052,7 @@
       },
       "name" : "Logical model - FR LM Order Information",
       "description" : "Section Demande d'examen d'imagerie",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2149,8 +2119,7 @@
       },
       "name" : "Logical model - FR LM Patient Education",
       "description" : "Section Education du patient",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2199,8 +2168,7 @@
       },
       "name" : "Logical model - FR LM Predictable Adverse Drug Reaction",
       "description" : "Section Effets indesirables",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2233,8 +2201,7 @@
       },
       "name" : "Logical model - FR LM Presented Form",
       "description" : "Section Document PDF-copie",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2250,8 +2217,7 @@
       },
       "name" : "Logical model - FR LM Problems",
       "description" : "Section Problems",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2267,8 +2233,7 @@
       },
       "name" : "logical model - FR LM Procedures",
       "description" : "Section Historique des actes",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2284,8 +2249,7 @@
       },
       "name" : "Logical model - FR LM QR Code",
       "description" : "Section Codes à barres",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2318,8 +2282,7 @@
       },
       "name" : "Logical model - FR LM Reason for referral",
       "description" : "Section Raison de la recommandation",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2335,8 +2298,7 @@
       },
       "name" : "Logical model - FR LM Recommendation",
       "description" : "Section Recommandation",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2386,8 +2348,7 @@
       },
       "name" : "Logical model - FR LM Section",
       "description" : "Section",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2487,8 +2448,7 @@
       },
       "name" : "Logical model - FR LM Supporting Information",
       "description" : "Section Informations Cliniques",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2555,8 +2515,7 @@
       },
       "name" : "Logical model - FR LM Vital Signs",
       "description" : "Section Signes vitaux",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -2606,8 +2565,7 @@
       },
       "name" : "logical model- FR LM Functional Status",
       "description" : "Section Statut fonctionnel",
-      "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
