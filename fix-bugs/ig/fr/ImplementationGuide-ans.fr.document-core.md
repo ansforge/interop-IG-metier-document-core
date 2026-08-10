@@ -14,7 +14,7 @@
   "name" : "FRDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-08-10T14:36:25+00:00",
+  "date" : "2026-08-10T19:10:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -881,7 +881,8 @@
     },
     {
       "id" : "section-models",
-      "name" : "Modèles logiques métier des sections d'un document"
+      "name" : "Modèles logiques métier des sections d'un document",
+      "description" : "Modèles de données métier représentant les sections d'un document."
     },
     {
       "id" : "common-models",
@@ -1308,7 +1309,8 @@
       },
       "name" : "Logical model - FR LM Corps document",
       "description" : "Eléments métier du corps d'un document contenant les sections du document.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "section-models"
     },
     {
       "extension" : [{

@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-batterie-ex
   "name" : "FRLMBatterieExamensBiologieMedicale",
   "title" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
   "status" : "draft",
-  "date" : "2026-08-10T14:36:25+00:00",
+  "date" : "2026-08-10T19:10:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
