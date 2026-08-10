@@ -97,7 +97,7 @@ menu:
         Téléchargements et usage: downloads.html
 
 groups:
-  Modèles logiques métier de l'entête d'un document:
+  header-models:
     name: Modèles logiques métier de l'entête d'un document
     resources:
       - FRLMHeaderDocument	
@@ -116,55 +116,54 @@ groups:
       - FRLMRelatedPerson
       - FRLMHumanName
 
-  Modèles logiques métier des sections d'un document: 
+  section-models: 
     name: Modèles logiques métier des sections d'un document
     resources:
       - StructureDefinition/fr-lm-corps-document
       #Sections
       - StructureDefinition/fr-lm-section
-      - StructureDefinition/fr-lm-allergies-and-intolerances
-      - StructureDefinition/fr-lm-family-medical-history
-      - StructureDefinition/fr-lm-history-of-past-illness
-      - StructureDefinition/fr-lm-qr-code
-      - StructureDefinition/fr-lm-note
       - StructureDefinition/fr-lm-addendum
-      - StructureDefinition/fr-lm-observation-results
-      - StructureDefinition/fr-lm-advance-directives
-      - StructureDefinition/fr-lm-medical-devices-and-implants
-      - StructureDefinition/fr-lm-presented-form
-      - StructureDefinition/fr-lm-attachments
-      - StructureDefinition/fr-lm-predictable-adverse-drug-reaction
-      - StructureDefinition/fr-lm-hazardous-working-conditions
-      - StructureDefinition/fr-lm-social-history
-      - StructureDefinition/fr-lm-procedures
-      - StructureDefinition/fr-lm-result-data
-      - StructureDefinition/fr-lm-examination-report
-      - StructureDefinition/fr-lm-order-information
-      - StructureDefinition/fr-lm-comparison-study
-      - StructureDefinition/fr-lm-exposure-information
-      - StructureDefinition/fr-lm-supporting-information
-      - StructureDefinition/fr-lm-dicom-study-metadata
-      - StructureDefinition/fr-lm-recommendation
-      - StructureDefinition/fr-lm-conclusion
-      - StructureDefinition/fr-lm-medication-dispensations
-      - StructureDefinition/fr-lm-patient-education
-      - StructureDefinition/fr-lm-section-pregnancy-history
-      - StructureDefinition/fr-lm-care-plans
-      - StructureDefinition/fr-lm-medical-device-prescriptions
-      - StructureDefinition/fr-lm-medication-prescription
-      - StructureDefinition/fr-lm-problems
-      - StructureDefinition/fr-lm-vital-signs
-      - StructureDefinition/fr-lm-functional-status
-      - StructureDefinition/fr-lm-medication-summary
-      - StructureDefinition/fr-lm-immunisations
-      - StructureDefinition/fr-lm-reason-for-referral
-      - StructureDefinition/fr-lm-course-of-encounter
-      - StructureDefinition/fr-lm-hospital-discharge-medications
-      - StructureDefinition/fr-lm-alerts
       - StructureDefinition/fr-lm-admission-evaluation
-      - StructureDefinition/fr-lm-encounter-information
+      - StructureDefinition/fr-lm-advance-directives
+      - StructureDefinition/fr-lm-alerts
+      - StructureDefinition/fr-lm-allergies-and-intolerances
+      - StructureDefinition/fr-lm-attachments
+      - StructureDefinition/fr-lm-care-plans
+      - StructureDefinition/fr-lm-comparison-study
+      - StructureDefinition/fr-lm-conclusion
+      - StructureDefinition/fr-lm-course-of-encounter
+      - StructureDefinition/fr-lm-examination-report
+      - StructureDefinition/fr-lm-exposure-information
+      - StructureDefinition/fr-lm-family-medical-history
+      - StructureDefinition/fr-lm-functional-status
+      - StructureDefinition/fr-lm-hazardous-working-conditions
+      - StructureDefinition/fr-lm-history-of-past-illness
+      - StructureDefinition/fr-lm-hospital-discharge-medications
+      - StructureDefinition/fr-lm-immunisations
+      - StructureDefinition/fr-lm-medical-device-prescriptions
+      - StructureDefinition/fr-lm-medical-devices-and-implants
+      - StructureDefinition/fr-lm-medication-dispensations
+      - StructureDefinition/fr-lm-medication-prescription
+      - StructureDefinition/fr-lm-medication-summary
+      - StructureDefinition/fr-lm-note
+      - StructureDefinition/fr-lm-observation-results
+      - StructureDefinition/fr-lm-order-information
+      - StructureDefinition/fr-lm-patient-education 
+      - StructureDefinition/fr-lm-patient-history
+      - StructureDefinition/fr-lm-predictable-adverse-drug-reaction
+      - StructureDefinition/fr-lm-presented-form
+      - StructureDefinition/fr-lm-problems
+      - StructureDefinition/fr-lm-procedures
+      - StructureDefinition/fr-lm-qr-code
+      - StructureDefinition/fr-lm-reason-for-referral
+      - StructureDefinition/fr-lm-recommendation
+      - StructureDefinition/fr-lm-result-data
+      - StructureDefinition/fr-lm-section-pregnancy-history
+      - StructureDefinition/fr-lm-section-travel-history
+      - StructureDefinition/fr-lm-supporting-information
+      - StructureDefinition/fr-lm-vital-signs
 
-  Modèles logiques métier des composants communs: 
+  common-models: 
     name: Modèles logiques métier des composants communs
     description: Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR.
     resources:
@@ -215,7 +214,8 @@ groups:
       - StructureDefinition/fr-lm-laboratory-observation
       - StructureDefinition/fr-lm-body-structure
       - StructureDefinition/fr-lm-travel-history
-  Mapping ML-CDA-FHIR entête:
+  
+  header-mappings:
     name: Concept Maps de l'entête du document
     resources:
       - mappingmodelemetierCDAFHIR
@@ -238,7 +238,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
 
-  Mapping ML-CDA-FHIR des sections d'un document:
+  section-mappings:
     name: Concept Maps des sections d'un document
     resources:
       - FRSectionImagingResultsLMCDAFHIR
@@ -290,7 +290,7 @@ groups:
       - FRSectionImmunizationsLMCDAFHIR
       - FRSectionMedicationDispenseLMCDAFHIR
 
-  Mapping ML-CDA-FHIR des composants communs d'un document:
+  common-mappings:
     name: Concept Maps des composants communs d'un Document
     resources:
       - FRProcedureLMCDAFHIR
