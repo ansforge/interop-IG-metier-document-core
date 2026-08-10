@@ -1,4 +1,4 @@
-// mapping à supprimer car le profil ML peut être mappé directement vers le profil FHIR FRLMObservation --> Profil FHIR  FRObservationMicroorganismDetectionDocument à supprimer
+// Il s'agit d'un profil spécifique au LDL. Il pourra être supprimé après vérification et validation par Alain des propositions qui lui ont été transmises : le profil métier peut être mappé directement vers le profil FHIR FRLMObservation ; le profil FHIR FRObservationMicroorganismDetectionDocument sera également supprimé. 
 Instance: FRObservationMicroorganismDetectionLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
