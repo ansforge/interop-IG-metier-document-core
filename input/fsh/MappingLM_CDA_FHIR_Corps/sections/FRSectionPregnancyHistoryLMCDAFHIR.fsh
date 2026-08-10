@@ -34,7 +34,7 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 * group[=].element[=].target[=].equivalence = #equivalent
 // Commentaire de la section : aucune cible directe
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.note
-* group[=].element[=].target[=].equivalence = #unmatched
+* group[=].element[=].target[+].equivalence = #unmatched
 
 // Groupe Mapping 2 : ML → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-section-pregnancy-history"

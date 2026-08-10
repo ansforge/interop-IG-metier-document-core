@@ -58,5 +58,5 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicePrescri
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Dispositif medical prescrit
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.entry.deviceUse:FRLMDeviceUse
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.entry:FRDeviceUseStatementDocument
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.entry:FRDeviceRequestDocument
 * group[=].element[=].target[=].equivalence = #equivalent

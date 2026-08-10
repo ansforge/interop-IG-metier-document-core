@@ -27,7 +27,7 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Points de vigilance
 * group[=].element[+].code = #FRLMAlerts.entry.alert
-* group[=].element[=].target[=].equivalence = #unmatched
+* group[=].element[=].target[+].equivalence = #unmatched
 
 // Groupe Mapping 2 : ML → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-alerts"

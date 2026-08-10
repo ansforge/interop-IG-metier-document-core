@@ -1,8 +1,8 @@
-Instance: FRSectionObservationResultsLMCDAFHIR
+Instance: FRSectionResultsLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMObservationResults → FRCDAResultats / FRLMObservationResults → FRCompositionDocument.section:results"
-Description: "Mapping des éléments du modèle métier FRLMObservationResults vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results."
+Title: "Mapping FRLMObservationResults → FRCDAResultats / FRLMObservationResults → FRCompositionDocument.section:sectionResults"
+Description: "Mapping des éléments du modèle métier FRLMObservationResults vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:sectionResults."
 * title = "Mapping Métier/CDA/FHIR : \"Résultats\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
