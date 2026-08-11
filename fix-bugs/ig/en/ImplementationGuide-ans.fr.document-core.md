@@ -14,7 +14,7 @@
   "name" : "FRDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-08-10T19:10:11+00:00",
+  "date" : "2026-08-11T07:47:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -876,29 +876,28 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "grouping" : [{
-      "id" : "header-models",
+      "id" : "Modèles logiques métier de l'entête d'un document",
       "name" : "Modèles logiques métier de l'entête d'un document"
     },
     {
-      "id" : "section-models",
-      "name" : "Modèles logiques métier des sections d'un document",
-      "description" : "Modèles de données métier représentant les sections d'un document."
+      "id" : "Modèles logiques métier des sections d'un document",
+      "name" : "Modèles logiques métier des sections d'un document"
     },
     {
-      "id" : "common-models",
+      "id" : "Modèles logiques métier des composants communs",
       "name" : "Modèles logiques métier des composants communs",
       "description" : "Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR."
     },
     {
-      "id" : "header-mappings",
+      "id" : "Mapping ML-CDA-FHIR entête",
       "name" : "Concept Maps de l'entête du document"
     },
     {
-      "id" : "section-mappings",
+      "id" : "Mapping ML-CDA-FHIR des sections d'un document",
       "name" : "Concept Maps des sections d'un document"
     },
     {
-      "id" : "common-mappings",
+      "id" : "Mapping ML-CDA-FHIR des composants communs d'un document",
       "name" : "Concept Maps des composants communs d'un Document"
     }],
     "resource" : [{
@@ -964,7 +963,7 @@
       "name" : "Logical model - Device",
       "description" : "Dispositif médical",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1013,7 +1012,7 @@
       "name" : "Logical model - FR LM Advance Directive",
       "description" : "Directive anticipée",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1094,7 +1093,7 @@
       "name" : "Logical model - FR LM Allergy Intolerance",
       "description" : "Allergie ou Hypersensibilité",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1111,7 +1110,7 @@
       "name" : "Logical model - FR LM Assessment",
       "description" : "Evaluation",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1128,7 +1127,7 @@
       "name" : "Logical model - FR LM Attachment",
       "description" : "Document attaché",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1161,7 +1160,7 @@
       "name" : "Logical model - FR LM Attester",
       "description" : "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1178,7 +1177,7 @@
       "name" : "Logical model - FR LM Body Structure",
       "description" : "Localisation anatomique",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1195,7 +1194,7 @@
       "name" : "Logical model - FR LM Care Plan",
       "description" : "Plan de soins",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1276,7 +1275,7 @@
       "name" : "Logical model - FR LM Condition",
       "description" : "Problème",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1293,7 +1292,7 @@
       "name" : "Logical model - FR LM Consent",
       "description" : "Permet de documenter qu'un consentement éclairé a été obtenu et d'indiquer quel type de consentement a été fourni.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1310,7 +1309,7 @@
       "name" : "Logical model - FR LM Corps document",
       "description" : "Eléments métier du corps d'un document contenant les sections du document.",
       "exampleBoolean" : false,
-      "groupingId" : "section-models"
+      "groupingId" : "Modèles logiques métier des sections d'un document"
     },
     {
       "extension" : [{
@@ -1343,7 +1342,7 @@
       "name" : "Logical model - FR LM Data Enterer",
       "description" : "Opérateur de saisie de la totalité ou d'une partie du contenu du document.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1360,7 +1359,7 @@
       "name" : "Logical model - FR LM Device use",
       "description" : "Dispositif médical usage",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1377,7 +1376,7 @@
       "name" : "Logical model - FR LM DICOM Medication Administration",
       "description" : "Administration de produit de santé dans le contexte de l'imagerie médicale",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1410,7 +1409,7 @@
       "name" : "Logical model - FR LM Dose Number",
       "description" : "Rang de la vaccination",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1427,7 +1426,7 @@
       "name" : "Logical model - FR LM Encounter",
       "description" : "Rencontre",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1476,7 +1475,7 @@
       "name" : "Logical model - FR LM Entry",
       "description" : "Modèle logique représentant l'entrée",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1541,7 +1540,7 @@
       "name" : "Logical model - FR LM Family Member History",
       "description" : "Antécédent familial",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1606,7 +1605,7 @@
       "name" : "Logical model - FR LM Header Document",
       "description" : "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1623,7 +1622,7 @@
       "name" : "Logical model - FR LM Health Professional",
       "description" : "Une personne (professionnel ou patient ou autre)",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1656,7 +1655,7 @@
       "name" : "Logical model - FR LM Human Name",
       "description" : "Modele logique metier - FR LM Human Name",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1673,7 +1672,7 @@
       "name" : "Logical model - FR LM Imaging Study",
       "description" : "DICOM Examen Imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1690,7 +1689,7 @@
       "name" : "Logical model - FR LM Immunisation",
       "description" : "Vaccination",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1723,7 +1722,7 @@
       "name" : "Logical model - FR LM Informant",
       "description" : "Informant (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1740,7 +1739,7 @@
       "name" : "Logical model - FR LM Intended Recipient",
       "description" : "Personne déclarée comme destinataire prévu du document.\n- Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s).\n Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1757,7 +1756,7 @@
       "name" : "Logical model - FR LM Legal Authentication",
       "description" : "Représente le responsable du document, qui est : \n - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. \n - soit le professionnel qui prend la responsabilité du document produit par un système de structure (ES, …). \n - soit le patient/usager responsable du document d'expression personnelle \n - soit le SNR responsable du document produit via ce SNR. \n - Soit le Dossier Pharmaceutique (DP) responsable des documents qu'il produit",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1774,7 +1773,7 @@
       "name" : "Logical model - FR LM Location",
       "description" : "Lieu",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -1823,7 +1822,7 @@
       "name" : "Logical model - FR LM Medication",
       "description" : "Produit de santé",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1856,7 +1855,7 @@
       "name" : "Logical model - FR LM Medication Dispense",
       "description" : "Traitement dispense",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1873,7 +1872,7 @@
       "name" : "Logical model - FR LM Medication Prescription",
       "description" : "Traitement prescrit",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1938,7 +1937,7 @@
       "name" : "Logical model - FR LM Multidrug Resistant Microorganism Identification",
       "description" : "Identification de micro-organismes multirésistants",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1971,7 +1970,7 @@
       "name" : "Logical model - FR LM Observation",
       "description" : "Résultat d'une observation réalisée sur le patient ou un dispositif médical.",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -1988,7 +1987,7 @@
       "name" : "Logical model - FR LM Observation Vital Sign",
       "description" : "Signe vital observé",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2005,7 +2004,7 @@
       "name" : "Logical model - FR LM ObservationMedia",
       "description" : "Image illustrative.",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2038,7 +2037,7 @@
       "name" : "Logical model - FR LM Order",
       "description" : "Association to an order that is the origin of the act resulting in the document.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2071,7 +2070,7 @@
       "name" : "Logical model - FR LM Organisation",
       "description" : "Une structure (organisation) pour les professionnels de santé.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2088,7 +2087,7 @@
       "name" : "Logical model - FR LM Participant",
       "description" : "Personne/Structure impliquée dans les évènements décrits par le document qui n'a pas été mentionné ailleurs.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2105,7 +2104,7 @@
       "name" : "Logical model - FR LM Patient",
       "description" : "Patient/Usager concerné par le document.",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2154,7 +2153,7 @@
       "name" : "Logical model - FR LM Patient Transfer.",
       "description" : "Transfert du patient",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2187,7 +2186,7 @@
       "name" : "Logical model - FR LM Prescription",
       "description" : "Prescription",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2268,7 +2267,7 @@
       "name" : "Logical model - FR LM Quantity Exposure",
       "description" : "Quantité exposition",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2317,7 +2316,7 @@
       "name" : "Logical model - FR LM Related Person",
       "description" : "Related Person",
       "exampleBoolean" : false,
-      "groupingId" : "header-models"
+      "groupingId" : "Modèles logiques métier de l'entête d'un document"
     },
     {
       "extension" : [{
@@ -2334,7 +2333,7 @@
       "name" : "Logical model - FR LM Resultats d'examens de biologie medicale",
       "description" : "Resultats d'examens de biologie medicale",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2367,7 +2366,7 @@
       "name" : "Logical model - FR LM Series",
       "description" : "Séries d'actes d'imagerie",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2384,7 +2383,7 @@
       "name" : "Logical model - FR LM Service Request",
       "description" : "Demande d'examen ou de suivi / Objectif à atteindre",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2417,7 +2416,7 @@
       "name" : "Logical model - FR LM SOP Instance",
       "description" : "SOP Instance",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2434,7 +2433,7 @@
       "name" : "Logical model - FR LM Specimen",
       "description" : "Prélèvement",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2467,7 +2466,7 @@
       "name" : "Logical model - FR LM Transfusion accidents",
       "description" : "Accidents transfusionnels",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2484,7 +2483,7 @@
       "name" : "Logical model - FR LM Transfusion de produits sanguins",
       "description" : "Transfusion de produits sanguins",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2501,7 +2500,7 @@
       "name" : "Logical model - FR LM TravelHistory",
       "description" : "Historique des voyages.",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2534,7 +2533,7 @@
       "name" : "Logical model - Laboratory Observation",
       "description" : "Résultats d'examen de biologie médicale",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2551,7 +2550,7 @@
       "name" : "Logical model- FR LM Dosage Instructions",
       "description" : "Posologie",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2584,7 +2583,7 @@
       "name" : "Logical model- FR LM Medication Administration\t",
       "description" : "Traitement",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2601,7 +2600,7 @@
       "name" : "Logical model- FR LM Observation Social History",
       "description" : "Habitus Mode de vie",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2618,7 +2617,7 @@
       "name" : "Logical model- FR LM Pregnancy History",
       "description" : "Historique de la grossesse",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2635,7 +2634,7 @@
       "name" : "Logical model- FR LM Pregnancy Observation",
       "description" : "Observation sur la grossesse",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2652,7 +2651,7 @@
       "name" : "Logical model- FR LM Pregnancy Status",
       "description" : "Statut de grossesse",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2669,7 +2668,7 @@
       "name" : "Logical model- FR LM Procedure",
       "description" : "Acte",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -2686,7 +2685,7 @@
       "name" : "Mapping FRLMAddendum → FRCDAdicomAddendum → FRCompositionDocument.section:Addendum",
       "description" : "Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum puis vers le profil FHIR FRCompositionDocument.section:Addendum.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2703,7 +2702,7 @@
       "name" : "Mapping FRLMAdvanceDirective → FRCDADirectiveAnticipee / FRLMAdvanceDirective → FRAdvanceDirectiveDocument",
       "description" : "Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2720,7 +2719,7 @@
       "name" : "Mapping FRLMAdverseDrugReaction → FRCDAEffetIndesirable / FRLMAdverseDrugReaction → FRAdverseEventDocument",
       "description" : "Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil CDA FRCDAEffetIndesirable, puis vers le profil FHIR FRAdverseEventDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2737,7 +2736,7 @@
       "name" : "Mapping FRLMAllergyIntolerance → FRCDAAllergieOuHypersensibilite / FRLMAllergyIntolerance → FRAllergyIntoleranceDocument",
       "description" : "Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil CDA FRCDAAllergieOuHypersensibilite, puis vers le profil FHIR FRAllergyIntoleranceDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2754,7 +2753,7 @@
       "name" : "Mapping FRLMAttachment → FRCDADocumentAttache → FRDocumentReferenceDocument",
       "description" : "Mapping des éléments du modèle métier FRLMAttachment vers le profil CDA FRCDADocumentAttache, puis vers le profil FHIR FRDocumentReferenceDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2771,7 +2770,7 @@
       "name" : "Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument",
       "description" : "Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale vers le profil CDA FRCDABatterieExamensDeBiologieMedicale, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2788,7 +2787,7 @@
       "name" : "Mapping FRLMCarePlan → FRCDAReferenceItemPlanTraitement / FRLMCarePlan → FRCarePlanDocument",
       "description" : "Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAReferenceItemPlanTraitement (équivalent CDA le plus proche), puis vers le profil FHIR FRCarePlanDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2805,7 +2804,7 @@
       "name" : "Mapping FRLMComparaisonExamensImagerie → FRCDADICOMExamenComparatif → FRCompositionDocument.section:Comparison",
       "description" : "Mapping des éléments du modèle métier FRLMComparaisonExamensImagerie vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section Comparison du profil FHIR FRCompositionDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2822,7 +2821,7 @@
       "name" : "Mapping FRLMComplicationsActe → FRCDADICOMComplications → FRProcedureImagingDocument.complication.text",
       "description" : "Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2839,7 +2838,7 @@
       "name" : "Mapping FRLMConclusionExamenImagerie → FRCDADICOMConclusion → FRDiagnosticReportImagingDocument.conclusion",
       "description" : "Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2856,7 +2855,7 @@
       "name" : "Mapping FRLMCondition → FRCDAProbleme / FRLMCondition → FRConditionDocument",
       "description" : "Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2873,7 +2872,7 @@
       "name" : "Mapping FRLMCRBIOChapitre → FRCDACRBIOChapitre → FRCompositionDocument.section",
       "description" : "Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRCompositionDocument.section.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2890,7 +2889,7 @@
       "name" : "Mapping FRLMCRBIOSousChapitre → FRCDACRBIOSousChapitre → FRCompositionDocument.section:avec-sous-sections.section",
       "description" : "Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2907,7 +2906,7 @@
       "name" : "Mapping FRLMDemandeExamenImagerie → FRCDADICOMDemandeExamen → FRServiceRequestDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2924,7 +2923,7 @@
       "name" : "Mapping FRLMDevice → FRCDADispositifMedical / FRLMDevice → Device",
       "description" : "Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADispositifMedical, puis vers la ressource FHIR Device.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2941,7 +2940,7 @@
       "name" : "Mapping FRLMDeviceUse → FRCDADispositifMedical / FRLMDeviceUse → FRDeviceUseStatementDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -2958,7 +2957,7 @@
       "name" : "Mapping FRLMDirectivesAnticipees → FRCDADirectivesAnticipees → FRAdvanceDirectiveDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDirectivesAnticipees vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR FRAdvanceDirectiveDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2975,7 +2974,7 @@
       "name" : "Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument",
       "description" : "Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -2992,7 +2991,7 @@
       "name" : "Mapping FRLMDispositifsMedicaux → FRCDADispositifsMedicaux → FRCompositionDocument.section:medicalDevice",
       "description" : "Mapping des éléments du modèle métier FRLMDispositifsMedicaux vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevice.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3009,7 +3008,7 @@
       "name" : "Mapping FRLMDocumentPDFCopie → FRCDADocumentPDFCopie → FRCompositionDocument.section:pdfDocumentCopy",
       "description" : "Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3026,7 +3025,7 @@
       "name" : "Mapping FRLMDocumentsAjoutes → FRCDADocumentsAjoutes → FRCompositionDocument.section:addedDocuments",
       "description" : "Mapping des éléments du modèle métier FRLMDocumentsAjoutes vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:addedDocuments.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3043,7 +3042,7 @@
       "name" : "Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation",
       "description" : "Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3060,7 +3059,7 @@
       "name" : "Mapping FRLMEffetsIndesirables → FRCDAEffetsIndesirables → FRCompositionDocument.section:adverseEvent",
       "description" : "Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3077,7 +3076,7 @@
       "name" : "Mapping FRLMEncounter → FRCDARencontre / FRLMEncounter → FREncounterDocument",
       "description" : "Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3094,7 +3093,7 @@
       "name" : "Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:exposureRadiation",
       "description" : "Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:exposureRadiation.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3111,7 +3110,7 @@
       "name" : "Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:radiationExposure",
       "description" : "Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations puis vers le profil FHIR FRCompositionDocument.section:radiationExposure.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3128,7 +3127,7 @@
       "name" : "Mapping FRLMFacteursDeRisqueProfessionnelsNonCode → FRCDAFacteursDeRisqueProfessionnelsNonCode → FRCompositionDocument.section:uncodedOccupationalRiskFactors",
       "description" : "Mapping des éléments du modèle métier FRLMFacteursDeRisqueProfessionnelsNonCode vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedOccupationalRiskFactors.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3145,7 +3144,7 @@
       "name" : "Mapping FRLMFamilyMemberHistory → FRCDAAntecedentsFamiliaux / FRLMFamilyMemberHistory → FRFamilyMemberHistoryDocument",
       "description" : "Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3162,7 +3161,7 @@
       "name" : "Mapping FRLMFonctionsPhysiques → FRCDAFonctionsPhysiques → FRCompositionDocument.section:PhysicalFunctions",
       "description" : "Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section CDA FRCDAFonctionsPhysiques, puis vers le profil FHIR FRCompositionDocument.section:PhysicalFunctions.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3179,7 +3178,7 @@
       "name" : "Mapping FRLMHabitusModeDeVie → FRCDAHabitusModeDeVieSection → FRCompositionDocument.section:socialHistory",
       "description" : "Mapping des éléments du modèle métier FRLMHabitusModeDeVie vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:socialHistory.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3196,7 +3195,7 @@
       "name" : "Mapping FRLMHistoriqueDesActes → FRCDAHistoriqueDesActes → FRCompositionDocument.section:historyActs",
       "description" : "Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3213,7 +3212,7 @@
       "name" : "Mapping FRLMHistoriqueDesGrossesses → FRCDAHistoriqueDesGrossesses → FRCompositionDocument.section:pregnancyHistory",
       "description" : "Mapping des éléments du modèle métier FRLMHistoriqueDesGrossesses vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:pregnancyHistory.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3230,7 +3229,7 @@
       "name" : "Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument",
       "description" : "Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3247,7 +3246,7 @@
       "name" : "Mapping FRLMImmunisation → FRCDAVaccination / FRLMImmunisation → FRImmunizationDocument",
       "description" : "Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3264,7 +3263,7 @@
       "name" : "Mapping FRLMInformationsCliniques → FRCDADICOMHistoriqueMedical → FRCompositionDocument.section:History (Observation / FRConditionDocument/ FRObservationPregnancyDocument / FRObservationContraIndicationsImagingDocument / FRDeviceAuteurDocument / FRMedicationAdministrationDocument)",
       "description" : "Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3281,7 +3280,7 @@
       "name" : "Mapping FRLMIsolatMicrobiologique → FRCDAIsolatMicrobiologique → FRObservationLaboratoryReportResultsDocument",
       "description" : "Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3298,7 +3297,7 @@
       "name" : "Mapping FRLMMedication → FRCDAProduitDeSante / FRLMMedication → FRMedicationDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCDAProduitDeSante (Groupe 1), et vers le profil FHIR FRMedicationDocument (Groupe 2).",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3315,7 +3314,7 @@
       "name" : "Mapping FRLMMedicationAdministration -> FRCDADICOMAdministrationProduitDeSante / FRLMMedicationAdministration -> FRMedicationAdministrationDocument",
       "description" : "Mapping des elements du modele metier FRLMMedicationAdministration vers le profil CDA FRCDADICOMAdministrationProduitDeSante, puis vers le profil FHIR FRMedicationAdministrationDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3332,7 +3331,7 @@
       "name" : "Mapping FRLMMedicationAdministration → FRCDATraitement / FRLMMedicationAdministration → FRMedicationAdministrationDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMedicationAdministration vers le profil CDA FRCDATraitement (Groupe 1), et vers le profil FHIR FRMedicationAdministrationDocument (Groupe 2).",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3349,7 +3348,7 @@
       "name" : "Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil CDA FRCDATraitementDispense (Groupe 1), et vers le profil FHIR FRMedicationDispenseDocument (Groupe 2).",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3366,7 +3365,7 @@
       "name" : "Mapping FRLMMedicationUse → FRCDATraitement / FRLMMedicationUse → FRMedicationStatementDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée CDA FRCDATraitement puis vers le profil FHIR FRMedicationStatementDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3383,7 +3382,7 @@
       "name" : "Mapping FRLMMicroOrganismSearch → FRCDARechercheDeMicroOrganismes / FRLMMicroOrganismSearch → FRObservationMicroorganismDetectionDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3400,7 +3399,7 @@
       "name" : "Mapping FRLMMultidrugResistantMicroorganismIdentification → FRCDAIdentificationMicroOrganismesMultiresistants / FRLMMultidrugResistantMicroorganismIdentification → FRObservationMultiresistantMicroorganismsIdentificationDocument",
       "description" : "Mapping des éléments du modèle métier FRLMMultidrugResistantMicroorganismIdentification vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3417,7 +3416,7 @@
       "name" : "Mapping FRLMObjectCatalog → FRCDADICOMObjectCatalog → FRCompositionDocument.section:imagingStudy",
       "description" : "Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3434,7 +3433,7 @@
       "name" : "Mapping FRLMObservation -> FRCDASimpleObservation / FRLMObservation -> Observation",
       "description" : "Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3451,7 +3450,7 @@
       "name" : "Mapping FRLMObservation → FRCDAResultat / FRLMObservation → FRObservationResultDocument",
       "description" : "Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRCDAResultat, puis vers le profil FHIR FRObservationResultDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3468,7 +3467,7 @@
       "name" : "Mapping FRLMObservationAssessment → FRCDAEvaluation / FRLMObservationAssessment → FRObservationAssessmentDocument",
       "description" : "Mapping des éléments du modèle métier FRLMObservationAssessment vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationAssessmentDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3485,7 +3484,7 @@
       "name" : "Mapping FRLMObservationMedia → FRCDAImageIllustrative / FRLMObservationMedia → FRMediaDocument",
       "description" : "Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3502,7 +3501,7 @@
       "name" : "Mapping FRLMObservationSocialHistory → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument",
       "description" : "Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3519,7 +3518,7 @@
       "name" : "Mapping FRLMObservationVitalSign → FRCDASigneVitalObserve / FRLMObservationVitalSign → FRObservationVitalSignsDocument",
       "description" : "Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profil CDA FRCDASigneVitalObserve, puis vers le profil FHIR FRObservationVitalSignsDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3536,7 +3535,7 @@
       "name" : "Mapping FRLMParticipant -> FRCDAParticipant / FRLMParticipant -> FRActorExtension",
       "description" : "Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3553,7 +3552,7 @@
       "name" : "Mapping FRLMPlanSoins → FRCDAPlanDeSoins → FRCompositionDocument.section:planOfCare",
       "description" : "Mapping des éléments du modèle métier FRLMPlanSoins vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:planOfCare.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3570,7 +3569,7 @@
       "name" : "Mapping FRLMPointsDeVigilancesNonCode → FRCDAPointsDeVigilancesNonCode → FRCompositionDocument.section:uncodedPointsOfVigilance",
       "description" : "Mapping des éléments du modèle métier FRLMPointsDeVigilancesNonCode vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedPointsOfVigilance.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3587,7 +3586,7 @@
       "name" : "Mapping FRLMPregnancyHistory → FRCDAHistoriqueDeLaGrossesse / FRLMPregnancyHistory → FRPregnancyHistoryDocument",
       "description" : "Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRPregnancyHistoryDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3604,7 +3603,7 @@
       "name" : "Mapping FRLMPregnancyObservation → FRCDAObservationSurLaGrossesse / FRLMPregnancyObservation → FRObservationPregnancyDocument",
       "description" : "Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profil CDA FRCDAObservationSurLaGrossesse, puis vers le profil FHIR FRObservationPregnancyDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3621,7 +3620,7 @@
       "name" : "Mapping FRLMPrescriptionDispositifsMedicaux → FRCDAPrescriptionDispositifsMedicaux → FRCompositionDocument.section:medicalDevicePrescription",
       "description" : "Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3638,7 +3637,7 @@
       "name" : "Mapping FRLMPrescriptionItem → FRCDATraitementPrescrit / FRLMPrescriptionItem → FRMedicationRequestDocument",
       "description" : "Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3655,7 +3654,7 @@
       "name" : "Mapping FRLMPrescriptionMedicaments → FRCDAPrescriptionMedicaments → FRCompositionDocument.section:medicationRequest",
       "description" : "Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3672,7 +3671,7 @@
       "name" : "Mapping FRLMProblemesActifs → FRCDAProblemesActifs → FRCompositionDocument.section:activeProblems",
       "description" : "Mapping des éléments du modèle métier FRLMProblemesActifs vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:activeProblems.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3689,7 +3688,7 @@
       "name" : "Mapping FRLMProcedure → FRCDAActe / FRLMProcedure → FRProcedureDocument",
       "description" : "Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3722,7 +3721,7 @@
       "name" : "Mapping FRLMQuantityExposure → FRCDADICOMQuantite / FRLMQuantityExposure → FRObservationRadiationExposureDocument.component",
       "description" : "Mapping des éléments du modèle métier FRLMQuantityExposure vers l'entrée CDA FRCDADICOMQuantite, puis vers le profil FHIR FRObservationRadiationExposureDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3739,7 +3738,7 @@
       "name" : "Mapping FRLMRaisonRecommandation → FRCDARaisonDeLaRecommandation → FRCompositionDocument.section:reasonForRecommendation",
       "description" : "Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3756,7 +3755,7 @@
       "name" : "Mapping FRLMRaisonRecommandationNonCode → FRCDARaisonDeLaRecommandationNonCode → FRCompositionDocument.section:reasonForRecommendation",
       "description" : "Mapping des éléments du modèle métier FRLMRaisonRecommandationNonCode vers la section CDA FRCDARaisonDeLaRecommandationNonCode, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3773,7 +3772,7 @@
       "name" : "Mapping FRLMResultatExamensBiologieElementCliniquePertinent → Profile: FRCDAResultatExamensDeBiologieElementCliniquePertinent\n → FRObservationLaboratoryReportResultsDocument",
       "description" : "Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3790,7 +3789,7 @@
       "name" : "Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results",
       "description" : "Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3807,7 +3806,7 @@
       "name" : "Mapping FRLMResultatsExamens → FRCDAResultatsExamens → FRCompositionDocument.section:Results",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsExamens vers la section CDA FRCDAResultatsExamens puis vers le profil FHIR FRCompositionDocument.section:Results.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3824,7 +3823,7 @@
       "name" : "Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale vers le profil CDA FRCDAResultatExamensDeBiologie, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3841,7 +3840,7 @@
       "name" : "Mapping FRLMResultatsExamensNonCode → FRCDAResultatsExamensNonCode → FRCompositionDocument.section:Results",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsExamensNonCode vers la section CDA FRCDAResultatsExamensNonCode puis vers le profil FHIR FRCompositionDocument.section:Results.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3858,7 +3857,7 @@
       "name" : "Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3891,7 +3890,7 @@
       "name" : "Mapping FRLMServiceRequest → FRCDADemandeDExamenOuDeSuivi / FRLMServiceRequest → FRServiceRequestDocument",
       "description" : "Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3908,7 +3907,7 @@
       "name" : "Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section",
       "description" : "Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3925,7 +3924,7 @@
       "name" : "Mapping FRLMSpecimen → FRCDAPrelevement / FRLMSpecimen → FRSpecimenDocument",
       "description" : "Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument.",
       "exampleBoolean" : false,
-      "groupingId" : "common-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des composants communs d'un document"
     },
     {
       "extension" : [{
@@ -3942,7 +3941,7 @@
       "name" : "Mapping FRLMStatutDocument -> FRCDAStatutDuDocument -> FRComposition.section",
       "description" : "Mapping des éléments du modèle métier FRLMStatutDocument vers la section CDA FRCDAStatutDuDocument, puis vers la section FHIR FRCompositionDocument.section:documentStatus.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3959,7 +3958,7 @@
       "name" : "Mapping FRLMStatutFonctionnel → FRCDAStatutFonctionnel → FRCompositionDocument.section:FRFunctionalStatus",
       "description" : "Mapping des éléments du modèle métier FRLMStatutFonctionnel vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:FRFunctionalStatus.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3976,7 +3975,7 @@
       "name" : "Mapping FRLMTraitements → FRCDATraitements → FRCompositionDocument.section:medications",
       "description" : "Mapping des éléments du modèle métier FRLMTraitements vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:medications.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -3993,7 +3992,7 @@
       "name" : "Mapping FRLMTraitementsAdministres → FRCDATraitementsAdministres → FRCompositionDocument.section:medicationAdministration",
       "description" : "Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4010,7 +4009,7 @@
       "name" : "Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications",
       "description" : "Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4027,7 +4026,7 @@
       "name" : "Mapping FRLMVaccinations → FRCDAVaccinations → FRCompositionDocument.section:immunizations",
       "description" : "Mapping des éléments du modèle métier FRLMVaccinations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:immunizations.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4044,7 +4043,7 @@
       "name" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
       "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4061,7 +4060,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4078,7 +4077,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4095,7 +4094,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4112,7 +4111,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4129,7 +4128,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4146,7 +4145,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4163,7 +4162,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4180,7 +4179,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Participant\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4197,7 +4196,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4214,7 +4213,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4231,7 +4230,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4248,7 +4247,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
       "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4265,7 +4264,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4282,7 +4281,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4299,7 +4298,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4316,7 +4315,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4333,7 +4332,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"",
       "description" : "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4350,7 +4349,7 @@
       "name" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
       "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
       "exampleBoolean" : false,
-      "groupingId" : "header-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR entête"
     },
     {
       "extension" : [{
@@ -4367,7 +4366,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Acte d'imagerie",
       "description" : "Mapping des éléments du modèle métier FRLMActeImagerie vers la section CDA FRCDADICOMActeImagerie, puis vers le profil FHIR FRCompositionDocument.section:ImagingStudy.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4384,7 +4383,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Allergies et intolérances",
       "description" : "Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:AllergyIntolerance.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4401,7 +4400,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Antécédents familiaux",
       "description" : "Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4418,7 +4417,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Antécédents médicaux",
       "description" : "Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4435,7 +4434,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Codes-barres",
       "description" : "Mapping des éléments du modèle métier FRLMCodesAbarres vers la section CDA FRCDACodeABarres, puis vers la section FHIR FRCompositionDocument.section:barCodes.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4452,7 +4451,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Commentaire ER",
       "description" : "Mapping des éléments du modèle métier FRLMCommentaireNonCode vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:note.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4469,7 +4468,7 @@
       "name" : "Mapping Métier/CDA/FHIR : Résultats d'imagerie",
       "description" : "Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings.",
       "exampleBoolean" : false,
-      "groupingId" : "section-mappings"
+      "groupingId" : "Mapping ML-CDA-FHIR des sections d'un document"
     },
     {
       "extension" : [{
@@ -4486,7 +4485,7 @@
       "name" : "Modèle logique métier - FR LM Adverse Drug Reaction",
       "description" : "Effet indésirable médicamenteux",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -4503,7 +4502,7 @@
       "name" : "Modèle logique métier - FR LM Batterie d'examens de biologie médicale",
       "description" : "Entrée Batterie d'examens de biologie médicale",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -4520,7 +4519,7 @@
       "name" : "Modèle logique métier - FR LM Isolat microbiologique",
       "description" : "Isolat microbiologique",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -4537,7 +4536,7 @@
       "name" : "Modèle logique métier - FR LM Laboratoire exécutant",
       "description" : "Laboratoire exécutant",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     },
     {
       "extension" : [{
@@ -4554,7 +4553,7 @@
       "name" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
       "description" : "Résultat d'examens de biologie / élement clinique pertinent",
       "exampleBoolean" : false,
-      "groupingId" : "common-models"
+      "groupingId" : "Modèles logiques métier des composants communs"
     }],
     "page" : {
       "extension" : [{
