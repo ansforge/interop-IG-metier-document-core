@@ -97,7 +97,7 @@ menu:
         Téléchargements et usage: downloads.html
 
 groups:
-  Modèles logiques métier de l'entête d'un document:
+  metier-entete:
     name: Modèles logiques métier de l'entête d'un document
     resources:
       - FRLMHeaderDocument	
@@ -116,7 +116,7 @@ groups:
       - FRLMRelatedPerson
       - FRLMHumanName
 
-  Modèles logiques métier des sections d'un document: 
+  metier-sections: 
     name: Modèles logiques métier des sections d'un document
     resources:
       - StructureDefinition/fr-lm-corps-document
@@ -164,7 +164,7 @@ groups:
       - StructureDefinition/fr-lm-admission-evaluation
       - StructureDefinition/fr-lm-encounter-information
 
-  Modèles logiques métier des composants communs: 
+  metier-composants-communs: 
     name: Modèles logiques métier des composants communs
     description: Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR.
     resources:
@@ -215,7 +215,8 @@ groups:
       - StructureDefinition/fr-lm-laboratory-observation
       - StructureDefinition/fr-lm-body-structure
       - StructureDefinition/fr-lm-travel-history
-  Mapping ML-CDA-FHIR entête:
+      
+  mapping-entete:
     name: Concept Maps de l'entête du document
     resources:
       - mappingmodelemetierCDAFHIR
@@ -238,7 +239,7 @@ groups:
       - mappingPersonneStructureAuteurFHIR
       - mappingSystemeFHIR
 
-  Mapping ML-CDA-FHIR des sections d'un document:
+  mapping-sections:
     name: Concept Maps des sections d'un document
     resources:
       - FRSectionImagingResultsLMCDAFHIR
@@ -290,7 +291,7 @@ groups:
       - FRSectionImmunizationsLMCDAFHIR
       - FRSectionMedicationDispenseLMCDAFHIR
 
-  Mapping ML-CDA-FHIR des composants communs d'un document:
+  mapping-composants-communs:
     name: Concept Maps des composants communs d'un Document
     resources:
       - FRProcedureLMCDAFHIR
