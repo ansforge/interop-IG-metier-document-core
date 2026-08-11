@@ -155,12 +155,27 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[=].target.code = #Observation.component
 * group[=].element[=].target.equivalence = #equivalent
 
-// Dérivé de
-* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
-* group[=].element[=].target.code = #Observation.derivedFrom
+// Dérivé de - FRLMObservation
+* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMObservation]
+* group[=].element[=].target.code = #Observation.derivedFrom:Observation
 * group[=].element[=].target.equivalence = #equivalent
 
-// Membres
-* group[=].element[+].code = #FRLMObservation.hasMember[x]
-* group[=].element[=].target.code = #Observation.hasMember
+// Dérivé de - FRLMLaboratoryObservation
+* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMLaboratoryObservation]
+* group[=].element[=].target.code = #Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Dérivé de - FRLMImagingStudy
+* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMImagingStudy]
+* group[=].element[=].target.code = #Observation.derivedFrom:FRImagingStudyDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Membres - FRLMLaboratoryObservation
+* group[=].element[+].code = #FRLMObservation.hasMember[FRLMLaboratoryObservation]
+* group[=].element[=].target.code = #Observation.hasMember:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Membres - FRLMObservation
+* group[=].element[+].code = #FRLMObservation.hasMember[FRLMObservation]
+* group[=].element[=].target.code = #Observation.hasMember:Observation
 * group[=].element[=].target.equivalence = #equivalent

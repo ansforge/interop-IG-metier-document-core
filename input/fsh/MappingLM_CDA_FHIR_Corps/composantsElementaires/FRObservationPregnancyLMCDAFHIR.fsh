@@ -71,13 +71,11 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 
 // derivedFrom
 * group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.entryRelationship
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
 
 // hasMember
 * group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.entryRelationship
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
 
 
 // Groupe Mapping 2 : ML → FHIR
@@ -139,12 +137,27 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 * group[=].element[=].target.code = #FRObservationPregnancyDocument.component
 * group[=].element[=].target.equivalence = #equivalent
 
-// Dérivé de
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom
+// Dérivé de - FRLMObservation
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMObservation]
+* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:Observation
 * group[=].element[=].target.equivalence = #equivalent
 
-// Membres
-* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.hasMember
+// Dérivé de - FRLMLaboratoryObservation
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMLaboratoryObservation]
+* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Dérivé de - FRLMImagingStudy
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMImagingStudy]
+* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:FRImagingStudyDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Membres - FRLMLaboratoryObservation
+* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMLaboratoryObservation]
+* group[=].element[=].target.code = #FRObservationPregnancyDocument.hasMember:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.equivalence = #equivalent
+
+// Membres - FRLMObservation
+* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMObservation]
+* group[=].element[=].target.code = #FRObservationPregnancyDocument.hasMember:Observation
 * group[=].element[=].target.equivalence = #equivalent
