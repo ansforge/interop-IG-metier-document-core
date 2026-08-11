@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Fonctions physiques\"",
   "status" : "draft",
-  "date" : "2026-08-05T12:15:23+00:00",
+  "date" : "2026-08-11T08:03:55+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

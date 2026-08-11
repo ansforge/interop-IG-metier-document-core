@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-order-inf
   "name" : "FRLMOrderInformation",
   "title" : "Logical model - FR LM Order Information",
   "status" : "draft",
-  "date" : "2026-08-05T12:15:23+00:00",
+  "date" : "2026-08-11T08:03:55+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
