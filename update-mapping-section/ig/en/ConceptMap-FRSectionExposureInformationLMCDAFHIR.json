@@ -1,0 +1,122 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionExposureInformationLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionExposureInformationLMCDAFHIR</b></p><a name=\"en-FRSectionExposureInformationLMCDAFHIR\"> </a><a name=\"en-hcFRSectionExposureInformationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposure-information</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-exposition-aux-radiations</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMExposureInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations</td></tr><tr><td>FRLMExposureInformation.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations.code</td></tr><tr><td>FRLMExposureInformation.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations.title</td></tr><tr><td>FRLMExposureInformation.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations.text</td></tr><tr><td>FRLMExposureInformation.subSection.quantityExposure</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations.entry:frDICOMQuantite</td></tr><tr><td>FRLMExposureInformation.subSection.radiopharmaceuticalAdministration</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExpositionAuxRadiations.entry:frDICOMAdministrationRadiopharmaceutique</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposure-information</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMExposureInformation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation</td></tr><tr><td>FRLMExposureInformation.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation.code</td></tr><tr><td>FRLMExposureInformation.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation.title</td></tr><tr><td>FRLMExposureInformation.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation.text</td></tr><tr><td>FRLMExposureInformation.subSection.quantityExposure</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.component</td></tr><tr><td>FRLMExposureInformation.subSection.radiopharmaceuticalAdministration</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.partOf:medicationAdministrationRef</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionExposureInformationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Exposition aux radiations\"",
+  "status" : "draft",
+  "date" : "2026-08-11T15:27:44+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMExposureInformation vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:sectionExposureRadiation.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposure-information",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-exposition-aux-radiations",
+    "element" : [{
+      "code" : "FRLMExposureInformation",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.codeSection",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.titleSection",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.description",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.subSection.quantityExposure",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations.entry:frDICOMQuantite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "target" : [{
+        "code" : "FRCDADICOMExpositionAuxRadiations.entry:frDICOMAdministrationRadiopharmaceutique",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-exposure-information",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRLMExposureInformation",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.codeSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.titleSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.description",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.subSection.quantityExposure",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.component",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.partOf:medicationAdministrationRef",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

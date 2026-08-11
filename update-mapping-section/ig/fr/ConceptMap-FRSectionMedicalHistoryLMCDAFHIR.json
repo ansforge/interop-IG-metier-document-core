@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionMedicalHistoryLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSectionMedicalHistoryLMCDAFHIR</b></p><a name=\"FRSectionMedicalHistoryLMCDAFHIR\"> </a><a name=\"hcFRSectionMedicalHistoryLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-medicaux</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMHistoryOfPastIllness</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsMedicaux</td></tr><tr><td>FRLMHistoryOfPastIllness.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsMedicaux.code</td></tr><tr><td>FRLMHistoryOfPastIllness.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsMedicaux.title</td></tr><tr><td>FRLMHistoryOfPastIllness.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsMedicaux.text</td></tr><tr><td>FRLMHistoryOfPastIllness.entry.problem:FRLMCondition</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes.entryRelationship:FRCDAProbleme</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMHistoryOfPastIllness</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionMedicalHistory</td></tr><tr><td>FRLMHistoryOfPastIllness.codeSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionMedicalHistory.code</td></tr><tr><td>FRLMHistoryOfPastIllness.titleSection</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionMedicalHistory.title</td></tr><tr><td>FRLMHistoryOfPastIllness.description</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionMedicalHistory.text</td></tr><tr><td>FRLMHistoryOfPastIllness.entry.problem:FRLMCondition</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCompositionDocument.section:sectionMedicalHistory.entry:FRConditionDocument</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicalHistoryLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Antécédents médicaux\"",
+  "status" : "draft",
+  "date" : "2026-08-11T15:27:44+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la section CDA FRCDAAntecedentsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalHistory.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-medicaux",
+    "element" : [{
+      "code" : "FRLMHistoryOfPastIllness",
+      "target" : [{
+        "code" : "FRCDAAntecedentsMedicaux",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.codeSection",
+      "target" : [{
+        "code" : "FRCDAAntecedentsMedicaux.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.titleSection",
+      "target" : [{
+        "code" : "FRCDAAntecedentsMedicaux.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.description",
+      "target" : [{
+        "code" : "FRCDAAntecedentsMedicaux.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
+      "target" : [{
+        "code" : "FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes.entryRelationship:FRCDAProbleme",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRLMHistoryOfPastIllness",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.codeSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.titleSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.description",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.entry:FRConditionDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
