@@ -1,7 +1,7 @@
 FRDocumentCore : Validation Results
 =========================================
 
-err = 1182, warn = 4056, info = 500
+err = 1177, warn = 4056, info = 500
 $--
 Generated $--. FHIR version $-- for ans.fr.document-core#$-- (canonical = https://interop.esante.gouv.fr/ig/document-core)
  Build Errors : 963 / 3 / 0
@@ -9,9 +9,9 @@ Generated $--. FHIR version $-- for ans.fr.document-core#$-- (canonical = https:
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRAdverseDrugReactionLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRAllergyIntoleranceLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRAttachmentLMCDAFHIR : 0 / 10 / 2
- /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRCarePlanLMCDAFHIR : 2 / 10 / 2
+ /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRCarePlanLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRConditionLMCDAFHIR : 0 / 10 / 2
- /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRDeviceLMCDAFHIR : 1 / 8 / 3
+ /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRDeviceLMCDAFHIR : 0 / 8 / 3
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRDeviceUseLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FREncounterLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRFamilyMemberHistoryLMCDAFHIR : 0 / 10 / 2
@@ -81,7 +81,7 @@ Generated $--. FHIR version $-- for ans.fr.document-core#$-- (canonical = https:
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRSectionSocialHistoryLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRSectionSupportingInformationLMCDAFHIR : 0 / 14 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRSectionVitalSignsLMCDAFHIR : 0 / 10 / 2
- /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRServiceRequestLMCDAFHIR : 2 / 10 / 2
+ /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRServiceRequestLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-FRSpecimenLMCDAFHIR : 0 / 10 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-mappingAuteurCDAFHIR : 0 / 9 / 2
  /__w/interop-IG-metier-document-core/interop-IG-metier-document-core/igSource/fsh-generated/resources/ConceptMap-mappingConsentementCDAFHIR : 4 / 7 / 3
@@ -1234,10 +1234,8 @@ INFORMATION: Resource: The resource ConceptMap/FRAttachmentLMCDAFHIR could usefu
 == fsh-generated/resources/ConceptMap-FRCarePlanLMCDAFHIR.json ==
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[0].source: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan'
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[0].target: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement'
-ERROR: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[0].element[0].target[0]: Constraint failed: cmd-1: 'If the map is narrower or inexact, there SHALL be some comments (comment.exists() or equivalence.empty() or ((equivalence != 'narrower') and (equivalence != 'inexact')))'
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[1].source: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan'
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[1].target: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document'
-ERROR: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[1].element[0].target[0]: Constraint failed: cmd-1: 'If the map is narrower or inexact, there SHALL be some comments (comment.exists() or equivalence.empty() or ((equivalence != 'narrower') and (equivalence != 'inexact')))'
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[0].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[0].target: The Target Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
 WARNING: ConceptMap/FRCarePlanLMCDAFHIR: ConceptMap.group[1].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
@@ -1265,7 +1263,6 @@ WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap.group[1].source: No definition
 WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap.group[0].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
 WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap.group[0].target: The Target Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical is not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed
 WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap.group[1].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
-ERROR: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap.group[1].element[14].target[0].code: The target code 'Device.note.text' is not valid in the code system http://hl7.org/fhir/StructureDefinition/Device|4.0.1
 WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap: Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.name should be present, but it is not
 WARNING: ConceptMap/FRDeviceLMCDAFHIR: ConceptMap: Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.experimental is mandatory, but it is not present
 INFORMATION: Resource: The resource ConceptMap/FRDeviceLMCDAFHIR could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
@@ -2123,8 +2120,6 @@ INFORMATION: Resource: The resource ConceptMap/FRSectionVitalSignsLMCDAFHIR coul
 == fsh-generated/resources/ConceptMap-FRServiceRequestLMCDAFHIR.json ==
 WARNING: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[0].source: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-service-request'
 WARNING: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[0].target: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-demande-d-examen-ou-de-suivi'
-ERROR: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[0].element[5].target[0]: Constraint failed: cmd-1: 'If the map is narrower or inexact, there SHALL be some comments (comment.exists() or equivalence.empty() or ((equivalence != 'narrower') and (equivalence != 'inexact')))'
-ERROR: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[0].element[7].target[0]: Constraint failed: cmd-1: 'If the map is narrower or inexact, there SHALL be some comments (comment.exists() or equivalence.empty() or ((equivalence != 'narrower') and (equivalence != 'inexact')))'
 WARNING: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[1].source: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-service-request'
 WARNING: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[1].target: No definition could be found for URL value 'https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-service-request-document'
 WARNING: ConceptMap/FRServiceRequestLMCDAFHIR: ConceptMap.group[0].source: The Source Code System https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-service-request is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed

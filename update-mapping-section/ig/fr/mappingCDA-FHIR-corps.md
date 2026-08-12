@@ -683,7 +683,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMServiceRequest.code | FRCDADemandeDExamenOuDeSuivi.code |  |
 | FRLMServiceRequest.quantity |  |  |
 | FRLMServiceRequest.bodySite | FRCDADemandeDExamenOuDeSuivi.targetSiteCode |  |
-| FRLMServiceRequest.reason[x] | FRCDADemandeDExamenOuDeSuivi.reasonCode |  |
+| FRLMServiceRequest.reason[x] |  |  |
 | FRLMServiceRequest.priority | FRCDADemandeDExamenOuDeSuivi.priorityCode |  |
 | FRLMServiceRequest.supportingInformation[x] | FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation |  |
 | FRLMServiceRequest.specimen | FRCDADemandeDExamenOuDeSuivi.specimen |  |
@@ -773,7 +773,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMDevice.modelNumber | Device.modelNumber |  |
 | FRLMDevice.version | Device.version.value |  |
 | FRLMDevice.type | Device.type |  |
-| FRLMDevice.note | Device.note.text |  |
+| FRLMDevice.note | Device.note |  |
 | **FRLMMedicalDevicesAndImplants** | **FRCDADispositifsMedicaux** |  |
 | FRLMMedicalDevicesAndImplants.codeSection | FRCDADispositifsMedicaux.code |  |
 | FRLMMedicalDevicesAndImplants.titleSection | FRCDADispositifsMedicaux.title |  |
