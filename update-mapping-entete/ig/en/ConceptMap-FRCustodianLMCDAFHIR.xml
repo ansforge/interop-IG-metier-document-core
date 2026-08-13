@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRCustodianLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRCustodianLMCDAFHIR</b></p><a name="en-FRCustodianLMCDAFHIR"> </a><a name="en-hcFRCustodianLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMHeaderDocument.custodian</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>custodian.assignedCustodian.representedCustodianOrganization</td><td>La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMHeaderDocument.custodian</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.custodian</td><td>Composition.custodian.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCustodianLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:19:20+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre l'élément métier \&quot;custodian\&quot; du modèle FRLMHeaderDocument et l'élément CDA \&quot;custodian\&quot;&#xA; - Mapping 2 : entre l'élément métier \&quot;custodian\&quot; et l'élément FHIR \&quot;Composition.custodian\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian"/>
+    <element>
+      <code value="FRLMHeaderDocument.custodian"/>
+      <target>
+        <code value="custodian.assignedCustodian.representedCustodianOrganization"/>
+        <equivalence value="equivalent"/>
+        <comment value="La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRLMHeaderDocument.custodian"/>
+      <target>
+        <code value="Composition.custodian"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.custodian.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
