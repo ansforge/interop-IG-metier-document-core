@@ -1,54 +1,58 @@
 Instance: FRSectionResultsLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results"
-Description: "Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results."
+Title: "Mapping FRLMObservationResults → FRCDAResultats / FRLMObservationResults → FRCompositionDocument.section:sectionResults"
+Description: "Mapping des éléments du modèle métier FRLMObservationResults vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:sectionResults."
 * title = "Mapping Métier/CDA/FHIR : \"Résultats\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-results"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats"
 // élément racine
-* group[=].element[+].code = #FRLMResultats
+* group[=].element[+].code = #FRLMObservationResults
 * group[=].element[=].target[+].code = #FRCDAResultats
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
-* group[=].element[+].code = #FRLMResultats.codeSection
+* group[=].element[+].code = #FRLMObservationResults.codeSection
 * group[=].element[=].target[+].code = #FRCDAResultats.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
-* group[=].element[+].code = #FRLMResultats.titreSection
+* group[=].element[+].code = #FRLMObservationResults.titleSection
 * group[=].element[=].target[+].code = #FRCDAResultats.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
-* group[=].element[+].code = #FRLMResultats.blocNarratif
+* group[=].element[+].code = #FRLMObservationResults.description
 * group[=].element[=].target[+].code = #FRCDAResultats.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Resultats
-* group[=].element[+].code = #FRLMResultats.entree.resultatsEntry
+* group[=].element[+].code = #FRLMObservationResults.entry.observationResult
 * group[=].element[=].target[+].code = #FRCDAResultats.entry:FRCDAResultats
 * group[=].element[=].target[=].equivalence = #equivalent
 
-// Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats"
+// Groupe Mapping 2 : ML → FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-results"
 * group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
 // élément racine
-* group[=].element[+].code = #FRCDAResultats
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:results
+* group[=].element[+].code = #FRLMObservationResults
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
-* group[=].element[+].code = #FRCDAResultats.code
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:results.code
+* group[=].element[+].code = #FRLMObservationResults.codeSection
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
-* group[=].element[+].code = #FRCDAResultats.title
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:results.title
+* group[=].element[+].code = #FRLMObservationResults.titleSection
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
-* group[=].element[+].code = #FRCDAResultats.text
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:results.text
+* group[=].element[+].code = #FRLMObservationResults.description
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Resultats
-* group[=].element[+].code = #FRCDAResultats.entry:FRCDAResultats
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:results.entry:FRDiagnosticReportDocument
+* group[=].element[+].code = #FRLMObservationResults.entry.observationResult
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.entry:FRObservationResultDocument
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.entry:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults.entry:FRDiagnosticReportDocument
 * group[=].element[=].target[=].equivalence = #equivalent

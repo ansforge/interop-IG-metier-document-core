@@ -30,8 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMServiceRequest vers 
 * group[=].element[=].target.equivalence = #equivalent
 // Motif de la demande
 * group[=].element[+].code = #FRLMServiceRequest.reason[x]
-* group[=].element[=].target.code = #FRCDADemandeDExamenOuDeSuivi.reasonCode
-* group[=].element[=].target.equivalence = #inexact
+* group[=].element[=].target.equivalence = #unmatched
 // Priorité de la demande
 * group[=].element[+].code = #FRLMServiceRequest.priority
 * group[=].element[=].target.code = #FRCDADemandeDExamenOuDeSuivi.priorityCode
@@ -40,6 +39,7 @@ Description: "Mapping des éléments du modèle métier FRLMServiceRequest vers 
 * group[=].element[+].code = #FRLMServiceRequest.supportingInformation[x]
 * group[=].element[=].target.code = #FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation
 * group[=].element[=].target.equivalence = #inexact
+* group[=].element[=].target.comment = "Le modèle métier FRLMServiceRequest.supportingInformation[x] correspond à la composante observation portée dans l'entrée CDA FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration alors que le type de l'élément entryRelationship.observation est uniquement Observation."
 // Prélèvement
 * group[=].element[+].code = #FRLMServiceRequest.specimen
 * group[=].element[=].target.code = #FRCDADemandeDExamenOuDeSuivi.specimen
