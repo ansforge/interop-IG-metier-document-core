@@ -1,0 +1,222 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRHealthProfessionalLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRHealthProfessionalLMCDAFHIR</b></p><a name=\"FRHealthProfessionalLMCDAFHIR\"> </a><a name=\"hcFRHealthProfessionalLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMHealthProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity</td><td>assignedEntity et assignedAuthor (porté par ClinicalDocument.author) partagent une structure CDA équivalente pour représenter un professionnel de santé.</td></tr><tr><td>FRLMHealthProfessional.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.id</td><td/></tr><tr><td>FRLMHealthProfessional.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.assignedPerson.name</td><td/></tr><tr><td>FRLMHealthProfessional.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.assignedPerson.name.family</td><td/></tr><tr><td>FRLMHealthProfessional.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.assignedPerson.name.given</td><td/></tr><tr><td>FRLMHealthProfessional.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.assignedPerson.name.prefix</td><td/></tr><tr><td>FRLMHealthProfessional.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.assignedPerson.name.suffix</td><td/></tr><tr><td>FRLMHealthProfessional.address</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.addr</td><td/></tr><tr><td>FRLMHealthProfessional.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.telecom</td><td/></tr><tr><td>FRLMHealthProfessional.professionalRole.role</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.code</td><td/></tr><tr><td>FRLMHealthProfessional.professionalRole.organisation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>assignedEntity.representedOrganization</td><td>Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure d'exercice.</td></tr><tr><td>FRLMHealthProfessional.professionalRole.specialty</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la spécialité ; elle est portée par assignedEntity.code selon le contexte.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMHealthProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PractitionerRole</td><td>PractitionerRole ne porte que le rôle d'exercice ; l'identité de la personne (identifiant, nom, adresse, télécom) est portée par PractitionerRole.practitioner, cf. le groupe de mapping suivant vers FrPractitionerDocument.</td></tr><tr><td>FRLMHealthProfessional.professionalRole.role</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PractitionerRole.code</td><td/></tr><tr><td>FRLMHealthProfessional.professionalRole.organisation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PractitionerRole.organization</td><td>PractitionerRole.organization.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr><tr><td>FRLMHealthProfessional.professionalRole.specialty</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PractitionerRole.specialty</td><td/></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMHealthProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner</td><td>Référencé depuis PractitionerRole.practitioner.</td></tr><tr><td>FRLMHealthProfessional.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.identifier</td><td/></tr><tr><td>FRLMHealthProfessional.name</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.name</td><td/></tr><tr><td>FRLMHealthProfessional.name.family</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.name.family</td><td/></tr><tr><td>FRLMHealthProfessional.name.given</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.name.given</td><td/></tr><tr><td>FRLMHealthProfessional.name.prefix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.name.prefix</td><td/></tr><tr><td>FRLMHealthProfessional.name.suffix</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.name.suffix</td><td/></tr><tr><td>FRLMHealthProfessional.address</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.address</td><td/></tr><tr><td>FRLMHealthProfessional.telecom</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Practitioner.telecom</td><td/></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRHealthProfessionalLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
+  "status" : "draft",
+  "date" : "2026-08-13T14:36:19+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et les éléments CDA \\\"assignedEntity\\\"/\\\"assignedAuthor\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"\n - Mapping 3 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerDocument\\\" (référencé depuis PractitionerRole.practitioner)\n\nCe mapping est réutilisé chaque fois qu'un professionnel de santé apparaît dans l'entête du document (auteur, responsable, validateur, opérateur de saisie, informateur, participant, destinataire, prescripteur, professionnel référent d'une prise en charge, etc.).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity",
+    "element" : [{
+      "code" : "FRLMHealthProfessional",
+      "target" : [{
+        "code" : "assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "assignedEntity et assignedAuthor (porté par ClinicalDocument.author) partagent une structure CDA équivalente pour représenter un professionnel de santé."
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.identifier",
+      "target" : [{
+        "code" : "assignedEntity.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.family",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.given",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.prefix",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.suffix",
+      "target" : [{
+        "code" : "assignedEntity.assignedPerson.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.address",
+      "target" : [{
+        "code" : "assignedEntity.addr",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.telecom",
+      "target" : [{
+        "code" : "assignedEntity.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.role",
+      "target" : [{
+        "code" : "assignedEntity.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.organisation",
+      "target" : [{
+        "code" : "assignedEntity.representedOrganization",
+        "equivalence" : "equivalent",
+        "comment" : "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure d'exercice."
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.specialty",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la spécialité ; elle est portée par assignedEntity.code selon le contexte."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document",
+    "element" : [{
+      "code" : "FRLMHealthProfessional",
+      "target" : [{
+        "code" : "PractitionerRole",
+        "equivalence" : "equivalent",
+        "comment" : "PractitionerRole ne porte que le rôle d'exercice ; l'identité de la personne (identifiant, nom, adresse, télécom) est portée par PractitionerRole.practitioner, cf. le groupe de mapping suivant vers FrPractitionerDocument."
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.role",
+      "target" : [{
+        "code" : "PractitionerRole.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.organisation",
+      "target" : [{
+        "code" : "PractitionerRole.organization",
+        "equivalence" : "equivalent",
+        "comment" : "PractitionerRole.organization.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.professionalRole.specialty",
+      "target" : [{
+        "code" : "PractitionerRole.specialty",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document",
+    "element" : [{
+      "code" : "FRLMHealthProfessional",
+      "target" : [{
+        "code" : "Practitioner",
+        "equivalence" : "equivalent",
+        "comment" : "Référencé depuis PractitionerRole.practitioner."
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.identifier",
+      "target" : [{
+        "code" : "Practitioner.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name",
+      "target" : [{
+        "code" : "Practitioner.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.family",
+      "target" : [{
+        "code" : "Practitioner.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.given",
+      "target" : [{
+        "code" : "Practitioner.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.prefix",
+      "target" : [{
+        "code" : "Practitioner.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.name.suffix",
+      "target" : [{
+        "code" : "Practitioner.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.address",
+      "target" : [{
+        "code" : "Practitioner.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHealthProfessional.telecom",
+      "target" : [{
+        "code" : "Practitioner.telecom",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

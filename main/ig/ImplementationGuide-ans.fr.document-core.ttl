@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "FRDocumentCore"] ;
   fhir:ImplementationGuide.title [ fhir:value "FR Document Core (Modèle métier)"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-08-13T09:45:33+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-08-13T14:36:19+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -2752,6 +2752,21 @@
          fhir:Extension.valueString [ fhir:value "ConceptMap" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAttesterLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRAttesterLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMAttester → FRCDAAuthenticator → Composition.attester" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMAttester\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMAttester\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 117 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR> ;
          fhir:Reference.reference [ fhir:value "ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR" ]
        ] ;
@@ -2760,7 +2775,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 117 ;
+       fhir:index 118 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2775,7 +2790,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 118 ;
+       fhir:index 119 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2790,7 +2805,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 119 ;
+       fhir:index 120 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2805,7 +2820,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 120 ;
+       fhir:index 121 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2820,7 +2835,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 121 ;
+       fhir:index 122 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2835,7 +2850,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 122 ;
+       fhir:index 123 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConsentLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRConsentLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMConsent → FRCDAAuthorization → Consent" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMConsent\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMConsent\\\" et la ressource FHIR \\\"Consent\\\" (référencée depuis Composition via l'extension ConsentExtension)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 124 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2850,7 +2880,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 123 ;
+       fhir:index 125 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2865,7 +2895,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 124 ;
+       fhir:index 126 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDataEntererLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRDataEntererLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMDataEnterer → FRCDADataEnterer → DataEntererExtension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMDataEnterer\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMDataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 127 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2880,7 +2925,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 125 ;
+       fhir:index 128 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2895,7 +2940,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 126 ;
+       fhir:index 129 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2910,7 +2955,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 127 ;
+       fhir:index 130 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2925,7 +2970,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 128 ;
+       fhir:index 131 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2940,7 +2985,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 129 ;
+       fhir:index 132 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2955,7 +3000,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 130 ;
+       fhir:index 133 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2970,7 +3015,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 131 ;
+       fhir:index 134 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2985,7 +3030,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 132 ;
+       fhir:index 135 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3000,7 +3045,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 133 ;
+       fhir:index 136 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3015,7 +3060,67 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 134 ;
+       fhir:index 137 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRHeaderDocumentLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRHeaderDocumentLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 138 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRAuthorLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMHeaderDocument.author[x] → FRCDAAuthor → Composition.author" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre l'élément métier \\\"author[x]\\\" du modèle FRLMHeaderDocument et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément métier \\\"author[x]\\\" et l'élément FHIR \\\"Composition.author\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 139 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCustodianLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRCustodianLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMHeaderDocument.custodian → FRCDACustodian → Composition.custodian" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre l'élément métier \\\"custodian\\\" du modèle FRLMHeaderDocument et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément métier \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 140 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRHealthProfessionalLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRHealthProfessionalLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMHealthProfessional → FRCDAAssignedEntity/FRCDAAssignedAuthor → FrPractitionerRoleDocument / FrPractitionerDocument" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et les éléments CDA \\\"assignedEntity\\\"/\\\"assignedAuthor\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"\n - Mapping 3 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerDocument\\\" (référencé depuis PractitionerRole.practitioner)\n\nCe mapping est réutilisé chaque fois qu'un professionnel de santé apparaît dans l'entête du document (auteur, responsable, validateur, opérateur de saisie, informateur, participant, destinataire, prescripteur, professionnel référent d'une prise en charge, etc.)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 141 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3030,7 +3135,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 135 ;
+       fhir:index 142 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3045,7 +3150,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 136 ;
+       fhir:index 143 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3060,7 +3165,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 137 ;
+       fhir:index 144 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3075,7 +3180,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 138 ;
+       fhir:index 145 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3090,7 +3195,37 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 139 ;
+       fhir:index 146 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRInformantLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRInformantLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMInformant → FRCDAInformant → InformantExtension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMInformant\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMInformant\\\" et l'extension FHIR \\\"InformantExtension\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 147 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRIntendedRecipientLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRIntendedRecipientLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMIntendedRecipient → FRCDAInformationRecipient → InformationRecipientExtension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMIntendedRecipient\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMIntendedRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 148 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3105,7 +3240,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 140 ;
+       fhir:index 149 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLegalAuthenticationLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRLegalAuthenticationLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMLegalAuthentication → FRCDALegalAuthenticator → Composition.attester" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMLegalAuthentication\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMLegalAuthentication\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 150 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3120,7 +3270,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 141 ;
+       fhir:index 151 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3135,7 +3285,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 142 ;
+       fhir:index 152 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3150,7 +3300,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 143 ;
+       fhir:index 153 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3165,7 +3315,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 144 ;
+       fhir:index 154 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3180,7 +3330,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 145 ;
+       fhir:index 155 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3195,7 +3345,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 146 ;
+       fhir:index 156 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3210,7 +3360,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 147 ;
+       fhir:index 157 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3225,7 +3375,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 148 ;
+       fhir:index 158 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3240,7 +3390,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 149 ;
+       fhir:index 159 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3255,7 +3405,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 150 ;
+       fhir:index 160 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3270,7 +3420,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 151 ;
+       fhir:index 161 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3285,7 +3435,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 152 ;
+       fhir:index 162 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3300,7 +3450,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 153 ;
+       fhir:index 163 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3315,7 +3465,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 154 ;
+       fhir:index 164 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3330,7 +3480,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 155 ;
+       fhir:index 165 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3345,7 +3495,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 156 ;
+       fhir:index 166 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3360,7 +3510,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 157 ;
+       fhir:index 167 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3375,7 +3525,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 158 ;
+       fhir:index 168 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3390,7 +3540,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 159 ;
+       fhir:index 169 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3405,7 +3555,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 160 ;
+       fhir:index 170 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrderLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FROrderLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMOrder → FRCDAInFulfillmentOf → ServiceRequest" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMOrder\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMOrder\\\" et la ressource FHIR \\\"ServiceRequest\\\" (référencée depuis Composition via l'extension basedOn)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 171 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3420,7 +3585,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 161 ;
+       fhir:index 172 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrganisationLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FROrganisationLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMOrganisation → FRCDAAssignedEntity.representedOrganization → Organization" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMOrganisation\\\" et la structure CDA générique portant une organisation\n - Mapping 2 : entre le modèle métier \\\"FRLMOrganisation\\\" et la ressource FHIR \\\"Organization\\\"\n\nCe mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 173 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3435,7 +3615,37 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 162 ;
+       fhir:index 174 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRParticipantHeaderLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRParticipantHeaderLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMParticipant → FRCDAParticipant → ParticipantExtension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMParticipant\\\" (entête) et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMParticipant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 175 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRPatientLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRPatientLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FrPatientDocument\\\"" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 176 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3450,7 +3660,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 163 ;
+       fhir:index 177 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3465,7 +3675,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 164 ;
+       fhir:index 178 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3480,7 +3690,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 165 ;
+       fhir:index 179 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3495,7 +3705,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 166 ;
+       fhir:index 180 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3510,7 +3720,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 167 ;
+       fhir:index 181 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3525,7 +3735,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 168 ;
+       fhir:index 182 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3540,7 +3750,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 169 ;
+       fhir:index 183 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3555,7 +3765,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 170 ;
+       fhir:index 184 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3569,7 +3779,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 171 ;
+       fhir:index 185 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3584,7 +3794,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 172 ;
+       fhir:index 186 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3599,7 +3809,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 173 ;
+       fhir:index 187 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3614,7 +3824,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 174 ;
+       fhir:index 188 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3629,7 +3839,22 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 175 ;
+       fhir:index 189 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR> ;
+         fhir:Reference.reference [ fhir:value "ConceptMap/FRRelatedPersonLMCDAFHIR" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping FRLMRelatedPerson → FRCDARelatedEntity → RelatedPerson" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et la ressource FHIR \\\"RelatedPerson\\\"\n\nCe mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.)." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
+     ], [
+       fhir:index 190 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3644,7 +3869,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 176 ;
+       fhir:index 191 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3659,7 +3884,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 177 ;
+       fhir:index 192 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3674,7 +3899,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 178 ;
+       fhir:index 193 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3689,7 +3914,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 179 ;
+       fhir:index 194 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3703,7 +3928,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 180 ;
+       fhir:index 195 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3718,7 +3943,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 181 ;
+       fhir:index 196 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3733,7 +3958,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 182 ;
+       fhir:index 197 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3748,7 +3973,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-composants-communs" ]
      ], [
-       fhir:index 183 ;
+       fhir:index 198 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3763,7 +3988,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 184 ;
+       fhir:index 199 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -3778,292 +4003,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-sections" ]
      ], [
-       fhir:index 185 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingmodelemetierCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingmodelemetierCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR  : Entête d'un document" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 186 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingAuteurCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingAuteurCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Auteur\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 187 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingConsentementCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingConsentementCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Consentement\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 188 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingDestinatairePrevuCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingDestinatairePrevuCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 189 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingDocumentDeReferenceCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingDocumentDeReferenceCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 190 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingEvenementCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingEvenementCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Evènement documenté\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 191 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingInformateurCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingInformateurCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Informateur\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 192 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingOperateurSaisieCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingOperateurSaisieCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 193 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingParticipantCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingParticipantCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Participant\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 194 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPatientCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPatientCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Patient/Usager\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 195 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPersonneStructureAssignedEntityFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPersonneStructureAssignedEntityFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 196 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPersonneStructureAuteurFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPersonneStructureAuteurFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 197 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPersonneStructureRelatedEntityFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPersonneStructureRelatedEntityFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 198 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPrescriptionCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPrescriptionCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Prescription\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 199 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingPriseEnchargeCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingPriseEnchargeCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Prise en charge\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
        fhir:index 200 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingResponsableCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingResponsableCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Responsable du document\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 201 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingStructureConservationCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingStructureConservationCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 202 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingSystemeFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingSystemeFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 203 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "ConceptMap" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://interop.esante.gouv.fr/ig/document-core/ConceptMap/mappingValidateurCDAFHIR> ;
-         fhir:Reference.reference [ fhir:value "ConceptMap/mappingValidateurCDAFHIR" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Mapping Métier/CDA/FHIR : \"Validateur\"" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "mapping-entete" ]
-     ], [
-       fhir:index 204 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -4078,7 +4018,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "metier-composants-communs" ]
      ], [
-       fhir:index 205 ;
+       fhir:index 201 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -4093,7 +4033,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "metier-composants-communs" ]
      ], [
-       fhir:index 206 ;
+       fhir:index 202 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -4108,7 +4048,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "metier-composants-communs" ]
      ], [
-       fhir:index 207 ;
+       fhir:index 203 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -4123,7 +4063,7 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
        fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "metier-composants-communs" ]
      ], [
-       fhir:index 208 ;
+       fhir:index 204 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;

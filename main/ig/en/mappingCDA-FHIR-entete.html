@@ -289,792 +289,655 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="mapping-entre-les-éléments-de-lentête--modèle-métier--cda--fhir">Mapping entre les éléments de l'entête : Modèle métier / CDA / FHIR</h3>
 
 <!-- Solution 1 -->
-<!-- <table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="ConceptMap-mappingAuteurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Auteur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<!-- <table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;Auteur&quot; et l'élément CDA &quot;author&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;author&quot; et l'élément FHIR &quot;Composition.author&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMAttester&quot; et l'élément CDA &quot;authenticator&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMAttester&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingConsentementCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Consentement&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;ConsentementAssocie&quot; et l'élément CDA &quot;authorization&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;authorization&quot; et l'extension FHIR &quot;ConsentExtension&quot;</li>
+<li>Mapping 1 : entre l'élément métier &quot;author[x]&quot; du modèle FRLMHeaderDocument et l'élément CDA &quot;author&quot;</li>
+<li>Mapping 2 : entre l'élément métier &quot;author[x]&quot; et l'élément FHIR &quot;Composition.author&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingDestinatairePrevuCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Destinataire prévu&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;destinataire&quot; et l'élément CDA &quot;informationRecipient&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;informationRecipient&quot; et l'extension FHIR &quot;InformationRecipientExtension&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMConsent&quot; et l'élément CDA &quot;authorization&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMConsent&quot; et la ressource FHIR &quot;Consent&quot; (référencée depuis Composition via l'extension ConsentExtension)</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingDocumentDeReferenceCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;DocumentDeReference&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;documentDeReference&quot; et l'élément CDA &quot;relatedDocument&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;relatedDocument&quot; et l'élément FHIR &quot;Composition.relatesTo&quot;</li>
+<li>Mapping 1 : entre l'élément métier &quot;custodian&quot; du modèle FRLMHeaderDocument et l'élément CDA &quot;custodian&quot;</li>
+<li>Mapping 2 : entre l'élément métier &quot;custodian&quot; et l'élément FHIR &quot;Composition.custodian&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingEvenementCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Evènement documenté&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 :entre le modèle métier &quot;evenement&quot; et l'élément CDA &quot;documentationOf&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;documentationOf&quot; et l'élément FHIR &quot;Composition.event&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMDataEnterer&quot; et l'élément CDA &quot;dataEnterer&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMDataEnterer&quot; et l'extension FHIR &quot;DataEntererExtension&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingInformateurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Informateur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td><a href="ConceptMap-FRHeaderDocumentLMCDAFHIR.html">Mapping Métier/CDA/FHIR  : Entête d'un document</a></td><td><div><p>Ce ConceptMap présente trois groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;informateur&quot; et l'élément CDA &quot;informant&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;informant&quot; et l'extension FHIR &quot;InformantExtension&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMHeaderDocument&quot; et l'élément CDA &quot;clinicalDocument&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMHeaderDocument&quot; et le profil FHIR &quot;FrBundleDocument&quot;</li>
+<li>Mapping 3 : entre le modèle métier &quot;FRLMHeaderDocument&quot; et le profil FHIR &quot;FrCompositionDocument&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingOperateurSaisieCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente trois groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;operateurSaisie&quot; et l'élément CDA &quot;dataEnterer&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;dataEnterer&quot; et l'extension FHIR &quot;DataEntererExtension&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMHealthProfessional&quot; et les éléments CDA &quot;assignedEntity&quot;/&quot;assignedAuthor&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMHealthProfessional&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+<li>Mapping 3 : entre le modèle métier &quot;FRLMHealthProfessional&quot; et le profil FHIR &quot;FrPractitionerDocument&quot; (référencé depuis PractitionerRole.practitioner)</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingParticipantCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Participant&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<p>Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît dans l'entête du document (auteur, responsable, validateur, opérateur de saisie, informateur, participant, destinataire, prescripteur, professionnel référent d'une prise en charge, etc.).</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;participant&quot; et l'élément CDA &quot;participant&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;participant&quot; et l'extension FHIR &quot;ParticipantExtension&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMInformant&quot; et l'élément CDA &quot;informant&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMInformant&quot; et l'extension FHIR &quot;InformantExtension&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPatientCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;patient&quot; et l'élément CDA &quot;recordTarget&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;recordTarget&quot; et le profil FHIR &quot;FrPatientDocument&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMIntendedRecipient&quot; et l'élément CDA &quot;informationRecipient&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMIntendedRecipient&quot; et l'extension FHIR &quot;InformationRecipientExtension&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;PersonneStructure&quot; et l'élément CDA &quot;assignedEntity&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedEntity&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMLegalAuthentication&quot; et l'élément CDA &quot;legalAuthenticator&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMLegalAuthentication&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;PersonneStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMOrder&quot; et l'élément CDA &quot;inFulfillmentOf&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMOrder&quot; et la ressource FHIR &quot;ServiceRequest&quot; (référencée depuis Composition via l'extension basedOn)</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;FRLMPersonneStructure&quot; et l'élément CDA &quot;relatedEntity&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;relatedEntity&quot; et le profil FHIR &quot;FrRelatedPersonDocument&quot;</li>
-<li>Mapping 3 : entre l'élément CDA &quot;relatedEntity&quot; et l'élément FHIR &quot;Patient.contact&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMOrganisation&quot; et la structure CDA générique portant une organisation</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMOrganisation&quot; et la ressource FHIR &quot;Organization&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPrescriptionCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Prescription&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+<p>Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.).</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;prescription&quot; et l'élément CDA &quot;inFulfillmentOf&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;inFulfillmentOf&quot; et l'extension FHIR &quot;OrderExtension&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMParticipant&quot; (entête) et l'élément CDA &quot;participant&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMParticipant&quot; et l'extension FHIR &quot;ParticipantExtension&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPriseEnchargeCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Prise en charge&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;prise en charge&quot; et l'élément CDA &quot;componentOf&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;componentOf&quot; et l'élément FHIR &quot;Composition.encounter(Encounter)&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMPatient&quot; et l'élément CDA &quot;recordTarget&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMPatient&quot; et le profil FHIR &quot;FrPatientDocument&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingResponsableCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
+</div></td></tr><tr><td/><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
-<li>Mapping 1 : entre le modèle métier &quot;responsable&quot; et l'élément CDA &quot;legalAuthenticator&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;legalAuthenticator&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
+<li>Mapping 1 : entre le modèle métier &quot;FRLMRelatedPerson&quot; et l'élément CDA &quot;relatedEntity&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMRelatedPerson&quot; et la ressource FHIR &quot;RelatedPerson&quot;</li>
 </ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingStructureConservationCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;structureConservation&quot; et l'élément CDA &quot;custodian&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;custodian&quot; et l'élément FHIR &quot;Composition.custodian&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingSystemeFHIR.html">Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;</a></td><td><div><p>Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;SystemeStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrDeviceDocument&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingValidateurCDAFHIR.html">Mapping Métier/CDA/FHIR : &quot;Validateur&quot;</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;validateur&quot; et l'élément CDA &quot;authenticator&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;authenticator&quot; et l'élément FHIR &quot;Composition.attester&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingmodelemetierCDAFHIR.html">Mapping Métier/CDA/FHIR  : Entête d'un document</a></td><td><div><p>Ce ConceptMap présente trois groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;EnteteDocument&quot; et l'élément CDA &quot;clinicalDocument&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;clinicalDocument&quot; et le profil FHIR &quot;FrBundleDocument&quot;</li>
-<li>Mapping 3 : entre l'élément CDA &quot;clinicalDocument&quot; et le profil FHIR &quot;FrCompositionDocument&quot;</li>
-</ul>
+<p>Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.).</p>
 </div></td></tr></table>
 
 ### Éléments de 2ᵉ niveau
 
-<table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (AssignedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;PersonneStructure&quot; et l'élément CDA &quot;assignedEntity&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedEntity&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureAuteurFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (Auteur)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;PersonneStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrPractitionerRoleDocument&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html">Mapping Métier/CDA/FHIR : &quot;Personne / Structure (RelatedEntity)&quot;</a></td><td><div><p>Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping:</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;FRLMPersonneStructure&quot; et l'élément CDA &quot;relatedEntity&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;relatedEntity&quot; et le profil FHIR &quot;FrRelatedPersonDocument&quot;</li>
-<li>Mapping 3 : entre l'élément CDA &quot;relatedEntity&quot; et l'élément FHIR &quot;Patient.contact&quot;</li>
-</ul>
-</div></td></tr><tr><td><a href="ConceptMap-mappingSystemeFHIR.html">Mapping Métier/CDA/FHIR : &quot;Système / Structure Auteur&quot;</a></td><td><div><p>Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping :</p>
-<ul>
-<li>Mapping 1 : entre le modèle métier &quot;SystemeStructureAuteur&quot; et l'élément CDA &quot;assignedAuthor&quot;</li>
-<li>Mapping 2 : entre l'élément CDA &quot;assignedAuthor&quot; et le profil FHIR &quot;FrDeviceDocument&quot;</li>
-</ul>
-</div></td></tr></table>
+<table class="lines"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr></table>
  -->
 
 <!--solution 2 -->
-<table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMEnteteDocument</strong></p>
-</div></td><td><div><p><strong>ClinicalDocument</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMEnteteDocument.identifiantUniqueDocument</p>
-</div></td><td><div><p>ClinicalDocument.id</p>
-</div></td><td><div><p>Bundle.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.modeleDocument</p>
-</div></td><td><div><p>ClinicalDocument.templateId</p>
-</div></td><td><div><p>Composition.meta.profile</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.typeDocument</p>
-</div></td><td><div><p>ClinicalDocument.code</p>
-</div></td><td><div><p>Composition.type</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.titreDocument</p>
-</div></td><td><div><p>ClinicalDocument.title</p>
-</div></td><td><div><p>Composition.title</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.dateDeCreationDocument</p>
-</div></td><td><div><p>ClinicalDocument.effectiveTime</p>
-</div></td><td><div><p>Composition.date</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.niveauConfidentialiteDocument</p>
-</div></td><td><div><p>ClinicalDocument.confidentialityCode</p>
-</div></td><td><div><p>Composition.confidentiality</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.languePrincipaleDocument</p>
-</div></td><td><div><p>ClinicalDocument.languageCode</p>
-</div></td><td><div><p>Composition.language</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.identifiantLotDeVersionsDocument</p>
-</div></td><td><div><p>ClinicalDocument.setId</p>
-</div></td><td><div><p>Composition.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.versionDocument</p>
-</div></td><td><div><p>ClinicalDocument.versionNumber</p>
-</div></td><td><div><p>Composition.extension:R5-Composition-version</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.StatutDocument</p>
-</div></td><td><div><p>ClinicalDocument.documentationOf.
-serviceEvent.lab:statusCode</p>
-</div></td><td><div><p>Composition.status</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.patient</p>
-</div></td><td><div><p>ClinicalDocument.recordTarget</p>
-</div></td><td><div><p>Composition.subject</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.auteur</p>
-</div></td><td><div><p>ClinicalDocument.author</p>
-</div></td><td><div><p>Composition.author</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.operateurSaisie</p>
-</div></td><td><div><p>ClinicalDocument.dataEnterer</p>
-</div></td><td><div><p>Composition.extension:data-enterer</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.informateur</p>
-</div></td><td><div><p>ClinicalDocument.informant</p>
-</div></td><td><div><p>Composition.extension:informant</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.structureConservation</p>
-</div></td><td><div><p>ClinicalDocument.custodian</p>
-</div></td><td><div><p>Composition.custodian</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.destinataire</p>
-</div></td><td><div><p>ClinicalDocument.informationRecipient</p>
-</div></td><td><div><p>Composition.extension:informationRecipient</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.responsable</p>
-</div></td><td><div><p>ClinicalDocument.legalAuthenticator</p>
-</div></td><td><div><p>Composition.attester</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.validateur</p>
-</div></td><td><div><p>ClinicalDocument.authenticator</p>
-</div></td><td><div><p>Composition.attester</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.participant</p>
-</div></td><td><div><p>ClinicalDocument.participant</p>
-</div></td><td><div><p>Composition.extension:participant</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.prescription</p>
-</div></td><td><div><p>ClinicalDocument.inFulfillmentOf</p>
-</div></td><td><div><p>Composition.extension:order</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.evenement</p>
-</div></td><td><div><p>ClinicalDocument.documentationOf</p>
-</div></td><td><div><p>Composition.event</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.documentDeReference</p>
-</div></td><td><div><p>ClinicalDocument.relatedDocument</p>
-</div></td><td><div><p>Composition.relatesTo</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.consentementAssocie</p>
-</div></td><td><div><p>ClinicalDocument.authorization</p>
-</div></td><td><div><p>Composition.extension:consent</p>
-</div></td></tr><tr><td><div><p>FRLMEnteteDocument.priseEncharge</p>
-</div></td><td><div><p>ClinicalDocument.componentOf</p>
-</div></td><td><div><p>Composition.encounter</p>
-</div></td></tr><tr><td><div><p><strong>FRLMAuteur</strong></p>
+<table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMAttester</strong></p>
+</div></td><td><div><p><strong>authenticator</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author</p>
 </div></td><td><div><p><strong>author</strong></p>
-</div></td><td><div><p>Composition.author</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.roleFonctionnel</p>
-</div></td><td><div><p>author.functionCode</p>
-</div></td><td><div><p>Composition.author.PractitionerRole.code</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.horodatageParticipation</p>
-</div></td><td><div><p>author.time</p>
-</div></td><td><div><p>Composition.author.extension:time</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Device</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Patient</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMPersonneStructure</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Practitioner</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Device</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Patient</p>
-</div></td></tr><tr><td><div><p>FRLMAuteur.FRLMSystemeStructureAuteur</p>
-</div></td><td><div><p>author.assignedAuthor</p>
-</div></td><td><div><p>Composition.author.Practitioner</p>
-</div></td></tr><tr><td><div><p><strong>FRLMConsentement</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMConsent</strong></p>
 </div></td><td><div><p><strong>authorization</strong></p>
-</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent</p>
-</div></td></tr><tr><td><div><p>FRLMConsentement.identifiantConsentement</p>
-</div></td><td><div><p>authorization.consent.id</p>
-</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMConsentement.typeConsentement</p>
-</div></td><td><div><p>authorization.consent.code</p>
-</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.category</p>
-</div></td></tr><tr><td><div><p>FRLMConsentement.statutConsentement</p>
-</div></td><td><div><p>authorization.consent.statusCode=&quot;completed&quot;</p>
-</div></td><td><div><p>extension:ConsentExtension.ValueReference.Consent.status:active</p>
-</div></td></tr><tr><td><div><p><strong>FRLMDestinatairePrevu</strong></p>
-</div></td><td><div><p><strong>informationRecipient</strong></p>
-</div></td><td><div><p><strong>extension:InformationRecipientExtension</strong></p>
-</div></td></tr><tr><td><div><p>FRLMDestinatairePrevu.destinataire</p>
-</div></td><td><div><p>informationRecipient.intendedRecipient</p>
-</div></td><td><div><p>extension:InformationRecipientExtension.extension:party.PractitionerRole</p>
-</div></td></tr><tr><td><div><p><strong>FRLMDocumentDeReference</strong></p>
-</div></td><td><div><p><strong>relatedDocument</strong></p>
-</div></td><td><div><p>Composition.relatesTo</p>
-</div></td></tr><tr><td><div><p>FRLMDocumentDeReference.typeReference</p>
-</div></td><td><div><p>relatedDocument@typeCode</p>
-</div></td><td><div><p>Composition.relatesTo.code</p>
-</div></td></tr><tr><td><div><p>FRLMDocumentDeReference.identifiantUniqueDocument</p>
-</div></td><td><div><p>relatedDocument.parentDocument.id</p>
-</div></td><td><div><p>Composition.relatesTo.targetIdentifier</p>
-</div></td></tr><tr><td><div><p><strong>FRLMEvenement</strong></p>
-</div></td><td><div><p><strong>documentationOf</strong></p>
-</div></td><td><div><p>Composition.event</p>
-</div></td></tr><tr><td><div><p>FRLMEvenement.identifiantEvenement</p>
-</div></td><td><div><p>documentationOf.serviceEvent.id</p>
-</div></td><td /></tr><tr><td><div><p>FRLMEvenement.codeEvenement</p>
-</div></td><td><div><p>documentationOf.serviceEvent.code</p>
-</div></td><td><div><p>Composition.event.code</p>
-</div></td></tr><tr><td><div><p>FRLMEvenement.dateHeureEvenement</p>
-</div></td><td><div><p>documentationOf.serviceEvent.effectiveTime</p>
-</div></td><td><div><p>Composition.event.period</p>
-</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement</p>
-</div></td><td><div><p>documentationOf.serviceEvent.performer@typeCode=&quot;PRF&quot;</p>
-</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole</p>
-</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement.roleFonctionnel</p>
-</div></td><td><div><p>documentationOf.serviceEvent.
-performer.functionCode</p>
-</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole.code</p>
-</div></td></tr><tr><td><div><p>FRLMEvenement.executantEvenement.dateHeureParticipation</p>
-</div></td><td><div><p>documentationOf.serviceEvent.
-performer.time</p>
-</div></td><td /></tr><tr><td><div><p>FRLMEvenement.executantEvenement.executant</p>
-</div></td><td><div><p>documentationOf.serviceEvent.
-performer.assignedEntity</p>
-</div></td><td><div><p>Composition.event.extension:perfomer.PractitionerRole.Practitioner</p>
-</div></td></tr><tr><td><div><p><strong>FRLMInformateur</strong></p>
-</div></td><td><div><p><strong>informant</strong></p>
-</div></td><td><div><p><strong>extension:InformantExtension</strong></p>
-</div></td></tr><tr><td><div><p>FRLMInformateur.informateur</p>
-</div></td><td><div><p>informant.assignedEntity</p>
-</div></td><td><div><p>extension:InformantExtension.extension:party.ValueReference</p>
-</div></td></tr><tr><td><div><p>FRLMInformateur.informateur</p>
-</div></td><td><div><p>informant.relatedEntity</p>
-</div></td><td><div><p>extension:InformantExtension.extension:party.ValueReference</p>
-</div></td></tr><tr><td><div><p><strong>FRLMOperateurSaisie</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.custodian</p>
+</div></td><td><div><p>custodian.assignedCustodian.representedCustodianOrganization</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMDataEnterer</strong></p>
 </div></td><td><div><p><strong>dataEnterer</strong></p>
-</div></td><td><div><p><strong>DataEntererExtension</strong></p>
-</div></td></tr><tr><td><div><p>FRLMOperateurSaisie.dateSaisie</p>
-</div></td><td><div><p>dataEnterer.time</p>
-</div></td><td><div><p>DataEntererExtension.extension:time</p>
-</div></td></tr><tr><td><div><p>FRLMOperateurSaisie.operateurSaisie</p>
-</div></td><td><div><p>dataEnterer.assignedEntity</p>
-</div></td><td><div><p>DataEntererExtension.extension:party.ValueReference</p>
-</div></td></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMHealthProfessional</strong></p>
+</div></td><td><div><p><strong>assignedEntity</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMInformant</strong></p>
+</div></td><td><div><p><strong>informant</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMIntendedRecipient</strong></p>
+</div></td><td><div><p><strong>informationRecipient</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMLegalAuthentication</strong></p>
+</div></td><td><div><p><strong>legalAuthenticator</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMOrder</strong></p>
+</div></td><td><div><p><strong>inFulfillmentOf</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMOrganisation</strong></p>
+</div></td><td><div><p>assignedEntity.representedOrganization</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
 </div></td><td><div><p><strong>participant</strong></p>
-</div></td><td><div><p><strong>extension:ParticipantExtension</strong></p>
-</div></td></tr><tr><td><div><p>FRLMParticipant.typeParticipation</p>
-</div></td><td><div><p>participant@typeCode</p>
-</div></td><td><div><p>extension:ParticipantExtension.extention:type</p>
-</div></td></tr><tr><td><div><p>FRLMParticipant.roleFonctionnel</p>
-</div></td><td><div><p>participant.functionCode</p>
-</div></td><td><div><p>extension:ParticipantExtension.extention:function.coding</p>
-</div></td></tr><tr><td><div><p>FRLMParticipant.dateDebutEtOuFinParticipation</p>
-</div></td><td><div><p>participant.time</p>
-</div></td><td><div><p>extension:ParticipantExtension.extention:time</p>
-</div></td></tr><tr><td><div><p>FRLMParticipant.participant</p>
-</div></td><td><div><p>participant.associatedEntity</p>
-</div></td><td><div><p>extension:ParticipantExtension.party</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPatientUsager</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPatient</strong></p>
 </div></td><td><div><p><strong>recordTarget</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMPatientUsager.identifiantPatient</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMRelatedPerson</strong></p>
+</div></td><td><div><p><strong>relatedEntity</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMAttester.dateTime</p>
+</div></td><td><div><p>authenticator.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:healthProfessional</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.identifier</p>
+</div></td><td><div><p>authorization.consent.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.date</p>
+</div></td><td><div><p>dataEnterer.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.identifier</p>
+</div></td><td><div><p>assignedEntity.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:professional</p>
+</div></td><td><div><p>informant.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:healthProfessional</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.dateTime</p>
+</div></td><td><div><p>legalAuthenticator.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderId</p>
+</div></td><td><div><p>inFulfillmentOf.order.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.identifier</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.identifier</p>
+</div></td><td><div><p>participant.associatedEntity.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.identifier</p>
 </div></td><td><div><p>recordTarget.patientRole.id</p>
-</div></td><td><div><p>Patient.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.adresse</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.identifier</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMAttester.attester:healthProfessional</p>
+</div></td><td><div><p>authenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:organisation</p>
+</div></td><td><div><p>author.assignedAuthor</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.type</p>
+</div></td><td><div><p>authorization.consent.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer:healthProfessional</p>
+</div></td><td><div><p>dataEnterer.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:organisation</p>
+</div></td><td><div><p>informant.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:organisation</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</p>
+</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.accessionNumber</p>
+</div></td><td><div><p>inFulfillmentOf.order.ps3-20:accessionNumber</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.type</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMParticipant.name</p>
+</div></td><td><div><p>participant.associatedEntity.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.address</p>
 </div></td><td><div><p>recordTarget.patientRole.addr</p>
-</div></td><td><div><p>Patient.address</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.coordonneesTelecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMAttester.attester:device</p>
+</div></td><td><div><p>authenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:device</p>
+</div></td><td><div><p>author.assignedAuthor.assignedAuthoringDevice</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.status</p>
+</div></td><td><div><p>authorization.consent.statusCode=&quot;completed&quot;</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer:patient</p>
+</div></td><td><div><p>dataEnterer.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.family</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:patient</p>
+</div></td><td><div><p>informant.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:patient</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:patient</p>
+</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderDateAndTime</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMOrganisation.name</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.type</p>
+</div></td><td><div><p>participant@typeCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.telecom</p>
 </div></td><td><div><p>recordTarget.patientRole.telecom</p>
-</div></td><td><div><p>Patient.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.nomsPrenomsPatient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.family</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.given</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:relatedPerson</p>
+</div></td><td><div><p>informant.relatedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:relatedPerson</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:device</p>
+</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderPlacer</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMOrganisation.address</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.addr</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.role</p>
+</div></td><td><div><p>participant.functionCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.name</p>
-</div></td><td><div><p>Patient.name</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.nom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.given</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.prefix</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.prefix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:device</p>
+</div></td><td><div><p>informationRecipient.intendedRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:organisation</p>
+</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderReason</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMOrganisation.telecom</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.period</p>
+</div></td><td><div><p>participant.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.family</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.name.family</p>
-</div></td><td><div><p>Patient.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.nom.nomNaissance</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.family@qualifier='BR'</p>
-</div></td><td><div><p>Patient.name:officialname.family</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.nom.nomUtilise</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.family@qualifier='CL'</p>
-</div></td><td><div><p>Patient.name:usualname.family</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.prefix</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.prefix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.suffix</p>
+</div></td><td><div><p>assignedEntity.assignedPerson.
+name.suffix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.partOf</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMParticipant.participant:healthProfessional</p>
+</div></td><td><div><p>participant.associatedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.given</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.name.given</p>
-</div></td><td><div><p>Patient.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.suffix</p>
+</div></td><td><div><p>relatedEntity.relatedPerson.
+name.suffix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.address</p>
+</div></td><td><div><p>assignedEntity.addr</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.industrySector</p>
+</div></td><td><div><p>assignedEntity.representedOrganization.standardIndustryClassCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant:organisation</p>
+</div></td><td><div><p>participant.associatedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.use</p>
 </div></td><td><div><p>recordTarget.patientRole.
-patient.name.given</p>
-</div></td><td><div><p>Patient.name:officialname.birth-list-given-name</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom.listePrenoms</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.given</p>
-</div></td><td><div><p>Patient.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom.listePrenoms</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.given</p>
-</div></td><td><div><p>Patient.name:officialname.birth-list-given-name</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom.premierPrenom</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.given@qualifier='BR'</p>
-</div></td><td><div><p>Patient.name:officialname.given</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-nomsPrenomsPatient.prenom.prenomUtilise</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.name.given@qualifier='CL'</p>
-</div></td><td><div><p>Patient.name:usualname.given</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.sexe</p>
+patient.name.family@qualifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.subject</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMHealthProfessional.telecom</p>
+</div></td><td><div><p>assignedEntity.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant:device</p>
+</div></td><td><div><p>participant.associatedEntity</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.administrativeGender</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.administrativeGenderCode</p>
-</div></td><td><div><p>Patient.gender</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.dateNaissance</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.relationship</p>
+</div></td><td><div><p>relatedEntity.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.role</p>
+</div></td><td><div><p>assignedEntity.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.dateOfBirth</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.birthTime</p>
-</div></td><td><div><p>Patient.birthDate</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.indicateurDeces</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.address</p>
+</div></td><td><div><p>relatedEntity.addr</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.organisation</p>
+</div></td><td><div><p>assignedEntity.representedOrganization</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.deceased:boolean</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.sdtc:deceasedInd</p>
-</div></td><td><div><p>Patient.deceasedBoolean</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.dateDeces</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.telecom</p>
+</div></td><td><div><p>relatedEntity.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.specialty</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.deceased:dateTime</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.sdtc:deceasedTime</p>
-</div></td><td><div><p>Patient.deceasedDateTime</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.grossesseMultiple</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.gender</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.multipleBirth:boolean</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.sdtc:multipleBirthInd</p>
-</div></td><td><div><p>Patient.multipleBirthBoolean</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.numeroOrdreNaissance</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.birthDate</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.multipleBirth:integer</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.sdtc:multipleBirthOrderNumber</p>
-</div></td><td><div><p>Patient.multipleBirthInteger</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.representantPatient</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian</p>
-</div></td><td><div><p>Patient.contact.relationship:Role='GUARD'</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.adresse</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.addr</p>
-</div></td><td><div><p>Patient.contact.address</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.coordonneesTelecom</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.telecom</p>
-</div></td><td><div><p>Patient.contact.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianPerson.name</p>
-</div></td><td><div><p>Patient.contact.name</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.nom</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianPerson.family</p>
-</div></td><td><div><p>Patient.contact.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.personneRepresentantPatient.nomsPrenomsRepresentantPatient.prenom</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianPerson.given</p>
-</div></td><td><div><p>Patient.contact.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.structureRepresentantPatient</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianOrganization</p>
-</div></td><td><div><p>Patient.contact.organization</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.structureRepresentantPatient.identifiant</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianOrganization.id</p>
-</div></td><td><div><p>Patient.contact.organization.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-representantPatient.structureRepresentantPatient.nom</p>
-</div></td><td><div><p>recordTarget.patientRole.
-patient.guardian.guardianOrganization.name</p>
-</div></td><td><div><p>Patient.contact.organization.name</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.lieuNaissance</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.deceased</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.birthPlace</p>
 </div></td><td><div><p>recordTarget.patientRole.
 patient.birthPlace</p>
-</div></td><td><div><p>Patient.extension:birthPlace</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-lieuNaissance.nomLieuNaissance</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.multipleBirth</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.contact</p>
 </div></td><td><div><p>recordTarget.patientRole.
-patient.birthPlace.place.name</p>
-</div></td><td><div><p>Patient.extension:birthPlace.value[FRCoreAddressProfile].text</p>
-</div></td></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-lieuNaissance.adresseLieuNaissance</p>
+patient.guardian</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.photo</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.contact.address</p>
 </div></td><td><div><p>recordTarget.patientRole.
-patient.birthPlace.place.addr</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPatientUsager.personnePhysique.
-lieuNaissance.adresseLieuNaissance.codeOfficielGeographiqueLieuNaissance</p>
+patient.guardian.addr</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.period</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.contact.telecom</p>
 </div></td><td><div><p>recordTarget.patientRole.
-patient.birthPlace.place.addr.county</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
-</div></td><td><div><p><strong>assignedEntity</strong></p>
-</div></td><td><div><p><strong>PractitionerRole</strong></p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.identifiantPersonne</p>
-</div></td><td><div><p>assignedEntity.id</p>
-</div></td><td><div><p>PractitionerRole.practitioner.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
-</div></td><td><div><p>assignedEntity.code</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.qualification.code</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
-</div></td><td><div><p>assignedEntity.addr</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
-</div></td><td><div><p>assignedEntity.telecom</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.IdentitePersonne</p>
-</div></td><td><div><p>assignedEntity.assignedPerson</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.nomPersonne</p>
-</div></td><td><div><p>assignedEntity.assignedPerson.
+patient.guardian.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.communication</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.contact.name</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.
 name.family</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.prenomPersonne</p>
-</div></td><td><div><p>assignedEntity.assignedPerson.
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.
 name.given</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.civilite</p>
-</div></td><td><div><p>assignedEntity.assignedPerson.
-name.prefix</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.prefix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.titre</p>
-</div></td><td><div><p>assignedEntity.assignedPerson.
-name.suffix</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.suffix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure</p>
-</div></td><td><div><p>assignedEntity.representedOrganization</p>
-</div></td><td><div><p>PractitionerRole.Organization</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.identifiantStructure</p>
-</div></td><td><div><p>assignedEntity.representedOrganization.id</p>
-</div></td><td><div><p>PractitionerRole.Organization.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.nomStructure</p>
-</div></td><td><div><p>assignedEntity.representedOrganization.name</p>
-</div></td><td><div><p>PractitionerRole.Organization.name</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.adresse</p>
-</div></td><td><div><p>assignedEntity.representedOrganization.addr</p>
-</div></td><td><div><p>PractitionerRole.Organization.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.coordonneesTelecom</p>
-</div></td><td><div><p>assignedEntity.representedOrganization.telecom</p>
-</div></td><td><div><p>PractitionerRole.Organization.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.structure.secteurActivite</p>
-</div></td><td><div><p>assignedEntity.representedOrganization.standardIndustryClassCode</p>
-</div></td><td><div><p>PractitionerRole.Organization.type</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructureAuteur</strong></p>
-</div></td><td><div><p><strong>assignedAuthor</strong></p>
-</div></td><td><div><p>PractitionerRole.Practitioner</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.identifiantPersonne</p>
-</div></td><td><div><p>assignedAuthor.id</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.professionRole</p>
-</div></td><td><div><p>assignedAuthor.code</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.qualification.code</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.adresse</p>
-</div></td><td><div><p>assignedAuthor.addr</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.coordonneesTelecom</p>
-</div></td><td><div><p>assignedAuthor.telecom</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.IdentitePersonne</p>
-</div></td><td><div><p>assignedAuthor.assignedPerson</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
-IdentitePersonne.nomPersonne</p>
-</div></td><td><div><p>assignedAuthor.assignedPerson.
-name.family</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
-IdentitePersonne.prenomPersonne</p>
-</div></td><td><div><p>assignedAuthor.assignedPerson.
-name.given</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
-IdentitePersonne.civilite</p>
-</div></td><td><div><p>assignedAuthor.assignedPerson.
-name.prefix</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.prefix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.personne.
-IdentitePersonne.titre</p>
-</div></td><td><div><p>assignedAuthor.assignedPerson.
-name.suffix</p>
-</div></td><td><div><p>PractitionerRole.Practitioner.name.suffix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization</p>
-</div></td><td><div><p>PractitionerRole.Organization</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.identifiantStructure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.id</p>
-</div></td><td><div><p>PractitionerRole.Organization.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.nomStructure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.name</p>
-</div></td><td><div><p>PractitionerRole.Organization.name</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.adresse</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.addr</p>
-</div></td><td><div><p>PractitionerRole.Organization.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.coordonneesTelecom</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.telecom</p>
-</div></td><td><div><p>PractitionerRole.Organization.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructureAuteur.structure.secteurActivite</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.standardIndustryClassCode</p>
-</div></td><td><div><p>PractitionerRole.Organization.type</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
-</div></td><td><div><p><strong>relatedEntity</strong></p>
-</div></td><td><div><p>Patient.contact</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPersonneStructure</strong></p>
-</div></td><td><div><p><strong>relatedEntity</strong></p>
-</div></td><td><div><p><strong>RelatedPerson</strong></p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
-</div></td><td><div><p>relatedEntity@classCode</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPersonneStructure.personne.professionRole</p>
-</div></td><td><div><p>relatedEntity@classCode</p>
-</div></td><td><div><p>Patient.contact.relationship:Role</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.lien</p>
-</div></td><td><div><p>relatedEntity.code</p>
-</div></td><td><div><p>Patient.contact.relationship:RelationType.coding</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.lien</p>
-</div></td><td><div><p>relatedEntity.code</p>
-</div></td><td><div><p>RelatedPerson.relationship.coding</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
-</div></td><td><div><p>relatedEntity.addr</p>
-</div></td><td><div><p>Patient.contact.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.adresse</p>
-</div></td><td><div><p>relatedEntity.addr</p>
-</div></td><td><div><p>RelatedPerson.address</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
-</div></td><td><div><p>relatedEntity.telecom</p>
-</div></td><td><div><p>Patient.contact.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.coordonneesTelecom</p>
-</div></td><td><div><p>relatedEntity.telecom</p>
-</div></td><td><div><p>RelatedPerson.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.IdentitePersonne</p>
-</div></td><td><div><p>relatedEntity.relatedPerson</p>
-</div></td><td><div><p>RelatedPerson.name</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.nomPersonne</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.family</p>
-</div></td><td><div><p>Patient.contact.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.nomPersonne</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.family</p>
-</div></td><td><div><p>RelatedPerson.name.family</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.prenomPersonne</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.given</p>
-</div></td><td><div><p>Patient.contact.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.prenomPersonne</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.given</p>
-</div></td><td><div><p>RelatedPerson.name.given</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.civilite</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.prefix</p>
-</div></td><td><div><p>Patient.contact.name.prefix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.civilite</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.prefix</p>
-</div></td><td><div><p>RelatedPerson.name.prefix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.titre</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.suffix</p>
-</div></td><td><div><p>Patient.contact.name.suffix</p>
-</div></td></tr><tr><td><div><p>FRLMPersonneStructure.personne.
-IdentitePersonne.titre</p>
-</div></td><td><div><p>relatedEntity.relatedPerson.
-name.suffix</p>
-</div></td><td><div><p>RelatedPerson.name.suffix</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPrescription</strong></p>
-</div></td><td><div><p><strong>inFulfillmentOf</strong></p>
-</div></td><td><div><p><strong>extension:basedOn</strong></p>
-</div></td></tr><tr><td><div><p>FRLMPrescription.identifiantPrescription</p>
-</div></td><td><div><p>inFulfillmentOf.order.id</p>
-</div></td><td><div><p>extension:basedOnExtension.ValueReference.ServiceRequest.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPrescription.accessionNumber</p>
-</div></td><td><div><p>inFulfillmentOf.order.ps3-20:accessionNumber</p>
-</div></td><td><div><p>extension:basedOn.ValueReference.ServiceRequest.identifier</p>
-</div></td></tr><tr><td><div><p><strong>FRLMPriseEncharge</strong></p>
-</div></td><td><div><p><strong>componentOf</strong></p>
-</div></td><td><div><p>Composition.encounter.Encounter</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.identifiantPriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.id</p>
-</div></td><td><div><p>Encounter.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.typePriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.code</p>
-</div></td><td><div><p>Encounter.type</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.dateDebutFinPriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.effectiveTime</p>
-</div></td><td><div><p>Encounter.period</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.typeSortie</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.dischargeDispositionCode</p>
-</div></td><td><div><p>Encounter.hospitalization.dischargeDisposition</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.responsablePriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-responsibleParty.assignedEntity</p>
-</div></td><td><div><p>Encounter.participant.type=&quot;DIS&quot;.individual</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.encounterParticipant</p>
-</div></td><td><div><p>Encounter.participant</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.typeParticipation</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.encounterParticipant@typeCode</p>
-</div></td><td><div><p>Encounter.participant.type</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.dateDebutFinParticipation</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-encounterParticipant.time</p>
-</div></td><td><div><p>Encounter.participant.period</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.personneImpliqueePriseEnCharge.professionnelImplique</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-encounterParticipant.assignedEntity</p>
-</div></td><td><div><p>Encounter.participant.individual</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.location</p>
-</div></td><td><div><p>Encounter.location</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.structure</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-location.healthcareFacility</p>
-</div></td><td><div><p>Encounter.location.Location</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
-structure.secteurActivite</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-location.healthcareFacility.code</p>
-</div></td><td><div><p>Encounter.location.Location.type</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
-structure.secteurActivite.categorieEtablissement</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-location.healthcareFacility.code.translation</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
-structure.nomStructure</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-location.healthcareFacility.location.name</p>
-</div></td><td><div><p>Encounter.location.Location.name</p>
-</div></td></tr><tr><td><div><p>FRLMPriseEncharge.lieuPriseEnCharge.
-structure.adresse</p>
-</div></td><td><div><p>componentOf.encompassingEncounter.
-location.healthcareFacility.location.addr</p>
-</div></td><td><div><p>Encounter.location.Location.address</p>
-</div></td></tr><tr><td><div><p><strong>FRLMResponsable</strong></p>
-</div></td><td><div><p><strong>legalAuthenticator</strong></p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianPerson.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.organization</p>
+</div></td><td><div><p>recordTarget.patientRole.
+patient.guardian.guardianOrganization</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMAttester</strong></p>
 </div></td><td><div><p>Composition.attester</p>
-</div></td></tr><tr><td><div><p>FRLMResponsable.dateHeureAttestationPriseResponsabilite</p>
-</div></td><td><div><p>legalAuthenticator.time</p>
-</div></td><td><div><p>Composition.attester.time</p>
-</div></td></tr><tr><td><div><p>FRLMResponsable.responsable</p>
-</div></td><td><div><p>legalAuthenticator.assignedEntity</p>
-</div></td><td><div><p>Composition.attester.party.PractitionerRole</p>
-</div></td></tr><tr><td><div><p><strong>FRLMStructureConservation</strong></p>
-</div></td><td><div><p><strong>custodian</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author</p>
+</div></td><td><div><p>Composition.author</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMConsent</strong></p>
+</div></td><td><div><p><strong>Consent</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.custodian</p>
 </div></td><td><div><p>Composition.custodian</p>
-</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure</p>
-</div></td><td><div><p>custodian.assignedCustodian</p>
-</div></td><td><div><p>Composition.custodian.organization</p>
-</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.identifiantStructure</p>
-</div></td><td><div><p>custodian.assignedCustodian.
-representedCustodianOrganization.id</p>
-</div></td><td><div><p>Composition.custodian.organization.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.nomStructure</p>
-</div></td><td><div><p>custodian.assignedCustodian.
-representedCustodianOrganization.name</p>
-</div></td><td><div><p>Composition.custodian.organization.name</p>
-</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.adresse</p>
-</div></td><td><div><p>custodian.assignedCustodian.
-representedCustodianOrganization.addr</p>
-</div></td><td><div><p>Composition.custodian.organization.address</p>
-</div></td></tr><tr><td><div><p>FRLMStructureConservation.structure.coordonneesTelecom</p>
-</div></td><td><div><p>custodian.assignedCustodian.
-representedCustodianOrganization.telecom</p>
-</div></td><td><div><p>Composition.custodian.organization.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur</p>
-</div></td><td><div><p><strong>assignedAuthor</strong></p>
-</div></td><td><div><p><strong>Device</strong></p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.identifiantAuteur</p>
-</div></td><td><div><p>assignedAuthor.id</p>
-</div></td><td><div><p>Device.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.professionSavoirFaireRole</p>
-</div></td><td><div><p>assignedAuthor.code</p>
-</div></td><td><div><p>Device.type</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.systeme</p>
-</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice</p>
-</div></td><td /></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-systeme.nomModeleSysteme</p>
-</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice.manufacturerModelName</p>
-</div></td><td><div><p>Device.deviceName.name</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-systeme.nomSysteme</p>
-</div></td><td><div><p>assignedAuthor.assignedAuthoringDevice.softwareName</p>
-</div></td><td><div><p>Device.deviceName.type</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.structure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization</p>
-</div></td><td><div><p>Device.owner.organization</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-structure.identifiantStructure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.id</p>
-</div></td><td><div><p>Device.owner.organization.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-structure.nomStructure</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.name</p>
-</div></td><td><div><p>Device.owner.organization.name</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-structure.adresse</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.addr</p>
-</div></td><td><div><p>Device.owner.organization.address</p>
-</div></td></tr><tr><td><div><p>FRLMSysteme.identificationAuteur.
-structure.coordonneesTelecom</p>
-</div></td><td><div><p>assignedAuthor.representedOrganization.telecom</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMValidateur</strong></p>
-</div></td><td><div><p><strong>authenticator</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMDataEnterer</strong></p>
+</div></td><td><div><p><strong>Extension</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMHealthProfessional</strong></p>
+</div></td><td><div><p><strong>PractitionerRole</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMInformant</strong></p>
+</div></td><td><div><p><strong>Extension</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMIntendedRecipient</strong></p>
+</div></td><td><div><p><strong>Extension</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMLegalAuthentication</strong></p>
 </div></td><td><div><p>Composition.attester</p>
-</div></td></tr><tr><td><div><p>FRLMValidateur.dateHeureAttestationValidite</p>
-</div></td><td><div><p>authenticator.time</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMOrder</strong></p>
+</div></td><td><div><p><strong>ServiceRequest</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMOrganisation</strong></p>
+</div></td><td><div><p><strong>Organization</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMParticipant</strong></p>
+</div></td><td><div><p><strong>Extension</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMPatient</strong></p>
+</div></td><td><div><p><strong>Patient</strong></p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMRelatedPerson</strong></p>
+</div></td><td><div><p><strong>RelatedPerson</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMAttester.dateTime</p>
 </div></td><td><div><p>Composition.attester.time</p>
-</div></td></tr><tr><td><div><p>FRLMValidateur.validateur</p>
-</div></td><td><div><p>authenticator.assignedEntity</p>
-</div></td><td><div><p>Composition.attester.party.PractitionerRole</p>
-</div></td></tr></table>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:healthProfessional</p>
+</div></td><td><div><p>Composition.author.PractitionerRole</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.identifier</p>
+</div></td><td><div><p>Consent.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.date</p>
+</div></td><td><div><p>Extension.extension:time.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.role</p>
+</div></td><td><div><p>PractitionerRole.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:professional</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:healthProfessional</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.dateTime</p>
+</div></td><td><div><p>Composition.attester.time</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderId</p>
+</div></td><td><div><p>ServiceRequest.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.identifier</p>
+</div></td><td><div><p>Organization.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.identifier</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.identifier</p>
+</div></td><td><div><p>Patient.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.identifier</p>
+</div></td><td><div><p>RelatedPerson.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMAttester.attester:healthProfessional</p>
+</div></td><td><div><p>Composition.attester.
+party.PractitionerRole</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:organisation</p>
+</div></td><td><div><p>Composition.author.Organization</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.type</p>
+</div></td><td><div><p>Consent.category</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer:healthProfessional</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.organisation</p>
+</div></td><td><div><p>PractitionerRole.organization</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:organisation</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:organisation</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</p>
+</div></td><td><div><p>Composition.attester.
+party.PractitionerRole</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.accessionNumber</p>
+</div></td><td><div><p>ServiceRequest.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.type</p>
+</div></td><td><div><p>Organization.type</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.name</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.address</p>
+</div></td><td><div><p>Patient.address</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name</p>
+</div></td><td><div><p>RelatedPerson.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMAttester.attester:device</p>
+</div></td><td><div><p>Composition.attester.
+party.Device</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author:device</p>
+</div></td><td><div><p>Composition.author.Device</p>
+</div></td><td /></tr><tr><td><div><p>FRLMConsent.status</p>
+</div></td><td><div><p>Consent.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer:patient</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.specialty</p>
+</div></td><td><div><p>PractitionerRole.specialty</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:patient</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:patient</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:patient</p>
+</div></td><td><div><p>Composition.attester.
+party.Patient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderDateAndTime</p>
+</div></td><td><div><p>ServiceRequest.authoredOn</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.name</p>
+</div></td><td><div><p>Organization.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.type</p>
+</div></td><td><div><p>Extension.extension:type.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.telecom</p>
+</div></td><td><div><p>Patient.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.family</p>
+</div></td><td><div><p>RelatedPerson.name.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMInformant.informant:relatedPerson</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:relatedPerson</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:device</p>
+</div></td><td><div><p>Composition.attester.
+party.Device</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderPlacer</p>
+</div></td><td><div><p>ServiceRequest.requester</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.address</p>
+</div></td><td><div><p>Organization.address</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.role</p>
+</div></td><td><div><p>Extension.extension:function.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name</p>
+</div></td><td><div><p>Patient.name:officialName</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.given</p>
+</div></td><td><div><p>RelatedPerson.name.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient:device</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator:organisation</p>
+</div></td><td><div><p>Composition.attester.
+party.Organization</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrder.orderReason</p>
+</div></td><td><div><p>ServiceRequest.reasonCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.telecom</p>
+</div></td><td><div><p>Organization.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.period</p>
+</div></td><td><div><p>Extension.extension:time.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name</p>
+</div></td><td><div><p>Patient.name:usualName</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.prefix</p>
+</div></td><td><div><p>RelatedPerson.name.prefix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.partOf</p>
+</div></td><td><div><p>Organization.partOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant:healthProfessional</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.family</p>
+</div></td><td><div><p>Patient.name:officialName.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.name.suffix</p>
+</div></td><td><div><p>RelatedPerson.name.suffix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMOrganisation.industrySector</p>
+</div></td><td><div><p>Organization.type</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant:organisation</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.family</p>
+</div></td><td><div><p>Patient.name:usualName.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.subject</p>
+</div></td><td><div><p>RelatedPerson.patient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMParticipant.participant:device</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.given</p>
+</div></td><td><div><p>Patient.name:officialName.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.relationship</p>
+</div></td><td><div><p>RelatedPerson.relationship</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.given</p>
+</div></td><td><div><p>Patient.name:usualName.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.address</p>
+</div></td><td><div><p>RelatedPerson.address</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.use</p>
+</div></td><td><div><p>Patient.name:officialName.use</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.telecom</p>
+</div></td><td><div><p>RelatedPerson.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.name.use</p>
+</div></td><td><div><p>Patient.name:usualName.use</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.gender</p>
+</div></td><td><div><p>RelatedPerson.gender</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.administrativeGender</p>
+</div></td><td><div><p>Patient.gender</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.birthDate</p>
+</div></td><td><div><p>RelatedPerson.birthDate</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.dateOfBirth</p>
+</div></td><td><div><p>Patient.birthDate</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.deceased</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.deceased:boolean</p>
+</div></td><td><div><p>Patient.deceased[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.multipleBirth</p>
+</div></td><td /><td /></tr><tr><td><div><p>FRLMPatient.deceased:dateTime</p>
+</div></td><td><div><p>Patient.deceased[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.photo</p>
+</div></td><td><div><p>RelatedPerson.photo</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.multipleBirth:boolean</p>
+</div></td><td><div><p>Patient.multipleBirth[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.period</p>
+</div></td><td><div><p>RelatedPerson.period</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.multipleBirth:integer</p>
+</div></td><td><div><p>Patient.multipleBirth[x]</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.communication</p>
+</div></td><td><div><p>RelatedPerson.communication</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.birthPlace</p>
+</div></td><td><div><p>Patient.extension:birthPlace</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.communication.language</p>
+</div></td><td><div><p>RelatedPerson.communication.language</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact</p>
+</div></td><td><div><p>Patient.contact</p>
+</div></td><td /></tr><tr><td><div><p>FRLMRelatedPerson.communication.preferred</p>
+</div></td><td><div><p>RelatedPerson.communication.preferred</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.address</p>
+</div></td><td><div><p>Patient.contact.address</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.telecom</p>
+</div></td><td><div><p>Patient.contact.telecom</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.name</p>
+</div></td><td><div><p>Patient.contact.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.
+name.family</p>
+</div></td><td><div><p>Patient.contact.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.
+name.given</p>
+</div></td><td><div><p>Patient.contact.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMPatient.contact.organization</p>
+</div></td><td><div><p>Patient.contact.organization</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMHealthProfessional</strong></p>
+</div></td><td><div><p><strong>Practitioner</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.identifier</p>
+</div></td><td><div><p>Practitioner.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name</p>
+</div></td><td><div><p>Practitioner.name</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.family</p>
+</div></td><td><div><p>Practitioner.name.family</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.given</p>
+</div></td><td><div><p>Practitioner.name.given</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.prefix</p>
+</div></td><td><div><p>Practitioner.name.prefix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.name.suffix</p>
+</div></td><td><div><p>Practitioner.name.suffix</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.address</p>
+</div></td><td><div><p>Practitioner.address</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHealthProfessional.telecom</p>
+</div></td><td><div><p>Practitioner.telecom</p>
+</div></td><td /></tr><tr><td><div><p><strong>FRLMHeaderDocument</strong></p>
+</div></td><td><div><p><strong>ClinicalDocument</strong></p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>ClinicalDocument.id</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>ClinicalDocument.setId</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.documentType</p>
+</div></td><td><div><p>ClinicalDocument.code</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.documentTitle</p>
+</div></td><td><div><p>ClinicalDocument.title</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.date</p>
+</div></td><td><div><p>ClinicalDocument.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.confidentiality</p>
+</div></td><td><div><p>ClinicalDocument.confidentialityCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.language</p>
+</div></td><td><div><p>ClinicalDocument.languageCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.version</p>
+</div></td><td><div><p>ClinicalDocument.versionNumber</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.status</p>
+</div></td><td><div><p>ClinicalDocument.documentationOf.
+serviceEvent.lab:statusCode</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.eventType</p>
+</div></td><td><div><p>ClinicalDocument.documentationOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.subject</p>
+</div></td><td><div><p>ClinicalDocument.recordTarget</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author</p>
+</div></td><td><div><p>ClinicalDocument.author</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.dataEnterer</p>
+</div></td><td><div><p>ClinicalDocument.dataEnterer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.informant</p>
+</div></td><td><div><p>ClinicalDocument.informant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.custodian</p>
+</div></td><td><div><p>ClinicalDocument.custodian</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.intendedRecipient</p>
+</div></td><td><div><p>ClinicalDocument.informationRecipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.legalAuthentication</p>
+</div></td><td><div><p>ClinicalDocument.legalAuthenticator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.attester</p>
+</div></td><td><div><p>ClinicalDocument.authenticator</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.participant</p>
+</div></td><td><div><p>ClinicalDocument.participant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.order</p>
+</div></td><td><div><p>ClinicalDocument.inFulfillmentOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.consent</p>
+</div></td><td><div><p>ClinicalDocument.authorization</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.encounter</p>
+</div></td><td><div><p>ClinicalDocument.componentOf</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>Bundle.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.documentType</p>
+</div></td><td><div><p>Composition.type</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.documentTitle</p>
+</div></td><td><div><p>Composition.title</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.date</p>
+</div></td><td><div><p>Composition.date</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.confidentiality</p>
+</div></td><td><div><p>Composition.confidentiality</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.language</p>
+</div></td><td><div><p>Composition.language</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>Composition.identifier</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.version</p>
+</div></td><td><div><p>Composition.extension:R5-Composition-version</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.status</p>
+</div></td><td><div><p>Composition.status</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.subject</p>
+</div></td><td><div><p>Composition.subject</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.author</p>
+</div></td><td><div><p>Composition.author</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.dataEnterer</p>
+</div></td><td><div><p>Composition.extension:data-enterer</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.informant</p>
+</div></td><td><div><p>Composition.extension:informant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.custodian</p>
+</div></td><td><div><p>Composition.custodian</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.intendedRecipient</p>
+</div></td><td><div><p>Composition.extension:information-recipient</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.legalAuthentication</p>
+</div></td><td><div><p>Composition.attester:legal_attester</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.attester</p>
+</div></td><td><div><p>Composition.attester:professional_attester</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.participant</p>
+</div></td><td><div><p>Composition.extension:participant</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.order</p>
+</div></td><td><div><p>Composition.extension:basedOn</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.eventType</p>
+</div></td><td><div><p>Composition.event</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.consent</p>
+</div></td><td><div><p>Composition.extension:consent</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.encounter</p>
+</div></td><td><div><p>Composition.encounter</p>
+</div></td><td /></tr></table>
 
 
 
@@ -1125,7 +988,7 @@ structure.coordonneesTelecom</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-08-13 09:45:00 +0000">
+  <span title="2026-08-13 14:36:00 +0000">
     2026-08-13
   </span>
 

@@ -14,7 +14,7 @@
   "name" : "FRDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-08-13T09:45:33+00:00",
+  "date" : "2026-08-13T14:36:19+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -2879,6 +2879,23 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRAttesterLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAttesterLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMAttester → FRCDAAuthenticator → Composition.attester",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMAttester\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMAttester\\\" et l'élément FHIR \\\"Composition.attester\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRLaboratoryBatteryResultsLMCDAFHIR.html"
       }],
       "reference" : {
@@ -2981,6 +2998,23 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRConsentLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRConsentLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMConsent → FRCDAAuthorization → Consent",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMConsent\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMConsent\\\" et la ressource FHIR \\\"Consent\\\" (référencée depuis Composition via l'extension ConsentExtension)",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRSectionLaboratoryChapterLMCDAFHIR.html"
       }],
       "reference" : {
@@ -3007,6 +3041,23 @@
       "description" : "Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-sections"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRDataEntererLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRDataEntererLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMDataEnterer → FRCDADataEnterer → DataEntererExtension",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMDataEnterer\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMDataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
     },
     {
       "extension" : [{
@@ -3185,6 +3236,74 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRHeaderDocumentLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRHeaderDocumentLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
+      "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre le modèle métier \\\"FRLMHeaderDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRAuthorLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRAuthorLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHeaderDocument.author[x] → FRCDAAuthor → Composition.author",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre l'élément métier \\\"author[x]\\\" du modèle FRLMHeaderDocument et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément métier \\\"author[x]\\\" et l'élément FHIR \\\"Composition.author\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRCustodianLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRCustodianLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHeaderDocument.custodian → FRCDACustodian → Composition.custodian",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre l'élément métier \\\"custodian\\\" du modèle FRLMHeaderDocument et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément métier \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRHealthProfessionalLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRHealthProfessionalLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMHealthProfessional → FRCDAAssignedEntity/FRCDAAssignedAuthor → FrPractitionerRoleDocument / FrPractitionerDocument",
+      "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et les éléments CDA \\\"assignedEntity\\\"/\\\"assignedAuthor\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"\n - Mapping 3 : entre le modèle métier \\\"FRLMHealthProfessional\\\" et le profil FHIR \\\"FrPractitionerDocument\\\" (référencé depuis PractitionerRole.practitioner)\n\nCe mapping est réutilisé chaque fois qu'un professionnel de santé apparaît dans l'entête du document (auteur, responsable, validateur, opérateur de saisie, informateur, participant, destinataire, prescripteur, professionnel référent d'une prise en charge, etc.).",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRSectionMedicalHistoryLMCDAFHIR.html"
       }],
       "reference" : {
@@ -3270,6 +3389,40 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRInformantLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRInformantLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMInformant → FRCDAInformant → InformantExtension",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMInformant\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMInformant\\\" et l'extension FHIR \\\"InformantExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRIntendedRecipientLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRIntendedRecipientLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMIntendedRecipient → FRCDAInformationRecipient → InformationRecipientExtension",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMIntendedRecipient\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMIntendedRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRLaboratoryIsolateResultsLMCDAFHIR.html"
       }],
       "reference" : {
@@ -3279,6 +3432,23 @@
       "description" : "Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-composants-communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRLegalAuthenticationLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRLegalAuthenticationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMLegalAuthentication → FRCDALegalAuthenticator → Composition.attester",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMLegalAuthentication\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMLegalAuthentication\\\" et l'élément FHIR \\\"Composition.attester\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
     },
     {
       "extension" : [{
@@ -3627,6 +3797,23 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FROrderLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FROrderLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMOrder → FRCDAInFulfillmentOf → ServiceRequest",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMOrder\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMOrder\\\" et la ressource FHIR \\\"ServiceRequest\\\" (référencée depuis Composition via l'extension basedOn)",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRSectionOrderInformationLMCDAFHIR.html"
       }],
       "reference" : {
@@ -3644,6 +3831,23 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FROrganisationLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FROrganisationLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMOrganisation → FRCDAAssignedEntity.representedOrganization → Organization",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMOrganisation\\\" et la structure CDA générique portant une organisation\n - Mapping 2 : entre le modèle métier \\\"FRLMOrganisation\\\" et la ressource FHIR \\\"Organization\\\"\n\nCe mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.).",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRParticipantCorpsLMCDAFHIR.html"
       }],
       "reference" : {
@@ -3653,6 +3857,40 @@
       "description" : "Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-composants-communs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRParticipantHeaderLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRParticipantHeaderLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMParticipant → FRCDAParticipant → ParticipantExtension",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMParticipant\\\" (entête) et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMParticipant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRPatientLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRPatientLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FrPatientDocument\\\"",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
     },
     {
       "extension" : [{
@@ -3881,6 +4119,23 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ConceptMap-FRRelatedPersonLMCDAFHIR.html"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/FRRelatedPersonLMCDAFHIR"
+      },
+      "name" : "Mapping FRLMRelatedPerson → FRCDARelatedEntity → RelatedPerson",
+      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et la ressource FHIR \\\"RelatedPerson\\\"\n\nCe mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.).",
+      "exampleBoolean" : false,
+      "groupingId" : "mapping-entete"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "ConceptMap-FRLaboratoryResultClinicalElementLMCDAFHIR.html"
       }],
       "reference" : {
@@ -4042,329 +4297,6 @@
       "description" : "Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:VitalSigns.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-sections"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingmodelemetierCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingmodelemetierCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR  : Entête d'un document",
-      "description" : "Ce ConceptMap présente trois groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"EnteteDocument\\\" et l'élément CDA \\\"clinicalDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrBundleDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"clinicalDocument\\\" et le profil FHIR \\\"FrCompositionDocument\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingAuteurCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingAuteurCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"Auteur\\\" et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément CDA \\\"author\\\" et l'élément FHIR \\\"Composition.author\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingConsentementCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingConsentementCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"ConsentementAssocie\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre l'élément CDA \\\"authorization\\\" et l'extension FHIR \\\"ConsentExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingDestinatairePrevuCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingDestinatairePrevuCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"destinataire\\\" et l'élément CDA \\\"informationRecipient\\\"\n - Mapping 2 : entre l'élément CDA \\\"informationRecipient\\\" et l'extension FHIR \\\"InformationRecipientExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingDocumentDeReferenceCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingDocumentDeReferenceCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"DocumentDeReference\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"documentDeReference\\\" et l'élément CDA \\\"relatedDocument\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedDocument\\\" et l'élément FHIR \\\"Composition.relatesTo\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingEvenementCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingEvenementCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Evènement documenté\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 :entre le modèle métier \\\"evenement\\\" et l'élément CDA \\\"documentationOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"documentationOf\\\" et l'élément FHIR \\\"Composition.event\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingInformateurCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingInformateurCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"informateur\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre l'élément CDA \\\"informant\\\" et l'extension FHIR \\\"InformantExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingOperateurSaisieCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingOperateurSaisieCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"operateurSaisie\\\" et l'élément CDA \\\"dataEnterer\\\"\n - Mapping 2 : entre l'élément CDA \\\"dataEnterer\\\" et l'extension FHIR \\\"DataEntererExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingParticipantCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingParticipantCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Participant\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"participant\\\" et l'élément CDA \\\"participant\\\"\n - Mapping 2 : entre l'élément CDA \\\"participant\\\" et l'extension FHIR \\\"ParticipantExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPatientCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPatientCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"patient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre l'élément CDA \\\"recordTarget\\\" et le profil FHIR \\\"FrPatientDocument\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPersonneStructureAssignedEntityFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPersonneStructureAssignedEntityFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (AssignedEntity)\"",
-      "description" : "Ce ConceptMap de l'élément PersonneStructure présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructure\\\" et l'élément CDA \\\"assignedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedEntity\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPersonneStructureAuteurFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPersonneStructureAuteurFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (Auteur)\"",
-      "description" : "Ce ConceptMap de l'élément PersonneStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"PersonneStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrPractitionerRoleDocument\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPersonneStructureRelatedEntityFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPersonneStructureRelatedEntityFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Personne / Structure (RelatedEntity)\"",
-      "description" : "Ce ConceptMap de l'élément PersonneStructure présente trois groupes de mapping: \n - Mapping 1 : entre le modèle métier \\\"FRLMPersonneStructure\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre l'élément CDA \\\"relatedEntity\\\" et le profil FHIR \\\"FrRelatedPersonDocument\\\"\n - Mapping 3 : entre l'élément CDA \\\"relatedEntity\\\" et l'élément FHIR \\\"Patient.contact\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPrescriptionCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPrescriptionCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prescription\\\" et l'élément CDA \\\"inFulfillmentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"inFulfillmentOf\\\" et l'extension FHIR \\\"OrderExtension\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingPriseEnchargeCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingPriseEnchargeCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Prise en charge\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"prise en charge\\\" et l'élément CDA \\\"componentOf\\\"\n - Mapping 2 : entre l'élément CDA \\\"componentOf\\\" et l'élément FHIR \\\"Composition.encounter(Encounter)\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingResponsableCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingResponsableCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"responsable\\\" et l'élément CDA \\\"legalAuthenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"legalAuthenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingStructureConservationCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingStructureConservationCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"structureConservation\\\" et l'élément CDA \\\"custodian\\\"\n - Mapping 2 : entre l'élément CDA \\\"custodian\\\" et l'élément FHIR \\\"Composition.custodian\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingSystemeFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingSystemeFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Système / Structure Auteur\"",
-      "description" : "Ce ConceptMap de l'élément SystemeStructureAuteur présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"SystemeStructureAuteur\\\" et l'élément CDA \\\"assignedAuthor\\\"\n - Mapping 2 : entre l'élément CDA \\\"assignedAuthor\\\" et le profil FHIR \\\"FrDeviceDocument\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ConceptMap"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "ConceptMap-mappingValidateurCDAFHIR.html"
-      }],
-      "reference" : {
-        "reference" : "ConceptMap/mappingValidateurCDAFHIR"
-      },
-      "name" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
-      "description" : "Ce ConceptMap présente deux groupes de mapping : \n - Mapping 1 : entre le modèle métier \\\"validateur\\\" et l'élément CDA \\\"authenticator\\\"\n - Mapping 2 : entre l'élément CDA \\\"authenticator\\\" et l'élément FHIR \\\"Composition.attester\\\"",
-      "exampleBoolean" : false,
-      "groupingId" : "mapping-entete"
     },
     {
       "extension" : [{

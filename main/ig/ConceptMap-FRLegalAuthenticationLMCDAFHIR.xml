@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRLegalAuthenticationLMCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRLegalAuthenticationLMCDAFHIR</b></p><a name="FRLegalAuthenticationLMCDAFHIR"> </a><a name="hcFRLegalAuthenticationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMLegalAuthentication</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator</td><td/></tr><tr><td>FRLMLegalAuthentication.dateTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.time</td><td/></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMLegalAuthentication</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester</td><td>attester.where(mode='legal')</td></tr><tr><td>FRLMLegalAuthentication.dateTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.time</td><td/></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Patient</td><td>attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Device</td><td>attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Organization</td><td>attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRLegalAuthenticationLMCDAFHIR</b></p><a name="en-FRLegalAuthenticationLMCDAFHIR"> </a><a name="en-hcFRLegalAuthenticationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMLegalAuthentication</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator</td><td/></tr><tr><td>FRLMLegalAuthentication.dateTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.time</td><td/></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>legalAuthenticator.assignedEntity</td><td>Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMLegalAuthentication</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester</td><td>attester.where(mode='legal')</td></tr><tr><td>FRLMLegalAuthentication.dateTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.time</td><td/></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Patient</td><td>attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Device</td><td>attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr><tr><td>FRLMLegalAuthentication.legalAuthenticator:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Organization</td><td>attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLegalAuthenticationLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Responsable du document&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T14:36:19+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMLegalAuthentication\&quot; et l'élément CDA \&quot;legalAuthenticator\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMLegalAuthentication\&quot; et l'élément FHIR \&quot;Composition.attester\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-legal-authenticator"/>
+    <element>
+      <code value="FRLMLegalAuthentication"/>
+      <target>
+        <code value="legalAuthenticator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.dateTime"/>
+      <target>
+        <code value="legalAuthenticator.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:healthProfessional"/>
+      <target>
+        <code value="legalAuthenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:patient"/>
+      <target>
+        <code value="legalAuthenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:device"/>
+      <target>
+        <code value="legalAuthenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:organisation"/>
+      <target>
+        <code value="legalAuthenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-legal-authentication"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRLMLegalAuthentication"/>
+      <target>
+        <code value="Composition.attester"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='legal')"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.dateTime"/>
+      <target>
+        <code value="Composition.attester.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:healthProfessional"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:patient"/>
+      <target>
+        <code value="Composition.attester.party.Patient"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:device"/>
+      <target>
+        <code value="Composition.attester.party.Device"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMLegalAuthentication.legalAuthenticator:organisation"/>
+      <target>
+        <code value="Composition.attester.party.Organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
