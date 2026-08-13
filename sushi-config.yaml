@@ -164,6 +164,9 @@ groups:
       - StructureDefinition/fr-lm-alerts
       - StructureDefinition/fr-lm-admission-evaluation
       - StructureDefinition/fr-lm-encounter-information
+      - StructureDefinition/fr-lm-patient-history
+      - StructureDefinition/fr-lm-section-travel-history
+      - StructureDefinition/fr-lm-patient-story
 
   metier-composants-communs: 
     name: Modèles logiques métier des composants communs
@@ -216,6 +219,10 @@ groups:
       - StructureDefinition/fr-lm-laboratory-observation
       - StructureDefinition/fr-lm-body-structure
       - StructureDefinition/fr-lm-travel-history
+      - StructureDefinition/fr-lm-alert
+      - StructureDefinition/fr-lm-endpoint
+      - StructureDefinition/fr-lm-medication-use
+      - StructureDefinition/fr-lm-micro-organism-search
       
   mapping-entete:
     name: Concept Maps entête de document
@@ -243,53 +250,44 @@ groups:
   mapping-sections:
     name: Concept Maps sections de document
     resources:
-      - FRSectionImagingResultsLMCDAFHIR
-      - FRSectionImagingClinicalInformationLMCDAFHIR
-      - FRSectionImagingServiceRequestLMCDAFHIR
-      - FRSectionImagingRadiationExposureLMCDAFHIR
-      - FRSectionImagingActLMCDAFHIR
-      - FRSectionImagingAddendumLMCDAFHIR
+      - FRSectionSupportingInformationLMCDAFHIR
+      - FRSectionOrderInformationLMCDAFHIR
+      - FRSectionExposureInformationLMCDAFHIR
+      - FRSectionExaminationReportLMCDAFHIR
+      - FRSectionAddendumLMCDAFHIR
       - FRSectionSocialHistoryLMCDAFHIR
       - FRSectionFunctionalStatusLMCDAFHIR
-      - FRSectionPhysicalFunctionsLMCDAFHIR
-      - FRSectionAllergyIntoleranceLMCDAFHIR
-      - FRSectionFamilyHistoryLMCDAFHIR
-      - FRSectionBarCodesLMCDAFHIR
+      - FRSectionAllergiesAndIntolerancesLMCDAFHIR
+      - FRSectionFamilyMedicalHistoryLMCDAFHIR
+      - FRSectionQRCodeLMCDAFHIR
       - FRSectionNoteLMCDAFHIR
-      - FRSectionImagingComparisonLMCDAFHIR
-      - FRSectionImagingComplicationsLMCDAFHIR
-      - FRSectionImagingConclusionLMCDAFHIR
+      - FRSectionComparisonStudyLMCDAFHIR
+      - FRSectionConclusionLMCDAFHIR
       - FRSectionMedicalHistoryLMCDAFHIR
       - FRSectionLaboratoryChapterLMCDAFHIR
       - FRSectionLaboratorySubChapterLMCDAFHIR
-      - FRSectionAdvanceDirectiveLMCDAFHIR
-      - FRSectionMedicalDeviceLMCDAFHIR
-      - FRSectionPDFDocumentCopyLMCDAFHIR
-      - FRSectionAddedDocumentsLMCDAFHIR
+      - FRSectionAdvanceDirectivesLMCDAFHIR
+      - FRSectionMedicalDevicesAndImplantsLMCDAFHIR
+      - FRSectionPresentedFormLMCDAFHIR
+      - FRSectionAttachmentsLMCDAFHIR
+      - FRSectionPredictableAdverseDrugReactionLMCDAFHIR
       - FRSectionPatientEducationLMCDAFHIR
-      - FRSectionAdverseEventLMCDAFHIR
-      - FRSectionExposureRadiationLMCDAFHIR
-      - FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR
-      - FRSectionHistoryActsLMCDAFHIR
+      - FRSectionHazardousWorkingConditionsLMCDAFHIR
+      - FRSectionProceduresLMCDAFHIR
       - FRSectionPregnancyHistoryLMCDAFHIR
-      - FRSectionImagingObjectCatalogLMCDAFHIR
-      - FRSectionCarePlanLMCDAFHIR
-      - FRSectionUncodedPointsOfVigilanceLMCDAFHIR
-      - FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR
+      - FRSectionDicomStudyMetadataLMCDAFHIR
+      - FRSectionCarePlansLMCDAFHIR
+      - FRSectionAlertsLMCDAFHIR
+      - FRSectionMedicalDevicePrescriptionsLMCDAFHIR
       - FRSectionMedicationRequestLMCDAFHIR
-      - FRSectionActiveProblemsLMCDAFHIR
-      - FRSectionReasonForRecommendationLMCDAFHIR
-      - FRSectionUncodedReasonForRecommendationLMCDAFHIR
+      - FRSectionProblemsLMCDAFHIR
+      - FRSectionReasonForReferralLMCDAFHIR
       - FRSectionResultsLMCDAFHIR
-      - FRSectionExaminationResultsLMCDAFHIR
-      - FRSectionUncodedExaminationResultsLMCDAFHIR
       - FRSectionLaboratorySecondIntentionResultsLMCDAFHIR
       - FRSectionVitalSignsLMCDAFHIR
-      - FRSectionDocumentStatusLMCDAFHIR
-      - FRSectionMedicationsLMCDAFHIR
-      - FRSectionMedicationAdministrationLMCDAFHIR
+      - FRSectionMedicationSummaryLMCDAFHIR
       - FRSectionHospitalDischargeMedicationsLMCDAFHIR
-      - FRSectionImmunizationsLMCDAFHIR
+      - FRSectionImmunisationsLMCDAFHIR
       - FRSectionMedicationDispenseLMCDAFHIR
 
   mapping-composants-communs:

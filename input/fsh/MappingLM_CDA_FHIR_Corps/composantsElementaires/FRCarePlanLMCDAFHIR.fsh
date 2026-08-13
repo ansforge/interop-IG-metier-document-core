@@ -16,6 +16,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 * group[=].element[+].code = #FRLMCarePlan
 * group[=].element[=].target.code = #FRCDAReferenceItemPlanTraitement
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Le profil CDA cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil CDA cible."
 
 // Identifiant
 * group[=].element[+].code = #FRLMCarePlan.header.identifier
@@ -53,6 +54,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 * group[=].element[+].code = #FRLMCarePlan
 * group[=].element[=].target.code = #FRCarePlanDocument
 * group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Le profil FHIR cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil FHIR cible."
 
 // Identifiant
 * group[=].element[+].code = #FRLMCarePlan.header.identifier

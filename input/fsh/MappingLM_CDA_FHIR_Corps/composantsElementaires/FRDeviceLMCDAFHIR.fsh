@@ -163,5 +163,5 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 
 // Commentaire
 * group[=].element[+].code = #FRLMDevice.note
-* group[=].element[=].target.code = #Device.note.text
+* group[=].element[=].target.code = #Device.note
 * group[=].element[=].target.equivalence = #equivalent
