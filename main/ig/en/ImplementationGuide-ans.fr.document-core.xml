@@ -12,7 +12,7 @@
   <name value="FRDocumentCore"/>
   <title value="FR Document Core (Modèle métier)"/>
   <status value="draft"/>
-  <date value="2026-08-11T09:29:09+00:00"/>
+  <date value="2026-08-13T09:45:33+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -677,6 +677,7 @@
       <name value="Logical model  - FR LM Patient History"/>
       <description value="Section Historique du patient"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -700,6 +701,7 @@
       <name value="Logical model  - FR LM Travel History"/>
       <description value="Section Historique des voyages"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -771,6 +773,7 @@
       <name value="Logical model - FR LM Alert"/>
       <description value="Points de vigilances"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-composants-communs"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1070,6 +1073,7 @@
       <name value="Logical model - FR LM Endpoint"/>
       <description value="Référence Wado d'un objet DICOM (SOP Instance)"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-composants-communs"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1388,11 +1392,12 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FRLMMedicationUse"/>
+        <reference value="StructureDefinition/fr-lm-medication-use"/>
       </reference>
       <name value="Logical model - FR LM Medication Use"/>
       <description value="Déclaration de l'utilisation d'un médicament, faisant partie d'une synthèse des traitements médicamenteux du patient."/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-composants-communs"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1404,6 +1409,7 @@
       <name value="Logical model - FR LM Micro Organism Search"/>
       <description value="Recherche de micro organismes"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-composants-communs"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1559,6 +1565,7 @@
       <name value="Logical model - FR LM Patient Story"/>
       <description value="Récit du patient"/>
       <exampleBoolean value="false"/>
+      <groupingId value="metier-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1949,10 +1956,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingAddendumLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionAddendumLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMAddendum → FRCDAdicomAddendum → FRCompositionDocument.section:Addendum"/>
-      <description value="Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum puis vers le profil FHIR FRCompositionDocument.section:Addendum."/>
+      <name value="Mapping FRLMAddendum → FRCDADicomAddendum / FRLMAddendum → FRCompositionDocument.section:sectionAddendum"/>
+      <description value="Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDADicomAddendum, puis vers la section FHIR FRCompositionDocument.section:sectionAddendum."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -1973,12 +1980,48 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionAdvanceDirectivesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAdvanceDirectives → FRCDADirectivesAnticipees / FRLMAdvanceDirectives → FRCompositionDocument.section:sectionAdvanceDirectives"/>
+      <description value="Mapping des éléments du modèle métier FRLMAdvanceDirectives vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR puis vers la section FHIR FRCompositionDocument.section:sectionAdvanceDirectives."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRAdverseDrugReactionLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMAdverseDrugReaction → FRCDAEffetIndesirable / FRLMAdverseDrugReaction → FRAdverseEventDocument"/>
       <description value="Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil CDA FRCDAEffetIndesirable, puis vers le profil FHIR FRAdverseEventDocument."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-composants-communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAlertsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAlerts → FRCDAPointsDeVigilancesNonCode / FRLMAlerts → FRCompositionDocument.section:sectionAlerts"/>
+      <description value="Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers le profil FHIR FRCompositionDocument.section:alerts."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionAllergiesAndIntolerancesLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAllergiesAndIntolerances → FRCDAAllergiesEtHypersensibilites / FRLMAllergiesAndIntolerances → FRCompositionDocument.section:sectionAllergiesAndIntolerances"/>
+      <description value="Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:sectionAllergiesAndIntolerances."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2009,6 +2052,18 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionAttachmentsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMAttachments → FRCDADocumentsAjoutes/ FRLMAttachments → FRCompositionDocument.section:sectionAttachments"/>
+      <description value="Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:sectionAttachments."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument"/>
@@ -2033,10 +2088,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingComparisonLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionCarePlansLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMComparaisonExamensImagerie → FRCDADICOMExamenComparatif → FRCompositionDocument.section:Comparison"/>
-      <description value="Mapping des éléments du modèle métier FRLMComparaisonExamensImagerie vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section Comparison du profil FHIR FRCompositionDocument."/>
+      <name value="Mapping FRLMCarePlans → FRCDAPlanDeSoins / FRLMCarePlans → FRCompositionDocument.section:sectionPlanOfCare"/>
+      <description value="Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:sectionPlanOfCare."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2045,10 +2100,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingComplicationsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionComparisonStudyLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMComplicationsActe → FRCDADICOMComplications → FRProcedureImagingDocument.complication.text"/>
-      <description value="Mapping des éléments du modèle métier FRLMComplicationsActe vers la section CDA FRCDADICOMComplications, puis vers le champ 'complication.text' du profil FHIR FRProcedureImagingDocument."/>
+      <name value="Mapping FRLMComparisonStudy → FRCDADICOMExamenComparatif / FRLMComparisonStudy → FRCompositionDocument.section:sectionComparison"/>
+      <description value="Mapping des éléments du modèle métier FRLMComparisonStudy vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section FHIR FRCompositionDocument.section:sectionComparison."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2057,10 +2112,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingConclusionLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionConclusionLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMConclusionExamenImagerie → FRCDADICOMConclusion → FRDiagnosticReportImagingDocument.conclusion"/>
-      <description value="Mapping des éléments du modèle métier FRLMConclusionExamenImagerie vers la section CDA FRCDADICOMConclusion, puis vers le champ 'conclusion' du profil FHIR FRDiagnosticReportImagingDocument."/>
+      <name value="Mapping FRLMConclusion → FRCDADICOMConclusion / FRLMConclusion → FRDiagnosticReportImagingDocument / FRLMConclusion → FRCompositionDocument.section:sectionImpression"/>
+      <description value="Mapping des éléments du modèle métier FRLMConclusion vers la section CDA FRCDADICOMConclusion, puis vers le profil FHIR FRDiagnosticReportImagingDocument / FRCompositionDocument.section:sectionImpression."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2105,18 +2160,6 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingServiceRequestLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMDemandeExamenImagerie → FRCDADICOMDemandeExamen → FRServiceRequestDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMDemandeExamenImagerie vers la section CDA FRCDADICOMDemandeExamen puis vers le profil FHIR FRCompositionDocument.section:serviceRequest."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
         <reference value="ConceptMap/FRDeviceLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMDevice → FRCDADispositifMedical / FRLMDevice → Device"/>
@@ -2141,82 +2184,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionAdvanceDirectiveLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionDicomStudyMetadataLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMDirectivesAnticipees → FRCDADirectivesAnticipees → FRAdvanceDirectiveDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMDirectivesAnticipees vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR FRAdvanceDirectiveDocument."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionMedicationDispenseLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionMedicalDeviceLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMDispositifsMedicaux → FRCDADispositifsMedicaux → FRCompositionDocument.section:medicalDevice"/>
-      <description value="Mapping des éléments du modèle métier FRLMDispositifsMedicaux vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevice."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionPDFDocumentCopyLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMDocumentPDFCopie → FRCDADocumentPDFCopie → FRCompositionDocument.section:pdfDocumentCopy"/>
-      <description value="Mapping des éléments du modèle métier FRLMDocumentPDFCopie vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:pdfDocumentCopy."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionAddedDocumentsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMDocumentsAjoutes → FRCDADocumentsAjoutes → FRCompositionDocument.section:addedDocuments"/>
-      <description value="Mapping des éléments du modèle métier FRLMDocumentsAjoutes vers la section CDA FRCDADocumentsAjoutes, puis vers la section FHIR FRCompositionDocument.section:addedDocuments."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionPatientEducationLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation"/>
-      <description value="Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionAdverseEventLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMEffetsIndesirables → FRCDAEffetsIndesirables → FRCompositionDocument.section:adverseEvent"/>
-      <description value="Mapping des éléments du modèle métier FRLMEffetsIndesirables vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:adverseEvent."/>
+      <name value="Mapping FRLMDicomStudyMetadata → FRCDADICOMObjectCatalog / FRLMDicomStudyMetadata → FRCompositionDocument.section:sectionImagingStudy"/>
+      <description value="Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:sectionImagingStudy."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2237,10 +2208,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionExposureRadiationLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionExaminationReportLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:exposureRadiation"/>
-      <description value="Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:exposureRadiation."/>
+      <name value="Mapping FRLMExaminationReport → FRCDADICOMActeImagerie / FRLMExaminationReport → FRCompositionDocument.section:sectionImagingStudy"/>
+      <description value="Mapping des éléments du modèle métier FRLMExaminationReport vers la section CDA FRCDADICOMActeImagerie, puis vers la section FHIR FRCompositionDocument.section:sectionImagingStudy."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2249,10 +2220,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingRadiationExposureLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionExposureInformationLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMExpositionRadiations → FRCDADICOMExpositionAuxRadiations → FRCompositionDocument.section:radiationExposure"/>
-      <description value="Mapping des éléments du modèle métier FRLMExpositionRadiations vers la section CDA FRCDADICOMExpositionAuxRadiations puis vers le profil FHIR FRCompositionDocument.section:radiationExposure."/>
+      <name value="Mapping FRLMExposureInformation → FRCDADICOMExpositionAuxRadiations / FRLMExposureInformation → FRCompositionDocument.section:sectionExposureRadiation"/>
+      <description value="Mapping des éléments du modèle métier FRLMExposureInformation vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:sectionExposureRadiation."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2261,10 +2232,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionUncodedOccupationalRiskFactorsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionFamilyMedicalHistoryLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMFacteursDeRisqueProfessionnelsNonCode → FRCDAFacteursDeRisqueProfessionnelsNonCode → FRCompositionDocument.section:uncodedOccupationalRiskFactors"/>
-      <description value="Mapping des éléments du modèle métier FRLMFacteursDeRisqueProfessionnelsNonCode vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedOccupationalRiskFactors."/>
+      <name value="Mapping FRLMFamilyMedicalHistory → FRCDAAntecedentsFamiliaux / FRLMFamilyMedicalHistory → FRCompositionDocument.section:sectionFamilyMedicalHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:sectionFamilyMedicalHistory."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2285,10 +2256,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionPhysicalFunctionsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionFunctionalStatusLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMFonctionsPhysiques → FRCDAFonctionsPhysiques → FRCompositionDocument.section:PhysicalFunctions"/>
-      <description value="Mapping des éléments du modèle métier FRLMFonctionsPhysiques vers la section CDA FRCDAFonctionsPhysiques, puis vers le profil FHIR FRCompositionDocument.section:PhysicalFunctions."/>
+      <name value="Mapping FRLMFunctionalStatus → FRCDAStatutFonctionnel / FRLMFunctionalStatus → FRCompositionDocument.section:sectionFunctionalStatus"/>
+      <description value="Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:sectionFunctionalStatus."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2297,10 +2268,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionSocialHistoryLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionHazardousWorkingConditionsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMHabitusModeDeVie → FRCDAHabitusModeDeVieSection → FRCompositionDocument.section:socialHistory"/>
-      <description value="Mapping des éléments du modèle métier FRLMHabitusModeDeVie vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:socialHistory."/>
+      <name value="Mapping FRLMHazardousWorkingConditions → FRCDAFacteursDeRisqueProfessionnelsNonCode / FRLMHazardousWorkingConditions → FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors"/>
+      <description value="Mapping des éléments du modèle métier FRLMHazardousWorkingConditions vers la section CDA FRCDAFacteursDeRisqueProfessionnelsNonCode, puis vers le profil FHIR FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2309,10 +2280,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionHistoryActsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionMedicalHistoryLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMHistoriqueDesActes → FRCDAHistoriqueDesActes → FRCompositionDocument.section:historyActs"/>
-      <description value="Mapping des éléments du modèle métier FRLMHistoriqueDesActes vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:historyActs."/>
+      <name value="Mapping FRLMHistoryOfPastIllness → FRCDAAntecedentsMedicaux / FRLMHistoryOfPastIllness → FRCompositionDocument.section:sectionMedicalHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la section CDA FRCDAAntecedentsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalHistory."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2321,10 +2292,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMHistoriqueDesGrossesses → FRCDAHistoriqueDesGrossesses → FRCompositionDocument.section:pregnancyHistory"/>
-      <description value="Mapping des éléments du modèle métier FRLMHistoriqueDesGrossesses vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:pregnancyHistory."/>
+      <name value="Mapping FRLMHospitalDischargeMedications → FRCDATraitementsALaSortie / FRLMHospitalDischargeMedications → FRCompositionDocument.section:sectionDischargeMedications"/>
+      <description value="Mapping des éléments du modèle métier FRLMHospitalDischargeMedications vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:sectionDischargeMedications."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2357,10 +2328,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingClinicalInformationLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionImmunisationsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMInformationsCliniques → FRCDADICOMHistoriqueMedical → FRCompositionDocument.section:History (Observation / FRConditionDocument/ FRObservationPregnancyDocument / FRObservationContraIndicationsImagingDocument / FRDeviceAuteurDocument / FRMedicationAdministrationDocument)"/>
-      <description value="Mapping des éléments du modèle métier FRLMInformationsCliniques vers la section CDA FRCDADICOMHistoriqueMedical puis vers les profils FHIR Observation, FRConditionDocument, FRObservationPregnancyDocument, FRObservationContraIndicationsImagingDocument, FRDeviceAuteurDocument et FRMedicationAdministrationDocument."/>
+      <name value="Mapping FRLMImmunisations → FRCDAVaccinations / FRLMImmunisations → FRCompositionDocument.section:sectionImmunizations"/>
+      <description value="Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:sectionImmunizations."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2375,6 +2346,30 @@
       <description value="Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-composants-communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicalDevicePrescriptionsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMMedicalDevicePrescriptions → FRCDAPrescriptionDispositifsMedicaux / FRLMMedicalDevicePrescriptions → FRCompositionDocument.section:sectionMedicalDevicePrescription"/>
+      <description value="Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalDevicePrescription."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicalDevicesAndImplantsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMMedicalDevicesAndImplants → FRCDADispositifsMedicaux / FRLMMedicalDevicesAndImplants → FRCompositionDocument.section:sectionMedicalDevices"/>
+      <description value="Mapping des éléments du modèle métier FRLMMedicalDevicesAndImplants vers la section CDA FRCDADispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalDevices."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2417,12 +2412,48 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionMedicationDispenseLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMMedicationDispensations → FRCDADispensationMedicaments / FRLMMedicationDispensations → FRCompositionDocument.section:sectionMedicationDispense"/>
+      <description value="Mapping des éléments du modèle métier FRLMMedicationDispensations vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:sectionMedicationDispense."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRMedicationDispenseLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument"/>
       <description value="Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil CDA FRCDATraitementDispense (Groupe 1), et vers le profil FHIR FRMedicationDispenseDocument (Groupe 2)."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-composants-communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationRequestLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMMedicationPrescription → FRCDAPrescriptionMedicaments / FRLMMedicationPrescription → FRCompositionDocument.section:sectionMedicationRequest"/>
+      <description value="Mapping des éléments du modèle métier FRLMMedicationPrescription vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:sectionMedicationRequest."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionMedicationSummaryLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMMedicationSummary → FRCDATraitements / FRLMMedicationSummary → FRCompositionDocument.section:sectionMedications"/>
+      <description value="Mapping des éléments du modèle métier FRLMMedicationSummary vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:sectionMedications."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -2465,10 +2496,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionImagingObjectCatalogLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionNoteLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMObjectCatalog → FRCDADICOMObjectCatalog → FRCompositionDocument.section:imagingStudy"/>
-      <description value="Mapping des éléments du modèle métier FRLMObjectCatalog vers la section CDA FRCDADICOMObjectCatalog, puis vers la section FHIR FRCompositionDocument.section:imagingStudy."/>
+      <name value="Mapping FRLMNote → FRCDACommentaireNonCode / FRLMNote → FRCompositionDocument.section:sectionNote"/>
+      <description value="Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:sectionNote."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2525,6 +2556,18 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionResultsLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMObservationResults → FRCDAResultats / FRLMObservationResults → FRCompositionDocument.section:sectionResults"/>
+      <description value="Mapping des éléments du modèle métier FRLMObservationResults vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:sectionResults."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRObservationSocialHistoryLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMObservationSocialHistory → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument"/>
@@ -2549,6 +2592,18 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionOrderInformationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMOrderInformation → FRCDADICOMDemandeExamen / FRLMOrderInformation → FRCompositionDocument.section:sectionOrder"/>
+      <description value="Mapping des éléments du modèle métier FRLMOrderInformation vers la section CDA FRCDADICOMDemandeExamen, puis vers la section FHIR FRCompositionDocument.section:sectionOrder."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRParticipantCorpsLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMParticipant -&gt; FRCDAParticipant / FRLMParticipant -&gt; FRActorExtension"/>
@@ -2561,10 +2616,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionCarePlanLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionPatientEducationLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMPlanSoins → FRCDAPlanDeSoins → FRCompositionDocument.section:planOfCare"/>
-      <description value="Mapping des éléments du modèle métier FRLMPlanSoins vers la section CDA FRCDAPlanDeSoins, puis vers la section FHIR FRCompositionDocument.section:planOfCare."/>
+      <name value="Mapping FRLMPatientEducation → FRCDAEducationDuPatient / FRLMPatientEducation → FRCompositionDocument.section:sectionPatientEducation"/>
+      <description value="Mapping des éléments du modèle métier FRLMPatientEducation vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:sectionPatientEducation."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2573,10 +2628,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionUncodedPointsOfVigilanceLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionPredictableAdverseDrugReactionLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMPointsDeVigilancesNonCode → FRCDAPointsDeVigilancesNonCode → FRCompositionDocument.section:uncodedPointsOfVigilance"/>
-      <description value="Mapping des éléments du modèle métier FRLMPointsDeVigilancesNonCode vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers la section FHIR FRCompositionDocument.section:uncodedPointsOfVigilance."/>
+      <name value="Mapping FRLMPredictableAdverseDrugReaction → FRCDAEffetsIndesirables/ FRLMPredictableAdverseDrugReaction → FRCompositionDocument.section:sectionPredictableAdverseDrugReaction"/>
+      <description value="Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:sectionPredictableAdverseDrugReaction."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2609,18 +2664,6 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionPrescriptionOfMedicalDevicesLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMPrescriptionDispositifsMedicaux → FRCDAPrescriptionDispositifsMedicaux → FRCompositionDocument.section:medicalDevicePrescription"/>
-      <description value="Mapping des éléments du modèle métier FRLMPrescriptionDispositifsMedicaux vers la section CDA FRCDAPrescriptionDispositifsMedicaux, puis vers la section FHIR FRCompositionDocument.section:medicalDevicePrescription."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
         <reference value="ConceptMap/FRMedicationRequestLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMPrescriptionItem → FRCDATraitementPrescrit / FRLMPrescriptionItem → FRMedicationRequestDocument"/>
@@ -2633,10 +2676,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionMedicationRequestLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionPresentedFormLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMPrescriptionMedicaments → FRCDAPrescriptionMedicaments → FRCompositionDocument.section:medicationRequest"/>
-      <description value="Mapping des éléments du modèle métier FRLMPrescriptionMedicaments vers la section CDA FRCDAPrescriptionMedicaments, puis vers la section FHIR FRCompositionDocument.section:medicationRequest."/>
+      <name value="Mapping FRLMPresentedForm → FRCDADocumentPDFCopie / FRLMPresentedForm → FRCompositionDocument.section:sectionPresentedForm"/>
+      <description value="Mapping des éléments du modèle métier FRLMPresentedForm vers la section CDA FRCDADocumentPDFCopie, puis vers la section FHIR FRCompositionDocument.section:sectionPresentedForm."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2645,10 +2688,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionActiveProblemsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionProblemsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMProblemesActifs → FRCDAProblemesActifs → FRCompositionDocument.section:activeProblems"/>
-      <description value="Mapping des éléments du modèle métier FRLMProblemesActifs vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:activeProblems."/>
+      <name value="Mapping FRLMProblems → FRCDAProblemesActifs / FRLMProblems → FRCompositionDocument.section:sectionProblems"/>
+      <description value="Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDAProblemesActifs, puis vers la section FHIR FRCompositionDocument.section:sectionProblems."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2680,6 +2723,30 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
+        <reference value="ConceptMap/FRSectionProceduresLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMProcedures → FRCDAHistoriqueDesActes / FRLMProcedures → FRCompositionDocument.section:sectionProceduresHx"/>
+      <description value="Mapping des éléments du modèle métier FRLMProcedures vers la section CDA FRCDAHistoriqueDesActes, puis vers la section FHIR FRCompositionDocument.section:sectionProceduresHx."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionQRCodeLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMQRCode → FRCDAQRCode / FRLMQRCode → FRCompositionDocument.section:sectionQrCode"/>
+      <description value="Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQRCode, puis vers la section FHIR FRCompositionDocument.section:sectionQrCode."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
         <reference value="ConceptMap/FRImagingQuantityExposureLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMQuantityExposure → FRCDADICOMQuantite / FRLMQuantityExposure → FRObservationRadiationExposureDocument.component"/>
@@ -2692,22 +2759,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionReasonForRecommendationLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionReasonForReferralLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMRaisonRecommandation → FRCDARaisonDeLaRecommandation → FRCompositionDocument.section:reasonForRecommendation"/>
-      <description value="Mapping des éléments du modèle métier FRLMRaisonRecommandation vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionUncodedReasonForRecommendationLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMRaisonRecommandationNonCode → FRCDARaisonDeLaRecommandationNonCode → FRCompositionDocument.section:reasonForRecommendation"/>
-      <description value="Mapping des éléments du modèle métier FRLMRaisonRecommandationNonCode vers la section CDA FRCDARaisonDeLaRecommandationNonCode, puis vers la section FHIR FRCompositionDocument.section:reasonForRecommendation."/>
+      <name value="Mapping FRLMReasonForReferral → FRCDARaisonDeLaRecommandation / FRLMReasonForReferral → FRCompositionDocument.section:sectionReasonForReferral"/>
+      <description value="Mapping des éléments du modèle métier FRLMReasonForReferral vers la section CDA FRCDARaisonDeLaRecommandation, puis vers la section FHIR FRCompositionDocument.section:sectionReasonForReferral."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2728,30 +2783,6 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMResultats → FRCDAResultats → FRCompositionDocument.section:results"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultats vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:results."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionExaminationResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMResultatsExamens → FRCDAResultatsExamens → FRCompositionDocument.section:Results"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsExamens vers la section CDA FRCDAResultatsExamens puis vers le profil FHIR FRCompositionDocument.section:Results."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
         <reference value="ConceptMap/FRLaboratoryResultsLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument"/>
@@ -2764,10 +2795,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionUncodedExaminationResultsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMResultatsExamensNonCode → FRCDAResultatsExamensNonCode → FRCompositionDocument.section:Results"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsExamensNonCode vers la section CDA FRCDAResultatsExamensNonCode puis vers le profil FHIR FRCompositionDocument.section:Results."/>
+      <name value="Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2776,10 +2807,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults."/>
+      <name value="Mapping FRLMSectionPregnancyHistory → FRCDAHistoriqueDesGrossesses / FRLMSectionPregnancyHistory → FRCompositionDocument.section:sectionPregnancyHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la section CDA FRCDAHistoriqueDesGrossesses, puis vers la section FHIR FRCompositionDocument.section:sectionPregnancyHistory."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2811,10 +2842,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionVitalSignsLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionSocialHistoryLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section"/>
-      <description value="Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux."/>
+      <name value="Mapping FRLMSocialHistory → FRCDAHabitusModeDeVieSection / FRLMSocialHistory → FRCompositionDocument.section:sectionSocialHistory"/>
+      <description value="Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:sectionSocialHistory."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2835,10 +2866,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionDocumentStatusLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionSupportingInformationLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMStatutDocument -&gt; FRCDAStatutDuDocument -&gt; FRComposition.section"/>
-      <description value="Mapping des éléments du modèle métier FRLMStatutDocument vers la section CDA FRCDAStatutDuDocument, puis vers la section FHIR FRCompositionDocument.section:documentStatus."/>
+      <name value="Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2847,58 +2878,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionFunctionalStatusLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionVitalSignsLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMStatutFonctionnel → FRCDAStatutFonctionnel → FRCompositionDocument.section:FRFunctionalStatus"/>
-      <description value="Mapping des éléments du modèle métier FRLMStatutFonctionnel vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:FRFunctionalStatus."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionMedicationsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMTraitements → FRCDATraitements → FRCompositionDocument.section:medications"/>
-      <description value="Mapping des éléments du modèle métier FRLMTraitements vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:medications."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionMedicationAdministrationLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMTraitementsAdministres → FRCDATraitementsAdministres → FRCompositionDocument.section:medicationAdministration"/>
-      <description value="Mapping des éléments du modèle métier FRLMTraitementsAdministres vers la section CDA FRCDATraitementsAdministres, puis vers la section FHIR FRCompositionDocument.section:medicationAdministration."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications"/>
-      <description value="Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionImmunizationsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMVaccinations → FRCDAVaccinations → FRCompositionDocument.section:immunizations"/>
-      <description value="Mapping des éléments du modèle métier FRLMVaccinations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:immunizations."/>
+      <name value="Mapping FRLMVitalSigns → FRCDASignesVitaux / FRLMVitalSigns → FRCompositionDocument.section:sectionVitalSigns"/>
+      <description value="Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:VitalSigns."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -3129,90 +3112,6 @@
       <description value="Ce ConceptMap présente deux groupes de mapping : &#xA; - Mapping 1 : entre le modèle métier \&quot;validateur\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre l'élément CDA \&quot;authenticator\&quot; et l'élément FHIR \&quot;Composition.attester\&quot;"/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-entete"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionImagingActLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Acte d'imagerie"/>
-      <description value="Mapping des éléments du modèle métier FRLMActeImagerie vers la section CDA FRCDADICOMActeImagerie, puis vers le profil FHIR FRCompositionDocument.section:ImagingStudy."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionAllergyIntoleranceLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Allergies et intolérances"/>
-      <description value="Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers la section CDA FRCDAAllergiesEtHypersensibilites, puis vers le profil FHIR FRCompositionDocument.section:AllergyIntolerance."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionFamilyHistoryLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Antécédents familiaux"/>
-      <description value="Mapping des éléments du modèle métier FRLMAntecedentsFamiliaux vers la section CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRCompositionDocument.section:FamilyHistory."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionMedicalHistoryLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Antécédents médicaux"/>
-      <description value="Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionBarCodesLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Codes-barres"/>
-      <description value="Mapping des éléments du modèle métier FRLMCodesAbarres vers la section CDA FRCDACodeABarres, puis vers la section FHIR FRCompositionDocument.section:barCodes."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionNoteLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Commentaire ER"/>
-      <description value="Mapping des éléments du modèle métier FRLMCommentaireNonCode vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:note."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionImagingResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping Métier/CDA/FHIR : Résultats d'imagerie"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsExamenImagerie vers la section CDA FRCDADICOMResultats puis vers le profil FHIR FRCompositionDocument.section:Findings."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

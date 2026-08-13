@@ -1,9 +1,9 @@
-# Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMPatientEducation → FRCDAEducationDuPatient / FRLMPatientEducation → FRCompositionDocument.section:sectionPatientEducation - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMEducationPatient → FRCDAEducationDuPatient → FRCompositionDocument.section:patientEducation 
+## ConceptMap: Mapping FRLMPatientEducation → FRCDAEducationDuPatient / FRLMPatientEducation → FRCompositionDocument.section:sectionPatientEducation 
 
  
-Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation. 
+Mapping des éléments du modèle métier FRLMPatientEducation vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:sectionPatientEducation. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMEducationPatient vers la section C
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Education du patient\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMEducationPatient vers la section C
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMEducationPatient vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:patientEducation.",
+  "description" : "Mapping des éléments du modèle métier FRLMPatientEducation vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:sectionPatientEducation.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,52 +35,52 @@ Mapping des éléments du modèle métier FRLMEducationPatient vers la section C
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-education-patient",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-education",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-education-du-patient",
     "element" : [{
-      "code" : "FRLMEducationPatient",
+      "code" : "FRLMPatientEducation",
       "target" : [{
         "code" : "FRCDAEducationDuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.codeSection",
+      "code" : "FRLMPatientEducation.codeSection",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.titreSection",
+      "code" : "FRLMPatientEducation.titleSection",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.blocNarratif",
+      "code" : "FRLMPatientEducation.description",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.entree.acte",
+      "code" : "FRLMPatientEducation.entry.procedure:FRLMProcedure",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.entry:frActe",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.entree.observation",
+      "code" : "FRLMPatientEducation.entry.observation:FRLMObservation",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.entry:frSimpleObservation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMEducationPatient.entree.reference",
+      "code" : "FRLMPatientEducation.entry.reference:FRLMAttachment",
       "target" : [{
         "code" : "FRCDAEducationDuPatient.entry:frReferencesExternes",
         "equivalence" : "equivalent"
@@ -88,54 +88,54 @@ Mapping des éléments du modèle métier FRLMEducationPatient vers la section C
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-education-du-patient",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-patient-education",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
-      "code" : "FRCDAEducationDuPatient",
+      "code" : "FRLMPatientEducation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.code",
+      "code" : "FRLMPatientEducation.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.code",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.title",
+      "code" : "FRLMPatientEducation.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.title",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.text",
+      "code" : "FRLMPatientEducation.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.text",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.entry:frActe",
+      "code" : "FRLMPatientEducation.entry.procedure:FRLMProcedure",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.entry:FRProcedureActDocument",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.entry:FRProcedureDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.entry:frSimpleObservation",
+      "code" : "FRLMPatientEducation.entry.observation:FRLMObservation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.entry:Observation",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.entry:Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAEducationDuPatient.entry:frReferencesExternes",
+      "code" : "FRLMPatientEducation.entry.reference:FRLMAttachment",
       "target" : [{
-        "code" : "FRCompositionDocument.section:patientEducation.entry:FRDocumentReferenceDocument",
+        "code" : "FRCompositionDocument.section:sectionPatientEducation.entry:FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     }]

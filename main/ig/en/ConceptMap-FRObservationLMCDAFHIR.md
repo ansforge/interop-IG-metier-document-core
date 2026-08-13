@@ -17,7 +17,7 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
   "version" : "0.1.0",
   "title" : "Mapping Metier/CDA/FHIR : \"Observation\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -265,16 +265,37 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMObservation.derivedFrom[x]",
+      "code" : "FRLMObservation.derivedFrom[FRLMObservation]",
       "target" : [{
-        "code" : "Observation.derivedFrom",
+        "code" : "Observation.derivedFrom:Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservation.hasMember[x]",
+      "code" : "FRLMObservation.derivedFrom[FRLMLaboratoryObservation]",
       "target" : [{
-        "code" : "Observation.hasMember",
+        "code" : "Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservation.derivedFrom[FRLMImagingStudy]",
+      "target" : [{
+        "code" : "Observation.derivedFrom:FRImagingStudyDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservation.hasMember[FRLMLaboratoryObservation]",
+      "target" : [{
+        "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMObservation.hasMember[FRLMObservation]",
+      "target" : [{
+        "code" : "Observation.hasMember:Observation",
         "equivalence" : "equivalent"
       }]
     }]

@@ -1,9 +1,9 @@
-# Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMHospitalDischargeMedications → FRCDATraitementsALaSortie / FRLMHospitalDischargeMedications → FRCompositionDocument.section:sectionDischargeMedications - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMTraitementSortie → FRCDATraitementsALaSortie → FRCompositionDocument.section:hospitalDischargeMedications 
+## ConceptMap: Mapping FRLMHospitalDischargeMedications → FRCDATraitementsALaSortie / FRLMHospitalDischargeMedications → FRCompositionDocument.section:sectionDischargeMedications 
 
  
-Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications. 
+Mapping des éléments du modèle métier FRLMHospitalDischargeMedications vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:sectionDischargeMedications. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMTraitementSortie vers la section C
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitements à la sortie\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMTraitementSortie vers la section C
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMTraitementSortie vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:hospitalDischargeMedications.",
+  "description" : "Mapping des éléments du modèle métier FRLMHospitalDischargeMedications vers la section CDA FRCDATraitementsALaSortie, puis vers la section FHIR FRCompositionDocument.section:sectionDischargeMedications.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,38 +35,38 @@ Mapping des éléments du modèle métier FRLMTraitementSortie vers la section C
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-traitement-sortie",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-hospital-discharge-medications",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie",
     "element" : [{
-      "code" : "FRLMTraitementSortie",
+      "code" : "FRLMHospitalDischargeMedications",
       "target" : [{
         "code" : "FRCDATraitementsALaSortie",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementSortie.codeSection",
+      "code" : "FRLMHospitalDischargeMedications.codeSection",
       "target" : [{
         "code" : "FRCDATraitementsALaSortie.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementSortie.titreSection",
+      "code" : "FRLMHospitalDischargeMedications.titleSection",
       "target" : [{
         "code" : "FRCDATraitementsALaSortie.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementSortie.blocNarratif",
+      "code" : "FRLMHospitalDischargeMedications.description",
       "target" : [{
         "code" : "FRCDATraitementsALaSortie.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMTraitementSortie.entree.traitementSortie",
+      "code" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications:FRLMMedicationAdministration",
       "target" : [{
         "code" : "FRCDATraitementsALaSortie.entry.FRCDATraitement",
         "equivalence" : "equivalent"
@@ -74,40 +74,40 @@ Mapping des éléments du modèle métier FRLMTraitementSortie vers la section C
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitements-a-la-sortie",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-hospital-discharge-medications",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
-      "code" : "FRCDATraitementsALaSortie",
+      "code" : "FRLMHospitalDischargeMedications",
       "target" : [{
-        "code" : "FRCompositionDocument.section:hospitalDischargeMedications",
+        "code" : "FRCompositionDocument.section:sectionDischargeMedications",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementsALaSortie.code",
+      "code" : "FRLMHospitalDischargeMedications.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.code",
+        "code" : "FRCompositionDocument.section:sectionDischargeMedications.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementsALaSortie.title",
+      "code" : "FRLMHospitalDischargeMedications.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.title",
+        "code" : "FRCompositionDocument.section:sectionDischargeMedications.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementsALaSortie.text",
+      "code" : "FRLMHospitalDischargeMedications.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.text",
+        "code" : "FRCompositionDocument.section:sectionDischargeMedications.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDATraitementsALaSortie.entry.FRCDATraitement",
+      "code" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications",
       "target" : [{
-        "code" : "FRCompositionDocument.section:hospitalDischargeMedications.entry:FRMedicationAdministrationDocument",
+        "code" : "FRCompositionDocument.section:sectionDischargeMedications.entry:FRMedicationAdministrationDocument",
         "equivalence" : "equivalent"
       }]
     }]

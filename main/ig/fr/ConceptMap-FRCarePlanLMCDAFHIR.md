@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -41,7 +41,8 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
       "code" : "FRLMCarePlan",
       "target" : [{
         "code" : "FRCDAReferenceItemPlanTraitement",
-        "equivalence" : "narrower"
+        "equivalence" : "narrower",
+        "comment" : "Le profil CDA cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil CDA cible."
       }]
     },
     {
@@ -88,7 +89,8 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
       "code" : "FRLMCarePlan",
       "target" : [{
         "code" : "FRCarePlanDocument",
-        "equivalence" : "narrower"
+        "equivalence" : "narrower",
+        "comment" : "Le profil FHIR cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil FHIR cible."
       }]
     },
     {

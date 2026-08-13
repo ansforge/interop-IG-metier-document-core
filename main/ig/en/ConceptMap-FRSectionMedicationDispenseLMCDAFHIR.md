@@ -1,9 +1,9 @@
-# Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMMedicationDispensations → FRCDADispensationMedicaments / FRLMMedicationDispensations → FRCompositionDocument.section:sectionMedicationDispense - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMDispensationMedicaments → FRCDADispensationMedicaments → FRMedicationDispenseDocument 
+## ConceptMap: Mapping FRLMMedicationDispensations → FRCDADispensationMedicaments / FRLMMedicationDispensations → FRCompositionDocument.section:sectionMedicationDispense 
 
  
-Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense. 
+Mapping des éléments du modèle métier FRLMMedicationDispensations vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:sectionMedicationDispense. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la se
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispensation de médicaments\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la se
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:medication-dispense.",
+  "description" : "Mapping des éléments du modèle métier FRLMMedicationDispensations vers la section CDA FRCDADispensationMedicaments, puis vers la section FHIR FRCompositionDocument.section:sectionMedicationDispense.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,38 +35,38 @@ Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la se
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-dispensation-medicaments",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispensations",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispensation-medicaments",
     "element" : [{
-      "code" : "FRLMDispensationMedicaments",
+      "code" : "FRLMMedicationDispensations",
       "target" : [{
         "code" : "FRCDADispensationMedicaments",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDispensationMedicaments.codeSection",
+      "code" : "FRLMMedicationDispensations.codeSection",
       "target" : [{
         "code" : "FRCDADispensationMedicaments.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDispensationMedicaments.blocNarratif",
+      "code" : "FRLMMedicationDispensations.description",
       "target" : [{
         "code" : "FRCDADispensationMedicaments.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDispensationMedicaments.titreSection",
+      "code" : "FRLMMedicationDispensations.titleSection",
       "target" : [{
         "code" : "FRCDADispensationMedicaments.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDispensationMedicaments.entree.traitementDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
       "target" : [{
         "code" : "FRCDADispensationMedicaments.entry.FRCDATraitementDispense",
         "equivalence" : "equivalent"
@@ -74,40 +74,40 @@ Mapping des éléments du modèle métier FRLMDispensationMedicaments vers la se
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispensation-medicaments",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispensations",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
-      "code" : "FRCDADispensationMedicaments",
+      "code" : "FRLMMedicationDispensations",
       "target" : [{
-        "code" : "FRCompositionDocument.section:medication-dispense",
+        "code" : "FRCompositionDocument.section:sectionMedicationDispense",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADispensationMedicaments.code",
+      "code" : "FRLMMedicationDispensations.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:medication-dispense.code",
+        "code" : "FRCompositionDocument.section:sectionMedicationDispense.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADispensationMedicaments.text",
+      "code" : "FRLMMedicationDispensations.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:medication-dispense.text",
+        "code" : "FRCompositionDocument.section:sectionMedicationDispense.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADispensationMedicaments.title",
+      "code" : "FRLMMedicationDispensations.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:medication-dispense.title",
+        "code" : "FRCompositionDocument.section:sectionMedicationDispense.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDADispensationMedicaments.entry.FRCDATraitementDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
       "target" : [{
-        "code" : "FRCompositionDocument.section:medication-dispense.entry:FRMedicationDispenseDocument",
+        "code" : "FRCompositionDocument.section:sectionMedicationDispense.entry:FRMedicationDispenseDocument",
         "equivalence" : "equivalent"
       }]
     }]

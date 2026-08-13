@@ -1,9 +1,9 @@
-# Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMVitalSigns → FRCDASignesVitaux / FRLMVitalSigns → FRCompositionDocument.section:sectionVitalSigns - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMSignesVitaux → FRCDASignesVitaux → FRCompositionDocument.section 
+## ConceptMap: Mapping FRLMVitalSigns → FRCDASignesVitaux / FRLMVitalSigns → FRCompositionDocument.section:sectionVitalSigns 
 
  
-Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux. 
+Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:VitalSigns. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA F
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Signes vitaux",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA F
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:SignesVitaux.",
+  "description" : "Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:VitalSigns.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,31 +35,24 @@ Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA F
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-signes-vitaux",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-vital-signs",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-signes-vitaux",
     "element" : [{
-      "code" : "FRLMSignesVitaux",
+      "code" : "FRLMVitalSigns",
       "target" : [{
         "code" : "FRCDASignesVitaux",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSignesVitaux.titreSection",
+      "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
         "code" : "FRCDASignesVitaux.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSignesVitaux.blocNarratif",
-      "target" : [{
-        "code" : "FRCDASignesVitaux.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMSignesVitaux.entree.signesVitauxEntry:FRLMSigneVital",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
       "target" : [{
         "code" : "FRCDASignesVitaux.entry:FRCDASignesVitauxEntry",
         "equivalence" : "equivalent"
@@ -67,33 +60,26 @@ Mapping des éléments du modèle métier FRLMSignesVitaux vers la section CDA F
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-signes-vitaux",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-vital-signs",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
-      "code" : "FRCDASignesVitaux",
+      "code" : "FRLMVitalSigns",
       "target" : [{
-        "code" : "FRCompositionDocument.section:VitalSigns",
+        "code" : "FRCompositionDocument.section:sectionVitalSigns",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDASignesVitaux.title",
+      "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:VitalSigns.title",
+        "code" : "FRCompositionDocument.section:sectionVitalSigns.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDASignesVitaux.text",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
       "target" : [{
-        "code" : "FRCompositionDocument.section:VitalSigns.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRCDASignesVitaux.entry:FRCDASignesVitauxEntry",
-      "target" : [{
-        "code" : "FRCompositionDocument.section:VitalSigns.entry:FRObservationVitalSignsDocument",
+        "code" : "FRCompositionDocument.section:sectionVitalSigns.entry:FRObservationVitalSignsDocument",
         "equivalence" : "equivalent"
       }]
     }]

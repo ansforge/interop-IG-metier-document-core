@@ -7,7 +7,7 @@ Traitement dispense
 
 **Usages:**
 
-* Use this Logical Model: [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md) and [Logical model - FR LM Medication Dispensations](StructureDefinition-fr-lm-medication-dispensations.md)
+* Use this Logical Model: [Logical model - FR LM Medication Dispensations](StructureDefinition-fr-lm-medication-dispensations.md) and [Logical model - FR LM Medication Use](StructureDefinition-fr-lm-medication-use.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-fr-lm-medication-dispense.json)
 
@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-medication-
   "name" : "FRLMMedicationDispense",
   "title" : "Logical model - FR LM Medication Dispense",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

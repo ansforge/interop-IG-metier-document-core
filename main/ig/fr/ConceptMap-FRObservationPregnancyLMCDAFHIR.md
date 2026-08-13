@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Observation sur la grossesse\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -123,15 +123,13 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
     {
       "code" : "FRLMPregnancyObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.entryRelationship",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.hasMember[x]",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.entryRelationship",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     }]
   },
@@ -216,16 +214,37 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
+      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMObservation]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.derivedFrom",
+        "code" : "FRObservationPregnancyDocument.derivedFrom:Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.hasMember[x]",
+      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMLaboratoryObservation]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.hasMember",
+        "code" : "FRObservationPregnancyDocument.derivedFrom:FRObservationLaboratoryReportResultsDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMImagingStudy]",
+      "target" : [{
+        "code" : "FRObservationPregnancyDocument.derivedFrom:FRImagingStudyDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyObservation.hasMember[FRLMLaboratoryObservation]",
+      "target" : [{
+        "code" : "FRObservationPregnancyDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPregnancyObservation.hasMember[FRLMObservation]",
+      "target" : [{
+        "code" : "FRObservationPregnancyDocument.hasMember:Observation",
         "equivalence" : "equivalent"
       }]
     }]

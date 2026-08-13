@@ -1,9 +1,9 @@
-# Mapping Métier/CDA/FHIR : Antécédents médicaux - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMHistoryOfPastIllness → FRCDAAntecedentsMedicaux / FRLMHistoryOfPastIllness → FRCompositionDocument.section:sectionMedicalHistory - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping Métier/CDA/FHIR : Antécédents médicaux 
+## ConceptMap: Mapping FRLMHistoryOfPastIllness → FRCDAAntecedentsMedicaux / FRLMHistoryOfPastIllness → FRCompositionDocument.section:sectionMedicalHistory 
 
  
-Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory. 
+Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la section CDA FRCDAAntecedentsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalHistory. 
 
 
 
@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la sectio
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Antécédents médicaux\"",
   "status" : "draft",
-  "date" : "2026-08-11T09:29:09+00:00",
+  "date" : "2026-08-13T09:45:33+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -26,7 +26,7 @@ Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la sectio
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la section CDA FRCDAAntecedentsMedicaux, puis vers le profil FHIR FRCompositionDocument.section:MedicalHistory.",
+  "description" : "Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la section CDA FRCDAAntecedentsMedicaux, puis vers la section FHIR FRCompositionDocument.section:sectionMedicalHistory.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -35,79 +35,79 @@ Mapping des éléments du modèle métier FRLMAntecedentsMedicaux vers la sectio
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-antecedents-medicaux",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-medicaux",
     "element" : [{
-      "code" : "FRLMAntecedentsMedicaux",
+      "code" : "FRLMHistoryOfPastIllness",
       "target" : [{
         "code" : "FRCDAAntecedentsMedicaux",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAntecedentsMedicaux.codeSection",
+      "code" : "FRLMHistoryOfPastIllness.codeSection",
       "target" : [{
         "code" : "FRCDAAntecedentsMedicaux.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAntecedentsMedicaux.titreSection",
+      "code" : "FRLMHistoryOfPastIllness.titleSection",
       "target" : [{
         "code" : "FRCDAAntecedentsMedicaux.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAntecedentsMedicaux.blocNarratif",
+      "code" : "FRLMHistoryOfPastIllness.description",
       "target" : [{
         "code" : "FRCDAAntecedentsMedicaux.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAntecedentsMedicaux.entree.problemes",
+      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes",
+        "code" : "FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes.entryRelationship:FRCDAProbleme",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-medicaux",
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-history-of-past-illness",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
     "element" : [{
-      "code" : "FRCDAAntecedentsMedicaux",
+      "code" : "FRLMHistoryOfPastIllness",
       "target" : [{
-        "code" : "FRCompositionDocument.section:MedicalHistory",
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAAntecedentsMedicaux.code",
+      "code" : "FRLMHistoryOfPastIllness.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:MedicalHistory.code",
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAAntecedentsMedicaux.title",
+      "code" : "FRLMHistoryOfPastIllness.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:MedicalHistory.title",
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAAntecedentsMedicaux.text",
+      "code" : "FRLMHistoryOfPastIllness.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:MedicalHistory.text",
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes",
+      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
       "target" : [{
-        "code" : "FRCompositionDocument.section:MedicalHistory.entry:FRConditionDocument",
+        "code" : "FRCompositionDocument.section:sectionMedicalHistory.entry:FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     }]
