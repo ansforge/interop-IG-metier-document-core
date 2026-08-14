@@ -45,7 +45,11 @@ WITH AllGroups AS (
 ),
 
 ClassifiedGroups AS (
-  -- Classer chaque groupe en METIER / CDA / FHIR
+  -- Classer chaque groupe en CDA / FHIR. Le modèle métier est désormais
+  -- l'intermédiaire (chaque ConceptMap a un groupe métier→CDA et un ou
+  -- plusieurs groupes métier→FHIR) : la source (grp_source) vaut donc
+  -- toujours fr-lm-* et ne permet plus de distinguer les groupes, seule
+  -- la cible (grp_target) le permet.
   SELECT
     cm_id,
     Name,
@@ -55,10 +59,7 @@ ClassifiedGroups AS (
     grp_source,
     grp_target,
     CASE
-      WHEN grp_source LIKE '%fr-lm%' THEN 'METIER'
-      WHEN grp_source LIKE '%cda%' 
-        OR grp_target LIKE '%cda%' 
-        OR grp_source LIKE '%fr-cda%' 
+      WHEN grp_target LIKE '%cda%'
         OR grp_target LIKE '%fr-cda%' THEN 'CDA'
       ELSE 'FHIR'
     END AS grp_type
@@ -91,33 +92,38 @@ MetierToCDA AS (
     elem_code AS Metier,
     elem_target_code AS CDA
   FROM Elements
-  WHERE grp_type = 'METIER'
-),
-
-CDAtoFHIR AS (
-  SELECT
-    cm_id,
-    elem_index,
-    elem_code AS CDA,
-    elem_target_code AS FHIR
-  FROM Elements
   WHERE grp_type = 'CDA'
 ),
 
+MetierToFHIR AS (
+  SELECT
+    cm_id,
+    group_index,
+    elem_index,
+    elem_code AS Metier,
+    elem_target_code AS FHIR
+  FROM Elements
+  WHERE grp_type = 'FHIR'
+),
+
 FinalMapping AS (
-  -- Join Metier->CDA with CDA->FHIR
+  -- Joint Métier->CDA avec Métier->FHIR sur le code métier (identique dans
+  -- les deux groupes). Quand un même code métier est mappé vers plusieurs
+  -- profils FHIR (ex: PractitionerRole ET Practitioner), la jointure
+  -- produit naturellement une ligne par cible FHIR.
   SELECT
     m.Web,
     m.Name,
     m.group_index,
     m.elem_index,
+    f.group_index AS fhir_group_index,
     m.Metier,
     m.CDA,
-    cf.FHIR
+    f.FHIR
   FROM MetierToCDA m
-  LEFT JOIN CDAtoFHIR cf
-    ON m.cm_id = cf.cm_id
-    AND m.CDA = cf.CDA
+  LEFT JOIN MetierToFHIR f
+    ON m.cm_id = f.cm_id
+    AND m.Metier = f.Metier
 )
 
 SELECT
@@ -170,7 +176,8 @@ FROM FinalMapping
 ORDER BY
   Name,
   group_index,
-  elem_index
+  elem_index,
+  fhir_group_index
 ",
 "class" : "lines",
 "columns" : [
