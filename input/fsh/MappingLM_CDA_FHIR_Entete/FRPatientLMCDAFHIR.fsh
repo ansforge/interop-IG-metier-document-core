@@ -35,19 +35,34 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Nom
-* group[=].element[+].code = #FRLMPatient.name
+* group[=].element[+].code = #FRLMPatient.name:officialName
 * group[=].element[=].target.code = #recordTarget.patientRole.patient.name
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.family
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family
+* group[=].element[=].target.comment = "Nom officiel/de naissance (qualifier CDA 'BR')."
+* group[=].element[+].code = #FRLMPatient.name:usualName
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.given
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given
+* group[=].element[=].target.comment = "Nom utilisé au quotidien (qualifier CDA 'CL')."
+* group[=].element[+].code = #FRLMPatient.name:officialName.family
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='BR'
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.use
-* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier
+* group[=].element[+].code = #FRLMPatient.name:usualName.family
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='CL'
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMPatient.name:officialName.given
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='BR'
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMPatient.name:usualName.given
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.given@qualifier='CL'
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMPatient.name:officialName.use
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='BR'
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "L'usage du nom (name-use FHIR, ex : official/usual) se rapproche des qualifiers CDA 'BR' (nom de naissance) et 'CL' (nom utilisé) sans en être strictement équivalent."
+* group[=].element[=].target.comment = "name.use='official' se rapproche du qualifier CDA 'BR' sans en être strictement équivalent."
+* group[=].element[+].code = #FRLMPatient.name:usualName.use
+* group[=].element[=].target.code = #recordTarget.patientRole.patient.name.family@qualifier='CL'
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "name.use='usual' se rapproche du qualifier CDA 'CL' sans en être strictement équivalent."
 
 // Sexe administratif
 * group[=].element[+].code = #FRLMPatient.administrativeGender
@@ -130,34 +145,30 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Nom
-* group[=].element[+].code = #FRLMPatient.name
+* group[=].element[+].code = #FRLMPatient.name:officialName
 * group[=].element[=].target.code = #Patient.name:officialName
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Occurrence pour le nom officiel/de naissance (name.use=official)."
-* group[=].element[+].code = #FRLMPatient.name
+* group[=].element[+].code = #FRLMPatient.name:usualName
 * group[=].element[=].target.code = #Patient.name:usualName
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Occurrence pour le nom utilisé au quotidien (name.use=usual)."
-* group[=].element[+].code = #FRLMPatient.name.family
+* group[=].element[+].code = #FRLMPatient.name:officialName.family
 * group[=].element[=].target.code = #Patient.name:officialName.family
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.family
+* group[=].element[+].code = #FRLMPatient.name:usualName.family
 * group[=].element[=].target.code = #Patient.name:usualName.family
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.given
+* group[=].element[+].code = #FRLMPatient.name:officialName.given
 * group[=].element[=].target.code = #Patient.name:officialName.given
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.given
+* group[=].element[+].code = #FRLMPatient.name:usualName.given
 * group[=].element[=].target.code = #Patient.name:usualName.given
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.name.use
+* group[=].element[+].code = #FRLMPatient.name:officialName.use
 * group[=].element[=].target.code = #Patient.name:officialName.use
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "name.use détermine la slice retenue (officialName si 'official', usualName si 'usual')."
-* group[=].element[+].code = #FRLMPatient.name.use
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMPatient.name:usualName.use
 * group[=].element[=].target.code = #Patient.name:usualName.use
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "name.use détermine la slice retenue (officialName si 'official', usualName si 'usual')."
+* group[=].element[=].target.equivalence = #equivalent
 
 // Sexe administratif
 * group[=].element[+].code = #FRLMPatient.administrativeGender
