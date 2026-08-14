@@ -21,7 +21,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-13T14:36:19+00:00",
+  "date" : "2026-08-14T12:00:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -70,32 +70,63 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.name",
+      "code" : "FRLMPatient.name:officialName",
       "target" : [{
         "code" : "recordTarget.patientRole.patient.name",
+        "equivalence" : "equivalent",
+        "comment" : "Nom officiel/de naissance (qualifier CDA 'BR')."
+      }]
+    },
+    {
+      "code" : "FRLMPatient.name:usualName",
+      "target" : [{
+        "code" : "recordTarget.patientRole.patient.name",
+        "equivalence" : "equivalent",
+        "comment" : "Nom utilisé au quotidien (qualifier CDA 'CL')."
+      }]
+    },
+    {
+      "code" : "FRLMPatient.name:officialName.family",
+      "target" : [{
+        "code" : "recordTarget.patientRole.patient.name.family@qualifier='BR'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.family",
+      "code" : "FRLMPatient.name:usualName.family",
       "target" : [{
-        "code" : "recordTarget.patientRole.patient.name.family",
+        "code" : "recordTarget.patientRole.patient.name.family@qualifier='CL'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.given",
+      "code" : "FRLMPatient.name:officialName.given",
       "target" : [{
-        "code" : "recordTarget.patientRole.patient.name.given",
+        "code" : "recordTarget.patientRole.patient.name.given@qualifier='BR'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.use",
+      "code" : "FRLMPatient.name:usualName.given",
       "target" : [{
-        "code" : "recordTarget.patientRole.patient.name.family@qualifier",
+        "code" : "recordTarget.patientRole.patient.name.given@qualifier='CL'",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMPatient.name:officialName.use",
+      "target" : [{
+        "code" : "recordTarget.patientRole.patient.name.family@qualifier='BR'",
         "equivalence" : "relatedto",
-        "comment" : "L'usage du nom (name-use FHIR, ex : official/usual) se rapproche des qualifiers CDA 'BR' (nom de naissance) et 'CL' (nom utilisé) sans en être strictement équivalent."
+        "comment" : "name.use='official' se rapproche du qualifier CDA 'BR' sans en être strictement équivalent."
+      }]
+    },
+    {
+      "code" : "FRLMPatient.name:usualName.use",
+      "target" : [{
+        "code" : "recordTarget.patientRole.patient.name.family@qualifier='CL'",
+        "equivalence" : "relatedto",
+        "comment" : "name.use='usual' se rapproche du qualifier CDA 'CL' sans en être strictement équivalent."
       }]
     },
     {
@@ -232,63 +263,59 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.name",
+      "code" : "FRLMPatient.name:officialName",
       "target" : [{
         "code" : "Patient.name:officialName",
-        "equivalence" : "equivalent",
-        "comment" : "Occurrence pour le nom officiel/de naissance (name.use=official)."
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name",
+      "code" : "FRLMPatient.name:usualName",
       "target" : [{
         "code" : "Patient.name:usualName",
-        "equivalence" : "equivalent",
-        "comment" : "Occurrence pour le nom utilisé au quotidien (name.use=usual)."
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.family",
+      "code" : "FRLMPatient.name:officialName.family",
       "target" : [{
         "code" : "Patient.name:officialName.family",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.family",
+      "code" : "FRLMPatient.name:usualName.family",
       "target" : [{
         "code" : "Patient.name:usualName.family",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.given",
+      "code" : "FRLMPatient.name:officialName.given",
       "target" : [{
         "code" : "Patient.name:officialName.given",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.given",
+      "code" : "FRLMPatient.name:usualName.given",
       "target" : [{
         "code" : "Patient.name:usualName.given",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.use",
+      "code" : "FRLMPatient.name:officialName.use",
       "target" : [{
         "code" : "Patient.name:officialName.use",
-        "equivalence" : "relatedto",
-        "comment" : "name.use détermine la slice retenue (officialName si 'official', usualName si 'usual')."
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.name.use",
+      "code" : "FRLMPatient.name:usualName.use",
       "target" : [{
         "code" : "Patient.name:usualName.use",
-        "equivalence" : "relatedto",
-        "comment" : "name.use détermine la slice retenue (officialName si 'official', usualName si 'usual')."
+        "equivalence" : "equivalent"
       }]
     },
     {

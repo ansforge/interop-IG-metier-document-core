@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-encounter-i
   "name" : "FRLMEncounterInformation",
   "title" : "Logical model - FR LM Encounter Information",
   "status" : "draft",
-  "date" : "2026-08-13T14:36:19+00:00",
+  "date" : "2026-08-14T12:00:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

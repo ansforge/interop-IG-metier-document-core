@@ -23,7 +23,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-13T14:36:19+00:00",
+  "date" : "2026-08-14T12:00:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -51,19 +51,19 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier",
+      "code" : "FRLMHeaderDocument.identifier:document",
       "target" : [{
         "code" : "ClinicalDocument.id",
         "equivalence" : "equivalent",
-        "comment" : "Première occurrence : identifiant unique du document."
+        "comment" : "Identifiant unique du document."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier",
+      "code" : "FRLMHeaderDocument.identifier:versionSet",
       "target" : [{
         "code" : "ClinicalDocument.setId",
         "equivalence" : "equivalent",
-        "comment" : "Occurrence(s) suivante(s) : identifiant du lot de versions du document."
+        "comment" : "Identifiant du lot de versions du document."
       }]
     },
     {
@@ -224,11 +224,11 @@ Ce ConceptMap présente trois groupes de mapping :
     "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document",
     "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document",
     "element" : [{
-      "code" : "FRLMHeaderDocument.identifier",
+      "code" : "FRLMHeaderDocument.identifier:document",
       "target" : [{
         "code" : "Bundle.identifier",
         "equivalence" : "equivalent",
-        "comment" : "Première occurrence : identifiant unique du document."
+        "comment" : "Identifiant unique du document."
       }]
     }]
   },
@@ -271,11 +271,11 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier",
+      "code" : "FRLMHeaderDocument.identifier:versionSet",
       "target" : [{
         "code" : "Composition.identifier",
         "equivalence" : "equivalent",
-        "comment" : "Occurrence(s) suivante(s) : identifiant du lot de versions du document."
+        "comment" : "Identifiant du lot de versions du document."
       }]
     },
     {
