@@ -1,0 +1,118 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRInformantLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRInformantLMCDAFHIR</b></p><a name=\"en-FRInformantLMCDAFHIR\"> </a><a name=\"en-hcFRInformantLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMInformant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant</td><td/></tr><tr><td>FRLMInformant.informant:professional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.assignedEntity</td><td>L'informateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:organisation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.assignedEntity</td><td>L'informateur structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:patient</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.assignedEntity</td><td>L'informateur patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:relatedPerson</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>informant.relatedEntity</td><td>L'informateur personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informant</code> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-informant-extension.html\">Informant Extensionversion: 1.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMInformant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Extension (Informant Extension)</td><td/></tr><tr><td>FRLMInformant.informant:professional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:organisation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:patient</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr><tr><td>FRLMInformant.informant:relatedPerson</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR.</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRInformantLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-08-14T12:10:20+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMInformant\\\" et l'élément CDA \\\"informant\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMInformant\\\" et l'extension FHIR \\\"InformantExtension\\\" ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informant",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-informant",
+    "element" : [{
+      "code" : "FRLMInformant",
+      "target" : [{
+        "code" : "informant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:professional",
+      "target" : [{
+        "code" : "informant.assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'informateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:organisation",
+      "target" : [{
+        "code" : "informant.assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'informateur structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:patient",
+      "target" : [{
+        "code" : "informant.assignedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'informateur patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:relatedPerson",
+      "target" : [{
+        "code" : "informant.relatedEntity",
+        "equivalence" : "equivalent",
+        "comment" : "L'informateur personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-informant",
+    "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/informant-extension",
+    "targetVersion" : "1.1.0",
+    "element" : [{
+      "code" : "FRLMInformant",
+      "target" : [{
+        "code" : "Extension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:professional",
+      "target" : [{
+        "code" : "Extension.extension:party.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:organisation",
+      "target" : [{
+        "code" : "Extension.extension:party.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:patient",
+      "target" : [{
+        "code" : "Extension.extension:party.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMInformant.informant:relatedPerson",
+      "target" : [{
+        "code" : "Extension.extension:party.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR."
+      }]
+    }]
+  }]
+}

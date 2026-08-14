@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FROrganisationLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FROrganisationLMCDAFHIR</b></p><a name="FROrganisationLMCDAFHIR"> </a><a name="hcFROrganisationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMOrganisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization</td><td>Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization.</td></tr><tr><td>FRLMOrganisation.identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization.id</td><td/></tr><tr><td>FRLMOrganisation.type</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun champ CDA dédié à la catégorie d'établissement, distinct du secteur d'activité.</td></tr><tr><td>FRLMOrganisation.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization.name</td><td/></tr><tr><td>FRLMOrganisation.address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization.addr</td><td/></tr><tr><td>FRLMOrganisation.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization.telecom</td><td/></tr><tr><td>FRLMOrganisation.partOf</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun champ CDA dédié à l'organisation parente dans representedOrganization.</td></tr><tr><td>FRLMOrganisation.industrySector</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>assignedEntity.representedOrganization.standardIndustryClassCode</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation</code> to <a href="http://hl7.org/fhir/R4/organization.html">Organizationversion : 4.0.1)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMOrganisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization (A grouping of people or organizations with a common purpose)</td><td/></tr><tr><td>FRLMOrganisation.identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.identifier (Identifies this organization  across multiple systems)</td><td/></tr><tr><td>FRLMOrganisation.type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.type (Kind of organization)</td><td/></tr><tr><td>FRLMOrganisation.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.name (Name used for the organization)</td><td/></tr><tr><td>FRLMOrganisation.address</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.address (An address for the organization)</td><td/></tr><tr><td>FRLMOrganisation.telecom</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.telecom (A contact detail for the organization)</td><td/></tr><tr><td>FRLMOrganisation.partOf</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Organization.partOf (The organization of which this organization forms a part)</td><td/></tr><tr><td>FRLMOrganisation.industrySector</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Organization.type (Kind of organization)</td><td>Organization.type est 0..* : type et industrySector y sont tous deux portés, avec des codifications différentes.</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrganisationLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Structure&quot;"/>
+  <status value="draft"/>
+  <date value="2026-08-14T12:10:20+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMOrganisation\&quot; et la structure CDA générique portant une organisation&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMOrganisation\&quot; et la ressource FHIR \&quot;Organization\&quot;&#xA;&#xA;Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity"/>
+    <element>
+      <code value="FRLMOrganisation"/>
+      <target>
+        <code value="assignedEntity.representedOrganization"/>
+        <equivalence value="equivalent"/>
+        <comment value="Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.identifier"/>
+      <target>
+        <code value="assignedEntity.representedOrganization.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.type"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucun champ CDA dédié à la catégorie d'établissement, distinct du secteur d'activité."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.name"/>
+      <target>
+        <code value="assignedEntity.representedOrganization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.address"/>
+      <target>
+        <code value="assignedEntity.representedOrganization.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.telecom"/>
+      <target>
+        <code value="assignedEntity.representedOrganization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.partOf"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucun champ CDA dédié à l'organisation parente dans representedOrganization."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.industrySector"/>
+      <target>
+        <code value="assignedEntity.representedOrganization.standardIndustryClassCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <targetVersion value="4.0.1"/>
+    <element>
+      <code value="FRLMOrganisation"/>
+      <target>
+        <code value="Organization"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.identifier"/>
+      <target>
+        <code value="Organization.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.type"/>
+      <target>
+        <code value="Organization.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.name"/>
+      <target>
+        <code value="Organization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.address"/>
+      <target>
+        <code value="Organization.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.telecom"/>
+      <target>
+        <code value="Organization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.partOf"/>
+      <target>
+        <code value="Organization.partOf"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.industrySector"/>
+      <target>
+        <code value="Organization.type"/>
+        <equivalence value="relatedto"/>
+        <comment value="Organization.type est 0..* : type et industrySector y sont tous deux portés, avec des codifications différentes."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
