@@ -70,7 +70,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-specimen.
   "name" : "FRLMSpecimen",
   "title" : "Logical model - FR LM Specimen",
   "status" : "draft",
-  "date" : "2026-08-14T12:00:06+00:00",
+  "date" : "2026-08-14T14:57:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

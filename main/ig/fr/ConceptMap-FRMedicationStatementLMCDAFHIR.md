@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement (information rapportée par le patient)\"",
   "status" : "draft",
-  "date" : "2026-08-14T12:00:06+00:00",
+  "date" : "2026-08-14T14:57:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -303,51 +303,44 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
       }]
     },
     {
-      "code" : "FRLMMedicationUse.dosageInstructions",
-      "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
       "code" : "FRLMMedicationUse.dosageInstructions.renderedDosageInstruction",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.text",
+        "code" : "FRMedicationStatementDocument.dosage.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.sequence",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.sequence",
+        "code" : "FRMedicationStatementDocument.dosage.sequence",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.note",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.patientInstruction",
+        "code" : "FRMedicationStatementDocument.dosage.patientInstruction",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.doseAndRate.dose[x]",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.doseAndRate.dose[x]",
+        "code" : "FRMedicationStatementDocument.dosage.doseAndRate.dose[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.doseAndRate.rate[x]",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.doseAndRate.rate[x]",
+        "code" : "FRMedicationStatementDocument.dosage.doseAndRate.rate[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat",
         "equivalence" : "relatedto",
         "comment" : "Regroupement porté par les éléments détaillés numberOfTimes, period, dayOfWeek, timeOfDay et additionalInstructions."
       }]
@@ -355,14 +348,14 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency.numberOfTimes",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.frequency",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.frequency",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency.period",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.period",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.period",
         "equivalence" : "equivalent",
         "comment" : "L'unité (periodUnit) est portée par le code de la Quantity source."
       }]
@@ -370,21 +363,21 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency.dayOfWeek",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.dayOfWeek",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.dayOfWeek",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency.timeOfDay",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.timeOfDay",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.timeOfDay",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.frequency.additionalInstructions",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.additionalInstruction",
+        "code" : "FRMedicationStatementDocument.dosage.additionalInstruction",
         "equivalence" : "relatedto",
         "comment" : "Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text."
       }]
@@ -392,28 +385,28 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.dateOfAdministration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.event",
+        "code" : "FRMedicationStatementDocument.dosage.timing.event",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.conditionOfAdministration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.asNeededCodeableConcept",
+        "code" : "FRMedicationStatementDocument.dosage.asNeededCodeableConcept",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.date[x]",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.bounds[x]",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.bounds[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.duration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat",
         "equivalence" : "relatedto",
         "comment" : "Regroupement porté par les éléments détaillés durationValue, durationUnit et durationMax."
       }]
@@ -421,28 +414,28 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.duration.durationValue",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.duration",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.duration",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.duration.durationUnit",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.durationUnit",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.durationUnit",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.duration.durationMax",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.durationMax",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.durationMax",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.eventTime",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat",
         "equivalence" : "wider",
         "comment" : "Regroupement porté par les éléments détaillés eventTimeCode et offset."
       }]
@@ -450,14 +443,14 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.eventTime.eventTimeCode",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.when",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.when",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.eventTime.offset",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.timing.repeat.offset",
+        "code" : "FRMedicationStatementDocument.dosage.timing.repeat.offset",
         "equivalence" : "equivalent"
       }]
     },
@@ -470,42 +463,42 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.bodySite",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.site",
+        "code" : "FRMedicationStatementDocument.dosage.site",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.routeOfAdministration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.route",
+        "code" : "FRMedicationStatementDocument.dosage.route",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.maxDosePerPeriod.numerator",
+        "code" : "FRMedicationStatementDocument.dosage.maxDosePerPeriod.numerator",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.maxDosePerPeriod.duration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.maxDosePerPeriod.denominator",
+        "code" : "FRMedicationStatementDocument.dosage.maxDosePerPeriod.denominator",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.maxDosePerAdministration",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.maxDosePerAdministration",
+        "code" : "FRMedicationStatementDocument.dosage.maxDosePerAdministration",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationUse.dosageInstructions.dosageDetails.maxLifetimeDose",
       "target" : [{
-        "code" : "FRMedicationStatementDocument.dosageInstruction.maxDosePerLifetime",
+        "code" : "FRMedicationStatementDocument.dosage.maxDosePerLifetime",
         "equivalence" : "equivalent"
       }]
     },
