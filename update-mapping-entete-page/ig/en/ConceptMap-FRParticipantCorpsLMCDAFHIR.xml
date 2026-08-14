@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRParticipantCorpsLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRParticipantCorpsLMCDAFHIR</b></p><a name="en-FRParticipantCorpsLMCDAFHIR"> </a><a name="en-hcFRParticipantCorpsLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMParticipant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant</td></tr><tr><td>FRLMParticipant.identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.id</td></tr><tr><td>FRLMParticipant.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.playingEntity.name</td></tr><tr><td>FRLMParticipant.type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.code</td></tr><tr><td>FRLMParticipant.role</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.playingEntity.code</td></tr><tr><td>FRLMParticipant.period</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.time</td></tr><tr><td>FRLMParticipant.participant.participantProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.playingEntity</td></tr><tr><td>FRLMParticipant.participant.participantDevice</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.playingDevice</td></tr><tr><td>FRLMParticipant.participant.participantOrganisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRCDAParticipant.participantRole.scopingEntity</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMParticipant</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension</td><td/></tr><tr><td>FRLMParticipant.type</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[typeCode].value[x]</td><td/></tr><tr><td>FRLMParticipant.identifier</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.identifier</td><td/></tr><tr><td>FRLMParticipant.name</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.name</td><td/></tr><tr><td>FRLMParticipant.role</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.practitioner.qualification</td><td/></tr><tr><td>FRLMParticipant.period</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Période sans équivalent direct dans l'extension FRActorExtension.</td></tr><tr><td>FRLMParticipant.participant.participantProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument</td><td/></tr><tr><td>FRLMParticipant.participant.participantDevice</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:Device</td><td/></tr><tr><td>FRLMParticipant.participant.participantOrganisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRParticipantCorpsLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Metier/CDA/FHIR : &quot;Participant&quot;"/>
+  <status value="draft"/>
+  <date value="2026-08-14T08:22:23+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRCDAParticipant, puis vers l'extension FHIR FRActorExtension."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-participant"/>
+    <element>
+      <code value="FRLMParticipant"/>
+      <target>
+        <code value="FRCDAParticipant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.identifier"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.name"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.playingEntity.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.type"/>
+      <target>
+        <code value="FRCDAParticipant.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.role"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.playingEntity.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.period"/>
+      <target>
+        <code value="FRCDAParticipant.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantProfessional"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.playingEntity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantDevice"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.playingDevice"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantOrganisation"/>
+      <target>
+        <code value="FRCDAParticipant.participantRole.scopingEntity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-participant"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-actor-extension"/>
+    <element>
+      <code value="FRLMParticipant"/>
+      <target>
+        <code value="FRActorExtension"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.type"/>
+      <target>
+        <code value="FRActorExtension.extension[typeCode].value[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.identifier"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.name"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.role"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.practitioner.qualification"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.period"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Période sans équivalent direct dans l'extension FRActorExtension."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantProfessional"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantDevice"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:Device"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMParticipant.participant.participantOrganisation"/>
+      <target>
+        <code value="FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,445 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FREncounterLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FREncounterLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FREncounterLMCDAFHIR</b></p><a name=\"en-FREncounterLMCDAFHIR\"> </a><a name=\"en-hcFREncounterLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-rencontre</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMEncounter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre</td><td/></tr><tr><td>FRLMEncounter.header.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.id</td><td/></tr><tr><td>FRLMEncounter.header.status</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.statusCode</td><td/></tr><tr><td>FRLMEncounter.header.author[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.author</td><td/></tr><tr><td>FRLMEncounter.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.participant</td><td/></tr><tr><td>FRLMEncounter.type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.code</td><td/></tr><tr><td>FRLMEncounter.period</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.effectiveTime</td><td/></tr><tr><td>FRLMEncounter.priority</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.priorityCode</td><td/></tr><tr><td>FRLMEncounter.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.participant:autresParticipants</td><td/></tr><tr><td>FRLMEncounter.serviceProvider</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.performer.assignedEntity.representedOrganization</td><td/></tr><tr><td>FRLMEncounter.referringProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.performer</td><td/></tr><tr><td>FRLMEncounter.basedOn[x]</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de basedOn[x] dans le profil CDA FRCDARencontre.</td></tr><tr><td>FRLMEncounter.reason[x]</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de reason[x] dans le profil CDA FRCDARencontre.</td></tr><tr><td>FRLMEncounter.admission</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Admission sans correspondance directe explicite dans le profil CDA FRCDARencontre.</td></tr><tr><td>FRLMEncounter.admission.admitter</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas d'attribut CDA explicite pour l'admetteur dans le profil FRCDARencontre.</td></tr><tr><td>FRLMEncounter.admission.admitSource</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas d'attribut CDA explicite pour admitSource dans le profil FRCDARencontre.</td></tr><tr><td>FRLMEncounter.dischargeDiagnosis[x]</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de correspondance explicite pour dischargeDiagnosis[x] dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.dischargeDestination</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">dischargeDestination sans correspondance directe explicite dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.dischargeDestination.type</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas d'attribut CDA explicite pour le type de sortie dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.dischargeDestination.location[x]</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas d'attribut CDA explicite pour la destination de sortie dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.serviceLocation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDARencontre.participant:lieuExecution</td><td>Les lieux de service sont rapprochés des participants de type lieu en CDA.</td></tr><tr><td>FRLMEncounter.serviceLocation.period</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas d'attribut CDA explicite pour la période de serviceLocation dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.serviceLocation.organisationPart[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDARencontre.participant:lieuExecution</td><td/></tr><tr><td>FRLMEncounter.subEncounter</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de correspondance explicite de subEncounter dans FRCDARencontre.</td></tr><tr><td>FRLMEncounter.note</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDARencontre.text</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMEncounter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument</td><td/></tr><tr><td>FRLMEncounter.header.identifier</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.identifier</td><td/></tr><tr><td>FRLMEncounter.header.status</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.status</td><td/></tr><tr><td>FRLMEncounter.header.author[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.author</td><td/></tr><tr><td>FRLMEncounter.type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.class</td><td/></tr><tr><td>FRLMEncounter.period</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.period</td><td/></tr><tr><td>FRLMEncounter.priority</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.priority</td><td/></tr><tr><td>FRLMEncounter.participant</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.participant</td><td/></tr><tr><td>FRLMEncounter.serviceProvider</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.serviceProvider</td><td/></tr><tr><td>FRLMEncounter.referringProfessional</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.participant.individual</td><td/></tr><tr><td>FRLMEncounter.basedOn[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.basedOn</td><td/></tr><tr><td>FRLMEncounter.reason[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FREncounterDocument.reasonCode</td><td>reason[x] peut alimenter reasonCode ou reasonReference selon le type porté.</td></tr><tr><td>FRLMEncounter.admission</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FREncounterDocument.hospitalization</td><td/></tr><tr><td>FRLMEncounter.admission.admitter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.participant.individual</td><td/></tr><tr><td>FRLMEncounter.admission.admitSource</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.hospitalization.admitSource</td><td/></tr><tr><td>FRLMEncounter.dischargeDiagnosis[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FREncounterDocument.diagnosis.condition</td><td/></tr><tr><td>FRLMEncounter.dischargeDestination.type</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.hospitalization.dischargeDisposition</td><td/></tr><tr><td>FRLMEncounter.dischargeDestination.location[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.hospitalization.destination</td><td/></tr><tr><td>FRLMEncounter.serviceLocation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.location</td><td/></tr><tr><td>FRLMEncounter.serviceLocation.period</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.location.period</td><td/></tr><tr><td>FRLMEncounter.serviceLocation.organisationPart[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.location.location</td><td/></tr><tr><td>FRLMEncounter.subEncounter</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FREncounterDocument.partOf</td><td/></tr><tr><td>FRLMEncounter.note</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Encounter R4 ne porte pas d'élément natif note.</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FREncounterLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Encounter\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.date [ fhir:value "2026-08-14T08:22:23+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-rencontre" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.author[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.participant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.priority" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.priorityCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.participant:autresParticipants" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceProvider" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.performer.assignedEntity.representedOrganization" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.referringProfessional" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.performer" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.basedOn[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite de basedOn[x] dans le profil CDA FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.reason[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite de reason[x] dans le profil CDA FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Admission sans correspondance directe explicite dans le profil CDA FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission.admitter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas d'attribut CDA explicite pour l'admetteur dans le profil FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission.admitSource" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas d'attribut CDA explicite pour admitSource dans le profil FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDiagnosis[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas de correspondance explicite pour dischargeDiagnosis[x] dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDestination" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "dischargeDestination sans correspondance directe explicite dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDestination.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas d'attribut CDA explicite pour le type de sortie dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDestination.location[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas d'attribut CDA explicite pour la destination de sortie dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.participant:lieuExecution" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Les lieux de service sont rapprochés des participants de type lieu en CDA." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas d'attribut CDA explicite pour la période de serviceLocation dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation.organisationPart[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.participant:lieuExecution" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.subEncounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas de correspondance explicite de subEncounter dans FRCDARencontre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDARencontre.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.status" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.header.author[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.class" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.period" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.priority" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.priority" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.participant" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.participant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceProvider" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.serviceProvider" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.referringProfessional" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.participant.individual" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.basedOn[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.basedOn" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.reason[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.reasonCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "reason[x] peut alimenter reasonCode ou reasonReference selon le type porté." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.hospitalization" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission.admitter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.participant.individual" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.admission.admitSource" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.hospitalization.admitSource" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDiagnosis[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.diagnosis.condition" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDestination.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.hospitalization.dischargeDisposition" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.dischargeDestination.location[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.hospitalization.destination" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.location" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.location.period" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.serviceLocation.organisationPart[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.location.location" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.subEncounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FREncounterDocument.partOf" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMEncounter.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Encounter R4 ne porte pas d'élément natif note." ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FREncounterLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

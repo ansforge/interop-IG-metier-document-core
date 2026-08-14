@@ -1,0 +1,292 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRMedicationLMCDAFHIR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRMedicationLMCDAFHIR</b></p><a name=\"FRMedicationLMCDAFHIR\"> </a><a name=\"hcFRMedicationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMMedication</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante</td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code</td></tr><tr><td>FRLMMedication.classification</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asSpecializedKind</td></tr><tr><td>FRLMMedication.productName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name</td></tr><tr><td>FRLMMedication.marketingAuthorisationHolder</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.doseForm</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode</td></tr><tr><td>FRLMMedication.item.ingredient.isActive</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.ingredient.substance</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.strength</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:ingredient.pharm:quantity</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.unitOfPresentation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.containedQuantity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.amount</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.packageType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asContent.pharm:containerPackagedMedicine</td></tr><tr><td>FRLMMedication.device</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.characteristic</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText</td></tr><tr><td>FRLMMedication.batch.expirationDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:expirationTime</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMMedication</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument</td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.code</td></tr><tr><td>FRLMMedication.classification</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-classification</td></tr><tr><td>FRLMMedication.productName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-productname</td></tr><tr><td>FRLMMedication.marketingAuthorisationHolder</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.manufacturer</td></tr><tr><td>FRLMMedication.item</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.itemReference</td></tr><tr><td>FRLMMedication.item.doseForm</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.form</td></tr><tr><td>FRLMMedication.item.ingredient</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient</td></tr><tr><td>FRLMMedication.item.ingredient.isActive</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.isActive</td></tr><tr><td>FRLMMedication.item.ingredient.substance</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.itemCodeableConcept</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.strength</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive.strength</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.unitOfPresentation</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.containedQuantity</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.amount</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.amount</td></tr><tr><td>FRLMMedication.item.packageType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td/></tr><tr><td>FRLMMedication.device</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.characteristic</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.batch.lotNumber</td></tr><tr><td>FRLMMedication.batch.expirationDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.batch.expirationDate</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRMedicationLMCDAFHIR</b></p><a name=\"en-FRMedicationLMCDAFHIR\"> </a><a name=\"en-hcFRMedicationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMMedication</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante</td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code</td></tr><tr><td>FRLMMedication.classification</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asSpecializedKind</td></tr><tr><td>FRLMMedication.productName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name</td></tr><tr><td>FRLMMedication.marketingAuthorisationHolder</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.doseForm</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode</td></tr><tr><td>FRLMMedication.item.ingredient.isActive</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.ingredient.substance</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.strength</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:ingredient.pharm:quantity</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.unitOfPresentation</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.containedQuantity</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto\" title=\"relatedto\">is related to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.amount</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asContent</td></tr><tr><td>FRLMMedication.item.packageType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:asContent.pharm:containerPackagedMedicine</td></tr><tr><td>FRLMMedication.device</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.characteristic</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText</td></tr><tr><td>FRLMMedication.batch.expirationDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDAProduitDeSante.pharm:expirationTime</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMMedication</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument</td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.code</td></tr><tr><td>FRLMMedication.classification</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-classification</td></tr><tr><td>FRLMMedication.productName</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.extension:ihe-ext-medication-productname</td></tr><tr><td>FRLMMedication.marketingAuthorisationHolder</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.manufacturer</td></tr><tr><td>FRLMMedication.item</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.itemReference</td></tr><tr><td>FRLMMedication.item.doseForm</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.form</td></tr><tr><td>FRLMMedication.item.ingredient</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient</td></tr><tr><td>FRLMMedication.item.ingredient.isActive</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.isActive</td></tr><tr><td>FRLMMedication.item.ingredient.substance</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient.itemCodeableConcept</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.strength</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.ingredient:substanceActive.strength</td></tr><tr><td>FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.unitOfPresentation</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.containedQuantity</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.item.amount</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.amount</td></tr><tr><td>FRLMMedication.item.packageType</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td/></tr><tr><td>FRLMMedication.device</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.characteristic</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.batch.lotNumber</td></tr><tr><td>FRLMMedication.batch.expirationDate</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRMedicationDocument.batch.expirationDate</td></tr></table></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Produit de santé\"",
+  "status" : "draft",
+  "date" : "2026-08-14T08:22:23+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCDAProduitDeSante (Groupe 1), et vers le profil FHIR FRMedicationDocument (Groupe 2).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante",
+    "element" : [{
+      "code" : "FRLMMedication",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.classification",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:asSpecializedKind",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.marketingAuthorisationHolder",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.doseForm",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.isActive",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.substance",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:ingredient.pharm:quantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.unitOfPresentation",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:asContent",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.containedQuantity",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:asContent",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.amount",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:asContent",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.packageType",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:asContent.pharm:containerPackagedMedicine",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.device",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.characteristic",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.expirationDate",
+      "target" : [{
+        "code" : "FRCDAProduitDeSante.pharm:expirationTime",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document",
+    "element" : [{
+      "code" : "FRLMMedication",
+      "target" : [{
+        "code" : "FRMedicationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "FRMedicationDocument.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.classification",
+      "target" : [{
+        "code" : "FRMedicationDocument.extension:ihe-ext-medication-classification",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "code" : "FRMedicationDocument.extension:ihe-ext-medication-productname",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.marketingAuthorisationHolder",
+      "target" : [{
+        "code" : "FRMedicationDocument.manufacturer",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item",
+      "target" : [{
+        "code" : "FRMedicationDocument.ingredient.itemReference",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.doseForm",
+      "target" : [{
+        "code" : "FRMedicationDocument.form",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient",
+      "target" : [{
+        "code" : "FRMedicationDocument.ingredient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.isActive",
+      "target" : [{
+        "code" : "FRMedicationDocument.ingredient.isActive",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.substance",
+      "target" : [{
+        "code" : "FRMedicationDocument.ingredient.itemCodeableConcept",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
+      "target" : [{
+        "code" : "FRMedicationDocument.ingredient:substanceActive.strength",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.unitOfPresentation",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.containedQuantity",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.amount",
+      "target" : [{
+        "code" : "FRMedicationDocument.amount",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.item.packageType",
+      "target" : [{
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.device",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.characteristic",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "code" : "FRMedicationDocument.batch.lotNumber",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.expirationDate",
+      "target" : [{
+        "code" : "FRMedicationDocument.batch.expirationDate",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
