@@ -112,6 +112,7 @@ FinalMapping AS (
   -- profils FHIR (ex: PractitionerRole ET Practitioner), la jointure
   -- produit naturellement une ligne par cible FHIR.
   SELECT
+    m.cm_id,
     m.Web,
     m.Name,
     m.group_index,
@@ -174,7 +175,8 @@ END AS Metier,
   Web
 FROM FinalMapping
 ORDER BY
-  Name,
+  CASE WHEN cm_id = 'FRHeaderDocumentLMCDAFHIR' THEN 0 ELSE 1 END,
+  cm_id,
   group_index,
   elem_index,
   fhir_group_index
