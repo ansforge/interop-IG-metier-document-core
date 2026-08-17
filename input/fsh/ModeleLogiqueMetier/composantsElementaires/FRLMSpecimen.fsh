@@ -6,20 +6,24 @@ Characteristics: #can-be-target
 
 * identifier 1..* Identifier "Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés."
 * status 0..1 CodeableConcept "Disponibilité du prélèvement"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): HL7 specimen-status"
 * type 0..1 CodeableConcept "Échantillon prélevé"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis"
 * specimenSource[x] 0..1 FRLMPatient or FRLMLocation or FRLMDevice "Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif"
 * parentSpecimen 0..* FRLMSpecimen "Prélèvement dont provient cet échantillon"
 * request 0..* FRLMServiceRequest "Demande à l'origine du prélèvement"
 * combined 0..1 CodeableConcept "Binding Description: (preferred): HL7 specimen-combined"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): HL7 specimen-combined"
 * collection 0..* Base "Détails de la collecte"
   * performer[x] 0..1 FRLMHealthProfessional or FRLMOrganisation or FRLMPatient or FRLMRelatedPerson "Organisation prélevante"
   * collected[x] 1..1 dateTime or Period "Date du prélèvement"
   * quantity 0..1 Quantity "Quantité"
   * method 0..1 CodeableConcept "Acte de prélèvement"
+    * ^binding.strength = #required
     * ^binding.description = "NABM (1.2.250.1.215.300.2) ou 33882-2 [LOINC] Prélèvement"
   * device 0..* FRLMDeviceUse "Dispositif utilisé"
   * additive[x] 0..* CodeableConcept or FRLMDevice "Produit utilisé"
@@ -29,5 +33,6 @@ Characteristics: #can-be-target
   * specimenQuantity 0..1 Quantity "Quantité de prélèvement dans le contenant"
   * containerDevice 1..1 FRLMDevice "Dispositif utilisé comme contenant"
 * condition 0..* CodeableConcept "État de l'échantillon"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): HL7 specimenCondition"
 * note 0..1 string "Commentaire"

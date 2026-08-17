@@ -8,6 +8,7 @@ Characteristics: #can-be-target
 * name 0..1 string "Nom du lieu"
 * description 0..1 string "Informations complémentaires sur le lieu permettant de mieux l'identifier, au-delà de son nom."
 * type 0..* CodeableConcept "Type de fonction exercée sur le lieu"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): https://terminology.hl7.org/ValueSet-v3-ServiceDeliveryLocationRoleType.html"
 * address 0..1 Address "Adresse du lieu"
 * managingOrganisation 0..1 FRLMOrganisation "Organisation responsable du lieu"

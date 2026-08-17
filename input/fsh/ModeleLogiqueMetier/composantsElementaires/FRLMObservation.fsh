@@ -10,6 +10,7 @@ Characteristics: #can-be-target
   * directSubject[x] 0..1 FRLMPatient or FRLMDevice or FRLMHealthProfessional or FRLMOrganisation or FRLMProcedure "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations."
 * observationDate[x] 1..1 dateTime or Period "Date de l'observation"
 * type 1..1 CodeableConcept "Type d'observation"
+  * ^binding.strength = #required
   * ^binding.description = "LOINC (2.16.840.1.113883.6.1) ou autre"
 * originalName 0..1 string "Nom de l'observation"
 * method 0..1 CodeableConcept "Méthode utilisée pour l'observation"
@@ -20,20 +21,27 @@ Characteristics: #can-be-target
   * Value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept or boolean "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation."
 * referenceRange 0..* Base "Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis."
   * low 0..1 Quantity "Limite inférieure de l'intervalle"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): UCUM for units"
   * high 0..1 Quantity "Limite supérieure de l'intervalle"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): UCUM for units"
   * normalValue 0..1 CodeableConcept "Valeur normale si pertinente pour l'intervalle"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): SNOMED CT"
   * type 0..1 CodeableConcept "Type d'intervalle de référence"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): HL7 Observation Reference Range Meaning Codes"
   * appliesTo 0..* CodeableConcept "Population concernée pour cet intervalle"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): SNOMED CT, HL7 v3-Race"
   * age 0..1 Range "Tranche d'âge pour cet intervalle"
+    * ^binding.strength = #preferred
     * ^binding.description = "(preferred): UCUM for units"
   * text 0..1 string "Texte libre"
 * interpretation 0..* CodeableConcept "Interprétation"
-  * ^binding.description = "(preferred): HL7 Observation Interpretation Codes"
+  * ^binding.strength = #required
+  * ^binding.description = "HL7 Observation Interpretation Codes"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis"
 * note 0..1 string "Commentaire"
 * component 0..* Base "Composant dans le cas d'une observation composée de plusieurs sous-observations"

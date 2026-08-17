@@ -9,6 +9,7 @@ Characteristics: #can-be-target
   * ^short = "Auteur de la Auteur de la dispensation"
 * header.status 1..1 
   * ^short = "Statut de la ligne de prescription"
+  * ^binding.strength = #required
   * ^binding.description = "Valeur issue du JDV_CompletudeDispensation_CISIS (1.2.250.1.213.1.1.5.765)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis"
 * receiver[x]	0..1 FRLMPatient or FRLMHealthProfessional or FRLMRelatedPerson			"Identification de la personne ayant reçu le médicament délivré, notamment lorsqu'il ne s'agit pas du patient. Si non présent, le patient est considéré comme le destinataire."			

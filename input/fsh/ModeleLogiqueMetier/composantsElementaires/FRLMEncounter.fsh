@@ -19,11 +19,13 @@ Characteristics: #can-be-target
 * admission 0..1 Base "Détails de l'admission"
   * admitter 0..1 FRLMHealthProfessional "Professionnel de santé ayant admis le patient"
   * admitSource 0..1 CodeableConcept "Modalité d'entrée d'un patient en ES (urgence, programmée, etc...)."
+    * ^binding.strength = #required
     * ^binding.description = "jdv-modalite-entree : Modalité d'entrée en établissement de santé"
     * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis"
 * dischargeDiagnosis[x] 0..* CodeableConcept or FRLMCondition "Les diagnostics au moment de la sortie."
 * dischargeDestination 0..1 Base "modalité de sortie du patient d'un ES (retour à domicile, EHPAD, HAD, etc...)"
   * type 0..1 CodeableConcept "Type de sortie"
+    * ^binding.strength = #required
     * ^binding.description = "JDV_ModaliteSortie_CISIS (1.2.250.1.213.1.1.5.74) ou autre JDV spécifique à un volet"
   * location[x] 0..1 FRLMOrganisation or FRLMLocation "Le lieu ou l'organisation"
 * serviceLocation 0..* Base "Liste des lieux où le patient était présent pendant cette rencontre."

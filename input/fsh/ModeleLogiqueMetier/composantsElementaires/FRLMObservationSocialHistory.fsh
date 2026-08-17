@@ -8,6 +8,7 @@ Characteristics: #can-be-target
 * header.status 1..1
 * observationDate[x] 1..1 dateTime	or Period	"date de l'observation"
 * type 1..1 CodeableConcept "Type d'observation"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-social-history-code-cisis (1.2.250.1.213.1.1.4.2.283.4)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-social-history-code-cisis"
 * result 1..1 CodeableConcept "Résultat de l’observation effectuée : 

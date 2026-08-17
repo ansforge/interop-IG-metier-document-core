@@ -33,93 +33,93 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationAdministra
 * group[=].element[=].target.code = #FRCDATraitement.entryRelationship:frTraitement.entryRelationship:frReferenceInterne
 * group[=].element[=].target.equivalence = #equivalent
 // // Posologie sous forme textuelle
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.renderedDosageInstruction
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.renderedDosageInstruction
 * group[=].element[=].target.code = #FRCDATraitement.text
 * group[=].element[=].target.equivalence = #equivalent
 // sequence
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.sequence
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.sequence
 * group[=].element[=].target.equivalence = #unmatched
 // 'instructionsPatient'
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.note
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.note
 * group[=].element[=].target.code = #FRCDATraitement.entryRelationship:frInstructionsAuPatient
 * group[=].element[=].target.equivalence = #equivalent
 // Dose administrée par prise
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.doseAndRate.dose[x]
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]
 * group[=].element[=].target.code = #FRCDATraitement.doseQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Rythme d'administration
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.doseAndRate.rate[x]
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]
 * group[=].element[=].target.code = #FRCDATraitement.rateQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Fréquence de prise
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Nombre de prises par période
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.numberOfTimes
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency.numberOfTimes
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime.frequency
 * group[=].element[=].target.equivalence = #equivalent
 // Période associée à la fréquence
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.period
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency.period
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime.period
 * group[=].element[=].target.equivalence = #equivalent
 // Jour de la semaine
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.dayOfWeek
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency.dayOfWeek
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Heure de prise
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.timeOfDay
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency.timeOfDay
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Instruction additionnelle liée à la fréquence
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.additionalInstructions
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.frequency.additionalInstructions
 * group[=].element[=].target.code = #FRCDATraitement.entryRelationship:frInstructionsAuPatient
 * group[=].element[=].target.equivalence = #equivalent
 // Date précise de prise
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.dateOfAdministration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.dateOfAdministration
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Condition de prise
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.conditionOfAdministration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.conditionOfAdministration
 * group[=].element[=].target.code = #FRCDATraitement.precondition
 * group[=].element[=].target.equivalence = #equivalent
 // Date / période / durée de la séquence de traitement
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.date[x]
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.date[x]
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Durée d'administration
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.duration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.duration
 * group[=].element[=].target.code = #FRCDATraitement.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Événement de prise (ex : avant repas)
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.eventTime
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.eventTime
 * group[=].element[=].target.code = #FRCDATraitement.entryRelationship:frInstructionsAuPatient
 * group[=].element[=].target.equivalence = #equivalent
 // Événement de fin de séquence
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.eventEndSequence
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.eventEndSequence
 * group[=].element[=].target.equivalence = #unmatched
 // Région anatomique d'administration
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.bodySite
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.bodySite
 * group[=].element[=].target.code = #FRCDATraitement.approachSiteCode
 * group[=].element[=].target.equivalence = #equivalent
 // Voie d'administration
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.routeOfAdministration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration
 * group[=].element[=].target.code = #FRCDATraitement.routeCode
 * group[=].element[=].target.equivalence = #equivalent
 // Dose maximale par période
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.quantity
 * group[=].element[=].target.code = #FRCDATraitement.maxDoseQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Durée associée à la dose maximale par période
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerPeriod.duration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.duration
 * group[=].element[=].target.code = #FRCDATraitement.maxDoseQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Dose maximale par administration
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerAdministration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerAdministration
 * group[=].element[=].target.code = #FRCDATraitement.maxDoseQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Dose maximale sur la durée de vie
-* group[=].element[+].code = #FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxLifetimeDose
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.maxLifetimeDose
 * group[=].element[=].target.code = #FRCDATraitement.maxDoseQuantity
 * group[=].element[=].target.equivalence = #equivalent
 // Note
@@ -163,6 +163,10 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationAdministra
 // Posologie textuelle
 * group[=].element[+].code = #FRLMMedicationAdministration.dosage.renderedDosageInstruction
 * group[=].element[=].target.code = #FRMedicationAdministrationDocument.dosage.text
+* group[=].element[=].target.equivalence = #equivalent
+// Région anatomique d'administration
+* group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.bodySite
+* group[=].element[=].target.code = #FRMedicationAdministrationDocument.dosage.site
 * group[=].element[=].target.equivalence = #equivalent
 // Voie d'administration
 * group[=].element[+].code = #FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration

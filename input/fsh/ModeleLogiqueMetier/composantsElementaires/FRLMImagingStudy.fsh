@@ -8,6 +8,7 @@ Characteristics: #can-be-target
 * header.identifier 1..*
   * ^short = "UUID instance examen"
 * modality 1..* CodeableConcept "Modalités d'imagerie utilisées lors de l'examen (DICOM CID029)"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-modalite-acquisition-cisis : Modalité d'imagerie"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis"
 * bodySite 0..* FRLMBodyStructure "Localisations anatomiques"
