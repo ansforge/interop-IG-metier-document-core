@@ -5,7 +5,7 @@ Description: "Personne/Structure impliquée dans les évènements décrits par l
 Characteristics: #can-be-target	
 
 * identifier 0..* Identifier "Identifiants de la personne"
-* name 0..*	fr-lm-human-name "Nom de la personne"
+* name 0..*	FRLMHumanName "Nom de la personne"
 * type 1..1 CodeableConcept	"Type de participation"
   * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-ParticipationType-cisis (2.16.840.1.113883.1.11.10901)"
