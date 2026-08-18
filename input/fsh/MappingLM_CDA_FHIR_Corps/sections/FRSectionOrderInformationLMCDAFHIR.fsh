@@ -11,19 +11,20 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-demande-examen"
 // élément racine (section Demande d'examen d'imagerie non codée)
 * group[=].element[+].code = #FRLMOrderInformation
-* group[=].element[=].target.code = #FRCDADICOMDemandeExamen
+* group[=].element[=].target.code = #Section
+* group[=].element[=].target.display = "FRCDADICOMDemandeExamen"
 * group[=].element[=].target.equivalence = #equivalent
 // titre de la section non codée
 * group[=].element[+].code = #FRLMOrderInformation.titleSection
-* group[=].element[=].target.code = #FRCDADICOMDemandeExamen.title
+* group[=].element[=].target.code = #Section.title
 * group[=].element[=].target.equivalence = #equivalent
 // bloc narratif :  finalité d'examen et justification de la demande 
 * group[=].element[+].code = #FRLMOrderInformation.description
-* group[=].element[=].target.code = #FRCDADICOMDemandeExamen.text
+* group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMOrderInformation.codeSection
-* group[=].element[=].target.code = #FRCDADICOMDemandeExamen.code
+* group[=].element[=].target.code = #Section.code
 * group[=].element[=].target.equivalence = #equivalent
 // entrée demande d'examen d'imagerie
 * group[=].element[+].code = #FRLMOrderInformation.entry.orderInformation
@@ -35,21 +36,22 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMOrderInformation
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionOrder
+* group[=].element[=].target.code = #Composition.section:sectionOrder
+* group[=].element[=].target.display = "FRCompositionDocument.section:sectionOrder"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMOrderInformation.codeSection
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionOrder.code
+* group[=].element[=].target.code = #Composition.section:sectionOrder.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMOrderInformation.titleSection
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionOrder.title
+* group[=].element[=].target.code = #Composition.section:sectionOrder.title
 * group[=].element[=].target.equivalence = #equivalent
 // texte narratif de la section
 * group[=].element[+].code = #FRLMOrderInformation.description
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionOrder.text
+* group[=].element[=].target.code = #Composition.section:sectionOrder.text
 * group[=].element[=].target.equivalence = #equivalent
 // entrée demande d'examen d'imagerie
 * group[=].element[+].code = #FRLMOrderInformation.entry.orderInformation
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionOrder.entry:FRServiceRequestImagingDocument
+* group[=].element[=].target.code = #Composition.section:sectionOrder.entry:FRServiceRequestImagingDocument
 * group[=].element[=].target.equivalence = #equivalent

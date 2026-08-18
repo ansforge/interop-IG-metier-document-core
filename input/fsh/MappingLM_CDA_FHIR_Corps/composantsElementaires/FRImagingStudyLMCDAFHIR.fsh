@@ -12,7 +12,8 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 
 // Élément racine
 * group[=].element[+].code = #FRLMImagingStudy
-* group[=].element[=].target.code = #FRCDADICOMExamenImagerie
+* group[=].element[=].target.code = #Act
+* group[=].element[=].target.display = "FRCDADICOMExamenImagerie"
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
 * group[=].element[+].code = #FRLMImagingStudy.header.identifier
@@ -68,49 +69,50 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImagingStudy
-* group[=].element[=].target.code = #FRImagingStudyDocument
+* group[=].element[=].target.code = #ImagingStudy
+* group[=].element[=].target.display = "FRImagingStudyDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
 * group[=].element[+].code = #FRLMImagingStudy.header.identifier
-* group[=].element[=].target.code = #FRImagingStudyDocument.identifier
+* group[=].element[=].target.code = #ImagingStudy.identifier
 * group[=].element[=].target.equivalence = #equivalent
 // Modalité de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.modality
-* group[=].element[=].target.code = #FRImagingStudyDocument.modality
+* group[=].element[=].target.code = #ImagingStudy.modality
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.bodySite
-* group[=].element[=].target.code = #FRImagingStudyDocument.bodySite
+* group[=].element[=].target.code = #ImagingStudy.bodySite
 * group[=].element[=].target.equivalence = #equivalent
 // Rencontre associée à l'examen
 * group[=].element[+].code = #FRLMImagingStudy.encounter
-* group[=].element[=].target.code = #FRImagingStudyDocument.encounter
+* group[=].element[=].target.code = #ImagingStudy.encounter
 * group[=].element[=].target.equivalence = #equivalent
 // Date de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.started
-* group[=].element[=].target.code = #FRImagingStudyDocument.started
+* group[=].element[=].target.code = #ImagingStudy.started
 * group[=].element[=].target.equivalence = #equivalent
 // demande d'examen
 * group[=].element[+].code = #FRLMImagingStudy.basedOn
-* group[=].element[=].target.code = #FRImagingStudyDocument.basedOn
+* group[=].element[=].target.code = #ImagingStudy.basedOn
 * group[=].element[=].target.equivalence = #equivalent
 // Nombre de séries
 * group[=].element[+].code = #FRLMImagingStudy.numberOfSeries
-* group[=].element[=].target.code = #FRImagingStudyDocument.numberOfSeries
+* group[=].element[=].target.code = #ImagingStudy.numberOfSeries
 * group[=].element[=].target.equivalence = #equivalent
 // Nombre d'instances
 * group[=].element[+].code = #FRLMImagingStudy.numberOfInstances
-* group[=].element[=].target.code = #FRImagingStudyDocument.numberOfInstances
+* group[=].element[=].target.code = #ImagingStudy.numberOfInstances
 * group[=].element[=].target.equivalence = #equivalent
 // Organisation responsable de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.studyCustodian
-* group[=].element[=].target.code = #FRImagingStudyDocument.series.performer.actor:Organization
+* group[=].element[=].target.code = #ImagingStudy.series.performer.actor:Organization
 * group[=].element[=].target.equivalence = #equivalent
 // Endpoint
 * group[=].element[+].code = #FRLMImagingStudy.studyEndpoint
-* group[=].element[=].target.code = #FRImagingStudyDocument.endpoint
+* group[=].element[=].target.code = #ImagingStudy.endpoint
 * group[=].element[=].target.equivalence = #equivalent
 // series
 * group[=].element[+].code = #FRLMImagingStudy.series   
-* group[=].element[=].target.code = #FRImagingStudyDocument.series
+* group[=].element[=].target.code = #ImagingStudy.series
 * group[=].element[=].target.equivalence = #equivalent

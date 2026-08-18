@@ -16,17 +16,18 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Élément racine
 * group[=].element[+].code = #FRLMOrder
-* group[=].element[=].target.code = #inFulfillmentOf
+* group[=].element[=].target.code = #InFulfillmentOf
+* group[=].element[=].target.display = "inFulfillmentOf"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant de la demande
 * group[=].element[+].code = #FRLMOrder.orderId
-* group[=].element[=].target.code = #inFulfillmentOf.order.id
+* group[=].element[=].target.code = #InFulfillmentOf.order.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Accession Number
 * group[=].element[+].code = #FRLMOrder.accessionNumber
-* group[=].element[=].target.code = #inFulfillmentOf.order.ps3-20:accessionNumber
+* group[=].element[=].target.code = #InFulfillmentOf.order.ps3-20:accessionNumber
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date et heure de la demande

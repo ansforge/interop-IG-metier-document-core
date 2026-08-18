@@ -16,23 +16,24 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Élément racine
 * group[=].element[+].code = #FRLMAttester
-* group[=].element[=].target.code = #authenticator
+* group[=].element[=].target.code = #Authenticator
+* group[=].element[=].target.display = "authenticator"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date/heure de l'attestation de validité
 * group[=].element[+].code = #FRLMAttester.dateTime
-* group[=].element[=].target.code = #authenticator.time
+* group[=].element[=].target.code = #Authenticator.time
 * group[=].element[=].target.equivalence = #equivalent
 
 // Validateur professionnel de santé
 * group[=].element[+].code = #FRLMAttester.attester:healthProfessional
-* group[=].element[=].target.code = #authenticator.assignedEntity
+* group[=].element[=].target.code = #Authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Validateur système
 * group[=].element[+].code = #FRLMAttester.attester:device
-* group[=].element[=].target.code = #authenticator.assignedEntity
+* group[=].element[=].target.code = #Authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."
 

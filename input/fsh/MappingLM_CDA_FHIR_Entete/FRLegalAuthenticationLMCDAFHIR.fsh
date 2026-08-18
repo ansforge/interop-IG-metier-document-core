@@ -16,35 +16,36 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Élément racine
 * group[=].element[+].code = #FRLMLegalAuthentication
-* group[=].element[=].target.code = #legalAuthenticator
+* group[=].element[=].target.code = #LegalAuthenticator
+* group[=].element[=].target.display = "legalAuthenticator"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date/heure de la prise de responsabilité
 * group[=].element[+].code = #FRLMLegalAuthentication.dateTime
-* group[=].element[=].target.code = #legalAuthenticator.time
+* group[=].element[=].target.code = #LegalAuthenticator.time
 * group[=].element[=].target.equivalence = #equivalent
 
 // Responsable professionnel de santé
 * group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator:healthProfessional
-* group[=].element[=].target.code = #legalAuthenticator.assignedEntity
+* group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Responsable patient/usager
 * group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator:patient
-* group[=].element[=].target.code = #legalAuthenticator.assignedEntity
+* group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
 
 // Responsable système
 * group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator:device
-* group[=].element[=].target.code = #legalAuthenticator.assignedEntity
+* group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
 
 // Responsable organisation
 * group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator:organisation
-* group[=].element[=].target.code = #legalAuthenticator.assignedEntity
+* group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
 

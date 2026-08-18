@@ -16,7 +16,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Structure de conservation
 * group[=].element[+].code = #FRLMHeaderDocument.custodian
-* group[=].element[=].target.code = #custodian.assignedCustodian.representedCustodianOrganization
+* group[=].element[=].target.code = #Custodian.assignedCustodian.representedCustodianOrganization
+* group[=].element[=].target.display = "custodian.assignedCustodian.representedCustodianOrganization"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping."
 

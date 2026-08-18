@@ -11,15 +11,16 @@ Description: "Mapping des éléments du modèle métier FRLMVitalSigns vers la s
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signes-vitaux"
 // Élément racine
 * group[=].element[+].code = #FRLMVitalSigns
-* group[=].element[=].target.code = #FRCDASignesVitaux
+* group[=].element[=].target.code = #Organizer
+* group[=].element[=].target.display = "FRCDASignesVitaux"
 * group[=].element[=].target.equivalence = #equivalent
 // titreSection 
 * group[=].element[+].code = #FRLMVitalSigns.titleSection
-* group[=].element[=].target.code = #FRCDASignesVitaux.title
+* group[=].element[=].target.code = #Organizer.title
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Signes vitaux
 * group[=].element[+].code = #FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign
-* group[=].element[=].target.code = #FRCDASignesVitaux.entry:FRCDASignesVitauxEntry
+* group[=].element[=].target.code = #Organizer.entry:FRCDASignesVitauxEntry
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -27,13 +28,14 @@ Description: "Mapping des éléments du modèle métier FRLMVitalSigns vers la s
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMVitalSigns
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionVitalSigns
+* group[=].element[=].target.code = #Composition.section:sectionVitalSigns
+* group[=].element[=].target.display = "FRCompositionDocument.section:sectionVitalSigns"
 * group[=].element[=].target.equivalence = #equivalent
 // titreSection
 * group[=].element[+].code = #FRLMVitalSigns.titleSection
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionVitalSigns.title
+* group[=].element[=].target.code = #Composition.section:sectionVitalSigns.title
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Signes vitaux
 * group[=].element[+].code = #FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionVitalSigns.entry:FRObservationVitalSignsDocument
+* group[=].element[=].target.code = #Composition.section:sectionVitalSigns.entry:FRObservationVitalSignsDocument
 * group[=].element[=].target.equivalence = #equivalent

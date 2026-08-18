@@ -17,7 +17,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 
 // Élément racine
 * group[=].element[+].code = #FRLMRelatedPerson
-* group[=].element[=].target.code = #relatedEntity
+* group[=].element[=].target.code = #RelatedEntity
+* group[=].element[=].target.display = "relatedEntity"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
@@ -27,19 +28,19 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 
 // Nom
 * group[=].element[+].code = #FRLMRelatedPerson.name
-* group[=].element[=].target.code = #relatedEntity.relatedPerson.name
+* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMRelatedPerson.name.family
-* group[=].element[=].target.code = #relatedEntity.relatedPerson.name.family
+* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.family
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMRelatedPerson.name.given
-* group[=].element[=].target.code = #relatedEntity.relatedPerson.name.given
+* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.given
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMRelatedPerson.name.prefix
-* group[=].element[=].target.code = #relatedEntity.relatedPerson.name.prefix
+* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.prefix
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMRelatedPerson.name.suffix
-* group[=].element[=].target.code = #relatedEntity.relatedPerson.name.suffix
+* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.suffix
 * group[=].element[=].target.equivalence = #equivalent
 
 // Patient / usager concerné
@@ -49,17 +50,17 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 
 // Lien avec le patient
 * group[=].element[+].code = #FRLMRelatedPerson.relationship
-* group[=].element[=].target.code = #relatedEntity.code
+* group[=].element[=].target.code = #RelatedEntity.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Adresse
 * group[=].element[+].code = #FRLMRelatedPerson.address
-* group[=].element[=].target.code = #relatedEntity.addr
+* group[=].element[=].target.code = #RelatedEntity.addr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Télécom
 * group[=].element[+].code = #FRLMRelatedPerson.telecom
-* group[=].element[=].target.code = #relatedEntity.telecom
+* group[=].element[=].target.code = #RelatedEntity.telecom
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sexe, date de naissance, décès, naissance multiple, photo, période, communication

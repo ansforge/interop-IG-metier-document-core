@@ -16,23 +16,24 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Élément racine
 * group[=].element[+].code = #FRLMDataEnterer
-* group[=].element[=].target.code = #dataEnterer
+* group[=].element[=].target.code = #DataEnterer
+* group[=].element[=].target.display = "dataEnterer"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de saisie
 * group[=].element[+].code = #FRLMDataEnterer.date
-* group[=].element[=].target.code = #dataEnterer.time
+* group[=].element[=].target.code = #DataEnterer.time
 * group[=].element[=].target.equivalence = #equivalent
 
 // Opérateur de saisie professionnel de santé
 * group[=].element[+].code = #FRLMDataEnterer.dataEnterer:healthProfessional
-* group[=].element[=].target.code = #dataEnterer.assignedEntity
+* group[=].element[=].target.code = #DataEnterer.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'opérateur de saisie professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Opérateur de saisie patient/usager
 * group[=].element[+].code = #FRLMDataEnterer.dataEnterer:patient
-* group[=].element[=].target.code = #dataEnterer.assignedEntity
+* group[=].element[=].target.code = #DataEnterer.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'opérateur de saisie patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
 

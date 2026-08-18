@@ -17,13 +17,14 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 
 // Élément racine
 * group[=].element[+].code = #FRLMOrganisation
-* group[=].element[=].target.code = #assignedEntity.representedOrganization
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization
+* group[=].element[=].target.display = "assignedEntity.representedOrganization"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization."
 
 // Identifiant
 * group[=].element[+].code = #FRLMOrganisation.identifier
-* group[=].element[=].target.code = #assignedEntity.representedOrganization.id
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type de structure
@@ -33,17 +34,17 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 
 // Nom
 * group[=].element[+].code = #FRLMOrganisation.name
-* group[=].element[=].target.code = #assignedEntity.representedOrganization.name
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization.name
 * group[=].element[=].target.equivalence = #equivalent
 
 // Adresse
 * group[=].element[+].code = #FRLMOrganisation.address
-* group[=].element[=].target.code = #assignedEntity.representedOrganization.addr
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization.addr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Télécom
 * group[=].element[+].code = #FRLMOrganisation.telecom
-* group[=].element[=].target.code = #assignedEntity.representedOrganization.telecom
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization.telecom
 * group[=].element[=].target.equivalence = #equivalent
 
 // Organisation parente
@@ -53,7 +54,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 
 // Secteur d'activité
 * group[=].element[+].code = #FRLMOrganisation.industrySector
-* group[=].element[=].target.code = #assignedEntity.representedOrganization.standardIndustryClassCode
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization.standardIndustryClassCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR

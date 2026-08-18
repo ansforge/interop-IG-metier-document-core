@@ -14,27 +14,28 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 // Élément racine
 * group[=].element[+].code = #FRLMAdverseDrugReaction
-* group[=].element[=].target.code = #FRCDAEffetIndesirable
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRCDAEffetIndesirable"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
 * group[=].element[+].code = #FRLMAdverseDrugReaction.header.identifier
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.id
+* group[=].element[=].target.code = #Observation.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Status
 * group[=].element[+].code = #FRLMAdverseDrugReaction.header.status
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.statusCode
+* group[=].element[=].target.code = #Observation.statusCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // Code
 * group[=].element[+].code = #FRLMAdverseDrugReaction.adverseDrugReactionType
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Date de début et de fin de l'effet indésirable
 * group[=].element[+].code = #FRLMAdverseDrugReaction.header.date
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.effectiveTime
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent 
 
 // Date de détection de l'effet indésirable
@@ -44,32 +45,32 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 // Valeur de l'observation
 * group[=].element[+].code = #FRLMAdverseDrugReaction.value
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.value
+* group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
 // Traitement
 * group[=].element[+].code = #FRLMAdverseDrugReaction.medicationAdministration
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frTraitement
+* group[=].element[=].target.code = #Observation.entryRelationship:frTraitement
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée
 * group[=].element[+].code = #FRLMAdverseDrugReaction.reaction
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frProbleme
+* group[=].element[=].target.code = #Observation.entryRelationship:frProbleme
 * group[=].element[=].target.equivalence = #equivalent
 
 // Imputabilité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.causalityAssessment
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable
+* group[=].element[=].target.code = #Observation.entryRelationship:frImputabiliteEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Gravité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.severity
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable
+* group[=].element[=].target.code = #Observation.entryRelationship:frGraviteEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Évolution
 * group[=].element[+].code = #FRLMAdverseDrugReaction.outcome
-* group[=].element[=].target.code = #FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable
+* group[=].element[=].target.code = #Observation.entryRelationship:frEvolutionEffetIndesirable
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -79,27 +80,28 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 // Élément racine
 * group[=].element[+].code = #FRLMAdverseDrugReaction
-* group[=].element[=].target.code = #FRAdverseEventDocument
+* group[=].element[=].target.code = #AdverseEvent
+* group[=].element[=].target.display = "FRAdverseEventDocument"
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Identifiant
 * group[=].element[+].code = #FRLMAdverseDrugReaction.header.identifier
-* group[=].element[=].target.code = #FRAdverseEventDocument.identifier
+* group[=].element[=].target.code = #AdverseEvent.identifier
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Code
 * group[=].element[+].code = #FRLMAdverseDrugReaction.adverseDrugReactionType
-* group[=].element[=].target.code = #FRAdverseEventDocument.category    
+* group[=].element[=].target.code = #AdverseEvent.category    
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de début de l'effet indésirable
 * group[=].element[+].code = #FRLMAdverseDrugReaction.header.date
-* group[=].element[=].target.code = #FRAdverseEventDocument.date
+* group[=].element[=].target.code = #AdverseEvent.date
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de détection de l'effet indésirable
 * group[=].element[+].code = #FRLMAdverseDrugReaction.detected
-* group[=].element[=].target.code = #FRAdverseEventDocument.detected
+* group[=].element[=].target.code = #AdverseEvent.detected
 * group[=].element[=].target.equivalence = #equivalent
 
 // Valeur de l'observation (non renseigné et fixé à value xsi:type='CD')
@@ -108,25 +110,25 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 // Traitement
 * group[=].element[+].code = #FRLMAdverseDrugReaction.medicationAdministration
-* group[=].element[=].target.code = #FRAdverseEventDocument.suspectEntity.instance
+* group[=].element[=].target.code = #AdverseEvent.suspectEntity.instance
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée
 * group[=].element[+].code = #FRLMAdverseDrugReaction.reaction
-* group[=].element[=].target.code = #FRAdverseEventDocument.resultingCondition
+* group[=].element[=].target.code = #AdverseEvent.resultingCondition
 * group[=].element[=].target.equivalence = #equivalent
 
 // Imputabilité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.causalityAssessment
-* group[=].element[=].target.code = #FRAdverseEventDocument.suspectEntity.causality
+* group[=].element[=].target.code = #AdverseEvent.suspectEntity.causality
 * group[=].element[=].target.equivalence = #equivalent
 
 // Gravité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.severity
-* group[=].element[=].target.code = #FRAdverseEventDocument.severity
+* group[=].element[=].target.code = #AdverseEvent.severity
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Évolution
 * group[=].element[+].code = #FRLMAdverseDrugReaction.outcome
-* group[=].element[=].target.code = #FRAdverseEventDocument.outcome
+* group[=].element[=].target.code = #AdverseEvent.outcome
 * group[=].element[=].target.equivalence = #equivalent

@@ -11,23 +11,24 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-des-actes"
 // élément racine
 * group[=].element[+].code = #FRLMProcedures
-* group[=].element[=].target[+].code = #FRCDAHistoriqueDesActes
+* group[=].element[=].target[+].code = #Section
+* group[=].element[=].target[=].display = "FRCDAHistoriqueDesActes"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMProcedures.codeSection
-* group[=].element[=].target[+].code = #FRCDAHistoriqueDesActes.code
+* group[=].element[=].target[+].code = #Section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMProcedures.titleSection
-* group[=].element[=].target[+].code = #FRCDAHistoriqueDesActes.title
+* group[=].element[=].target[+].code = #Section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMProcedures.description
-* group[=].element[=].target[+].code = #FRCDAHistoriqueDesActes.text
+* group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMProcedures.entry.procedure:FRLMProcedure
-* group[=].element[=].target[+].code = #FRCDAHistoriqueDesActes.entry:FRCDAActe
+* group[=].element[=].target[+].code = #Section.entry:FRCDAActe
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -35,21 +36,22 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMProcedures
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionProceduresHx
+* group[=].element[=].target[+].code = #Composition.section:sectionProceduresHx
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionProceduresHx"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMProcedures.codeSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionProceduresHx.code
+* group[=].element[=].target[+].code = #Composition.section:sectionProceduresHx.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMProcedures.titleSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionProceduresHx.title
+* group[=].element[=].target[+].code = #Composition.section:sectionProceduresHx.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMProcedures.description
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionProceduresHx.text
+* group[=].element[=].target[+].code = #Composition.section:sectionProceduresHx.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMProcedures.entry.procedure:FRLMProcedure
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionProceduresHx.entry:FRProcedureDocument
+* group[=].element[=].target[+].code = #Composition.section:sectionProceduresHx.entry:FRProcedureDocument
 * group[=].element[=].target[=].equivalence = #equivalent

@@ -13,18 +13,19 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 
 // Élément racine
 * group[=].element[+].code = #FRLMDevice
-* group[=].element[=].target.code = #FRCDADispositifMedical.participant.participantRole.playingDevice
+* group[=].element[=].target.code = #Supply.participant.participantRole.playingDevice
+* group[=].element[=].target.display = "FRCDADispositifMedical.participant.participantRole.playingDevice"
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Le modèle métier FRLMDevice correspond à la composante playingDevice portée dans l'entrée CDA FRCDADispositifMedical."
 
 // Identifiant du DM
 * group[=].element[+].code = #FRLMDevice.identifier
-* group[=].element[=].target.code = #FRCDADispositifMedical.participant.participantRole.id
+* group[=].element[=].target.code = #Supply.participant.participantRole.id
 * group[=].element[=].target.equivalence = #relatedto
 
 // Identifiant unique du DM (UDI)
 * group[=].element[+].code = #FRLMDevice.udi
-* group[=].element[=].target.code = #FRCDADispositifMedical.participant.participantRole.id
+* group[=].element[=].target.code = #Supply.participant.participantRole.id
 * group[=].element[=].target.equivalence = #relatedto
 
 // Fabricant
@@ -54,12 +55,12 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 
 // Nom du DM
 * group[=].element[+].code = #FRLMDevice.name
-* group[=].element[=].target.code = #FRCDADispositifMedical.text
+* group[=].element[=].target.code = #Supply.text
 * group[=].element[=].target.equivalence = #relatedto
 
 // Valeur du nom du DM
 * group[=].element[+].code = #FRLMDevice.name.value
-* group[=].element[=].target.code = #FRCDADispositifMedical.text
+* group[=].element[=].target.code = #Supply.text
 * group[=].element[=].target.equivalence = #relatedto
 
 // Type du nom du DM
@@ -79,12 +80,12 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 
 // Type de DM
 * group[=].element[+].code = #FRLMDevice.type
-* group[=].element[=].target.code = #FRCDADispositifMedical.participant.participantRole.playingDevice.code
+* group[=].element[=].target.code = #Supply.participant.participantRole.playingDevice.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Commentaire
 * group[=].element[+].code = #FRLMDevice.note
-* group[=].element[=].target.code = #FRCDADispositifMedical.text
+* group[=].element[=].target.code = #Supply.text
 * group[=].element[=].target.equivalence = #relatedto
 
 // Groupe Mapping 2 : modèle métier → FHIR

@@ -13,57 +13,58 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Élément racine
 * group[=].element[+].code = #FRLMCondition
-* group[=].element[=].target.code = #FRCDAProbleme
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRCDAProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
 * group[=].element[+].code = #FRLMCondition.header.identifier
-* group[=].element[=].target.code = #FRCDAProbleme.id
+* group[=].element[=].target.code = #Observation.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type d'observation
 * group[=].element[+].code = #FRLMCondition.type
-* group[=].element[=].target.code = #FRCDAProbleme.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Problème observé
 * group[=].element[+].code = #FRLMCondition.problem
-* group[=].element[=].target.code = #FRCDAProbleme.value
+* group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
 // Période
 * group[=].element[+].code = #FRLMCondition.period
-* group[=].element[=].target.code = #FRCDAProbleme.effectiveTime
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de début du problème
 * group[=].element[+].code = #FRLMCondition.period.onsetDate
-* group[=].element[=].target.code = #FRCDAProbleme.effectiveTime.low
+* group[=].element[=].target.code = #Observation.effectiveTime.low
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de fin du problème
 * group[=].element[+].code = #FRLMCondition.period.endDate
-* group[=].element[=].target.code = #FRCDAProbleme.effectiveTime.high
+* group[=].element[=].target.code = #Observation.effectiveTime.high
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut du problème
 * group[=].element[+].code = #FRLMCondition.header.status
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frStatutDuProbleme
+* group[=].element[=].target.code = #Observation.entryRelationship:frStatutDuProbleme
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sévérité
 * group[=].element[+].code = #FRLMCondition.severity
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frSeverite
+* group[=].element[=].target.code = #Observation.entryRelationship:frSeverite
 * group[=].element[=].target.equivalence = #equivalent
 
 // Certitude
 * group[=].element[+].code = #FRLMCondition.diagnosisAssertionStatus
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frCertitude
+* group[=].element[=].target.code = #Observation.entryRelationship:frCertitude
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut clinique du patient
 * group[=].element[+].code = #FRLMCondition.clinicalStatus
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frStatutCliniqueDuPatient
+* group[=].element[=].target.code = #Observation.entryRelationship:frStatutCliniqueDuPatient
 * group[=].element[=].target.equivalence = #equivalent
 
 // Localisation anatomique
@@ -78,12 +79,12 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Document référencé
 * group[=].element[+].code = #FRLMCondition.reference
-* group[=].element[=].target.code = #FRCDAProbleme.reference.externalDocument.text.reference
+* group[=].element[=].target.code = #Observation.reference.externalDocument.text.reference
 * group[=].element[=].target.equivalence = #equivalent
 
 // Commentaire
 * group[=].element[+].code = #FRLMCondition.note
-* group[=].element[=].target.code = #FRCDAProbleme.entryRelationship:frCommentaireER
+* group[=].element[=].target.code = #Observation.entryRelationship:frCommentaireER
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -93,27 +94,28 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Élément racine
 * group[=].element[+].code = #FRLMCondition
-* group[=].element[=].target.code = #FRConditionDocument
+* group[=].element[=].target.code = #Condition
+* group[=].element[=].target.display = "FRConditionDocument"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
 * group[=].element[+].code = #FRLMCondition.header.identifier
-* group[=].element[=].target.code = #FRConditionDocument.identifier
+* group[=].element[=].target.code = #Condition.identifier
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type d'observation
 * group[=].element[+].code = #FRLMCondition.type
-* group[=].element[=].target.code = #FRConditionDocument.category
+* group[=].element[=].target.code = #Condition.category
 * group[=].element[=].target.equivalence = #equivalent
 
 // Problème observé
 * group[=].element[+].code = #FRLMCondition.problem
-* group[=].element[=].target.code = #FRConditionDocument.code
+* group[=].element[=].target.code = #Condition.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut du problème
 * group[=].element[+].code = #FRLMCondition.header.status
-* group[=].element[=].target.code = #FRConditionDocument.clinicalStatus
+* group[=].element[=].target.code = #Condition.clinicalStatus
 * group[=].element[=].target.equivalence = #equivalent
 
 // Période
@@ -123,45 +125,45 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Date de début du problème
 * group[=].element[+].code = #FRLMCondition.period.onsetDate
-* group[=].element[=].target.code = #FRConditionDocument.onsetDateTime
+* group[=].element[=].target.code = #Condition.onsetDateTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de fin du problème
 * group[=].element[+].code = #FRLMCondition.period.endDate
-* group[=].element[=].target.code = #FRConditionDocument.abatementDateTime
+* group[=].element[=].target.code = #Condition.abatementDateTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sévérité
 * group[=].element[+].code = #FRLMCondition.severity
-* group[=].element[=].target.code = #FRConditionDocument.severity
+* group[=].element[=].target.code = #Condition.severity
 * group[=].element[=].target.equivalence = #equivalent
 
 // Certitude
 * group[=].element[+].code = #FRLMCondition.diagnosisAssertionStatus
-* group[=].element[=].target.code = #FRConditionDocument.verificationStatus
+* group[=].element[=].target.code = #Condition.verificationStatus
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut clinique du patient
 * group[=].element[+].code = #FRLMCondition.clinicalStatus
-* group[=].element[=].target.code = #FRConditionDocument.stage.summary
+* group[=].element[=].target.code = #Condition.stage.summary
 * group[=].element[=].target.equivalence = #equivalent
 
 // Localisation anatomique
 * group[=].element[+].code = #FRLMCondition.bodySite
-* group[=].element[=].target.code = #FRConditionDocument.bodySite
+* group[=].element[=].target.code = #Condition.bodySite
 * group[=].element[=].target.equivalence = #equivalent
 
 // Stade/Grade
 * group[=].element[+].code = #FRLMCondition.stage
-* group[=].element[=].target.code = #FRConditionDocument.stage.summary
+* group[=].element[=].target.code = #Condition.stage.summary
 * group[=].element[=].target.equivalence = #equivalent
 
 // Document référencé
 * group[=].element[+].code = #FRLMCondition.reference
-* group[=].element[=].target.code = #FRConditionDocument.evidence.detail:FRDocumentReferenceDocument.content.attachment.url
+* group[=].element[=].target.code = #Condition.evidence.detail:FRDocumentReferenceDocument.content.attachment.url
 * group[=].element[=].target.equivalence = #equivalent
 
 // Commentaire
 * group[=].element[+].code = #FRLMCondition.note
-* group[=].element[=].target.code = #FRConditionDocument.note
+* group[=].element[=].target.code = #Condition.note
 * group[=].element[=].target.equivalence = #equivalent

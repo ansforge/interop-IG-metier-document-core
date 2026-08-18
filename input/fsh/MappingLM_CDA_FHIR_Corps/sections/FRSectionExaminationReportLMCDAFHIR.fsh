@@ -11,27 +11,28 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-acte-imagerie"
 // Élément racine
 * group[=].element[+].code = #FRLMExaminationReport
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie
+* group[=].element[=].target.code = #Section
+* group[=].element[=].target.display = "FRCDADICOMActeImagerie"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMExaminationReport.codeSection
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie.code
+* group[=].element[=].target.code = #Section.code
 * group[=].element[=].target.equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMExaminationReport.titleSection
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie.title
+* group[=].element[=].target.code = #Section.title
 * group[=].element[=].target.equivalence = #equivalent
 // Description narrative de l'acte
 * group[=].element[+].code = #FRLMExaminationReport.description
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie.text
+* group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Techniques d'imagerie
 * group[=].element[+].code = #FRLMExaminationReport.entry.imagingProcedures
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie.entry.frDICOMTechniqueImagerie
+* group[=].element[=].target.code = #Section.entry.frDICOMTechniqueImagerie
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Produits de santé administrés
 * group[=].element[+].code = #FRLMExaminationReport.entry.medicationAdministrations
-* group[=].element[=].target.code = #FRCDADICOMActeImagerie.entry.frDICOMAdministrationProduitDeSante
+* group[=].element[=].target.code = #Section.entry.frDICOMAdministrationProduitDeSante
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Allergies et intolérances
 * group[=].element[+].code = #FRLMExaminationReport.entry.adverseReactions
@@ -43,7 +44,8 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-conclusion"
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
-* group[=].element[=].target.code = #FRCDASectionDICOMConclusion
+* group[=].element[=].target.code = #Section
+* group[=].element[=].target.display = "FRCDASectionDICOMConclusion"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 3 : modèle métier → CDA Résultats
@@ -51,7 +53,8 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-resultats"
 // Entrée : Résultats d'examens
 * group[=].element[+].code = #FRLMExaminationReport.entry.results[x]
-* group[=].element[=].target.code = #FRCDADICOMResultats
+* group[=].element[=].target.code = #Section
+* group[=].element[=].target.display = "FRCDADICOMResultats"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 4 : modèle métier → FHIR Composition
@@ -60,26 +63,27 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImpression
+* group[=].element[=].target.code = #Composition.section:sectionImpression
+* group[=].element[=].target.display = "FRCompositionDocument.section:sectionImpression"
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Techniques d'imagerie
 * group[=].element[+].code = #FRLMExaminationReport.entry.imagingProcedures
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument
+* group[=].element[=].target.code = #Composition.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Produits de santé administrés
 * group[=].element[+].code = #FRLMExaminationReport.entry.medicationAdministrations
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument.partOf:FRMedicationAdministrationDocument
+* group[=].element[=].target.code = #Composition.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument.partOf:FRMedicationAdministrationDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Allergies et intolérances
 * group[=].element[+].code = #FRLMExaminationReport.entry.adverseReactions
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument
+* group[=].element[=].target.code = #Composition.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Résultats d'examens
 * group[=].element[+].code = #FRLMExaminationReport.entry.results[x]
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:Findings.text
+* group[=].element[=].target[+].code = #Composition.section:Findings.text
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Cible narrative pour les resultats textuels dans la section Findings."
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:Findings.entry:FRObservationResultDocument
+* group[=].element[=].target[+].code = #Composition.section:Findings.entry:FRObservationResultDocument
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Cible structuree pour les resultats codes/observations dans la section Findings."
 
@@ -88,17 +92,18 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document"
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
-* group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.conclusion
+* group[=].element[=].target.code = #DiagnosticReport.conclusion
+* group[=].element[=].target.display = "FRDiagnosticReportImagingDocument.conclusion"
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Techniques d'imagerie
 * group[=].element[+].code = #FRLMExaminationReport.entry.imagingProcedures
-* group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.extension:procedure
+* group[=].element[=].target.code = #DiagnosticReport.extension:procedure
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Produits de santé administrés
 * group[=].element[+].code = #FRLMExaminationReport.entry.medicationAdministrations
-* group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.extension:procedure.partOf:FRMedicationAdministrationDocument
+* group[=].element[=].target.code = #DiagnosticReport.extension:procedure.partOf:FRMedicationAdministrationDocument
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Résultats d'examens
 * group[=].element[+].code = #FRLMExaminationReport.entry.results[x]
-* group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.result
+* group[=].element[=].target.code = #DiagnosticReport.result
 * group[=].element[=].target.equivalence = #equivalent

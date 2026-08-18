@@ -16,22 +16,23 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Élément racine
 * group[=].element[+].code = #FRLMConsent
-* group[=].element[=].target.code = #authorization
+* group[=].element[=].target.code = #Authorization
+* group[=].element[=].target.display = "authorization"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
 * group[=].element[+].code = #FRLMConsent.identifier
-* group[=].element[=].target.code = #authorization.consent.id
+* group[=].element[=].target.code = #Authorization.consent.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type de consentement
 * group[=].element[+].code = #FRLMConsent.type
-* group[=].element[=].target.code = #authorization.consent.code
+* group[=].element[=].target.code = #Authorization.consent.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut du consentement
 * group[=].element[+].code = #FRLMConsent.status
-* group[=].element[=].target.code = #authorization.consent.statusCode="completed"
+* group[=].element[=].target.code = #Authorization.consent.statusCode="completed"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR

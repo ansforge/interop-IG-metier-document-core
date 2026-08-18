@@ -12,57 +12,58 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 
 // Élément racine   
 * group[=].element[+].code = #FRLMPregnancyObservation
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRCDAObservationSurLaGrossesse"
 * group[=].element[=].target.equivalence = #equivalent      
 
 // Statut
 * group[=].element[+].code = #FRLMPregnancyObservation.header.status
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.statusCode
+* group[=].element[=].target.code = #Observation.statusCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // directSubject
 * group[=].element[+].code = #FRLMPregnancyObservation.directSubject[x]
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.subject
+* group[=].element[=].target.code = #Observation.subject
 * group[=].element[=].target.equivalence = #equivalent
 
 // observationDate
 * group[=].element[+].code = #FRLMPregnancyObservation.observationDate[x]
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.effectiveTime
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // type
 * group[=].element[+].code = #FRLMPregnancyObservation.type
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // method
 * group[=].element[+].code = #FRLMPregnancyObservation.method
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.methodCode
+* group[=].element[=].target.code = #Observation.methodCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // result
 * group[=].element[+].code = #FRLMPregnancyObservation.result
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.value
+* group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
 // Raison de l'absence de résultat
 * group[=].element[+].code = #FRLMPregnancyObservation.result.dataAbsentReason
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.nullFlavor
+* group[=].element[=].target.code = #Observation.nullFlavor
 * group[=].element[=].target.equivalence = #equivalent
 
 // Intervalle de référence
 * group[=].element[+].code = #FRLMPregnancyObservation.result.referenceRange
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.referenceRange
+* group[=].element[=].target.code = #Observation.referenceRange
 * group[=].element[=].target.equivalence = #equivalent
 
 // interpretation
 * group[=].element[+].code = #FRLMPregnancyObservation.interpretation
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.interpretationCode
+* group[=].element[=].target.code = #Observation.interpretationCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // note
 * group[=].element[+].code = #FRLMPregnancyObservation.note
-* group[=].element[=].target.code = #FRCDAObservationSurLaGrossesse.text
+* group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.equivalence = #equivalent
 
 // component
@@ -84,80 +85,81 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 
 // Élément racine
 * group[=].element[+].code = #FRLMPregnancyObservation
-* group[=].element[=].target.code = #FRObservationPregnancyDocument
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRObservationPregnancyDocument"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sujet
 * group[=].element[+].code = #FRLMPregnancyObservation.directSubject[x]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.subject
+* group[=].element[=].target.code = #Observation.subject
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de l'observation
 * group[=].element[+].code = #FRLMPregnancyObservation.observationDate[x]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.effective[x]
+* group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type
 * group[=].element[+].code = #FRLMPregnancyObservation.type
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Méthode
 * group[=].element[+].code = #FRLMPregnancyObservation.method
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.method
+* group[=].element[=].target.code = #Observation.method
 * group[=].element[=].target.equivalence = #equivalent
 
 // Résultat
 * group[=].element[+].code = #FRLMPregnancyObservation.result
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.value
+* group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
 // Raison de l'absence de résultat
 * group[=].element[+].code = #FRLMPregnancyObservation.result.dataAbsentReason
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.dataAbsentReason
+* group[=].element[=].target.code = #Observation.dataAbsentReason
 * group[=].element[=].target.equivalence = #equivalent
 
 // Intervalle de référence
 * group[=].element[+].code = #FRLMPregnancyObservation.result.referenceRange
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.referenceRange
+* group[=].element[=].target.code = #Observation.referenceRange
 * group[=].element[=].target.equivalence = #equivalent
 
 // Interprétation
 * group[=].element[+].code = #FRLMPregnancyObservation.interpretation
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.interpretation
+* group[=].element[=].target.code = #Observation.interpretation
 * group[=].element[=].target.equivalence = #equivalent
 
 // Commentaire
 * group[=].element[+].code = #FRLMPregnancyObservation.note
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.note
+* group[=].element[=].target.code = #Observation.note
 * group[=].element[=].target.equivalence = #equivalent
 
 // Composants
 * group[=].element[+].code = #FRLMPregnancyObservation.component
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.component
+* group[=].element[=].target.code = #Observation.component
 * group[=].element[=].target.equivalence = #equivalent
 
 // Dérivé de - FRLMObservation
 * group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMObservation]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:Observation
+* group[=].element[=].target.code = #Observation.derivedFrom:Observation
 * group[=].element[=].target.equivalence = #equivalent
 
 // Dérivé de - FRLMLaboratoryObservation
 * group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMLaboratoryObservation]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.code = #Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument
 * group[=].element[=].target.equivalence = #equivalent
 
 // Dérivé de - FRLMImagingStudy
 * group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMImagingStudy]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.derivedFrom:FRImagingStudyDocument
+* group[=].element[=].target.code = #Observation.derivedFrom:FRImagingStudyDocument
 * group[=].element[=].target.equivalence = #equivalent
 
 // Membres - FRLMLaboratoryObservation
 * group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMLaboratoryObservation]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.hasMember:FRObservationLaboratoryReportResultsDocument
+* group[=].element[=].target.code = #Observation.hasMember:FRObservationLaboratoryReportResultsDocument
 * group[=].element[=].target.equivalence = #equivalent
 
 // Membres - FRLMObservation
 * group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMObservation]
-* group[=].element[=].target.code = #FRObservationPregnancyDocument.hasMember:Observation
+* group[=].element[=].target.code = #Observation.hasMember:Observation
 * group[=].element[=].target.equivalence = #equivalent
