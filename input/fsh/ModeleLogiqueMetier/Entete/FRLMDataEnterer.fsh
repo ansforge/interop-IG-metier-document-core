@@ -1,5 +1,5 @@
 Logical: FRLMDataEnterer	
-Id: fr-lm-data-enterer	
+Id: FRLMDataEnterer	
 Title: "Logical model - FR LM Data Enterer"	
 Description: "Opérateur de saisie de la totalité ou d'une partie du contenu du document." 	
 Characteristics: #can-be-target	

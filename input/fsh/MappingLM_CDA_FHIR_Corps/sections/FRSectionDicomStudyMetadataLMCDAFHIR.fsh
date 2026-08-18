@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMDicomStudyMetadata v
 * title = "Mapping Métier/CDA/FHIR : \"Catalogue des objets d'imagerie\""   
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dicom-study-metadata"    
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata"    
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-object-catalog"
 // Élément racine
 * group[=].element[+].code = #FRLMDicomStudyMetadata
@@ -31,7 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMDicomStudyMetadata v
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dicom-study-metadata"    
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata"    
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMDicomStudyMetadata

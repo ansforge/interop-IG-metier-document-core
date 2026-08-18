@@ -1,6 +1,6 @@
 // En attente de validation par APE concernant la création d’un modèle logique unique ObservationLab, ainsi que le choix du parent : FRLMEntry ou un FRLMObservationLab commun.
 Logical: FRLMBatterieExamensBiologieMedicale
-Id: fr-lm-batterie-examens-biologie-medicale
+Id: FRLMBatterieExamensBiologieMedicale
 Parent: FRLMEntry
 Title: "Modèle logique métier - FR LM Batterie d'examens de biologie médicale"
 Description: """Entrée Batterie d'examens de biologie médicale"""

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order-information"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrderInformation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-demande-examen"
 // élément racine (section Demande d'examen d'imagerie non codée)
 * group[=].element[+].code = #FRLMOrderInformation
@@ -32,7 +32,7 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 * group[=].element[=].target.comment = "Aucune cible CDA explicite identifiee dans FRCDADICOMDemandeExamen pour FRLMOrderInformation.entry.orderInformation."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order-information"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrderInformation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMOrderInformation

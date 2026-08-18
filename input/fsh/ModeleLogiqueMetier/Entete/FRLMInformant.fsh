@@ -1,5 +1,5 @@
 Logical: FRLMInformant
-Id: fr-lm-informant					
+Id: FRLMInformant					
 Title: "Logical model - FR LM Informant"				
 Description: "Informant (personne ayant fourni des informations utiles à la production du document : professionnel, structure, patient/usager, autre), personne de confiance, personne à prévenir en cas d'urgence, aidant, aidé."							
 * informant[x] 0..* Base "Informateur / personne de confiance / personne à prévenir en cas d’urgence / aidant / personne aidée."			

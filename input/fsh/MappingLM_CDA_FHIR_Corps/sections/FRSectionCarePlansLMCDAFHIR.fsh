@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 // Groupe Mapping 1 : modèle métier → CDA
 
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-plan-soins"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins"
 // élément racine
 * group[=].element[+].code = #FRLMCarePlans
@@ -33,7 +33,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : Métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plans"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMCarePlans

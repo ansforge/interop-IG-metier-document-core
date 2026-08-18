@@ -13,7 +13,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity"
 
 // Élément racine
@@ -72,7 +72,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.comment = "Aucun champ CDA dédié à la spécialité ; elle est portée par assignedEntity.code selon le contexte."
 
 // Groupe Mapping 2 : modèle métier → FHIR (PractitionerRole)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitionerRole-document"
 
 // Élément racine
@@ -98,7 +98,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 3 : modèle métier → FHIR (Practitioner référencé)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document"
 
 // Élément racine

@@ -1,5 +1,5 @@
 Logical: FRLMMedicationSummary
-Id: fr-lm-medication-summary
+Id: FRLMMedicationSummary
 Parent : FRLMSection 
 Title: "Logical model - FR LM Medication Summary"
 Description: """Section Traitements"""

@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 * title = "Mapping Métier/CDA/FHIR : \"Problèmes actifs\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-problems"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-problemes-actifs"
 // élément racine
 * group[=].element[+].code = #FRLMProblems
@@ -31,7 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-problems"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine   
 * group[=].element[+].code = #FRLMProblems

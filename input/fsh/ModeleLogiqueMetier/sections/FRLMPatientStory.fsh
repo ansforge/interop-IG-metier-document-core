@@ -1,5 +1,5 @@
 Logical: FRLMPatientStory
-Id: fr-lm-patient-story
+Id: FRLMPatientStory
 Parent: FRLMSection
 Title: "Logical model - FR LM Patient Story"
 Description: """Récit du patient"""

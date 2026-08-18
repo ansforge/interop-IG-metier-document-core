@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispensati
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispensations"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispensations"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispensation-medicaments"
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationDispensations
@@ -32,7 +32,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispensati
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispensations"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispensations"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationDispensations

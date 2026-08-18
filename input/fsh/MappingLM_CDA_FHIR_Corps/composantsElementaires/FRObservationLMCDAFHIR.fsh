@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * status = #draft
 
 // Groupe Mapping 1 : modele metier -> CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-simple-observation"
 // Element racine
 * group[=].element[+].code = #FRLMObservation

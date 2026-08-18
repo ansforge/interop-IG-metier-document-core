@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-observation-sur-la-grossesse"
 
 // Élément racine   
@@ -80,7 +80,7 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-pregnancy-document"
 
 // Élément racine

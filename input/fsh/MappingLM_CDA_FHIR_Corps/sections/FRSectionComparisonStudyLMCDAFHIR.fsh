@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMComparisonStudy vers
 * status = #draft   
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-comparison-study"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-examen-comparatif"
 // Élément racine
 * group[=].element[+].code = #FRLMComparisonStudy
@@ -29,7 +29,7 @@ Description: "Mapping des éléments du modèle métier FRLMComparisonStudy vers
 // FRLMComparisonStudy impose entry 0..0 et subSection 0..0 : aucun mapping d'entree/sous-section.
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-comparison-study"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMComparisonStudy

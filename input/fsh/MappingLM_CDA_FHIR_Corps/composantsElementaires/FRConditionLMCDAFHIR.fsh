@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-probleme"
 
 // Élément racine
@@ -89,7 +89,7 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-condition-document"
 
 // Élément racine

@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-media"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-image-illustrative"
 // Élément racine  
 * group[=].element[+].code = #FRLMObservationMedia
@@ -69,7 +69,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 
 
 // Groupe Mapping 2 : Métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-media"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-media-document"
 // Élément racine
 * group[=].element[+].code = #FRLMObservationMedia

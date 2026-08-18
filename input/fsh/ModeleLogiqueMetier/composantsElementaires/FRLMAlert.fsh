@@ -1,5 +1,5 @@
 Logical: FRLMAlert
-Id: fr-lm-alert
+Id: FRLMAlert
 Parent: FRLMEntry
 Title: "Logical model - FR LM Alert"
 Description: """Points de vigilances"""

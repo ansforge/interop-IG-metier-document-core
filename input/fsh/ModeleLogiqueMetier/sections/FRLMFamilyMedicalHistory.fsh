@@ -1,5 +1,5 @@
 Logical: FRLMFamilyMedicalHistory
-Id: fr-lm-family-medical-history
+Id: FRLMFamilyMedicalHistory
 Parent: FRLMSection
 Title: "Logical model - FR LM Family Medical History"
 Description: """Section Antécédents familiaux"""

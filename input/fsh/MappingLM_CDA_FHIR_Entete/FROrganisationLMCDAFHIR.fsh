@@ -12,7 +12,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity"
 
 // Élément racine
@@ -58,7 +58,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Organization"
 
 // Élément racine

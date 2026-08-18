@@ -1,5 +1,5 @@
 Logical: FRLMSupportingInformation
-Id: fr-lm-supporting-information
+Id: FRLMSupportingInformation
 Parent: FRLMSection
 Title: "Logical model - FR LM Supporting Information"
 Description: """Section Informations Cliniques"""

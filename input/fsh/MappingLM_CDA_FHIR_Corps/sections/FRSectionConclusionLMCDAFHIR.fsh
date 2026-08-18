@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMConclusion vers la s
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-conclusion"   
 // Élément racine
 * group[=].element[+].code = #FRLMConclusion
@@ -32,7 +32,7 @@ Description: "Mapping des éléments du modèle métier FRLMConclusion vers la s
 * group[=].element[=].target.comment = "Aucune cible CDA explicite identifiee dans FRCDADICOMConclusion pour FRLMConclusion.entry.conditionOrFinding[x]. La section FRCDADICOMConclusion est non codée en CDA"
 
 // Groupe Mapping 2 : modèle métier → FHIR DiagnosticReport
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document"
 // Élément racine
 * group[=].element[+].code = #FRLMConclusion
@@ -45,7 +45,7 @@ Description: "Mapping des éléments du modèle métier FRLMConclusion vers la s
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 3 : modèle métier → FHIR Composition
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMConclusion

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-examen-imagerie"
 
 // Élément racine
@@ -65,7 +65,7 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImagingStudy

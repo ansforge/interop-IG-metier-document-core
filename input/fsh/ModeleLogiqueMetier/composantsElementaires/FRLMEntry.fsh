@@ -1,5 +1,5 @@
 Logical: FRLMEntry
-Id: fr-lm-entry
+Id: FRLMEntry
 Title: "Logical model - FR LM Entry"
 Description: "Modèle logique représentant l'entrée"
 

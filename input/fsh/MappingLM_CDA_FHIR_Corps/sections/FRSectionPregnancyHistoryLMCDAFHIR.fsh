@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-section-pregnancy-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionPregnancyHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-des-grossesses"
 // élément racine
 * group[=].element[+].code = #FRLMSectionPregnancyHistory
@@ -38,7 +38,7 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 * group[=].element[=].target[+].equivalence = #unmatched
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-section-pregnancy-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionPregnancyHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMSectionPregnancyHistory

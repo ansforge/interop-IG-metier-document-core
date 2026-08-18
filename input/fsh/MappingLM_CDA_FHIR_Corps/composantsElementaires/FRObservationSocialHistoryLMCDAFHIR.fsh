@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationSocialHis
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationSocialHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-habitus-mode-de-vie"
 // Élément racine
 * group[=].element[+].code = #FRLMObservationSocialHistory
@@ -36,7 +36,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationSocialHis
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR (modèle métier → FHIR)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationSocialHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-social-history-document"
 // Élément racine
 * group[=].element[+].code = #FRLMObservationSocialHistory

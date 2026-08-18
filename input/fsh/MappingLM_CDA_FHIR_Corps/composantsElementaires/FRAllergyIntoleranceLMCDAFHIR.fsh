@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergy-intolerance"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-allergie-ou-hypersensibilite"
 
 // Élément racine
@@ -108,7 +108,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 * group[=].element[=].target.comment = "La catégorie (food|medication|environment|biologic) n'est pas portée explicitement dans le profil CDA cible."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergy-intolerance"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-allergy-intolerance-document"
 
 // Élément racine

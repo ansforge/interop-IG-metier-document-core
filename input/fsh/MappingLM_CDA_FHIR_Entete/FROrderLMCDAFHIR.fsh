@@ -11,7 +11,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-inFulfillment-of"
 
 // Élément racine
@@ -46,7 +46,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.comment = "inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
 
 // Élément racine

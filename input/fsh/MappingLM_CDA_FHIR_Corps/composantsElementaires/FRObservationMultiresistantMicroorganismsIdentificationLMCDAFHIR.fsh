@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMultidrugResistantMicroorganismIdentification"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-identification-micro-organismes-multiresistants"
 // Élément racine
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification

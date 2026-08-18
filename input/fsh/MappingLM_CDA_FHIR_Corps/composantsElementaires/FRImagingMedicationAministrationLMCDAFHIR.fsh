@@ -7,7 +7,7 @@ Description: "Mapping des elements du modele metier FRLMMedicationAdministration
 * status = #draft
 
 // Groupe Mapping 1 : modele metier -> CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante"
 // Element racine
 * group[=].element[+].code = #FRLMMedicationAdministration
@@ -64,7 +64,7 @@ Description: "Mapping des elements du modele metier FRLMMedicationAdministration
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modele metier -> FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document"
 // Element racine
 * group[=].element[+].code = #FRLMMedicationAdministration

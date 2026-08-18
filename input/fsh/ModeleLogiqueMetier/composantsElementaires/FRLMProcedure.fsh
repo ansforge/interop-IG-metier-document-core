@@ -1,5 +1,5 @@
 Logical: FRLMProcedure
-Id: fr-lm-procedure
+Id: FRLMProcedure
 Parent: FRLMEntry
 Title: "Logical model- FR LM Procedure"
 Description: """Acte"""

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-technique-imagerie"
 // Élément racine
 * group[=].element[+].code = #FRLMProcedure
@@ -60,7 +60,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-procedure-imaging-document"
 // Élément racine
 * group[=].element[+].code = #FRLMProcedure

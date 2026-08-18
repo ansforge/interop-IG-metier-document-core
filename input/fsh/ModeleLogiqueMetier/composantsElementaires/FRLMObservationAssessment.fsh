@@ -1,5 +1,5 @@
 Logical: FRLMObservationAssessment
-Id: fr-lm-observation-assessment
+Id: FRLMObservationAssessment
 Parent: FRLMEntry
 Title: "Logical model - FR LM Assessment"
 Description: """Evaluation"""

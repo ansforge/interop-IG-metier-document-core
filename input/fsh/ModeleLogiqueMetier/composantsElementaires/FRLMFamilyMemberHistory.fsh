@@ -1,5 +1,5 @@
 Logical: FRLMFamilyMemberHistory
-Id: fr-lm-family-member-history
+Id: FRLMFamilyMemberHistory
 Parent: FRLMEntry
 Title: "Logical model - FR LM Family Member History"
 Description: "Antécédent familial"

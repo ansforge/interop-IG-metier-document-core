@@ -1,5 +1,5 @@
 Logical: FRLMAllergyIntolerance	
-Id: fr-lm-allergy-intolerance	
+Id: FRLMAllergyIntolerance	
 Parent: FRLMEntry
 Title: "Logical model - FR LM Allergy Intolerance"
 Description: """Allergie ou Hypersensibilité"""

@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * title = "Mapping Métier/CDA/FHIR : \"Effets indésirables\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-effets-indesirables"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effets-indesirables"
 // élément racine
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction
@@ -27,7 +27,7 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : Métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-predictable-adverse-drug-reaction"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction

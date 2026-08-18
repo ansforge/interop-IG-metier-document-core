@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-prescription-item"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPrescriptionItem"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement-prescrit"
 
 // Élément racine
@@ -200,7 +200,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-prescription-item"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPrescriptionItem"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-request-document"
 
 // Élément racine

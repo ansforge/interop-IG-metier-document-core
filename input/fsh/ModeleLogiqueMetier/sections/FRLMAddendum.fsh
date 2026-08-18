@@ -1,5 +1,5 @@
 Logical: FRLMAddendum
-Id: fr-lm-addendum
+Id: FRLMAddendum
 Parent: FRLMSection
 Title: "Logical model - FR LM Addendum"
 Description: """Section Addendum"""

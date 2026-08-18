@@ -11,7 +11,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-consent"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-authorization"
 
 // Élément racine
@@ -36,7 +36,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-consent"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Consent"
 
 // Élément racine

@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-vital-sign"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signe-vital-observe"
 // Élément racine
 * group[=].element[+].code = #FRLMObservationVitalSign
@@ -56,7 +56,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-vital-sign"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-vital-signs-document"
 // Élément racine
 * group[=].element[+].code = #FRLMObservationVitalSign

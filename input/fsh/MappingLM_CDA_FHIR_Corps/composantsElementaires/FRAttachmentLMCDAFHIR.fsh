@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMAttachment vers le p
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachment"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-document-attache"
 // Élément racine
 * group[=].element[+].code = #FRLMAttachment
@@ -41,7 +41,7 @@ Description: "Mapping des éléments du modèle métier FRLMAttachment vers le p
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachment"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-document-reference-document"
 // Élément racine
 * group[=].element[+].code = #FRLMAttachment

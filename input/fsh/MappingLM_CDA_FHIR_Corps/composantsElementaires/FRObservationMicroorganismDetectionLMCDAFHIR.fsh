@@ -8,7 +8,7 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-micro-organism-search"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-recherche-de-micro-organismes"
 // Élément racine
 * group[=].element[+].code = #FRLMMicroOrganismSearch

@@ -1,6 +1,6 @@
 // Entrée utilisée dans le volet LDL-SES, LM à supprimé ?
 Logical: FRLMMultidrugResistantMicroorganismIdentification
-Id: fr-lm-multidrug-resistant-microorganism-identification
+Id: FRLMMultidrugResistantMicroorganismIdentification
 Parent : FRLMEntry
 Title: "Logical model - FR LM Multidrug Resistant Microorganism Identification"
 Description: """Identification de micro-organismes multirésistants"""

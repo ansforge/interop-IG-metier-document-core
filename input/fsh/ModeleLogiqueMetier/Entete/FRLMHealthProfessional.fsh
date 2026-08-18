@@ -1,5 +1,5 @@
 Logical: FRLMHealthProfessional		
-Id: fr-lm-health-professional
+Id: FRLMHealthProfessional
 Title: "Logical model - FR LM Health Professional"			
 Description: "Une personne (professionnel ou patient ou autre)" 
 Characteristics: #can-be-target 

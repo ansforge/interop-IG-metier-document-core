@@ -1,5 +1,5 @@
 Logical: FRLMSectionTravelHistory
-Id: fr-lm-section-travel-history
+Id: FRLMSectionTravelHistory
 Parent: FRLMSection
 Title: "Logical model  - FR LM Travel History"
 Description: """Section Historique des voyages"""

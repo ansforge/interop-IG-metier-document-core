@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * title = "Mapping Métier/CDA/FHIR : \"Statut fonctionnel\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-functional-status"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFunctionalStatus"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-statut-fonctionnel"
 // Élément racine
 * group[=].element[+].code = #FRLMFunctionalStatus
@@ -39,7 +39,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-functional-status"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFunctionalStatus"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMFunctionalStatus

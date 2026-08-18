@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * title = "Mapping Métier/CDA/FHIR : \"Vaccination\""   
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccination"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisation
@@ -75,7 +75,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.comment = "Aucune correspondance CDA explicite unique pour reasonCode dans ce profil CDA de vaccination."
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-immunization-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisation

@@ -1,5 +1,5 @@
 Logical: FRLMConclusion
-Id: fr-lm-conclusion
+Id: FRLMConclusion
 Parent: FRLMSection
 Title: "Logical model - FR LM Conclusion"
 Description: """Section Conclusion"""

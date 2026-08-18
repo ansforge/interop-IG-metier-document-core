@@ -1,5 +1,5 @@
 Logical: FRLMPregnancyObservation
-Id: fr-lm-pregnancy-observation
+Id: FRLMPregnancyObservation
 Parent: FRLMEntry
 Title: "Logical model- FR LM Pregnancy Observation"
 Description: """Observation sur la grossesse"""

@@ -6,7 +6,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 * title = "Mapping Métier/CDA/FHIR : \"Dispositifs médicaux\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-devices-and-implants"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-dispositifs-medicaux"
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants
@@ -31,7 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-devices-and-implants"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants
