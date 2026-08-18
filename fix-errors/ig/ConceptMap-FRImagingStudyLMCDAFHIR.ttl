@@ -1,0 +1,258 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRImagingStudyLMCDAFHIR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRImagingStudyLMCDAFHIR</b></p><a name=\"FRImagingStudyLMCDAFHIR\"> </a><a name=\"hcFRImagingStudyLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExamenImagerie</td><td/></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.id</td><td/></tr><tr><td>FRLMImagingStudy.modality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.methodCode</td><td/></tr><tr><td>FRLMImagingStudy.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td><td/></tr><tr><td>FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td><td/></tr><tr><td>FRLMImagingStudy.encounter</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter.</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.effectiveTime</td><td/></tr><tr><td>FRLMImagingStudy.basedOn</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie).</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries.</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances.</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation.</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. .</td></tr><tr><td>FRLMImagingStudy.series</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document</code></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument</td></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.identifier</td></tr><tr><td>FRLMImagingStudy.modality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.modality</td></tr><tr><td>FRLMImagingStudy.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.bodySite</td></tr><tr><td>FRLMImagingStudy.encounter</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.encounter</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.started</td></tr><tr><td>FRLMImagingStudy.basedOn</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.basedOn</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.numberOfSeries</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.numberOfInstances</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.series.performer.actor:Organization</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.endpoint</td></tr><tr><td>FRLMImagingStudy.series</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.series</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRImagingStudyLMCDAFHIR</b></p><a name=\"en-FRImagingStudyLMCDAFHIR\"> </a><a name=\"en-hcFRImagingStudyLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMExamenImagerie</td><td/></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.id</td><td/></tr><tr><td>FRLMImagingStudy.modality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.methodCode</td><td/></tr><tr><td>FRLMImagingStudy.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode</td><td/></tr><tr><td>FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier</td><td/></tr><tr><td>FRLMImagingStudy.encounter</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter.</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRCDADICOMTechniqueImagerie.effectiveTime</td><td/></tr><tr><td>FRLMImagingStudy.basedOn</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie).</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries.</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances.</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation.</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. .</td></tr><tr><td>FRLMImagingStudy.series</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument</td></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.identifier</td></tr><tr><td>FRLMImagingStudy.modality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.modality</td></tr><tr><td>FRLMImagingStudy.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.bodySite</td></tr><tr><td>FRLMImagingStudy.encounter</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.encounter</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.started</td></tr><tr><td>FRLMImagingStudy.basedOn</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.basedOn</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.numberOfSeries</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.numberOfInstances</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.series.performer.actor:Organization</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.endpoint</td></tr><tr><td>FRLMImagingStudy.series</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FRImagingStudyDocument.series</td></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.date [ fhir:value "2026-08-18T08:13:43+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-examen-imagerie" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMExamenImagerie" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMTechniqueImagerie.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.modality" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMTechniqueImagerie.methodCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMTechniqueImagerie.targetSiteCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.encounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter." ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.started" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRCDADICOMTechniqueImagerie.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.basedOn" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)." ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.numberOfSeries" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries." ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.numberOfInstances" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances." ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.studyCustodian" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation." ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.studyEndpoint" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ." ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.series" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie." ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-imaging-study" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-imaging-study-document" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.modality" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.modality" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.bodySite" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.encounter" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.encounter" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.started" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.started" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.basedOn" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.basedOn" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.numberOfSeries" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.numberOfSeries" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.numberOfInstances" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.numberOfInstances" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.studyCustodian" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.series.performer.actor:Organization" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.studyEndpoint" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.endpoint" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMImagingStudy.series" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "FRImagingStudyDocument.series" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
