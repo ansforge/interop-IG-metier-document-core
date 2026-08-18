@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Historique de la grossesse\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,41 +35,42 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-pregnancy-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-history",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-de-la-grossesse",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPregnancyHistory",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse",
+        "code" : "Organizer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.header.identifier",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.id",
+        "code" : "Organizer.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.header.status",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.statusCode",
+        "code" : "Organizer.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.directSubject[x]",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.subject",
+        "code" : "Organizer.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.type",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.code",
+        "code" : "Organizer.code",
         "equivalence" : "equivalent"
       }]
     },
@@ -83,14 +84,14 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
     {
       "code" : "FRLMPregnancyHistory.observationDate[x]",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.effectiveTime",
+        "code" : "Organizer.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.result",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.component:frObservationSurLaGrossesse",
+        "code" : "Organizer.component:frObservationSurLaGrossesse",
         "equivalence" : "equivalent"
       }]
     },
@@ -111,7 +112,7 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
     {
       "code" : "FRLMPregnancyHistory.component",
       "target" : [{
-        "code" : "FRCDAHistoriqueDeLaGrossesse.component:frNaissance",
+        "code" : "Organizer.component:frNaissance",
         "equivalence" : "equivalent"
       }]
     },
@@ -131,69 +132,70 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-pregnancy-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-history",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-pregnancy-history-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPregnancyHistory",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument",
+        "code" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.header.identifier",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.header.status",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.directSubject[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.focus",
+        "code" : "Observation.focus",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.type",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.method",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.effective[x]",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.result.value[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.value[x]",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.result.dataAbsentReason",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.dataAbsentReason",
+        "code" : "Observation.dataAbsentReason",
         "equivalence" : "equivalent"
       }]
     },
@@ -207,35 +209,35 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
     {
       "code" : "FRLMPregnancyHistory.interpretation",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.note",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.component",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.component",
+        "code" : "Observation.component",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.derivedFrom[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.derivedFrom",
+        "code" : "Observation.derivedFrom",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyHistory.hasMember[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyHistoryDocument.hasMember",
+        "code" : "Observation.hasMember",
         "equivalence" : "equivalent"
       }]
     }]

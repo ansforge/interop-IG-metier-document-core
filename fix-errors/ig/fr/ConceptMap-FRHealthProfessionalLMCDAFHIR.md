@@ -22,7 +22,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -40,8 +40,10 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHealthProfessional",
       "target" : [{
@@ -130,8 +132,10 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitionerRole-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitionerRole-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHealthProfessional",
       "target" : [{
@@ -164,8 +168,10 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-health-professional",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-practitioner-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHealthProfessional",
       "target" : [{

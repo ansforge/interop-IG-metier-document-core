@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccinations\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-immunisations",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-vaccinations",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccinations",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisations",
       "target" : [{
@@ -74,8 +76,10 @@ Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA 
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-immunisations",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisations",
       "target" : [{

@@ -23,7 +23,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -41,8 +41,10 @@ Ce ConceptMap présente trois groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-clinical-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHeaderDocument",
       "target" : [{
@@ -221,8 +223,10 @@ Ce ConceptMap présente trois groupes de mapping :
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-bundle-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-bundle-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHeaderDocument.identifier:document",
       "target" : [{
@@ -233,8 +237,10 @@ Ce ConceptMap présente trois groupes de mapping :
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHeaderDocument.documentType",
       "target" : [{
@@ -394,7 +400,7 @@ Ce ConceptMap présente trois groupes de mapping :
       "target" : [{
         "code" : "Composition.encounter",
         "equivalence" : "equivalent",
-        "comment" : "Composition.encounter.resolve().ofType(Encounter) — https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document, cf. FREncounterLMCDAFHIR."
+        "comment" : "Composition.encounter.resolve().ofType(Encounter) — https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document, cf. FREncounterLMCDAFHIR."
       }]
     }]
   }]

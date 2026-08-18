@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Chapitre de BIO\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,8 @@ Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-crbio-chapitre",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-chapitre",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-crbio-chapitre",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre",
     "element" : [{
       "code" : "FRLMCRBIOChapitre",
       "target" : [{
@@ -81,8 +81,8 @@ Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA 
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-chapitre",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document-section",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document-section",
     "element" : [{
       "code" : "FRCDACRBIOChapitre",
       "target" : [{

@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMQuantityExposure vers l'entrée CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Quantité d'exposition aux radiations",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,9 @@ Mapping des éléments du modèle métier FRLMQuantityExposure vers l'entrée CD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-exposition",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-quantite",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-quantite-exposition",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-quantite",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMQuantityExposure",
       "target" : [{
@@ -81,8 +82,9 @@ Mapping des éléments du modèle métier FRLMQuantityExposure vers l'entrée CD
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-exposition",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-radiation-exposure-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-quantite-exposition",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-radiation-exposure-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMQuantityExposure",
       "target" : [{

@@ -17,7 +17,7 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
   "version" : "0.1.0",
   "title" : "Mapping Metier/CDA/FHIR : \"Observation\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-simple-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-simple-observation",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservation",
       "target" : [{
@@ -157,7 +159,7 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-observation",
     "target" : "http://hl7.org/fhir/R4/StructureDefinition/Observation",
     "element" : [{
       "code" : "FRMLObservation",

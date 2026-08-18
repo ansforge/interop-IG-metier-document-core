@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement (information rapportée par le patient)\"",
   "status" : "draft",
-  "date" : "2026-08-18T08:13:43+00:00",
+  "date" : "2026-08-18T11:25:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-use",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-use",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationUse",
       "target" : [{
@@ -246,8 +248,9 @@ Mapping des éléments du modèle métier FRLMMedicationUse vers la sous-entrée
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-medication-use",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-statement-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-medication-use",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-statement-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationUse",
       "target" : [{

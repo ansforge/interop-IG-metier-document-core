@@ -809,19 +809,19 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMParticipant.participant.participantProfessional | FRCDAParticipant.participantRole.playingEntity | FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument |
 | FRLMParticipant.participant.participantDevice | FRCDAParticipant.participantRole.playingDevice | FRActorExtension.extension[actor].value[x]:Device |
 | FRLMParticipant.participant.participantOrganisation | FRCDAParticipant.participantRole.scopingEntity | FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument |
-| **FRLMPregnancyHistory** | **FRCDAHistoriqueDeLaGrossesse** | **FRObservationPregnancyHistoryDocument** |
-| FRLMPregnancyHistory.header.identifier | FRCDAHistoriqueDeLaGrossesse.id | FRObservationPregnancyHistoryDocument.identifier |
-| FRLMPregnancyHistory.header.status | FRCDAHistoriqueDeLaGrossesse.statusCode | FRObservationPregnancyHistoryDocument.status |
-| FRLMPregnancyHistory.directSubject[x] | FRCDAHistoriqueDeLaGrossesse.subject | FRObservationPregnancyHistoryDocument.focus |
-| FRLMPregnancyHistory.type | FRCDAHistoriqueDeLaGrossesse.code | FRObservationPregnancyHistoryDocument.code |
-| FRLMPregnancyHistory.method |  | FRObservationPregnancyHistoryDocument.method |
-| FRLMPregnancyHistory.observationDate[x] | FRCDAHistoriqueDeLaGrossesse.effectiveTime | FRObservationPregnancyHistoryDocument.effective[x] |
-| FRLMPregnancyHistory.result | FRCDAHistoriqueDeLaGrossesse.component:frObservationSurLaGrossesse |  |
-| FRLMPregnancyHistory.interpretation |  | FRObservationPregnancyHistoryDocument.interpretation |
-| FRLMPregnancyHistory.note |  | FRObservationPregnancyHistoryDocument.note |
-| FRLMPregnancyHistory.component | FRCDAHistoriqueDeLaGrossesse.component:frNaissance | FRObservationPregnancyHistoryDocument.component |
-| FRLMPregnancyHistory.derivedFrom[x] |  | FRObservationPregnancyHistoryDocument.derivedFrom |
-| FRLMPregnancyHistory.hasMember[x] |  | FRObservationPregnancyHistoryDocument.hasMember |
+| **FRLMPregnancyHistory** | **Organizer** | **Observation** |
+| FRLMPregnancyHistory.header.identifier | Organizer.id | Observation.identifier |
+| FRLMPregnancyHistory.header.status | Organizer.statusCode | Observation.status |
+| FRLMPregnancyHistory.directSubject[x] | Organizer.subject | Observation.focus |
+| FRLMPregnancyHistory.type | Organizer.code | Observation.code |
+| FRLMPregnancyHistory.method |  | Observation.method |
+| FRLMPregnancyHistory.observationDate[x] | Organizer.effectiveTime | Observation.effective[x] |
+| FRLMPregnancyHistory.result | Organizer.component:frObservationSurLaGrossesse |  |
+| FRLMPregnancyHistory.interpretation |  | Observation.interpretation |
+| FRLMPregnancyHistory.note |  | Observation.note |
+| FRLMPregnancyHistory.component | Organizer.component:frNaissance | Observation.component |
+| FRLMPregnancyHistory.derivedFrom[x] |  | Observation.derivedFrom |
+| FRLMPregnancyHistory.hasMember[x] |  | Observation.hasMember |
 | **FRLMProcedure** | **FRCDAActe** | **FRProcedureDocument** |
 | FRLMProcedure.code | FRCDAActe.code | FRProcedureDocument.code |
 | FRLMProcedure.header.status | FRCDAActe.statusCode | FRProcedureDocument.status |
