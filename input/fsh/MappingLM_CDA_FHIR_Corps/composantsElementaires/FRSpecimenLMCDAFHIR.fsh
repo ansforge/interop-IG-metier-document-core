@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-specimen"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prelevement"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prelevement"
 // Élément racine
 * group[=].element[+].code = #FRLMSpecimen
 * group[=].element[=].target.code = #FRCDAPrelevement
@@ -84,8 +84,8 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-specimen"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-specimen-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-specimen-document"
 // Élément racine
 * group[=].element[+].code = #FRLMSpecimen
 * group[=].element[=].target.code = #FRSpecimenDocument

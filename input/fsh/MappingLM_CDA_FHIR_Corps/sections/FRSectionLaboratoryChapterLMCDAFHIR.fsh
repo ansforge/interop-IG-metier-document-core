@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMCRBIOChapitre vers l
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-crbio-chapitre"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-chapitre"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-crbio-chapitre"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre"
 // Élément racine
 * group[=].element[+].code = #FRLMCRBIOChapitre
 * group[=].element[=].target.code = #FRCDACRBIOChapitre
@@ -35,8 +35,8 @@ Description: "Mapping des éléments du modèle métier FRLMCRBIOChapitre vers l
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-crbio-chapitre"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document-section"
+* group[+].source = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document-section"
 // Élément racine
 * group[=].element[+].code = #FRCDACRBIOChapitre
 * group[=].element[=].target.code = #FRCompositionDocument.section

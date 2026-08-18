@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 
 // Groupe 1 : modèle métier (FRLMMedication) → CDA (FRCDAProduitDeSante)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-produit-de-sante"
 // Élément racine
 * group[=].element[+].code = #FRLMMedication
 * group[=].element[=].target.code = #FRCDAProduitDeSante
@@ -80,8 +80,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 
 // Groupe 2 : modèle métier (FRLMMedication) → FHIR (FRMedicationDocument)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-document"
 // Élément racine
 * group[=].element[+].code = #FRLMMedication
 * group[=].element[=].target.code = #FRMedicationDocument

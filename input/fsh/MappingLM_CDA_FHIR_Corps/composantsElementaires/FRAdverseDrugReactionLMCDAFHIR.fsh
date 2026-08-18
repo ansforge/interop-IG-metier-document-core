@@ -9,8 +9,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 // Groupe Mapping 1 : modèle métier → CDA
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-adverse-drug-reaction"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-effet-indesirable"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-adverse-drug-reaction"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effet-indesirable"
 
 // Élément racine
 * group[=].element[+].code = #FRLMAdverseDrugReaction
@@ -74,8 +74,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-adverse-drug-reaction"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-adverse-event-document" 
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-adverse-drug-reaction"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-adverse-event-document" 
 
 // Élément racine
 * group[=].element[+].code = #FRLMAdverseDrugReaction

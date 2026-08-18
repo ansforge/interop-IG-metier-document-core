@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-reference-item-plan-traitement"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plan"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-reference-item-plan-traitement"
 
 // Élément racine
 // l'équivalence narrow est utilisée car le profil CDA cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact (certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil CDA cible).
@@ -47,8 +47,8 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-care-plan"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-care-plan-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plan"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-care-plan-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMCarePlan

@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical"
 
 // Élément racine
 * group[=].element[+].code = #FRLMDevice
@@ -88,7 +88,7 @@ Description: "Mapping des éléments du modèle métier FRLMDevice vers le profi
 * group[=].element[=].target.equivalence = #relatedto
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Device"
 
 // Élément racine

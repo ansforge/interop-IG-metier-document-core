@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMQRCode vers la secti
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-qr-code"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-code-a-barres"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-qr-code"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-code-a-barres"
 // Élément racine
 * group[=].element[+].code = #FRLMQRCode
 * group[=].element[=].target.code = #FRCDACodeABarres
@@ -31,8 +31,8 @@ Description: "Mapping des éléments du modèle métier FRLMQRCode vers la secti
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-qr-code"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-qr-code"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMQRCode
 * group[=].element[=].target.code = #FRCompositionDocument.section:sectionQrCode

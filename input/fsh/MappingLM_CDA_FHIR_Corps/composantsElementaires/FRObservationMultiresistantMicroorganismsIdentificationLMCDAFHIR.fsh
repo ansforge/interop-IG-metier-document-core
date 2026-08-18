@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-identification-micro-organismes-multiresistants"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-multidrug-resistant-microorganism-identification"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-identification-micro-organismes-multiresistants"
 // Élément racine
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification
 * group[=].element[=].target.code = #FRCDAIdentificationMicroOrganismesMultiresistants
@@ -80,8 +80,8 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-multidrug-resistant-microorganism-identification"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-multiresistant-microorganism-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-multidrug-resistant-microorganism-identification"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-multiresistant-microorganism-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification

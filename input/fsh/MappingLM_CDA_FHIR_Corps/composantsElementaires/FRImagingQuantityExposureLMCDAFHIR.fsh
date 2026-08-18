@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMQuantityExposure ver
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-exposition"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-quantite"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-quantite-exposition"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-quantite"
 // Élément racine
 * group[=].element[+].code = #FRLMQuantityExposure
 * group[=].element[=].target.code = #FRCDADICOMQuantite
@@ -35,8 +35,8 @@ Description: "Mapping des éléments du modèle métier FRLMQuantityExposure ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-quantite-exposition"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-radiation-exposure-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-quantite-exposition"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-radiation-exposure-document"
 // Élément racine
 * group[=].element[+].code = #FRLMQuantityExposure
 * group[=].element[=].target.code = #FRObservationRadiationExposureDocument.component

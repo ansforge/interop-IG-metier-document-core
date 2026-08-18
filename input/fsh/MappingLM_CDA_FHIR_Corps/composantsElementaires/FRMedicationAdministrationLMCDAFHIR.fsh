@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationAdministra
 
 // Groupe 1 : modèle métier (FRLMMedicationAdministration) → CDA (FRCDATraitement)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationAdministration
@@ -129,8 +129,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationAdministra
 
 // Groupe 2 : modèle métier (FRLMMedicationAdministration) → FHIR (FRMedicationAdministrationDocument)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationAdministration

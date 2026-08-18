@@ -11,8 +11,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-custodian"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-custodian"
 
 // Structure de conservation
 * group[=].element[+].code = #FRLMHeaderDocument.custodian
@@ -21,8 +21,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.comment = "La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 
 // Structure de conservation
 * group[=].element[+].code = #FRLMHeaderDocument.custodian

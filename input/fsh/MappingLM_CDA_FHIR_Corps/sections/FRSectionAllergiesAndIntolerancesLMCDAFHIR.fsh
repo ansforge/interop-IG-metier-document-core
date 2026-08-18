@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-allergies-et-hypersensibilites"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-allergies-et-hypersensibilites"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergies-et-hypersensibilites"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-allergies-et-hypersensibilites"
 // Élément racine
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances
 * group[=].element[=].target.code = #FRCDAAllergiesEtHypersensibilites
@@ -31,8 +31,8 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-allergies-and-intolerances"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergies-and-intolerances"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances
 * group[=].element[=].target.code = #FRCompositionDocument.section:sectionAllergiesAndIntolerances
