@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-pregnancy
   "name" : "FRLMPregnancyStatus",
   "title" : "Logical model- FR LM Pregnancy Status",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -163,6 +163,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-pregnancy
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Statut de grossesse de la patiente (enceinte, pas enceinte, etc.)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis|20260619134042"
       }
@@ -247,32 +248,24 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-pregnancy
     {
       "id" : "fr-lm-pregnancy-status.hasMember[x].hasMemberEstimatedDeliveryDate",
       "path" : "fr-lm-pregnancy-status.hasMember[x].hasMemberEstimatedDeliveryDate",
-      "short" : "Observation associée a la date d'accouchement",
-      "definition" : "Observation associée a la date d'accouchement",
+      "short" : "Observation associée a la date d'accouchement. Le type de l'observation doit être issu du jeu de valeurs jdv-date-accouchement-cisis (1.2.250.1.213.1.1.5.853) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-date-accouchement-cisis",
+      "definition" : "Observation associée a la date d'accouchement. Le type de l'observation doit être issu du jeu de valeurs jdv-date-accouchement-cisis (1.2.250.1.213.1.1.5.853) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-date-accouchement-cisis",
       "min" : 0,
       "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation"
-      }],
-      "binding" : {
-        "description" : "jdv-date-accouchement-cisis (1.2.250.1.213.1.1.5.853)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-date-accouchement-cisis|20260619134042"
-      }
+      }]
     },
     {
       "id" : "fr-lm-pregnancy-status.hasMember[x].hasMemberGestationalAge",
       "path" : "fr-lm-pregnancy-status.hasMember[x].hasMemberGestationalAge",
-      "short" : "Observation associée a l'age gestationnel",
-      "definition" : "Observation associée a l'age gestationnel",
+      "short" : "Observation associée a l'age gestationnel. Le type de l'observation doit être issu du jeu de valeurs jdv-age-gestationnel-cisis (1.2.250.1.213.1.1.5.854) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-age-gestationnel-cisis",
+      "definition" : "Observation associée a l'age gestationnel. Le type de l'observation doit être issu du jeu de valeurs jdv-age-gestationnel-cisis (1.2.250.1.213.1.1.5.854) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-age-gestationnel-cisis",
       "min" : 0,
       "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation"
-      }],
-      "binding" : {
-        "description" : "jdv-age-gestationnel-cisis (1.2.250.1.213.1.1.5.854)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-age-gestationnel-cisis|20260619134042"
-      }
+      }]
     }]
   }
 }

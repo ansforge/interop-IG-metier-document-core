@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-device-use.
   "name" : "FRLMDeviceUse",
   "title" : "Logical model - FR LM Device use",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -72,6 +72,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-device-use.
       "short" : "Status de l'utilisation du DM (ex active, completed, etc).",
       "min" : 1,
       "binding" : {
+        "strength" : "required",
         "description" : "Valeur issue du http://hl7.org/fhir/ValueSet/device-statement-status",
         "valueSet" : "https://hl7.org/fhir/R4/valueset-device-statement-status.html"
       }
@@ -135,16 +136,13 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-device-use.
     {
       "id" : "fr-lm-device-use.bodySite",
       "path" : "fr-lm-device-use.bodySite",
-      "short" : "localisation anatomique",
-      "definition" : "localisation anatomique",
+      "short" : "localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)",
+      "definition" : "localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure"
-      }],
-      "binding" : {
-        "description" : "SNOMED CT (2.16.840.1.113883.6.96)"
-      }
+      }]
     },
     {
       "id" : "fr-lm-device-use.reason[x]",

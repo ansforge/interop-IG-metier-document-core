@@ -26,7 +26,7 @@
   fhir:StructureDefinition.name [ fhir:value "FRLMLaboratoryObservation"] ;
   fhir:StructureDefinition.title [ fhir:value "Logical model - Laboratory Observation"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-14T14:57:39+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-08-20T08:45:34+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -629,6 +629,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "LOINC (2.16.840.1.113883.6.1) ou autre" ]
        ]
      ], [
@@ -800,6 +801,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Quantity" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
@@ -820,6 +822,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Quantity" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
@@ -840,6 +843,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): SNOMED CT" ]
        ]
      ], [
@@ -860,6 +864,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): HL7 Observation Reference Range Meaning Codes" ]
        ]
      ], [
@@ -880,6 +885,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): SNOMED CT, HL7 v3-Race" ]
        ]
      ], [
@@ -900,6 +906,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Range" ]
        ] ;
        fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
@@ -937,7 +944,8 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ] ;
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.description [ fhir:value "(preferred): HL7 Observation Interpretation Codes" ] ;
+         fhir:ElementDefinition.binding.strength [ fhir:value "required" ] ;
+         fhir:ElementDefinition.binding.description [ fhir:value "HL7 Observation Interpretation Codes" ] ;
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042" ;
            fhir:link <https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042>

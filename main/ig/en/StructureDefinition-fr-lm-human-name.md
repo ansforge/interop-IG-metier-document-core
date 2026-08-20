@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-human-name.
   "name" : "FRLMHumanName",
   "title" : "Logical model - FR LM Human Name",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,6 +73,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-human-name.
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "ValueSet HL7 name-use",
         "valueSet" : "http://hl7.org/fhir/ValueSet/name-use|4.0.1"
       }
@@ -121,6 +122,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-human-name.
         "code" : "string"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "JDV_J245-Civilite-CISIS",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J245-Civilite-CISIS/FHIR/JDV-J245-Civilite-CISIS|20230331120000"
       }
@@ -136,6 +138,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-human-name.
         "code" : "string"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "JDV_J246-Titre-CISIS",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J246-Titre-CISIS/FHIR/JDV-J246-Titre-CISIS|20240126120000"
       }

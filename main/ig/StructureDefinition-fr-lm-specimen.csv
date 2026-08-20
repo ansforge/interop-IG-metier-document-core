@@ -4,9 +4,9 @@
 "fr-lm-specimen.identifier","fr-lm-specimen.identifier","","","",1,*,"","","","Identifier {[]} {[]}
 ","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","Identifiant unique de l'échantillon, au sein d'un périmètre défini. Exemple : identifiant attribué par le système du préleveur, identifiant attribué par le laboratoire, etc. Plusieurs identifiants peuvent être utilisés.","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.identifier",1,*,"",""
 "fr-lm-specimen.status","fr-lm-specimen.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Disponibilité du prélèvement","Disponibilité du prélèvement","","","","","","","","","",,"","(preferred): HL7 specimen-status","","",,,,"fr-lm-specimen.status",0,1,"",""
+","Disponibilité du prélèvement","Disponibilité du prélèvement","","","","","","","","","",,"preferred","(preferred): HL7 specimen-status","","",,,,"fr-lm-specimen.status",0,1,"",""
 "fr-lm-specimen.type","fr-lm-specimen.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Échantillon prélevé","Échantillon prélevé","","","","","","","","","",,"","jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042","",,,,"fr-lm-specimen.type",0,1,"",""
+","Échantillon prélevé","Échantillon prélevé","","","","","","","","","",,"required","jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042","",,,,"fr-lm-specimen.type",0,1,"",""
 "fr-lm-specimen.specimenSource[x]","fr-lm-specimen.specimenSource[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
 https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-location {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.specimenSource[x]",0,1,"",""
 "fr-lm-specimen.parentSpecimen","fr-lm-specimen.parentSpecimen","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen {[]} {[]}
@@ -14,7 +14,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-locati
 "fr-lm-specimen.request","fr-lm-specimen.request","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-service-request {[]} {[]}
 ","Demande à l'origine du prélèvement","Demande à l'origine du prélèvement","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.request",0,*,"",""
 "fr-lm-specimen.combined","fr-lm-specimen.combined","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Binding Description: (preferred): HL7 specimen-combined","Binding Description: (preferred): HL7 specimen-combined","","","","","","","","","",,"","(preferred): HL7 specimen-combined","","",,,,"fr-lm-specimen.combined",0,1,"",""
+","Binding Description: (preferred): HL7 specimen-combined","Binding Description: (preferred): HL7 specimen-combined","","","","","","","","","",,"preferred","(preferred): HL7 specimen-combined","","",,,,"fr-lm-specimen.combined",0,1,"",""
 "fr-lm-specimen.collection","fr-lm-specimen.collection","","","",0,*,"","","","Base {[]} {[]}
 ","Détails de la collecte","Détails de la collecte","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.collection",0,*,"",""
 "fr-lm-specimen.collection.performer[x]","fr-lm-specimen.collection.performer[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
@@ -24,7 +24,7 @@ Period {[]} {[]}","Date du prélèvement","Date du prélèvement","","","","",""
 "fr-lm-specimen.collection.quantity","fr-lm-specimen.collection.quantity","","","",0,1,"","","","Quantity {[]} {[]}
 ","Quantité","Quantité","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.collection.quantity",0,1,"",""
 "fr-lm-specimen.collection.method","fr-lm-specimen.collection.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Acte de prélèvement","Acte de prélèvement","","","","","","","","","",,"","NABM (1.2.250.1.215.300.2) ou 33882-2 [LOINC] Prélèvement","","",,,,"fr-lm-specimen.collection.method",0,1,"",""
+","Acte de prélèvement","Acte de prélèvement","","","","","","","","","",,"required","NABM (1.2.250.1.215.300.2) ou 33882-2 [LOINC] Prélèvement","","",,,,"fr-lm-specimen.collection.method",0,1,"",""
 "fr-lm-specimen.collection.device","fr-lm-specimen.collection.device","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device-use {[]} {[]}
 ","Dispositif utilisé","Dispositif utilisé","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.collection.device",0,*,"",""
 "fr-lm-specimen.collection.additive[x]","fr-lm-specimen.collection.additive[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
@@ -40,6 +40,6 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device
 "fr-lm-specimen.container.containerDevice","fr-lm-specimen.container.containerDevice","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
 ","Dispositif utilisé comme contenant","Dispositif utilisé comme contenant","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.container.containerDevice",1,1,"",""
 "fr-lm-specimen.condition","fr-lm-specimen.condition","","","",0,*,"","","","CodeableConcept {[]} {[]}
-","État de l'échantillon","État de l'échantillon","","","","","","","","","",,"","(preferred): HL7 specimenCondition","","",,,,"fr-lm-specimen.condition",0,*,"",""
+","État de l'échantillon","État de l'échantillon","","","","","","","","","",,"preferred","(preferred): HL7 specimenCondition","","",,,,"fr-lm-specimen.condition",0,*,"",""
 "fr-lm-specimen.note","fr-lm-specimen.note","","","",0,1,"","","","string {[]} {[]}
 ","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"fr-lm-specimen.note",0,1,"",""

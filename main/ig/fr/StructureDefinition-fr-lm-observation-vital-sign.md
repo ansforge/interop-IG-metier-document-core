@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
   "name" : "FRLMObservationVitalSign",
   "title" : "Logical model - FR LM Observation Vital Sign",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -129,6 +129,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Valeur issue du jdv-signe-vital-cisis (1.2.250.1.213.1.1.5.171)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-signe-vital-cisis|20260619134043"
       }
@@ -177,6 +178,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Valeur issue du jdv-hl7-v3-ObservationInterpretation-cisis (2.16.840.1.113883.1.113883.5.1170)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042"
       }

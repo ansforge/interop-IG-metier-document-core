@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Habitus Mode de vie\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-social-history",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-habitus-mode-de-vie",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-habitus-mode-de-vie",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationSocialHistory",
       "target" : [{
@@ -81,8 +83,10 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-social-history",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-social-history-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-social-history-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationSocialHistory",
       "target" : [{

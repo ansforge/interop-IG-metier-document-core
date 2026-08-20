@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-medication.
   "name" : "FRLMMedication",
   "title" : "Logical model - FR LM Medication",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -176,6 +176,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-medication.
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "EDQM Standard Terms"
       }
     },
@@ -212,6 +213,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-medication.
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "SMS (2.16.840.1.113883.3.6905.2)"
       }
     },

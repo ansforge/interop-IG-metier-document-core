@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-adverse-d
   "name" : "FRLMAdverseDrugReaction",
   "title" : "Modèle logique métier - FR LM Adverse Drug Reaction",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -110,6 +110,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-adverse-d
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Type d'effet indésirable provenant du jdv-origine-effet-indesirable-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-effet-indesirable-cisis|20260619134042"
       }
@@ -169,6 +170,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-adverse-d
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Niveau d'imputabilité provenant du jdv-imputabilite-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-imputabilite-cisis|20260619134042"
       }
@@ -184,6 +186,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-adverse-d
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Gravité provenant du jdv-gravite-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-gravite-cisis|20260619134042"
       }
@@ -199,6 +202,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-adverse-d
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Évolution de l'effet indésirable provenant du jdv-evolution-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-cisis|20260619134042"
       }

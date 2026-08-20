@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecond
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Résultats de laboratoire de biologie de seconde intention",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,8 @@ Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecond
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
     "element" : [{
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention",
       "target" : [{
@@ -81,8 +81,9 @@ Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecond
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention",
       "target" : [{

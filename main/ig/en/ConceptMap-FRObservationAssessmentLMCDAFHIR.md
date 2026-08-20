@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Assessment (Evaluation)\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-assessment",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-evaluation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-assessment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-evaluation",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationAssessment",
       "target" : [{
@@ -115,8 +117,9 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-assessment",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-survey-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-assessment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-survey-document",
     "element" : [{
       "code" : "FRLMObservationAssessment",
       "target" : [{

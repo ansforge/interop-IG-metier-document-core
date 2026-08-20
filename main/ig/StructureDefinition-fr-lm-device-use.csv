@@ -30,7 +30,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organi
 "fr-lm-device-use.header.date","fr-lm-device-use.header.date","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
 "fr-lm-device-use.header.status","fr-lm-device-use.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Status de l'utilisation du DM (ex active, completed, etc).","Statut","","","","","","","","","",,"","Valeur issue du http://hl7.org/fhir/ValueSet/device-statement-status","https://hl7.org/fhir/R4/valueset-device-statement-status.html","",,,,"fr-lm-entry.header.status",0,1,"",""
+","Status de l'utilisation du DM (ex active, completed, etc).","Statut","","","","","","","","","",,"required","Valeur issue du http://hl7.org/fhir/ValueSet/device-statement-status","https://hl7.org/fhir/R4/valueset-device-statement-status.html","",,,,"fr-lm-entry.header.status",0,1,"",""
 "fr-lm-device-use.header.source","fr-lm-device-use.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
 "fr-lm-device-use.header.language","fr-lm-device-use.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -63,7 +63,7 @@ boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[
 "fr-lm-device-use.device","fr-lm-device-use.device","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
 ","Dispositif médical","Dispositif médical","","","","","","","","","",,,,,"",,,,"fr-lm-device-use.device",1,1,"",""
 "fr-lm-device-use.bodySite","fr-lm-device-use.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
-","localisation anatomique","localisation anatomique","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-device-use.bodySite",0,1,"",""
+","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","","","","","","","","","",,,,,"",,,,"fr-lm-device-use.bodySite",0,1,"",""
 "fr-lm-device-use.reason[x]","fr-lm-device-use.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
 https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Motif de l'utilisation du dispositif médical.
  - motif codé (spécifique à un  contexte)

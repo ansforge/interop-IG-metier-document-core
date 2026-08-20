@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
   "name" : "FRLMSpecimen",
   "title" : "Logical model - FR LM Specimen",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -89,6 +89,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): HL7 specimen-status"
       }
     },
@@ -103,6 +104,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042"
       }
@@ -157,6 +159,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): HL7 specimen-combined"
       }
     },
@@ -227,6 +230,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "NABM (1.2.250.1.215.300.2) ou 33882-2 [LOINC] Prélèvement"
       }
     },
@@ -321,6 +325,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-specimen.cs
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): HL7 specimenCondition"
       }
     },

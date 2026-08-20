@@ -53,7 +53,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * This material contains content from [LOINC](http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the [license](http://loinc.org/license). LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
 
-* [LOINC](http://terminology.hl7.org/6.3.0/CodeSystem-v3-loinc.html): [FRLMAdvanceDirective](StructureDefinition-fr-lm-advance-directive.md), [FRLMObservationSocialHistory](StructureDefinition-fr-lm-observation-social-history.md), [FRLMObservationVitalSign](StructureDefinition-fr-lm-observation-vital-sign.md), [FRLMPregnancyHistory](StructureDefinition-fr-lm-pregnancy-history.md) and [FRLMPregnancyStatus](StructureDefinition-fr-lm-pregnancy-status.md)
+* [LOINC](http://terminology.hl7.org/6.3.0/CodeSystem-v3-loinc.html): [FRLMAdvanceDirective](StructureDefinition-fr-lm-advance-directive.md), [FRLMObservationSocialHistory](StructureDefinition-fr-lm-observation-social-history.md), [FRLMObservationVitalSign](StructureDefinition-fr-lm-observation-vital-sign.md) and [FRLMPregnancyHistory](StructureDefinition-fr-lm-pregnancy-history.md)
 
 
 * This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact [https://www.snomed.org/get-snomed](https://www.snomed.org/get-snomed) or [info@snomed.org](mailto:info@snomed.org).

@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
   "name" : "FRLMProcedure",
   "title" : "Logical model- FR LM Procedure",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -121,6 +121,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
       "short" : "Statut de l'acte",
       "min" : 1,
       "binding" : {
+        "strength" : "required",
         "description" : "jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260619134042"
       }
@@ -136,6 +137,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "CCAM (1.2.250.1.215.300.1)"
       }
     },
@@ -184,22 +186,20 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV"
       }
     },
     {
       "id" : "fr-lm-procedure.bodySite",
       "path" : "fr-lm-procedure.bodySite",
-      "short" : "localisation anatomique",
-      "definition" : "localisation anatomique",
+      "short" : "localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)",
+      "definition" : "localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure"
-      }],
-      "binding" : {
-        "description" : "SNOMED CT (2.16.840.1.113883.6.96)"
-      }
+      }]
     },
     {
       "id" : "fr-lm-procedure.approachSiteCode",
@@ -212,6 +212,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "SNOMED CT (2.16.840.1.113883.6.96)"
       }
     },
@@ -271,6 +272,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-procedure
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): ICD-10, SNOMED CT"
       }
     },

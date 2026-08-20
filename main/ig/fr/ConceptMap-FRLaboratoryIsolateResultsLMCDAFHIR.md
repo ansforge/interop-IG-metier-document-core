@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le prof
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Isolat microbiologique\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le prof
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-isolat-microbiologique",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-isolat-microbiologique",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-isolat-microbiologique",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-isolat-microbiologique",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMIsolatMicrobiologique",
       "target" : [{
@@ -189,8 +191,10 @@ Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le prof
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-isolat-microbiologique",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-isolat-microbiologique",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRCDAIsolatMicrobiologique",
       "target" : [{

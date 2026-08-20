@@ -17,7 +17,7 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
   "version" : "0.1.0",
   "title" : "Mapping Metier/CDA/FHIR : \"Medication Administration en imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationAdministration",
       "target" : [{
@@ -130,8 +132,10 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationAdministration",
       "target" : [{

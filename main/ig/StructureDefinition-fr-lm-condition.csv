@@ -30,7 +30,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organi
 "fr-lm-condition.header.date","fr-lm-condition.header.date","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
 "fr-lm-condition.header.status","fr-lm-condition.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Statut du problème","Statut","","","","","","","","","",,"","Valeur issue du jdv-hl7-condition-clinical-cisis (2.16.840.1.113883.4.642.3.164)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
+","Statut du problème","Statut","","","","","","","","","",,"required","Valeur issue du jdv-hl7-condition-clinical-cisis (2.16.840.1.113883.4.642.3.164)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
 "fr-lm-condition.header.source","fr-lm-condition.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
 "fr-lm-condition.header.language","fr-lm-condition.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -40,7 +40,7 @@ La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
 "fr-lm-condition.type","fr-lm-condition.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Type d'observation","Type d'observation","","","","","","","","","",,"","Valeur issue du jdv-code-probleme-cisis (1.2.250.1.213.1.1.5.172)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260619134043","",,,,"fr-lm-condition.type",1,1,"",""
+","Type d'observation","Type d'observation","","","","","","","","","",,"required","Valeur issue du jdv-code-probleme-cisis (1.2.250.1.213.1.1.5.172)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260619134043","",,,,"fr-lm-condition.type",1,1,"",""
 "fr-lm-condition.problem","fr-lm-condition.problem","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Problème observé :
  - CIM-10 (2.16.840.1.113883.6.3) ; 
@@ -71,7 +71,7 @@ boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[
 "fr-lm-condition.period.endDate","fr-lm-condition.period.endDate","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date de fin","Date de fin","","","","","","","","","",,,,,"",,,,"fr-lm-condition.period.endDate",0,1,"",""
 "fr-lm-condition.severity","fr-lm-condition.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Sévérité de la manifestion","Sévérité de la manifestion","","","","","","","","","",,"","(preferred): SNOMED_CT => Valeur issue du jdv-severite-observation-cisis (1.2.250.1.213.1.1.5.675)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260619134042","",,,,"fr-lm-condition.severity",0,1,"",""
+","Sévérité de la manifestion","Sévérité de la manifestion","","","","","","","","","",,"required","SNOMED_CT => Valeur issue du jdv-severite-observation-cisis (1.2.250.1.213.1.1.5.675)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260619134042","",,,,"fr-lm-condition.severity",0,1,"",""
 "fr-lm-condition.clinicalStatus","fr-lm-condition.clinicalStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Statut clinique du patient","Statut clinique du patient","","","","","","","","","",,,,,"",,,,"fr-lm-condition.clinicalStatus",0,1,"",""
 "fr-lm-condition.bodySite","fr-lm-condition.bodySite","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
@@ -81,7 +81,7 @@ boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[
 Binding Description: (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …","Stade/Grade. codeSystem spécifique au contexte.
 Binding Description: (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …","","","","","","","","","",,,,,"",,,,"fr-lm-condition.stage",0,*,"",""
 "fr-lm-condition.diagnosisAssertionStatus","fr-lm-condition.diagnosisAssertionStatus","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Certitude","Certitude","","","","","","","","","",,"","Valeur issue du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260619134042","",,,,"fr-lm-condition.diagnosisAssertionStatus",0,1,"",""
+","Certitude","Certitude","","","","","","","","","",,"required","Valeur issue du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260619134042","",,,,"fr-lm-condition.diagnosisAssertionStatus",0,1,"",""
 "fr-lm-condition.reference","fr-lm-condition.reference","","","",1,*,"","","","uri {[]} {[]}
 ","Cet élément contient l’URL du document","Cet élément contient l’URL du document","","","","","","","","","",,,,,"",,,,"fr-lm-condition.reference",1,*,"",""
 "fr-lm-condition.note","fr-lm-condition.note","","","",0,1,"","","","string {[]} {[]}

@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-organisatio
   "name" : "FRLMOrganisation",
   "title" : "Logical model - FR LM Organisation",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -86,6 +86,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-organisatio
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "Catégorie d'établissement provenant du jdv FHIR https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-j368-categorie-etablissement-cisis|20260505120000"
       }
@@ -145,6 +146,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-organisatio
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "JDV_J02_XdsHealthcareFacilityTypeCode_CISIS (Code de type d'établissement de santé provenant du JDV FHIR)",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J02-XdsHealthcareFacilityTypeCode-CISIS/FHIR/JDV-J02-XdsHealthcareFacilityTypeCode-CISIS|20260223120000"
       }

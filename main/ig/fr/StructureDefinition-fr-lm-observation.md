@@ -74,7 +74,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
   "name" : "FRLMObservation",
   "title" : "Logical model - FR LM Observation",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -158,6 +158,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "LOINC (2.16.840.1.113883.6.1) ou autre"
       }
     },
@@ -275,6 +276,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "Quantity"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): UCUM for units"
       }
     },
@@ -289,6 +291,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "Quantity"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): UCUM for units"
       }
     },
@@ -303,6 +306,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): SNOMED CT"
       }
     },
@@ -317,6 +321,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): HL7 Observation Reference Range Meaning Codes"
       }
     },
@@ -331,6 +336,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): SNOMED CT, HL7 v3-Race"
       }
     },
@@ -345,6 +351,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "Range"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): UCUM for units"
       }
     },
@@ -370,7 +377,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-observati
         "code" : "CodeableConcept"
       }],
       "binding" : {
-        "description" : "(preferred): HL7 Observation Interpretation Codes",
+        "strength" : "required",
+        "description" : "HL7 Observation Interpretation Codes",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042"
       }
     },

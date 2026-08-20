@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-attachment.
   "name" : "FRLMAttachment",
   "title" : "Logical model - FR LM Attachment",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -77,6 +77,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-attachment.
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): BCP-13"
       }
     },
@@ -91,6 +92,7 @@ Other representations of profile: [CSV](../StructureDefinition-fr-lm-attachment.
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "preferred",
         "description" : "(preferred): BCP 47"
       }
     },

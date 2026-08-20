@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMMedicationAdministration vers le p
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement déjà administré\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMMedicationAdministration vers le p
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationAdministration",
       "target" : [{
@@ -70,159 +72,159 @@ Mapping des éléments du modèle métier FRLMMedicationAdministration vers le p
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.renderedDosageInstruction",
+      "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
       "target" : [{
         "code" : "FRCDATraitement.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.sequence",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.sequence",
       "target" : [{
         "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.note",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.note",
       "target" : [{
         "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]",
       "target" : [{
         "code" : "FRCDATraitement.doseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]",
       "target" : [{
         "code" : "FRCDATraitement.rateQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.numberOfTimes",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.numberOfTimes",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime.frequency",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.period",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.period",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime.period",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.dayOfWeek",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.dayOfWeek",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.timeOfDay",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.timeOfDay",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.frequency.additionalInstructions",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.additionalInstructions",
       "target" : [{
         "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.dateOfAdministration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.dateOfAdministration",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.conditionOfAdministration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.conditionOfAdministration",
       "target" : [{
         "code" : "FRCDATraitement.precondition",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.date[x]",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.date[x]",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.duration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.duration",
       "target" : [{
         "code" : "FRCDATraitement.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.eventTime",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.eventTime",
       "target" : [{
         "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.eventEndSequence",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.eventEndSequence",
       "target" : [{
         "equivalence" : "unmatched"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.bodySite",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.bodySite",
       "target" : [{
         "code" : "FRCDATraitement.approachSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.routeOfAdministration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration",
       "target" : [{
         "code" : "FRCDATraitement.routeCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.quantity",
       "target" : [{
         "code" : "FRCDATraitement.maxDoseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerPeriod.duration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.duration",
       "target" : [{
         "code" : "FRCDATraitement.maxDoseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxDosePerAdministration",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerAdministration",
       "target" : [{
         "code" : "FRCDATraitement.maxDoseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.dosageInstructions.dosageDetails.maxLifetimeDose",
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxLifetimeDose",
       "target" : [{
         "code" : "FRCDATraitement.maxDoseQuantity",
         "equivalence" : "equivalent"
@@ -237,8 +239,10 @@ Mapping des éléments du modèle métier FRLMMedicationAdministration vers le p
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-administration",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-administration-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationAdministration",
       "target" : [{
@@ -289,6 +293,13 @@ Mapping des éléments du modèle métier FRLMMedicationAdministration vers le p
       "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
       "target" : [{
         "code" : "FRMedicationAdministrationDocument.dosage.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.site",
         "equivalence" : "equivalent"
       }]
     },

@@ -21,7 +21,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Structure\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,8 +39,10 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-assigned-entity",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrganisation",
       "target" : [{
@@ -100,7 +102,8 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-organisation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation",
+    "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/Organization",
     "targetVersion" : "4.0.1",
     "element" : [{

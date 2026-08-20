@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Encounter\"",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-rencontre",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-rencontre",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMEncounter",
       "target" : [{
@@ -215,8 +217,10 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-encounter",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-encounter-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMEncounter",
       "target" : [{

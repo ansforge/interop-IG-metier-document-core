@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Traitement prescrit",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,8 +35,10 @@ Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-item",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-prescrit",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-prescription-item",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement-prescrit",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPrescriptionItem",
       "target" : [{
@@ -347,8 +349,10 @@ Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CD
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-prescription-item",
-    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-request-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-prescription-item",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-request-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPrescriptionItem",
       "target" : [{

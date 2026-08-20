@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-participa
   "name" : "FRLMParticipant",
   "title" : "Logical model - FR LM Participant",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -132,6 +132,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-participa
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "jdv-hl7-v3-ParticipationType-cisis (2.16.840.1.113883.1.11.10901)",
         "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis|20260420150251"
       }
@@ -147,6 +148,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-participa
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "JDV_J47_FunctionCode_CISIS (1.2.250.1.213.1.1.5.124)",
         "valueSet" : "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS|20250523120000"
       }

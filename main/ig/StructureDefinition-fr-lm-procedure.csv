@@ -30,7 +30,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organi
 "fr-lm-procedure.header.date","fr-lm-procedure.header.date","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
 "fr-lm-procedure.header.status","fr-lm-procedure.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Statut de l'acte","Statut","","","","","","","","","",,"","jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
+","Statut de l'acte","Statut","","","","","","","","","",,"required","jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260619134042","",,,,"fr-lm-entry.header.status",0,1,"",""
 "fr-lm-procedure.header.source","fr-lm-procedure.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
 "fr-lm-procedure.header.language","fr-lm-procedure.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -40,7 +40,7 @@ La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français
 La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
 La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
 "fr-lm-procedure.code","fr-lm-procedure.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Code de l'acte","Code de l'acte","","","","","","","","","",,"","CCAM (1.2.250.1.215.300.1)","","",,,,"fr-lm-procedure.code",1,1,"",""
+","Code de l'acte","Code de l'acte","","","","","","","","","",,"required","CCAM (1.2.250.1.215.300.1)","","",,,,"fr-lm-procedure.code",1,1,"",""
 "fr-lm-procedure.procedureDate[x]","fr-lm-procedure.procedureDate[x]","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
 ","Période de l'acte","Période de l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.procedureDate[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
@@ -61,11 +61,11 @@ boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[
 "fr-lm-procedure.procedureDate[x].procedureDatePeriod","fr-lm-procedure.procedureDate[x].procedureDatePeriod","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date de fin de l'acte","Date de fin de l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.procedureDate[x].procedureDatePeriod",0,1,"",""
 "fr-lm-procedure.priority","fr-lm-procedure.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Priorité","Priorité","","","","","","","","","",,"","jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV","","",,,,"fr-lm-procedure.priority",0,1,"",""
+","Priorité","Priorité","","","","","","","","","",,"required","jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV","","",,,,"fr-lm-procedure.priority",0,1,"",""
 "fr-lm-procedure.bodySite","fr-lm-procedure.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
-","localisation anatomique","localisation anatomique","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-procedure.bodySite",0,1,"",""
+","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.bodySite",0,1,"",""
 "fr-lm-procedure.approachSiteCode","fr-lm-procedure.approachSiteCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Voie d’abord","Voie d’abord","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-procedure.approachSiteCode",0,1,"",""
+","Voie d’abord","Voie d’abord","","","","","","","","","",,"required","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-procedure.approachSiteCode",0,1,"",""
 "fr-lm-procedure.difficulty","fr-lm-procedure.difficulty","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Difficulté","Difficulté","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.difficulty",0,1,"",""
 "fr-lm-procedure.reason[x]","fr-lm-procedure.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
@@ -83,7 +83,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condit
 "fr-lm-procedure.outcome","fr-lm-procedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.outcome",0,1,"",""
 "fr-lm-procedure.complication","fr-lm-procedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
-","Complication survenue pendant l'acte ou immédiatement après uniquement.","Complication survenue pendant l'acte ou immédiatement après uniquement.","","","","","","","","","",,"","(preferred): ICD-10, SNOMED CT","","",,,,"fr-lm-procedure.complication",0,*,"",""
+","Complication survenue pendant l'acte ou immédiatement après uniquement.","Complication survenue pendant l'acte ou immédiatement après uniquement.","","","","","","","","","",,"preferred","(preferred): ICD-10, SNOMED CT","","",,,,"fr-lm-procedure.complication",0,*,"",""
 "fr-lm-procedure.deviceUsed","fr-lm-procedure.deviceUsed","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
 ","Dispositif médical utilisé pendant l'acte","Dispositif médical utilisé pendant l'acte","","","","","","","","","",,,,,"",,,,"fr-lm-procedure.deviceUsed",0,*,"",""
 "fr-lm-procedure.focalDevice","fr-lm-procedure.focalDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}

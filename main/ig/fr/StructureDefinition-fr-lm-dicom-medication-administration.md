@@ -73,7 +73,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-dicom-med
   "name" : "FRLMDICOMMedicationAdministration",
   "title" : "Logical model - FR LM DICOM Medication Administration",
   "status" : "draft",
-  "date" : "2026-08-14T14:57:39+00:00",
+  "date" : "2026-08-20T08:45:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -114,6 +114,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-dicom-med
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "EDQM (0.4.0.127.0.16.1.1.2.1)"
       }
     },
@@ -172,6 +173,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-dicom-med
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "UCD (1.2.250.1.213.2.61) + code ATC"
       }
     },
@@ -186,6 +188,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-fr-lm-dicom-med
         "code" : "CodeableConcept"
       }],
       "binding" : {
+        "strength" : "required",
         "description" : "ATC (2.16.840.1.113883.6.73) or CIS (1.2.250.1.213.2.3.1) or MV (1.2.250.1.213.2.59)"
       }
     },
