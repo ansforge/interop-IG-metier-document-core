@@ -2,6 +2,6 @@
 
 ## Corps d'un document
 
-* [Modèle logique métier](./StructureDefinition-fr-lm-corps-document.md)
+* [Modèle logique métier](./StructureDefinition-FRLMCorpsDocument.md)
 * [Mapping Métier/CDA/FHIR](./mappingCDA-FHIR-corps.md)
 

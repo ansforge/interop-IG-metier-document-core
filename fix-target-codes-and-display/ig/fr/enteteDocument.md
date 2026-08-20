@@ -2,6 +2,6 @@
 
 ## Entête document
 
-* [Modèle logique métier](./StructureDefinition-fr-lm-header-document.md)
+* [Modèle logique métier](./StructureDefinition-FRLMHeaderDocument.md)
 * [Mapping Métier/CDA/FHIR](./mappingCDA-FHIR-entete.md)
 
