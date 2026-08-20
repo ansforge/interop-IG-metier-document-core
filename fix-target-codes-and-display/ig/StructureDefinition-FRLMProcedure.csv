@@ -1,0 +1,92 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMProcedure","FRLMProcedure","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Procedure","Acte","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMProcedure.header","FRLMProcedure.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMProcedure.header.subject","FRLMProcedure.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMProcedure.header.identifier","FRLMProcedure.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMProcedure.header.author[x]","FRLMProcedure.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMProcedure.header.author[x].authorProfessional","FRLMProcedure.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMProcedure.header.author[x].authorOrganisation","FRLMProcedure.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMProcedure.header.author[x].authorDevice","FRLMProcedure.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMProcedure.header.performer[x]","FRLMProcedure.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMProcedure.header.participant[x]","FRLMProcedure.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMProcedure.header.participant[x].participantProfessional","FRLMProcedure.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMProcedure.header.participant[x].participantOrganisation","FRLMProcedure.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMProcedure.header.participant[x].participantDevice","FRLMProcedure.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMProcedure.header.informant","FRLMProcedure.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMProcedure.header.date","FRLMProcedure.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMProcedure.header.status","FRLMProcedure.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'acte","Statut","","","","","","","","","",,"required","jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260619134042","",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMProcedure.header.source","FRLMProcedure.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMProcedure.header.language","FRLMProcedure.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMProcedure.code","FRLMProcedure.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de l'acte","Code de l'acte","","","","","","","","","",,"required","CCAM (1.2.250.1.215.300.1)","","",,,,"FRLMProcedure.code",1,1,"",""
+"FRLMProcedure.procedureDate[x]","FRLMProcedure.procedureDate[x]","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période de l'acte","Période de l'acte","","","","","","","","","",,,,,"",,,,"FRLMProcedure.procedureDate[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMProcedure.procedureDate[x].id","FRLMProcedure.procedureDate[x].id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMProcedure.procedureDate[x].extension","FRLMProcedure.procedureDate[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMProcedure.procedureDate[x].url","FRLMProcedure.procedureDate[x].url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"FRLMProcedure.procedureDate[x].value[x]","FRLMProcedure.procedureDate[x].value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMProcedure.procedureDate[x].procedureDateDateTime","FRLMProcedure.procedureDate[x].procedureDateDateTime","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début de l'acte","Date de début de l'acte","","","","","","","","","",,,,,"",,,,"FRLMProcedure.procedureDate[x].procedureDateDateTime",0,1,"",""
+"FRLMProcedure.procedureDate[x].procedureDatePeriod","FRLMProcedure.procedureDate[x].procedureDatePeriod","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin de l'acte","Date de fin de l'acte","","","","","","","","","",,,,,"",,,,"FRLMProcedure.procedureDate[x].procedureDatePeriod",0,1,"",""
+"FRLMProcedure.priority","FRLMProcedure.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priorité","Priorité","","","","","","","","","",,"required","jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV","","",,,,"FRLMProcedure.priority",0,1,"",""
+"FRLMProcedure.bodySite","FRLMProcedure.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure {[]} {[]}
+","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","localisation anatomique. Le code de la localisation doit être issu de SNOMED CT (2.16.840.1.113883.6.96)","","","","","","","","","",,,,,"",,,,"FRLMProcedure.bodySite",0,1,"",""
+"FRLMProcedure.approachSiteCode","FRLMProcedure.approachSiteCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d’abord","Voie d’abord","","","","","","","","","",,"required","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"FRLMProcedure.approachSiteCode",0,1,"",""
+"FRLMProcedure.difficulty","FRLMProcedure.difficulty","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Difficulté","Difficulté","","","","","","","","","",,,,,"",,,,"FRLMProcedure.difficulty",0,1,"",""
+"FRLMProcedure.reason[x]","FRLMProcedure.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}","Motif de l’acte.
+- motif codé (spécifique à un  contexte)
+- motif : un problème
+- motif : une observation
+- motif : un acte
+- motif : une rencontre (consultation, etc…)","Motif de l’acte.
+- motif codé (spécifique à un  contexte)
+- motif : un problème
+- motif : une observation
+- motif : un acte
+- motif : une rencontre (consultation, etc…)","","","","","","","","","",,,,,"",,,,"FRLMProcedure.reason[x]",0,*,"",""
+"FRLMProcedure.outcome","FRLMProcedure.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","Résultat immédiat de l'acte (succès, échec, ...). Ne concerne pas l'évaluation sur une période plus longue.","","","","","","","","","",,,,,"",,,,"FRLMProcedure.outcome",0,1,"",""
+"FRLMProcedure.complication","FRLMProcedure.complication","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Complication survenue pendant l'acte ou immédiatement après uniquement.","Complication survenue pendant l'acte ou immédiatement après uniquement.","","","","","","","","","",,"preferred","(preferred): ICD-10, SNOMED CT","","",,,,"FRLMProcedure.complication",0,*,"",""
+"FRLMProcedure.deviceUsed","FRLMProcedure.deviceUsed","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Dispositif médical utilisé pendant l'acte","Dispositif médical utilisé pendant l'acte","","","","","","","","","",,,,,"",,,,"FRLMProcedure.deviceUsed",0,*,"",""
+"FRLMProcedure.focalDevice","FRLMProcedure.focalDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Dispositif implanté, retiré ou manipulé chez le patient (étalonnage, remplacement de la batterie, pose d'une prothèse, fixation d'un système de drainage des plaies par aspiration, etc.).","Dispositif implanté, retiré ou manipulé chez le patient (étalonnage, remplacement de la batterie, pose d'une prothèse, fixation d'un système de drainage des plaies par aspiration, etc.).","","","","","","","","","",,,,,"",,,,"FRLMProcedure.focalDevice",0,*,"",""
+"FRLMProcedure.note","FRLMProcedure.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMProcedure.note",0,1,"",""

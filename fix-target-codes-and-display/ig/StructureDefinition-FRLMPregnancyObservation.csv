@@ -1,0 +1,87 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMPregnancyObservation","FRLMPregnancyObservation","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Pregnancy Observation","Observation sur la grossesse","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMPregnancyObservation.header","FRLMPregnancyObservation.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMPregnancyObservation.header.subject","FRLMPregnancyObservation.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMPregnancyObservation.header.identifier","FRLMPregnancyObservation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMPregnancyObservation.header.author[x]","FRLMPregnancyObservation.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMPregnancyObservation.header.author[x].authorProfessional","FRLMPregnancyObservation.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMPregnancyObservation.header.author[x].authorOrganisation","FRLMPregnancyObservation.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMPregnancyObservation.header.author[x].authorDevice","FRLMPregnancyObservation.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMPregnancyObservation.header.performer[x]","FRLMPregnancyObservation.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMPregnancyObservation.header.participant[x]","FRLMPregnancyObservation.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMPregnancyObservation.header.participant[x].participantProfessional","FRLMPregnancyObservation.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMPregnancyObservation.header.participant[x].participantOrganisation","FRLMPregnancyObservation.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMPregnancyObservation.header.participant[x].participantDevice","FRLMPregnancyObservation.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMPregnancyObservation.header.informant","FRLMPregnancyObservation.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMPregnancyObservation.header.date","FRLMPregnancyObservation.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMPregnancyObservation.header.status","FRLMPregnancyObservation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'observation","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMPregnancyObservation.header.source","FRLMPregnancyObservation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMPregnancyObservation.header.language","FRLMPregnancyObservation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMPregnancyObservation.directSubject[x]","FRLMPregnancyObservation.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}","Sujet de l'observation (si different du patient)","Sujet de l'observation (si different du patient)","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.directSubject[x]",0,1,"",""
+"FRLMPregnancyObservation.observationDate[x]","FRLMPregnancyObservation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date de l'observation","Date de l'observation","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.observationDate[x]",1,1,"",""
+"FRLMPregnancyObservation.type","FRLMPregnancyObservation.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type d'observation","Type d'observation","","","","","","","","","",,"required","jdv-issue-grossesse-cisis (1.2.250.1.213.1.1.5.731)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-issue-grossesse-cisis|20260619134042","",,,,"FRLMPregnancyObservation.type",1,1,"",""
+"FRLMPregnancyObservation.method","FRLMPregnancyObservation.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Methode utilisee","Methode utilisee","","","","","","","","","",,"required","jdv-mode-accouchement-cisis (1.2.250.1.213.1.1.5.735)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mode-accouchement-cisis|20260619134042","",,,,"FRLMPregnancyObservation.method",0,1,"",""
+"FRLMPregnancyObservation.result","FRLMPregnancyObservation.result","","","",1,1,"","","","Base {[]} {[]}
+","Valeur de l'observation","Valeur de l'observation","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result",1,1,"",""
+"FRLMPregnancyObservation.result.value[x]","FRLMPregnancyObservation.result.value[x]","","","",0,1,"","","","string {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}CodeableConcept {[]} {[]}","Valeur du resultat","Valeur du resultat","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.value[x]",0,1,"",""
+"FRLMPregnancyObservation.result.uncertainty","FRLMPregnancyObservation.result.uncertainty","","","",0,1,"","","","Base {[]} {[]}
+","Incertitude associee au resultat","Incertitude associee au resultat","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.uncertainty",0,1,"",""
+"FRLMPregnancyObservation.result.uncertainty.value","FRLMPregnancyObservation.result.uncertainty.value","","","",1,1,"","","","decimal {[]} {[]}
+","Niveau d'incertitude du resultat","Niveau d'incertitude du resultat","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.uncertainty.value",1,1,"",""
+"FRLMPregnancyObservation.result.uncertainty.type","FRLMPregnancyObservation.result.uncertainty.type","","","",0,1,"","","","Coding {[]} {[]}
+","Type d'incertitude","Type d'incertitude","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.uncertainty.type",0,1,"",""
+"FRLMPregnancyObservation.result.dataAbsentReason","FRLMPregnancyObservation.result.dataAbsentReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Raison de l'absence de resultat","Raison de l'absence de resultat","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.dataAbsentReason",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange","FRLMPregnancyObservation.result.referenceRange","","","",0,*,"","","","Base {[]} {[]}
+","Intervalle de reference","Intervalle de reference","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange",0,*,"",""
+"FRLMPregnancyObservation.result.referenceRange.low","FRLMPregnancyObservation.result.referenceRange.low","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite inférieure de l'intervalle","Limite inférieure de l'intervalle","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.low",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange.high","FRLMPregnancyObservation.result.referenceRange.high","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite supérieure de l'intervalle","Limite supérieure de l'intervalle","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.high",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange.normalValue","FRLMPregnancyObservation.result.referenceRange.normalValue","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Valeur normale","Valeur normale","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.normalValue",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange.type","FRLMPregnancyObservation.result.referenceRange.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type d'intervalle de reference","Type d'intervalle de reference","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.type",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange.appliesTo","FRLMPregnancyObservation.result.referenceRange.appliesTo","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Population ou contexte d'application","Population ou contexte d'application","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.appliesTo",0,*,"",""
+"FRLMPregnancyObservation.result.referenceRange.age","FRLMPregnancyObservation.result.referenceRange.age","","","",0,1,"","","","Range {[]} {[]}
+","Tranche d'age","Tranche d'age","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.age",0,1,"",""
+"FRLMPregnancyObservation.result.referenceRange.text","FRLMPregnancyObservation.result.referenceRange.text","","","",0,1,"","","","string {[]} {[]}
+","Texte libre de l'intervalle de reference","Texte libre de l'intervalle de reference","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.result.referenceRange.text",0,1,"",""
+"FRLMPregnancyObservation.interpretation","FRLMPregnancyObservation.interpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Interpretation du resultat","Interpretation du resultat","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.interpretation",0,*,"",""
+"FRLMPregnancyObservation.note","FRLMPregnancyObservation.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.note",0,1,"",""
+"FRLMPregnancyObservation.component","FRLMPregnancyObservation.component","","","",0,*,"","","","Base {[]} {[]}
+","Composant detaillé de l'observation","Composant detaillé de l'observation","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.component",0,*,"",""
+"FRLMPregnancyObservation.derivedFrom[x]","FRLMPregnancyObservation.derivedFrom[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy {[]} {[]}","Observation ou examen source dont derive cette information","Observation ou examen source dont derive cette information","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.derivedFrom[x]",0,*,"",""
+"FRLMPregnancyObservation.hasMember[x]","FRLMPregnancyObservation.hasMember[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Observations associees rattachees a cette entree","Observations associees rattachees a cette entree","","","","","","","","","",,,,,"",,,,"FRLMPregnancyObservation.hasMember[x]",0,*,"",""

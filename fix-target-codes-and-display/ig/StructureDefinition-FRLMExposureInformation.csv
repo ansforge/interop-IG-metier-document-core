@@ -1,0 +1,27 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMExposureInformation","FRLMExposureInformation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Exposure Information","Section Exposition aux radiations","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMExposureInformation.codeSection","FRLMExposureInformation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMExposureInformation.titleSection","FRLMExposureInformation.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMExposureInformation.description","FRLMExposureInformation.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMExposureInformation.author[x]","FRLMExposureInformation.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMExposureInformation.author[x].authorProfessional","FRLMExposureInformation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMExposureInformation.author[x].authorOrganisation","FRLMExposureInformation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMExposureInformation.author[x].authorDevice","FRLMExposureInformation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMExposureInformation.informant","FRLMExposureInformation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMExposureInformation.subSection","FRLMExposureInformation.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMExposureInformation.subSection.quantityExposure","FRLMExposureInformation.subSection.quantityExposure","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMQuantityExposure {[]} {[]}
+","Entrée Quantité","Entrée Quantité","","","","","","","","","",,,,,"",,,,"FRLMExposureInformation.subSection.quantityExposure",0,*,"",""
+"FRLMExposureInformation.subSection.radiopharmaceuticalAdministration","FRLMExposureInformation.subSection.radiopharmaceuticalAdministration","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}
+","Entrée administration des produits radiopharmaceutiques","Entrée administration des produits radiopharmaceutiques","","","","","","","","","",,,,,"",,,,"FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",0,1,"",""
+"FRLMExposureInformation.entry","FRLMExposureInformation.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""

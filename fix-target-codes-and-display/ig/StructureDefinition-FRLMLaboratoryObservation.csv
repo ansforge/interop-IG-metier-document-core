@@ -1,0 +1,112 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMLaboratoryObservation","FRLMLaboratoryObservation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - Laboratory Observation","Résultats d'examen de biologie médicale","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMLaboratoryObservation.header","FRLMLaboratoryObservation.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMLaboratoryObservation.header.subject","FRLMLaboratoryObservation.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMLaboratoryObservation.header.identifier","FRLMLaboratoryObservation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMLaboratoryObservation.header.author[x]","FRLMLaboratoryObservation.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMLaboratoryObservation.header.author[x].authorProfessional","FRLMLaboratoryObservation.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMLaboratoryObservation.header.author[x].authorOrganisation","FRLMLaboratoryObservation.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMLaboratoryObservation.header.author[x].authorDevice","FRLMLaboratoryObservation.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMLaboratoryObservation.header.performer[x]","FRLMLaboratoryObservation.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMLaboratoryObservation.header.participant[x]","FRLMLaboratoryObservation.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMLaboratoryObservation.header.participant[x].participantProfessional","FRLMLaboratoryObservation.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMLaboratoryObservation.header.participant[x].participantOrganisation","FRLMLaboratoryObservation.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMLaboratoryObservation.header.participant[x].participantDevice","FRLMLaboratoryObservation.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMLaboratoryObservation.header.informant","FRLMLaboratoryObservation.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMLaboratoryObservation.header.date","FRLMLaboratoryObservation.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMLaboratoryObservation.header.status","FRLMLaboratoryObservation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'observation","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMLaboratoryObservation.header.status.id","FRLMLaboratoryObservation.header.status.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMLaboratoryObservation.header.status.extension","FRLMLaboratoryObservation.header.status.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMLaboratoryObservation.header.status.coding","FRLMLaboratoryObservation.header.status.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMLaboratoryObservation.header.status.text","FRLMLaboratoryObservation.header.status.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMLaboratoryObservation.header.status.directSubject[x]","FRLMLaboratoryObservation.header.status.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"FRLMObservation.header.status.directSubject[x]",0,1,"",""
+"FRLMLaboratoryObservation.header.source","FRLMLaboratoryObservation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMLaboratoryObservation.header.language","FRLMLaboratoryObservation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMLaboratoryObservation.observationDate[x]","FRLMLaboratoryObservation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date de l'observation","Date de l'observation","","","","","","","","","",,,,,"",,,,"FRLMObservation.observationDate[x]",1,1,"",""
+"FRLMLaboratoryObservation.type","FRLMLaboratoryObservation.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type d'observation","Type d'observation","","","","","","","","","",,"required","LOINC (2.16.840.1.113883.6.1) ou autre","","",,,,"FRLMObservation.type",1,1,"",""
+"FRLMLaboratoryObservation.originalName","FRLMLaboratoryObservation.originalName","","","",0,1,"","","","string {[]} {[]}
+","Nom de l'observation","Nom de l'observation","","","","","","","","","",,,,,"",,,,"FRLMObservation.originalName",0,1,"",""
+"FRLMLaboratoryObservation.method","FRLMLaboratoryObservation.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Méthode utilisée pour l'observation","Méthode utilisée pour l'observation","","","","","","","","","",,,,,"",,,,"FRLMObservation.method",0,1,"",""
+"FRLMLaboratoryObservation.specimen","FRLMLaboratoryObservation.specimen","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen {[]} {[]}
+","Prélèvement","Prélèvement","","","","","","","","","",,,,,"",,,,"FRLMObservation.specimen",0,1,"",""
+"FRLMLaboratoryObservation.order","FRLMLaboratoryObservation.order","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest {[]} {[]}
+","Demande d'examen correspondante","Demande d'examen correspondante","","","","","","","","","",,,,,"",,,,"FRLMObservation.order",0,1,"",""
+"FRLMLaboratoryObservation.bodySite","FRLMLaboratoryObservation.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure {[]} {[]}
+","Localisation anatomique","Localisation anatomique","","","","","","","","","",,,,,"",,,,"FRLMObservation.bodySite",0,1,"",""
+"FRLMLaboratoryObservation.result","FRLMLaboratoryObservation.result","","","",1,1,"","","","Base {[]} {[]}
+","Résultats d'examen","Valeur de l'observation","","","","","","","","","",,,,,"",,,,"FRLMObservation.result",1,1,"",""
+"FRLMLaboratoryObservation.result.Value[x]","FRLMLaboratoryObservation.result.Value[x]","","","",0,1,"","","","string {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}CodeableConcept {[]} {[]}boolean {[]} {[]}","Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.","Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.","","","","","","","","","",,,,,"",,,,"FRLMObservation.result.Value[x]",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange","FRLMLaboratoryObservation.referenceRange","","","",0,*,"","","","Base {[]} {[]}
+","Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis.","Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis.","","","","","","","","","",,,,,"",,,,"FRLMObservation.referenceRange",0,*,"",""
+"FRLMLaboratoryObservation.referenceRange.low","FRLMLaboratoryObservation.referenceRange.low","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite inférieure de l'intervalle","Limite inférieure de l'intervalle","","","","","","","","","",,"preferred","(preferred): UCUM for units","","",,,,"FRLMObservation.referenceRange.low",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange.high","FRLMLaboratoryObservation.referenceRange.high","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite supérieure de l'intervalle","Limite supérieure de l'intervalle","","","","","","","","","",,"preferred","(preferred): UCUM for units","","",,,,"FRLMObservation.referenceRange.high",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange.normalValue","FRLMLaboratoryObservation.referenceRange.normalValue","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Valeur normale si pertinente pour l'intervalle","Valeur normale si pertinente pour l'intervalle","","","","","","","","","",,"preferred","(preferred): SNOMED CT","","",,,,"FRLMObservation.referenceRange.normalValue",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange.type","FRLMLaboratoryObservation.referenceRange.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type d'intervalle de référence","Type d'intervalle de référence","","","","","","","","","",,"preferred","(preferred): HL7 Observation Reference Range Meaning Codes","","",,,,"FRLMObservation.referenceRange.type",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange.appliesTo","FRLMLaboratoryObservation.referenceRange.appliesTo","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Population concernée pour cet intervalle","Population concernée pour cet intervalle","","","","","","","","","",,"preferred","(preferred): SNOMED CT, HL7 v3-Race","","",,,,"FRLMObservation.referenceRange.appliesTo",0,*,"",""
+"FRLMLaboratoryObservation.referenceRange.age","FRLMLaboratoryObservation.referenceRange.age","","","",0,1,"","","","Range {[]} {[]}
+","Tranche d'âge pour cet intervalle","Tranche d'âge pour cet intervalle","","","","","","","","","",,"preferred","(preferred): UCUM for units","","",,,,"FRLMObservation.referenceRange.age",0,1,"",""
+"FRLMLaboratoryObservation.referenceRange.text","FRLMLaboratoryObservation.referenceRange.text","","","",0,1,"","","","string {[]} {[]}
+","Texte libre","Texte libre","","","","","","","","","",,,,,"",,,,"FRLMObservation.referenceRange.text",0,1,"",""
+"FRLMLaboratoryObservation.interpretation","FRLMLaboratoryObservation.interpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Interprétation","Interprétation","","","","","","","","","",,"required","HL7 Observation Interpretation Codes","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042","",,,,"FRLMObservation.interpretation",0,*,"",""
+"FRLMLaboratoryObservation.note","FRLMLaboratoryObservation.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMObservation.note",0,1,"",""
+"FRLMLaboratoryObservation.component","FRLMLaboratoryObservation.component","","","",0,*,"","","","Base {[]} {[]}
+","Composant dans le cas d'une observation composée de plusieurs sous-observations","Composant dans le cas d'une observation composée de plusieurs sous-observations","","","","","","","","","",,,,,"",,,,"FRLMObservation.component",0,*,"",""
+"FRLMLaboratoryObservation.derivedFrom[x]","FRLMLaboratoryObservation.derivedFrom[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy {[]} {[]}","Référence de la resource à partir de laquelle l'observation a été faite. Par exemple, une image échographique à partir de laquelle une mesure fœtale est réalisée.","Référence de la resource à partir de laquelle l'observation a été faite. Par exemple, une image échographique à partir de laquelle une mesure fœtale est réalisée.","","","","","","","","","",,,,,"",,,,"FRLMObservation.derivedFrom[x]",0,*,"",""
+"FRLMLaboratoryObservation.hasMember[x]","FRLMLaboratoryObservation.hasMember[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Cette observation est un groupe d'observations (par exemple, une batterie de tests, un ensemble de mesures de signes vitaux).","Cette observation est un groupe d'observations (par exemple, une batterie de tests, un ensemble de mesures de signes vitaux).","","","","","","","","","",,,,,"",,,,"FRLMObservation.hasMember[x]",0,*,"",""
+"FRLMLaboratoryObservation.triggeredBy[x]","FRLMLaboratoryObservation.triggeredBy[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Référence à l'observation ayant déclenché la réalisation de cette observation.","Référence à l'observation ayant déclenché la réalisation de cette observation.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.triggeredBy[x]",0,*,"",""
+"FRLMLaboratoryObservation.testKit","FRLMLaboratoryObservation.testKit","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Test Kit utilisé pour la réalisation de l'observation.","Test Kit utilisé pour la réalisation de l'observation.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.testKit",0,1,"",""
+"FRLMLaboratoryObservation.calibrator","FRLMLaboratoryObservation.calibrator","","","",0,1,"","","","Identifier {[]} {[]}
+","Identifiant du calibrateur utilisé pour la réalisation de l'observation.","Identifiant du calibrateur utilisé pour la réalisation de l'observation.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.calibrator",0,1,"",""
+"FRLMLaboratoryObservation.accreditationStatus","FRLMLaboratoryObservation.accreditationStatus","","","",0,1,"","","","boolean {[]} {[]}
+","Statut d'accréditation du laboratoire pour l'observation.","Statut d'accréditation du laboratoire pour l'observation.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.accreditationStatus",0,1,"",""
+"FRLMLaboratoryObservation.previousResults","FRLMLaboratoryObservation.previousResults","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation {[]} {[]}
+","Résultats précédents de la même observation","Résultats précédents de la même observation","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.previousResults",0,*,"",""
+"FRLMLaboratoryObservation.pointOfCareTest","FRLMLaboratoryObservation.pointOfCareTest","","","",0,1,"","","","boolean {[]} {[]}
+","Indique si l'observation est un test de point de soins ou non.","Indique si l'observation est un test de point de soins ou non.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.pointOfCareTest",0,1,"",""

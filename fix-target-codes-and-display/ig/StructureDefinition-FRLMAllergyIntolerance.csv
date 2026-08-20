@@ -1,0 +1,111 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMAllergyIntolerance","FRLMAllergyIntolerance","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Allergy Intolerance","Allergie ou Hypersensibilité","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMAllergyIntolerance.header","FRLMAllergyIntolerance.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMAllergyIntolerance.header.subject","FRLMAllergyIntolerance.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMAllergyIntolerance.header.identifier","FRLMAllergyIntolerance.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMAllergyIntolerance.header.author[x]","FRLMAllergyIntolerance.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMAllergyIntolerance.header.author[x].authorProfessional","FRLMAllergyIntolerance.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMAllergyIntolerance.header.author[x].authorOrganisation","FRLMAllergyIntolerance.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMAllergyIntolerance.header.author[x].authorDevice","FRLMAllergyIntolerance.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMAllergyIntolerance.header.performer[x]","FRLMAllergyIntolerance.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMAllergyIntolerance.header.participant[x]","FRLMAllergyIntolerance.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMAllergyIntolerance.header.participant[x].participantProfessional","FRLMAllergyIntolerance.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMAllergyIntolerance.header.participant[x].participantOrganisation","FRLMAllergyIntolerance.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMAllergyIntolerance.header.participant[x].participantDevice","FRLMAllergyIntolerance.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMAllergyIntolerance.header.informant","FRLMAllergyIntolerance.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMAllergyIntolerance.header.date","FRLMAllergyIntolerance.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMAllergyIntolerance.header.status","FRLMAllergyIntolerance.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut clinique de l'allergie","Statut","","","","","","","","","",,"required","jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergyintolerance-clinical-cisis|20260619134042","",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMAllergyIntolerance.header.source","FRLMAllergyIntolerance.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMAllergyIntolerance.header.language","FRLMAllergyIntolerance.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMAllergyIntolerance.type","FRLMAllergyIntolerance.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Allergie / hypersensibilité non allergique / intolérance / idiosyncrasie","Allergie / hypersensibilité non allergique / intolérance / idiosyncrasie","","","","","","","","","",,"required"," jdv-type-event-indesirable-previsible-cisis (1.2.250.1.213.1.1.5.842)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis|20260619134042","",,,,"FRLMAllergyIntolerance.type",1,1,"",""
+"FRLMAllergyIntolerance.category","FRLMAllergyIntolerance.category","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","food | medication | environment | biologic","food | medication | environment | biologic","","","","","","","","","",,"required","jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-category-cisis|20260619134041","",,,,"FRLMAllergyIntolerance.category",1,1,"",""
+"FRLMAllergyIntolerance.agentOrAllergen","FRLMAllergyIntolerance.agentOrAllergen","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Agent responsable
+- Médicaments : CIP ou UCD
+- Substances : SMS
+- Aliments : CIM-11 Chapitre X Extensions – Allergènes ou substances non médicinales
+- Agents environnementaux ou physiques : idem CIM-11 Chapitre X Extensions
+- Allergènes pouvant induire une contre-indication vaccinale : jdv-allergie-vaccin-cisis","Agent responsable
+- Médicaments : CIP ou UCD
+- Substances : SMS
+- Aliments : CIM-11 Chapitre X Extensions – Allergènes ou substances non médicinales
+- Agents environnementaux ou physiques : idem CIM-11 Chapitre X Extensions
+- Allergènes pouvant induire une contre-indication vaccinale : jdv-allergie-vaccin-cisis","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.agentOrAllergen",1,1,"",""
+"FRLMAllergyIntolerance.note","FRLMAllergyIntolerance.note","","","",0,1,"","","","string {[]} {[]}
+","commentaire","commentaire","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.note",0,1,"",""
+"FRLMAllergyIntolerance.criticality","FRLMAllergyIntolerance.criticality","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Criticité","Criticité","","","","","","","","","",,"required","jdv-hl7-allergy-intolerance-criticality-cisis (2.16.840.1.113883.4.642.3.129","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-criticality-cisis|20260619134041","",,,,"FRLMAllergyIntolerance.criticality",0,1,"",""
+"FRLMAllergyIntolerance.certainty","FRLMAllergyIntolerance.certainty","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Certitude","Certitude","","","","","","","","","",,"required","jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260619134042","",,,,"FRLMAllergyIntolerance.certainty",0,1,"",""
+"FRLMAllergyIntolerance.period","FRLMAllergyIntolerance.period","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période","Période","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.period",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMAllergyIntolerance.period.id","FRLMAllergyIntolerance.period.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMAllergyIntolerance.period.extension","FRLMAllergyIntolerance.period.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMAllergyIntolerance.period.url","FRLMAllergyIntolerance.period.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"FRLMAllergyIntolerance.period.value[x]","FRLMAllergyIntolerance.period.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMAllergyIntolerance.period.onsetDate","FRLMAllergyIntolerance.period.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début","Date de début","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.period.onsetDate",0,1,"",""
+"FRLMAllergyIntolerance.period.endDate","FRLMAllergyIntolerance.period.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin","Date de fin","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.period.endDate",0,1,"",""
+"FRLMAllergyIntolerance.reaction","FRLMAllergyIntolerance.reaction","","","",0,*,"","","","Base {[]} {[]}
+","Réaction observée","Réaction observée","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.reaction",0,*,"",""
+"FRLMAllergyIntolerance.reaction.agentOrAllergen","FRLMAllergyIntolerance.reaction.agentOrAllergen","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Agent responsable : - Substances : SMS","Agent responsable : - Substances : SMS","","","","","","","","","",,"required","SMS","","",,,,"FRLMAllergyIntolerance.reaction.agentOrAllergen",0,1,"",""
+"FRLMAllergyIntolerance.reaction.manifestation","FRLMAllergyIntolerance.reaction.manifestation","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Manifestation
+CIM-11 / Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiques ou d'hypersen-sibilité","Manifestation
+CIM-11 / Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiques ou d'hypersen-sibilité","","","","","","","","","",,"required","CIM-11","","",,,,"FRLMAllergyIntolerance.reaction.manifestation",1,1,"",""
+"FRLMAllergyIntolerance.reaction.severity","FRLMAllergyIntolerance.reaction.severity","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Sévérité de la manifestion","Sévérité de la manifestion","","","","","","","","","",,"preferred","SNOMED_CT (preferred)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260619134042","",,,,"FRLMAllergyIntolerance.reaction.severity",0,1,"",""
+"FRLMAllergyIntolerance.reaction.period","FRLMAllergyIntolerance.reaction.period","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période","Période","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.reaction.period",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMAllergyIntolerance.reaction.period.id","FRLMAllergyIntolerance.reaction.period.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMAllergyIntolerance.reaction.period.extension","FRLMAllergyIntolerance.reaction.period.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMAllergyIntolerance.reaction.period.url","FRLMAllergyIntolerance.reaction.period.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"FRLMAllergyIntolerance.reaction.period.value[x]","FRLMAllergyIntolerance.reaction.period.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMAllergyIntolerance.reaction.period.onsetDate","FRLMAllergyIntolerance.reaction.period.onsetDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début","Date de début","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.reaction.period.onsetDate",0,1,"",""
+"FRLMAllergyIntolerance.reaction.period.endDate","FRLMAllergyIntolerance.reaction.period.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin","Date de fin","","","","","","","","","",,,,,"",,,,"FRLMAllergyIntolerance.reaction.period.endDate",0,1,"",""

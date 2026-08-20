@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRAttesterLMCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRAttesterLMCDAFHIR</b></p><a name="FRAttesterLMCDAFHIR"> </a><a name="hcFRAttesterLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href="StructureDefinition-FRLMAttester.html">Logical model - FR LM Attester</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html">CDA - authenticator</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester">FRLMAttester</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator">Authenticator</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester.dateTime">FRLMAttester.dateTime</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.time">Authenticator.time</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td colspan="3">FRLMAttester.attester:healthProfessional</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.assignedEntity">Authenticator.assignedEntity</a></td><td>1..1</td><td>todo</td><td>Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan="3">FRLMAttester.attester:device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.assignedEntity">Authenticator.assignedEntity</a></td><td>1..1</td><td>todo</td><td>Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href="StructureDefinition-FRLMAttester.html">Logical model - FR LM Attester</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html">FR Composition Document</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester">FRLMAttester</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.attester">Composition.attester</a></td><td>1..*</td><td>todo</td><td>attester.where(mode='professional')</td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester.dateTime">FRLMAttester.dateTime</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.attester.time">Composition.attester.time</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td colspan="3">FRLMAttester.attester:healthProfessional</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan="3">FRLMAttester.attester:device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.attester.party.Device</td><td>attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRAttesterLMCDAFHIR</b></p><a name="en-FRAttesterLMCDAFHIR"> </a><a name="en-hcFRAttesterLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-FRLMAttester.html">Logical model - FR LM Attester</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html">CDA - authenticator</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester">FRLMAttester</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator">Authenticator</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester.dateTime">FRLMAttester.dateTime</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.time">Authenticator.time</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td colspan="3">FRLMAttester.attester:healthProfessional</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.assignedEntity">Authenticator.assignedEntity</a></td><td>1..1</td><td>todo</td><td>Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan="3">FRLMAttester.attester:device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authenticator.html#s-Authenticator.assignedEntity">Authenticator.assignedEntity</a></td><td>1..1</td><td>todo</td><td>Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-FRLMAttester.html">Logical model - FR LM Attester</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html">FR Composition Document</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester">FRLMAttester</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.attester">Composition.attester</a></td><td>1..*</td><td>todo</td><td>attester.where(mode='professional')</td></tr><tr><td><a href="StructureDefinition-FRLMAttester.html#s-FRLMAttester.dateTime">FRLMAttester.dateTime</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.attester.time">Composition.attester.time</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td colspan="3">FRLMAttester.attester:healthProfessional</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.attester.party.PractitionerRole</td><td>attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan="3">FRLMAttester.attester:device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.attester.party.Device</td><td>attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAttesterLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Validateur&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-20T08:53:12+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMAttester\&quot; et l'élément CDA \&quot;authenticator\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMAttester\&quot; et l'élément FHIR \&quot;Composition.attester\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttester"/>
+    <sourceVersion value="0.1.0"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-authenticator"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAttester"/>
+      <target>
+        <code value="Authenticator"/>
+        <display value="authenticator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.dateTime"/>
+      <target>
+        <code value="Authenticator.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.attester:healthProfessional"/>
+      <target>
+        <code value="Authenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.attester:device"/>
+      <target>
+        <code value="Authenticator.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttester"/>
+    <sourceVersion value="0.1.0"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAttester"/>
+      <target>
+        <code value="Composition.attester"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional')"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.dateTime"/>
+      <target>
+        <code value="Composition.attester.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.attester:healthProfessional"/>
+      <target>
+        <code value="Composition.attester.party.PractitionerRole"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttester.attester:device"/>
+      <target>
+        <code value="Composition.attester.party.Device"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
