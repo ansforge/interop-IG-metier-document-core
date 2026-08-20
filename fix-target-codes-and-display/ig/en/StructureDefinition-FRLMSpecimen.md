@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSpecimen.csv)
   "name" : "FRLMSpecimen",
   "title" : "Logical model - FR LM Specimen",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSpecimen.csv)
       "binding" : {
         "strength" : "required",
         "description" : "jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260716085852"
       }
     },
     {

@@ -64,9 +64,9 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
 * [AllergyIntolerance Clinical Status Codes](http://terminology.hl7.org/7.3.0/CodeSystem-allergyintolerance-clinical.html): [FRLMAllergyIntolerance](StructureDefinition-FRLMAllergyIntolerance.md)
-* [Condition Clinical Status Codes](http://terminology.hl7.org/7.3.0/CodeSystem-condition-clinical.html): [FRLMCondition](StructureDefinition-FRLMCondition.md)
-* [ConditionVerificationStatus](http://terminology.hl7.org/7.3.0/CodeSystem-condition-ver-status.html): [FRLMAllergyIntolerance](StructureDefinition-FRLMAllergyIntolerance.md) and [FRLMCondition](StructureDefinition-FRLMCondition.md)
-* [specimenType](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0487.html): [FRLMSpecimen](StructureDefinition-FRLMSpecimen.md)
+* [Condition Clinical Status Codes](https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-condition-clinical.html): [FRLMCondition](StructureDefinition-FRLMCondition.md)
+* [ConditionVerificationStatus](https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-condition-ver-status.html): [FRLMAllergyIntolerance](StructureDefinition-FRLMAllergyIntolerance.md) and [FRLMCondition](StructureDefinition-FRLMCondition.md)
+* [specimenType](https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-v2-0487.html): [FRLMSpecimen](StructureDefinition-FRLMSpecimen.md)
 * [ActCode](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html): [FRLMMedicationDispense](StructureDefinition-FRLMMedicationDispense.md)
 * [ActStatus](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActStatus.html): [FRLMProcedure](StructureDefinition-FRLMProcedure.md)
 * [AdministrativeGender](http://terminology.hl7.org/7.3.0/CodeSystem-v3-AdministrativeGender.html): [FRLMRelatedPerson](StructureDefinition-FRLMRelatedPerson.md)
@@ -82,6 +82,7 @@ Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://s
 Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner auprès de l'unité de production.
 
 ### Dépendances
+
 
 
 

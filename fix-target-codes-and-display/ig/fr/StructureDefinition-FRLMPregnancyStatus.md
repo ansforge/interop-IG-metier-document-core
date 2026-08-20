@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMPregnancySt
   "name" : "FRLMPregnancyStatus",
   "title" : "Logical model- FR LM Pregnancy Status",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -165,7 +165,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMPregnancySt
       "binding" : {
         "strength" : "required",
         "description" : "Statut de grossesse de la patiente (enceinte, pas enceinte, etc.)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis|20260716085852"
       }
     },
     {

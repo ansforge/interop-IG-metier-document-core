@@ -71,7 +71,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMEncounter.c
   "name" : "FRLMEncounter",
   "title" : "Logical model - FR LM Encounter",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -249,7 +249,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMEncounter.c
       "binding" : {
         "strength" : "required",
         "description" : "jdv-modalite-entree : Modalité d'entrée en établissement de santé",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis|20260619134043"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis|20260716085852"
       }
     },
     {

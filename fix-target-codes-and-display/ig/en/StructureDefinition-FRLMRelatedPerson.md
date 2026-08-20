@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
   "name" : "FRLMRelatedPerson",
   "title" : "Logical model - FR LM Related Person",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -108,7 +108,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-v3-PersonalRelationshipRoleType-cisis",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis|20260619134041"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis|20260716085851"
       }
     },
     {
@@ -146,7 +146,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-v3-AdministrativeGender-cisis",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis|20260716085851"
       }
     },
     {

@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSOPInstance.c
   "name" : "FRLMSOPInstance",
   "title" : "Logical model - FR LM SOP Instance",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -85,7 +85,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSOPInstance.c
       "binding" : {
         "strength" : "required",
         "description" : "JDV-SOPClass_CISIS (1.2.250.1.213.1.1.5.689)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-sop-class-cisis|20260716085851"
       }
     },
     {

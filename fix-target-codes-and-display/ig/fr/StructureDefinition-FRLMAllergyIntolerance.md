@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
   "name" : "FRLMAllergyIntolerance",
   "title" : "Logical model - FR LM Allergy Intolerance",
   "status" : "draft",
-  "date" : "2026-08-20T08:53:12+00:00",
+  "date" : "2026-08-20T15:08:45+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -122,7 +122,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-allergyintolerance-clinical-cisis (2.16.840.1.113883.4.642.3.1372)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergyintolerance-clinical-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergyintolerance-clinical-cisis|20260716085851"
       }
     },
     {
@@ -138,7 +138,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "required",
         "description" : " jdv-type-event-indesirable-previsible-cisis (1.2.250.1.213.1.1.5.842)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-evenement-indesirable-previsible-cisis|20260716085852"
       }
     },
     {
@@ -154,7 +154,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-allergy-intolerance-category-cisis (2.16.840.1.113883.4.642.3.133)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-category-cisis|20260619134041"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-category-cisis|20260716085851"
       }
     },
     {
@@ -192,7 +192,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-allergy-intolerance-criticality-cisis (2.16.840.1.113883.4.642.3.129",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-criticality-cisis|20260619134041"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-allergy-intolerance-criticality-cisis|20260716085851"
       }
     },
     {
@@ -208,7 +208,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260716085852"
       }
     },
     {
@@ -299,7 +299,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "binding" : {
         "strength" : "preferred",
         "description" : "SNOMED_CT (preferred)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260619134042"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260716085852"
       }
     },
     {
