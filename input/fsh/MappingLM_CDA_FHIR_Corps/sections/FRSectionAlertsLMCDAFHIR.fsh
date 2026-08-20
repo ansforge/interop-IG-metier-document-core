@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-alerts"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-points-de-vigilances-non-code"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-alerts"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-points-de-vigilances-non-code"
 // élément racine
 * group[=].element[+].code = #FRLMAlerts
 * group[=].element[=].target[+].code = #FRCDAPointsDeVigilancesNonCode
@@ -30,8 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 * group[=].element[=].target[+].equivalence = #unmatched
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-alerts"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-alerts"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMAlerts
 * group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionAlerts

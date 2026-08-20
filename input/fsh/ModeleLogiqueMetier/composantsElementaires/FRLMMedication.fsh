@@ -15,10 +15,12 @@ Characteristics: #can-be-target
   * organisationIdentifier 0..* Identifier "Identifiant de l'organisation et/ou de son emplacement physique."
 * item 0..* Base "Dans le cas de conditionnements combinés, chaque ingrédient dispose de sa propre forme galénique, ses propres ingrédients et leurs dosages respectifs."
   * doseForm 0..1 CodeableConcept "Forme galénique du produit de santé. EDQM Standard Terms (0.4.0.127.0.16.1.1.2.1) / classe PDF (forme galénique)."
+    * ^binding.strength = #required
     * ^binding.description = "EDQM Standard Terms"
   * ingredient  1..* Base "Ingrédient"
     * isActive 0..1 boolean "Indique si l'ingrédient est considéré comme un ingrédient actif. Les excipients ne sont généralement pas nécessaires et, par défaut, seuls les ingrédients actifs sont attendus."
     * substance 1..1 CodeableConcept "Substance. Code SMS (2.16.840.1.113883.3.6905.2) de la substance active de l’European Medicines Agency (EMA)"
+      * ^binding.strength = #required
       * ^binding.description = "SMS (2.16.840.1.113883.3.6905.2)"
     * strengthInfo 0..1 Base "Concentration de l'ingrédient par unité"
       * strength 1..1 Ratio "numérateur/dénominateur. Ex 100 mg/1 ml ou 500 mg / comprimé."

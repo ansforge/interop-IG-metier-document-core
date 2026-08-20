@@ -12,8 +12,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-related-person"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-related-entity"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-related-person"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-related-entity"
 
 // Élément racine
 * group[=].element[+].code = #FRLMRelatedPerson
@@ -86,8 +86,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * group[=].element[=].target.comment = "Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-related-person"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-related-person-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-related-person"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMRelatedPerson

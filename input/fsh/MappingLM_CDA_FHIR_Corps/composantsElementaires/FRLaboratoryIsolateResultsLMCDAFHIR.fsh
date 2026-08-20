@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMIsolatMicrobiologiqu
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-isolat-microbiologique"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-isolat-microbiologique"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-isolat-microbiologique"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-isolat-microbiologique"
 // Élément racine
 * group[=].element[+].code = #FRLMIsolatMicrobiologique
 * group[=].element[=].target.code = #FRCDAIsolatMicrobiologique
@@ -98,8 +98,8 @@ Description: "Mapping des éléments du modèle métier FRLMIsolatMicrobiologiqu
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-isolat-microbiologique"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-isolat-microbiologique"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document"
 // Élément racine
 * group[=].element[+].code = #FRCDAIsolatMicrobiologique
 * group[=].element[=].target.code = #FRObservationLaboratoryReportResultsDocument

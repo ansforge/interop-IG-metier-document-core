@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMResultatsLaboratoire
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention"
 // Élément racine
 * group[=].element[+].code = #FRLMResultatsLaboratoireBiologieSecondeIntention
 * group[=].element[=].target.code = #FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention
@@ -35,8 +35,8 @@ Description: "Mapping des éléments du modèle métier FRLMResultatsLaboratoire
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention
 * group[=].element[=].target.code = #FRCompositionDocument.section:sans-sous-sections

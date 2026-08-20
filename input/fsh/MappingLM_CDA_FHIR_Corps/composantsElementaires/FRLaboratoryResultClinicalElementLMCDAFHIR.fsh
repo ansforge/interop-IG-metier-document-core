@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMResultatExamensBiolo
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent"
 // Élément racine
 * group[=].element[+].code = #FRLMResultatExamensBiologieElementCliniquePertinent
 * group[=].element[=].target.code = #FRCDAResultatExamensDeBiologieElementCliniquePertinent
@@ -87,8 +87,8 @@ Description: "Mapping des éléments du modèle métier FRLMResultatExamensBiolo
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document"
 // identifiant
 * group[=].element[+].code = #FRCDAResultatExamensDeBiologieElementCliniquePertinent.id
 * group[=].element[=].target.code = #FRObservationLaboratoryReportResultsDocument.identifier

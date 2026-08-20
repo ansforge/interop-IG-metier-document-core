@@ -9,6 +9,7 @@ Characteristics: #can-be-target
   * ^binding.description = "SNOMED CT"
   * ^binding.strength = #preferred
 * locationQualifier 0..* CodeableConcept "Précision topographique (par exemple : supérieur, inférieur, distal, proximal)."
+  * ^binding.strength = #required
   * ^binding.description = "jdv-modificateur-topographique-cisis"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modificateur-topographique-cisis"
 * description 0..1 string "Description textuelle de la localisation anatomique"

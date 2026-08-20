@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-advance-directives"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-directives-anticipees"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directives"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directives-anticipees"
 // Élément racine
 * group[=].element[+].code = #FRLMAdvanceDirectives
 * group[=].element[=].target.code = #FRCDADirectivesAnticipees
@@ -31,8 +31,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Groupe Mapping 2 : métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-advance-directives"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directives"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMAdvanceDirectives
 * group[=].element[=].target.code = #FRCompositionDocument.section:sectionAdvanceDirectives

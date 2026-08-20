@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-supporting-information"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-historique-medical"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-supporting-information"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-historique-medical"
 // élément racine
 * group[=].element[+].code = #FRLMSupportingInformation
 * group[=].element[=].target.code = #FRCDADICOMHistoriqueMedical
@@ -63,8 +63,8 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[=].target.comment = "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.sexForClinicalUse."
 
 // Groupe Mapping 2 : modèle métier → FHIR Composition
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-supporting-information"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-supporting-information"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMSupportingInformation
 * group[=].element[=].target.code = #FRCompositionDocument.section:sectionHistory
@@ -121,8 +121,8 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[=].target.comment = "Aucune cible FHIR explicite identifieé dans FRCompositionDocument.section:sectionHistory pour FRLMSupportingInformation.entry.sexForClinicalUse."
 
 // Groupe Mapping 3 : modèle métier → FHIR DiagnosticReport
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-supporting-information"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-supporting-information"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document"
 // élément racine
 * group[=].element[+].code = #FRLMSupportingInformation
 * group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.extension:historiqueMedical

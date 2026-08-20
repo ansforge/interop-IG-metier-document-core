@@ -8,11 +8,13 @@ Description: "Related Person"
 * name 0..* FRLMHumanName "Nom de la personne"
 * subject 1..1 FRLMPatient "Patient / Usager avec la personne"
 * relationship 1..1 CodeableConcept "Lien avec le patient"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-PersonalRelationshipRoleType-cisis"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-PersonalRelationshipRoleType-cisis"
 * address 0..* Address "Adresse"
 * telecom 0..* ContactPoint "Telecom"
 * gender 0..1 CodeableConcept "Sexe de la personne"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-AdministrativeGender-cisis"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis"
 * birthDate 0..1 dateTime "Date de naissance de la personne"

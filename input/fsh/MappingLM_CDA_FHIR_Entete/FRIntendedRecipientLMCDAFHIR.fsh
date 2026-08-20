@@ -11,8 +11,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-intended-recipient"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-information-recipient"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-information-recipient"
 
 // Élément racine
 * group[=].element[+].code = #FRLMIntendedRecipient
@@ -50,7 +50,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.comment = "Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-intended-recipient"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient"
 * group[=].target = "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension"
 
 // Élément racine

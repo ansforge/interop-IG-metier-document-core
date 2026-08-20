@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationUse vers l
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-use"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-use"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationUse
@@ -130,8 +130,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationUse vers l
 
 
 // Groupe Mapping 2 : ML → FHIR 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-medication-use"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-statement-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-medication-use"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-statement-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationUse

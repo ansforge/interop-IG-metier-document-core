@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMFamilyMemberHistory 
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-family-member-history"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-antecedents-familiaux"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-family-member-history"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedents-familiaux"
 // Élément racine
 * group[=].element[+].code = #FRLMFamilyMemberHistory
 * group[=].element[=].target.code = #FRCDAAntecedentsFamiliaux
@@ -53,8 +53,8 @@ Description: "Mapping des éléments du modèle métier FRLMFamilyMemberHistory 
 * group[=].element[=].target.comment = "Le commentaire métier est porté dans la narration CDA."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-family-member-history"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-family-member-history-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-family-member-history"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-family-member-history-document"
 // Élément racine
 * group[=].element[+].code = #FRLMFamilyMemberHistory
 * group[=].element[=].target.code = #FRFamilyMemberHistoryDocument

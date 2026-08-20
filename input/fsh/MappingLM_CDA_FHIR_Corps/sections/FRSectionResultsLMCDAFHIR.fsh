@@ -6,8 +6,8 @@ Description: "Mapping des éléments du modèle métier FRLMObservationResults v
 * title = "Mapping Métier/CDA/FHIR : \"Résultats\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-results"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-resultats"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-results"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats"
 // élément racine
 * group[=].element[+].code = #FRLMObservationResults
 * group[=].element[=].target[+].code = #FRCDAResultats
@@ -30,8 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMObservationResults v
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation-results"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-results"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMObservationResults
 * group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionResults

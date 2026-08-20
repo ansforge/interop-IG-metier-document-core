@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-immunisations"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-vaccinations"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccinations"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
 * group[=].element[=].target.code = #FRCDAVaccinations  
@@ -31,8 +31,8 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-immunisations"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
 * group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations

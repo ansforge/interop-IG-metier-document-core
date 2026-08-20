@@ -9,6 +9,7 @@ Characteristics: #can-be-target
   * ^short = "Statut de la directive anticipée"
 * date 1..1 dateTime "Date de la directive anticipée"
 * category 1..1 CodeableConcept "Type de directive"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-type-directive-anticipee-cisis (1.2.250.1.213.1.1.5.136)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis"
 * value 1..1 boolean "Procédure autorisée ou pas"

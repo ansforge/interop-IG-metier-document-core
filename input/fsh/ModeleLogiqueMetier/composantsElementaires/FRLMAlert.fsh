@@ -10,6 +10,7 @@ Characteristics: #can-be-target
 * code 0..1 CodeableConcept "Code de l'alerte"
 * description 0..1 string "Description narrative de l'alerte"
 * priority 0..1 CodeableConcept "Priorite"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): hl7:Flag-priority-code"
 * period 0..1 Period "Période de validité de l'alerte. Durée entre l'activation et la désactivation de l'alerte. Si l'alerte est active, la fin de cette période ne doit pas être spécifiée."
 * sourceReference 0..* Reference "Référence de la source de l'alerte"

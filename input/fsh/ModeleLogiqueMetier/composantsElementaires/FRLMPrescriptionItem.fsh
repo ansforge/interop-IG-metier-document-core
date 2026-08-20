@@ -24,6 +24,7 @@ Par exemple, motif pour lequelle la ligne de prescription a été invalidée ou 
 * validityPeriod 0..1 Period "Periode de validité de la ligne de prescription"
 * substitution 0..1 Base "Autorisation de substitution"
   * allowed[x] 0..1 CodeableConcept or boolean "Type de substitution"
+    * ^binding.strength = #required
     * ^binding.description = "jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis (2.16.840.1.113883.1.11.16621)"
     * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis"
   * reason[x] 0..1 CodeableConcept or string  "Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle)."

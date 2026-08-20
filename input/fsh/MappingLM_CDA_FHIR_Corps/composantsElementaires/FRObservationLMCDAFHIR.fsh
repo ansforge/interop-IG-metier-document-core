@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * status = #draft
 
 // Groupe Mapping 1 : modele metier -> CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-observation"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-simple-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-simple-observation"
 // Element racine
 * group[=].element[+].code = #FRLMObservation
 * group[=].element[=].target.code = #FRCDASimpleObservation
@@ -78,7 +78,7 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML -> FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-ml-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-observation"
 * group[=].target = "http://hl7.org/fhir/R4/StructureDefinition/Observation"
 // Element racine
 * group[=].element[+].code = #FRMLObservation

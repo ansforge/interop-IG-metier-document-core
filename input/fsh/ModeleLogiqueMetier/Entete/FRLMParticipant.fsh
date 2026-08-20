@@ -7,9 +7,11 @@ Characteristics: #can-be-target
 * identifier 0..* Identifier "Identifiants de la personne"
 * name 0..*	fr-lm-human-name "Nom de la personne"
 * type 1..1 CodeableConcept	"Type de participation"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-ParticipationType-cisis (2.16.840.1.113883.1.11.10901)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis"
 * role 0..1 CodeableConcept	"Rôle fonctionnel"
+  * ^binding.strength = #required
   * ^binding.description = "JDV_J47_FunctionCode_CISIS (1.2.250.1.213.1.1.5.124)"
   * ^binding.valueSet = "https://mos.esante.gouv.fr/NOS/JDV_J47-FunctionCode-CISIS/FHIR/JDV-J47-FunctionCode-CISIS"
 * period 0..1 Period "Période de la participation"

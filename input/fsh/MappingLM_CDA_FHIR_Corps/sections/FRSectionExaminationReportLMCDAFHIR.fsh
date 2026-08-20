@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examination-report"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-acte-imagerie"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-acte-imagerie"
 // Élément racine
 * group[=].element[+].code = #FRLMExaminationReport
 * group[=].element[=].target.code = #FRCDADICOMActeImagerie
@@ -39,24 +39,24 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].element[=].target.comment = "Aucune cible CDA explicite identifiee dans FRCDADICOMActeImagerie pour FRLMExaminationReport.entry.adverseReactions."
 
 // Groupe Mapping 2 : modèle métier → CDA Conclusion
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examination-report"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-conclusion"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-conclusion"
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
 * group[=].element[=].target.code = #FRCDASectionDICOMConclusion
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 3 : modèle métier → CDA Résultats
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examination-report"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dicom-resultats"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-resultats"
 // Entrée : Résultats d'examens
 * group[=].element[+].code = #FRLMExaminationReport.entry.results[x]
 * group[=].element[=].target.code = #FRCDADICOMResultats
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 4 : modèle métier → FHIR Composition
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examination-report"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
@@ -84,8 +84,8 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].element[=].target[=].comment = "Cible structuree pour les resultats codes/observations dans la section Findings."
 
 // Groupe Mapping 5 : modèle métier → FHIR DiagnosticReport
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-examination-report"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-diagnostic-report-imaging-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document"
 // Sous section : Conclusion
 * group[=].element[+].code = #FRLMExaminationReport.subSection.conclusion
 * group[=].element[=].target.code = #FRDiagnosticReportImagingDocument.conclusion

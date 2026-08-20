@@ -12,6 +12,7 @@ Characteristics: #can-be-target
 * bodySite 0..* FRLMBodyStructure "Localisation anatomique"
 * reason[x] 0..* FRLMObservation or FRLMCondition or FRLMMedication or string "Motif de la demande"
 * priority 0..1 CodeableConcept "Priorité de la demande"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): HL7 Request Priority"
 * supportingInformation[x] 0..* FRLMObservation or FRLMCondition or FRLMProcedure or FRLMMedicationAdministration "Informations pertinentes pour l'interprétation des résultats, par exemple le statut de jeûne, le sexe, etc."
 * specimen 0..* FRLMSpecimen "Prélèvement"

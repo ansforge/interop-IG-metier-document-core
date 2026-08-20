@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 
 // Groupe 1 : modèle métier (FRLMMedication) → CDA (FRCDAProduitDeSante)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-produit-de-sante"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-produit-de-sante"
 // Élément racine
 * group[=].element[+].code = #FRLMMedication
 * group[=].element[=].target.code = #FRCDAProduitDeSante
@@ -80,8 +80,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 
 // Groupe 2 : modèle métier (FRLMMedication) → FHIR (FRMedicationDocument)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-document"
 // Élément racine
 * group[=].element[+].code = #FRLMMedication
 * group[=].element[=].target.code = #FRMedicationDocument
@@ -92,11 +92,11 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 * group[=].element[=].target.equivalence = #equivalent
 // Classification ATC
 * group[=].element[+].code = #FRLMMedication.classification
-* group[=].element[=].target.code = #FRMedicationDocument.extension:ihe-ext-medication-classification
+* group[=].element[=].target.code = #FRMedicationDocument.extension:classification
 * group[=].element[=].target.equivalence = #equivalent
 // Nom du produit
 * group[=].element[+].code = #FRLMMedication.productName
-* group[=].element[=].target.code = #FRMedicationDocument.extension:ihe-ext-medication-productname
+* group[=].element[=].target.code = #FRMedicationDocument.extension:productName
 * group[=].element[=].target.equivalence = #equivalent
 // Titulaire de l'autorisation de mise sur le marché
 * group[=].element[+].code = #FRLMMedication.marketingAuthorisationHolder
@@ -126,35 +126,36 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 * group[=].element[+].code = #FRLMMedication.item.ingredient.strengthInfo.strength
 * group[=].element[=].target.code = #FRMedicationDocument.ingredient:substanceActive.strength
 * group[=].element[=].target.equivalence = #equivalent
-// Substance de référence pour le dosage 
-// extension:basisOfStrengthSubstance --> à ajouter
+// Substance de référence pour le dosage
 * group[=].element[+].code = #FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #FRMedicationDocument.ingredient.strength.extension:basisOfStrengthSubstance
+* group[=].element[=].target.equivalence = #equivalent
 // Unité de présentation
-// extension:unitOfPresentation --> à ajouter 
 * group[=].element[+].code = #FRLMMedication.item.unitOfPresentation
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #FRMedicationDocument.extension:unitOfPresentation
+* group[=].element[=].target.equivalence = #equivalent
 // Quantité de produit par unité
-// extension:sizeOfItem --> à ajouter 
 * group[=].element[+].code = #FRLMMedication.item.containedQuantity
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #FRMedicationDocument.extension:sizeOfItem
+* group[=].element[=].target.equivalence = #equivalent
 // Nombre d'unités dans le package
 * group[=].element[+].code = #FRLMMedication.item.amount
 * group[=].element[=].target.code = #FRMedicationDocument.amount
 * group[=].element[=].target.equivalence = #equivalent
 // Type de conditionnement primaire
-// packageType --> à ajouter
+// extension:packageType à créer côté IG FHIR
 * group[=].element[+].code = #FRLMMedication.item.packageType
+* group[=].element[=].target.code = #FRMedicationDocument.extension:packageType
 * group[=].element[=].target.equivalence = #equivalent
 // Dispositif d'administration
-// extension:device --> à ajouter 
+// extension:device à créer côté IG FHIR
 * group[=].element[+].code = #FRLMMedication.device
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #FRMedicationDocument.extension:device
+* group[=].element[=].target.equivalence = #equivalent
 // Caractéristique supplémentaire
-// mettre à jour le nom de l'extension 
 * group[=].element[+].code = #FRLMMedication.characteristic
 * group[=].element[=].target.code = #FRMedicationDocument.extension:conditionnement
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.equivalence = #equivalent
 // Numéro de lot
 * group[=].element[+].code = #FRLMMedication.batch.lotNumber
 * group[=].element[=].target.code = #FRMedicationDocument.batch.lotNumber

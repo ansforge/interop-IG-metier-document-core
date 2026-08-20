@@ -8,6 +8,7 @@ Characteristics: #can-be-target
 * seriesUid 1..* Identifier "DICOM UUID instance de la série"
 * number 0..1 integer "identfiant numérique de la série"
 * seriesModality 1..1 CodeableConcept "Modalités d'imagerie utilisées lors de l'examen (DICOM CID029)"
+  * ^binding.strength = #required
   * ^binding.description = "jdv-modalite-acquisition-cisis : Modalité d'imagerie"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis"
 * bodySite 0..1 FRLMBodyStructure "Localisations anatomiques"

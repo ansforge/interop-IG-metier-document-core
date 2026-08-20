@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device-use"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-dispositif-medical"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device-use"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical"
 
 // Élément racine
 * group[=].element[+].code = #FRLMDeviceUse
@@ -87,8 +87,8 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 * group[=].element[=].target.equivalence = #relatedto
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-device-use"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-device-use-statement-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device-use"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-device-use-statement-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMDeviceUse

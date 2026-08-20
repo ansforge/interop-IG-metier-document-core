@@ -7,8 +7,8 @@ Description: "Mapping des éléments du modèle métier FRLMBatterieExamensBiolo
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale"
 // Élément racine
 * group[=].element[+].code = #FRLMBatterieExamensBiologieMedicale
 * group[=].element[=].target.code = #FRCDABatterieExamensDeBiologieMedicale
@@ -67,8 +67,8 @@ Description: "Mapping des éléments du modèle métier FRLMBatterieExamensBiolo
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : CDA → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-observation-laboratory-report-results-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document"
 // Élément racine
 * group[=].element[+].code = #FRCDABatterieExamensDeBiologieMedicale
 * group[=].element[=].target.code = #FRObservationLaboratoryReportResultsDocument

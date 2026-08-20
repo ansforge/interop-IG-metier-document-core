@@ -8,8 +8,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 
 // Groupe 1 : modèle métier (FRLMMedicationDispense) → CDA (FRCDATraitementDispense)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-traitement-dispense"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispense"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement-dispense"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationDispense
@@ -150,8 +150,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 
 // Groupe 2 : modèle métier (FRLMMedicationDispense) → FHIR (FRMedicationDispenseDocument)
 
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-dispense"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-medication-dispense-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispense"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-dispense-document"
 
 // Élément racine
 * group[=].element[+].code = #FRLMMedicationDispense

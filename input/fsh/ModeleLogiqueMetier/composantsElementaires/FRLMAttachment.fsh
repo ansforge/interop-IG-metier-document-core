@@ -6,8 +6,10 @@ Description: """Document attaché"""
 Characteristics: #can-be-target
 
 * contentType 0..1 CodeableConcept "Type MIME de la piece jointe, avec encodage de caracteres, etc."
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): BCP-13"
 * language 0..1 CodeableConcept "Langue du contenu"
+  * ^binding.strength = #preferred
   * ^binding.description = "(preferred): BCP 47"
 * data 0..1 base64Binary "Contenu encode en base64"
 * url 0..1 uri "URL de la ressource"

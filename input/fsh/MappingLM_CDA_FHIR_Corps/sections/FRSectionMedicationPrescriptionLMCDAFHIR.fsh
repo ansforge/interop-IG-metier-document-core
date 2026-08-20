@@ -6,8 +6,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationPrescripti
 * title = "Mapping Métier/CDA/FHIR : \"Prescription de médicaments\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-prescription"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-prescription-medicaments"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-prescription"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prescription-medicaments"
 // élément racine
 * group[=].element[+].code = #FRLMMedicationPrescription
 * group[=].element[=].target[+].code = #FRCDAPrescriptionMedicaments
@@ -34,8 +34,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationPrescripti
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-medication-prescription"
-* group[=].target = "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-prescription"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMMedicationPrescription
 * group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicationRequest
