@@ -5,7 +5,9 @@ Title: "Mapping FRLMAllergyIntolerance → FRCDAAllergieOuHypersensibilite / FRL
 Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil CDA FRCDAAllergieOuHypersensibilite, puis vers le profil FHIR FRAllergyIntoleranceDocument."
 
 * title = "Mapping Métier/CDA/FHIR : \"Allergie ou Hypersensibilité\""
+* name = "FRAllergyIntoleranceLMCDAFHIR"
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance"
@@ -149,17 +151,17 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 
 // Date de début et de fin
 * group[=].element[+].code = #FRLMAllergyIntolerance.period
-* group[=].element[=].target.code = #AllergyIntolerance.onsetPeriod
+* group[=].element[=].target.code = #AllergyIntolerance.onset[x]
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de début
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.onsetDate
-* group[=].element[=].target.code = #AllergyIntolerance.onsetPeriod.start
+* group[=].element[=].target.code = #AllergyIntolerance.onset[x].start
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de fin
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.endDate
-* group[=].element[=].target.code = #AllergyIntolerance.onsetPeriod.end
+* group[=].element[=].target.code = #AllergyIntolerance.onset[x].end
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée

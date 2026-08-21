@@ -5,7 +5,9 @@ Title: "Mapping FRLMAdvanceDirective → FRCDADirectiveAnticipee / FRLMAdvanceDi
 Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument."
 
 * title = "Mapping Métier/CDA/FHIR : \"Directive Anticipee\""
+* name = "FRAdvanceDirectiveLMCDAFHIR"
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective"
@@ -42,30 +44,14 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective ver
 * group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
-// note 
+// note
 * group[=].element[+].code = #FRLMAdvanceDirective.note
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.equivalence = #equivalent
 
-// Référence à un document externe
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.url
-* group[=].element[=].target.code = #Observation.reference.externalDocument.text.reference
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Référence externe portée par externalDocument.text.reference en CDA."
-
 // Document encapsulé
 * group[=].element[+].code = #FRLMAdvanceDirective.attachment
 * group[=].element[=].target.code = #Observation.entryRelationship.observationMedia
-* group[=].element[=].target.equivalence = #equivalent
-
-// Identifiant observation média
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.header.identifier
-* group[=].element[=].target.code = #Observation.entryRelationship.observationMedia.id
-* group[=].element[=].target.equivalence = #equivalent
-
-// Document encapsulé encodé en Base64
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.data
-* group[=].element[=].target.code = #Observation.entryRelationship.observationMedia.value
 * group[=].element[=].target.equivalence = #equivalent
 
 
@@ -92,8 +78,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective ver
 
 /* Texte libre */
 * group[=].element[+].code = #FRLMAdvanceDirective.note
-* group[=].element[=].target.code = #Consent.provision.code.text
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Consent (FHIR R4) n'a pas de champ de texte libre équivalent à un commentaire ; l'information reste portée par provision.code."
 
 /* Statut */
 * group[=].element[+].code = #FRLMAdvanceDirective.header.status
@@ -110,22 +96,55 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective ver
 * group[=].element[=].target.code = #Consent.provision.type
 * group[=].element[=].target.equivalence = #equivalent
 
-/* Référence à un document externe */
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.url
-* group[=].element[=].target.code = #Consent.sourceReference
-* group[=].element[=].target.equivalence = #equivalent
-
 /* Document encapsulé */
 * group[=].element[+].code = #FRLMAdvanceDirective.attachment
-* group[=].element[=].target.code = #Consent.sourceAttachment
+* group[=].element[=].target.code = #Consent.source[x]
+* group[=].element[=].target.equivalence = #equivalent
+
+
+
+// Groupe Mapping 3 : pièce jointe (FRLMAttachment) → CDA
+// Ces éléments ne sont pas des chemins de FRLMAdvanceDirective : "attachment" pointe vers le
+// type FRLMAttachment, donc ses sous-éléments doivent être mappés dans un groupe dont le
+// source system est FRLMAttachment lui-même (même principe que FRAttachmentLMCDAFHIR.fsh).
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee"
+
+// Référence à un document externe
+* group[=].element[+].code = #FRLMAttachment.url
+* group[=].element[=].target.code = #Observation.reference.externalDocument.text.reference
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Référence externe portée par externalDocument.text.reference en CDA."
+
+// Identifiant observation média
+* group[=].element[+].code = #FRLMAttachment.header.identifier
+* group[=].element[=].target.code = #Observation.entryRelationship.observationMedia.id
+* group[=].element[=].target.equivalence = #equivalent
+
+// Document encapsulé encodé en Base64
+* group[=].element[+].code = #FRLMAttachment.data
+* group[=].element[=].target.code = #Observation.entryRelationship.observationMedia.value
+* group[=].element[=].target.equivalence = #equivalent
+
+
+
+// Groupe Mapping 4 : pièce jointe (FRLMAttachment) → FHIR
+// fr-advance-directive-document contraint Consent.source[x] au seul type Attachment ;
+// les sous-éléments s'expriment donc via Consent.source[x].xxx (pas sourceAttachment.xxx).
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document"
+
+/* Référence à un document externe */
+* group[=].element[+].code = #FRLMAttachment.url
+* group[=].element[=].target.code = #Consent.source[x].url
 * group[=].element[=].target.equivalence = #equivalent
 
 /* Identifiant document encapsulé */
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.header.identifier
-* group[=].element[=].target.code = #Consent.sourceAttachment.id
+* group[=].element[+].code = #FRLMAttachment.header.identifier
+* group[=].element[=].target.code = #Consent.source[x].id
 * group[=].element[=].target.equivalence = #equivalent
 
 /* Document encapsulé encodé en Base64 */
-* group[=].element[+].code = #FRLMAdvanceDirective.attachment.data
-* group[=].element[=].target.code = #Consent.sourceAttachment.data
+* group[=].element[+].code = #FRLMAttachment.data
+* group[=].element[=].target.code = #Consent.source[x].data
 * group[=].element[=].target.equivalence = #equivalent
