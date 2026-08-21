@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMImmunisation.
   "name" : "FRLMImmunisation",
   "title" : "Logical model - FR LM Immunisation",
   "status" : "draft",
-  "date" : "2026-08-20T15:24:46+00:00",
+  "date" : "2026-08-21T08:13:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

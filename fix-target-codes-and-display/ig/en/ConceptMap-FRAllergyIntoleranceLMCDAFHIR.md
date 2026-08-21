@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
   "id" : "FRAllergyIntoleranceLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAllergyIntoleranceLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAllergyIntoleranceLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Allergie ou Hypersensibilité\"",
   "status" : "draft",
-  "date" : "2026-08-20T15:24:46+00:00",
+  "experimental" : false,
+  "date" : "2026-08-21T08:13:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -232,21 +234,21 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     {
       "code" : "FRLMAllergyIntolerance.period",
       "target" : [{
-        "code" : "AllergyIntolerance.onsetPeriod",
+        "code" : "AllergyIntolerance.onset[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.onsetDate",
       "target" : [{
-        "code" : "AllergyIntolerance.onsetPeriod.start",
+        "code" : "AllergyIntolerance.onset[x].start",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.endDate",
       "target" : [{
-        "code" : "AllergyIntolerance.onsetPeriod.end",
+        "code" : "AllergyIntolerance.onset[x].end",
         "equivalence" : "equivalent"
       }]
     },

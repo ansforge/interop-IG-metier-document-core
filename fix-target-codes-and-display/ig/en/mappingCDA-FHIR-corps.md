@@ -256,11 +256,11 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMAdvanceDirective.header.status | Observation.statusCode | Consent.status |
 | FRLMAdvanceDirective.header.date | Observation.effectiveTime |  |
 | FRLMAdvanceDirective.value | Observation.value | Consent.provision.type |
-| FRLMAdvanceDirective.note | Observation.text | Consent.provision.code.text |
-| FRLMAdvanceDirective.attachment.url | Observation.reference. externalDocument.text.reference | Consent.sourceReference |
-| FRLMAdvanceDirective.attachment | Observation.entryRelationship.observationMedia | Consent.sourceAttachment |
-| FRLMAdvanceDirective.attachment. header.identifier | Observation.entryRelationship. observationMedia.id | Consent.sourceAttachment.id |
-| FRLMAdvanceDirective.attachment.data | Observation.entryRelationship. observationMedia.value | Consent.sourceAttachment.data |
+| FRLMAdvanceDirective.note | Observation.text |  |
+| FRLMAdvanceDirective.attachment | Observation.entryRelationship.observationMedia | Consent.source[x] |
+| FRLMAttachment.url | Observation.reference. externalDocument.text.reference | Consent.source[x].url |
+| FRLMAttachment.header.identifier | Observation.entryRelationship. observationMedia.id | Consent.source[x].id |
+| FRLMAttachment.data | Observation.entryRelationship. observationMedia.value | Consent.source[x].data |
 | **FRLMAdverseDrugReaction** | **FRCDAEffetIndesirable** | **FRAdverseEventDocument** |
 | FRLMAdverseDrugReaction.header.identifier | Observation.id | AdverseEvent.identifier |
 | FRLMAdverseDrugReaction.header.status | Observation.statusCode |  |
@@ -278,9 +278,9 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMAllergyIntolerance.note | Observation.text | AllergyIntolerance.note |
 | FRLMAllergyIntolerance.type | Observation.code | AllergyIntolerance.type |
 | FRLMAllergyIntolerance.header.status | Observation.entryRelationship:frStatutDuProbleme | AllergyIntolerance.clinicalStatus |
-| FRLMAllergyIntolerance.period | Observation.effectiveTime | AllergyIntolerance.onsetPeriod |
-| FRLMAllergyIntolerance.period.onsetDate | Observation.effectiveTime.low | AllergyIntolerance.onsetPeriod.start |
-| FRLMAllergyIntolerance.period.endDate | Observation.effectiveTime.high | AllergyIntolerance.onsetPeriod.end |
+| FRLMAllergyIntolerance.period | Observation.effectiveTime | AllergyIntolerance.onset[x] |
+| FRLMAllergyIntolerance.period.onsetDate | Observation.effectiveTime.low | AllergyIntolerance.onset[x].start |
+| FRLMAllergyIntolerance.period.endDate | Observation.effectiveTime.high | AllergyIntolerance.onset[x].end |
 | FRLMAllergyIntolerance.agentOrAllergen | Observation.participant | AllergyIntolerance.code |
 | FRLMAllergyIntolerance.reaction | Observation.entryRelationship:frProbleme | AllergyIntolerance.reaction |
 | FRLMAllergyIntolerance.reaction.agentOrAllergen |  | AllergyIntolerance.reaction.substance |
@@ -566,41 +566,41 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMMedicationAdministration.dosage. dosageDetails.maxDosePerAdministration | SubstanceAdministration.maxDoseQuantity |  |
 | FRLMMedicationAdministration.dosage. dosageDetails.maxLifetimeDose | SubstanceAdministration.maxDoseQuantity |  |
 | FRLMMedicationAdministration.note | SubstanceAdministration.text | MedicationAdministration.note |
-| **FRLMMedicationDispense** | FRCDATraitementDispense.entryRelationship:frTraitement | **FRMedicationDispenseDocument** |
-| FRLMMedicationDispense.header.identifier | Supply.entryRelationship:frTraitement.id | MedicationDispense.identifier |
+| **FRLMMedicationDispense** | **FRCDATraitementDispense** | **FRMedicationDispenseDocument** |
+| FRLMMedicationDispense.header.identifier | Supply.id | MedicationDispense.identifier |
 | FRLMMedicationDispense.header.author[x] |  | MedicationDispense.performer.actor |
-| FRLMMedicationDispense.header.status | Supply.entryRelationship:frTraitement.statusCode | MedicationDispense.status |
+| FRLMMedicationDispense.header.status | Supply.code | MedicationDispense.status |
 | FRLMMedicationDispense.receiver[x] |  | MedicationDispense.receiver |
-| FRLMMedicationDispense.relatedRequest | Supply.entryRelationship:frTraitement.entryRelationship:frReferenceItemPrescription | MedicationDispense.authorizingPrescription |
-| FRLMMedicationDispense.medicament | Supply.entryRelationship:frTraitement.product:frProduitDeSante | MedicationDispense.medication[x] |
-| FRLMMedicationDispense.dispensedQuantity | Supply.entryRelationship:frTraitement.quantity | MedicationDispense.quantity |
+| FRLMMedicationDispense.relatedRequest | Supply.entryRelationship:frReferenceItemPrescription | MedicationDispense.authorizingPrescription |
+| FRLMMedicationDispense.medicament | Supply.product | MedicationDispense.medication[x] |
+| FRLMMedicationDispense.dispensedQuantity | Supply.quantity | MedicationDispense.quantity |
 | FRLMMedicationDispense.timeOfDispensation |  | MedicationDispense.whenHandedOver |
-| FRLMMedicationDispense.substitutionOccurred | Supply.entryRelationship:frTraitement.entryRelationship:frActeSubstitution | MedicationDispense.substitution.wasSubstituted |
-| FRLMMedicationDispense.dosageInstructions | Supply.entryRelationship:frTraitement.entryRelationship:frTraitement | MedicationDispense.dosageInstruction |
-| FRLMMedicationDispense.dosageInstructions.renderedDosageInstruction | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.text | MedicationDispense.dosageInstruction.text |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.sequence |  | MedicationDispense.dosageInstruction.sequence |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.note | Supply.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.patientInstruction |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.doseAndRate.dose[x] | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.doseQuantity | MedicationDispense.dosageInstruction.doseAndRate.dose[x] |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.doseAndRate.rate[x] | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.rateQuantity | MedicationDispense.dosageInstruction.doseAndRate.rate[x] |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.repeat |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency.numberOfTimes | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.effectiveTime.frequency | MedicationDispense.dosageInstruction.timing.repeat.frequency |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency.period | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.effectiveTime.period | MedicationDispense.dosageInstruction.timing.repeat.period |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency.dayOfWeek | Supply.entryRelationship:frTraitement. entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.repeat.dayOfWeek |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency.timeOfDay | Supply.entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.repeat.timeOfDay |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.frequency.additionalInstructions | Supply.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.additionalInstruction |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.dateOfAdministration | Supply.entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.event |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.conditionOfAdministration | Supply.entryRelationship:frTraitement.precondition | MedicationDispense.dosageInstruction.asNeededCodeableConcept |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.date[x] | Supply.entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.repeat.bounds[x] |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.duration | Supply.entryRelationship:frTraitement.effectiveTime | MedicationDispense.dosageInstruction.timing.repeat |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.eventTime | Supply.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.timing.repeat |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.eventEndSequence |  |  |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.bodySite | Supply.entryRelationship:frTraitement.approachSiteCode | MedicationDispense.dosageInstruction.site |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.routeOfAdministration | Supply.entryRelationship:frTraitement.routeCode | MedicationDispense.dosageInstruction.route |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.maxDosePerPeriod.quantity | Supply.entryRelationship:frTraitement.maxDoseQuantity | MedicationDispense.dosageInstruction.maxDosePerPeriod.numerator |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.maxDosePerPeriod.duration | Supply.entryRelationship:frTraitement.maxDoseQuantity | MedicationDispense.dosageInstruction.maxDosePerPeriod.denominator |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.maxDosePerAdministration | Supply.entryRelationship:frTraitement.maxDoseQuantity | MedicationDispense.dosageInstruction.maxDosePerAdministration |
-| FRLMMedicationDispense.dosageInstructions. dosageDetails.maxLifetimeDose | Supply.entryRelationship:frTraitement.maxDoseQuantity | MedicationDispense.dosageInstruction.maxDosePerLifetime |
-| FRLMMedicationDispense.note | Supply.entryRelationship:frTraitement.entryRelationship:frNotesDuDispensateur | MedicationDispense.note |
+| FRLMMedicationDispense.substitutionOccurred | Supply.entryRelationship:frActeSubstitution | MedicationDispense.substitution.wasSubstituted |
+| FRLMMedicationDispense.dosageInstructions | Supply.entryRelationship:frTraitement | MedicationDispense.dosageInstruction |
+| FRLMMedicationDispense.note | Supply.entryRelationship:frNotesDuDispensateur | MedicationDispense.note |
+| FRLMDosageInstructions.renderedDosageInstruction | SubstanceAdministration.text | MedicationDispense.dosageInstruction.text |
+| FRLMDosageInstructions.dosageDetails.sequence |  | MedicationDispense.dosageInstruction.sequence |
+| FRLMDosageInstructions.dosageDetails.note | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.patientInstruction |
+| FRLMDosageInstructions.dosageDetails. doseAndRate.dose[x] | SubstanceAdministration.doseQuantity | MedicationDispense.dosageInstruction.doseAndRate.dose[x] |
+| FRLMDosageInstructions.dosageDetails. doseAndRate.rate[x] | SubstanceAdministration.rateQuantity | MedicationDispense.dosageInstruction.doseAndRate.rate[x] |
+| FRLMDosageInstructions.dosageDetails.frequency | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails. frequency.numberOfTimes | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails. frequency.period | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails. frequency.dayOfWeek | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails. frequency.timeOfDay | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails. frequency.additionalInstructions | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.additionalInstruction |
+| FRLMDosageInstructions.dosageDetails.dateOfAdministration |  | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails.conditionOfAdministration | SubstanceAdministration.precondition | MedicationDispense.dosageInstruction.asNeeded[x] |
+| FRLMDosageInstructions.dosageDetails.date[x] | SubstanceAdministration.effectiveTime:effectiveTimeDuree | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails.duration |  | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails.eventTime | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationDispense.dosageInstruction.timing |
+| FRLMDosageInstructions.dosageDetails.eventEndSequence |  |  |
+| FRLMDosageInstructions.dosageDetails.bodySite | SubstanceAdministration.approachSiteCode | MedicationDispense.dosageInstruction.site |
+| FRLMDosageInstructions.dosageDetails.routeOfAdministration | SubstanceAdministration.routeCode | MedicationDispense.dosageInstruction.route |
+| FRLMDosageInstructions.dosageDetails. maxDosePerPeriod.quantity | SubstanceAdministration.maxDoseQuantity.numerator | MedicationDispense.dosageInstruction.maxDosePerPeriod |
+| FRLMDosageInstructions.dosageDetails. maxDosePerPeriod.duration | SubstanceAdministration.maxDoseQuantity.denominator | MedicationDispense.dosageInstruction.maxDosePerPeriod |
+| FRLMDosageInstructions.dosageDetails.maxDosePerAdministration |  | MedicationDispense.dosageInstruction.maxDosePerAdministration |
+| FRLMDosageInstructions.dosageDetails.maxLifetimeDose |  | MedicationDispense.dosageInstruction.maxDosePerLifetime |
 | **FRLMMedication** | **FRCDAProduitDeSante** | **FRMedicationDocument** |
 | FRLMMedication.identifyingCode[x] | ManufacturedProduct.manufacturedProduct. manufacturedMaterial.code | Medication.code |
 | FRLMMedication.classification | ManufacturedProduct.pharm:asSpecializedKind | Medication.extension:classification |
@@ -622,49 +622,48 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | **FRLMPrescriptionItem** | **FRCDATraitementPrescrit** | **FRMedicationRequestDocument** |
 | FRLMPrescriptionItem.header.identifier | SubstanceAdministration.id | MedicationRequest.identifier |
 | FRLMPrescriptionItem.header.status | SubstanceAdministration.statusCode | MedicationRequest.status |
-| FRLMPrescriptionItem.header.author[x] | SubstanceAdministration.author | MedicationRequest.extension:FRActorExtension |
 | FRLMPrescriptionItem.header.author[x] | SubstanceAdministration.author | MedicationRequest.requester |
 | FRLMPrescriptionItem.statusReason[x] |  | MedicationRequest.statusReason |
-| FRLMPrescriptionItem.medication | SubstanceAdministration.consumable | MedicationRequest.medication:FRMedicationDocument |
+| FRLMPrescriptionItem.medication | SubstanceAdministration.consumable | MedicationRequest.medication[x] |
 | FRLMPrescriptionItem.indication[x] | SubstanceAdministration.entryRelationship:frReferenceInterne | MedicationRequest.reasonReference |
 | FRLMPrescriptionItem.intendedUseType |  |  |
-| FRLMPrescriptionItem.periodOfUse | SubstanceAdministration.effectiveTime[not(@operator='A')] |  |
-| FRLMPrescriptionItem.dosageInstructions.renderedDosageInstruction | SubstanceAdministration.entryRelationship:frTraitement.text | MedicationRequest.dosageInstruction.text |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.sequence |  | MedicationRequest.dosageInstruction.sequence |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.note | SubstanceAdministration.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.patientInstruction |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.doseAndRate.dose[x] | SubstanceAdministration.entryRelationship:frTraitement.doseQuantity | MedicationRequest.dosageInstruction.doseAndRate.dose[x] |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.doseAndRate.rate[x] | SubstanceAdministration.entryRelationship:frTraitement.rateQuantity | MedicationRequest.dosageInstruction.doseAndRate.rate[x] |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.repeat |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency.numberOfTimes | SubstanceAdministration.entryRelationship:frTraitement. effectiveTime.frequency | MedicationRequest.dosageInstruction.timing.repeat.frequency |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency.period | SubstanceAdministration.entryRelationship:frTraitement. effectiveTime.period | MedicationRequest.dosageInstruction.timing.repeat.period |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency.dayOfWeek | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency.timeOfDay | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.repeat.timeOfDay |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.frequency.additionalInstructions | SubstanceAdministration.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.additionalInstruction |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.dateOfAdministration | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.event |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.conditionOfAdministration | SubstanceAdministration.entryRelationship:frTraitement.precondition | MedicationRequest.dosageInstruction.asNeededCodeableConcept |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.date[x] | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.repeat.bounds[x] |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.duration | SubstanceAdministration.entryRelationship:frTraitement.effectiveTime | MedicationRequest.dosageInstruction.timing.repeat |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.eventTime | SubstanceAdministration.entryRelationship:frTraitement.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.timing.repeat |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.eventEndSequence |  |  |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.bodySite | SubstanceAdministration.entryRelationship:frTraitement.approachSiteCode | MedicationRequest.dosageInstruction.site |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.routeOfAdministration | SubstanceAdministration.entryRelationship:frTraitement.routeCode | MedicationRequest.dosageInstruction.route |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.maxDosePerPeriod.quantity | SubstanceAdministration.entryRelationship:frTraitement.maxDoseQuantity | MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.maxDosePerPeriod.duration | SubstanceAdministration.entryRelationship:frTraitement.maxDoseQuantity | MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.maxDosePerAdministration | SubstanceAdministration.entryRelationship:frTraitement.maxDoseQuantity | MedicationRequest.dosageInstruction.maxDosePerAdministration |
-| FRLMPrescriptionItem.dosageInstructions. dosageDetails.maxLifetimeDose | SubstanceAdministration.entryRelationship:frTraitement.maxDoseQuantity | MedicationRequest.dosageInstruction.maxDosePerLifetime |
+| FRLMPrescriptionItem.periodOfUse | SubstanceAdministration.effectiveTime:effectiveTimeDuree |  |
 | FRLMPrescriptionItem.quantityPrescribed | SubstanceAdministration.entryRelationship:frQuantiteDeProduit | MedicationRequest.dispenseRequest.quantity |
 | FRLMPrescriptionItem.validityPeriod | SubstanceAdministration.entryRelationship:frPeriodeDeRenouvellement | MedicationRequest.dispenseRequest.validityPeriod |
-| FRLMPrescriptionItem.substitution.allowed[x] | SubstanceAdministration.entryRelationship:frAutorisationSubstitution | MedicationRequest.substitution.allowedCodeableConcept |
+| FRLMPrescriptionItem.substitution.allowed[x] | SubstanceAdministration.entryRelationship:frAutorisationSubstitution | MedicationRequest.substitution.allowed[x] |
 | FRLMPrescriptionItem.substitution.reason[x] |  | MedicationRequest.substitution.reason |
 | FRLMPrescriptionItem.numberOfRepeats | SubstanceAdministration.repeatNumber | MedicationRequest.dispenseRequest.numberOfRepeatsAllowed |
 | FRLMPrescriptionItem.minimumDispenseInterval |  | MedicationRequest.dispenseRequest.dispenseInterval |
-| FRLMPrescriptionItem.offLabel.isOffLabelUse | SubstanceAdministration.entryRelationship:frHorsAMM | MedicationRequest.extension:offLabelUse |
+| FRLMPrescriptionItem.offLabel.isOffLabelUse | SubstanceAdministration.entryRelationship:frHorsAMM | MedicationRequest.extension:horsAMM |
 | FRLMPrescriptionItem.offLabel.reason[x] |  |  |
-| FRLMPrescriptionItem.note | SubstanceAdministration.entryRelationship:frInstructionsAuDispensateur | MedicationRequest.dispenseRequest.extension:medicationRequest-dispenseRequest-dispenserInstruction-r5 |
-| FRLMPrescriptionItem.enRapportAvecALD | SubstanceAdministration.entryRelationship:frEnRapportAvecALD | MedicationRequest.reasonReference:FRObservationALDDocument |
-| FRLMPrescriptionItem.enRapportAvecAccidentTravail | SubstanceAdministration.entryRelationship:frEnRapportAvecAccidentTravail | MedicationRequest.reasonReference:FRObservationWorkRelatedAccidentDocument |
-| FRLMPrescriptionItem.enRapportAvecPrevention | SubstanceAdministration.entryRelationship:frEnRapportAvecPrevention | MedicationRequest.reasonReference:FRObservationPreventionDocument |
-| FRLMPrescriptionItem.nonRemboursable | SubstanceAdministration.entryRelationship:frNonRemboursable | MedicationRequest.extension:FRNotCoveredExtension |
+| FRLMPrescriptionItem.note | SubstanceAdministration.entryRelationship:frInstructionsAuDispensateur | MedicationRequest.dispenseRequest.extension:dispenserInstructionR5 |
+| FRLMPrescriptionItem.enRapportAvecALD | SubstanceAdministration.entryRelationship:frEnRapportAvecALD | MedicationRequest.reasonReference |
+| FRLMPrescriptionItem.enRapportAvecAccidentTravail | SubstanceAdministration.entryRelationship:frEnRapportAvecAccidentTravail | MedicationRequest.reasonReference |
+| FRLMPrescriptionItem.enRapportAvecPrevention | SubstanceAdministration.entryRelationship:frEnRapportAvecLaPrevention | MedicationRequest.reasonReference |
+| FRLMPrescriptionItem.nonRemboursable | SubstanceAdministration.entryRelationship:frNonRemboursable | MedicationRequest.extension:notCovered |
+| FRLMDosageInstructions.renderedDosageInstruction | SubstanceAdministration.text | MedicationRequest.dosageInstruction.text |
+| FRLMDosageInstructions.dosageDetails.sequence |  | MedicationRequest.dosageInstruction.sequence |
+| FRLMDosageInstructions.dosageDetails.note | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.patientInstruction |
+| FRLMDosageInstructions.dosageDetails. doseAndRate.dose[x] | SubstanceAdministration.doseQuantity | MedicationRequest.dosageInstruction.doseAndRate.dose[x] |
+| FRLMDosageInstructions.dosageDetails. doseAndRate.rate[x] | SubstanceAdministration.rateQuantity | MedicationRequest.dosageInstruction.doseAndRate.rate[x] |
+| FRLMDosageInstructions.dosageDetails.frequency | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationRequest.dosageInstruction.timing.repeat |
+| FRLMDosageInstructions.dosageDetails. frequency.numberOfTimes | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationRequest.dosageInstruction.timing.repeat.frequency |
+| FRLMDosageInstructions.dosageDetails. frequency.period | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationRequest.dosageInstruction.timing.repeat.period |
+| FRLMDosageInstructions.dosageDetails. frequency.dayOfWeek | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationRequest.dosageInstruction.timing.repeat.dayOfWeek |
+| FRLMDosageInstructions.dosageDetails. frequency.timeOfDay | SubstanceAdministration.effectiveTime:effectiveTimeFrequence | MedicationRequest.dosageInstruction.timing.repeat.timeOfDay |
+| FRLMDosageInstructions.dosageDetails. frequency.additionalInstructions | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.additionalInstruction |
+| FRLMDosageInstructions.dosageDetails.dateOfAdministration |  | MedicationRequest.dosageInstruction.timing.event |
+| FRLMDosageInstructions.dosageDetails.conditionOfAdministration | SubstanceAdministration.precondition | MedicationRequest.dosageInstruction.asNeeded[x] |
+| FRLMDosageInstructions.dosageDetails.date[x] | SubstanceAdministration.effectiveTime:effectiveTimeDuree | MedicationRequest.dosageInstruction.timing.repeat.bounds[x] |
+| FRLMDosageInstructions.dosageDetails.duration |  | MedicationRequest.dosageInstruction.timing.repeat |
+| FRLMDosageInstructions.dosageDetails.eventTime | SubstanceAdministration.entryRelationship:frInstructionsAuPatient | MedicationRequest.dosageInstruction.timing.repeat |
+| FRLMDosageInstructions.dosageDetails.eventEndSequence |  |  |
+| FRLMDosageInstructions.dosageDetails.bodySite | SubstanceAdministration.approachSiteCode | MedicationRequest.dosageInstruction.site |
+| FRLMDosageInstructions.dosageDetails.routeOfAdministration | SubstanceAdministration.routeCode | MedicationRequest.dosageInstruction.route |
+| FRLMDosageInstructions.dosageDetails. maxDosePerPeriod.quantity | SubstanceAdministration.maxDoseQuantity.numerator | MedicationRequest.dosageInstruction.maxDosePerPeriod.numerator |
+| FRLMDosageInstructions.dosageDetails. maxDosePerPeriod.duration | SubstanceAdministration.maxDoseQuantity.denominator | MedicationRequest.dosageInstruction.maxDosePerPeriod.denominator |
+| FRLMDosageInstructions.dosageDetails.maxDosePerAdministration |  | MedicationRequest.dosageInstruction.maxDosePerAdministration |
+| FRLMDosageInstructions.dosageDetails.maxLifetimeDose |  | MedicationRequest.dosageInstruction.maxDosePerLifetime |
 | **FRLMMedicationUse** | **FRCDATraitement** | **FRMedicationStatementDocument** |
 | FRLMMedicationUse.header.status | SubstanceAdministration.statusCode | MedicationStatement.status |
 | FRLMMedicationUse.header.author[x] | SubstanceAdministration.author |  |

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
   "id" : "FRAdvanceDirectiveLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdvanceDirectiveLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAdvanceDirectiveLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Directive Anticipee\"",
   "status" : "draft",
-  "date" : "2026-08-20T15:24:46+00:00",
+  "experimental" : false,
+  "date" : "2026-08-21T08:13:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -90,31 +92,9 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.url",
-      "target" : [{
-        "code" : "Observation.reference.externalDocument.text.reference",
-        "equivalence" : "equivalent",
-        "comment" : "Référence externe portée par externalDocument.text.reference en CDA."
-      }]
-    },
-    {
       "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
         "code" : "Observation.entryRelationship.observationMedia",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
-      "target" : [{
-        "code" : "Observation.entryRelationship.observationMedia.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.data",
-      "target" : [{
-        "code" : "Observation.entryRelationship.observationMedia.value",
         "equivalence" : "equivalent"
       }]
     }]
@@ -149,8 +129,8 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
     {
       "code" : "FRLMAdvanceDirective.note",
       "target" : [{
-        "code" : "Consent.provision.code.text",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Consent (FHIR R4) n'a pas de champ de texte libre équivalent à un commentaire ; l'information reste portée par provision.code."
       }]
     },
     {
@@ -175,30 +155,64 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.url",
-      "target" : [{
-        "code" : "Consent.sourceReference",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
       "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
-        "code" : "Consent.sourceAttachment",
+        "code" : "Consent.source[x]",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMAttachment.url",
+      "target" : [{
+        "code" : "Observation.reference.externalDocument.text.reference",
+        "equivalence" : "equivalent",
+        "comment" : "Référence externe portée par externalDocument.text.reference en CDA."
+      }]
+    },
+    {
+      "code" : "FRLMAttachment.header.identifier",
+      "target" : [{
+        "code" : "Observation.entryRelationship.observationMedia.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
+      "code" : "FRLMAttachment.data",
       "target" : [{
-        "code" : "Consent.sourceAttachment.id",
+        "code" : "Observation.entryRelationship.observationMedia.value",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMAttachment.url",
+      "target" : [{
+        "code" : "Consent.source[x].url",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.data",
+      "code" : "FRLMAttachment.header.identifier",
       "target" : [{
-        "code" : "Consent.sourceAttachment.data",
+        "code" : "Consent.source[x].id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAttachment.data",
+      "target" : [{
+        "code" : "Consent.source[x].data",
         "equivalence" : "equivalent"
       }]
     }]
