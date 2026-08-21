@@ -1,6 +1,6 @@
 // En attente de validation par APE concernant la création d’un modèle logique unique ObservationLab, ainsi que le choix du parent : FRLMEntry ou un FRLMObservationLab commun.
 Logical: FRLMResultatsExamensBiologieMedicale
-Id: fr-lm-resultats-examens-biologie-medicale
+Id: FRLMResultatsExamensBiologieMedicale
 Parent: FRLMEntry
 Title: "Logical model - FR LM Resultats d'examens de biologie medicale"
 Description: """Resultats d'examens de biologie medicale"""

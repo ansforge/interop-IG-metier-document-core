@@ -1,5 +1,5 @@
 Logical: FRLMTransfusionDeProduitsSanguins
-Id: fr-lm-transfusion-de-produits-sanguins
+Id: FRLMTransfusionDeProduitsSanguins
 Parent: FRLMEntry
 Title: "Logical model - FR LM Transfusion de produits sanguins"
 Description: """Transfusion de produits sanguins"""

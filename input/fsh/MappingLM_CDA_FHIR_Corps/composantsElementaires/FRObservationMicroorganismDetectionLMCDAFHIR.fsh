@@ -8,54 +8,55 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-micro-organism-search"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-recherche-de-micro-organismes"
 // Élément racine
 * group[=].element[+].code = #FRLMMicroOrganismSearch
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRCDARechercheDeMicroOrganismes"
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.identifier
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.id
+* group[=].element[=].target.code = #Observation.id
 * group[=].element[=].target.equivalence = #equivalent
 // Sujet (patient)
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.subject
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.subject
+* group[=].element[=].target.code = #Observation.subject
 * group[=].element[=].target.equivalence = #equivalent
 
 // Auteur
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.author[x]
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.author
+* group[=].element[=].target.code = #Observation.author
 * group[=].element[=].target.equivalence = #equivalent
 
 // Exécutant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.performer[x]
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.performer
+* group[=].element[=].target.code = #Observation.performer
 * group[=].element[=].target.equivalence = #equivalent
 
 // Participant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.participant[x]
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.participant
+* group[=].element[=].target.code = #Observation.participant
 * group[=].element[=].target.equivalence = #equivalent
 
 // Informateur
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.informant
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.informant
+* group[=].element[=].target.code = #Observation.informant
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de création
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.date
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.author.time
+* group[=].element[=].target.code = #Observation.author.time
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.status
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.statusCode
+* group[=].element[=].target.code = #Observation.statusCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // Langue
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.language
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.languageCode
+* group[=].element[=].target.code = #Observation.languageCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // Source
@@ -64,17 +65,17 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 
 // Date de l'observation
 * group[=].element[+].code = #FRLMMicroOrganismSearch.observationDate
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.effectiveTime
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type
 * group[=].element[+].code = #FRLMMicroOrganismSearch.type
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Valeur
 * group[=].element[+].code = #FRLMMicroOrganismSearch.result
-* group[=].element[=].target.code = #FRCDARechercheDeMicroOrganismes.value
+* group[=].element[=].target.code = #Observation.value
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -83,60 +84,61 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 
 // Élément racine
 * group[=].element[+].code = #FRLMMicroOrganismSearch
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument
+* group[=].element[=].target.code = #Observation
+* group[=].element[=].target.display = "FRObservationMicroorganismDetectionDocument"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.identifier
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.identifier
+* group[=].element[=].target.code = #Observation.identifier
 * group[=].element[=].target.equivalence = #equivalent
 
 // Patient / Sujet
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.subject
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.subject
+* group[=].element[=].target.code = #Observation.subject
 * group[=].element[=].target.equivalence = #equivalent
 
 // Auteur
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.author[x]
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.extension:author
+* group[=].element[=].target.code = #Observation.extension:author
 * group[=].element[=].target.equivalence = #equivalent
 
 // Exécutant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.performer[x]
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.performer
+* group[=].element[=].target.code = #Observation.performer
 * group[=].element[=].target.equivalence = #equivalent
 
 // Participant
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.participant[x]
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.extension:author
+* group[=].element[=].target.code = #Observation.extension:author
 * group[=].element[=].target.equivalence = #equivalent
 
 // Informateur
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.informant
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.extension:author
+* group[=].element[=].target.code = #Observation.extension:author
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de création
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.date
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.issued
+* group[=].element[=].target.code = #Observation.issued
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.status
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.status
+* group[=].element[=].target.code = #Observation.status
 * group[=].element[=].target.equivalence = #equivalent
 
 // Langue
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.language
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.language
+* group[=].element[=].target.code = #Observation.language
 * group[=].element[=].target.equivalence = #equivalent
 
 // Code de l'observation
 * group[=].element[+].code = #FRLMMicroOrganismSearch.type
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.code
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Valeur de l'observation
 * group[=].element[+].code = #FRLMMicroOrganismSearch.result
-* group[=].element[=].target.code = #FRObservationMicroorganismDetectionDocument.valueBoolean
+* group[=].element[=].target.code = #Observation.valueBoolean
 * group[=].element[=].target.equivalence = #equivalent

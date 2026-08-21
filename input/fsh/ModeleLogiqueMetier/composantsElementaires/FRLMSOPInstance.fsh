@@ -1,5 +1,5 @@
 Logical: FRLMSOPInstance
-Id: fr-lm-sop-instance
+Id: FRLMSOPInstance
 Parent: FRLMEntry
 Title: "Logical model - FR LM SOP Instance"
 Description: """SOP Instance"""

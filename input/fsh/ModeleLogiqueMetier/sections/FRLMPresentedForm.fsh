@@ -1,5 +1,5 @@
 Logical: FRLMPresentedForm
-Id: fr-lm-presented-form
+Id: FRLMPresentedForm
 Parent: FRLMSection
 Title: "Logical model - FR LM Presented Form"
 Description: """Section Document PDF-copie"""

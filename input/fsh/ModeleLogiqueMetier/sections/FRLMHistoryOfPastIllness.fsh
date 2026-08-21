@@ -1,5 +1,5 @@
 Logical: FRLMHistoryOfPastIllness
-Id: fr-lm-history-of-past-illness
+Id: FRLMHistoryOfPastIllness
 Parent: FRLMSection
 Title: "Logical model - FR LM FRLM History Of Past Illness"
 Description: """Section Antécédents médicaux"""

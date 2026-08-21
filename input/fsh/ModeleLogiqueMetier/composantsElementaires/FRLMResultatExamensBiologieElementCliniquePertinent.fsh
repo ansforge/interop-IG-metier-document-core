@@ -1,6 +1,6 @@
 // En attente de validation par APE concernant la création d’un modèle logique unique ObservationLab, ainsi que le choix du parent : FRLMEntry ou un FRLMObservationLab commun.
 Logical: FRLMResultatExamensBiologieElementCliniquePertinent
-Id: fr-lm-resultat-examens-biologie-element-clinique-pertinent
+Id: FRLMResultatExamensBiologieElementCliniquePertinent
 Parent: FRLMEntry
 Title: "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent"
 Description: """Résultat d'examens de biologie / élement clinique pertinent"""

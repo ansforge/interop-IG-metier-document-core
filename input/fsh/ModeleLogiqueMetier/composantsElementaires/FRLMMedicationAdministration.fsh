@@ -1,5 +1,5 @@
 Logical: FRLMMedicationAdministration
-Id: fr-lm-medication-administration	
+Id: FRLMMedicationAdministration	
 Parent: FRLMEntry	
 Title: "Logical model- FR LM Medication Administration	"
 Description: """Traitement"""

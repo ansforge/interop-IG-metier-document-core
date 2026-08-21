@@ -1,5 +1,5 @@
 Logical: FRLMHumanName
-Id: fr-lm-human-name
+Id: FRLMHumanName
 Parent: Base
 Title: "Logical model - FR LM Human Name"
 Description: "Modele logique metier - FR LM Human Name"

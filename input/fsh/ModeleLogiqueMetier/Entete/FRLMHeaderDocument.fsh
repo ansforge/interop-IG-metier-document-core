@@ -1,5 +1,5 @@
 Logical: FRLMHeaderDocument	
-Id: fr-lm-header-document						
+Id: FRLMHeaderDocument						
 Title: "Logical model - FR LM Header Document"				
 Description: "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."										
 

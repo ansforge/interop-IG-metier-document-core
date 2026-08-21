@@ -1,5 +1,5 @@
 Logical: FRLMPatientTransfer
-Id: fr-lm-patient-transfer
+Id: FRLMPatientTransfer
 Parent: FRLMEntry
 Title: "Logical model - FR LM Patient Transfer."
 Description: """Transfert du patient"""

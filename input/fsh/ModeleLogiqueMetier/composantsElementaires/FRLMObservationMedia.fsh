@@ -1,7 +1,7 @@
 // l'équivalent de ce modèle EHDSMedia a été supprimé !
 // https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedia.html
 Logical: FRLMObservationMedia
-Id: fr-lm-observation-media
+Id: FRLMObservationMedia
 Parent : FRLMEntry
 Title: "Logical model - FR LM ObservationMedia"
 Description: """Image illustrative."""

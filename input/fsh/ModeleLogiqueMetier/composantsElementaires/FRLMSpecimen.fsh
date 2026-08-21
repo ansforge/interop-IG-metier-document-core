@@ -1,5 +1,5 @@
 Logical: FRLMSpecimen
-Id: fr-lm-specimen
+Id: FRLMSpecimen
 Title: "Logical model - FR LM Specimen"
 Description: """Prélèvement"""
 Characteristics: #can-be-target

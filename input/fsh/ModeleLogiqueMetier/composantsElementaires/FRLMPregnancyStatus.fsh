@@ -1,5 +1,5 @@
 Logical: FRLMPregnancyStatus
-Id: fr-lm-pregnancy-status
+Id: FRLMPregnancyStatus
 Parent: FRLMEntry
 Title: "Logical model- FR LM Pregnancy Status"
 Description: """Statut de grossesse"""

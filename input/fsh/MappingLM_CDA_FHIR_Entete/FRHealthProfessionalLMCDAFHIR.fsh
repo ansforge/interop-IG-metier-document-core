@@ -13,55 +13,56 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity"
 
 // Élément racine
 * group[=].element[+].code = #FRLMHealthProfessional
-* group[=].element[=].target.code = #assignedEntity
+* group[=].element[=].target.code = #AssignedEntity
+* group[=].element[=].target.display = "assignedEntity"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "assignedEntity et assignedAuthor (porté par ClinicalDocument.author) partagent une structure CDA équivalente pour représenter un professionnel de santé."
 
 // Identifiant
 * group[=].element[+].code = #FRLMHealthProfessional.identifier
-* group[=].element[=].target.code = #assignedEntity.id
+* group[=].element[=].target.code = #AssignedEntity.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Nom
 * group[=].element[+].code = #FRLMHealthProfessional.name
-* group[=].element[=].target.code = #assignedEntity.assignedPerson.name
+* group[=].element[=].target.code = #AssignedEntity.assignedPerson.name
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMHealthProfessional.name.family
-* group[=].element[=].target.code = #assignedEntity.assignedPerson.name.family
+* group[=].element[=].target.code = #AssignedEntity.assignedPerson.name.family
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMHealthProfessional.name.given
-* group[=].element[=].target.code = #assignedEntity.assignedPerson.name.given
+* group[=].element[=].target.code = #AssignedEntity.assignedPerson.name.given
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMHealthProfessional.name.prefix
-* group[=].element[=].target.code = #assignedEntity.assignedPerson.name.prefix
+* group[=].element[=].target.code = #AssignedEntity.assignedPerson.name.prefix
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMHealthProfessional.name.suffix
-* group[=].element[=].target.code = #assignedEntity.assignedPerson.name.suffix
+* group[=].element[=].target.code = #AssignedEntity.assignedPerson.name.suffix
 * group[=].element[=].target.equivalence = #equivalent
 
 // Adresse
 * group[=].element[+].code = #FRLMHealthProfessional.address
-* group[=].element[=].target.code = #assignedEntity.addr
+* group[=].element[=].target.code = #AssignedEntity.addr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Télécom
 * group[=].element[+].code = #FRLMHealthProfessional.telecom
-* group[=].element[=].target.code = #assignedEntity.telecom
+* group[=].element[=].target.code = #AssignedEntity.telecom
 * group[=].element[=].target.equivalence = #equivalent
 
 // Rôle professionnel
 * group[=].element[+].code = #FRLMHealthProfessional.professionalRole.role
-* group[=].element[=].target.code = #assignedEntity.code
+* group[=].element[=].target.code = #AssignedEntity.code
 * group[=].element[=].target.equivalence = #equivalent
 
 // Organisation d'exercice
 * group[=].element[+].code = #FRLMHealthProfessional.professionalRole.organisation
-* group[=].element[=].target.code = #assignedEntity.representedOrganization
+* group[=].element[=].target.code = #AssignedEntity.representedOrganization
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure d'exercice."
 
@@ -71,7 +72,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.comment = "Aucun champ CDA dédié à la spécialité ; elle est portée par assignedEntity.code selon le contexte."
 
 // Groupe Mapping 2 : modèle métier → FHIR (PractitionerRole)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitionerRole-document"
 
 // Élément racine
@@ -97,7 +98,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 3 : modèle métier → FHIR (Practitioner référencé)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document"
 
 // Élément racine

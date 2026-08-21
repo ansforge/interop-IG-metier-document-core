@@ -1,5 +1,5 @@
 Logical: FRLMQRCode 
-Id: fr-lm-qr-code
+Id: FRLMQRCode
 Parent: FRLMSection
 Title: "Logical model - FR LM QR Code"
 Description: """Section Codes à barres"""

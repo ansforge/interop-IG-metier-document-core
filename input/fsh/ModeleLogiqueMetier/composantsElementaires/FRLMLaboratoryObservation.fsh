@@ -1,5 +1,5 @@
 Logical: FRLMLaboratoryObservation
-Id: fr-lm-laboratory-observation
+Id: FRLMLaboratoryObservation
 Parent: FRLMObservation
 Title: "Logical model - Laboratory Observation"
 Description: """Résultats d'examen de biologie médicale"""

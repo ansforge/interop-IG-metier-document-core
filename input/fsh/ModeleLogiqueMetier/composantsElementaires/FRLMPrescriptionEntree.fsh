@@ -1,5 +1,5 @@
 Logical: FRLMPrescriptionEntree
-Id: fr-lm-prescription-entree
+Id: FRLMPrescriptionEntree
 Title: "Logical model - FR LM Prescription"
 Parent: FRLMEntry
 Description: """Prescription """

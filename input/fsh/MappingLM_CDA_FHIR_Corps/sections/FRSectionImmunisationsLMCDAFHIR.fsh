@@ -7,49 +7,51 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisations"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccinations"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
-* group[=].element[=].target.code = #FRCDAVaccinations  
+* group[=].element[=].target.code = #Section  
+* group[=].element[=].target.display = "FRCDAVaccinations"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMImmunisations.codeSection
-* group[=].element[=].target.code = #FRCDAVaccinations.code
+* group[=].element[=].target.code = #Section.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMImmunisations.titleSection
-* group[=].element[=].target.code = #FRCDAVaccinations.title
+* group[=].element[=].target.code = #Section.title
 * group[=].element[=].target.equivalence = #equivalent
 // Description narrative de la section
 * group[=].element[+].code = #FRLMImmunisations.description
-* group[=].element[=].target.code = #FRCDAVaccinations.text
+* group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // entrée de la section
 * group[=].element[+].code = #FRLMImmunisations.entry.immunisation
-* group[=].element[=].target.code = #FRCDAVaccinations.entry.FRCDAVaccination
+* group[=].element[=].target.code = #Section.entry.FRCDAVaccination
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisations"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations
+* group[=].element[=].target.code = #Composition.section:sectionImmunizations
+* group[=].element[=].target.display = "FRCompositionDocument.section:sectionImmunizations"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMImmunisations.codeSection
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations.code
+* group[=].element[=].target.code = #Composition.section:sectionImmunizations.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMImmunisations.titleSection
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations.title
+* group[=].element[=].target.code = #Composition.section:sectionImmunizations.title
 * group[=].element[=].target.equivalence = #equivalent
 // Description narrative de la section
 * group[=].element[+].code = #FRLMImmunisations.description
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations.text
+* group[=].element[=].target.code = #Composition.section:sectionImmunizations.text
 * group[=].element[=].target.equivalence = #equivalent
 // entrée de la section
 * group[=].element[+].code = #FRLMImmunisations.entry.immunisation
-* group[=].element[=].target.code = #FRCompositionDocument.section:sectionImmunizations.entry:FRImmunizationDocument
+* group[=].element[=].target.code = #Composition.section:sectionImmunizations.entry:FRImmunizationDocument
 * group[=].element[=].target.equivalence = #equivalent

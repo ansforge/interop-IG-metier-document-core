@@ -1,5 +1,5 @@
 Logical: FRLMPatientEducation
-Id: fr-lm-patient-education
+Id: FRLMPatientEducation
 Parent: FRLMSection
 Title: "Logical model - FR LM Patient Education"
 Description: """Section Education du patient"""

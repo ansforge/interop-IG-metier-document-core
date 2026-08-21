@@ -1,5 +1,5 @@
 Logical: FRLMMedicalDevicesAndImplants
-Id: fr-lm-medical-devices-and-implants
+Id: FRLMMedicalDevicesAndImplants
 Parent: FRLMSection
 Title: "Logical Model - FR LM Medical Devices and Implants"
 Description: """Section Dispositifs Medicaux"""

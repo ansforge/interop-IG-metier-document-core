@@ -1,5 +1,5 @@
 Logical: FRLMObservationVitalSign
-Id: fr-lm-observation-vital-sign
+Id: FRLMObservationVitalSign
 Parent: FRLMEntry
 Title: "Logical model - FR LM Observation Vital Sign"
 Description: """Signe vital observé"""

@@ -1,2 +1,2 @@
-* [Modèle logique métier](./StructureDefinition-fr-lm-corps-document.html)
+* [Modèle logique métier](./StructureDefinition-FRLMCorpsDocument.html)
 * [Mapping Métier/CDA/FHIR](./mappingCDA-FHIR-corps.html)

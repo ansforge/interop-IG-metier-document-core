@@ -1,5 +1,5 @@
 Logical: FRLMResultData
-Id: fr-lm-result-data
+Id: FRLMResultData
 Parent: FRLMSection
 Title: "Logical model - FR LM Compte rendu de biologie de 1er niveau"
 Description: """Section Compte rendu de biologie de 1er niveau"""

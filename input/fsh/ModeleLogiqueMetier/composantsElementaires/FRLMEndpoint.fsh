@@ -1,5 +1,5 @@
 Logical: FRLMEndpoint
-Id: fr-lm-endpoint
+Id: FRLMEndpoint
 Parent: FRLMEntry
 Title: "Logical model - FR LM Endpoint"
 Description: """Référence Wado d'un objet DICOM (SOP Instance)"""

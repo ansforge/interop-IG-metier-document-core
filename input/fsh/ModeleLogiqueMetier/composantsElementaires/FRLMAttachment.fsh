@@ -1,5 +1,5 @@
 Logical: FRLMAttachment
-Id: fr-lm-attachment
+Id: FRLMAttachment
 Parent: FRLMEntry
 Title: "Logical model - FR LM Attachment"
 Description: """Document attaché"""

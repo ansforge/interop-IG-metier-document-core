@@ -1,5 +1,5 @@
 Logical: FRLMPredictableAdverseDrugReaction
-Id: fr-lm-predictable-adverse-drug-reaction
+Id: FRLMPredictableAdverseDrugReaction
 Parent: FRLMSection 
 Title: "Logical model - FR LM Predictable Adverse Drug Reaction"
 Description: """Section Effets indesirables"""

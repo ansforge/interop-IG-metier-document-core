@@ -6,57 +6,59 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicePrescri
 * title = "Mapping Métier/CDA/FHIR : \"Prescription de dispositifs médicaux\""
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-device-prescriptions"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicePrescriptions"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prescription-dispositifs-medicaux"
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux
+* group[=].element[=].target[+].code = #Section
+* group[=].element[=].target[=].display = "FRCDAPrescriptionDispositifsMedicaux"
 * group[=].element[=].target[=].equivalence = #equivalent
 // auteur de la prescription
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.author[x]
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux.author
+* group[=].element[=].target[+].code = #Section.author
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.codeSection
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux.code
+* group[=].element[=].target[+].code = #Section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.titleSection
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux.title
+* group[=].element[=].target[+].code = #Section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.description
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux.text
+* group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Dispositif medical prescrit
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.entry.deviceUse:FRLMDeviceUse
-* group[=].element[=].target[+].code = #FRCDAPrescriptionDispositifsMedicaux.entry:FRCDADispositifMedical
+* group[=].element[=].target[+].code = #Section.entry:FRCDADispositifMedical
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-device-prescriptions"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicePrescriptions"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionMedicalDevicePrescription"
 * group[=].element[=].target[=].equivalence = #equivalent
 // auteur de la prescription
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.author[x]
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.author
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription.author
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.codeSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.code
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.titleSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.title
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.description
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.text
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Dispositif medical prescrit
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.entry.deviceUse:FRLMDeviceUse
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionMedicalDevicePrescription.entry:FRDeviceRequestDocument
+* group[=].element[=].target[+].code = #Composition.section:sectionMedicalDevicePrescription.entry:FRDeviceRequestDocument
 * group[=].element[=].target[=].equivalence = #equivalent

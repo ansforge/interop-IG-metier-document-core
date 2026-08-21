@@ -76,7 +76,7 @@ Elements AS (
     cg.grp_type,
     e.key AS elem_index,
     json_extract(e.value, '$.code') AS elem_code,
-    json_extract(t.value, '$.code') AS elem_target_code
+    COALESCE(json_extract(t.value, '$.display'), json_extract(t.value, '$.code')) AS elem_target_code
   FROM ClassifiedGroups cg
   JOIN json_each(cg.group_json, '$.element') e
   JOIN json_each(e.value, '$.target') t

@@ -1,5 +1,5 @@
 Logical: FRLMExaminationReport
-Id: fr-lm-examination-report
+Id: FRLMExaminationReport
 Parent: FRLMSection
 Title: "Logical model - FR LM Examination Report"
 Description: """Section Acte d'imagerie"""
