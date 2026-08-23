@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRInformantLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRInformantLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRInformantLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Informateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +53,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:professional",
+      "code" : "FRLMInformant.informant[x].informantProfessional",
       "target" : [{
         "code" : "Informant.assignedEntity",
         "equivalence" : "equivalent",
@@ -60,7 +61,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:organisation",
+      "code" : "FRLMInformant.informant[x].informantOrganisation",
       "target" : [{
         "code" : "Informant.assignedEntity",
         "equivalence" : "equivalent",
@@ -68,7 +69,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:patient",
+      "code" : "FRLMInformant.informant[x].informantPersonne[x]:patient",
       "target" : [{
         "code" : "Informant.assignedEntity",
         "equivalence" : "equivalent",
@@ -76,7 +77,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:relatedPerson",
+      "code" : "FRLMInformant.informant[x].informantPersonne[x]:relatedPerson",
       "target" : [{
         "code" : "Informant.relatedEntity",
         "equivalence" : "equivalent",
@@ -97,7 +98,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:professional",
+      "code" : "FRLMInformant.informant[x].informantProfessional",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -105,7 +106,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:organisation",
+      "code" : "FRLMInformant.informant[x].informantOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -113,7 +114,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:patient",
+      "code" : "FRLMInformant.informant[x].informantPersonne[x]:patient",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -121,7 +122,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMInformant.informant:relatedPerson",
+      "code" : "FRLMInformant.informant[x].informantPersonne[x]:relatedPerson",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

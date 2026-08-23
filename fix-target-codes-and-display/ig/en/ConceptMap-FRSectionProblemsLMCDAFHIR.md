@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
   "id" : "FRSectionProblemsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionProblemsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionProblemsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Problèmes actifs\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,9 +71,9 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMProblems.entry.problem:FRLMCondition",
+      "code" : "FRLMProblems.entry.problem",
       "target" : [{
-        "code" : "Section.entry:FRCDAListeDesProblemes",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
     "element" : [{
       "code" : "FRLMProblems",
       "target" : [{
-        "code" : "Composition.section:sectionProblems",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionProblems",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
     {
       "code" : "FRLMProblems.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionProblems.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionProblems.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.description",
       "target" : [{
-        "code" : "Composition.section:sectionProblems.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProblems.entry.problem:FRLMCondition",
+      "code" : "FRLMProblems.entry.problem",
       "target" : [{
-        "code" : "Composition.section:sectionProblems.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
   "id" : "FRSectionReasonForReferralLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionReasonForReferralLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionReasonForReferralLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Raison de la recommandation\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,14 +73,14 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
     {
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
-        "code" : "Section.entry:FRCDASimpleObservation",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
-        "code" : "Section.entry:FRCDAProbleme",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -91,7 +93,7 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
     "element" : [{
       "code" : "FRLMReasonForReferral",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionReasonForReferral",
         "equivalence" : "equivalent"
       }]
@@ -99,35 +101,35 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
     {
       "code" : "FRLMReasonForReferral.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.description",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral.entry:Observation",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
-        "code" : "Composition.section:sectionReasonForReferral.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

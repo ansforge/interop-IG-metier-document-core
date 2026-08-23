@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil
   "id" : "FRFamilyMemberHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRFamilyMemberHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRFamilyMemberHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Antécédent familial\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -57,35 +59,50 @@ Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil
     {
       "code" : "FRLMFamilyMemberHistory.relatedPerson",
       "target" : [{
-        "code" : "Organizer.subject.relatedSubject",
+        "code" : "Organizer.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMemberHistory.condition",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve",
-        "equivalence" : "equivalent"
+        "code" : "Organizer.component.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Organizer.component.observation référence le profil CDA FRCDAAntecedentFamilialObserve ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
       }]
     },
     {
+      "code" : "FRLMFamilyMemberHistory.note",
+      "target" : [{
+        "code" : "Organizer.sdtcText",
+        "equivalence" : "relatedto",
+        "comment" : "Le commentaire métier est porté dans la narration CDA."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedent-familial-observe",
+    "targetVersion" : "0.1.0",
+    "element" : [{
       "code" : "FRLMFamilyMemberHistory.condition.code",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMemberHistory.condition.outcome",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMemberHistory.condition.contributedToDeath",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve.value",
+        "code" : "Observation.value",
         "equivalence" : "relatedto",
         "comment" : "La contribution au décès est rapprochée de la valeur d'observation faute d'attribut CDA dédié explicite."
       }]
@@ -93,23 +110,15 @@ Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil
     {
       "code" : "FRLMFamilyMemberHistory.condition.onset[x]",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMemberHistory.condition.bodySite",
       "target" : [{
-        "code" : "Organizer.component:frAntecedentFamilialObserve.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMFamilyMemberHistory.note",
-      "target" : [{
-        "code" : "Organizer.text",
-        "equivalence" : "relatedto",
-        "comment" : "Le commentaire métier est porté dans la narration CDA."
       }]
     }]
   },
@@ -179,7 +188,7 @@ Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil
     {
       "code" : "FRLMFamilyMemberHistory.condition.bodySite",
       "target" : [{
-        "code" : "FamilyMemberHistory.condition.extension:FRFamilyMemberHistoryBodySiteExtension",
+        "code" : "FamilyMemberHistory.condition.extension:bodySite",
         "equivalence" : "equivalent"
       }]
     },

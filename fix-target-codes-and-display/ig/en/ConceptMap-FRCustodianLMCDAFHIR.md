@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRCustodianLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCustodianLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRCustodianLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -46,10 +47,43 @@ Ce ConceptMap présente deux groupes de mapping :
     "element" : [{
       "code" : "FRLMHeaderDocument.custodian",
       "target" : [{
-        "code" : "Custodian.assignedCustodian.representedCustodianOrganization",
-        "display" : "custodian.assignedCustodian.representedCustodianOrganization",
+        "code" : "Custodian.assignedCustodian",
         "equivalence" : "equivalent",
-        "comment" : "La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping."
+        "comment" : "La structure chargée de la conservation du document est de type FRLMOrganisation ; cf. le groupe dédié ci-dessous pour le détail de son mapping vers fr-cda-represented-custodian-organization."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-custodian-organization",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMOrganisation.identifier",
+      "target" : [{
+        "code" : "CustodianOrganization.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrganisation.name",
+      "target" : [{
+        "code" : "CustodianOrganization.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrganisation.address",
+      "target" : [{
+        "code" : "CustodianOrganization.addr",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrganisation.telecom",
+      "target" : [{
+        "code" : "CustodianOrganization.telecom",
+        "equivalence" : "equivalent"
       }]
     }]
   },

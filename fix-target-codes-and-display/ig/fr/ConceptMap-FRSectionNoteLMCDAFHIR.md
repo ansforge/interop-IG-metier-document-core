@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDAComm
   "id" : "FRSectionNoteLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionNoteLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionNoteLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Commentaire non codé\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -77,7 +79,7 @@ Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDAComm
     "element" : [{
       "code" : "FRLMNote",
       "target" : [{
-        "code" : "Composition.section:sectionNote",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionNote",
         "equivalence" : "equivalent"
       }]
@@ -85,21 +87,21 @@ Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDAComm
     {
       "code" : "FRLMNote.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionNote.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionNote.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.description",
       "target" : [{
-        "code" : "Composition.section:sectionNote.extension:section-note",
+        "code" : "Composition.section.extension:section-note",
         "equivalence" : "equivalent"
       }]
     }]

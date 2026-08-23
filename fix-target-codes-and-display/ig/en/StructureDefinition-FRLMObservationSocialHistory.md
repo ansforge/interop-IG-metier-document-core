@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMObservationSo
   "name" : "FRLMObservationSocialHistory",
   "title" : "Logical model- FR LM Observation Social History",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

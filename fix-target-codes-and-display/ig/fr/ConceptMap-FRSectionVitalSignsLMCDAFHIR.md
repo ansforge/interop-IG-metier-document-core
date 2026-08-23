@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
   "id" : "FRSectionVitalSignsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionVitalSignsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionVitalSignsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Signes vitaux",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -55,9 +57,9 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
       }]
     },
     {
-      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "Organizer.entry:FRCDASignesVitauxEntry",
+        "code" : "Organizer.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -70,7 +72,7 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
     "element" : [{
       "code" : "FRLMVitalSigns",
       "target" : [{
-        "code" : "Composition.section:sectionVitalSigns",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionVitalSigns",
         "equivalence" : "equivalent"
       }]
@@ -78,14 +80,14 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
     {
       "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionVitalSigns.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "Composition.section:sectionVitalSigns.entry:FRObservationVitalSignsDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

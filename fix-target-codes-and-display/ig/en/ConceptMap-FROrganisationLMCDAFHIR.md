@@ -19,9 +19,11 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
   "id" : "FROrganisationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrganisationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FROrganisationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Structure\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -51,11 +53,17 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
         "equivalence" : "equivalent",
         "comment" : "Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization."
       }]
-    },
-    {
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-organization",
+    "targetVersion" : "0.1.0",
+    "element" : [{
       "code" : "FRLMOrganisation.identifier",
       "target" : [{
-        "code" : "AssignedEntity.representedOrganization.id",
+        "code" : "Organization.id",
         "equivalence" : "equivalent"
       }]
     },
@@ -69,21 +77,21 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     {
       "code" : "FRLMOrganisation.name",
       "target" : [{
-        "code" : "AssignedEntity.representedOrganization.name",
+        "code" : "Organization.name",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrganisation.address",
       "target" : [{
-        "code" : "AssignedEntity.representedOrganization.addr",
+        "code" : "Organization.addr",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrganisation.telecom",
       "target" : [{
-        "code" : "AssignedEntity.representedOrganization.telecom",
+        "code" : "Organization.telecom",
         "equivalence" : "equivalent"
       }]
     },
@@ -97,7 +105,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     {
       "code" : "FRLMOrganisation.industrySector",
       "target" : [{
-        "code" : "AssignedEntity.representedOrganization.standardIndustryClassCode",
+        "code" : "Organization.standardIndustryClassCode",
         "equivalence" : "equivalent"
       }]
     }]

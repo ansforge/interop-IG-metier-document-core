@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
   "id" : "FRSectionMedicationDispenseLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationDispenseLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicationDispenseLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispensation de médicaments\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,7 +71,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
       }]
     },
     {
-      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense",
       "target" : [{
         "code" : "Section.entry.FRCDATraitementDispense",
         "equivalence" : "equivalent"
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
     "element" : [{
       "code" : "FRLMMedicationDispensations",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationDispense",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionMedicationDispense",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
     {
       "code" : "FRLMMedicationDispensations.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationDispense.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.description",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationDispense.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationDispense.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationDispense.entry:FRMedicationDispenseDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

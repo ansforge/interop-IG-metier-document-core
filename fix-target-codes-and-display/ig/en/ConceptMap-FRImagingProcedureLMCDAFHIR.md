@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
   "id" : "FRImagingProcedureLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingProcedureLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingProcedureLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Technique imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -76,17 +78,19 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMProcedure.procedureDateDateTime",
+      "code" : "FRLMProcedure.procedureDate[x]:procedureDateDateTime",
       "target" : [{
-        "code" : "Procedure.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "Procedure.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
       }]
     },
     {
-      "code" : "FRLMProcedure.procedureDatePeriod",
+      "code" : "FRLMProcedure.procedureDate[x]:procedureDatePeriod",
       "target" : [{
-        "code" : "Procedure.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Procedure.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
       }]
     },
     {
@@ -104,7 +108,7 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMProcedure.bodySite:FRLMBodyStructure.locationQualifier",
+      "code" : "FRLMProcedure.bodySite",
       "target" : [{
         "code" : "Procedure.targetSiteCode.qualifier",
         "equivalence" : "equivalent"
@@ -239,7 +243,7 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
     {
       "code" : "FRLMProcedure.header.performer[x]",
       "target" : [{
-        "code" : "Procedure.performer:Intervenant.actor",
+        "code" : "Procedure.performer:intervenant.actor",
         "equivalence" : "equivalent"
       }]
     },

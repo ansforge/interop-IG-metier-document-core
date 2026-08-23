@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
   "id" : "FRObservationVitalSignsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationVitalSignsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationVitalSignsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Observation Vital Sign\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -111,7 +113,7 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
       }]
     },
     {
-      "code" : "FRLMObservationVitalSign.header.author",
+      "code" : "FRLMObservationVitalSign.header.author[x]",
       "target" : [{
         "code" : "Observation.author",
         "equivalence" : "equivalent"
@@ -141,7 +143,7 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
     {
       "code" : "FRLMObservationVitalSign.observationDate[x]",
       "target" : [{
-        "code" : "Observation.effectiveDateTime",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
@@ -195,7 +197,7 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
       }]
     },
     {
-      "code" : "FRLMObservationVitalSign.header.author",
+      "code" : "FRLMObservationVitalSign.header.author[x]",
       "target" : [{
         "code" : "Observation.extension:author",
         "equivalence" : "equivalent"

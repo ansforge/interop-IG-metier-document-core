@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
   "id" : "FRCarePlanLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCarePlanLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRCarePlanLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -79,7 +81,7 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     {
       "code" : "FRLMCarePlan.activity",
       "target" : [{
-        "code" : "SubstanceAdministration.entryRelationship:frItemPlanTraitement",
+        "code" : "SubstanceAdministration.entryRelationship",
         "equivalence" : "relatedto",
         "comment" : "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
       }]
@@ -130,7 +132,7 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     {
       "code" : "FRLMCarePlan.activity",
       "target" : [{
-        "code" : "CarePlan.activity.reference:FRMedicationRequestDocument",
+        "code" : "CarePlan.activity.reference",
         "equivalence" : "narrower",
         "comment" : "Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument."
       }]

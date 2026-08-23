@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
   "id" : "FRSectionAttachmentsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAttachmentsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAttachmentsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Documents ajoutés\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,16 +71,16 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
       }]
     },
     {
-      "code" : "FRLMAttachments.entry.attachment:FRLMAttachment",
+      "code" : "FRLMAttachments.entry.attachment",
       "target" : [{
-        "code" : "Section.entry:frDocumentAttache",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry.observation:FRLMObservation",
+      "code" : "FRLMAttachments.entry.observation",
       "target" : [{
-        "code" : "Section.entry:frSimpleObservation",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -91,7 +93,7 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
     "element" : [{
       "code" : "FRLMAttachments",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionAttachments",
         "equivalence" : "equivalent"
       }]
@@ -99,35 +101,35 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
     {
       "code" : "FRLMAttachments.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.description",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:attachment:FRLMAttachment",
+      "code" : "FRLMAttachments.entry:FRLMAttachment",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments.entry:FRDocumentReferenceDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:observation:FRLMObservation",
+      "code" : "FRLMAttachments.entry:FRLMObservation",
       "target" : [{
-        "code" : "Composition.section:sectionAttachments.entry:Observation",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

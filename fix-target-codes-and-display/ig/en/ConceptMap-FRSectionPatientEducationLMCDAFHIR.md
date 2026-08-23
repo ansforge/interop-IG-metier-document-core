@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
   "id" : "FRSectionPatientEducationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPatientEducationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionPatientEducationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Education du patient\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,23 +71,23 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.procedure:FRLMProcedure",
+      "code" : "FRLMPatientEducation.entry.procedure",
       "target" : [{
-        "code" : "Section.entry:frActe",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.observation:FRLMObservation",
+      "code" : "FRLMPatientEducation.entry.observation",
       "target" : [{
-        "code" : "Section.entry:frSimpleObservation",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.reference:FRLMAttachment",
+      "code" : "FRLMPatientEducation.entry.reference",
       "target" : [{
-        "code" : "Section.entry:frReferencesExternes",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -98,7 +100,7 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
     "element" : [{
       "code" : "FRLMPatientEducation",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionPatientEducation",
         "equivalence" : "equivalent"
       }]
@@ -106,42 +108,42 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
     {
       "code" : "FRLMPatientEducation.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatientEducation.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatientEducation.description",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.procedure:FRLMProcedure",
+      "code" : "FRLMPatientEducation.entry.procedure",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.entry:FRProcedureDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.observation:FRLMObservation",
+      "code" : "FRLMPatientEducation.entry.observation",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.entry:Observation",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatientEducation.entry.reference:FRLMAttachment",
+      "code" : "FRLMPatientEducation.entry.reference",
       "target" : [{
-        "code" : "Composition.section:sectionPatientEducation.entry:FRDocumentReferenceDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

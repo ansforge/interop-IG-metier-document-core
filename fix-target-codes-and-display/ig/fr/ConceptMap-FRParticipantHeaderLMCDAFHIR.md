@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRParticipantHeaderLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRParticipantHeaderLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRParticipantHeaderLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,23 +53,9 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.identifier",
-      "target" : [{
-        "code" : "Participant1.associatedEntity.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.name",
-      "target" : [{
-        "code" : "Participant1.associatedEntity.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
       "code" : "FRLMParticipant.type",
       "target" : [{
-        "code" : "participant@typeCode",
+        "code" : "Participant1.typeCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -87,7 +74,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:healthProfessional",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
         "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
@@ -95,7 +82,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:organisation",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
         "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
@@ -103,11 +90,32 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:device",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
         "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
         "comment" : "Le participant système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-associated-entity",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMParticipant.identifier",
+      "target" : [{
+        "code" : "AssociatedEntity.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.name",
+      "target" : [{
+        "code" : "AssociatedEntity.associatedPerson",
+        "equivalence" : "wider",
+        "comment" : "associatedPerson référence à son tour un profil CDA séparé (identité de la personne) ; le nom y est porté globalement."
       }]
     }]
   },
@@ -161,7 +169,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:healthProfessional",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -169,7 +177,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:organisation",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -177,7 +185,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:device",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

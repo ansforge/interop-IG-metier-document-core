@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
   "id" : "FRImagingStudyLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingStudyLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -50,28 +52,28 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     {
       "code" : "FRLMImagingStudy.header.identifier",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.id",
+        "code" : "Act.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.modality",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.methodCode",
+        "code" : "Act.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
+        "code" : "Act.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier",
+      "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
+        "code" : "Act.targetSiteCode.qualifier",
         "equivalence" : "equivalent"
       }]
     },
@@ -85,7 +87,7 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     {
       "code" : "FRLMImagingStudy.started",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
+        "code" : "Act.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -162,7 +164,7 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     {
       "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "ImagingStudy.bodySite",
+        "code" : "ImagingStudy.series.bodySite",
         "equivalence" : "equivalent"
       }]
     },
@@ -204,7 +206,7 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     {
       "code" : "FRLMImagingStudy.studyCustodian",
       "target" : [{
-        "code" : "ImagingStudy.series.performer.actor:Organization",
+        "code" : "ImagingStudy.series.performer.actor",
         "equivalence" : "equivalent"
       }]
     },

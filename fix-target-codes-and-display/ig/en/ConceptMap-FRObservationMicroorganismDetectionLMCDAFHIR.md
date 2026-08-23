@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
   "id" : "FRObservationMicroorganismDetectionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationMicroorganismDetectionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Recherche de micro organismes\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -92,7 +94,7 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
     {
       "code" : "FRLMMicroOrganismSearch.header.date",
       "target" : [{
-        "code" : "Observation.author.time",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -117,7 +119,7 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
       }]
     },
     {
-      "code" : "FRLMMicroOrganismSearch.observationDate",
+      "code" : "FRLMMicroOrganismSearch.header.date",
       "target" : [{
         "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
@@ -139,7 +141,8 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-micro-organism-search",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-microorganism-detection-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -223,7 +226,7 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
     {
       "code" : "FRLMMicroOrganismSearch.result",
       "target" : [{
-        "code" : "Observation.valueBoolean",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     }]

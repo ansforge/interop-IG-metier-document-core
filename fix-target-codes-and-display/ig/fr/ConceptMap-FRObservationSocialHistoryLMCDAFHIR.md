@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
   "id" : "FRObservationSocialHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationSocialHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationSocialHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Habitus Mode de vie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -106,7 +108,7 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
     {
       "code" : "FRLMObservationSocialHistory.observationDate[x]",
       "target" : [{
-        "code" : "Observation.effectiveDateTime",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
@@ -120,7 +122,7 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
     {
       "code" : "FRLMObservationSocialHistory.result",
       "target" : [{
-        "code" : "Observation.valueCodeableConcept",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },

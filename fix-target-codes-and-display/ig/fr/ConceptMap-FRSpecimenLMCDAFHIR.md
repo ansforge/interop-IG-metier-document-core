@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
   "id" : "FRSpecimenLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSpecimenLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSpecimenLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prélèvement\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -55,7 +57,7 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
       }]
     },
     {
-      "code" : "FRLMSpecimen.header.status",
+      "code" : "FRLMSpecimen.status",
       "target" : [{
         "code" : "Procedure.statusCode",
         "equivalence" : "equivalent"
@@ -78,7 +80,7 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.parentSpecimen",
       "target" : [{
-        "code" : "Procedure.participant:echantillonPreleve",
+        "code" : "Procedure.participant:EchantillonPreleve",
         "equivalence" : "equivalent"
       }]
     },
@@ -123,14 +125,14 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.collection.device",
       "target" : [{
-        "code" : "Procedure.participant:dispositifUtilise",
+        "code" : "Procedure.participant:DispositifUtilise",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.additive[x]",
       "target" : [{
-        "code" : "Procedure.participant:produitUtilise",
+        "code" : "Procedure.participant:ProduitUtilise",
         "equivalence" : "equivalent"
       }]
     },
@@ -195,7 +197,7 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
       }]
     },
     {
-      "code" : "FRLMSpecimen.header.status",
+      "code" : "FRLMSpecimen.status",
       "target" : [{
         "code" : "Specimen.status",
         "equivalence" : "equivalent"
@@ -209,21 +211,21 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Patient",
+      "code" : "FRLMSpecimen.specimenSource[x]:Patient",
       "target" : [{
         "code" : "Specimen.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Location",
+      "code" : "FRLMSpecimen.specimenSource[x]:Location",
       "target" : [{
         "code" : "Specimen.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Device",
+      "code" : "FRLMSpecimen.specimenSource[x]:Device",
       "target" : [{
         "code" : "Specimen.subject",
         "equivalence" : "equivalent"
@@ -314,7 +316,7 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.container.containerDevice",
       "target" : [{
-        "code" : "Specimen.container.extension:device",
+        "code" : "Specimen.container.type.extension:device",
         "equivalence" : "equivalent"
       }]
     },

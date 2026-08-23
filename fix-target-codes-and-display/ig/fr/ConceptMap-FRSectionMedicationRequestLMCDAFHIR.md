@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
   "id" : "FRSectionMedicationRequestLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationRequestLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicationRequestLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription de médicaments\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -76,9 +78,9 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
       }]
     },
     {
-      "code" : "FRLMMedicationPrescription.entry.prescriptionItem:FRLMPrescriptionItem",
+      "code" : "FRLMMedicationPrescription.entry.prescriptionItem",
       "target" : [{
-        "code" : "Section.entry:FRCDATraitementPrescrit",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -91,7 +93,7 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
     "element" : [{
       "code" : "FRLMMedicationPrescription",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionMedicationRequest",
         "equivalence" : "equivalent"
       }]
@@ -99,35 +101,35 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
     {
       "code" : "FRLMMedicationPrescription.author[x]",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest.author",
+        "code" : "Composition.section.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationPrescription.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationPrescription.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationPrescription.description",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationPrescription.entry.prescriptionItem:FRLMPrescriptionItem",
+      "code" : "FRLMMedicationPrescription.entry.prescriptionItem",
       "target" : [{
-        "code" : "Composition.section:sectionMedicationRequest.entry:FRMedicationRequestDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

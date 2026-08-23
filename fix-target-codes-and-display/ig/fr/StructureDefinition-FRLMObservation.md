@@ -27,8 +27,6 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
 
 #### Bindings terminologiques
 
-#### Contraintes
-
 Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md) 
 
 ** Résumé **
@@ -44,8 +42,6 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
  **Vue d'ensembleView** 
 
 #### Bindings terminologiques
-
-#### Contraintes
 
 Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md) 
 
@@ -74,7 +70,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
   "name" : "FRLMObservation",
   "title" : "Logical model - FR LM Observation",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -111,8 +107,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
       "min" : 1
     },
     {
-      "id" : "FRLMObservation.header.status.directSubject[x]",
-      "path" : "FRLMObservation.header.status.directSubject[x]",
+      "id" : "FRLMObservation.header.directSubject[x]",
+      "path" : "FRLMObservation.header.directSubject[x]",
       "short" : "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.",
       "definition" : "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.",
       "min" : 0,

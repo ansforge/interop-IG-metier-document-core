@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
   "id" : "FRMedicationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRMedicationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Produit de santé\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -50,21 +52,21 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.identifyingCode[x]",
       "target" : [{
-        "code" : "ManufacturedProduct.manufacturedProduct.manufacturedMaterial.code",
+        "code" : "ManufacturedProduct.manufacturedMaterial.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.classification",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:asSpecializedKind",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asSpecializedKind",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.productName",
       "target" : [{
-        "code" : "ManufacturedProduct.manufacturedProduct.manufacturedMaterial.name",
+        "code" : "ManufacturedProduct.manufacturedMaterial.name",
         "equivalence" : "equivalent"
       }]
     },
@@ -77,7 +79,7 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.doseForm",
       "target" : [{
-        "code" : "ManufacturedProduct.manufacturedProduct.manufacturedMaterial.pharm:formCode",
+        "code" : "ManufacturedProduct.manufacturedMaterial.formCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -90,14 +92,14 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.ingredient.substance",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:ingredient.pharm:ingredient.pharm:code",
+        "code" : "ManufacturedProduct.manufacturedMaterial.ingredient.ingredient.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:ingredient.pharm:quantity",
+        "code" : "ManufacturedProduct.manufacturedMaterial.ingredient.quantity",
         "equivalence" : "equivalent"
       }]
     },
@@ -110,28 +112,27 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.unitOfPresentation",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:asContent",
-        "equivalence" : "relatedto"
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine.formCode",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.containedQuantity",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:asContent",
-        "equivalence" : "relatedto"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMMedication.item.amount",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:asContent",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine.capacityQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.packageType",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:asContent.pharm:containerPackagedMedicine",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine",
         "equivalence" : "equivalent"
       }]
     },
@@ -150,14 +151,14 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.batch.lotNumber",
       "target" : [{
-        "code" : "ManufacturedProduct.manufacturedProduct.manufacturedMaterial.lotNumberText",
+        "code" : "ManufacturedProduct.manufacturedMaterial.lotNumberText",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.batch.expirationDate",
       "target" : [{
-        "code" : "ManufacturedProduct.pharm:expirationTime",
+        "code" : "ManufacturedProduct.manufacturedMaterial.expirationTime",
         "equivalence" : "equivalent"
       }]
     }]
@@ -206,7 +207,7 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item",
       "target" : [{
-        "code" : "Medication.ingredient.itemReference",
+        "code" : "Medication.ingredient.item[x]:itemReference",
         "equivalence" : "equivalent"
       }]
     },
@@ -234,14 +235,14 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.ingredient.substance",
       "target" : [{
-        "code" : "Medication.ingredient.itemCodeableConcept",
+        "code" : "Medication.ingredient.item[x]:itemCodeableConcept",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
       "target" : [{
-        "code" : "Medication.ingredient:substanceActive.strength",
+        "code" : "Medication.ingredient.strength",
         "equivalence" : "equivalent"
       }]
     },
@@ -276,15 +277,13 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.packageType",
       "target" : [{
-        "code" : "Medication.extension:packageType",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMMedication.device",
       "target" : [{
-        "code" : "Medication.extension:device",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {

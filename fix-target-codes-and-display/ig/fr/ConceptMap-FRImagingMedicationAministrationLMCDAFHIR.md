@@ -15,9 +15,11 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
   "id" : "FRImagingMedicationAministrationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingMedicationAministrationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingMedicationAministrationLMCDAFHIR",
   "title" : "Mapping Metier/CDA/FHIR : \"Medication Administration en imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,51 +71,9 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
       }]
     },
     {
-      "code" : "FRLMMedicationAdministration.medication.identifyingCode[x]",
-      "target" : [{
-        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.medication.productName",
-      "target" : [{
-        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.medication.batch.lotNumber",
-      "target" : [{
-        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.lotNumberText",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
+      "code" : "FRLMMedicationAdministration.dosage",
       "target" : [{
         "code" : "SubstanceAdministration.text",
-        "equivalence" : "relatedto"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration",
-      "target" : [{
-        "code" : "SubstanceAdministration.routeCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]",
-      "target" : [{
-        "code" : "SubstanceAdministration.doseQuantity",
-        "equivalence" : "relatedto"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]",
-      "target" : [{
-        "code" : "SubstanceAdministration.rateQuantity",
         "equivalence" : "relatedto"
       }]
     },
@@ -129,6 +89,67 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
       "target" : [{
         "code" : "SubstanceAdministration.text",
         "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.lotNumberText",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMDosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "SubstanceAdministration.text",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "SubstanceAdministration.routeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.doseQuantity",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.rateQuantity",
+        "equivalence" : "relatedto"
       }]
     }]
   },
@@ -162,28 +183,7 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
     {
       "code" : "FRLMMedicationAdministration.medication",
       "target" : [{
-        "code" : "MedicationAdministration.medication:FRMedicationDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.medication.identifyingCode[x]",
-      "target" : [{
-        "code" : "MedicationAdministration.medication:FRMedicationDocument.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.medication.productName",
-      "target" : [{
-        "code" : "MedicationAdministration.medication:FRMedicationDocument.extension:productName",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.medication.batch.lotNumber",
-      "target" : [{
-        "code" : "MedicationAdministration.medication:FRMedicationDocument.batch.lotNumber",
+        "code" : "MedicationAdministration.medication[x]",
         "equivalence" : "equivalent"
       }]
     },
@@ -191,41 +191,6 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
       "code" : "FRLMMedicationAdministration.dosage",
       "target" : [{
         "code" : "MedicationAdministration.dosage",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
-      "target" : [{
-        "code" : "MedicationAdministration.dosage.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration",
-      "target" : [{
-        "code" : "MedicationAdministration.dosage.route",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]",
-      "target" : [{
-        "code" : "MedicationAdministration.dosage.dose",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]",
-      "target" : [{
-        "code" : "MedicationAdministration.dosage.rate[x]",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.sequence",
-      "target" : [{
-        "code" : "FRLMMedicationAdministration.dosage.extension:FRMedicationAdministrationSequenceExtension",
         "equivalence" : "equivalent"
       }]
     },
@@ -240,6 +205,75 @@ Mapping des elements du modele metier FRLMMedicationAdministration vers le profi
       "code" : "FRLMMedicationAdministration.note",
       "target" : [{
         "code" : "MedicationAdministration.note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.medication[x]",
+        "equivalence" : "wider",
+        "comment" : "medication[x] n'est pas décomposé plus finement dans ce profil ; le code est porté par l'ensemble du choix de type."
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite pour le nom du produit sur medication[x] dans ce profil."
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite pour le numéro de lot sur medication[x] dans ce profil."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMDosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.route",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.dose",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.rate[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.sequence",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.extension:sequence",
         "equivalence" : "equivalent"
       }]
     }]

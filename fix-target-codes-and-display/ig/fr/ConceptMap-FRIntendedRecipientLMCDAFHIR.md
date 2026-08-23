@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRIntendedRecipientLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRIntendedRecipientLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRIntendedRecipientLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +53,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:healthProfessional",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional",
       "target" : [{
         "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
@@ -60,7 +61,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:organisation",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation",
       "target" : [{
         "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
@@ -68,7 +69,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:patient",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient",
       "target" : [{
         "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
@@ -76,7 +77,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:relatedPerson",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson",
       "target" : [{
         "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
@@ -84,7 +85,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:device",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice",
       "target" : [{
         "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
@@ -105,7 +106,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:healthProfessional",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -113,7 +114,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:organisation",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -121,7 +122,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:patient",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -129,7 +130,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:relatedPerson",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -137,7 +138,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:device",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

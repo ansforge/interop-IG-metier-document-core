@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   "id" : "FRSectionSupportingInformationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionSupportingInformationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionSupportingInformationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -78,29 +80,33 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
-        "code" : "Section.entry.observation:antecedentsMedicaux",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry.observation porte les antécédents médicaux."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
-        "code" : "Section.entry.observation:antecedentsChirurgicaux",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry.observation porte les antécédents chirurgicaux."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
-        "code" : "Section.entry.observation:grossesse",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry.observation porte le statut de grossesse."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
-        "code" : "Section.entry.observation:contreIndications",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry.observation porte les contre-indications."
       }]
     },
     {
@@ -140,7 +146,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     "element" : [{
       "code" : "FRLMSupportingInformation",
       "target" : [{
-        "code" : "Composition.section:sectionHistory",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionHistory",
         "equivalence" : "equivalent"
       }]
@@ -148,56 +154,56 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.description",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.previousResultsInformation",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:FRObservationResultDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:Observation",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:Observation",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:FRObservationContraIndicationsImagingDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
@@ -211,7 +217,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
-        "code" : "Composition.section:sectionHistory.entry:FRObservationPregnancyDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
@@ -253,50 +259,57 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:Observation",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence une Observation d'antécédent médical."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:Observation",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence une Observation d'antécédent chirurgical."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:FRObservationContraIndicationsImagingDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRObservationContraIndicationsImagingDocument."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:FRConditionDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRConditionDocument."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.device",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:FRDeviceAuteurDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRDeviceAuteurDocument."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:FRObservationPregnancyDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRObservationPregnancyDocument."
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.priorMedicationAdministration",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]:FRMedicationAdministrationDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRMedicationAdministrationDocument."
       }]
     },
     {

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
   "id" : "FRSectionOrderInformationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionOrderInformationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionOrderInformationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Demande d'examen d'imagerie",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
     "element" : [{
       "code" : "FRLMOrderInformation",
       "target" : [{
-        "code" : "Composition.section:sectionOrder",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionOrder",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
     {
       "code" : "FRLMOrderInformation.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionOrder.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionOrder.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.description",
       "target" : [{
-        "code" : "Composition.section:sectionOrder.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.entry.orderInformation",
       "target" : [{
-        "code" : "Composition.section:sectionOrder.entry:FRServiceRequestImagingDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

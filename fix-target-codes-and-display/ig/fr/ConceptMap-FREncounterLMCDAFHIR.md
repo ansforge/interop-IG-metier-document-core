@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
   "id" : "FREncounterLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FREncounterLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FREncounterLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Encounter\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -106,8 +108,9 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.serviceProvider",
       "target" : [{
-        "code" : "Encounter.performer.assignedEntity.representedOrganization",
-        "equivalence" : "equivalent"
+        "code" : "Encounter.performer.assignedEntity",
+        "equivalence" : "wider",
+        "comment" : "L'organisation responsable est portée par representedOrganization au sein du type FRCDAAssignedEntity référencé par assignedEntity."
       }]
     },
     {
@@ -247,7 +250,7 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.header.author[x]",
       "target" : [{
-        "code" : "Encounter.author",
+        "code" : "Encounter.participant.individual.extension:author",
         "equivalence" : "equivalent"
       }]
     },

@@ -19,9 +19,11 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
   "id" : "FRRelatedPersonLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRRelatedPersonLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Personne liée au patient\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -61,36 +63,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
     {
       "code" : "FRLMRelatedPerson.name",
       "target" : [{
-        "code" : "RelatedEntity.relatedPerson.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.family",
-      "target" : [{
-        "code" : "RelatedEntity.relatedPerson.name.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.given",
-      "target" : [{
-        "code" : "RelatedEntity.relatedPerson.name.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.prefix",
-      "target" : [{
-        "code" : "RelatedEntity.relatedPerson.name.prefix",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.suffix",
-      "target" : [{
-        "code" : "RelatedEntity.relatedPerson.name.suffix",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous."
       }]
     },
     {
@@ -174,6 +148,67 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
     "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMRelatedPerson.name",
+      "target" : [{
+        "code" : "Person.name",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.use",
+      "target" : [{
+        "code" : "PN.use",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "PN.item.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "PN.item.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "PN.item.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "PN.item.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.period",
+      "target" : [{
+        "code" : "PN.validTime",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -194,34 +229,6 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
       "code" : "FRLMRelatedPerson.name",
       "target" : [{
         "code" : "RelatedPerson.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.family",
-      "target" : [{
-        "code" : "RelatedPerson.name.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.given",
-      "target" : [{
-        "code" : "RelatedPerson.name.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.prefix",
-      "target" : [{
-        "code" : "RelatedPerson.name.prefix",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name.suffix",
-      "target" : [{
-        "code" : "RelatedPerson.name.suffix",
         "equivalence" : "equivalent"
       }]
     },
@@ -314,6 +321,40 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
       "code" : "FRLMRelatedPerson.communication.preferred",
       "target" : [{
         "code" : "RelatedPerson.communication.preferred",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "RelatedPerson.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "RelatedPerson.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "RelatedPerson.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "RelatedPerson.name.suffix",
         "equivalence" : "equivalent"
       }]
     }]

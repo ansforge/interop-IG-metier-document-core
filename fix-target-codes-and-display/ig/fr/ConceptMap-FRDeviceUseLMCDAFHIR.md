@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
   "id" : "FRDeviceUseLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceUseLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRDeviceUseLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,15 +73,17 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
     {
       "code" : "FRLMDeviceUse.periodOfUse.onsetDate",
       "target" : [{
-        "code" : "Supply.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "Supply.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
       }]
     },
     {
       "code" : "FRLMDeviceUse.periodOfUse.endDate",
       "target" : [{
-        "code" : "Supply.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Supply.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
       }]
     },
     {
@@ -111,28 +115,28 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMCondition",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
         "code" : "Supply.entryRelationship:frEnRapportAvecALD",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMObservation",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
         "code" : "Supply.entryRelationship:frEnRapportAvecAccidentTravail",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMObservation",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
-        "code" : "Supply.entryRelationship:frEnRapportAvecPrevention",
+        "code" : "Supply.entryRelationship:frEnRapportAvecLaPrevention",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMProcedure",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "Aucun entryRelationship explicite FRCDADispositifMedical pour le motif de type acte."
@@ -176,22 +180,24 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
     {
       "code" : "FRLMDeviceUse.periodOfUse",
       "target" : [{
-        "code" : "DeviceUseStatement.timingPeriod",
+        "code" : "DeviceUseStatement.timing[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDeviceUse.periodOfUse.onsetDate",
       "target" : [{
-        "code" : "DeviceUseStatement.timingPeriod.start",
-        "equivalence" : "equivalent"
+        "code" : "DeviceUseStatement.timing[x]",
+        "equivalence" : "wider",
+        "comment" : "timing[x] n'est pas décomposé en start/end distincts sur ce profil ; le début est porté par l'ensemble du choix de type."
       }]
     },
     {
       "code" : "FRLMDeviceUse.periodOfUse.endDate",
       "target" : [{
-        "code" : "DeviceUseStatement.timingPeriod.end",
-        "equivalence" : "equivalent"
+        "code" : "DeviceUseStatement.timing[x]",
+        "equivalence" : "wider",
+        "comment" : "timing[x] n'est pas décomposé en start/end distincts sur ce profil ; la fin est portée par l'ensemble du choix de type."
       }]
     },
     {
@@ -224,31 +230,34 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:CodeableConcept",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
         "code" : "DeviceUseStatement.reasonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMObservation",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
-        "code" : "DeviceUseStatement.reasonReference:FRObservationALDDocument",
-        "equivalence" : "equivalent"
+        "code" : "DeviceUseStatement.reasonReference",
+        "equivalence" : "equivalent",
+        "comment" : "Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier."
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMObservation",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
-        "code" : "DeviceUseStatement.reasonReference:FRObservationWorkRelatedAccidentDocument",
-        "equivalence" : "equivalent"
+        "code" : "DeviceUseStatement.reasonReference",
+        "equivalence" : "equivalent",
+        "comment" : "Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier."
       }]
     },
     {
-      "code" : "FRLMDeviceUse.reason[x]:FRLMObservation",
+      "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
-        "code" : "DeviceUseStatement.reasonReference:FRObservationPreventionDocument",
-        "equivalence" : "equivalent"
+        "code" : "DeviceUseStatement.reasonReference",
+        "equivalence" : "equivalent",
+        "comment" : "Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier."
       }]
     },
     {

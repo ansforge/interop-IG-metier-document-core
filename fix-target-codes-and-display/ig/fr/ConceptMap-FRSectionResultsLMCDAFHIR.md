@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
   "id" : "FRSectionResultsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionResultsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionResultsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Résultats\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,7 +73,7 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
     {
       "code" : "FRLMObservationResults.entry.observationResult",
       "target" : [{
-        "code" : "Organizer.entry:FRCDAResultats",
+        "code" : "Organizer.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
     "element" : [{
       "code" : "FRLMObservationResults",
       "target" : [{
-        "code" : "Composition.section:sectionResults",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionResults",
         "equivalence" : "equivalent"
       }]
@@ -92,36 +94,36 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
     {
       "code" : "FRLMObservationResults.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionResults.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionResults.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.description",
       "target" : [{
-        "code" : "Composition.section:sectionResults.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.entry.observationResult",
       "target" : [{
-        "code" : "Composition.section:sectionResults.entry:FRObservationResultDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       },
       {
-        "code" : "Composition.section:sectionResults.entry:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       },
       {
-        "code" : "Composition.section:sectionResults.entry:FRDiagnosticReportDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRAttesterLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAttesterLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAttesterLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -59,7 +60,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMAttester.attester:healthProfessional",
+      "code" : "FRLMAttester.attester[x]:healthProfessional",
       "target" : [{
         "code" : "Authenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -67,7 +68,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMAttester.attester:device",
+      "code" : "FRLMAttester.attester[x]:device",
       "target" : [{
         "code" : "Authenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -96,17 +97,17 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMAttester.attester:healthProfessional",
+      "code" : "FRLMAttester.attester[x]:healthProfessional",
       "target" : [{
-        "code" : "Composition.attester.party.PractitionerRole",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMAttester.attester:device",
+      "code" : "FRLMAttester.attester[x]:device",
       "target" : [{
-        "code" : "Composition.attester.party.Device",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
       }]

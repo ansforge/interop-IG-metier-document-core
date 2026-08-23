@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
   "id" : "FRSectionAlertsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAlertsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAlertsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Points de vigilance\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,7 +85,7 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
     "element" : [{
       "code" : "FRLMAlerts",
       "target" : [{
-        "code" : "Composition.section:sectionAlerts",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionAlerts",
         "equivalence" : "equivalent"
       }]
@@ -91,28 +93,28 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
     {
       "code" : "FRLMAlerts.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionAlerts.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionAlerts.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.description",
       "target" : [{
-        "code" : "Composition.section:sectionAlerts.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.entry.alert",
       "target" : [{
-        "code" : "Composition.section:sectionAlerts.entry:Flag",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

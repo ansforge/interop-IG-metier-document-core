@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
   "id" : "FRObservationResultLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationResultLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationResultLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Résultat d'observation\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -62,7 +64,7 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
       }]
     },
     {
-      "code" : "FRLMObservation.directSubject[x]",
+      "code" : "FRLMObservation.header.directSubject[x]",
       "target" : [{
         "code" : "Observation.subject",
         "equivalence" : "equivalent"
@@ -106,7 +108,7 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     {
       "code" : "FRLMObservation.order",
       "target" : [{
-        "code" : "Observation.inFulfillmentOf",
+        "code" : "Observation.sdtcInFulfillmentOf1",
         "equivalence" : "equivalent"
       }]
     },
@@ -141,8 +143,8 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     {
       "code" : "FRLMObservation.note",
       "target" : [{
-        "code" : "Observation.entryRelationship:frCommentaireER",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à un commentaire dans FRCDAResultat (text est déjà utilisé pour le nom original de l'observation)."
       }]
     },
     {
@@ -192,7 +194,7 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
       }]
     },
     {
-      "code" : "FRLMObservation.directSubject[x]",
+      "code" : "FRLMObservation.header.directSubject[x]",
       "target" : [{
         "code" : "Observation.focus",
         "equivalence" : "equivalent"
@@ -215,8 +217,9 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     {
       "code" : "FRLMObservation.originalName",
       "target" : [{
-        "code" : "Observation.code.text",
-        "equivalence" : "equivalent"
+        "code" : "Observation.code",
+        "equivalence" : "wider",
+        "comment" : "Le composant text de la CodeableConcept n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de code."
       }]
     },
     {
@@ -236,7 +239,7 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     {
       "code" : "FRLMObservation.order",
       "target" : [{
-        "code" : "Observation.basedOn:FRServiceRequestDocument",
+        "code" : "Observation.basedOn:serviceRequestAccessionNumber",
         "equivalence" : "equivalent"
       }]
     },

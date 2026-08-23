@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRPatientLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRPatientLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRPatientLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -50,134 +51,93 @@ Ce ConceptMap présente deux groupes de mapping :
         "display" : "recordTarget",
         "equivalence" : "equivalent"
       }]
-    },
-    {
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient-role",
+    "targetVersion" : "0.1.0",
+    "element" : [{
       "code" : "FRLMPatient.identifier",
       "target" : [{
-        "code" : "RecordTarget.patientRole.id",
+        "code" : "PatientRole.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatient.address",
       "target" : [{
-        "code" : "RecordTarget.patientRole.addr",
+        "code" : "PatientRole.addr",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatient.telecom",
       "target" : [{
-        "code" : "RecordTarget.patientRole.telecom",
+        "code" : "PatientRole.telecom",
         "equivalence" : "equivalent"
       }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName",
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMPatient.name",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name",
-        "equivalence" : "equivalent",
-        "comment" : "Nom officiel/de naissance (qualifier CDA 'BR')."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name",
-        "equivalence" : "equivalent",
-        "comment" : "Nom utilisé au quotidien (qualifier CDA 'CL')."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.family",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.family@qualifier='BR'",
+        "code" : "Patient.name",
         "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.family",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.family@qualifier='CL'",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.given",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.given@qualifier='BR'",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.given",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.given@qualifier='CL'",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.use",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.family@qualifier='BR'",
-        "equivalence" : "relatedto",
-        "comment" : "name.use='official' se rapproche du qualifier CDA 'BR' sans en être strictement équivalent."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.use",
-      "target" : [{
-        "code" : "RecordTarget.patientRole.patient.name.family@qualifier='CL'",
-        "equivalence" : "relatedto",
-        "comment" : "name.use='usual' se rapproche du qualifier CDA 'CL' sans en être strictement équivalent."
       }]
     },
     {
       "code" : "FRLMPatient.administrativeGender",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.administrativeGenderCode",
+        "code" : "Patient.administrativeGenderCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatient.dateOfBirth",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.birthTime",
+        "code" : "Patient.birthTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.deceased:boolean",
+      "code" : "FRLMPatient.deceased[x]:deceasedBoolean",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.sdtc:deceasedInd",
+        "code" : "Patient.sdtcDeceasedInd",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.deceased:dateTime",
+      "code" : "FRLMPatient.deceased[x]:deceasedDateTime",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.sdtc:deceasedTime",
+        "code" : "Patient.sdtcDeceasedTime",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth:boolean",
+      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthBoolean",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.sdtc:multipleBirthInd",
+        "code" : "Patient.sdtcMultipleBirthInd",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth:integer",
+      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthInteger",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.sdtc:multipleBirthOrderNumber",
+        "code" : "Patient.sdtcMultipleBirthOrderNumber",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatient.birthPlace",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.birthPlace",
+        "code" : "Patient.birthplace",
         "equivalence" : "equivalent",
         "comment" : "FRLMPatient.birthPlace est une Address simple ; nom du lieu, adresse et code officiel géographique sont portés par les composantes standard de cette adresse (text, line, city, country, etc.)."
       }]
@@ -185,51 +145,78 @@ Ce ConceptMap présente deux groupes de mapping :
     {
       "code" : "FRLMPatient.contact",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian",
+        "code" : "Patient.guardian",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatient.contact.address",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.addr",
-        "equivalence" : "equivalent"
+        "code" : "Patient.guardian",
+        "equivalence" : "wider"
       }]
     },
     {
       "code" : "FRLMPatient.contact.telecom",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.telecom",
-        "equivalence" : "equivalent"
+        "code" : "Patient.guardian",
+        "equivalence" : "wider"
       }]
     },
     {
       "code" : "FRLMPatient.contact.name",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.guardianPerson.name",
-        "equivalence" : "equivalent"
+        "code" : "Patient.guardian",
+        "equivalence" : "wider"
       }]
     },
     {
       "code" : "FRLMPatient.contact.name.family",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.guardianPerson.family",
-        "equivalence" : "equivalent"
+        "code" : "Patient.guardian",
+        "equivalence" : "wider"
       }]
     },
     {
       "code" : "FRLMPatient.contact.name.given",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.guardianPerson.given",
-        "equivalence" : "equivalent"
+        "code" : "Patient.guardian",
+        "equivalence" : "wider"
       }]
     },
     {
       "code" : "FRLMPatient.contact.organization",
       "target" : [{
-        "code" : "RecordTarget.patientRole.patient.guardian.guardianOrganization",
-        "equivalence" : "equivalent",
-        "comment" : "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient."
+        "code" : "Patient.guardian",
+        "equivalence" : "wider",
+        "comment" : "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient ; non adressable séparément dans le type CDA Guardian ici."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.use",
+      "target" : [{
+        "code" : "Patient.name.use",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "Patient.name.item.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "Patient.name.item.given",
+        "equivalence" : "equivalent"
       }]
     }]
   },
@@ -267,59 +254,19 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.name:officialName",
+      "code" : "FRLMPatient.name",
       "target" : [{
         "code" : "Patient.name:officialName",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom de naissance."
       }]
     },
     {
-      "code" : "FRLMPatient.name:usualName",
+      "code" : "FRLMPatient.name",
       "target" : [{
         "code" : "Patient.name:usualName",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.family",
-      "target" : [{
-        "code" : "Patient.name:officialName.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.family",
-      "target" : [{
-        "code" : "Patient.name:usualName.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.given",
-      "target" : [{
-        "code" : "Patient.name:officialName.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.given",
-      "target" : [{
-        "code" : "Patient.name:usualName.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:officialName.use",
-      "target" : [{
-        "code" : "Patient.name:officialName.use",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.name:usualName.use",
-      "target" : [{
-        "code" : "Patient.name:usualName.use",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom usuel."
       }]
     },
     {
@@ -337,7 +284,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.deceased:boolean",
+      "code" : "FRLMPatient.deceased[x]:deceasedBoolean",
       "target" : [{
         "code" : "Patient.deceased[x]",
         "equivalence" : "equivalent",
@@ -345,7 +292,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.deceased:dateTime",
+      "code" : "FRLMPatient.deceased[x]:deceasedDateTime",
       "target" : [{
         "code" : "Patient.deceased[x]",
         "equivalence" : "equivalent",
@@ -353,7 +300,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth:boolean",
+      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthBoolean",
       "target" : [{
         "code" : "Patient.multipleBirth[x]",
         "equivalence" : "equivalent",
@@ -361,7 +308,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth:integer",
+      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthInteger",
       "target" : [{
         "code" : "Patient.multipleBirth[x]",
         "equivalence" : "equivalent",
@@ -410,7 +357,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.contact.name",
         "equivalence" : "relatedto",
-        "comment" : "Porté par le composant family de Patient.contact.name (HumanName), non détaillé dans la StructureDefinition."
+        "comment" : "Porté par le composant family de Patient.contact.name (HumanName)."
       }]
     },
     {
@@ -418,7 +365,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.contact.name",
         "equivalence" : "relatedto",
-        "comment" : "Porté par le composant given de Patient.contact.name (HumanName), non détaillé dans la StructureDefinition."
+        "comment" : "Porté par le composant given de Patient.contact.name (HumanName)."
       }]
     },
     {

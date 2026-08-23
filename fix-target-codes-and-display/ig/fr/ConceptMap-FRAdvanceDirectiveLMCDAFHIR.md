@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
   "title" : "Mapping Métier/CDA/FHIR : \"Directive Anticipee\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -198,21 +198,21 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
     "element" : [{
       "code" : "FRLMAttachment.url",
       "target" : [{
-        "code" : "Consent.source[x].url",
+        "code" : "Consent.source[x]:sourceAttachment.url",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.header.identifier",
       "target" : [{
-        "code" : "Consent.source[x].id",
+        "code" : "Consent.source[x]:sourceAttachment.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.data",
       "target" : [{
-        "code" : "Consent.source[x].data",
+        "code" : "Consent.source[x]:sourceAttachment.data",
         "equivalence" : "equivalent"
       }]
     }]

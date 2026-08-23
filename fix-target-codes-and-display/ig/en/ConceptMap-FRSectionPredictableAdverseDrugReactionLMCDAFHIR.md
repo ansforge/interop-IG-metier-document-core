@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
   "id" : "FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Effets indésirables\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -62,9 +64,9 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
       }]
     },
     {
-      "code" : "FRLMPredictableAdverseDrugReaction.entry.adverseEvent:FRLMAdverseDrugReaction",
+      "code" : "FRLMPredictableAdverseDrugReaction.entry.adverseEvent",
       "target" : [{
-        "code" : "Section.entry:FRCDAEffetIndesirable",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -77,7 +79,7 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
     "element" : [{
       "code" : "FRLMPredictableAdverseDrugReaction",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionPredictableAdverseDrugReaction",
         "equivalence" : "equivalent"
       }]
@@ -85,28 +87,28 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
     {
       "code" : "FRLMPredictableAdverseDrugReaction.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPredictableAdverseDrugReaction.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPredictableAdverseDrugReaction.description",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPredictableAdverseDrugReaction.entry.adverseEvent:FRLMAdverseDrugReaction",
+      "code" : "FRLMPredictableAdverseDrugReaction.entry.adverseEvent",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

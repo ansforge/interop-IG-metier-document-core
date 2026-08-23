@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRLegalAuthenticationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLegalAuthenticationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRLegalAuthenticationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-21T08:13:05+00:00",
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -59,7 +60,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:healthProfessional",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -67,7 +68,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:patient",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:patient",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -75,7 +76,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:device",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:device",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -83,7 +84,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:organisation",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:organisation",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
@@ -112,33 +113,33 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:healthProfessional",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional",
       "target" : [{
-        "code" : "Composition.attester.party.PractitionerRole",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:patient",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:patient",
       "target" : [{
-        "code" : "Composition.attester.party.Patient",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:device",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:device",
       "target" : [{
-        "code" : "Composition.attester.party.Device",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator:organisation",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:organisation",
       "target" : [{
-        "code" : "Composition.attester.party.Organization",
+        "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
         "comment" : "attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
       }]

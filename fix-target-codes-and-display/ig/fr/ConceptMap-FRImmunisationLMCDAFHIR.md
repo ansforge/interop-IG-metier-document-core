@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
   "id" : "FRImmunisationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImmunisationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImmunisationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccination\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -239,7 +241,7 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     {
       "code" : "FRLMImmunisation.doseNumber",
       "target" : [{
-        "code" : "Immunization.protocolApplied.doseNumber",
+        "code" : "Immunization.protocolApplied.doseNumber[x]:doseNumberPositiveInt",
         "equivalence" : "equivalent"
       }]
     },
@@ -253,7 +255,7 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     {
       "code" : "FRLMImmunisation.prescription",
       "target" : [{
-        "code" : "Immunization.basedOn",
+        "code" : "Immunization.extension:basedOnRequestR5",
         "equivalence" : "equivalent"
       }]
     },

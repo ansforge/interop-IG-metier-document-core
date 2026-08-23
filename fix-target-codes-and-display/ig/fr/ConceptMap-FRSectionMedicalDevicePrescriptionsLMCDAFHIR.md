@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la
   "id" : "FRSectionMedicalDevicePrescriptionsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicalDevicePrescriptionsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicalDevicePrescriptionsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription de dispositifs médicaux\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -76,9 +78,9 @@ Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la
       }]
     },
     {
-      "code" : "FRLMMedicalDevicePrescriptions.entry.deviceUse:FRLMDeviceUse",
+      "code" : "FRLMMedicalDevicePrescriptions.entry.deviceUse",
       "target" : [{
-        "code" : "Section.entry:FRCDADispositifMedical",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -91,7 +93,7 @@ Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la
     "element" : [{
       "code" : "FRLMMedicalDevicePrescriptions",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionMedicalDevicePrescription",
         "equivalence" : "equivalent"
       }]
@@ -99,35 +101,35 @@ Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la
     {
       "code" : "FRLMMedicalDevicePrescriptions.author[x]",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription.author",
+        "code" : "Composition.section.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicePrescriptions.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicePrescriptions.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicePrescriptions.description",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicalDevicePrescriptions.entry.deviceUse:FRLMDeviceUse",
+      "code" : "FRLMMedicalDevicePrescriptions.entry.deviceUse",
       "target" : [{
-        "code" : "Composition.section:sectionMedicalDevicePrescription.entry:FRDeviceRequestDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

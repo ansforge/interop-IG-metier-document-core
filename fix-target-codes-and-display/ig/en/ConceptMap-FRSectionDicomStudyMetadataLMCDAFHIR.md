@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
   "id" : "FRSectionDicomStudyMetadataLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionDicomStudyMetadataLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionDicomStudyMetadataLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Catalogue des objets d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,7 +73,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
     {
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
-        "code" : "Section.entry:FRCDADICOMExamenImagerie",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
     "element" : [{
       "code" : "FRLMDicomStudyMetadata",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionImagingStudy",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
     {
       "code" : "FRLMDicomStudyMetadata.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.description",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.entry:FRImagingStudyDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

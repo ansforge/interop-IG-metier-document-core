@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
   "id" : "FRSectionExaminationReportLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionExaminationReportLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionExaminationReportLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Acte d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,14 +73,14 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     {
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
-        "code" : "Section.entry.frDICOMTechniqueImagerie",
+        "code" : "Section.entry:frDicomTechniqueImagerie.procedure",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "Section.entry.frDICOMAdministrationProduitDeSante",
+        "code" : "Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration",
         "equivalence" : "equivalent"
       }]
     },
@@ -126,7 +128,7 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     "element" : [{
       "code" : "FRLMExaminationReport.subSection.conclusion",
       "target" : [{
-        "code" : "Composition.section:sectionImpression",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionImpression",
         "equivalence" : "equivalent"
       }]
@@ -134,33 +136,35 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     {
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument",
-        "equivalence" : "equivalent"
+        "code" : "Composition.section.entry",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry référence un FRProcedureImagingDocument."
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "Composition.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument.partOf:FRMedicationAdministrationDocument",
-        "equivalence" : "equivalent"
+        "code" : "Composition.section.entry",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où entry référence un FRMedicationAdministrationDocument (partOf du FRProcedureImagingDocument)."
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.adverseReactions",
       "target" : [{
-        "code" : "Composition.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.results[x]",
       "target" : [{
-        "code" : "Composition.section:Findings.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent",
         "comment" : "Cible narrative pour les resultats textuels dans la section Findings."
       },
       {
-        "code" : "Composition.section:Findings.entry:FRObservationResultDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent",
         "comment" : "Cible structuree pour les resultats codes/observations dans la section Findings."
       }]
@@ -189,8 +193,9 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "DiagnosticReport.extension:procedure.partOf:FRMedicationAdministrationDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:procedure",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où l'extension procedure référence un FRMedicationAdministrationDocument (partOf du FRProcedureImagingDocument)."
       }]
     },
     {

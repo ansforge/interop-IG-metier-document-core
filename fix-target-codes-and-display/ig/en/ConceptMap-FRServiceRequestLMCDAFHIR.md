@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
   "id" : "FRServiceRequestLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRServiceRequestLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRServiceRequestLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Demande d'examen ou de suivi\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -90,9 +92,9 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     {
       "code" : "FRLMServiceRequest.supportingInformation[x]",
       "target" : [{
-        "code" : "Observation.entryRelationship.observation",
+        "code" : "Observation.entryRelationship",
         "equivalence" : "inexact",
-        "comment" : "Le modèle métier FRLMServiceRequest.supportingInformation[x] correspond à la composante observation portée dans l'entrée CDA FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration alors que le type de l'élément entryRelationship.observation est uniquement Observation."
+        "comment" : "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration."
       }]
     },
     {
@@ -105,8 +107,9 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     {
       "code" : "FRLMServiceRequest.encounter",
       "target" : [{
-        "code" : "Observation.entryRelationship.encounter",
-        "equivalence" : "equivalent"
+        "code" : "Observation.entryRelationship",
+        "equivalence" : "wider",
+        "comment" : "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi ; la consultation à l'origine y est portée globalement."
       }]
     },
     {
@@ -154,7 +157,7 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     {
       "code" : "FRLMServiceRequest.quantity",
       "target" : [{
-        "code" : "ServiceRequest.quantity",
+        "code" : "ServiceRequest.quantity[x]",
         "equivalence" : "equivalent"
       }]
     },

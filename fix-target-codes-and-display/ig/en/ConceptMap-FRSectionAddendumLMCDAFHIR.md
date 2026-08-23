@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
   "id" : "FRSectionAddendumLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAddendumLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAddendumLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Addendum\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
     "element" : [{
       "code" : "FRLMAddendum",
       "target" : [{
-        "code" : "Composition.section:sectionAddendum",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionAddendum",
         "equivalence" : "equivalent"
       }]
@@ -92,21 +94,21 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
     {
       "code" : "FRLMAddendum.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionAddendum.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionAddendum.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.description",
       "target" : [{
-        "code" : "Composition.section:sectionAddendum.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },

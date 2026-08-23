@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
   "id" : "FRSectionQRCodeLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionQRCodeLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionQRCodeLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Code à barres\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,7 +71,7 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
       }]
     },
     {
-      "code" : "FRLMQRCode.entry.observationMedia:FRLMObservationMedia",
+      "code" : "FRLMQRCode.entry.observationMedia",
       "target" : [{
         "code" : "Section.entry.FRCDACodeABarres",
         "equivalence" : "equivalent"
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
     "element" : [{
       "code" : "FRLMQRCode",
       "target" : [{
-        "code" : "Composition.section:sectionQrCode",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionQrCode",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
     {
       "code" : "FRLMQRCode.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionQrCode.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionQrCode.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.description",
       "target" : [{
-        "code" : "Composition.section:sectionQrCode.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMQRCode.entry.observationMedia:FRLMObservationMedia",
+      "code" : "FRLMQRCode.entry.observationMedia",
       "target" : [{
-        "code" : "Composition.section:sectionQrCode.entry:FRCDAMediaDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

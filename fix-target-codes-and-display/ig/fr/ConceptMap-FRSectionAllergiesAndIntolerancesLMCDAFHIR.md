@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers 
   "id" : "FRSectionAllergiesAndIntolerancesLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAllergiesAndIntolerancesLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAllergiesAndIntolerancesLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Allergies et intolérances\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,9 +71,9 @@ Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers 
       }]
     },
     {
-      "code" : "FRLMAllergiesAndIntolerances.entry.allergieIntolerance:FRLMAllergyIntolerance",
+      "code" : "FRLMAllergiesAndIntolerances.entry.allergieIntolerance",
       "target" : [{
-        "code" : "Section.entry:FRCDAListeDesAllergiesEtHypersensibilites",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers 
     "element" : [{
       "code" : "FRLMAllergiesAndIntolerances",
       "target" : [{
-        "code" : "Composition.section:sectionAllergiesAndIntolerances",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionAllergiesAndIntolerances",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMAllergiesEtHypersensibilites vers 
     {
       "code" : "FRLMAllergiesAndIntolerances.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionAllergiesAndIntolerances.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergiesAndIntolerances.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionAllergiesAndIntolerances.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergiesAndIntolerances.description",
       "target" : [{
-        "code" : "Composition.section:sectionAllergiesAndIntolerances.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAllergiesAndIntolerances.entry.allergieIntolerance:FRLMAllergyIntolerance",
+      "code" : "FRLMAllergiesAndIntolerances.entry.allergieIntolerance",
       "target" : [{
-        "code" : "Composition.section:sectionAllergiesAndIntolerances.entry:FRAllergyIntoleranceDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

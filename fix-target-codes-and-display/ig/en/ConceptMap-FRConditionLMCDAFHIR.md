@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDA
   "id" : "FRConditionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConditionLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRConditionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Problème\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -78,15 +80,17 @@ Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDA
     {
       "code" : "FRLMCondition.period.onsetDate",
       "target" : [{
-        "code" : "Observation.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
       }]
     },
     {
       "code" : "FRLMCondition.period.endDate",
       "target" : [{
-        "code" : "Observation.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
       }]
     },
     {
@@ -197,14 +201,14 @@ Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDA
     {
       "code" : "FRLMCondition.period.onsetDate",
       "target" : [{
-        "code" : "Condition.onsetDateTime",
+        "code" : "Condition.onset[x]:onsetDateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCondition.period.endDate",
       "target" : [{
-        "code" : "Condition.abatementDateTime",
+        "code" : "Condition.abatement[x]:abatementDateTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -246,7 +250,7 @@ Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDA
     {
       "code" : "FRLMCondition.reference",
       "target" : [{
-        "code" : "Condition.evidence.detail:FRDocumentReferenceDocument.content.attachment.url",
+        "code" : "Condition.evidence.detail",
         "equivalence" : "equivalent"
       }]
     },

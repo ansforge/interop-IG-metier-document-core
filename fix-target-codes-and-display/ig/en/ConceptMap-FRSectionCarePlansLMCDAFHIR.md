@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
   "id" : "FRSectionCarePlansLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionCarePlansLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionCarePlansLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
-  "date" : "2026-08-21T08:13:05+00:00",
+  "experimental" : false,
+  "date" : "2026-08-23T21:45:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -69,9 +71,9 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
       }]
     },
     {
-      "code" : "FRLMCarePlans.entry.carePlans:FRLMCarePlan",
+      "code" : "FRLMCarePlans.entry.carePlans",
       "target" : [{
-        "code" : "Section.entry:FRCDAActe",
+        "code" : "Section.entry",
         "equivalence" : "equivalent"
       }]
     }]
@@ -84,7 +86,7 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
     "element" : [{
       "code" : "FRLMCarePlans",
       "target" : [{
-        "code" : "Composition.section:sectionPlanOfCare",
+        "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionPlanOfCare",
         "equivalence" : "equivalent"
       }]
@@ -92,28 +94,28 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
     {
       "code" : "FRLMCarePlans.codeSection",
       "target" : [{
-        "code" : "Composition.section:sectionPlanOfCare.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.titleSection",
       "target" : [{
-        "code" : "Composition.section:sectionPlanOfCare.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.description",
       "target" : [{
-        "code" : "Composition.section:sectionPlanOfCare.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "Section.entry:carePlans:FRLMCarePlan",
+      "code" : "Section.entry",
       "target" : [{
-        "code" : "Composition.section:sectionPlanOfCare.entry:FRCarePlanDocument",
+        "code" : "Composition.section.entry",
         "equivalence" : "equivalent"
       }]
     }]

@@ -26,7 +26,7 @@
   fhir:StructureDefinition.name [ fhir:value "FRLMLaboratoryObservation"] ;
   fhir:StructureDefinition.title [ fhir:value "Logical model - Laboratory Observation"] ;
   fhir:StructureDefinition.status [ fhir:value "draft"] ;
-  fhir:StructureDefinition.date [ fhir:value "2026-08-21T08:13:05+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-08-23T21:45:18+00:00"^^xsd:dateTime] ;
   fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:StructureDefinition.contact [
      fhir:index 0 ;
@@ -336,208 +336,48 @@
        ]
      ], [
        fhir:index 16 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.status.id" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.status.id" ] ;
-       fhir:ElementDefinition.representation [
-         fhir:value "xmlAttr" ;
-         fhir:index 0
-       ] ;
-       fhir:ElementDefinition.short [ fhir:value "Unique id for inter-element referencing" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ] ;
+       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.source" ] ;
+       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.source" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Source" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Source" ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ] ;
+         fhir:ElementDefinition.base.path [ fhir:value "FRLMEntry.header.source" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
          fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ] ;
        fhir:ElementDefinition.type [
          fhir:index 0 ;
-         fhir:Element.extension [
-           fhir:index 0 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ] ;
-           fhir:Extension.valueUrl [ fhir:value "string" ]
-         ] ;
-         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
-       ] ;
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ]
      ], [
        fhir:index 17 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.status.extension" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.status.extension" ] ;
-       fhir:ElementDefinition.slicing [
-         fhir:ElementDefinition.slicing.discriminator [
-           fhir:index 0 ;
-           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ] ;
-           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
-         ] ;
-         fhir:ElementDefinition.slicing.description [ fhir:value "Extensions are always sliced by (at least) url" ] ;
-         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
-       ] ;
-       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ] ;
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ] ;
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions" ;
-         fhir:index 0
-       ], [
-         fhir:value "user content" ;
-         fhir:index 1
-       ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "*" ] ;
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ] ;
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ] ;
-       fhir:ElementDefinition.type [
-         fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ] ;
-       fhir:ElementDefinition.constraint [
-         fhir:index 0 ;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element|4.0.1" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
-         ]
-       ], [
-         fhir:index 1 ;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ] ;
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
-         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ] ;
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
-         ]
-       ] ;
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 18 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.status.coding" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.status.coding" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A reference to a code defined by a terminology system." ] ;
-       fhir:ElementDefinition.comment [ fhir:value "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." ] ;
-       fhir:ElementDefinition.requirements [ fhir:value "Allows for alternative encodings within a code system, and translations to other code systems." ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "*" ] ;
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.coding" ] ;
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ] ;
-       fhir:ElementDefinition.type [
-         fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
-       ] ;
-       fhir:ElementDefinition.constraint [
-         fhir:index 0 ;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element|4.0.1" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
-         ]
-       ] ;
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.1-8, C*E.10-22" ]
-       ], [
-         fhir:index 1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "union(., ./translation)" ]
-       ], [
-         fhir:index 2 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
-       ]
-     ], [
-       fhir:index 19 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.status.text" ] ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable" ] ;
-         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-       ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.status.text" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Plain text representation of the concept" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user." ] ;
-       fhir:ElementDefinition.comment [ fhir:value "Very often the text is the same as a displayName of one of the codings." ] ;
-       fhir:ElementDefinition.requirements [ fhir:value "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." ] ;
+       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.language" ] ;
+       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.language" ] ;
+       fhir:ElementDefinition.short [ fhir:value "'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)\nLa partie en minuscules indique le code de la langue utilisée (ISO-639-1)\nLa partie en majuscules indique le code pays (ISO-3166)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)\nLa partie en minuscules indique le code de la langue utilisée (ISO-639-1)\nLa partie en majuscules indique le code pays (ISO-3166)" ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "CodeableConcept.text" ] ;
+         fhir:ElementDefinition.base.path [ fhir:value "FRLMEntry.header.language" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
          fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ] ;
        fhir:ElementDefinition.type [
          fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ] ;
-       fhir:ElementDefinition.constraint [
-         fhir:index 0 ;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ] ;
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ] ;
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ] ;
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element|4.0.1" ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
-         ]
-       ] ;
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ] ;
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ] ;
-       fhir:ElementDefinition.mapping [
-         fhir:index 0 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "C*E.9. But note many systems use C*E.2 for this" ]
-       ], [
-         fhir:index 1 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "./originalText[mediaType/code=\"text/plain\"]/data" ]
-       ], [
-         fhir:index 2 ;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "orim" ] ;
-         fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
+         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ]
      ], [
-       fhir:index 20 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.status.directSubject[x]" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.status.directSubject[x]" ] ;
+       fhir:index 18 ;
+       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.directSubject[x]" ] ;
+       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.directSubject[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations." ] ;
        fhir:ElementDefinition.definition [ fhir:value "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations." ] ;
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
        fhir:ElementDefinition.max [ fhir:value "1" ] ;
        fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "FRLMObservation.header.status.directSubject[x]" ] ;
+         fhir:ElementDefinition.base.path [ fhir:value "FRLMObservation.header.directSubject[x]" ] ;
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
          fhir:ElementDefinition.base.max [ fhir:value "1" ]
        ] ;
@@ -558,41 +398,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure" ]
        ]
      ], [
-       fhir:index 21 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.source" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.source" ] ;
-       fhir:ElementDefinition.short [ fhir:value "Source" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "Source" ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "FRLMEntry.header.source" ] ;
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ] ;
-       fhir:ElementDefinition.type [
-         fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ]
-     ], [
-       fhir:index 22 ;
-       fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.header.language" ] ;
-       fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.header.language" ] ;
-       fhir:ElementDefinition.short [ fhir:value "'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)\nLa partie en minuscules indique le code de la langue utilisée (ISO-639-1)\nLa partie en majuscules indique le code pays (ISO-3166)" ] ;
-       fhir:ElementDefinition.definition [ fhir:value "'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)\nLa partie en minuscules indique le code de la langue utilisée (ISO-639-1)\nLa partie en majuscules indique le code pays (ISO-3166)" ] ;
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-       fhir:ElementDefinition.max [ fhir:value "1" ] ;
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "FRLMEntry.header.language" ] ;
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ] ;
-       fhir:ElementDefinition.type [
-         fhir:index 0 ;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ]
-     ], [
-       fhir:index 23 ;
+       fhir:index 19 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Date de l'observation" ] ;
@@ -612,7 +418,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Period" ]
        ]
      ], [
-       fhir:index 24 ;
+       fhir:index 20 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.type" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.type" ] ;
        fhir:ElementDefinition.short [ fhir:value "Type d'observation" ] ;
@@ -633,7 +439,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "LOINC (2.16.840.1.113883.6.1) ou autre" ]
        ]
      ], [
-       fhir:index 25 ;
+       fhir:index 21 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
        fhir:ElementDefinition.short [ fhir:value "Nom de l'observation" ] ;
@@ -650,7 +456,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "string" ]
        ]
      ], [
-       fhir:index 26 ;
+       fhir:index 22 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.method" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.method" ] ;
        fhir:ElementDefinition.short [ fhir:value "Méthode utilisée pour l'observation" ] ;
@@ -667,7 +473,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
        ]
      ], [
-       fhir:index 27 ;
+       fhir:index 23 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
        fhir:ElementDefinition.short [ fhir:value "Prélèvement" ] ;
@@ -684,7 +490,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen" ]
        ]
      ], [
-       fhir:index 28 ;
+       fhir:index 24 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.order" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.order" ] ;
        fhir:ElementDefinition.short [ fhir:value "Demande d'examen correspondante" ] ;
@@ -701,7 +507,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest" ]
        ]
      ], [
-       fhir:index 29 ;
+       fhir:index 25 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
        fhir:ElementDefinition.short [ fhir:value "Localisation anatomique" ] ;
@@ -718,7 +524,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure" ]
        ]
      ], [
-       fhir:index 30 ;
+       fhir:index 26 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.result" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.result" ] ;
        fhir:ElementDefinition.short [ fhir:value "Résultats d'examen" ] ;
@@ -735,7 +541,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Base" ]
        ]
      ], [
-       fhir:index 31 ;
+       fhir:index 27 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.result.Value[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.result.Value[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation." ] ;
@@ -767,7 +573,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
        ]
      ], [
-       fhir:index 32 ;
+       fhir:index 28 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
        fhir:ElementDefinition.short [ fhir:value "Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis." ] ;
@@ -784,7 +590,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Base" ]
        ]
      ], [
-       fhir:index 33 ;
+       fhir:index 29 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.low" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.low" ] ;
        fhir:ElementDefinition.short [ fhir:value "Limite inférieure de l'intervalle" ] ;
@@ -805,7 +611,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
-       fhir:index 34 ;
+       fhir:index 30 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.high" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.high" ] ;
        fhir:ElementDefinition.short [ fhir:value "Limite supérieure de l'intervalle" ] ;
@@ -826,7 +632,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
-       fhir:index 35 ;
+       fhir:index 31 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.normalValue" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.normalValue" ] ;
        fhir:ElementDefinition.short [ fhir:value "Valeur normale si pertinente pour l'intervalle" ] ;
@@ -847,7 +653,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): SNOMED CT" ]
        ]
      ], [
-       fhir:index 36 ;
+       fhir:index 32 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.type" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.type" ] ;
        fhir:ElementDefinition.short [ fhir:value "Type d'intervalle de référence" ] ;
@@ -868,7 +674,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): HL7 Observation Reference Range Meaning Codes" ]
        ]
      ], [
-       fhir:index 37 ;
+       fhir:index 33 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.appliesTo" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.appliesTo" ] ;
        fhir:ElementDefinition.short [ fhir:value "Population concernée pour cet intervalle" ] ;
@@ -889,7 +695,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): SNOMED CT, HL7 v3-Race" ]
        ]
      ], [
-       fhir:index 38 ;
+       fhir:index 34 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.age" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.age" ] ;
        fhir:ElementDefinition.short [ fhir:value "Tranche d'âge pour cet intervalle" ] ;
@@ -910,7 +716,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "(preferred): UCUM for units" ]
        ]
      ], [
-       fhir:index 39 ;
+       fhir:index 35 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.referenceRange.text" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.referenceRange.text" ] ;
        fhir:ElementDefinition.short [ fhir:value "Texte libre" ] ;
@@ -927,7 +733,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "string" ]
        ]
      ], [
-       fhir:index 40 ;
+       fhir:index 36 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
        fhir:ElementDefinition.short [ fhir:value "Interprétation" ] ;
@@ -952,7 +758,7 @@
          ]
        ]
      ], [
-       fhir:index 41 ;
+       fhir:index 37 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.note" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.note" ] ;
        fhir:ElementDefinition.short [ fhir:value "Commentaire" ] ;
@@ -969,7 +775,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "string" ]
        ]
      ], [
-       fhir:index 42 ;
+       fhir:index 38 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.component" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.component" ] ;
        fhir:ElementDefinition.short [ fhir:value "Composant dans le cas d'une observation composée de plusieurs sous-observations" ] ;
@@ -986,7 +792,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Base" ]
        ]
      ], [
-       fhir:index 43 ;
+       fhir:index 39 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Référence de la resource à partir de laquelle l'observation a été faite. Par exemple, une image échographique à partir de laquelle une mesure fœtale est réalisée." ] ;
@@ -1009,7 +815,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy" ]
        ]
      ], [
-       fhir:index 44 ;
+       fhir:index 40 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Cette observation est un groupe d'observations (par exemple, une batterie de tests, un ensemble de mesures de signes vitaux)." ] ;
@@ -1029,7 +835,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation" ]
        ]
      ], [
-       fhir:index 45 ;
+       fhir:index 41 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
        fhir:ElementDefinition.short [ fhir:value "Référence à l'observation ayant déclenché la réalisation de cette observation." ] ;
@@ -1049,7 +855,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation" ]
        ]
      ], [
-       fhir:index 46 ;
+       fhir:index 42 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
        fhir:ElementDefinition.short [ fhir:value "Test Kit utilisé pour la réalisation de l'observation." ] ;
@@ -1066,7 +872,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice" ]
        ]
      ], [
-       fhir:index 47 ;
+       fhir:index 43 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
        fhir:ElementDefinition.short [ fhir:value "Identifiant du calibrateur utilisé pour la réalisation de l'observation." ] ;
@@ -1083,7 +889,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
        ]
      ], [
-       fhir:index 48 ;
+       fhir:index 44 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
        fhir:ElementDefinition.short [ fhir:value "Statut d'accréditation du laboratoire pour l'observation." ] ;
@@ -1100,7 +906,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
        ]
      ], [
-       fhir:index 49 ;
+       fhir:index 45 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
        fhir:ElementDefinition.short [ fhir:value "Résultats précédents de la même observation" ] ;
@@ -1117,7 +923,7 @@
          fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ]
        ]
      ], [
-       fhir:index 50 ;
+       fhir:index 46 ;
        fhir:Element.id [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
        fhir:ElementDefinition.path [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
        fhir:ElementDefinition.short [ fhir:value "Indique si l'observation est un test de point de soins ou non." ] ;
