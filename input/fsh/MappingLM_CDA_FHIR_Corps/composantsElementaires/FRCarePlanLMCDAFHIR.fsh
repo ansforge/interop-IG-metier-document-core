@@ -4,8 +4,10 @@ Usage: #definition
 Title: "Mapping FRLMCarePlan → FRCDAReferenceItemPlanTraitement / FRLMCarePlan → FRCarePlanDocument"
 Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAReferenceItemPlanTraitement (équivalent CDA le plus proche), puis vers le profil FHIR FRCarePlanDocument."
 
+* name = "FRCarePlanLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Plan de soins\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlan"
@@ -42,7 +44,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 // Actions incluses dans le plan
 // l'équivalence relatedto est utilisée car le profil CDA cible ne porte pas explicitement les actions incluses dans le plan, mais il est possible de relier les deux via l'élément entryRelationship.
 * group[=].element[+].code = #FRLMCarePlan.activity
-* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frItemPlanTraitement
+* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
 
@@ -80,6 +82,6 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 
 // Actions incluses dans le plan
 * group[=].element[+].code = #FRLMCarePlan.activity
-* group[=].element[=].target.code = #CarePlan.activity.reference:FRMedicationRequestDocument
+* group[=].element[=].target.code = #CarePlan.activity.reference
 * group[=].element[=].target.equivalence = #narrower
 * group[=].element[=].target.comment = "Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument."

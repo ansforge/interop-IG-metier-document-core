@@ -4,8 +4,10 @@ Usage: #definition
 Title: "Mapping FRLMCondition → FRCDAProbleme / FRLMCondition → FRConditionDocument"
 Description: "Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument."
 
+* name = "FRConditionLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Problème\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
@@ -39,13 +41,15 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Date de début du problème
 * group[=].element[+].code = #FRLMCondition.period.onsetDate
-* group[=].element[=].target.code = #Observation.effectiveTime.low
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Observation.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
 
 // Date de fin du problème
 * group[=].element[+].code = #FRLMCondition.period.endDate
-* group[=].element[=].target.code = #Observation.effectiveTime.high
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Observation.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
 
 // Statut du problème
 * group[=].element[+].code = #FRLMCondition.header.status
@@ -125,12 +129,12 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Date de début du problème
 * group[=].element[+].code = #FRLMCondition.period.onsetDate
-* group[=].element[=].target.code = #Condition.onsetDateTime
+* group[=].element[=].target.code = #Condition.onset[x]:onsetDateTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de fin du problème
 * group[=].element[+].code = #FRLMCondition.period.endDate
-* group[=].element[=].target.code = #Condition.abatementDateTime
+* group[=].element[=].target.code = #Condition.abatement[x]:abatementDateTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sévérité
@@ -160,7 +164,7 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 
 // Document référencé
 * group[=].element[+].code = #FRLMCondition.reference
-* group[=].element[=].target.code = #Condition.evidence.detail:FRDocumentReferenceDocument.content.attachment.url
+* group[=].element[=].target.code = #Condition.evidence.detail
 * group[=].element[=].target.equivalence = #equivalent
 
 // Commentaire

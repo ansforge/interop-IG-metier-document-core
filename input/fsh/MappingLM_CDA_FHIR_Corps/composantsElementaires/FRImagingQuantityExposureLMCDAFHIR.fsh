@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMQuantityExposure → FRCDADICOMQuantite / FRLMQuantityExposure → FRObservationRadiationExposureDocument.component"
 Description: "Mapping des éléments du modèle métier FRLMQuantityExposure vers l'entrée CDA FRCDADICOMQuantite, puis vers le profil FHIR FRObservationRadiationExposureDocument."
+* name = "FRImagingQuantityExposureLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : Quantité d'exposition aux radiations"
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMQuantityExposure"
@@ -31,7 +33,7 @@ Description: "Mapping des éléments du modèle métier FRLMQuantityExposure ver
 * group[=].element[=].target.code = #Observation.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
 // Précision topographique
-* group[=].element[+].code = #FRLMQuantityExposure.bodySite:FRLMBodyStructure.locationQualifier
+* group[=].element[+].code = #FRLMQuantityExposure.bodySite
 * group[=].element[=].target.code = #Observation.targetSiteCode.qualifier
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -53,13 +55,13 @@ Description: "Mapping des éléments du modèle métier FRLMQuantityExposure ver
 * group[=].element[=].target.equivalence = #equivalent
 // Valeur de la mesure de la quantité d'exposition
 * group[=].element[+].code = #FRLMQuantityExposure.quantity
-* group[=].element[=].target.code = #Observation.component.valueQuantity
+* group[=].element[=].target.code = #Observation.component.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique irradiée
 * group[=].element[+].code = #FRLMQuantityExposure.bodySite
 * group[=].element[=].target.code = #Observation.bodySite
 * group[=].element[=].target.equivalence = #equivalent
 // Précision topographique de la localisation anatomique
-* group[=].element[+].code = #FRLMQuantityExposure.bodySite:FRLMBodyStructure.locationQualifier
+* group[=].element[+].code = #FRLMQuantityExposure.bodySite
 * group[=].element[=].target.code = #Observation.bodySite.extension:precisionTopographique
 * group[=].element[=].target.equivalence = #equivalent

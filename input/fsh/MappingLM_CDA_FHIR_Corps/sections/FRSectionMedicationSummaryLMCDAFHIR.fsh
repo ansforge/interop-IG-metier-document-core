@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMMedicationSummary → FRCDATraitements / FRLMMedicationSummary → FRCompositionDocument.section:sectionMedications"
 Description: "Mapping des éléments du modèle métier FRLMMedicationSummary vers la section CDA FRCDATraitements, puis vers la section FHIR FRCompositionDocument.section:sectionMedications."
+* name = "FRSectionMedicationSummaryLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Traitements\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -27,8 +29,8 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationSummary ve
 * group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Traitement
-* group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration:FRLMMedicationAdministration
-* group[=].element[=].target[+].code = #Section.entry:FRCDATraitement
+* group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration
+* group[=].element[=].target[+].code = #Section.entry
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -36,22 +38,22 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationSummary ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMMedicationSummary
-* group[=].element[=].target[+].code = #Composition.section:sectionMedications
+* group[=].element[=].target[+].code = #Composition.section
 * group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionMedications"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMMedicationSummary.codeSection
-* group[=].element[=].target[+].code = #Composition.section:sectionMedications.code
+* group[=].element[=].target[+].code = #Composition.section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMMedicationSummary.titleSection
-* group[=].element[=].target[+].code = #Composition.section:sectionMedications.title
+* group[=].element[=].target[+].code = #Composition.section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMMedicationSummary.description
-* group[=].element[=].target[+].code = #Composition.section:sectionMedications.text
+* group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Traitement
-* group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration:FRLMMedicationAdministration
-* group[=].element[=].target[+].code = #Composition.section:sectionMedications.entry:FRMedicationAdministrationDocument
+* group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration
+* group[=].element[=].target[+].code = #Composition.section.entry
 * group[=].element[=].target[=].equivalence = #equivalent

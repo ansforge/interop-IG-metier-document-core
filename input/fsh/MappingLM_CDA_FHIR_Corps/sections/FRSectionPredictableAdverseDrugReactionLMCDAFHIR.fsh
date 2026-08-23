@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMPredictableAdverseDrugReaction → FRCDAEffetsIndesirables/ FRLMPredictableAdverseDrugReaction → FRCompositionDocument.section:sectionPredictableAdverseDrugReaction"
 Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction vers la section CDA FRCDAEffetsIndesirables, puis vers la section FHIR FRCompositionDocument.section:sectionPredictableAdverseDrugReaction."
+* name = "FRSectionPredictableAdverseDrugReactionLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Effets indésirables\""
+* experimental = false
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction"
@@ -22,8 +24,8 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Effet indésirable
-* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent:FRLMAdverseDrugReaction
-* group[=].element[=].target[+].code = #Section.entry:FRCDAEffetIndesirable
+* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent
+* group[=].element[=].target[+].code = #Section.entry
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : Métier → FHIR
@@ -31,22 +33,22 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction
-* group[=].element[=].target[+].code = #Composition.section:sectionPredictableAdverseDrugReaction
+* group[=].element[=].target[+].code = #Composition.section
 * group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionPredictableAdverseDrugReaction"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.codeSection
-* group[=].element[=].target[+].code = #Composition.section:sectionPredictableAdverseDrugReaction.code
+* group[=].element[=].target[+].code = #Composition.section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.titleSection
-* group[=].element[=].target[+].code = #Composition.section:sectionPredictableAdverseDrugReaction.title
+* group[=].element[=].target[+].code = #Composition.section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.description
-* group[=].element[=].target[+].code = #Composition.section:sectionPredictableAdverseDrugReaction.text
+* group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Effet indésirable
-* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent:FRLMAdverseDrugReaction
-* group[=].element[=].target[+].code = #Composition.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument 
+* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent
+* group[=].element[=].target[+].code = #Composition.section.entry 
 * group[=].element[=].target[=].equivalence = #equivalent

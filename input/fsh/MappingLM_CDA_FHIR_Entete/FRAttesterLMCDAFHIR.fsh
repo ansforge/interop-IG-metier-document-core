@@ -6,6 +6,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
  - Mapping 1 : entre le modèle métier \"FRLMAttester\" et l'élément CDA \"authenticator\"
  - Mapping 2 : entre le modèle métier \"FRLMAttester\" et l'élément FHIR \"Composition.attester\" """
 
+* name = "FRAttesterLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Validateur\""
 * status = #draft
 * experimental = false
@@ -26,13 +27,13 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Validateur professionnel de santé
-* group[=].element[+].code = #FRLMAttester.attester:healthProfessional
+* group[=].element[+].code = #FRLMAttester.attester[x]:healthProfessional
 * group[=].element[=].target.code = #Authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Validateur système
-* group[=].element[+].code = #FRLMAttester.attester:device
+* group[=].element[+].code = #FRLMAttester.attester[x]:device
 * group[=].element[=].target.code = #Authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."
@@ -53,13 +54,13 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Validateur professionnel de santé
-* group[=].element[+].code = #FRLMAttester.attester:healthProfessional
-* group[=].element[=].target.code = #Composition.attester.party.PractitionerRole
+* group[=].element[+].code = #FRLMAttester.attester[x]:healthProfessional
+* group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
 
 // Validateur système
-* group[=].element[+].code = #FRLMAttester.attester:device
-* group[=].element[=].target.code = #Composition.attester.party.Device
+* group[=].element[+].code = #FRLMAttester.attester[x]:device
+* group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."

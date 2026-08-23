@@ -4,8 +4,10 @@ Usage: #definition
 Title: "Mapping FRLMProcedure → FRCDAActe / FRLMProcedure → FRProcedureDocument"
 Description: "Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDAActe, puis vers le profil FHIR FRProcedureDocument."
 
+* name = "FRProcedureLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Procedure\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
@@ -127,7 +129,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 /* Consultations associées */
 * group[=].element[+].code = #FRLMProcedure.focalDevice
-* group[=].element[=].target.code = #Procedure.focalDevice.manipulated.device
+* group[=].element[=].target.code = #Procedure.focalDevice.manipulated
 * group[=].element[=].target.equivalence = #equivalent
 /* Note */
 * group[=].element[+].code = #FRLMProcedure.note

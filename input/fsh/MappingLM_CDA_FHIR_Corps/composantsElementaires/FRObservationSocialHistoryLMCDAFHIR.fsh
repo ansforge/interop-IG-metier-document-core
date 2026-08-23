@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMObservationSocialHistory → FRCDAHabitusModeDeVie → FRObservationSocialHistoryDocument"
 Description: "Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le profil CDA FRCDAHabitusModeDeVie, puis vers le profil FHIR FRObservationSocialHistoryDocument."
+* name = "FRObservationSocialHistoryLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Habitus Mode de vie\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationSocialHistory"
@@ -49,7 +51,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationSocialHis
 * group[=].element[=].target.equivalence = #equivalent
 // Date de l'observation
 * group[=].element[+].code = #FRLMObservationSocialHistory.observationDate[x]
-* group[=].element[=].target.code = #Observation.effectiveDateTime
+* group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Type d'observation
 * group[=].element[+].code = #FRLMObservationSocialHistory.type
@@ -57,7 +59,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationSocialHis
 * group[=].element[=].target.equivalence = #equivalent
 // Résultat de l'observation
 * group[=].element[+].code = #FRLMObservationSocialHistory.result
-* group[=].element[=].target.code = #Observation.valueCodeableConcept
+* group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Commentaire / note
 * group[=].element[+].code = #FRLMObservationSocialHistory.note

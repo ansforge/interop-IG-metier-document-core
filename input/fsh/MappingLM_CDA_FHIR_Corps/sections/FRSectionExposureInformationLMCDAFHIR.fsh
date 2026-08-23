@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMExposureInformation → FRCDADICOMExpositionAuxRadiations / FRLMExposureInformation → FRCompositionDocument.section:sectionExposureRadiation"
 Description: "Mapping des éléments du modèle métier FRLMExposureInformation vers la section CDA FRCDADICOMExpositionAuxRadiations, puis vers la section FHIR FRCompositionDocument.section:sectionExposureRadiation."
+* name = "FRSectionExposureInformationLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Exposition aux radiations\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -28,11 +30,11 @@ Description: "Mapping des éléments du modèle métier FRLMExposureInformation 
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Quantité
 * group[=].element[+].code = #FRLMExposureInformation.subSection.quantityExposure
-* group[=].element[=].target[+].code = #Section.entry:frDICOMQuantite
+* group[=].element[=].target[+].code = #Section.entry
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée administration des produits radiopharmaceutiques
 * group[=].element[+].code = #FRLMExposureInformation.subSection.radiopharmaceuticalAdministration
-* group[=].element[=].target[+].code = #Section.entry:frDICOMAdministrationRadiopharmaceutique
+* group[=].element[=].target[+].code = #Section.entry
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -40,26 +42,26 @@ Description: "Mapping des éléments du modèle métier FRLMExposureInformation 
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMExposureInformation
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation
+* group[=].element[=].target[+].code = #Composition.section
 * group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionExposureRadiation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMExposureInformation.codeSection
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation.code
+* group[=].element[=].target[+].code = #Composition.section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMExposureInformation.titleSection
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation.title
+* group[=].element[=].target[+].code = #Composition.section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMExposureInformation.description
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation.text
+* group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Quantité
 * group[=].element[+].code = #FRLMExposureInformation.subSection.quantityExposure
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.component
+* group[=].element[=].target[+].code = #Composition.section.entry.component
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée administration des produits radiopharmaceutiques
 * group[=].element[+].code = #FRLMExposureInformation.subSection.radiopharmaceuticalAdministration
-* group[=].element[=].target[+].code = #Composition.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.partOf:medicationAdministrationRef
+* group[=].element[=].target[+].code = #Composition.section.entry.partOf:medicationAdministrationRef
 * group[=].element[=].target[=].equivalence = #equivalent

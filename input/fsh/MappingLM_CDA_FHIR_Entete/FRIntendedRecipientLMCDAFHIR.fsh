@@ -6,6 +6,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
  - Mapping 1 : entre le modèle métier \"FRLMIntendedRecipient\" et l'élément CDA \"informationRecipient\"
  - Mapping 2 : entre le modèle métier \"FRLMIntendedRecipient\" et l'extension FHIR \"InformationRecipientExtension\" """
 
+* name = "FRIntendedRecipientLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Destinataire prévu\""
 * status = #draft
 * experimental = false
@@ -21,31 +22,31 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Destinataire professionnel de santé
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:healthProfessional
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Destinataire organisation
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:organisation
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
 
 // Destinataire patient/usager
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:patient
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
 
 // Destinataire personne de confiance
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:relatedPerson
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR."
 
 // Destinataire système
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:device
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
@@ -60,31 +61,31 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Destinataire professionnel de santé
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:healthProfessional
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
 
 // Destinataire organisation
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:organisation
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
 
 // Destinataire patient/usager
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:patient
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
 
 // Destinataire personne de confiance
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:relatedPerson
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR."
 
 // Destinataire système
-* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient:device
+* group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."

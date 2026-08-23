@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMImmunisations → FRCDAVaccinations / FRLMImmunisations → FRCompositionDocument.section:sectionImmunizations"
 Description: "Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA FRCDAVaccinations, puis vers la section FHIR FRCompositionDocument.section:sectionImmunizations."
+* name = "FRSectionImmunisationsLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Vaccinations\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -36,22 +38,22 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = "FRCompositionDocument.section:sectionImmunizations"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMImmunisations.codeSection
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations.code
+* group[=].element[=].target.code = #Composition.section.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMImmunisations.titleSection
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations.title
+* group[=].element[=].target.code = #Composition.section.title
 * group[=].element[=].target.equivalence = #equivalent
 // Description narrative de la section
 * group[=].element[+].code = #FRLMImmunisations.description
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations.text
+* group[=].element[=].target.code = #Composition.section.text
 * group[=].element[=].target.equivalence = #equivalent
 // entrée de la section
 * group[=].element[+].code = #FRLMImmunisations.entry.immunisation
-* group[=].element[=].target.code = #Composition.section:sectionImmunizations.entry:FRImmunizationDocument
+* group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.equivalence = #equivalent

@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMSpecimen → FRCDAPrelevement / FRLMSpecimen → FRSpecimenDocument"
 Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument."
+* name = "FRSpecimenLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Prélèvement\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen"
@@ -19,7 +21,7 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.code = #Procedure.id
 * group[=].element[=].target.equivalence = #equivalent
 // Statut
-* group[=].element[+].code = #FRLMSpecimen.header.status
+* group[=].element[+].code = #FRLMSpecimen.status
 * group[=].element[=].target.code = #Procedure.statusCode
 * group[=].element[=].target.equivalence = #equivalent
 // Type d'échantillon
@@ -32,7 +34,7 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 // Prélèvement parent
 * group[=].element[+].code = #FRLMSpecimen.parentSpecimen
-* group[=].element[=].target.code = #Procedure.participant:echantillonPreleve
+* group[=].element[=].target.code = #Procedure.participant:EchantillonPreleve
 * group[=].element[=].target.equivalence = #equivalent
 // Demande à l'origine du prélèvement
 * group[=].element[+].code = #FRLMSpecimen.request
@@ -56,11 +58,11 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #unmatched
 // Détails de la collecte - Dispositif utilisé
 * group[=].element[+].code = #FRLMSpecimen.collection.device
-* group[=].element[=].target.code = #Procedure.participant:dispositifUtilise
+* group[=].element[=].target.code = #Procedure.participant:DispositifUtilise
 * group[=].element[=].target.equivalence = #equivalent
 // Détails de la collecte - Produit utilisé
 * group[=].element[+].code = #FRLMSpecimen.collection.additive[x]
-* group[=].element[=].target.code = #Procedure.participant:produitUtilise
+* group[=].element[=].target.code = #Procedure.participant:ProduitUtilise
 * group[=].element[=].target.equivalence = #equivalent
 // Détails de la collecte - Localisation du prélèvement
 * group[=].element[+].code = #FRLMSpecimen.collection.bodySite
@@ -97,7 +99,7 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.code = #Specimen.identifier
 * group[=].element[=].target.equivalence = #equivalent
 // Statut
-* group[=].element[+].code = #FRLMSpecimen.header.status
+* group[=].element[+].code = #FRLMSpecimen.status
 * group[=].element[=].target.code = #Specimen.status
 * group[=].element[=].target.equivalence = #equivalent
 // Code/Type d'échantillon
@@ -105,15 +107,15 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.code = #Specimen.type
 * group[=].element[=].target.equivalence = #equivalent
 // Origine du prélèvement - Patient
-* group[=].element[+].code = #FRLMSpecimen.specimenSource:Patient
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Patient
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
 // Origine du prélèvement - Location
-* group[=].element[+].code = #FRLMSpecimen.specimenSource:Location
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Location
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
 // Origine du prélèvement - Device
-* group[=].element[+].code = #FRLMSpecimen.specimenSource:Device
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Device
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
 // Prélèvement parent
@@ -164,7 +166,7 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 // Contenant - Dispositif :  extension à ajouter dans FRSpecimenDocument pour contenir le dispositif utilisé comme contenant
 * group[=].element[+].code = #FRLMSpecimen.container.containerDevice
-* group[=].element[=].target.code = #Specimen.container.extension:device
+* group[=].element[=].target.code = #Specimen.container.type.extension:device
 * group[=].element[=].target.equivalence = #equivalent
 // État de l'échantillon
 * group[=].element[+].code = #FRLMSpecimen.condition

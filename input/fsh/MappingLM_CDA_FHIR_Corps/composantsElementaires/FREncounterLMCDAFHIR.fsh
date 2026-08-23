@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMEncounter → FRCDARencontre / FRLMEncounter → FREncounterDocument"
 Description: "Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDARencontre, puis vers le profil FHIR FREncounterDocument."
+* name = "FREncounterLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Encounter\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter"
@@ -48,8 +50,9 @@ Description: "Mapping des éléments du modèle métier FRLMEncounter vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Organisation responsable
 * group[=].element[+].code = #FRLMEncounter.serviceProvider
-* group[=].element[=].target.code = #Encounter.performer.assignedEntity.representedOrganization
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Encounter.performer.assignedEntity
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "L'organisation responsable est portée par representedOrganization au sein du type FRCDAAssignedEntity référencé par assignedEntity."
 // Professionnel référent
 * group[=].element[+].code = #FRLMEncounter.referringProfessional
 * group[=].element[=].target.code = #Encounter.performer
@@ -131,7 +134,7 @@ Description: "Mapping des éléments du modèle métier FRLMEncounter vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Auteur de la rencontre
 * group[=].element[+].code = #FRLMEncounter.header.author[x]
-* group[=].element[=].target.code = #Encounter.author
+* group[=].element[=].target.code = #Encounter.participant.individual.extension:author
 * group[=].element[=].target.equivalence = #equivalent
 // Type de rencontre
 * group[=].element[+].code = #FRLMEncounter.type

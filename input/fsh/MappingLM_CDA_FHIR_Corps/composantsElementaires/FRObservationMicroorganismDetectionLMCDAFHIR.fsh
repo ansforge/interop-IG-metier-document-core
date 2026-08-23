@@ -4,8 +4,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMMicroOrganismSearch → FRCDARechercheDeMicroOrganismes / FRLMMicroOrganismSearch → FRObservationMicroorganismDetectionDocument"
 Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument."
+* name = "FRObservationMicroorganismDetectionLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Recherche de micro organismes\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch"
@@ -46,7 +48,7 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 
 // Date de création
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.date
-* group[=].element[=].target.code = #Observation.author.time
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut
@@ -64,7 +66,7 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 * group[=].element[=].target.equivalence = #unmatched
 
 // Date de l'observation
-* group[=].element[+].code = #FRLMMicroOrganismSearch.observationDate
+* group[=].element[+].code = #FRLMMicroOrganismSearch.header.date
 * group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -79,7 +81,7 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-micro-organism-search"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-microorganism-detection-document"
 
 // Élément racine
@@ -140,5 +142,5 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 
 // Valeur de l'observation
 * group[=].element[+].code = #FRLMMicroOrganismSearch.result
-* group[=].element[=].target.code = #Observation.valueBoolean
+* group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.equivalence = #equivalent

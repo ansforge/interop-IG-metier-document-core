@@ -4,8 +4,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMObservationMedia → FRCDAImageIllustrative / FRLMObservationMedia → FRMediaDocument"
 Description: "Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument."
+* name = "FRMediaLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Image illustrative\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"
@@ -17,7 +19,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
-* group[=].element[+].code = #FRLMObservationMedia.identifiant
+* group[=].element[+].code = #FRLMObservationMedia.header.identifier
 * group[=].element[=].target.code = #ObservationMedia.id
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -28,18 +30,21 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 
 // Type MIME
 * group[=].element[+].code = #FRLMObservationMedia.content.contentType
-* group[=].element[=].target.code = #ObservationMedia.value.mediaType
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #ObservationMedia.value
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value."
 
 // Sujet
-* group[=].element[+].code = #FRLMObservationMedia.subject:FRLMPatient
+* group[=].element[+].code = #FRLMObservationMedia.subject[x]
 * group[=].element[=].target.code = #ObservationMedia.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient."
 
 // Specimen
-* group[=].element[+].code = #FRLMObservationMedia.subject:FRLMSpecimen
+* group[=].element[+].code = #FRLMObservationMedia.subject[x]
 * group[=].element[=].target.code = #ObservationMedia.specimen
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMSpecimen."
 
 // Note
 * group[=].element[+].code = #FRLMObservationMedia.note
@@ -63,7 +68,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // informant
-* group[=].element[+].code = #FRLMObservationMedia.header.informant[x]
+* group[=].element[+].code = #FRLMObservationMedia.header.informant
 * group[=].element[=].target.code = #ObservationMedia.informant
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -78,7 +83,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
-* group[=].element[+].code = #FRLMObservationMedia.identifiant
+* group[=].element[+].code = #FRLMObservationMedia.header.identifier
 * group[=].element[=].target.code = #Media.identifier
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -93,14 +98,16 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sujet
-* group[=].element[+].code = #FRLMObservationMedia.subject:FRLMPatient
+* group[=].element[+].code = #FRLMObservationMedia.subject[x]
 * group[=].element[=].target.code = #Media.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient."
 
 // Specimen
-* group[=].element[+].code = #FRLMObservationMedia.subject:FRLMSpecimen
-* group[=].element[=].target.code = #Media.specimen
+* group[=].element[+].code = #FRLMObservationMedia.subject[x]
+* group[=].element[=].target.code = #Media.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."
 
 // Note
 * group[=].element[+].code = #FRLMObservationMedia.note
@@ -121,5 +128,5 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #unmatched
 
 // informant
-* group[=].element[+].code = #FRLMObservationMedia.header.informant[x]
+* group[=].element[+].code = #FRLMObservationMedia.header.informant
 * group[=].element[=].target.equivalence = #unmatched

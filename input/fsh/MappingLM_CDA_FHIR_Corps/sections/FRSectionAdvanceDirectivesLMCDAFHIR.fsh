@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMAdvanceDirectives → FRCDADirectivesAnticipees / FRLMAdvanceDirectives → FRCompositionDocument.section:sectionAdvanceDirectives"
 Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives vers la section CDA FRCDADirectivesAnticipees, puis vers le profil FHIR puis vers la section FHIR FRCompositionDocument.section:sectionAdvanceDirectives."
+* name = "FRSectionAdvanceDirectivesLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Directives anticipées\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -27,8 +29,8 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 * group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Directive anticipée
-* group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective:FRLMAdvanceDirective
-* group[=].element[=].target.code = #Section.entry:FRCDADirectiveAnticipee
+* group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective
+* group[=].element[=].target.code = #Section.entry
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
@@ -36,22 +38,22 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMAdvanceDirectives
-* group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = "FRCompositionDocument.section:sectionAdvanceDirectives"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMAdvanceDirectives.codeSection
-* group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.code
+* group[=].element[=].target.code = #Composition.section.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMAdvanceDirectives.titleSection
-* group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.title
+* group[=].element[=].target.code = #Composition.section.title
 * group[=].element[=].target.equivalence = #equivalent
 // texte de la section
 * group[=].element[+].code = #FRLMAdvanceDirectives.description
-* group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.text
+* group[=].element[=].target.code = #Composition.section.text
 * group[=].element[=].target.equivalence = #equivalent
 // Entrées Directives anticipées
-* group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective:FRLMAdvanceDirective
-* group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.entry:FRAdvanceDirectiveDocument
+* group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective
+* group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.equivalence = #equivalent

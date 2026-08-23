@@ -4,8 +4,10 @@ Usage: #definition
 Title: "Mapping FRLMDeviceUse → FRCDADispositifMedical / FRLMDeviceUse → FRDeviceUseStatementDocument"
 Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument."
 
+* name = "FRDeviceUseLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse"
@@ -34,13 +36,15 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 
 // Date de début d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.onsetDate
-* group[=].element[=].target.code = #Supply.effectiveTime.low
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Supply.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
 
 // Date de fin d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.endDate
-* group[=].element[=].target.code = #Supply.effectiveTime.high
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Supply.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
 
 // Durée d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.duration
@@ -63,22 +67,22 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 * group[=].element[=].target.comment = "Aucune correspondance explicite de bodySite dans FRCDADispositifMedical."
 
 // Motif de l'utilisation (lié à l'ALD)
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMCondition
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.code = #Supply.entryRelationship:frEnRapportAvecALD
 * group[=].element[=].target.equivalence = #relatedto
 
 // Motif de l'utilisation (lié à un accident du travail)
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMObservation
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.code = #Supply.entryRelationship:frEnRapportAvecAccidentTravail
 * group[=].element[=].target.equivalence = #relatedto
 
 // Motif de l'utilisation (lié à la prévention)
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMObservation
-* group[=].element[=].target.code = #Supply.entryRelationship:frEnRapportAvecPrevention
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
+* group[=].element[=].target.code = #Supply.entryRelationship:frEnRapportAvecLaPrevention
 * group[=].element[=].target.equivalence = #relatedto
 
 // Motif de l'utilisation (acte)
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMProcedure
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.equivalence = #unmatched
 * group[=].element[=].target.comment = "Aucun entryRelationship explicite FRCDADispositifMedical pour le motif de type acte."
 
@@ -109,18 +113,20 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 
 // Période d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse
-* group[=].element[=].target.code = #DeviceUseStatement.timingPeriod
+* group[=].element[=].target.code = #DeviceUseStatement.timing[x]
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de début d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.onsetDate
-* group[=].element[=].target.code = #DeviceUseStatement.timingPeriod.start
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #DeviceUseStatement.timing[x]
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "timing[x] n'est pas décomposé en start/end distincts sur ce profil ; le début est porté par l'ensemble du choix de type."
 
 // Date de fin d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.endDate
-* group[=].element[=].target.code = #DeviceUseStatement.timingPeriod.end
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #DeviceUseStatement.timing[x]
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "timing[x] n'est pas décomposé en start/end distincts sur ce profil ; la fin est portée par l'ensemble du choix de type."
 
 // Durée d'utilisation
 * group[=].element[+].code = #FRLMDeviceUse.periodOfUse.duration
@@ -144,21 +150,24 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 * group[=].element[=].target.equivalence = #relatedto
 
 // Motif codé
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:CodeableConcept
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.code = #DeviceUseStatement.reasonCode
 * group[=].element[=].target.equivalence = #equivalent
 // ALD
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMObservation
-* group[=].element[=].target.code = #DeviceUseStatement.reasonReference:FRObservationALDDocument
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
+* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier."
 // Accident du travail
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMObservation
-* group[=].element[=].target.code = #DeviceUseStatement.reasonReference:FRObservationWorkRelatedAccidentDocument
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
+* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier."
 // Prévention
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]:FRLMObservation
-* group[=].element[=].target.code = #DeviceUseStatement.reasonReference:FRObservationPreventionDocument
+* group[=].element[+].code = #FRLMDeviceUse.reason[x]
+* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier."
 // Commentaire
 * group[=].element[+].code = #FRLMDeviceUse.note
 * group[=].element[=].target.code = #DeviceUseStatement.note

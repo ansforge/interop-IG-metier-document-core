@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument"
 Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."
+* name = "FRImagingStudyLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"
@@ -17,19 +19,19 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
 * group[=].element[+].code = #FRLMImagingStudy.header.identifier
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.id
+* group[=].element[=].target.code = #Act.id
 * group[=].element[=].target.equivalence = #equivalent
 // Modalité de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.modality
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.methodCode
+* group[=].element[=].target.code = #Act.methodCode
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.bodySite
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode
+* group[=].element[=].target.code = #Act.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
 // précision topographique de la localisation anatomique
-* group[=].element[+].code = #FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier
+* group[=].element[+].code = #FRLMImagingStudy.bodySite
+* group[=].element[=].target.code = #Act.targetSiteCode.qualifier
 * group[=].element[=].target.equivalence = #equivalent
 // Rencontre associée à l'examen
 * group[=].element[+].code = #FRLMImagingStudy.encounter
@@ -37,7 +39,7 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter."
 // Date de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.started
-* group[=].element[=].target.code = #FRCDADICOMTechniqueImagerie.effectiveTime
+* group[=].element[=].target.code = #Act.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // demande d'examen
 * group[=].element[+].code = #FRLMImagingStudy.basedOn
@@ -82,7 +84,7 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.bodySite
-* group[=].element[=].target.code = #ImagingStudy.bodySite
+* group[=].element[=].target.code = #ImagingStudy.series.bodySite
 * group[=].element[=].target.equivalence = #equivalent
 // Rencontre associée à l'examen
 * group[=].element[+].code = #FRLMImagingStudy.encounter
@@ -106,7 +108,7 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Organisation responsable de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.studyCustodian
-* group[=].element[=].target.code = #ImagingStudy.series.performer.actor:Organization
+* group[=].element[=].target.code = #ImagingStudy.series.performer.actor
 * group[=].element[=].target.equivalence = #equivalent
 // Endpoint
 * group[=].element[+].code = #FRLMImagingStudy.studyEndpoint

@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMSocialHistory → FRCDAHabitusModeDeVieSection / FRLMSocialHistory → FRCompositionDocument.section:sectionSocialHistory"
 Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:sectionSocialHistory."
+* name = "FRSectionSocialHistoryLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : Habitus et modes de vie"
+* experimental = false
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory"
@@ -26,8 +28,8 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 * group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // entrées Habitus, Mode de vie
-* group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory:FRLMObservationSocialHistory
-* group[=].element[=].target.code = #Section.entry:FRCDAHabitusModeDeVie
+* group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory
+* group[=].element[=].target.code = #Section.entry
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR CompositionDocument.section:sectionSocialHistory
@@ -35,22 +37,22 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMSocialHistory
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = "FRCompositionDocument.section:sectionSocialHistory"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMSocialHistory.codeSection
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.code
+* group[=].element[=].target.code = #Composition.section.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMSocialHistory.titleSection
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.title
+* group[=].element[=].target.code = #Composition.section.title
 * group[=].element[=].target.equivalence = #equivalent
 // Bloc narratif
 * group[=].element[+].code = #FRLMSocialHistory.description
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.text
+* group[=].element[=].target.code = #Composition.section.text
 * group[=].element[=].target.equivalence = #equivalent
 // Entrées Habitus, Mode de vie
-* group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory:FRLMObservationSocialHistory
-* group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry:FRObservationSocialHistoryDocument
+* group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory
+* group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.equivalence = #equivalent

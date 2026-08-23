@@ -79,7 +79,7 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML -> FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-observation"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
 * group[=].target = "http://hl7.org/fhir/R4/StructureDefinition/Observation"
 // Element racine
 * group[=].element[+].code = #FRMLObservation

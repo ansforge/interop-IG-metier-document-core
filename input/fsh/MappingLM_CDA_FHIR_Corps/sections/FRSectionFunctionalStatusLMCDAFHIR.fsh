@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMFunctionalStatus → FRCDAStatutFonctionnel / FRLMFunctionalStatus → FRCompositionDocument.section:sectionFunctionalStatus"
 Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:sectionFunctionalStatus."
+* name = "FRSectionFunctionalStatusLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Statut fonctionnel\""
+* experimental = false
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFunctionalStatus"
@@ -35,7 +37,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].element[=].target.equivalence = #equivalent
 // entree - groupeQuestionnairesEvaluation
 * group[=].element[+].code = #FRLMFunctionalStatus.entry.assessment
-* group[=].element[=].target.code = #Section.entry:FRCDAGroupDeQuestionnairesDEvaluation
+* group[=].element[=].target.code = #Section.entry
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -43,20 +45,20 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMFunctionalStatus
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = "FRCompositionDocument.section:sectionFunctionalStatus"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMFunctionalStatus.codeSection
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.code
+* group[=].element[=].target.code = #Composition.section.code
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMFunctionalStatus.titleSection
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.title
+* group[=].element[=].target.code = #Composition.section.title
 * group[=].element[=].target.equivalence = #equivalent
 // bloc narratif
 * group[=].element[+].code = #FRLMFunctionalStatus.description
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.text
+* group[=].element[=].target.code = #Composition.section.text
 * group[=].element[=].target.equivalence = #equivalent
 // auteur
 * group[=].element[+].code = #FRLMFunctionalStatus.author
@@ -68,5 +70,5 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].element[=].target.equivalence = #equivalent
 // entree - groupe questionnaires d'évaluation
 * group[=].element[+].code = #FRLMFunctionalStatus.entry.assessment
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.entry:FRObservationAssessmentDocument
+* group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.equivalence = #equivalent

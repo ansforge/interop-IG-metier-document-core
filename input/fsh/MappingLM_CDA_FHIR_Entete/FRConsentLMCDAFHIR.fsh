@@ -6,6 +6,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
  - Mapping 1 : entre le modèle métier \"FRLMConsent\" et l'élément CDA \"authorization\"
  - Mapping 2 : entre le modèle métier \"FRLMConsent\" et la ressource FHIR \"Consent\" (référencée depuis Composition via l'extension ConsentExtension)"""
 
+* name = "FRConsentLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Consentement\""
 * status = #draft
 * experimental = false
@@ -32,8 +33,9 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Statut du consentement
 * group[=].element[+].code = #FRLMConsent.status
-* group[=].element[=].target.code = #Authorization.consent.statusCode="completed"
+* group[=].element[=].target.code = #Authorization.consent.statusCode
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Valeur fixée à 'completed'."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent"

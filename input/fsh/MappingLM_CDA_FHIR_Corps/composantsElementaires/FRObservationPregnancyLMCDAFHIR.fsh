@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMPregnancyObservation → FRCDAObservationSurLaGrossesse / FRLMPregnancyObservation → FRObservationPregnancyDocument"
 Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profil CDA FRCDAObservationSurLaGrossesse, puis vers le profil FHIR FRObservationPregnancyDocument."
-* title = "Mapping Métier/CDA/FHIR : \"Observation sur la grossesse\""  
+* name = "FRObservationPregnancyLMCDAFHIR"
+* title = "Mapping Métier/CDA/FHIR : \"Observation sur la grossesse\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation"
@@ -111,7 +113,7 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 
 // Résultat
 * group[=].element[+].code = #FRLMPregnancyObservation.result
-* group[=].element[=].target.code = #Observation.value
+* group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 
 // Raison de l'absence de résultat
@@ -140,26 +142,31 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 * group[=].element[=].target.equivalence = #equivalent
 
 // Dérivé de - FRLMObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMObservation]
-* group[=].element[=].target.code = #Observation.derivedFrom:Observation
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
+* group[=].element[=].target.code = #Observation.derivedFrom
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence une FRLMObservation générique."
 
 // Dérivé de - FRLMLaboratoryObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMLaboratoryObservation]
-* group[=].element[=].target.code = #Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
+* group[=].element[=].target.code = #Observation.derivedFrom
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
 
 // Dérivé de - FRLMImagingStudy
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[FRLMImagingStudy]
-* group[=].element[=].target.code = #Observation.derivedFrom:FRImagingStudyDocument
+* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
+* group[=].element[=].target.code = #Observation.derivedFrom
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence un FRLMImagingStudy (FRImagingStudyDocument)."
 
 // Membres - FRLMLaboratoryObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMLaboratoryObservation]
-* group[=].element[=].target.code = #Observation.hasMember:FRObservationLaboratoryReportResultsDocument
+* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
+* group[=].element[=].target.code = #Observation.hasMember
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où hasMember[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
 
 // Membres - FRLMObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[FRLMObservation]
-* group[=].element[=].target.code = #Observation.hasMember:Observation
+* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
+* group[=].element[=].target.code = #Observation.hasMember
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où hasMember[x] référence une FRLMObservation générique."

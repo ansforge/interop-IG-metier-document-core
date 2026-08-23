@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMImmunisation → FRCDAVaccination / FRLMImmunisation → FRImmunizationDocument"    
 Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FRCDAVaccination, puis vers le profil FHIR FRImmunizationDocument."
-* title = "Mapping Métier/CDA/FHIR : \"Vaccination\""   
+* name = "FRImmunisationLMCDAFHIR"
+* title = "Mapping Métier/CDA/FHIR : \"Vaccination\""
 * status = #draft
+* experimental = false
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccination"
@@ -125,7 +127,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 
 // Rang
 * group[=].element[+].code = #FRLMImmunisation.doseNumber
-* group[=].element[=].target.code = #Immunization.protocolApplied.doseNumber
+* group[=].element[=].target.code = #Immunization.protocolApplied.doseNumber[x]:doseNumberPositiveInt
 * group[=].element[=].target.equivalence = #equivalent
 // Commentaire
 * group[=].element[+].code = #FRLMImmunisation.note
@@ -133,7 +135,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Prescription
 * group[=].element[+].code = #FRLMImmunisation.prescription
-* group[=].element[=].target.code = #Immunization.basedOn
+* group[=].element[=].target.code = #Immunization.extension:basedOnRequestR5
 * group[=].element[=].target.equivalence = #equivalent
 // Réaction
 * group[=].element[+].code = #FRLMImmunisation.reaction

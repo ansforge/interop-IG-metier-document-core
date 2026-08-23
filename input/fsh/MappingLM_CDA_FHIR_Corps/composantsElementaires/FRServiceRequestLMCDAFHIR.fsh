@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMServiceRequest → FRCDADemandeDExamenOuDeSuivi / FRLMServiceRequest → FRServiceRequestDocument"
 Description: "Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument."
+* name = "FRServiceRequestLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Demande d'examen ou de suivi\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest"
@@ -38,17 +40,18 @@ Description: "Mapping des éléments du modèle métier FRLMServiceRequest vers 
 * group[=].element[=].target.equivalence = #equivalent
 // Informations pertinentes pour l'interprétation
 * group[=].element[+].code = #FRLMServiceRequest.supportingInformation[x]
-* group[=].element[=].target.code = #Observation.entryRelationship.observation
+* group[=].element[=].target.code = #Observation.entryRelationship
 * group[=].element[=].target.equivalence = #inexact
-* group[=].element[=].target.comment = "Le modèle métier FRLMServiceRequest.supportingInformation[x] correspond à la composante observation portée dans l'entrée CDA FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration alors que le type de l'élément entryRelationship.observation est uniquement Observation."
+* group[=].element[=].target.comment = "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration."
 // Prélèvement
 * group[=].element[+].code = #FRLMServiceRequest.specimen
 * group[=].element[=].target.code = #Observation.specimen
 * group[=].element[=].target.equivalence = #equivalent
 // Consultation à l'origine
 * group[=].element[+].code = #FRLMServiceRequest.encounter
-* group[=].element[=].target.code = #Observation.entryRelationship.encounter
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Observation.entryRelationship
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi ; la consultation à l'origine y est portée globalement."
 // Date ou période prévisionnelle
 * group[=].element[+].code = #FRLMServiceRequest.occurrence[x]
 * group[=].element[=].target.code = #Observation.effectiveTime
@@ -76,7 +79,7 @@ Description: "Mapping des éléments du modèle métier FRLMServiceRequest vers 
 * group[=].element[=].target.equivalence = #equivalent
 // Quantité demandée
 * group[=].element[+].code = #FRLMServiceRequest.quantity
-* group[=].element[=].target.code = #ServiceRequest.quantity
+* group[=].element[=].target.code = #ServiceRequest.quantity[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique
 * group[=].element[+].code = #FRLMServiceRequest.bodySite

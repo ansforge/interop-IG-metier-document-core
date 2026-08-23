@@ -4,8 +4,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMMultidrugResistantMicroorganismIdentification → FRCDAIdentificationMicroOrganismesMultiresistants / FRLMMultidrugResistantMicroorganismIdentification → FRObservationMultiresistantMicroorganismsIdentificationDocument"
 Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMicroorganismIdentification vers le profil CDA FRCDAIdentificationMicroOrganismesMultiresistants, puis vers le profil FHIR FRObservationMultiresistantMicroorganismsIdentificationDocument."
+* name = "FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : Identification de micro-organismes multirésistants"
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMultidrugResistantMicroorganismIdentification"
@@ -48,7 +50,7 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 
 // Date de création
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.header.date
-* group[=].element[=].target.code = #Observation.author.time
+* group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut
@@ -66,7 +68,7 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * group[=].element[=].target.equivalence = #unmatched
 
 // Date de l'observation
-* group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.observationDate
+* group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.header.date
 * group[=].element[=].target.code = #Observation.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -81,7 +83,7 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-multidrug-resistant-microorganism-identification"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMultidrugResistantMicroorganismIdentification"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-multiresistant-microorganism-document"
 
 // Élément racine
@@ -142,5 +144,5 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 
 // Valeur de l'observation
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.result
-* group[=].element[=].target.code = #Observation.valueString
+* group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.equivalence = #equivalent

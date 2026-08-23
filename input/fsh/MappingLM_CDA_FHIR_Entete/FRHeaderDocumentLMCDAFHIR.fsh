@@ -79,7 +79,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.comment = "Cf. FRPatientLMCDAFHIR."
 
 // Auteur
-* group[=].element[+].code = #FRLMHeaderDocument.author
+* group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #ClinicalDocument.author
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cf. FRAuthorLMCDAFHIR."
@@ -206,7 +206,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.comment = "Cf. FRPatientLMCDAFHIR."
 
 // Auteur
-* group[=].element[+].code = #FRLMHeaderDocument.author
+* group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #Composition.author
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cf. FRAuthorLMCDAFHIR."

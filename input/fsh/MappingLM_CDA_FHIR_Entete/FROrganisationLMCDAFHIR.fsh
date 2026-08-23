@@ -8,8 +8,10 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.)."""
 
+* name = "FROrganisationLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Structure\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
@@ -22,9 +24,16 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization."
 
+// sous-Groupe Mapping 1 : modèle métier → CDA (structure référencée par representedOrganization)
+// AssignedEntity.representedOrganization référence le profil CDA SÉPARÉ
+// fr-cda-represented-organization (racine Organization) ; ses sous-champs sont donc mappés
+// dans un groupe dédié .
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-organization"
+
 // Identifiant
 * group[=].element[+].code = #FRLMOrganisation.identifier
-* group[=].element[=].target.code = #AssignedEntity.representedOrganization.id
+* group[=].element[=].target.code = #Organization.id
 * group[=].element[=].target.equivalence = #equivalent
 
 // Type de structure
@@ -34,17 +43,17 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 
 // Nom
 * group[=].element[+].code = #FRLMOrganisation.name
-* group[=].element[=].target.code = #AssignedEntity.representedOrganization.name
+* group[=].element[=].target.code = #Organization.name
 * group[=].element[=].target.equivalence = #equivalent
 
 // Adresse
 * group[=].element[+].code = #FRLMOrganisation.address
-* group[=].element[=].target.code = #AssignedEntity.representedOrganization.addr
+* group[=].element[=].target.code = #Organization.addr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Télécom
 * group[=].element[+].code = #FRLMOrganisation.telecom
-* group[=].element[=].target.code = #AssignedEntity.representedOrganization.telecom
+* group[=].element[=].target.code = #Organization.telecom
 * group[=].element[=].target.equivalence = #equivalent
 
 // Organisation parente
@@ -54,7 +63,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
 
 // Secteur d'activité
 * group[=].element[+].code = #FRLMOrganisation.industrySector
-* group[=].element[=].target.code = #AssignedEntity.representedOrganization.standardIndustryClassCode
+* group[=].element[=].target.code = #Organization.standardIndustryClassCode
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR

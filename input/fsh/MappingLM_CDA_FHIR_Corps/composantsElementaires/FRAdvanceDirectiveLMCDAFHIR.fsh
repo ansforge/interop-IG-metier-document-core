@@ -129,22 +129,22 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective ver
 
 
 // Groupe Mapping 4 : pièce jointe (FRLMAttachment) → FHIR
-// fr-advance-directive-document contraint Consent.source[x] au seul type Attachment ;
-// les sous-éléments s'expriment donc via Consent.source[x].xxx (pas sourceAttachment.xxx).
+// Consent.source[x] est slicé (sourceReference / sourceAttachment) ; les sous-éléments
+// s'expriment donc via Consent.source[x]:sourceAttachment.xxx.
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document"
 
 /* Référence à un document externe */
 * group[=].element[+].code = #FRLMAttachment.url
-* group[=].element[=].target.code = #Consent.source[x].url
+* group[=].element[=].target.code = #Consent.source[x]:sourceAttachment.url
 * group[=].element[=].target.equivalence = #equivalent
 
 /* Identifiant document encapsulé */
 * group[=].element[+].code = #FRLMAttachment.header.identifier
-* group[=].element[=].target.code = #Consent.source[x].id
+* group[=].element[=].target.code = #Consent.source[x]:sourceAttachment.id
 * group[=].element[=].target.equivalence = #equivalent
 
 /* Document encapsulé encodé en Base64 */
 * group[=].element[+].code = #FRLMAttachment.data
-* group[=].element[=].target.code = #Consent.source[x].data
+* group[=].element[=].target.code = #Consent.source[x]:sourceAttachment.data
 * group[=].element[=].target.equivalence = #equivalent

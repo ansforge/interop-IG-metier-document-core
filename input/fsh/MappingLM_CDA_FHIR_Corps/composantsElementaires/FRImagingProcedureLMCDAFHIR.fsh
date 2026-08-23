@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMProcedure → FRCDADICOMTechniqueImagerie / FRLMProcedure → FRProcedureImagingDocument"
 Description: "Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDADICOMTechniqueImagerie, puis vers le profil FHIR FRProcedureImagingDocument."
+* name = "FRImagingProcedureLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Technique imagerie\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
@@ -31,13 +33,15 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.code = #Procedure.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Date de début de l'acte
-* group[=].element[+].code = #FRLMProcedure.procedureDateDateTime
-* group[=].element[=].target.code = #Procedure.effectiveTime.low
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMProcedure.procedureDate[x]:procedureDateDateTime
+* group[=].element[=].target.code = #Procedure.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
 // Date de fin de l'acte
-* group[=].element[+].code = #FRLMProcedure.procedureDatePeriod
-* group[=].element[=].target.code = #Procedure.effectiveTime.high
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMProcedure.procedureDate[x]:procedureDatePeriod
+* group[=].element[=].target.code = #Procedure.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
 // Priorité
 * group[=].element[+].code = #FRLMProcedure.priority
 * group[=].element[=].target.code = #Procedure.priorityCode
@@ -47,7 +51,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.code = #Procedure.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
 // précision topographique de la localisation anatomique
-* group[=].element[+].code = #FRLMProcedure.bodySite:FRLMBodyStructure.locationQualifier
+* group[=].element[+].code = #FRLMProcedure.bodySite
 * group[=].element[=].target.code = #Procedure.targetSiteCode.qualifier
 * group[=].element[=].target.equivalence = #equivalent
 // Voie d'abord
@@ -125,7 +129,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Exécutant
 * group[=].element[+].code = #FRLMProcedure.header.performer[x]
-* group[=].element[=].target.code = #Procedure.performer:Intervenant.actor
+* group[=].element[=].target.code = #Procedure.performer:intervenant.actor
 * group[=].element[=].target.equivalence = #equivalent
 // Auteur
 * group[=].element[+].code = #FRLMProcedure.header.author[x]

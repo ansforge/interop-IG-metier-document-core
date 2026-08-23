@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMConclusion → FRCDADICOMConclusion / FRLMConclusion → FRDiagnosticReportImagingDocument / FRLMConclusion → FRCompositionDocument.section:sectionImpression"
 Description: "Mapping des éléments du modèle métier FRLMConclusion vers la section CDA FRCDADICOMConclusion, puis vers le profil FHIR FRDiagnosticReportImagingDocument / FRCompositionDocument.section:sectionImpression."
+* name = "FRSectionConclusionLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Conclusion\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -49,6 +51,6 @@ Description: "Mapping des éléments du modèle métier FRLMConclusion vers la s
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // Élément racine
 * group[=].element[+].code = #FRLMConclusion
-* group[=].element[=].target.code = #Composition.section:sectionImpression
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = "FRCompositionDocument.section:sectionImpression"
 * group[=].element[=].target.equivalence = #equivalent

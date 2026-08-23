@@ -3,7 +3,9 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMAlerts → FRCDAPointsDeVigilancesNonCode / FRLMAlerts → FRCompositionDocument.section:sectionAlerts"
 Description: "Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPointsDeVigilancesNonCode, puis vers le profil FHIR FRCompositionDocument.section:alerts."
+* name = "FRSectionAlertsLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Points de vigilance\""
+* experimental = false
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
@@ -35,22 +37,22 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine
 * group[=].element[+].code = #FRLMAlerts
-* group[=].element[=].target[+].code = #Composition.section:sectionAlerts
+* group[=].element[=].target[+].code = #Composition.section
 * group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionAlerts"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMAlerts.codeSection
-* group[=].element[=].target[+].code = #Composition.section:sectionAlerts.code
+* group[=].element[=].target[+].code = #Composition.section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMAlerts.titleSection
-* group[=].element[=].target[+].code = #Composition.section:sectionAlerts.title
+* group[=].element[=].target[+].code = #Composition.section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMAlerts.description
-* group[=].element[=].target[+].code = #Composition.section:sectionAlerts.text
+* group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Points de vigilance
 * group[=].element[+].code = #FRLMAlerts.entry.alert
-* group[=].element[=].target[+].code = #Composition.section:sectionAlerts.entry:Flag
+* group[=].element[=].target[+].code = #Composition.section.entry
 * group[=].element[=].target[=].equivalence = #equivalent

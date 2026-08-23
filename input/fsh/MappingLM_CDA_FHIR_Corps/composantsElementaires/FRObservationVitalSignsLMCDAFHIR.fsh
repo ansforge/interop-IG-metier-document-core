@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMObservationVitalSign → FRCDASigneVitalObserve / FRLMObservationVitalSign → FRObservationVitalSignsDocument"
 Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profil CDA FRCDASigneVitalObserve, puis vers le profil FHIR FRObservationVitalSignsDocument."
+* name = "FRObservationVitalSignsLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Observation Vital Sign\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign"
@@ -51,7 +53,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.equivalence = #equivalent
 // Auteur
-* group[=].element[+].code = #FRLMObservationVitalSign.header.author
+* group[=].element[+].code = #FRLMObservationVitalSign.header.author[x]
 * group[=].element[=].target.code = #Observation.author
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -69,7 +71,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * group[=].element[=].target.equivalence = #equivalent
 // Date de l'observation
 * group[=].element[+].code = #FRLMObservationVitalSign.observationDate[x]
-* group[=].element[=].target.code = #Observation.effectiveDateTime
+* group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Type de l'entrée
 * group[=].element[+].code = #FRLMObservationVitalSign.type
@@ -100,6 +102,6 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * group[=].element[=].target.code = #Observation.note
 * group[=].element[=].target.equivalence = #equivalent
 // Auteur
-* group[=].element[+].code = #FRLMObservationVitalSign.header.author
+* group[=].element[+].code = #FRLMObservationVitalSign.header.author[x]
 * group[=].element[=].target.code = #Observation.extension:author
 * group[=].element[=].target.equivalence = #equivalent

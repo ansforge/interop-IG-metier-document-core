@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMSeries → FRCDADICOMSerieImagerie / FRLMSeries → FRImagingStudyDocument"
 Description: "Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument."
+* name = "FRImagingSeriesLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Série d'imagerie\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries"
@@ -40,7 +42,7 @@ Description: "Mapping des éléments du modèle métier FRLMSeries vers le profi
 * group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfInstances."
 // Endpoint de la série
 * group[=].element[+].code = #FRLMSeries.seriesEndpoint
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.text
+* group[=].element[=].target.code = #Act.entryRelationship.observation.text
 * group[=].element[=].target.equivalence = #relatedto
 // Date de début de la série
 * group[=].element[+].code = #FRLMSeries.started
@@ -48,35 +50,46 @@ Description: "Mapping des éléments du modèle métier FRLMSeries vers le profi
 * group[=].element[=].target.equivalence = #equivalent
 // SOP instance
 * group[=].element[+].code = #FRLMSeries.instanceSOP
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation
+* group[=].element[=].target.code = #Act.entryRelationship.observation
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Act.entryRelationship.observation référence le profil CDA FRCDADICOMSOPInstanceObservation ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
+
+// Sous-groupe de mapping : SOP instance (FRLMSOPInstance) → CDA FRCDADICOMSOPInstanceObservation
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation"
 // SOP instance - Identifiant
-* group[=].element[+].code = #FRLMSeries.instanceSOP.header.identifier
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.id
+* group[=].element[+].code = #FRLMSOPInstance.header.identifier
+* group[=].element[=].target.code = #Observation.id
 * group[=].element[=].target.equivalence = #equivalent
 // SOP instance - Classe SOP
-* group[=].element[+].code = #FRLMSeries.instanceSOP.sopClass
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.code
+* group[=].element[+].code = #FRLMSOPInstance.sopClass
+* group[=].element[=].target.code = #Observation.code
 * group[=].element[=].target.equivalence = #equivalent
 // SOP instance - Numéro d'instance
-* group[=].element[+].code = #FRLMSeries.instanceSOP.instanceNumber
+* group[=].element[+].code = #FRLMSOPInstance.instanceNumber
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour instanceNumber."
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour instanceNumber."
 // SOP instance - Nombre de frames
-* group[=].element[+].code = #FRLMSeries.instanceSOP.numberOfFrames
+* group[=].element[+].code = #FRLMSOPInstance.numberOfFrames
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfFrames."
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour numberOfFrames."
+
+// Sous-groupe de mapping : Endpoint (FRLMEndpoint) → CDA FRCDADICOMSOPInstanceObservation
+// FRLMSeries.seriesEndpoint référence FRLMEndpoint ; l'information WADO est portée par le
+// même Observation.text que la SOP instance dans FRCDADICOMSOPInstanceObservation.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation"
 // Endpoint - Connection type
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.connectionType
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.text.reference
+* group[=].element[+].code = #FRLMEndpoint.connectionType
+* group[=].element[=].target.code = #Observation.text.reference
 * group[=].element[=].target.equivalence = #relatedto
 // Endpoint - Payload type
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.payloadType
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.text.mediaType
+* group[=].element[+].code = #FRLMEndpoint.payloadType
+* group[=].element[=].target.code = #Observation.text.mediaType
 * group[=].element[=].target.equivalence = #relatedto
 // Endpoint - Adresse
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.address
-* group[=].element[=].target.code = #Act.entryRelationship:FRCDADICOMSOPInstanceObservation.text.reference
+* group[=].element[+].code = #FRLMEndpoint.address
+* group[=].element[=].target.code = #Observation.text.reference
 * group[=].element[=].target.equivalence = #relatedto
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -124,31 +137,41 @@ Description: "Mapping des éléments du modèle métier FRLMSeries vers le profi
 * group[=].element[+].code = #FRLMSeries.instanceSOP
 * group[=].element[=].target.code = #ImagingStudy.series.instance
 * group[=].element[=].target.equivalence = #equivalent
+
+// Sous-groupe de mapping : SOP instance (FRLMSOPInstance) → FHIR
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document"
 // SOP instance - Identifiant
-* group[=].element[+].code = #FRLMSeries.instanceSOP.header.identifier
+* group[=].element[+].code = #FRLMSOPInstance.header.identifier
 * group[=].element[=].target.code = #ImagingStudy.series.instance.uid
 * group[=].element[=].target.equivalence = #relatedto
 // SOP instance - Classe SOP
-* group[=].element[+].code = #FRLMSeries.instanceSOP.sopClass
+* group[=].element[+].code = #FRLMSOPInstance.sopClass
 * group[=].element[=].target.code = #ImagingStudy.series.instance.sopClass
 * group[=].element[=].target.equivalence = #equivalent
 // SOP instance - Numéro d'instance
-* group[=].element[+].code = #FRLMSeries.instanceSOP.instanceNumber
+* group[=].element[+].code = #FRLMSOPInstance.instanceNumber
 * group[=].element[=].target.code = #ImagingStudy.series.instance.number
 * group[=].element[=].target.equivalence = #equivalent
 // SOP instance - Nombre de frames
-* group[=].element[+].code = #FRLMSeries.instanceSOP.numberOfFrames
+* group[=].element[+].code = #FRLMSOPInstance.numberOfFrames
 * group[=].element[=].target.code = #ImagingStudy.series.instance.extension:number-of-frames
 * group[=].element[=].target.equivalence = #equivalent
+
+// Sous-groupe de mapping : Endpoint (FRLMEndpoint) → FHIR
+// ImagingStudy.series.endpoint est une simple Reference(Endpoint) non décomposée dans ce
+// profil ; ses attributs ne sont pas accessibles via un ElementDefinition dédié.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document"
 // Endpoint - Connection type
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.connectionType
-* group[=].element[=].target.code = #ImagingStudy.series.endpoint.connectionType
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMEndpoint.connectionType
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; connectionType n'est pas accessible sans résoudre la référence."
 // Endpoint - Payload type
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.payloadType
-* group[=].element[=].target.code = #ImagingStudy.series.endpoint.payloadType
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMEndpoint.payloadType
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; payloadType n'est pas accessible sans résoudre la référence."
 // Endpoint - Adresse
-* group[=].element[+].code = #FRLMSeries.seriesEndpoint.address
-* group[=].element[=].target.code = #ImagingStudy.series.endpoint.address
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMEndpoint.address
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; address n'est pas accessible sans résoudre la référence."

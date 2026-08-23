@@ -3,8 +3,10 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMObservationAssessment → FRCDAEvaluation / FRLMObservationAssessment → FRObservationAssessmentDocument"
 Description: "Mapping des éléments du modèle métier FRLMObservationAssessment vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationAssessmentDocument."
+* name = "FRObservationAssessmentLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Assessment (Evaluation)\""
 * status = #draft
+* experimental = false
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-evaluation"
@@ -34,7 +36,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationAssessmen
 * group[=].element[=].target.equivalence = #unmatched
 // Site de l'évaluation
 * group[=].element[+].code = #FRLMObservationAssessment.bodySite
-* group[=].element[=].target.code = #FRLMObservationAssessment.targetSiteCode
+* group[=].element[=].target.code = #Observation.targetSiteCode
 * group[=].element[=].target.equivalence = #equivalent
 // Valeur de l'évaluation
 * group[=].element[+].code = #FRLMObservationAssessment.result
@@ -72,7 +74,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationAssessmen
 * group[=].element[=].target.equivalence = #equivalent
 // Date
 * group[=].element[+].code = #FRLMObservationAssessment.observationDate[x]
-* group[=].element[=].target.code = #Observation.effectiveDateTime
+* group[=].element[=].target.code = #Observation.effective[x]
 * group[=].element[=].target.equivalence = #equivalent
 // type d'évaluation
 * group[=].element[+].code = #FRLMObservationAssessment.type

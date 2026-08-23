@@ -8,8 +8,10 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.)."""
 
+* name = "FRRelatedPersonLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Personne liée au patient\""
 * status = #draft
+* experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson"
@@ -28,20 +30,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 
 // Nom
 * group[=].element[+].code = #FRLMRelatedPerson.name
-* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.family
-* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.family
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.given
-* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.given
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.prefix
-* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.prefix
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.suffix
-* group[=].element[=].target.code = #RelatedEntity.relatedPerson.name.suffix
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous."
 
 // Patient / usager concerné
 * group[=].element[+].code = #FRLMRelatedPerson.subject
@@ -86,6 +76,41 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * group[=].element[=].target.equivalence = #unmatched
 * group[=].element[=].target.comment = "Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity."
 
+// Sous-groupe de mapping : modèle métier → CDA (personne physique référencée par relatedPerson)
+// RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; le nom
+// y est donc mappé dans un groupe dédié dont le target system est fr-cda-assigned-person.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person"
+// Nom
+* group[=].element[+].code = #FRLMRelatedPerson.name
+* group[=].element[=].target.code = #Person.name
+* group[=].element[=].target.equivalence = #equivalent
+
+// Sous-groupe de mapping : modèle métier → CDA (nom référencé par FRLMHumanName)
+// FRLMRelatedPerson.name référence le type métier séparé FRLMHumanName, et Person.name
+// référence à son tour le profil CDA SÉPARÉ fr-cda-name ; ses sous-champs sont donc mappés
+// dans un groupe dédié dont le target system est fr-cda-name.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name"
+* group[=].element[+].code = #FRLMHumanName.use
+* group[=].element[=].target.code = #PN.use
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.family
+* group[=].element[=].target.code = #PN.item.family
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.given
+* group[=].element[=].target.code = #PN.item.given
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.prefix
+* group[=].element[=].target.code = #PN.item.prefix
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.suffix
+* group[=].element[=].target.code = #PN.item.suffix
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.period
+* group[=].element[=].target.code = #PN.validTime
+* group[=].element[=].target.equivalence = #equivalent
+
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document"
@@ -103,18 +128,6 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 // Nom
 * group[=].element[+].code = #FRLMRelatedPerson.name
 * group[=].element[=].target.code = #RelatedPerson.name
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.family
-* group[=].element[=].target.code = #RelatedPerson.name.family
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.given
-* group[=].element[=].target.code = #RelatedPerson.name.given
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.prefix
-* group[=].element[=].target.code = #RelatedPerson.name.prefix
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMRelatedPerson.name.suffix
-* group[=].element[=].target.code = #RelatedPerson.name.suffix
 * group[=].element[=].target.equivalence = #equivalent
 
 // Patient / usager concerné
@@ -177,4 +190,22 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #FRLMRelatedPerson.communication.preferred
 * group[=].element[=].target.code = #RelatedPerson.communication.preferred
+* group[=].element[=].target.equivalence = #equivalent
+
+// Sous-groupe de mapping : modèle métier → FHIR (nom référencé par FRLMHumanName)
+// FRLMRelatedPerson.name référence le type métier séparé FRLMHumanName ; ses sous-champs
+// sont donc mappés dans un groupe dédié.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
+* group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document"
+* group[=].element[+].code = #FRLMHumanName.family
+* group[=].element[=].target.code = #RelatedPerson.name.family
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.given
+* group[=].element[=].target.code = #RelatedPerson.name.given
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.prefix
+* group[=].element[=].target.code = #RelatedPerson.name.prefix
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #FRLMHumanName.suffix
+* group[=].element[=].target.code = #RelatedPerson.name.suffix
 * group[=].element[=].target.equivalence = #equivalent
