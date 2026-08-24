@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
   "title" : "Mapping Métier/CDA/FHIR : \"Historique des grossesses\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,14 +73,14 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
     {
       "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frObservationSurLaGrossesse.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frHistoriqueDeLaGrossesse.organizer",
         "equivalence" : "equivalent"
       }]
     },
@@ -129,6 +129,7 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
       "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRObservationPregnancyDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -136,6 +137,7 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
       "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRObservationPregnancyHistoryDocument",
         "equivalence" : "equivalent"
       }]
     },

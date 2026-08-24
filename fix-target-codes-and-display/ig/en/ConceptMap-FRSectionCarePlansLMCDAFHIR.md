@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -74,7 +74,8 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
       "code" : "FRLMCarePlans.entry.carePlans",
       "target" : [{
         "code" : "Section.entry",
-        "equivalence" : "equivalent"
+        "equivalence" : "inexact",
+        "comment" : "Selon le type d'activité portée par FRLMCarePlan.activity, l'entrée CDA concrète est l'une des slices : Section.entry:frActe, :frDemandeDexamenOuDeSuivi, :frTraitement, :frVaccinRecommande ou :frRencontre."
       }]
     }]
   },
@@ -113,10 +114,11 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
       }]
     },
     {
-      "code" : "Section.entry",
+      "code" : "FRLMCarePlans.entry.carePlans",
       "target" : [{
         "code" : "Composition.section.entry",
-        "equivalence" : "equivalent"
+        "equivalence" : "inexact",
+        "comment" : "Selon le type d'activité portée par FRLMCarePlan.activity, la ressource FHIR concrète référencée est l'une de : FRProcedureDocument, FRServiceRequestDocument, FRMedicationRequestDocument, FRImmunizationDocument ou FREncounterDocument."
       }]
     }]
   }]

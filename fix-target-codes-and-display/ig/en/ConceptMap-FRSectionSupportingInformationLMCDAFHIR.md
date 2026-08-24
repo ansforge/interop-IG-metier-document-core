@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,32 +81,32 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
         "code" : "Section.entry.observation",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry.observation porte les antécédents médicaux."
+        "display" : "FRCDASimpleObservation",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
         "code" : "Section.entry.observation",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry.observation porte les antécédents chirurgicaux."
+        "display" : "FRCDASimpleObservation",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
         "code" : "Section.entry.observation",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry.observation porte le statut de grossesse."
+        "display" : "FRCDAObservationSurLaGrossesse",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
         "code" : "Section.entry.observation",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry.observation porte les contre-indications."
+        "display" : "FRCDASimpleObservation",
+        "equivalence" : "equivalent"
       }]
     },
     {
@@ -176,6 +176,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.previousResultsInformation",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
@@ -183,6 +184,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
@@ -190,6 +192,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
@@ -197,6 +200,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRObservationContraIndicationsDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -204,6 +208,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -218,6 +223,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRObservationPregnancyDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -277,7 +283,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
         "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRObservationContraIndicationsImagingDocument."
+        "comment" : "Cas où value[x] référence un FRObservationContraIndicationsDocument."
       }]
     },
     {
@@ -293,7 +299,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
         "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRDeviceAuteurDocument."
+        "comment" : "Cas où value[x] référence un FRDeviceUseStatementDocument."
       }]
     },
     {

@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
   "title" : "Mapping Métier/CDA/FHIR : \"Résultats\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,41 +39,42 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationResults",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-resultats",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationResults",
       "target" : [{
-        "code" : "Organizer",
-        "display" : "FRCDAResultats",
+        "code" : "Section",
+        "display" : "FRCDASectionResultats",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.codeSection",
       "target" : [{
-        "code" : "Organizer.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.titleSection",
       "target" : [{
-        "code" : "Organizer.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.description",
       "target" : [{
-        "code" : "Organizer.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationResults.entry.observationResult",
       "target" : [{
-        "code" : "Organizer.entry",
+        "code" : "Section.entry",
+        "display" : "FRCDAResultats",
         "equivalence" : "equivalent"
       }]
     }]
@@ -116,14 +117,7 @@ Mapping des éléments du modèle métier FRLMObservationResults vers la section
       "code" : "FRLMObservationResults.entry.observationResult",
       "target" : [{
         "code" : "Composition.section.entry",
-        "equivalence" : "equivalent"
-      },
-      {
-        "code" : "Composition.section.entry",
-        "equivalence" : "equivalent"
-      },
-      {
-        "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     }]

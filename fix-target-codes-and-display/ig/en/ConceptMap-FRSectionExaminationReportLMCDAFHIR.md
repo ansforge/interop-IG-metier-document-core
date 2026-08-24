@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
   "title" : "Mapping Métier/CDA/FHIR : \"Acte d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -137,22 +137,23 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
         "code" : "Composition.section.entry",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry référence un FRProcedureImagingDocument."
+        "display" : "FRProcedureImagingDocument",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
         "code" : "Composition.section.entry",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où entry référence un FRMedicationAdministrationDocument (partOf du FRProcedureImagingDocument)."
+        "display" : "FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.adverseReactions",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRAllergyIntoleranceDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -165,8 +166,8 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
       },
       {
         "code" : "Composition.section.entry",
-        "equivalence" : "equivalent",
-        "comment" : "Cible structuree pour les resultats codes/observations dans la section Findings."
+        "display" : "Observation",
+        "equivalence" : "equivalent"
       }]
     }]
   },

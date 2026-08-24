@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la secti
   "title" : "Mapping Métier/CDA/FHIR : \"Antécédents familiaux\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,41 +39,42 @@ Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la secti
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedents-familiaux",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-antecedents-familiaux",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMFamilyMedicalHistory",
       "target" : [{
-        "code" : "Organizer",
-        "display" : "FRCDAAntecedentsFamiliaux",
+        "code" : "Section",
+        "display" : "FRCDASectionAntecedentsFamiliaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.codeSection",
       "target" : [{
-        "code" : "Organizer.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.titleSection",
       "target" : [{
-        "code" : "Organizer.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.description",
       "target" : [{
-        "code" : "Organizer.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.entry.familyMemberHistory",
       "target" : [{
-        "code" : "Organizer.entry",
+        "code" : "Section.entry",
+        "display" : "FRCDAAntecedentsFamiliaux",
         "equivalence" : "equivalent"
       }]
     }]
@@ -116,6 +117,7 @@ Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la secti
       "code" : "FRLMFamilyMedicalHistory.entry.familyMemberHistory",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRFamilyMemberHistoryDocument",
         "equivalence" : "equivalent"
       }]
     }]

@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Historique de la grossesse\"",
   "status" : "draft",
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
   "title" : "Mapping Métier/CDA/FHIR : \"Série d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -94,8 +94,9 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
     {
       "code" : "FRLMSeries.seriesEndpoint",
       "target" : [{
-        "code" : "Act.entryRelationship.observation.text",
-        "equivalence" : "relatedto"
+        "code" : "Act.entryRelationship.observation",
+        "equivalence" : "relatedto",
+        "comment" : "seriesEndpoint référence un FRLMEndpoint ; ses sous-champs sont mappés dans le sous-groupe Endpoint ci-dessous (Observation.text.reference/.mediaType)."
       }]
     },
     {

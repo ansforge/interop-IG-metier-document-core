@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription de médicaments\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,6 +81,7 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
       "code" : "FRLMMedicationPrescription.entry.prescriptionItem",
       "target" : [{
         "code" : "Section.entry",
+        "display" : "FRCDATraitementPrescrit",
         "equivalence" : "equivalent"
       }]
     }]
@@ -130,6 +131,7 @@ Mapping des éléments du modèle métier FRLMMedicationPrescription vers la sec
       "code" : "FRLMMedicationPrescription.entry.prescriptionItem",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRMedicationRequestDocument",
         "equivalence" : "equivalent"
       }]
     }]

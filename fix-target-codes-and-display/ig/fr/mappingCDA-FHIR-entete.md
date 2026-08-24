@@ -10,8 +10,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | :--- | :--- | :--- |
 | Modèle métier | CDA | FHIR |
 | **FRLMHeaderDocument** | **ClinicalDocument** |  |
-| FRLMHeaderDocument.identifier:document | ClinicalDocument.id | Bundle.identifier |
-| FRLMHeaderDocument.identifier:versionSet | ClinicalDocument.setId | Composition.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.id | Bundle.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.id | Composition.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.setId | Bundle.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.setId | Composition.identifier |
 | FRLMHeaderDocument.documentType | ClinicalDocument.code | Composition.type |
 | FRLMHeaderDocument.documentTitle | ClinicalDocument.title | Composition.title |
 | FRLMHeaderDocument.date | ClinicalDocument.effectiveTime | Composition.date |
@@ -32,10 +34,12 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.order | ClinicalDocument.inFulfillmentOf | Composition.extension:basedOn |
 | FRLMHeaderDocument.consent | ClinicalDocument.authorization | Composition.extension:consent |
 | FRLMHeaderDocument.encounter | ClinicalDocument.componentOf | Composition.encounter |
-| **FRLMAttester** | **authenticator** | Composition.attester |
+| **FRLMAttester** | **authenticator** | **Composition.attester** |
 | FRLMAttester.dateTime | Authenticator.time | Composition.attester.time |
-| FRLMAttester.attester[x]:healthProfessional | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMAttester.attester[x]:device | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
 | FRLMHeaderDocument.author[x] | **author** | Composition.author |
 | FRLMHeaderDocument.author[x] | **author** | Composition.author |
 | FRLMHeaderDocument.author[x] | **author** | Composition.author |
@@ -63,8 +67,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMOrganisation.telecom | CustodianOrganization.telecom |  |
 | **FRLMDataEnterer** | **dataEnterer** | **Extension** |
 | FRLMDataEnterer.date | DataEnterer.time | Extension.extension:time.value[x] |
-| FRLMDataEnterer.dataEnterer[x]:healthProfessional | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
-| FRLMDataEnterer.dataEnterer[x]:patient | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
 | **FRLMHealthProfessional** | **assignedEntity** | **PractitionerRole** |
 | **FRLMHealthProfessional** | **assignedEntity** | **Practitioner** |
 | FRLMHealthProfessional.identifier | AssignedEntity.id | Practitioner.identifier |
@@ -84,27 +90,41 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | **FRLMInformant** | **informant** | **Extension** |
 | FRLMInformant.informant[x].informantProfessional | Informant.assignedEntity | Extension.extension:party.value[x] |
 | FRLMInformant.informant[x].informantOrganisation | Informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant[x].informantPersonne[x]:patient | Informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant[x].informantPersonne[x]:relatedPerson | Informant.relatedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
 | **FRLMIntendedRecipient** | **informationRecipient** | **Extension** |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| **FRLMLegalAuthentication** | **legalAuthenticator** | Composition.attester |
+| **FRLMLegalAuthentication** | **legalAuthenticator** | **Composition.attester** |
 | FRLMLegalAuthentication.dateTime | LegalAuthenticator.time | Composition.attester.time |
-| FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x]:patient | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x]:device | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x]:organisation | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
 | **FRLMOrder** | **inFulfillmentOf** | **ServiceRequest** |
 | FRLMOrder.orderDateAndTime |  | ServiceRequest.authoredOn |
 | FRLMOrder.orderPlacer[x] |  | ServiceRequest.requester |
 | FRLMOrder.orderReason[x] |  | ServiceRequest.reasonCode |
 | FRLMOrder.orderId | Order.id | ServiceRequest.identifier |
 | FRLMOrder.accessionNumber |  | ServiceRequest.identifier |
-| **FRLMOrganisation** | assignedEntity.representedOrganization | **Organization** |
+| **FRLMOrganisation** | AssignedEntity.representedOrganization (assignedEntity.representedOrganization) | **Organization** |
 | FRLMOrganisation.identifier | Organization.id | Organization.identifier |
 | FRLMOrganisation.type |  | Organization.type |
 | FRLMOrganisation.name | Organization.name | Organization.name |
@@ -129,10 +149,14 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPatient.name | Patient.name | Patient.name:usualName |
 | FRLMPatient.administrativeGender | Patient.administrativeGenderCode | Patient.gender |
 | FRLMPatient.dateOfBirth | Patient.birthTime | Patient.birthDate |
-| FRLMPatient.deceased[x]:deceasedBoolean | Patient.sdtcDeceasedInd | Patient.deceased[x] |
-| FRLMPatient.deceased[x]:deceasedDateTime | Patient.sdtcDeceasedTime | Patient.deceased[x] |
-| FRLMPatient.multipleBirth[x]:multipleBirthBoolean | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
-| FRLMPatient.multipleBirth[x]:multipleBirthInteger | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedTime | Patient.deceased[x] |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedTime | Patient.deceased[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
 | FRLMPatient.birthPlace | Patient.birthplace | Patient.extension:birthPlace |
 | FRLMPatient.contact | Patient.guardian | Patient.contact |
 | FRLMPatient.contact.address | Patient.guardian | Patient.contact.address |

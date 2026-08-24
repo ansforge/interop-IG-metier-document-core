@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
   "title" : "Mapping Métier/CDA/FHIR : \"Raison de la recommandation\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,14 +73,14 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
     {
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frSimpleObservation.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frProbleme.observation",
         "equivalence" : "equivalent"
       }]
     }]
@@ -123,6 +123,7 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
@@ -130,6 +131,7 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     }]

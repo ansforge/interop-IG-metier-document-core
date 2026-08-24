@@ -384,10 +384,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <!--solution 2 -->
 <table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMHeaderDocument</strong></p>
 </div></td><td><div><p><strong>ClinicalDocument</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier:document</p>
+</div></td><td /></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
 </div></td><td><div><p>ClinicalDocument.id</p>
 </div></td><td><div><p>Bundle.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMHeaderDocument.identifier:versionSet</p>
+</div></td></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>ClinicalDocument.id</p>
+</div></td><td><div><p>Composition.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
+</div></td><td><div><p>ClinicalDocument.setId</p>
+</div></td><td><div><p>Bundle.identifier</p>
+</div></td></tr><tr><td><div><p>FRLMHeaderDocument.identifier</p>
 </div></td><td><div><p>ClinicalDocument.setId</p>
 </div></td><td><div><p>Composition.identifier</p>
 </div></td></tr><tr><td><div><p>FRLMHeaderDocument.documentType</p>
@@ -453,14 +459,20 @@ serviceEvent.lab:statusCode</p>
 </div></td><td><div><p>Composition.encounter</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAttester</strong></p>
 </div></td><td><div><p><strong>authenticator</strong></p>
-</div></td><td><div><p>Composition.attester</p>
+</div></td><td><div><p><strong>Composition.attester</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAttester.dateTime</p>
 </div></td><td><div><p>Authenticator.time</p>
 </div></td><td><div><p>Composition.attester.time</p>
-</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]:healthProfessional</p>
+</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]</p>
 </div></td><td><div><p>Authenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
-</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]:device</p>
+</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]</p>
+</div></td><td><div><p>Authenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]</p>
+</div></td><td><div><p>Authenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMAttester.attester[x]</p>
 </div></td><td><div><p>Authenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
 </div></td></tr><tr><td><div><p>FRLMHeaderDocument.author[x]</p>
@@ -540,10 +552,16 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMDataEnterer.date</p>
 </div></td><td><div><p>DataEnterer.time</p>
 </div></td><td><div><p>Extension.extension:time.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]:healthProfessional</p>
+</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]</p>
 </div></td><td><div><p>DataEnterer.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]:patient</p>
+</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]</p>
+</div></td><td><div><p>DataEnterer.assignedEntity</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]</p>
+</div></td><td><div><p>DataEnterer.assignedEntity</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td></tr><tr><td><div><p>FRLMDataEnterer.dataEnterer[x]</p>
 </div></td><td><div><p>DataEnterer.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHealthProfessional</strong></p>
@@ -599,10 +617,16 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantOrganisation</p>
 </div></td><td><div><p>Informant.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]:patient</p>
+</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]</p>
 </div></td><td><div><p>Informant.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]:relatedPerson</p>
+</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]</p>
+</div></td><td><div><p>Informant.assignedEntity</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]</p>
+</div></td><td><div><p>Informant.relatedEntity</p>
+</div></td><td><div><p>Extension.extension:party.value[x]</p>
+</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]</p>
 </div></td><td><div><p>Informant.relatedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p><strong>FRLMIntendedRecipient</strong></p>
@@ -625,20 +649,56 @@ serviceEvent.lab:statusCode</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p><strong>FRLMLegalAuthentication</strong></p>
 </div></td><td><div><p><strong>legalAuthenticator</strong></p>
-</div></td><td><div><p>Composition.attester</p>
+</div></td><td><div><p><strong>Composition.attester</strong></p>
 </div></td></tr><tr><td><div><p>FRLMLegalAuthentication.dateTime</p>
 </div></td><td><div><p>LegalAuthenticator.time</p>
 </div></td><td><div><p>Composition.attester.time</p>
-</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
 </div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
-</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]:patient</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
 </div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
-</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]:device</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
 </div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
-</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]:organisation</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
+</div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
+</div></td><td><div><p>Composition.attester.party</p>
+</div></td></tr><tr><td><div><p>FRLMLegalAuthentication.legalAuthenticator[x]</p>
 </div></td><td><div><p>LegalAuthenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
 </div></td></tr><tr><td><div><p><strong>FRLMOrder</strong></p>
@@ -656,7 +716,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMOrder.accessionNumber</p>
 </div></td><td /><td><div><p>ServiceRequest.identifier</p>
 </div></td></tr><tr><td><div><p><strong>FRLMOrganisation</strong></p>
-</div></td><td><div><p>assignedEntity.representedOrganization</p>
+</div></td><td><div><p>AssignedEntity.representedOrganization (assignedEntity.representedOrganization)</p>
 </div></td><td><div><p><strong>Organization</strong></p>
 </div></td></tr><tr><td><div><p>FRLMOrganisation.identifier</p>
 </div></td><td><div><p>Organization.id</p>
@@ -728,16 +788,28 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMPatient.dateOfBirth</p>
 </div></td><td><div><p>Patient.birthTime</p>
 </div></td><td><div><p>Patient.birthDate</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]:deceasedBoolean</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]</p>
 </div></td><td><div><p>Patient.sdtcDeceasedInd</p>
 </div></td><td><div><p>Patient.deceased[x]</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]:deceasedDateTime</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]</p>
+</div></td><td><div><p>Patient.sdtcDeceasedInd</p>
+</div></td><td><div><p>Patient.deceased[x]</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]</p>
 </div></td><td><div><p>Patient.sdtcDeceasedTime</p>
 </div></td><td><div><p>Patient.deceased[x]</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]:multipleBirthBoolean</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.deceased[x]</p>
+</div></td><td><div><p>Patient.sdtcDeceasedTime</p>
+</div></td><td><div><p>Patient.deceased[x]</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]</p>
 </div></td><td><div><p>Patient.sdtcMultipleBirthInd</p>
 </div></td><td><div><p>Patient.multipleBirth[x]</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]:multipleBirthInteger</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]</p>
+</div></td><td><div><p>Patient.sdtcMultipleBirthInd</p>
+</div></td><td><div><p>Patient.multipleBirth[x]</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]</p>
+</div></td><td><div><p>Patient.sdtcMultipleBirthOrderNumber</p>
+</div></td><td><div><p>Patient.multipleBirth[x]</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.multipleBirth[x]</p>
 </div></td><td><div><p>Patient.sdtcMultipleBirthOrderNumber</p>
 </div></td><td><div><p>Patient.multipleBirth[x]</p>
 </div></td></tr><tr><td><div><p>FRLMPatient.birthPlace</p>
@@ -874,8 +946,8 @@ item.given</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-08-23 21:45:00 +0000">
-    2026-08-23
+  <span title="2026-08-24 13:13:00 +0000">
+    2026-08-24
   </span>
 
           <br/>

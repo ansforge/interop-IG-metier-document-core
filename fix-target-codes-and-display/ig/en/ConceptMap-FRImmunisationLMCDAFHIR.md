@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccination\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -50,7 +50,7 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
       }]
     },
     {
-      "code" : "FRLMImmunisation.identifiant",
+      "code" : "FRLMImmunisation.header.identifier",
       "target" : [{
         "code" : "SubstanceAdministration.id",
         "equivalence" : "equivalent"
@@ -73,15 +73,17 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.startDate",
       "target" : [{
-        "code" : "SubstanceAdministration.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "SubstanceAdministration.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime n'est pas décomposé en low/high dans ce profil ; startDate correspond à la borne basse de l'intervalle."
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.endDate",
       "target" : [{
-        "code" : "SubstanceAdministration.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "SubstanceAdministration.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime n'est pas décomposé en low/high dans ce profil ; endDate correspond à la borne haute de l'intervalle."
       }]
     },
     {
@@ -94,7 +96,8 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     {
       "code" : "FRLMImmunisation.administeredProduct",
       "target" : [{
-        "code" : "SubstanceAdministration.consumable:FRCDAProduitDeSante",
+        "code" : "SubstanceAdministration.consumable",
+        "display" : "FRCDAProduitDeSante",
         "equivalence" : "equivalent"
       }]
     },
@@ -169,7 +172,7 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
       }]
     },
     {
-      "code" : "FRLMImmunisation.identifiant",
+      "code" : "FRLMImmunisation.header.identifier",
       "target" : [{
         "code" : "Immunization.identifier",
         "equivalence" : "equivalent"
@@ -185,22 +188,23 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     {
       "code" : "FRLMImmunisation.periodOfImmunisation",
       "target" : [{
-        "code" : "Immunization.occurrencePeriod",
-        "equivalence" : "equivalent"
+        "code" : "Immunization.occurrence[x]",
+        "equivalence" : "wider",
+        "comment" : "occurrence[x] est restreint à dateTime dans ce profil (pas de Period)."
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.startDate",
       "target" : [{
-        "code" : "Immunization.occurrencePeriod.start",
+        "code" : "Immunization.occurrence[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.endDate",
       "target" : [{
-        "code" : "Immunization.occurrencePeriod.end",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "occurrence[x] est restreint à dateTime dans ce profil ; aucune date de fin ne peut être portée."
       }]
     },
     {

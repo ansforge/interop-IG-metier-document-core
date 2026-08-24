@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
   "title" : "Mapping Métier/CDA/FHIR : \"Education du patient\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,21 +73,21 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
     {
       "code" : "FRLMPatientEducation.entry.procedure",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frActe.procedure",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatientEducation.entry.observation",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frSimpleObservation.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPatientEducation.entry.reference",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frReferencesExternes.act",
         "equivalence" : "equivalent"
       }]
     }]
@@ -130,6 +130,7 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
       "code" : "FRLMPatientEducation.entry.procedure",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRProcedureDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -137,6 +138,7 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
       "code" : "FRLMPatientEducation.entry.observation",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
@@ -144,6 +146,7 @@ Mapping des éléments du modèle métier FRLMPatientEducation vers la section C
       "code" : "FRLMPatientEducation.entry.reference",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     }]

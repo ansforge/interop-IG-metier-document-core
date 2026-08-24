@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
   "title" : "Mapping Métier/CDA/FHIR : \"Documents ajoutés\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,14 +73,14 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
     {
       "code" : "FRLMAttachments.entry.attachment",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frDocumentAttache",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.entry.observation",
       "target" : [{
-        "code" : "Section.entry",
+        "code" : "Section.entry:frSimpleObservation",
         "equivalence" : "equivalent"
       }]
     }]
@@ -120,16 +120,18 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:FRLMAttachment",
+      "code" : "FRLMAttachments.entry.attachment",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:FRLMObservation",
+      "code" : "FRLMAttachments.entry.observation",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     }]

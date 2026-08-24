@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -107,31 +107,35 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.deceased[x]:deceasedBoolean",
+      "code" : "FRLMPatient.deceased[x]",
       "target" : [{
         "code" : "Patient.sdtcDeceasedInd",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où deceased[x] est de type boolean."
       }]
     },
     {
-      "code" : "FRLMPatient.deceased[x]:deceasedDateTime",
+      "code" : "FRLMPatient.deceased[x]",
       "target" : [{
         "code" : "Patient.sdtcDeceasedTime",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où deceased[x] est de type dateTime."
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthBoolean",
+      "code" : "FRLMPatient.multipleBirth[x]",
       "target" : [{
         "code" : "Patient.sdtcMultipleBirthInd",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où multipleBirth[x] est de type boolean."
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthInteger",
+      "code" : "FRLMPatient.multipleBirth[x]",
       "target" : [{
         "code" : "Patient.sdtcMultipleBirthOrderNumber",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où multipleBirth[x] est de type integer."
       }]
     },
     {
@@ -284,35 +288,35 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.deceased[x]:deceasedBoolean",
+      "code" : "FRLMPatient.deceased[x]",
       "target" : [{
         "code" : "Patient.deceased[x]",
         "equivalence" : "equivalent",
-        "comment" : "Valeur booléenne de deceased[x]."
+        "comment" : "Cas où deceased[x] est de type boolean."
       }]
     },
     {
-      "code" : "FRLMPatient.deceased[x]:deceasedDateTime",
+      "code" : "FRLMPatient.deceased[x]",
       "target" : [{
         "code" : "Patient.deceased[x]",
         "equivalence" : "equivalent",
-        "comment" : "Valeur dateTime de deceased[x]."
+        "comment" : "Cas où deceased[x] est de type dateTime."
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthBoolean",
+      "code" : "FRLMPatient.multipleBirth[x]",
       "target" : [{
         "code" : "Patient.multipleBirth[x]",
         "equivalence" : "equivalent",
-        "comment" : "Valeur booléenne de multipleBirth[x]."
+        "comment" : "Cas où multipleBirth[x] est de type boolean."
       }]
     },
     {
-      "code" : "FRLMPatient.multipleBirth[x]:multipleBirthInteger",
+      "code" : "FRLMPatient.multipleBirth[x]",
       "target" : [{
         "code" : "Patient.multipleBirth[x]",
         "equivalence" : "equivalent",
-        "comment" : "Valeur integer de multipleBirth[x]."
+        "comment" : "Cas où multipleBirth[x] est de type integer."
       }]
     },
     {

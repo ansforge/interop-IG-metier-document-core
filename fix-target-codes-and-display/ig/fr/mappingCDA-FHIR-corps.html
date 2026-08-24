@@ -288,7 +288,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="mapping-des-sections-entre--modèle-métier--cda--fhir">Mapping des sections entre : Modèle métier / CDA / FHIR</h3>
 <table class="lines"><tr><td style="background-color: #eeeeee">Modèle métier</td><td style="background-color: #eeeeee">CDA</td><td style="background-color: #eeeeee">FHIR</td></tr><tr><td><div><p><strong>FRLMAddendum</strong></p>
 </div></td><td><div><p><strong>FRCDADicomAddendum</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAddendum</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAddendum)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAddendum.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -303,7 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.author</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAdvanceDirectives</strong></p>
 </div></td><td><div><p><strong>FRCDADirectivesAnticipees</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAdvanceDirectives</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAdvanceDirectives)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAdvanceDirectives.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -315,10 +315,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAdvanceDirectives.entry.advanceDirective</p>
 </div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRAdvanceDirectiveDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAlerts</strong></p>
 </div></td><td><div><p><strong>FRCDAPointsDeVigilancesNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAlerts</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAlerts)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAlerts.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -329,10 +329,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAlerts.entry.alert</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (Flag)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAllergiesAndIntolerances</strong></p>
 </div></td><td><div><p><strong>FRCDAAllergiesEtHypersensibilites</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAllergiesAndIntolerances</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAllergiesAndIntolerances)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAllergiesAndIntolerances.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -343,11 +343,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAllergiesAndIntolerances.entry.allergieIntolerance</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAAllergieOuHypersensibilite)</p>
+</div></td><td><div><p>Composition.section.entry (FRAllergyIntoleranceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAttachments</strong></p>
 </div></td><td><div><p><strong>FRCDADocumentsAjoutes</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAttachments</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAttachments)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAttachments.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -358,12 +358,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAttachments.entry.attachment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p>FRLMAttachments.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMCarePlans</strong></p>
+</div></td><td><div><p>Section.entry:frDocumentAttache</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
+</div></td></tr><tr><td><div><p>FRLMAttachments.entry.observation</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
+</div></td></tr><tr><td><div><p><strong>FRLMCarePlans</strong></p>
 </div></td><td><div><p><strong>FRCDAPlanDeSoins</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPlanOfCare</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPlanOfCare)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMCarePlans.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -375,9 +377,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMCarePlans.entry.carePlans</p>
 </div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMComparisonStudy</strong></p>
+</div></td><td><div><p>Composition.section.entry</p>
+</div></td></tr><tr><td><div><p><strong>FRLMComparisonStudy</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMExamenComparatif</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionComparison</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionComparison)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMComparisonStudy.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -389,10 +392,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p><strong>FRLMConclusion</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMConclusion</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.conclusion</p>
+</div></td><td><div><p><strong>DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)</strong></p>
 </div></td></tr><tr><td><div><p><strong>FRLMConclusion</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMConclusion</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImpression</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImpression)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMConclusion.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td /></tr><tr><td><div><p>FRLMConclusion.description</p>
@@ -403,7 +406,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td /><td><div><p>DiagnosticReport.result</p>
 </div></td></tr><tr><td><div><p><strong>FRLMDicomStudyMetadata</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMObjectCatalog</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImagingStudy</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImagingStudy)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMDicomStudyMetadata.titleSection</p>
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
@@ -414,8 +417,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMDicomStudyMetadata.entry.imagingStudy</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADICOMExamenImagerie)</p>
+</div></td><td><div><p>Composition.section.entry (FRImagingStudyDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMExaminationReport</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMActeImagerie</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMExaminationReport.codeSection</p>
@@ -426,27 +429,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td /></tr><tr><td><div><p>FRLMExaminationReport.entry.imagingProcedures</p>
 </div></td><td><div><p>Section.entry:frDicomTechniqueImagerie.procedure</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureImagingDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.imagingProcedures</p>
 </div></td><td><div><p>Section.entry:frDicomTechniqueImagerie.procedure</p>
 </div></td><td><div><p>DiagnosticReport.extension:procedure</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.medicationAdministrations</p>
 </div></td><td><div><p>Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.medicationAdministrations</p>
 </div></td><td><div><p>Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration</p>
 </div></td><td><div><p>DiagnosticReport.extension:procedure</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.adverseReactions</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRAllergyIntoleranceDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.subSection.conclusion</p>
 </div></td><td><div><p><strong>FRCDASectionDICOMConclusion</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImpression</p>
+</div></td><td><div><p>Composition.section (FRCompositionDocument.section:sectionImpression)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.subSection.conclusion</p>
 </div></td><td><div><p><strong>FRCDASectionDICOMConclusion</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.conclusion</p>
+</div></td><td><div><p>DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.results[x]</p>
 </div></td><td><div><p><strong>FRCDADICOMResultats</strong></p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.results[x]</p>
 </div></td><td><div><p><strong>FRCDADICOMResultats</strong></p>
 </div></td><td><div><p>Composition.section.text</p>
@@ -455,7 +458,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>DiagnosticReport.result</p>
 </div></td></tr><tr><td><div><p><strong>FRLMExposureInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMExpositionAuxRadiations</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionExposureRadiation</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionExposureRadiation)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -466,29 +469,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.subSection.quantityExposure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry.component</p>
+</div></td><td><div><p>Section.entry:frDicomQuantite.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationRadiationExposureDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.subSection.radiopharmaceuticalAdministration</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry.partOf:medicationAdministrationRef</p>
+</div></td><td><div><p>Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMFamilyMedicalHistory</strong></p>
-</div></td><td><div><p><strong>FRCDAAntecedentsFamiliaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionFamilyMedicalHistory</p>
+</div></td><td><div><p><strong>FRCDASectionAntecedentsFamiliaux</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionFamilyMedicalHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.codeSection</p>
-</div></td><td><div><p>Organizer.code</p>
+</div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.description</p>
-</div></td><td><div><p>Organizer.text</p>
+</div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.entry.familyMemberHistory</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAAntecedentsFamiliaux)</p>
+</div></td><td><div><p>Composition.section.entry (FRFamilyMemberHistoryDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMFunctionalStatus</strong></p>
 </div></td><td><div><p><strong>FRCDAStatutFonctionnel</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionFunctionalStatus</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionFunctionalStatus)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMFunctionalStatus.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -505,11 +508,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.informant</p>
 </div></td><td><div><p>Composition.extension:informant</p>
 </div></td></tr><tr><td><div><p>FRLMFunctionalStatus.entry.assessment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAEvaluation)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationAssessmentDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHazardousWorkingConditions</strong></p>
 </div></td><td><div><p><strong>FRCDAFacteursDeRisqueProfessionnelsNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHazardousWorkingConditions.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -521,7 +524,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHospitalDischargeMedications</strong></p>
 </div></td><td><div><p><strong>FRCDATraitementsALaSortie</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionDischargeMedications</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionDischargeMedications)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHospitalDischargeMedications.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -532,11 +535,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications</p>
-</div></td><td><div><p>Section.entry.FRCDATraitement</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitement)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMImmunisations</strong></p>
 </div></td><td><div><p><strong>FRCDAVaccinations</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImmunizations</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImmunizations)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMImmunisations.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -547,8 +550,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisations.entry.immunisation</p>
-</div></td><td><div><p>Section.entry.FRCDAVaccination</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAVaccination)</p>
+</div></td><td><div><p>Composition.section.entry (FRImmunizationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMCRBIOChapitre</strong></p>
 </div></td><td><div><p><strong>FRCDACRBIOChapitre</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMCRBIOChapitre.code</p>
@@ -585,7 +588,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.entry:FRCDAResultatsExamensDeBiologieMedicale</p>
 </div></td><td /></tr><tr><td><div><p><strong>FRLMMedicalDevicePrescriptions</strong></p>
 </div></td><td><div><p><strong>FRCDAPrescriptionDispositifsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalDevicePrescription</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalDevicePrescription)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicePrescriptions.author[x]</p>
 </div></td><td><div><p>Section.author</p>
 </div></td><td><div><p>Composition.section.author</p>
@@ -599,11 +602,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicePrescriptions.entry.deviceUse</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADispositifMedical)</p>
+</div></td><td><div><p>Composition.section.entry (FRDeviceUseStatementDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicalDevicesAndImplants</strong></p>
 </div></td><td><div><p><strong>FRCDADispositifsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalDevices</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalDevices)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicesAndImplants.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -614,11 +617,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicesAndImplants.entry.deviceUse</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADispositifMedical)</p>
+</div></td><td><div><p>Composition.section.entry (FRDeviceUseStatementDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHistoryOfPastIllness</strong></p>
 </div></td><td><div><p><strong>FRCDAAntecedentsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHistoryOfPastIllness.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -629,11 +632,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMHistoryOfPastIllness.entry.problem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAProbleme)</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationDispensations</strong></p>
 </div></td><td><div><p><strong>FRCDADispensationMedicaments</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicationDispense</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicationDispense)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationDispensations.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -644,11 +647,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationDispensations.entry.medicationDispense</p>
-</div></td><td><div><p>Section.entry.FRCDATraitementDispense</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitementDispense)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationDispenseDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationPrescription</strong></p>
 </div></td><td><div><p><strong>FRCDAPrescriptionMedicaments</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicationRequest</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicationRequest)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationPrescription.author[x]</p>
 </div></td><td><div><p>Section.author</p>
 </div></td><td><div><p>Composition.section.author</p>
@@ -662,11 +665,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationPrescription.entry.prescriptionItem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitementPrescrit)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationRequestDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationSummary</strong></p>
 </div></td><td><div><p><strong>FRCDATraitements</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedications</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedications)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationSummary.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -677,11 +680,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationSummary.entry.medicationAdministration</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitement)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMNote</strong></p>
 </div></td><td><div><p><strong>FRCDACommentaireNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionNote</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionNote)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMNote.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -693,7 +696,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Composition.section.extension:section-note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMOrderInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMDemandeExamen</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionOrder</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionOrder)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMOrderInformation.titleSection</p>
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
@@ -704,10 +707,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMOrderInformation.entry.orderInformation</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRServiceRequestDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPatientEducation</strong></p>
 </div></td><td><div><p><strong>FRCDAEducationDuPatient</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPatientEducation</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPatientEducation)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -718,28 +721,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.procedure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frActe.procedure</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation.observation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.reference</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frReferencesExternes.act</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPredictableAdverseDrugReaction</strong></p>
 </div></td><td><div><p><strong>FRCDAEffetsIndesirables</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPredictableAdverseDrugReaction</p>
-</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.titreSection</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPredictableAdverseDrugReaction)</strong></p>
+</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.titleSection</p>
 </div></td><td><div><p>Section.title</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.description</p>
+</div></td><td><div><p>Composition.section.title</p>
+</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.description</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.entry.adverseEvent</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAEffetIndesirable)</p>
+</div></td><td><div><p>Composition.section.entry (FRAdverseEventDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSectionPregnancyHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDesGrossesses</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPregnancyHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPregnancyHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -750,16 +754,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frObservationSurLaGrossesse.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.entry.pregnancyHistory</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frHistoriqueDeLaGrossesse.organizer</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyHistoryDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.note</p>
 </div></td><td /><td><div><p>Composition.section.extension:section-note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPresentedForm</strong></p>
 </div></td><td><div><p><strong>FRCDADocumentPDFCopie</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPresentedForm</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPresentedForm)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMPresentedForm.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -770,11 +774,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPresentedForm.entry.attachment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADocumentAttache)</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMProblems</strong></p>
 </div></td><td><div><p><strong>FRCDAProblemesActifs</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionProblems</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionProblems)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMProblems.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -785,11 +789,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMProblems.entry.problem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAProbleme)</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMProcedures</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDesActes</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionProceduresHx</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionProceduresHx)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMProcedures.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -800,11 +804,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMProcedures.entry.procedure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frActe.procedure</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMQRCode</strong></p>
 </div></td><td><div><p><strong>FRCDACodeABarres</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionQrCode</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionQrCode)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMQRCode.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -815,11 +819,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMQRCode.entry.observationMedia</p>
-</div></td><td><div><p>Section.entry.FRCDACodeABarres</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAImageIllustrative)</p>
+</div></td><td><div><p>Composition.section.entry (FRMediaDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMReasonForReferral</strong></p>
 </div></td><td><div><p><strong>FRCDARaisonDeLaRecommandation</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionReasonForReferral</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionReasonForReferral)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -830,35 +834,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation.observation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.entry.problemes</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frProbleme.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMObservationResults</strong></p>
-</div></td><td><div><p><strong>FRCDAResultats</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionResults</p>
+</div></td><td><div><p><strong>FRCDASectionResultats</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionResults)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.codeSection</p>
-</div></td><td><div><p>Organizer.code</p>
+</div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.description</p>
-</div></td><td><div><p>Organizer.text</p>
+</div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAResultats)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSocialHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHabitusModeDeVieSection</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionSocialHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionSocialHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSocialHistory.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -869,14 +867,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSocialHistory.entry.observationSocialHistory</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAHabitusModeDeVie)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationSocialHistoryDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSupportingInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMHistoriqueMedical</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionHistory)</strong></p>
 </div></td></tr><tr><td><div><p><strong>FRLMSupportingInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMHistoriqueMedical</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.extension:historiqueMedical</p>
+</div></td><td><div><p><strong>DiagnosticReport.extension:historiqueMedical (FRDiagnosticReportImagingDocument.extension:historiqueMedical)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -887,35 +885,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.previousResultsInformation</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.previousResultsInformation</p>
 </div></td><td /><td><div><p>DiagnosticReport.result:resultatAnterieur</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastIllness</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastIllness</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastProcedures</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastProcedures</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDAObservationSurLaGrossesse)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDAObservationSurLaGrossesse)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.contraIndication</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationContraIndicationsDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.contraIndication</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.condition</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.condition</p>
 </div></td><td /><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.device</p>
@@ -927,14 +925,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.sexForClinicalUse</p>
 </div></td><td /><td /></tr><tr><td><div><p>FRLMSupportingInformation.entry.sexForClinicalUse</p>
 </div></td><td /><td /></tr><tr><td><div><p><strong>FRLMVitalSigns</strong></p>
-</div></td><td><div><p><strong>FRCDASignesVitaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionVitalSigns</p>
+</div></td><td><div><p><strong>FRCDASectionSignesVitaux</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionVitalSigns)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMVitalSigns.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMVitalSigns.entry.observationVitalSign</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.
+component.observation (FRCDASigneVitalObserve)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationVitalSignsDocument)</p>
 </div></td></tr></table>
 
 <h3 id="mapping-des-entrées-entre--modèle-métier--cda--fhir">Mapping des entrées entre : Modèle métier / CDA / FHIR</h3>
@@ -1024,11 +1023,11 @@ observationMedia.value</p>
 </div></td><td><div><p>Observation.effectiveTime</p>
 </div></td><td><div><p>AllergyIntolerance.onset[x]</p>
 </div></td></tr><tr><td><div><p>FRLMAllergyIntolerance.period.onsetDate</p>
-</div></td><td><div><p>Observation.effectiveTime.low</p>
-</div></td><td><div><p>AllergyIntolerance.onset[x].start</p>
+</div></td><td><div><p>Observation.effectiveTime</p>
+</div></td><td><div><p>AllergyIntolerance.onset[x]:onsetPeriod.start</p>
 </div></td></tr><tr><td><div><p>FRLMAllergyIntolerance.period.endDate</p>
-</div></td><td><div><p>Observation.effectiveTime.high</p>
-</div></td><td><div><p>AllergyIntolerance.onset[x].end</p>
+</div></td><td><div><p>Observation.effectiveTime</p>
+</div></td><td><div><p>AllergyIntolerance.onset[x]:onsetPeriod.end</p>
 </div></td></tr><tr><td><div><p>FRLMAllergyIntolerance.agentOrAllergen</p>
 </div></td><td><div><p>Observation.participant</p>
 </div></td><td><div><p>AllergyIntolerance.code</p>
@@ -1057,8 +1056,9 @@ period.endDate</p>
 </div></td></tr><tr><td><div><p>FRLMAllergyIntolerance.category</p>
 </div></td><td /><td><div><p>AllergyIntolerance.category</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAttachment</strong></p>
-</div></td><td><div><p>FRCDADocumentAttache.component:frObservationMedia.observationMedia</p>
-</div></td><td><div><p>FRDocumentReferenceDocument.content.attachment</p>
+</div></td><td><div><p>Organizer.component:frObservationMedia.
+observationMedia (FRCDADocumentAttache.component:frObservationMedia.observationMedia)</p>
+</div></td><td><div><p><strong>DocumentReference.content.attachment (FRDocumentReferenceDocument.content.attachment)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAttachment.contentType</p>
 </div></td><td><div><p>Organizer.component:frObservationMedia.
 observationMedia.value.mediaType</p>
@@ -1139,8 +1139,8 @@ externalDocument.text.reference</p>
 </div></td><td><div><p>Observation.entryRelationship:frCommentaireER</p>
 </div></td><td><div><p>Condition.note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMDevice</strong></p>
-</div></td><td><div><p>FRCDADispositifMedical.participant.
-participantRole.playingDevice</p>
+</div></td><td><div><p>Supply.participant.
+participantRole.playingDevice (FRCDADispositifMedical.participant.participantRole.playingDevice)</p>
 </div></td><td><div><p><strong>Device</strong></p>
 </div></td></tr><tr><td><div><p>FRLMDevice.identifier</p>
 </div></td><td><div><p>Supply.participant.
@@ -1362,9 +1362,9 @@ participantRole.playingDevice.code</p>
 </div></td></tr><tr><td><div><p>FRLMProcedure.procedureDate[x]</p>
 </div></td><td><div><p>Procedure.effectiveTime</p>
 </div></td><td><div><p>Procedure.performed[x]</p>
-</div></td></tr><tr><td><div><p>FRLMProcedure.procedureDate[x]:procedureDateDateTime</p>
+</div></td></tr><tr><td><div><p>FRLMProcedure.procedureDate[x].procedureDateDateTime</p>
 </div></td><td><div><p>Procedure.effectiveTime</p>
-</div></td><td /></tr><tr><td><div><p>FRLMProcedure.procedureDate[x]:procedureDatePeriod</p>
+</div></td><td /></tr><tr><td><div><p>FRLMProcedure.procedureDate[x].procedureDatePeriod</p>
 </div></td><td><div><p>Procedure.effectiveTime</p>
 </div></td><td /></tr><tr><td><div><p>FRLMProcedure.priority</p>
 </div></td><td><div><p>Procedure.priorityCode</p>
@@ -1383,7 +1383,7 @@ participantRole.playingDevice.code</p>
 </div></td><td><div><p>Procedure.extension:participant</p>
 </div></td></tr><tr><td><div><p><strong>FRLMQuantityExposure</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMQuantite</strong></p>
-</div></td><td><div><p>FRObservationRadiationExposureDocument.component</p>
+</div></td><td><div><p><strong>Observation.component (FRObservationRadiationExposureDocument.component)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMQuantityExposure.header.
 participant[x].participantProfessional</p>
 </div></td><td /><td><div><p>Observation.performer:professionnelAutorisantExposition</p>
@@ -1423,8 +1423,7 @@ participant[x].participantProfessional</p>
 </div></td></tr><tr><td><div><p>FRLMSeries.numberOfInstances</p>
 </div></td><td /><td><div><p>ImagingStudy.series.numberOfInstances</p>
 </div></td></tr><tr><td><div><p>FRLMSeries.seriesEndpoint</p>
-</div></td><td><div><p>Act.entryRelationship.
-observation.text</p>
+</div></td><td><div><p>Act.entryRelationship.observation</p>
 </div></td><td><div><p>ImagingStudy.series.endpoint</p>
 </div></td></tr><tr><td><div><p>FRLMSeries.started</p>
 </div></td><td><div><p>Act.effectiveTime</p>
@@ -1455,14 +1454,10 @@ observation.text</p>
 </div></td><td><div><p>Act.id</p>
 </div></td><td><div><p>ImagingStudy.identifier</p>
 </div></td></tr><tr><td><div><p>FRLMImagingStudy.modality</p>
-</div></td><td><div><p>Act.methodCode</p>
+</div></td><td><div><p>Act.code.qualifier</p>
 </div></td><td><div><p>ImagingStudy.modality</p>
 </div></td></tr><tr><td><div><p>FRLMImagingStudy.bodySite</p>
-</div></td><td><div><p>Act.targetSiteCode</p>
-</div></td><td><div><p>ImagingStudy.series.bodySite</p>
-</div></td></tr><tr><td><div><p>FRLMImagingStudy.bodySite</p>
-</div></td><td><div><p>Act.targetSiteCode.qualifier</p>
-</div></td><td><div><p>ImagingStudy.series.bodySite</p>
+</div></td><td /><td><div><p>ImagingStudy.series.bodySite</p>
 </div></td></tr><tr><td><div><p>FRLMImagingStudy.encounter</p>
 </div></td><td /><td><div><p>ImagingStudy.encounter</p>
 </div></td></tr><tr><td><div><p>FRLMImagingStudy.started</p>
@@ -1483,7 +1478,7 @@ observation.text</p>
 </div></td></tr><tr><td><div><p><strong>FRLMImmunisation</strong></p>
 </div></td><td><div><p><strong>FRCDAVaccination</strong></p>
 </div></td><td><div><p><strong>FRImmunizationDocument</strong></p>
-</div></td></tr><tr><td><div><p>FRLMImmunisation.identifiant</p>
+</div></td></tr><tr><td><div><p>FRLMImmunisation.header.identifier</p>
 </div></td><td><div><p>SubstanceAdministration.id</p>
 </div></td><td><div><p>Immunization.identifier</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.header.status</p>
@@ -1491,18 +1486,17 @@ observation.text</p>
 </div></td><td><div><p>Immunization.status</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.periodOfImmunisation</p>
 </div></td><td><div><p>SubstanceAdministration.effectiveTime</p>
-</div></td><td><div><p>Immunization.occurrencePeriod</p>
+</div></td><td><div><p>Immunization.occurrence[x]</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.periodOfImmunisation.startDate</p>
-</div></td><td><div><p>SubstanceAdministration.effectiveTime.low</p>
-</div></td><td><div><p>Immunization.occurrencePeriod.start</p>
+</div></td><td><div><p>SubstanceAdministration.effectiveTime</p>
+</div></td><td><div><p>Immunization.occurrence[x]</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.periodOfImmunisation.endDate</p>
-</div></td><td><div><p>SubstanceAdministration.effectiveTime.high</p>
-</div></td><td><div><p>Immunization.occurrencePeriod.end</p>
-</div></td></tr><tr><td><div><p>FRLMImmunisation.diseaseOrAgentTargeted</p>
+</div></td><td><div><p>SubstanceAdministration.effectiveTime</p>
+</div></td><td /></tr><tr><td><div><p>FRLMImmunisation.diseaseOrAgentTargeted</p>
 </div></td><td><div><p>SubstanceAdministration.entryRelationship:frProbleme</p>
 </div></td><td><div><p>Immunization.protocolApplied.targetDisease</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.administeredProduct</p>
-</div></td><td><div><p>SubstanceAdministration.consumable:FRCDAProduitDeSante</p>
+</div></td><td><div><p>SubstanceAdministration.consumable (FRCDAProduitDeSante)</p>
 </div></td><td><div><p>Immunization.vaccineCode</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisation.route</p>
 </div></td><td><div><p>SubstanceAdministration.routeCode</p>
@@ -1590,11 +1584,11 @@ specimenRole.specimenPlayingEntity.code</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.auteur</p>
 </div></td><td><div><p>Organizer.author</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.valideur</p>
-</div></td><td><div><p>Authenticator (CDA participant) : participant/@typeCode='AUTHEN'</p>
+</div></td><td><div><p>Organizer.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.responsable</p>
-</div></td><td><div><p>Responsible Party (CDA participant) : participant/@typeCode='RESP'</p>
+</div></td><td><div><p>Organizer.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.dispositifAutomatique</p>
-</div></td><td><div><p>Device (CDA participant) : participant/@typeCode='DEV'</p>
+</div></td><td><div><p>Organizer.participant (Device (CDA participant) : participant/@typeCode='DEV')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.batterieExamensDeBiologieMedicale</p>
 </div></td><td><div><p>Organizer.component:frBatterieExamensDeBiologieMedicale</p>
 </div></td><td /></tr><tr><td><div><p>FRLMIsolatMicrobiologique.resultatElementCliniquePertinent</p>
@@ -1626,11 +1620,11 @@ specimenRole.specimenPlayingEntity.code</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.auteur</p>
 </div></td><td><div><p>Observation.author</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.valideur</p>
-</div></td><td><div><p>Authenticator (CDA participant) : participant/@typeCode='AUTHEN'</p>
+</div></td><td><div><p>Observation.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.responsable</p>
-</div></td><td><div><p>Responsible Party (CDA participant) : participant/@typeCode='RESP'</p>
+</div></td><td><div><p>Observation.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique</p>
-</div></td><td><div><p>Device (CDA participant) : participant/@typeCode='DEV'</p>
+</div></td><td><div><p>Observation.participant (Device (CDA participant) : participant/@typeCode='DEV')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.commentaire</p>
 </div></td><td><div><p>Observation.entryRelationship:frCommentaireER</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatExamensBiologieElementCliniquePertinent.prelevement</p>
@@ -1656,11 +1650,11 @@ specimenRole.specimenPlayingEntity.code</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.auteur</p>
 </div></td><td><div><p>Act.author</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.valideur</p>
-</div></td><td><div><p>Authenticator (CDA participant) : participant/@typeCode='AUTHEN'</p>
+</div></td><td><div><p>Act.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.responsable</p>
-</div></td><td><div><p>Responsible Party (CDA participant) : participant/@typeCode='RESP'</p>
+</div></td><td><div><p>Act.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.dispositifAutomatique</p>
-</div></td><td><div><p>Device (CDA participant) : participant/@typeCode='DEV'</p>
+</div></td><td><div><p>Act.participant (Device (CDA participant) : participant/@typeCode='DEV')</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.prelevement</p>
 </div></td><td><div><p>Act.entryRelationship:frPrelevement</p>
 </div></td><td /></tr><tr><td><div><p>FRLMResultatsExamensBiologieMedicale.batterieExamensDeBiologieMedicale</p>
@@ -2201,7 +2195,8 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Observation.component</p>
 </div></td></tr><tr><td><div><p><strong>FRLMObservation</strong></p>
 </div></td><td><div><p><strong>FRCDASimpleObservation</strong></p>
-</div></td><td /></tr><tr><td><div><p>FRLMObservation.header.status</p>
+</div></td><td><div><p><strong>Observation</strong></p>
+</div></td></tr><tr><td><div><p>FRLMObservation.header.status</p>
 </div></td><td><div><p>Observation.statusCode</p>
 </div></td><td><div><p>Observation.status</p>
 </div></td></tr><tr><td><div><p>FRLMObservation.header.directSubject[x]</p>
@@ -2223,7 +2218,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Observation.specimen</p>
 </div></td><td><div><p>Observation.specimen</p>
 </div></td></tr><tr><td><div><p>FRLMObservation.order</p>
-</div></td><td><div><p>Observation.inFulfillmentOf</p>
+</div></td><td><div><p>Observation.sdtcInFulfillmentOf1</p>
 </div></td><td><div><p>Observation.basedOn</p>
 </div></td></tr><tr><td><div><p>FRLMObservation.bodySite</p>
 </div></td><td><div><p>Observation.targetSiteCode</p>
@@ -2244,9 +2239,20 @@ maxDosePerPeriod.duration</p>
 </div></td><td /><td><div><p>Observation.component</p>
 </div></td></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
 </div></td><td><div><p>Observation.entryRelationship</p>
-</div></td><td /></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td><div><p>Observation.derivedFrom:FRImagingStudyDocument</p>
+</div></td></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
 </div></td><td><div><p>Observation.entryRelationship</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMMicroOrganismSearch</strong></p>
+</div></td><td><div><p>Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument</p>
+</div></td></tr><tr><td><div><p>FRLMObservation.derivedFrom[x]</p>
+</div></td><td><div><p>Observation.entryRelationship</p>
+</div></td><td><div><p>Observation.derivedFrom:Observation</p>
+</div></td></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td><div><p>Observation.entryRelationship</p>
+</div></td><td><div><p>Observation.hasMember:FRObservationLaboratoryReportResultsDocument</p>
+</div></td></tr><tr><td><div><p>FRLMObservation.hasMember[x]</p>
+</div></td><td><div><p>Observation.entryRelationship</p>
+</div></td><td><div><p>Observation.hasMember:Observation</p>
+</div></td></tr><tr><td><div><p><strong>FRLMMicroOrganismSearch</strong></p>
 </div></td><td><div><p><strong>FRCDARechercheDeMicroOrganismes</strong></p>
 </div></td><td><div><p><strong>FRObservationMicroorganismDetectionDocument</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMicroOrganismSearch.header.identifier</p>
@@ -2461,7 +2467,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Observation.bodySite</p>
 </div></td></tr><tr><td><div><p>FRLMObservationVitalSign.result</p>
 </div></td><td><div><p>Observation.value</p>
-</div></td><td><div><p>Observation.component.valueQuantity</p>
+</div></td><td><div><p>Observation.component.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMObservationVitalSign.interpretation</p>
 </div></td><td><div><p>Observation.interpretationCode</p>
 </div></td><td><div><p>Observation.interpretation</p>
@@ -2547,10 +2553,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Procedure.extension:priority</p>
 </div></td></tr><tr><td><div><p>FRLMProcedure.bodySite</p>
 </div></td><td><div><p>Procedure.targetSiteCode</p>
-</div></td><td><div><p>Procedure.bodySite.TargetSiteCode</p>
+</div></td><td><div><p>Procedure.bodySite</p>
 </div></td></tr><tr><td><div><p>FRLMProcedure.approachSiteCode</p>
 </div></td><td><div><p>Procedure.approachSiteCode</p>
-</div></td><td><div><p>Procedure.bodySite.ApproachSiteCode</p>
+</div></td><td><div><p>Procedure.extension:approachBodySite</p>
 </div></td></tr><tr><td><div><p>FRLMProcedure.difficulty</p>
 </div></td><td><div><p>Procedure.entryRelationship:frSimpleObservationDifficulte</p>
 </div></td><td><div><p>Procedure.extension:difficulte</p>
@@ -2574,7 +2580,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Procedure.note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAddendum</strong></p>
 </div></td><td><div><p><strong>FRCDADicomAddendum</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAddendum</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAddendum)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAddendum.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2589,7 +2595,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.author</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAdvanceDirectives</strong></p>
 </div></td><td><div><p><strong>FRCDADirectivesAnticipees</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAdvanceDirectives</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAdvanceDirectives)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAdvanceDirectives.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2601,10 +2607,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAdvanceDirectives.entry.advanceDirective</p>
 </div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRAdvanceDirectiveDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAlerts</strong></p>
 </div></td><td><div><p><strong>FRCDAPointsDeVigilancesNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAlerts</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAlerts)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAlerts.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2615,10 +2621,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAlerts.entry.alert</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (Flag)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAllergiesAndIntolerances</strong></p>
 </div></td><td><div><p><strong>FRCDAAllergiesEtHypersensibilites</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAllergiesAndIntolerances</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAllergiesAndIntolerances)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAllergiesAndIntolerances.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2629,11 +2635,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAllergiesAndIntolerances.entry.allergieIntolerance</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAAllergieOuHypersensibilite)</p>
+</div></td><td><div><p>Composition.section.entry (FRAllergyIntoleranceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMAttachments</strong></p>
 </div></td><td><div><p><strong>FRCDADocumentsAjoutes</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionAttachments</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionAttachments)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMAttachments.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2644,12 +2650,14 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMAttachments.entry.attachment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p>FRLMAttachments.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMCarePlans</strong></p>
+</div></td><td><div><p>Section.entry:frDocumentAttache</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
+</div></td></tr><tr><td><div><p>FRLMAttachments.entry.observation</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
+</div></td></tr><tr><td><div><p><strong>FRLMCarePlans</strong></p>
 </div></td><td><div><p><strong>FRCDAPlanDeSoins</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPlanOfCare</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPlanOfCare)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMCarePlans.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2661,9 +2669,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMCarePlans.entry.carePlans</p>
 </div></td><td><div><p>Section.entry</p>
-</div></td><td /></tr><tr><td><div><p><strong>FRLMComparisonStudy</strong></p>
+</div></td><td><div><p>Composition.section.entry</p>
+</div></td></tr><tr><td><div><p><strong>FRLMComparisonStudy</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMExamenComparatif</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionComparison</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionComparison)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMComparisonStudy.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2675,10 +2684,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p><strong>FRLMConclusion</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMConclusion</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.conclusion</p>
+</div></td><td><div><p><strong>DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)</strong></p>
 </div></td></tr><tr><td><div><p><strong>FRLMConclusion</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMConclusion</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImpression</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImpression)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMConclusion.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td /></tr><tr><td><div><p>FRLMConclusion.description</p>
@@ -2689,7 +2698,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td /><td><div><p>DiagnosticReport.result</p>
 </div></td></tr><tr><td><div><p><strong>FRLMDicomStudyMetadata</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMObjectCatalog</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImagingStudy</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImagingStudy)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMDicomStudyMetadata.titleSection</p>
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
@@ -2700,8 +2709,8 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMDicomStudyMetadata.entry.imagingStudy</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADICOMExamenImagerie)</p>
+</div></td><td><div><p>Composition.section.entry (FRImagingStudyDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMExaminationReport</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMActeImagerie</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMExaminationReport.codeSection</p>
@@ -2712,27 +2721,27 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td /></tr><tr><td><div><p>FRLMExaminationReport.entry.imagingProcedures</p>
 </div></td><td><div><p>Section.entry:frDicomTechniqueImagerie.procedure</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureImagingDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.imagingProcedures</p>
 </div></td><td><div><p>Section.entry:frDicomTechniqueImagerie.procedure</p>
 </div></td><td><div><p>DiagnosticReport.extension:procedure</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.medicationAdministrations</p>
 </div></td><td><div><p>Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.medicationAdministrations</p>
 </div></td><td><div><p>Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration</p>
 </div></td><td><div><p>DiagnosticReport.extension:procedure</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.adverseReactions</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRAllergyIntoleranceDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.subSection.conclusion</p>
 </div></td><td><div><p><strong>FRCDASectionDICOMConclusion</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImpression</p>
+</div></td><td><div><p>Composition.section (FRCompositionDocument.section:sectionImpression)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.subSection.conclusion</p>
 </div></td><td><div><p><strong>FRCDASectionDICOMConclusion</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.conclusion</p>
+</div></td><td><div><p>DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.results[x]</p>
 </div></td><td><div><p><strong>FRCDADICOMResultats</strong></p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMExaminationReport.entry.results[x]</p>
 </div></td><td><div><p><strong>FRCDADICOMResultats</strong></p>
 </div></td><td><div><p>Composition.section.text</p>
@@ -2741,7 +2750,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>DiagnosticReport.result</p>
 </div></td></tr><tr><td><div><p><strong>FRLMExposureInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMExpositionAuxRadiations</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionExposureRadiation</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionExposureRadiation)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2752,29 +2761,29 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.subSection.quantityExposure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry.component</p>
+</div></td><td><div><p>Section.entry:frDicomQuantite.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationRadiationExposureDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMExposureInformation.subSection.radiopharmaceuticalAdministration</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry.partOf:medicationAdministrationRef</p>
+</div></td><td><div><p>Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMFamilyMedicalHistory</strong></p>
-</div></td><td><div><p><strong>FRCDAAntecedentsFamiliaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionFamilyMedicalHistory</p>
+</div></td><td><div><p><strong>FRCDASectionAntecedentsFamiliaux</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionFamilyMedicalHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.codeSection</p>
-</div></td><td><div><p>Organizer.code</p>
+</div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.description</p>
-</div></td><td><div><p>Organizer.text</p>
+</div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMFamilyMedicalHistory.entry.familyMemberHistory</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAAntecedentsFamiliaux)</p>
+</div></td><td><div><p>Composition.section.entry (FRFamilyMemberHistoryDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMFunctionalStatus</strong></p>
 </div></td><td><div><p><strong>FRCDAStatutFonctionnel</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionFunctionalStatus</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionFunctionalStatus)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMFunctionalStatus.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2791,11 +2800,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.informant</p>
 </div></td><td><div><p>Composition.extension:informant</p>
 </div></td></tr><tr><td><div><p>FRLMFunctionalStatus.entry.assessment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAEvaluation)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationAssessmentDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHazardousWorkingConditions</strong></p>
 </div></td><td><div><p><strong>FRCDAFacteursDeRisqueProfessionnelsNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHazardousWorkingConditions.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2807,7 +2816,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHospitalDischargeMedications</strong></p>
 </div></td><td><div><p><strong>FRCDATraitementsALaSortie</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionDischargeMedications</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionDischargeMedications)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHospitalDischargeMedications.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2818,11 +2827,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications</p>
-</div></td><td><div><p>Section.entry.FRCDATraitement</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitement)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMImmunisations</strong></p>
 </div></td><td><div><p><strong>FRCDAVaccinations</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionImmunizations</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionImmunizations)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMImmunisations.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2833,8 +2842,8 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMImmunisations.entry.immunisation</p>
-</div></td><td><div><p>Section.entry.FRCDAVaccination</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAVaccination)</p>
+</div></td><td><div><p>Composition.section.entry (FRImmunizationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMCRBIOChapitre</strong></p>
 </div></td><td><div><p><strong>FRCDACRBIOChapitre</strong></p>
 </div></td><td /></tr><tr><td><div><p>FRLMCRBIOChapitre.code</p>
@@ -2871,7 +2880,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.entry:FRCDAResultatsExamensDeBiologieMedicale</p>
 </div></td><td /></tr><tr><td><div><p><strong>FRLMMedicalDevicePrescriptions</strong></p>
 </div></td><td><div><p><strong>FRCDAPrescriptionDispositifsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalDevicePrescription</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalDevicePrescription)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicePrescriptions.author[x]</p>
 </div></td><td><div><p>Section.author</p>
 </div></td><td><div><p>Composition.section.author</p>
@@ -2885,11 +2894,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicePrescriptions.entry.deviceUse</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADispositifMedical)</p>
+</div></td><td><div><p>Composition.section.entry (FRDeviceUseStatementDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicalDevicesAndImplants</strong></p>
 </div></td><td><div><p><strong>FRCDADispositifsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalDevices</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalDevices)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicesAndImplants.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2900,11 +2909,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicalDevicesAndImplants.entry.deviceUse</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADispositifMedical)</p>
+</div></td><td><div><p>Composition.section.entry (FRDeviceUseStatementDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMHistoryOfPastIllness</strong></p>
 </div></td><td><div><p><strong>FRCDAAntecedentsMedicaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicalHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicalHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHistoryOfPastIllness.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2915,11 +2924,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMHistoryOfPastIllness.entry.problem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAProbleme)</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationDispensations</strong></p>
 </div></td><td><div><p><strong>FRCDADispensationMedicaments</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicationDispense</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicationDispense)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationDispensations.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2930,11 +2939,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationDispensations.entry.medicationDispense</p>
-</div></td><td><div><p>Section.entry.FRCDATraitementDispense</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitementDispense)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationDispenseDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationPrescription</strong></p>
 </div></td><td><div><p><strong>FRCDAPrescriptionMedicaments</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedicationRequest</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedicationRequest)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationPrescription.author[x]</p>
 </div></td><td><div><p>Section.author</p>
 </div></td><td><div><p>Composition.section.author</p>
@@ -2948,11 +2957,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationPrescription.entry.prescriptionItem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitementPrescrit)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationRequestDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMMedicationSummary</strong></p>
 </div></td><td><div><p><strong>FRCDATraitements</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionMedications</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionMedications)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMMedicationSummary.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2963,11 +2972,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMMedicationSummary.entry.medicationAdministration</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDATraitement)</p>
+</div></td><td><div><p>Composition.section.entry (FRMedicationAdministrationDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMNote</strong></p>
 </div></td><td><div><p><strong>FRCDACommentaireNonCode</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionNote</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionNote)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMNote.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -2979,7 +2988,7 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Composition.section.extension:section-note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMOrderInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMDemandeExamen</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionOrder</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionOrder)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMOrderInformation.titleSection</p>
 </div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
@@ -2990,10 +2999,10 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMOrderInformation.entry.orderInformation</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRServiceRequestDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPatientEducation</strong></p>
 </div></td><td><div><p><strong>FRCDAEducationDuPatient</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPatientEducation</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPatientEducation)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3004,28 +3013,29 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.procedure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frActe.procedure</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation.observation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMPatientEducation.entry.reference</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frReferencesExternes.act</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPredictableAdverseDrugReaction</strong></p>
 </div></td><td><div><p><strong>FRCDAEffetsIndesirables</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPredictableAdverseDrugReaction</p>
-</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.titreSection</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPredictableAdverseDrugReaction)</strong></p>
+</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.titleSection</p>
 </div></td><td><div><p>Section.title</p>
-</div></td><td /></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.description</p>
+</div></td><td><div><p>Composition.section.title</p>
+</div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.description</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPredictableAdverseDrugReaction.entry.adverseEvent</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAEffetIndesirable)</p>
+</div></td><td><div><p>Composition.section.entry (FRAdverseEventDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSectionPregnancyHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDesGrossesses</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPregnancyHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPregnancyHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3036,16 +3046,16 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frObservationSurLaGrossesse.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.entry.pregnancyHistory</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frHistoriqueDeLaGrossesse.organizer</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyHistoryDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSectionPregnancyHistory.note</p>
 </div></td><td /><td><div><p>Composition.section.extension:section-note</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPresentedForm</strong></p>
 </div></td><td><div><p><strong>FRCDADocumentPDFCopie</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionPresentedForm</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionPresentedForm)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMPresentedForm.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3056,11 +3066,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMPresentedForm.entry.attachment</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDADocumentAttache)</p>
+</div></td><td><div><p>Composition.section.entry (FRDocumentReferenceDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMProblems</strong></p>
 </div></td><td><div><p><strong>FRCDAProblemesActifs</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionProblems</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionProblems)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMProblems.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3071,11 +3081,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMProblems.entry.problem</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAProbleme)</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMProcedures</strong></p>
 </div></td><td><div><p><strong>FRCDAHistoriqueDesActes</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionProceduresHx</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionProceduresHx)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMProcedures.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3086,11 +3096,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMProcedures.entry.procedure</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frActe.procedure</p>
+</div></td><td><div><p>Composition.section.entry (FRProcedureDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMQRCode</strong></p>
 </div></td><td><div><p><strong>FRCDACodeABarres</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionQrCode</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionQrCode)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMQRCode.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3101,11 +3111,11 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMQRCode.entry.observationMedia</p>
-</div></td><td><div><p>Section.entry.FRCDACodeABarres</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAImageIllustrative)</p>
+</div></td><td><div><p>Composition.section.entry (FRMediaDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMReasonForReferral</strong></p>
 </div></td><td><div><p><strong>FRCDARaisonDeLaRecommandation</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionReasonForReferral</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionReasonForReferral)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3116,35 +3126,29 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.entry.observation</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frSimpleObservation.observation</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMReasonForReferral.entry.problemes</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry:frProbleme.observation</p>
+</div></td><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMObservationResults</strong></p>
-</div></td><td><div><p><strong>FRCDAResultats</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionResults</p>
+</div></td><td><div><p><strong>FRCDASectionResultats</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionResults)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.codeSection</p>
-</div></td><td><div><p>Organizer.code</p>
+</div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.description</p>
-</div></td><td><div><p>Organizer.text</p>
+</div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
-</div></td></tr><tr><td><div><p>FRLMObservationResults.entry.observationResult</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAResultats)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSocialHistory</strong></p>
 </div></td><td><div><p><strong>FRCDAHabitusModeDeVieSection</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionSocialHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionSocialHistory)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSocialHistory.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3155,14 +3159,14 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSocialHistory.entry.observationSocialHistory</p>
-</div></td><td><div><p>Section.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry (FRCDAHabitusModeDeVie)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationSocialHistoryDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMSupportingInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMHistoriqueMedical</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionHistory</p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionHistory)</strong></p>
 </div></td></tr><tr><td><div><p><strong>FRLMSupportingInformation</strong></p>
 </div></td><td><div><p><strong>FRCDADICOMHistoriqueMedical</strong></p>
-</div></td><td><div><p>FRDiagnosticReportImagingDocument.extension:historiqueMedical</p>
+</div></td><td><div><p><strong>DiagnosticReport.extension:historiqueMedical (FRDiagnosticReportImagingDocument.extension:historiqueMedical)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.codeSection</p>
 </div></td><td><div><p>Section.code</p>
 </div></td><td><div><p>Composition.section.code</p>
@@ -3173,35 +3177,35 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Section.text</p>
 </div></td><td><div><p>Composition.section.text</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.previousResultsInformation</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.previousResultsInformation</p>
 </div></td><td /><td><div><p>DiagnosticReport.result:resultatAnterieur</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastIllness</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastIllness</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastProcedures</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (Observation)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.historyOfPastProcedures</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDAObservationSurLaGrossesse)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationPregnancyDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.pregnancyStatus</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDAObservationSurLaGrossesse)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.contraIndication</p>
-</div></td><td><div><p>Section.entry.observation</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationContraIndicationsDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.contraIndication</p>
-</div></td><td><div><p>Section.entry.observation</p>
+</div></td><td><div><p>Section.entry.observation (FRCDASimpleObservation)</p>
 </div></td><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.condition</p>
-</div></td><td /><td><div><p>Composition.section.entry</p>
+</div></td><td /><td><div><p>Composition.section.entry (FRConditionDocument)</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.condition</p>
 </div></td><td /><td><div><p>DiagnosticReport.extension:historiqueMedical.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.device</p>
@@ -3213,14 +3217,15 @@ maxDosePerPeriod.duration</p>
 </div></td></tr><tr><td><div><p>FRLMSupportingInformation.entry.sexForClinicalUse</p>
 </div></td><td /><td /></tr><tr><td><div><p>FRLMSupportingInformation.entry.sexForClinicalUse</p>
 </div></td><td /><td /></tr><tr><td><div><p><strong>FRLMVitalSigns</strong></p>
-</div></td><td><div><p><strong>FRCDASignesVitaux</strong></p>
-</div></td><td><div><p>FRCompositionDocument.section:sectionVitalSigns</p>
+</div></td><td><div><p><strong>FRCDASectionSignesVitaux</strong></p>
+</div></td><td><div><p><strong>Composition.section (FRCompositionDocument.section:sectionVitalSigns)</strong></p>
 </div></td></tr><tr><td><div><p>FRLMVitalSigns.titleSection</p>
-</div></td><td><div><p>Organizer.title</p>
+</div></td><td><div><p>Section.title</p>
 </div></td><td><div><p>Composition.section.title</p>
 </div></td></tr><tr><td><div><p>FRLMVitalSigns.entry.observationVitalSign</p>
-</div></td><td><div><p>Organizer.entry</p>
-</div></td><td><div><p>Composition.section.entry</p>
+</div></td><td><div><p>Section.entry.
+component.observation (FRCDASigneVitalObserve)</p>
+</div></td><td><div><p>Composition.section.entry (FRObservationVitalSignsDocument)</p>
 </div></td></tr><tr><td><div><p><strong>FRLMServiceRequest</strong></p>
 </div></td><td><div><p><strong>FRCDADemandeDExamenOuDeSuivi</strong></p>
 </div></td><td><div><p><strong>FRServiceRequestDocument</strong></p>
@@ -3269,7 +3274,14 @@ maxDosePerPeriod.duration</p>
 </div></td><td><div><p>Specimen.type</p>
 </div></td></tr><tr><td><div><p>FRLMSpecimen.specimenSource[x]</p>
 </div></td><td><div><p>Procedure.participant</p>
-</div></td><td /></tr><tr><td><div><p>FRLMSpecimen.parentSpecimen</p>
+</div></td><td><div><p>Specimen.subject</p>
+</div></td></tr><tr><td><div><p>FRLMSpecimen.specimenSource[x]</p>
+</div></td><td><div><p>Procedure.participant</p>
+</div></td><td><div><p>Specimen.subject</p>
+</div></td></tr><tr><td><div><p>FRLMSpecimen.specimenSource[x]</p>
+</div></td><td><div><p>Procedure.participant</p>
+</div></td><td><div><p>Specimen.subject</p>
+</div></td></tr><tr><td><div><p>FRLMSpecimen.parentSpecimen</p>
 </div></td><td><div><p>Procedure.participant:EchantillonPreleve</p>
 </div></td><td><div><p>Specimen.parent</p>
 </div></td></tr><tr><td><div><p>FRLMSpecimen.request</p>
@@ -3356,8 +3368,8 @@ act.effectiveTime</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fr.document-core#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-08-23 21:45:00 +0000">
-    2026-08-23
+  <span title="2026-08-24 13:13:00 +0000">
+    2026-08-24
   </span>
 
           <br/>

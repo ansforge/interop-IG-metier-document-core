@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
   "title" : "Mapping Métier/CDA/FHIR : Signes vitaux",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,28 +39,30 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signes-vitaux",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-signes-vitaux",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMVitalSigns",
       "target" : [{
-        "code" : "Organizer",
-        "display" : "FRCDASignesVitaux",
+        "code" : "Section",
+        "display" : "FRCDASectionSignesVitaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
-        "code" : "Organizer.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "Organizer.entry",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry.component.observation",
+        "display" : "FRCDASigneVitalObserve",
+        "equivalence" : "equivalent",
+        "comment" : "Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."
       }]
     }]
   },
@@ -88,6 +90,7 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
       "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRObservationVitalSignsDocument",
         "equivalence" : "equivalent"
       }]
     }]

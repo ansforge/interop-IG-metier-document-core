@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,35 +60,35 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:patient",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMPatient (document d'expression personnelle), cf. FRPatientLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:device",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMDevice, cf. FRDeviceLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:organisation",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMOrganisation (ex : Dossier Pharmaceutique), cf. FROrganisationLMCDAFHIR."
       }]
     }]
   },
@@ -113,35 +113,35 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:patient",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMPatient (attester.party.resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:device",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun)."
       }]
     },
     {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]:organisation",
+      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMOrganisation (attester.party.resolve().ofType(Organization)) — cf. FROrganisationLMCDAFHIR."
       }]
     }]
   }]

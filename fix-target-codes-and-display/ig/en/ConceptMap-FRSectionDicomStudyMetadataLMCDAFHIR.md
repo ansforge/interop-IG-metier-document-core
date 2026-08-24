@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
   "title" : "Mapping Métier/CDA/FHIR : \"Catalogue des objets d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -74,6 +74,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
         "code" : "Section.entry",
+        "display" : "FRCDADICOMExamenImagerie",
         "equivalence" : "equivalent"
       }]
     }]
@@ -116,6 +117,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
         "code" : "Composition.section.entry",
+        "display" : "FRImagingStudyDocument",
         "equivalence" : "equivalent"
       }]
     }]

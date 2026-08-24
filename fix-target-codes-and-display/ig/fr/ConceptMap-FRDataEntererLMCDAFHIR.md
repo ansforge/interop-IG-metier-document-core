@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,19 +60,19 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMDataEnterer.dataEnterer[x]:healthProfessional",
+      "code" : "FRLMDataEnterer.dataEnterer[x]",
       "target" : [{
         "code" : "DataEnterer.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "L'opérateur de saisie professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMDataEnterer.dataEnterer[x]:patient",
+      "code" : "FRLMDataEnterer.dataEnterer[x]",
       "target" : [{
         "code" : "DataEnterer.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "L'opérateur de saisie patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMPatient, cf. FRPatientLMCDAFHIR."
       }]
     }]
   },
@@ -96,19 +96,19 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMDataEnterer.dataEnterer[x]:healthProfessional",
+      "code" : "FRLMDataEnterer.dataEnterer[x]",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
-        "comment" : "Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional (Extension.extension:party.value[x].resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMDataEnterer.dataEnterer[x]:patient",
+      "code" : "FRLMDataEnterer.dataEnterer[x]",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
-        "comment" : "Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
       }]
     }]
   }]

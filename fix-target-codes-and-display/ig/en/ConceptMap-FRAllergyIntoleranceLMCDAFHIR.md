@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
   "title" : "Mapping Métier/CDA/FHIR : \"Allergie ou Hypersensibilité\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -87,15 +87,17 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     {
       "code" : "FRLMAllergyIntolerance.period.onsetDate",
       "target" : [{
-        "code" : "Observation.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; onsetDate correspond à effectiveTime.low."
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.endDate",
       "target" : [{
-        "code" : "Observation.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; endDate correspond à effectiveTime.high."
       }]
     },
     {
@@ -241,14 +243,14 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     {
       "code" : "FRLMAllergyIntolerance.period.onsetDate",
       "target" : [{
-        "code" : "AllergyIntolerance.onset[x].start",
+        "code" : "AllergyIntolerance.onset[x]:onsetPeriod.start",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.endDate",
       "target" : [{
-        "code" : "AllergyIntolerance.onset[x].end",
+        "code" : "AllergyIntolerance.onset[x]:onsetPeriod.end",
         "equivalence" : "equivalent"
       }]
     },

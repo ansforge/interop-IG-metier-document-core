@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Validateur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-23T21:45:18+00:00",
+  "date" : "2026-08-24T13:13:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,19 +60,19 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMAttester.attester[x]:healthProfessional",
+      "code" : "FRLMAttester.attester[x]",
       "target" : [{
         "code" : "Authenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le validateur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où attester[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMAttester.attester[x]:device",
+      "code" : "FRLMAttester.attester[x]",
       "target" : [{
         "code" : "Authenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Le validateur système est de type FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."
+        "comment" : "Cas où attester[x] référence un FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."
       }]
     }]
   },
@@ -97,19 +97,19 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMAttester.attester[x]:healthProfessional",
+      "code" : "FRLMAttester.attester[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où attester[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMAttester.attester[x]:device",
+      "code" : "FRLMAttester.attester[x]",
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
+        "comment" : "Cas où attester[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun)."
       }]
     }]
   }]
