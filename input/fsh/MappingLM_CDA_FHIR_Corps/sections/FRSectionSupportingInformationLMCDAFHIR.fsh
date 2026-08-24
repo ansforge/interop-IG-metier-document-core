@@ -35,23 +35,23 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 // antécédents médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
 * group[=].element[=].target.code = #Section.entry.observation
+* group[=].element[=].target.display = "FRCDASimpleObservation"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry.observation porte les antécédents médicaux."
 // antécédents chirurgicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastProcedures
 * group[=].element[=].target.code = #Section.entry.observation
+* group[=].element[=].target.display = "FRCDASimpleObservation"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry.observation porte les antécédents chirurgicaux."
 // grossesse
 * group[=].element[+].code = #FRLMSupportingInformation.entry.pregnancyStatus
 * group[=].element[=].target.code = #Section.entry.observation
+* group[=].element[=].target.display = "FRCDAObservationSurLaGrossesse"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry.observation porte le statut de grossesse."
 // contre-indications
 * group[=].element[+].code = #FRLMSupportingInformation.entry.contraIndication
 * group[=].element[=].target.code = #Section.entry.observation
+* group[=].element[=].target.display = "FRCDASimpleObservation"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry.observation porte les contre-indications."
 // Problème
 * group[=].element[+].code = #FRLMSupportingInformation.entry.condition
 * group[=].element[=].target.equivalence = #unmatched
@@ -92,22 +92,27 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 // résultats d'examens antérieurs pertinents
 * group[=].element[+].code = #FRLMSupportingInformation.entry.previousResultsInformation
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "Observation"
 * group[=].element[=].target.equivalence = #equivalent
 // antécédents médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "Observation"
 * group[=].element[=].target.equivalence = #equivalent
 // antécédents chirurgicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastProcedures
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "Observation"
 * group[=].element[=].target.equivalence = #equivalent
 // contre-indications
 * group[=].element[+].code = #FRLMSupportingInformation.entry.contraIndication
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRObservationContraIndicationsDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // Problème
 * group[=].element[+].code = #FRLMSupportingInformation.entry.condition
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRConditionDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // dispositifs médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.device
@@ -117,6 +122,7 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 // grossesse
 * group[=].element[+].code = #FRLMSupportingInformation.entry.pregnancyStatus
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRObservationPregnancyDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // administration de produit de santé
 * group[=].element[+].code = #FRLMSupportingInformation.entry.priorMedicationAdministration
@@ -154,7 +160,7 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[+].code = #FRLMSupportingInformation.entry.contraIndication
 * group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où value[x] référence un FRObservationContraIndicationsImagingDocument."
+* group[=].element[=].target.comment = "Cas où value[x] référence un FRObservationContraIndicationsDocument."
 // Problème
 * group[=].element[+].code = #FRLMSupportingInformation.entry.condition
 * group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
@@ -164,7 +170,7 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[+].code = #FRLMSupportingInformation.entry.device
 * group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où value[x] référence un FRDeviceAuteurDocument."
+* group[=].element[=].target.comment = "Cas où value[x] référence un FRDeviceUseStatementDocument."
 // grossesse
 * group[=].element[+].code = #FRLMSupportingInformation.entry.pregnancyStatus
 * group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]

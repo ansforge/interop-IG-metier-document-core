@@ -28,12 +28,13 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.description
 * group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
-// Entrée Observation sur la grossesse ou Entrée Historique des grossesses
+// Entrée Observation sur la grossesse
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyStatus
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frObservationSurLaGrossesse.observation
 * group[=].element[=].target[=].equivalence = #equivalent
+// Entrée Historique des grossesses
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyHistory
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frHistoriqueDeLaGrossesse.organizer
 * group[=].element[=].target[=].equivalence = #equivalent
 // Commentaire de la section : aucune cible directe
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.note
@@ -62,10 +63,12 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 // Entrée Observation sur la grossesse
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyStatus
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRObservationPregnancyDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Historique des grossesses
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyHistory
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRObservationPregnancyHistoryDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Commentaire de la section
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.note

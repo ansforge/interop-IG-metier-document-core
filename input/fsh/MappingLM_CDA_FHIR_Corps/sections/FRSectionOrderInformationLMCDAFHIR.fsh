@@ -56,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 // entrée demande d'examen d'imagerie
 * group[=].element[+].code = #FRLMOrderInformation.entry.orderInformation
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRServiceRequestDocument"
 * group[=].element[=].target.equivalence = #equivalent

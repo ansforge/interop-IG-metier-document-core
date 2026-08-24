@@ -30,6 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 // Entrée Problèmes actifs
 * group[=].element[+].code = #FRLMProblems.entry.problem
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDAProbleme"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
@@ -55,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 // Entrée Problèmes actifs
 * group[=].element[+].code = #FRLMProblems.entry.problem
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRConditionDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

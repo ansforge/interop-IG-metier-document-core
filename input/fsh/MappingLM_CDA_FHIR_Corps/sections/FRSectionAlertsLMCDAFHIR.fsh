@@ -55,4 +55,5 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 // Entrée Points de vigilance
 * group[=].element[+].code = #FRLMAlerts.entry.alert
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Flag"
 * group[=].element[=].target[=].equivalence = #equivalent

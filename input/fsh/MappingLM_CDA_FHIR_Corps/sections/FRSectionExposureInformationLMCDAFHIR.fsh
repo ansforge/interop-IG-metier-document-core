@@ -30,11 +30,11 @@ Description: "Mapping des éléments du modèle métier FRLMExposureInformation 
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Quantité
 * group[=].element[+].code = #FRLMExposureInformation.subSection.quantityExposure
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frDicomQuantite.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée administration des produits radiopharmaceutiques
 * group[=].element[+].code = #FRLMExposureInformation.subSection.radiopharmaceuticalAdministration
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -59,9 +59,11 @@ Description: "Mapping des éléments du modèle métier FRLMExposureInformation 
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Quantité
 * group[=].element[+].code = #FRLMExposureInformation.subSection.quantityExposure
-* group[=].element[=].target[+].code = #Composition.section.entry.component
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRObservationRadiationExposureDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée administration des produits radiopharmaceutiques
 * group[=].element[+].code = #FRLMExposureInformation.subSection.radiopharmaceuticalAdministration
-* group[=].element[=].target[+].code = #Composition.section.entry.partOf:medicationAdministrationRef
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRMedicationAdministrationDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

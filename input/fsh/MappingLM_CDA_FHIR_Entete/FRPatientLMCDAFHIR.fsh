@@ -67,20 +67,24 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Décès
-* group[=].element[+].code = #FRLMPatient.deceased[x]:deceasedBoolean
+* group[=].element[+].code = #FRLMPatient.deceased[x]
 * group[=].element[=].target.code = #Patient.sdtcDeceasedInd
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.deceased[x]:deceasedDateTime
+* group[=].element[=].target.comment = "Cas où deceased[x] est de type boolean."
+* group[=].element[+].code = #FRLMPatient.deceased[x]
 * group[=].element[=].target.code = #Patient.sdtcDeceasedTime
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où deceased[x] est de type dateTime."
 
 // Naissance multiple
-* group[=].element[+].code = #FRLMPatient.multipleBirth[x]:multipleBirthBoolean
+* group[=].element[+].code = #FRLMPatient.multipleBirth[x]
 * group[=].element[=].target.code = #Patient.sdtcMultipleBirthInd
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.multipleBirth[x]:multipleBirthInteger
+* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type boolean."
+* group[=].element[+].code = #FRLMPatient.multipleBirth[x]
 * group[=].element[=].target.code = #Patient.sdtcMultipleBirthOrderNumber
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type integer."
 
 // Lieu de naissance
 * group[=].element[+].code = #FRLMPatient.birthPlace
@@ -181,24 +185,24 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Décès
-* group[=].element[+].code = #FRLMPatient.deceased[x]:deceasedBoolean
+* group[=].element[+].code = #FRLMPatient.deceased[x]
 * group[=].element[=].target.code = #Patient.deceased[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Valeur booléenne de deceased[x]."
-* group[=].element[+].code = #FRLMPatient.deceased[x]:deceasedDateTime
+* group[=].element[=].target.comment = "Cas où deceased[x] est de type boolean."
+* group[=].element[+].code = #FRLMPatient.deceased[x]
 * group[=].element[=].target.code = #Patient.deceased[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Valeur dateTime de deceased[x]."
+* group[=].element[=].target.comment = "Cas où deceased[x] est de type dateTime."
 
 // Naissance multiple
-* group[=].element[+].code = #FRLMPatient.multipleBirth[x]:multipleBirthBoolean
+* group[=].element[+].code = #FRLMPatient.multipleBirth[x]
 * group[=].element[=].target.code = #Patient.multipleBirth[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Valeur booléenne de multipleBirth[x]."
-* group[=].element[+].code = #FRLMPatient.multipleBirth[x]:multipleBirthInteger
+* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type boolean."
+* group[=].element[+].code = #FRLMPatient.multipleBirth[x]
 * group[=].element[=].target.code = #Patient.multipleBirth[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Valeur integer de multipleBirth[x]."
+* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type integer."
 
 // Lieu de naissance
 * group[=].element[+].code = #FRLMPatient.birthPlace

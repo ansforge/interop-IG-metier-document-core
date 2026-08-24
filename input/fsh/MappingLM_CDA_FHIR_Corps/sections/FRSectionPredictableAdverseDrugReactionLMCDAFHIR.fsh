@@ -16,7 +16,7 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * group[=].element[=].target[=].display = "FRCDAEffetsIndesirables"
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
-* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.titreSection
+* group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.titleSection
 * group[=].element[=].target[+].code = #Section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
@@ -26,6 +26,7 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 // Entrée Effet indésirable
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDAEffetIndesirable"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : Métier → FHIR
@@ -50,5 +51,6 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Effet indésirable
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.entry.adverseEvent
-* group[=].element[=].target[+].code = #Composition.section.entry 
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRAdverseEventDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

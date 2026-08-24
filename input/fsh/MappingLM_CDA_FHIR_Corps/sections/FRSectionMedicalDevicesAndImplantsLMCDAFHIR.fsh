@@ -9,7 +9,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants"
-* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-dispositifs-medicaux"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-dispositifs-medicaux"
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants
 * group[=].element[=].target[+].code = #Section
@@ -30,6 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 // Entrée Dispositif medical
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants.entry.deviceUse
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDADispositifMedical"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -55,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 // Entrée Dispositif medical
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants.entry.deviceUse
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDeviceUseStatementDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

@@ -31,6 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMPresentedForm vers l
 // Entrée Document attaché
 * group[=].element[+].code = #FRLMPresentedForm.entry.attachment
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDADocumentAttache"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMPresentedForm vers l
 // Entrée Document attaché
 * group[=].element[+].code = #FRLMPresentedForm.entry.attachment
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDocumentReferenceDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

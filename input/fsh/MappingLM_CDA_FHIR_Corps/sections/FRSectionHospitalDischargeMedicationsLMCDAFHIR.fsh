@@ -30,7 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMHospitalDischargeMed
 * group[=].element[=].target.equivalence = #equivalent
 // entrée de la section
 * group[=].element[+].code = #FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications
-* group[=].element[=].target.code = #Section.entry.FRCDATraitement
+* group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDATraitement"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMHospitalDischargeMed
 // entrée de la section
 * group[=].element[+].code = #FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRMedicationAdministrationDocument"
 * group[=].element[=].target.equivalence = #equivalent

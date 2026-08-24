@@ -46,13 +46,15 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 
 // Date de début
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.onsetDate
-* group[=].element[=].target.code = #Observation.effectiveTime.low
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Observation.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; onsetDate correspond à effectiveTime.low."
 
 // Date de fin
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.endDate
-* group[=].element[=].target.code = #Observation.effectiveTime.high
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Observation.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; endDate correspond à effectiveTime.high."
 
 // Agent responsable
 * group[=].element[+].code = #FRLMAllergyIntolerance.agentOrAllergen
@@ -156,12 +158,12 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 
 // Date de début
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.onsetDate
-* group[=].element[=].target.code = #AllergyIntolerance.onset[x].start
+* group[=].element[=].target.code = #AllergyIntolerance.onset[x]:onsetPeriod.start
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de fin
 * group[=].element[+].code = #FRLMAllergyIntolerance.period.endDate
-* group[=].element[=].target.code = #AllergyIntolerance.onset[x].end
+* group[=].element[=].target.code = #AllergyIntolerance.onset[x]:onsetPeriod.end
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée

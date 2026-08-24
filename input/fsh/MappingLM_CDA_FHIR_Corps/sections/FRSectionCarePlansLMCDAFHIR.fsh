@@ -32,7 +32,8 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 // Entrée Plan de soins
 * group[=].element[+].code = #FRLMCarePlans.entry.carePlans
 * group[=].element[=].target[+].code = #Section.entry
-* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].equivalence = #inexact
+* group[=].element[=].target[=].comment = "Selon le type d'activité portée par FRLMCarePlan.activity, l'entrée CDA concrète est l'une des slices : Section.entry:frActe, :frDemandeDexamenOuDeSuivi, :frTraitement, :frVaccinRecommande ou :frRencontre."
 
 // Groupe Mapping 2 : Métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans"
@@ -55,6 +56,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 * group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Plan de soins
-* group[=].element[+].code = #Section.entry
+* group[=].element[+].code = #FRLMCarePlans.entry.carePlans
 * group[=].element[=].target[+].code = #Composition.section.entry
-* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].equivalence = #inexact
+* group[=].element[=].target[=].comment = "Selon le type d'activité portée par FRLMCarePlan.activity, la ressource FHIR concrète référencée est l'une de : FRProcedureDocument, FRServiceRequestDocument, FRMedicationRequestDocument, FRImmunizationDocument ou FREncounterDocument."

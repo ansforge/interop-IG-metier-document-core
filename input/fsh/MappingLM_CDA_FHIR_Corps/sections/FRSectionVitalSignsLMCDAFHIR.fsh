@@ -10,20 +10,22 @@ Description: "Mapping des éléments du modèle métier FRLMVitalSigns vers la s
 
 // Groupe Mapping 1 : modèle métier → CDA
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns"
-* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signes-vitaux"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-signes-vitaux"
 // Élément racine
 * group[=].element[+].code = #FRLMVitalSigns
-* group[=].element[=].target.code = #Organizer
-* group[=].element[=].target.display = "FRCDASignesVitaux"
+* group[=].element[=].target.code = #Section
+* group[=].element[=].target.display = "FRCDASectionSignesVitaux"
 * group[=].element[=].target.equivalence = #equivalent
-// titreSection 
+// titreSection
 * group[=].element[+].code = #FRLMVitalSigns.titleSection
-* group[=].element[=].target.code = #Organizer.title
+* group[=].element[=].target.code = #Section.title
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Signes vitaux
 * group[=].element[+].code = #FRLMVitalSigns.entry.observationVitalSign
-* group[=].element[=].target.code = #Organizer.entry
+* group[=].element[=].target.code = #Section.entry.component.observation
+* group[=].element[=].target.display = "FRCDASigneVitalObserve"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."
 
 // Groupe Mapping 2 : ML → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns"
@@ -40,4 +42,5 @@ Description: "Mapping des éléments du modèle métier FRLMVitalSigns vers la s
 // Entrée Signes vitaux
 * group[=].element[+].code = #FRLMVitalSigns.entry.observationVitalSign
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRObservationVitalSignsDocument"
 * group[=].element[=].target.equivalence = #equivalent

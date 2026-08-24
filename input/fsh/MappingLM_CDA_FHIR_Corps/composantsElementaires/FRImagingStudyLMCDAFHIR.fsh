@@ -23,16 +23,12 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Modalité de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.modality
-* group[=].element[=].target.code = #Act.methodCode
+* group[=].element[=].target.code = #Act.code.qualifier
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.bodySite
-* group[=].element[=].target.code = #Act.targetSiteCode
-* group[=].element[=].target.equivalence = #equivalent
-// précision topographique de la localisation anatomique
-* group[=].element[+].code = #FRLMImagingStudy.bodySite
-* group[=].element[=].target.code = #Act.targetSiteCode.qualifier
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Act ne porte pas de champ targetSiteCode (contrairement à Procedure/Observation) ; aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour bodySite."
 // Rencontre associée à l'examen
 * group[=].element[+].code = #FRLMImagingStudy.encounter
 * group[=].element[=].target.equivalence = #unmatched

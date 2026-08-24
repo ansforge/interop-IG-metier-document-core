@@ -16,7 +16,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.display = "FRCDAVaccination"
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
-* group[=].element[+].code = #FRLMImmunisation.identifiant
+* group[=].element[+].code = #FRLMImmunisation.header.identifier
 * group[=].element[=].target.code = #SubstanceAdministration.id
 * group[=].element[=].target.equivalence = #equivalent
 // Statut
@@ -29,19 +29,22 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Date de début de la vaccination
 * group[=].element[+].code = #FRLMImmunisation.periodOfImmunisation.startDate
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime.low
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "effectiveTime n'est pas décomposé en low/high dans ce profil ; startDate correspond à la borne basse de l'intervalle."
 // Date de fin de la vaccination
 * group[=].element[+].code = #FRLMImmunisation.periodOfImmunisation.endDate
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime.high
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "effectiveTime n'est pas décomposé en low/high dans ce profil ; endDate correspond à la borne haute de l'intervalle."
 // Maladie ou agent contre lequel la vaccination offre une protection
 * group[=].element[+].code = #FRLMImmunisation.diseaseOrAgentTargeted
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frProbleme
 * group[=].element[=].target.equivalence = #equivalent
 // Vaccin
-* group[=].element[+].code = #FRLMImmunisation.administeredProduct    
-* group[=].element[=].target.code = #SubstanceAdministration.consumable:FRCDAProduitDeSante
+* group[=].element[+].code = #FRLMImmunisation.administeredProduct
+* group[=].element[=].target.code = #SubstanceAdministration.consumable
+* group[=].element[=].target.display = "FRCDAProduitDeSante"
 * group[=].element[=].target.equivalence = #equivalent
 // Voie d’administration
 * group[=].element[+].code = #FRLMImmunisation.route
@@ -85,7 +88,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.display = "FRImmunizationDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
-* group[=].element[+].code = #FRLMImmunisation.identifiant
+* group[=].element[+].code = #FRLMImmunisation.header.identifier
 * group[=].element[=].target.code = #Immunization.identifier
 * group[=].element[=].target.equivalence = #equivalent
 // Statut
@@ -94,16 +97,17 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 * group[=].element[=].target.equivalence = #equivalent
 // Période de vaccination
 * group[=].element[+].code = #FRLMImmunisation.periodOfImmunisation
-* group[=].element[=].target.code = #Immunization.occurrencePeriod
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.code = #Immunization.occurrence[x]
+* group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "occurrence[x] est restreint à dateTime dans ce profil (pas de Period)."
 // Date début
 * group[=].element[+].code = #FRLMImmunisation.periodOfImmunisation.startDate
-* group[=].element[=].target.code = #Immunization.occurrencePeriod.start
+* group[=].element[=].target.code = #Immunization.occurrence[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Date fin
 * group[=].element[+].code = #FRLMImmunisation.periodOfImmunisation.endDate
-* group[=].element[=].target.code = #Immunization.occurrencePeriod.end
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "occurrence[x] est restreint à dateTime dans ce profil ; aucune date de fin ne peut être portée."
 // Maladie ciblée
 * group[=].element[+].code = #FRLMImmunisation.diseaseOrAgentTargeted
 * group[=].element[=].target.code = #Immunization.protocolApplied.targetDisease

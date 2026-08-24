@@ -30,7 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMQRCode vers la secti
 * group[=].element[=].target.equivalence = #equivalent
 // Code à barres
 * group[=].element[+].code = #FRLMQRCode.entry.observationMedia
-* group[=].element[=].target.code = #Section.entry.FRCDACodeABarres
+* group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDAImageIllustrative"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMQRCode vers la secti
 // Code à barres
 * group[=].element[+].code = #FRLMQRCode.entry.observationMedia
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRMediaDocument"
 * group[=].element[=].target.equivalence = #equivalent

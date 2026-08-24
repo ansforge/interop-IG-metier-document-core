@@ -30,7 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 * group[=].element[=].target.equivalence = #equivalent
 // entrée de la section
 * group[=].element[+].code = #FRLMImmunisations.entry.immunisation
-* group[=].element[=].target.code = #Section.entry.FRCDAVaccination
+* group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDAVaccination"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 // entrée de la section
 * group[=].element[+].code = #FRLMImmunisations.entry.immunisation
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRImmunizationDocument"
 * group[=].element[=].target.equivalence = #equivalent

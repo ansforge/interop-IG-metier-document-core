@@ -98,11 +98,11 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 /* Localisation anatomique */
 * group[=].element[+].code = #FRLMProcedure.bodySite
-* group[=].element[=].target.code = #Procedure.bodySite.TargetSiteCode
+* group[=].element[=].target.code = #Procedure.bodySite
 * group[=].element[=].target.equivalence = #equivalent
 /* Voie d'abord */
 * group[=].element[+].code = #FRLMProcedure.approachSiteCode
-* group[=].element[=].target.code = #Procedure.bodySite.ApproachSiteCode
+* group[=].element[=].target.code = #Procedure.extension:approachBodySite
 * group[=].element[=].target.equivalence = #equivalent
 /* Difficulté */
 * group[=].element[+].code = #FRLMProcedure.difficulty

@@ -56,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 // Entrées Directives anticipées
 * group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRAdvanceDirectiveDocument"
 * group[=].element[=].target.equivalence = #equivalent

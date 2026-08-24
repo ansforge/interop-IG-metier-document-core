@@ -30,7 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMProcedures.entry.procedure
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frActe.procedure
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -56,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 // Entrée Acte
 * group[=].element[+].code = #FRLMProcedures.entry.procedure
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRProcedureDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

@@ -29,15 +29,15 @@ Description: "Mapping des éléments du modèle métier FRLMPatientEducation ver
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMPatientEducation.entry.procedure
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frActe.procedure
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMPatientEducation.entry.observation
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée References externes
 * group[=].element[+].code = #FRLMPatientEducation.entry.reference
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frReferencesExternes.act
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -63,12 +63,15 @@ Description: "Mapping des éléments du modèle métier FRLMPatientEducation ver
 // Entrée Acte
 * group[=].element[+].code = #FRLMPatientEducation.entry.procedure
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRProcedureDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMPatientEducation.entry.observation
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Observation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée References externes
 * group[=].element[+].code = #FRLMPatientEducation.entry.reference
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDocumentReferenceDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

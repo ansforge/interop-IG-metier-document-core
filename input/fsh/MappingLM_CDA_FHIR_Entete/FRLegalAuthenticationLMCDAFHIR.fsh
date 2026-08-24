@@ -27,28 +27,28 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Responsable professionnel de santé
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Le responsable professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
 
 // Responsable patient/usager
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:patient
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Le responsable patient/usager (document d'expression personnelle) est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMPatient (document d'expression personnelle), cf. FRPatientLMCDAFHIR."
 
 // Responsable système
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:device
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Le responsable système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMDevice, cf. FRDeviceLMCDAFHIR."
 
 // Responsable organisation
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:organisation
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #LegalAuthenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Le responsable structure (ex : Dossier Pharmaceutique) est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMOrganisation (ex : Dossier Pharmaceutique), cf. FROrganisationLMCDAFHIR."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLegalAuthentication"
@@ -66,25 +66,25 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Responsable professionnel de santé
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:healthProfessional
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "attester.party.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
 
 // Responsable patient/usager
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:patient
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "attester.party.resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMPatient (attester.party.resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
 
 // Responsable système
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:device
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "attester.party.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun)."
 
 // Responsable organisation
-* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]:organisation
+* group[=].element[+].code = #FRLMLegalAuthentication.legalAuthenticator[x]
 * group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "attester.party.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où legalAuthenticator[x] référence un FRLMOrganisation (attester.party.resolve().ofType(Organization)) — cf. FROrganisationLMCDAFHIR."

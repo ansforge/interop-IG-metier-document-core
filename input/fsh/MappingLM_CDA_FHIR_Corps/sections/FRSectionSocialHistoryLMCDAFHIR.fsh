@@ -30,6 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 // entrées Habitus, Mode de vie
 * group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory
 * group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDAHabitusModeDeVie"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR CompositionDocument.section:sectionSocialHistory
@@ -55,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 // Entrées Habitus, Mode de vie
 * group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRObservationSocialHistoryDocument"
 * group[=].element[=].target.equivalence = #equivalent

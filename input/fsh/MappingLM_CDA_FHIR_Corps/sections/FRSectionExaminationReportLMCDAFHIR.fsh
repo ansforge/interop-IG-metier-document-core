@@ -71,16 +71,17 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 // Entrée : Techniques d'imagerie
 * group[=].element[+].code = #FRLMExaminationReport.entry.imagingProcedures
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRProcedureImagingDocument"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry référence un FRProcedureImagingDocument."
 // Entrée : Produits de santé administrés
 * group[=].element[+].code = #FRLMExaminationReport.entry.medicationAdministrations
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRMedicationAdministrationDocument"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où entry référence un FRMedicationAdministrationDocument (partOf du FRProcedureImagingDocument)."
 // Entrée : Allergies et intolérances
 * group[=].element[+].code = #FRLMExaminationReport.entry.adverseReactions
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRAllergyIntoleranceDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Résultats d'examens
 * group[=].element[+].code = #FRLMExaminationReport.entry.results[x]
@@ -88,8 +89,8 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].element[=].target[=].equivalence = #equivalent
 * group[=].element[=].target[=].comment = "Cible narrative pour les resultats textuels dans la section Findings."
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Observation"
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[=].comment = "Cible structuree pour les resultats codes/observations dans la section Findings."
 
 // Groupe Mapping 5 : modèle métier → FHIR DiagnosticReport
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport"

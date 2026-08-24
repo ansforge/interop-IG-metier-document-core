@@ -91,7 +91,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationVitalSign
 * group[=].element[=].target.equivalence = #equivalent
 // Résultat de l'observation
 * group[=].element[+].code = #FRLMObservationVitalSign.result
-* group[=].element[=].target.code = #Observation.component.valueQuantity
+* group[=].element[=].target.code = #Observation.component.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 // Interprétation
 * group[=].element[+].code = #FRLMObservationVitalSign.interpretation

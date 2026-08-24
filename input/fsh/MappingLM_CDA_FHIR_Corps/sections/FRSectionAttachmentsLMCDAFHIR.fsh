@@ -30,11 +30,11 @@ Description: "Mapping des éléments du modèle métier FRLMAttachments vers la 
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Document attaché
 * group[=].element[+].code = #FRLMAttachments.entry.attachment
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frDocumentAttache
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMAttachments.entry.observation
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
@@ -58,10 +58,12 @@ Description: "Mapping des éléments du modèle métier FRLMAttachments vers la 
 * group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Document attaché
-* group[=].element[+].code = #FRLMAttachments.entry:FRLMAttachment
+* group[=].element[+].code = #FRLMAttachments.entry.attachment
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDocumentReferenceDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
-* group[=].element[+].code = #FRLMAttachments.entry:FRLMObservation
+* group[=].element[+].code = #FRLMAttachments.entry.observation
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Observation"
 * group[=].element[=].target[=].equivalence = #equivalent

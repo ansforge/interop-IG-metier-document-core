@@ -30,6 +30,7 @@ Description: "Mapping des éléments du modèle métier FRLMDicomStudyMetadata v
 // entrée Examen imagerie
 * group[=].element[+].code = #FRLMDicomStudyMetadata.entry.imagingStudy
 * group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDADICOMExamenImagerie"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR
@@ -55,4 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMDicomStudyMetadata v
 // entrée Examen imagerie
 * group[=].element[+].code = #FRLMDicomStudyMetadata.entry.imagingStudy
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRImagingStudyDocument"
 * group[=].element[=].target.equivalence = #equivalent

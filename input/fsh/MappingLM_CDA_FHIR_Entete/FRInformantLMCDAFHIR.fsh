@@ -34,16 +34,16 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.comment = "L'informateur structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
 
 // Informateur patient/usager
-* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]:patient
+* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
 * group[=].element[=].target.code = #Informant.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "L'informateur patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMPatient, cf. FRPatientLMCDAFHIR."
 
 // Informateur personne de confiance
-* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]:relatedPerson
+* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
 * group[=].element[=].target.code = #Informant.relatedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "L'informateur personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant"
@@ -67,13 +67,13 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
 
 // Informateur patient/usager
-* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]:patient
+* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
 
 // Informateur personne de confiance
-* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]:relatedPerson
+* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMRelatedPerson (Extension.extension:party.value[x].resolve().ofType(RelatedPerson)) — cf. FRRelatedPersonLMCDAFHIR."

@@ -31,6 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationSummary ve
 // Entrée Traitement
 * group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDATraitement"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationSummary ve
 // Entrée Traitement
 * group[=].element[+].code = #FRLMMedicationSummary.entry.medicationAdministration
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRMedicationAdministrationDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

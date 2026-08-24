@@ -34,6 +34,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationPrescripti
 // Entrée Traitement prescrit
 * group[=].element[+].code = #FRLMMedicationPrescription.entry.prescriptionItem
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDATraitementPrescrit"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -63,4 +64,5 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationPrescripti
 // Entrée Traitement prescrit
 * group[=].element[+].code = #FRLMMedicationPrescription.entry.prescriptionItem
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRMedicationRequestDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

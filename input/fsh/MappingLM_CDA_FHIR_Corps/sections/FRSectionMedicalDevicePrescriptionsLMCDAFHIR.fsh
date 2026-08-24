@@ -34,6 +34,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicePrescri
 // Entrée Dispositif medical prescrit
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.entry.deviceUse
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDADispositifMedical"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -63,4 +64,5 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicePrescri
 // Entrée Dispositif medical prescrit
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.entry.deviceUse
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDeviceUseStatementDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

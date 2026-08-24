@@ -44,7 +44,7 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Demande d'examen
 * group[=].element[+].code = #FRLMObservation.order
-* group[=].element[=].target.code = #Observation.inFulfillmentOf
+* group[=].element[=].target.code = #Observation.sdtcInFulfillmentOf1
 * group[=].element[=].target.equivalence = #equivalent
 // Localisation anatomique
 * group[=].element[+].code = #FRLMObservation.bodySite
@@ -82,7 +82,7 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
 * group[=].target = "http://hl7.org/fhir/R4/StructureDefinition/Observation"
 // Element racine
-* group[=].element[+].code = #FRMLObservation
+* group[=].element[+].code = #FRLMObservation
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -157,26 +157,31 @@ Description: "Mapping des éléments du modele metier FRLMObservation vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 
 // Dérivé de - FRLMObservation
-* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMObservation]
+* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
 * group[=].element[=].target.code = #Observation.derivedFrom:Observation
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence un FRLMObservation."
 
 // Dérivé de - FRLMLaboratoryObservation
-* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMLaboratoryObservation]
+* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
 * group[=].element[=].target.code = #Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence un FRLMLaboratoryObservation."
 
 // Dérivé de - FRLMImagingStudy
-* group[=].element[+].code = #FRLMObservation.derivedFrom[FRLMImagingStudy]
+* group[=].element[+].code = #FRLMObservation.derivedFrom[x]
 * group[=].element[=].target.code = #Observation.derivedFrom:FRImagingStudyDocument
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence un FRLMImagingStudy."
 
 // Membres - FRLMLaboratoryObservation
-* group[=].element[+].code = #FRLMObservation.hasMember[FRLMLaboratoryObservation]
+* group[=].element[+].code = #FRLMObservation.hasMember[x]
 * group[=].element[=].target.code = #Observation.hasMember:FRObservationLaboratoryReportResultsDocument
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où hasMember[x] référence un FRLMLaboratoryObservation."
 
 // Membres - FRLMObservation
-* group[=].element[+].code = #FRLMObservation.hasMember[FRLMObservation]
+* group[=].element[+].code = #FRLMObservation.hasMember[x]
 * group[=].element[=].target.code = #Observation.hasMember:Observation
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où hasMember[x] référence un FRLMObservation."

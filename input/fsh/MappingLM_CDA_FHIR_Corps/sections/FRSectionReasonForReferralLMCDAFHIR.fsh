@@ -29,11 +29,11 @@ Description: "Mapping des éléments du modèle métier FRLMReasonForReferral ve
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMReasonForReferral.entry.observation
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Problème
 * group[=].element[+].code = #FRLMReasonForReferral.entry.problemes
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry:frProbleme.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
@@ -59,8 +59,10 @@ Description: "Mapping des éléments du modèle métier FRLMReasonForReferral ve
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMReasonForReferral.entry.observation
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Observation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Problème
 * group[=].element[+].code = #FRLMReasonForReferral.entry.problemes
 * group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRConditionDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

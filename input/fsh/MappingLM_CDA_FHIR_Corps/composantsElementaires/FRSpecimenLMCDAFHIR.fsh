@@ -107,17 +107,20 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.code = #Specimen.type
 * group[=].element[=].target.equivalence = #equivalent
 // Origine du prélèvement - Patient
-* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Patient
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMPatient."
 // Origine du prélèvement - Location
-* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Location
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMLocation."
 // Origine du prélèvement - Device
-* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]:Device
+* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
 * group[=].element[=].target.code = #Specimen.subject
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMDevice."
 // Prélèvement parent
 * group[=].element[+].code = #FRLMSpecimen.parentSpecimen
 * group[=].element[=].target.code = #Specimen.parent

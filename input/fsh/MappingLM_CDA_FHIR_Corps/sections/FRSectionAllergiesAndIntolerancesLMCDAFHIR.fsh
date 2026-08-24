@@ -31,6 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 // Entrée : Allergie ou intolérance
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances.entry.allergieIntolerance
 * group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDAAllergieOuHypersensibilite"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR
@@ -56,4 +57,5 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 // Entrée : Allergie ou intolérance
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances.entry.allergieIntolerance
 * group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRAllergyIntoleranceDocument"
 * group[=].element[=].target.equivalence = #equivalent
