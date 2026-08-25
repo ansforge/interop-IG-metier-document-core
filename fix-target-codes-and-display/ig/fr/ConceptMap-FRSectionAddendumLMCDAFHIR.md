@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
   "title" : "Mapping Métier/CDA/FHIR : \"Addendum\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-25T11:56:50+00:00",
+  "date" : "2026-08-25T20:08:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -57,7 +57,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHeaderDocum
   "name" : "FRLMHeaderDocument",
   "title" : "Logical model - FR LM Header Document",
   "status" : "draft",
-  "date" : "2026-08-25T11:56:50+00:00",
+  "date" : "2026-08-25T20:08:46+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -202,6 +202,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHeaderDocum
       "path" : "FRLMHeaderDocument.author[x]",
       "short" : "Auteur du document.",
       "definition" : "Auteur du document.",
+      "comment" : "Voici les cas d'usage des documents et leurs auteurs :\n\n| Cas d'usage | Auteur(s) du document | Structure de l'auteur |\n|-------------|----------------------|-----------------------|\n| Création d'un document par un professionnel sur son logiciel professionnel | Professionnel | Structure |\n| Création d'un document patient par un professionnel sur son logiciel professionnel pour le compte du patient | Professionnel | Structure |\n| Création d'un document patient par le patient | Patient | non utilisé |\n| Création d'un document par un système (dispositif, automate, …) de structure (ES, …) | Système de structure | Structure |\n| Création d'un document par un Service numérique référencé (SNR) | SNR | Editeur |\n| Création d'un document par le DP | CNOP/DP | CNOP |",
       "min" : 1,
       "max" : "*",
       "type" : [{

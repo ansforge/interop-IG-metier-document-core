@@ -1590,7 +1590,16 @@ Period {[]} {[]}","Date du problème","Date du problème","","","","","","","","
 "FRLMHeaderDocument","FRLMHeaderDocument.subject","FRLMHeaderDocument.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
 ","Patient / Usager.","Patient / Usager.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.subject",1,1,"",""
 "FRLMHeaderDocument","FRLMHeaderDocument.author[x]","FRLMHeaderDocument.author[x]","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Auteur du document.","Auteur du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.author[x]",1,*,"",""
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Auteur du document.","Auteur du document.","Voici les cas d'usage des documents et leurs auteurs :
+
+| Cas d'usage | Auteur(s) du document | Structure de l'auteur |
+|-------------|----------------------|-----------------------|
+| Création d'un document par un professionnel sur son logiciel professionnel | Professionnel | Structure |
+| Création d'un document patient par un professionnel sur son logiciel professionnel pour le compte du patient | Professionnel | Structure |
+| Création d'un document patient par le patient | Patient | non utilisé |
+| Création d'un document par un système (dispositif, automate, …) de structure (ES, …) | Système de structure | Structure |
+| Création d'un document par un Service numérique référencé (SNR) | SNR | Editeur |
+| Création d'un document par le DP | CNOP/DP | CNOP |","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.author[x]",1,*,"",""
 "FRLMHeaderDocument","FRLMHeaderDocument.dataEnterer","FRLMHeaderDocument.dataEnterer","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDataEnterer {[]} {[]}
 ","Opérateur de saisie.","Opérateur de saisie.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.dataEnterer",0,1,"",""
 "FRLMHeaderDocument","FRLMHeaderDocument.informant","FRLMHeaderDocument.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
