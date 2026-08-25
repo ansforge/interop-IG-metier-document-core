@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section C
   "title" : "Mapping Métier/CDA/FHIR : \"Statut fonctionnel\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -71,7 +71,7 @@ Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section C
       }]
     },
     {
-      "code" : "FRLMFunctionalStatus.author",
+      "code" : "FRLMFunctionalStatus.author[x]",
       "target" : [{
         "code" : "Section.author",
         "equivalence" : "equivalent"
@@ -128,7 +128,7 @@ Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section C
       }]
     },
     {
-      "code" : "FRLMFunctionalStatus.author",
+      "code" : "FRLMFunctionalStatus.author[x]",
       "target" : [{
         "code" : "Composition.author",
         "equivalence" : "equivalent"

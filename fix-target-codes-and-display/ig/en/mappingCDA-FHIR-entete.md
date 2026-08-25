@@ -43,10 +43,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
 | FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
 | FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMHeaderDocument.author[x] | **author** | Composition.author |
-| FRLMHeaderDocument.author[x] | **author** | Composition.author |
-| FRLMHeaderDocument.author[x] | **author** | Composition.author |
-| FRLMHeaderDocument.author[x] | **author** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
 | FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
 | FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
 | FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
@@ -127,7 +127,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMOrder.orderReason[x] |  | ServiceRequest.reasonCode |
 | FRLMOrder.orderId | Order.id | ServiceRequest.identifier |
 | FRLMOrder.accessionNumber |  | ServiceRequest.identifier |
-| **FRLMOrganisation** | AssignedEntity.representedOrganization (assignedEntity.representedOrganization) | **Organization** |
+| **FRLMOrganisation** | assignedEntity.representedOrganization | **Organization** |
 | FRLMOrganisation.identifier | Organization.id | Organization.identifier |
 | FRLMOrganisation.type |  | Organization.type |
 | FRLMOrganisation.name | Organization.name | Organization.name |
@@ -153,20 +153,14 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPatient.administrativeGender | Patient.administrativeGenderCode | Patient.gender |
 | FRLMPatient.dateOfBirth | Patient.birthTime | Patient.birthDate |
 | FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
-| FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
-| FRLMPatient.deceased[x] | Patient.sdtcDeceasedTime | Patient.deceased[x] |
 | FRLMPatient.deceased[x] | Patient.sdtcDeceasedTime | Patient.deceased[x] |
 | FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
-| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
-| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
 | FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
 | FRLMPatient.birthPlace | Patient.birthplace | Patient.extension:birthPlace |
 | FRLMPatient.contact | Patient.guardian | Patient.contact |
 | FRLMPatient.contact.address | Patient.guardian | Patient.contact.address |
 | FRLMPatient.contact.telecom | Patient.guardian | Patient.contact.telecom |
 | FRLMPatient.contact.name | Patient.guardian | Patient.contact.name |
-| FRLMPatient.contact. name.family | Patient.guardian | Patient.contact.name |
-| FRLMPatient.contact. name.given | Patient.guardian | Patient.contact.name |
 | FRLMPatient.contact.organization | Patient.guardian | Patient.contact.organization |
 | FRLMHumanName.use | Patient.name.use |  |
 | FRLMHumanName.family | Patient.name. item.family |  |

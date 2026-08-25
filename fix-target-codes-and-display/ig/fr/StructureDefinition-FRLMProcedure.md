@@ -26,19 +26,11 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
 
 #### Bindings terminologiques
 
-#### Contraintes
-
 Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md) 
 
 ** Résumé **
 
 Obligatoire : 1 élément(2 éléments obligatoire(s) imbriqué(s))
-
-**Structures**
-
-Cette structure fait référence à ces autres structures:
-
-* [Organization Period (http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0)](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-organization-period.html)
 
  **Vue différentielle** 
 
@@ -50,19 +42,11 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
 
 #### Bindings terminologiques
 
-#### Contraintes
-
 Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md) 
 
 ** Résumé **
 
 Obligatoire : 1 élément(2 éléments obligatoire(s) imbriqué(s))
-
-**Structures**
-
-Cette structure fait référence à ces autres structures:
-
-* [Organization Period (http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0)](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-organization-period.html)
 
  
 
@@ -85,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMProcedure.c
   "name" : "FRLMProcedure",
   "title" : "Logical model- FR LM Procedure",
   "status" : "draft",
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -144,35 +128,15 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMProcedure.c
     {
       "id" : "FRLMProcedure.procedureDate[x]",
       "path" : "FRLMProcedure.procedureDate[x]",
-      "short" : "Période de l'acte",
-      "definition" : "Période de l'acte",
+      "short" : "Période de l'acte. Si Period : porte la date de début et de fin de l'acte.",
+      "definition" : "Période de l'acte. Si Period : porte la date de début et de fin de l'acte.",
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"]
-      }]
-    },
-    {
-      "id" : "FRLMProcedure.procedureDate[x].procedureDateDateTime",
-      "path" : "FRLMProcedure.procedureDate[x].procedureDateDateTime",
-      "short" : "Date de début de l'acte",
-      "definition" : "Date de début de l'acte",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
         "code" : "dateTime"
-      }]
-    },
-    {
-      "id" : "FRLMProcedure.procedureDate[x].procedureDatePeriod",
-      "path" : "FRLMProcedure.procedureDate[x].procedureDatePeriod",
-      "short" : "Date de fin de l'acte",
-      "definition" : "Date de fin de l'acte",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "dateTime"
+      },
+      {
+        "code" : "Period"
       }]
     },
     {

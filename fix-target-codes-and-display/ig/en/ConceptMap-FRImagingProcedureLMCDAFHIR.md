@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
   "title" : "Mapping Métier/CDA/FHIR : \"Technique imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -74,23 +74,8 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
       "code" : "FRLMProcedure.procedureDate[x]",
       "target" : [{
         "code" : "Procedure.effectiveTime",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMProcedure.procedureDate[x].procedureDateDateTime",
-      "target" : [{
-        "code" : "Procedure.effectiveTime",
-        "equivalence" : "wider",
-        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
-      }]
-    },
-    {
-      "code" : "FRLMProcedure.procedureDate[x].procedureDatePeriod",
-      "target" : [{
-        "code" : "Procedure.effectiveTime",
-        "equivalence" : "wider",
-        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
+        "equivalence" : "equivalent",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; début et fin sont portés par l'ensemble de effectiveTime."
       }]
     },
     {

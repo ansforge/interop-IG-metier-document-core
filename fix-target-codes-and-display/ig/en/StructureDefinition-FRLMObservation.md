@@ -37,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMObservation.c
   "name" : "FRLMObservation",
   "title" : "Logical model - FR LM Observation",
   "status" : "draft",
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -192,8 +192,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMObservation.c
       }]
     },
     {
-      "id" : "FRLMObservation.result.Value[x]",
-      "path" : "FRLMObservation.result.Value[x]",
+      "id" : "FRLMObservation.result.value[x]",
+      "path" : "FRLMObservation.result.value[x]",
       "short" : "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.",
       "definition" : "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.",
       "min" : 0,
@@ -306,17 +306,13 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMObservation.c
     {
       "id" : "FRLMObservation.referenceRange.age",
       "path" : "FRLMObservation.referenceRange.age",
-      "short" : "Tranche d'âge pour cet intervalle",
-      "definition" : "Tranche d'âge pour cet intervalle",
+      "short" : "Tranche d'âge pour cet intervalle. (preferred): UCUM for units",
+      "definition" : "Tranche d'âge pour cet intervalle. (preferred): UCUM for units",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Range"
-      }],
-      "binding" : {
-        "strength" : "preferred",
-        "description" : "(preferred): UCUM for units"
-      }
+      }]
     },
     {
       "id" : "FRLMObservation.referenceRange.text",

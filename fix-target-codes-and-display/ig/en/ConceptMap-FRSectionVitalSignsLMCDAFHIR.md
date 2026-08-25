@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
   "title" : "Mapping Métier/CDA/FHIR : Signes vitaux",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -59,8 +59,8 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
     {
       "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "Section.entry.component.observation",
-        "display" : "FRCDASigneVitalObserve",
+        "code" : "Section.entry",
+        "display" : "FRCDASignesVitaux",
         "equivalence" : "equivalent",
         "comment" : "Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."
       }]

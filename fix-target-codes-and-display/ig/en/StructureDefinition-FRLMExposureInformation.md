@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExposureInfor
   "name" : "FRLMExposureInformation",
   "title" : "Logical model - FR LM Exposure Information",
   "status" : "draft",
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,8 +81,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExposureInfor
       "max" : "0"
     },
     {
-      "id" : "FRLMExposureInformation.subSection.quantityExposure",
-      "path" : "FRLMExposureInformation.subSection.quantityExposure",
+      "id" : "FRLMExposureInformation.entry.quantityExposure",
+      "path" : "FRLMExposureInformation.entry.quantityExposure",
       "short" : "Entrée Quantité",
       "definition" : "Entrée Quantité",
       "min" : 0,
@@ -92,8 +92,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExposureInfor
       }]
     },
     {
-      "id" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
-      "path" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "id" : "FRLMExposureInformation.entry.radiopharmaceuticalAdministration",
+      "path" : "FRLMExposureInformation.entry.radiopharmaceuticalAdministration",
       "short" : "Entrée administration des produits radiopharmaceutiques",
       "definition" : "Entrée administration des produits radiopharmaceutiques",
       "min" : 0,

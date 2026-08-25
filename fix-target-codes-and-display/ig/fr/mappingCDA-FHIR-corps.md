@@ -9,48 +9,48 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | | | |
 | :--- | :--- | :--- |
 | Modèle métier | CDA | FHIR |
-| **FRLMAddendum** | **FRCDADicomAddendum** | **Composition.section (FRCompositionDocument.section:sectionAddendum)** |
+| **FRLMAddendum** | **FRCDADicomAddendum** | **FRCompositionDocument.section:sectionAddendum** |
 | FRLMAddendum.codeSection | Section.code | Composition.section.code |
 | FRLMAddendum.titleSection | Section.title | Composition.section.title |
 | FRLMAddendum.description | Section.text | Composition.section.text |
 | FRLMAddendum.author[x] | Section.author | Composition.author |
-| **FRLMAdvanceDirectives** | **FRCDADirectivesAnticipees** | **Composition.section (FRCompositionDocument.section:sectionAdvanceDirectives)** |
+| **FRLMAdvanceDirectives** | **FRCDADirectivesAnticipees** | **FRCompositionDocument.section:sectionAdvanceDirectives** |
 | FRLMAdvanceDirectives.codeSection | Section.code | Composition.section.code |
 | FRLMAdvanceDirectives.titleSection | Section.title | Composition.section.title |
 | FRLMAdvanceDirectives.description | Section.text | Composition.section.text |
-| FRLMAdvanceDirectives.entry.advanceDirective | Section.entry | Composition.section.entry (FRAdvanceDirectiveDocument) |
-| **FRLMAlerts** | **FRCDAPointsDeVigilancesNonCode** | **Composition.section (FRCompositionDocument.section:sectionAlerts)** |
+| FRLMAdvanceDirectives.entry.advanceDirective | Section.entry (FRCDADirectiveAnticipee) | Composition.section.entry (FRAdvanceDirectiveDocument) |
+| **FRLMAlerts** | **FRCDAPointsDeVigilancesNonCode** | **FRCompositionDocument.section:sectionAlerts** |
 | FRLMAlerts.codeSection | Section.code | Composition.section.code |
 | FRLMAlerts.titleSection | Section.title | Composition.section.title |
 | FRLMAlerts.description | Section.text | Composition.section.text |
 | FRLMAlerts.entry.alert |  | Composition.section.entry (Flag) |
-| **FRLMAllergiesAndIntolerances** | **FRCDAAllergiesEtHypersensibilites** | **Composition.section (FRCompositionDocument.section:sectionAllergiesAndIntolerances)** |
+| **FRLMAllergiesAndIntolerances** | **FRCDAAllergiesEtHypersensibilites** | **FRCompositionDocument.section:sectionAllergiesAndIntolerances** |
 | FRLMAllergiesAndIntolerances.codeSection | Section.code | Composition.section.code |
 | FRLMAllergiesAndIntolerances.titleSection | Section.title | Composition.section.title |
 | FRLMAllergiesAndIntolerances.description | Section.text | Composition.section.text |
 | FRLMAllergiesAndIntolerances.entry.allergieIntolerance | Section.entry (FRCDAAllergieOuHypersensibilite) | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| **FRLMAttachments** | **FRCDADocumentsAjoutes** | **Composition.section (FRCompositionDocument.section:sectionAttachments)** |
+| **FRLMAttachments** | **FRCDADocumentsAjoutes** | **FRCompositionDocument.section:sectionAttachments** |
 | FRLMAttachments.codeSection | Section.code | Composition.section.code |
 | FRLMAttachments.titleSection | Section.title | Composition.section.title |
 | FRLMAttachments.description | Section.text | Composition.section.text |
 | FRLMAttachments.entry.attachment | Section.entry:frDocumentAttache | Composition.section.entry (FRDocumentReferenceDocument) |
 | FRLMAttachments.entry.observation | Section.entry:frSimpleObservation | Composition.section.entry (Observation) |
-| **FRLMCarePlans** | **FRCDAPlanDeSoins** | **Composition.section (FRCompositionDocument.section:sectionPlanOfCare)** |
+| **FRLMCarePlans** | **FRCDAPlanDeSoins** | **FRCompositionDocument.section:sectionPlanOfCare** |
 | FRLMCarePlans.codeSection | Section.code | Composition.section.code |
 | FRLMCarePlans.titleSection | Section.title | Composition.section.title |
 | FRLMCarePlans.description | Section.text | Composition.section.text |
 | FRLMCarePlans.entry.carePlans | Section.entry | Composition.section.entry |
-| **FRLMComparisonStudy** | **FRCDADICOMExamenComparatif** | **Composition.section (FRCompositionDocument.section:sectionComparison)** |
+| **FRLMComparisonStudy** | **FRCDADICOMExamenComparatif** | **FRCompositionDocument.section:sectionComparison** |
 | FRLMComparisonStudy.codeSection | Section.code | Composition.section.code |
 | FRLMComparisonStudy.titleSection | Section.title | Composition.section.title |
 | FRLMComparisonStudy.description | Section.text | Composition.section.text |
-| **FRLMConclusion** | **FRCDADICOMConclusion** | **DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)** |
-| **FRLMConclusion** | **FRCDADICOMConclusion** | **Composition.section (FRCompositionDocument.section:sectionImpression)** |
+| **FRLMConclusion** | **FRCDADICOMConclusion** | **FRDiagnosticReportImagingDocument.conclusion** |
+| **FRLMConclusion** | **FRCDADICOMConclusion** | **FRCompositionDocument.section:sectionImpression** |
 | FRLMConclusion.codeSection | Section.code |  |
 | FRLMConclusion.description | Section.text |  |
 | FRLMConclusion.titleSection | Section.title |  |
 | FRLMConclusion.entry.conditionOrFinding[x] |  | DiagnosticReport.result |
-| **FRLMDicomStudyMetadata** | **FRCDADICOMObjectCatalog** | **Composition.section (FRCompositionDocument.section:sectionImagingStudy)** |
+| **FRLMDicomStudyMetadata** | **FRCDADICOMObjectCatalog** | **FRCompositionDocument.section:sectionImagingStudy** |
 | FRLMDicomStudyMetadata.titleSection | Section.title | Composition.section.title |
 | FRLMDicomStudyMetadata.codeSection | Section.code | Composition.section.code |
 | FRLMDicomStudyMetadata.description | Section.text | Composition.section.text |
@@ -64,39 +64,39 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | DiagnosticReport.extension:procedure |
 | FRLMExaminationReport.entry.adverseReactions |  | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| FRLMExaminationReport.subSection.conclusion | **FRCDASectionDICOMConclusion** | Composition.section (FRCompositionDocument.section:sectionImpression) |
-| FRLMExaminationReport.subSection.conclusion | **FRCDASectionDICOMConclusion** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | Composition.section.entry (Observation) |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | Composition.section.text |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | DiagnosticReport.result |
-| **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **Composition.section (FRCompositionDocument.section:sectionExposureRadiation)** |
+| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | Composition.section (FRCompositionDocument.section:sectionImpression) |
+| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.entry (Observation) |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.text |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | DiagnosticReport.result |
+| **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **FRCompositionDocument.section:sectionExposureRadiation** |
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
 | FRLMExposureInformation.description | Section.text | Composition.section.text |
-| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation | Composition.section.entry (FRObservationRadiationExposureDocument) |
-| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **Composition.section (FRCompositionDocument.section:sectionFamilyMedicalHistory)** |
+| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation |  |
+| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration |  |
+| **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **FRCompositionDocument.section:sectionFamilyMedicalHistory** |
 | FRLMFamilyMedicalHistory.codeSection | Section.code | Composition.section.code |
 | FRLMFamilyMedicalHistory.titleSection | Section.title | Composition.section.title |
 | FRLMFamilyMedicalHistory.description | Section.text | Composition.section.text |
 | FRLMFamilyMedicalHistory.entry.familyMemberHistory | Section.entry (FRCDAAntecedentsFamiliaux) | Composition.section.entry (FRFamilyMemberHistoryDocument) |
-| **FRLMFunctionalStatus** | **FRCDAStatutFonctionnel** | **Composition.section (FRCompositionDocument.section:sectionFunctionalStatus)** |
+| **FRLMFunctionalStatus** | **FRCDAStatutFonctionnel** | **FRCompositionDocument.section:sectionFunctionalStatus** |
 | FRLMFunctionalStatus.codeSection | Section.code | Composition.section.code |
 | FRLMFunctionalStatus.titleSection | Section.title | Composition.section.title |
 | FRLMFunctionalStatus.description | Section.text | Composition.section.text |
-| FRLMFunctionalStatus.author | Section.author | Composition.author |
+| FRLMFunctionalStatus.author[x] | Section.author | Composition.author |
 | FRLMFunctionalStatus.informant | Section.informant | Composition.extension:informant |
 | FRLMFunctionalStatus.entry.assessment | Section.entry (FRCDAEvaluation) | Composition.section.entry (FRObservationAssessmentDocument) |
-| **FRLMHazardousWorkingConditions** | **FRCDAFacteursDeRisqueProfessionnelsNonCode** | **Composition.section (FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors)** |
+| **FRLMHazardousWorkingConditions** | **FRCDAFacteursDeRisqueProfessionnelsNonCode** | **FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors** |
 | FRLMHazardousWorkingConditions.codeSection | Section.code | Composition.section.code |
 | FRLMHazardousWorkingConditions.titleSection | Section.title | Composition.section.title |
 | FRLMHazardousWorkingConditions.description | Section.text | Composition.section.text |
-| **FRLMHospitalDischargeMedications** | **FRCDATraitementsALaSortie** | **Composition.section (FRCompositionDocument.section:sectionDischargeMedications)** |
+| **FRLMHospitalDischargeMedications** | **FRCDATraitementsALaSortie** | **FRCompositionDocument.section:sectionDischargeMedications** |
 | FRLMHospitalDischargeMedications.codeSection | Section.code | Composition.section.code |
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMImmunisations** | **FRCDAVaccinations** | **Composition.section (FRCompositionDocument.section:sectionImmunizations)** |
+| **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
@@ -118,127 +118,127 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMCRBIOSousChapitre.blocNarratif | Section.text |  |
 | FRLMCRBIOSousChapitre.titreSection | Section.title |  |
 | FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
-| **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalDevicePrescription)** |
+| **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |
 | FRLMMedicalDevicePrescriptions.titleSection | Section.title | Composition.section.title |
 | FRLMMedicalDevicePrescriptions.description | Section.text | Composition.section.text |
 | FRLMMedicalDevicePrescriptions.entry.deviceUse | Section.entry (FRCDADispositifMedical) | Composition.section.entry (FRDeviceUseStatementDocument) |
-| **FRLMMedicalDevicesAndImplants** | **FRCDADispositifsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalDevices)** |
+| **FRLMMedicalDevicesAndImplants** | **FRCDADispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevices** |
 | FRLMMedicalDevicesAndImplants.codeSection | Section.code | Composition.section.code |
 | FRLMMedicalDevicesAndImplants.titleSection | Section.title | Composition.section.title |
 | FRLMMedicalDevicesAndImplants.description | Section.text | Composition.section.text |
 | FRLMMedicalDevicesAndImplants.entry.deviceUse | Section.entry (FRCDADispositifMedical) | Composition.section.entry (FRDeviceUseStatementDocument) |
-| **FRLMHistoryOfPastIllness** | **FRCDAAntecedentsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalHistory)** |
+| **FRLMHistoryOfPastIllness** | **FRCDAAntecedentsMedicaux** | **FRCompositionDocument.section:sectionMedicalHistory** |
 | FRLMHistoryOfPastIllness.codeSection | Section.code | Composition.section.code |
 | FRLMHistoryOfPastIllness.titleSection | Section.title | Composition.section.title |
 | FRLMHistoryOfPastIllness.description | Section.text | Composition.section.text |
 | FRLMHistoryOfPastIllness.entry.problem | Section.entry (FRCDAProbleme) | Composition.section.entry (FRConditionDocument) |
-| **FRLMMedicationDispensations** | **FRCDADispensationMedicaments** | **Composition.section (FRCompositionDocument.section:sectionMedicationDispense)** |
+| **FRLMMedicationDispensations** | **FRCDADispensationMedicaments** | **FRCompositionDocument.section:sectionMedicationDispense** |
 | FRLMMedicationDispensations.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationDispensations.description | Section.text | Composition.section.text |
 | FRLMMedicationDispensations.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationDispensations.entry.medicationDispense | Section.entry (FRCDATraitementDispense) | Composition.section.entry (FRMedicationDispenseDocument) |
-| **FRLMMedicationPrescription** | **FRCDAPrescriptionMedicaments** | **Composition.section (FRCompositionDocument.section:sectionMedicationRequest)** |
+| **FRLMMedicationPrescription** | **FRCDAPrescriptionMedicaments** | **FRCompositionDocument.section:sectionMedicationRequest** |
 | FRLMMedicationPrescription.author[x] | Section.author | Composition.section.author |
 | FRLMMedicationPrescription.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationPrescription.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationPrescription.description | Section.text | Composition.section.text |
 | FRLMMedicationPrescription.entry.prescriptionItem | Section.entry (FRCDATraitementPrescrit) | Composition.section.entry (FRMedicationRequestDocument) |
-| **FRLMMedicationSummary** | **FRCDATraitements** | **Composition.section (FRCompositionDocument.section:sectionMedications)** |
+| **FRLMMedicationSummary** | **FRCDATraitements** | **FRCompositionDocument.section:sectionMedications** |
 | FRLMMedicationSummary.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationSummary.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationSummary.description | Section.text | Composition.section.text |
 | FRLMMedicationSummary.entry.medicationAdministration | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMNote** | **FRCDACommentaireNonCode** | **Composition.section (FRCompositionDocument.section:sectionNote)** |
+| **FRLMNote** | **FRCDACommentaireNonCode** | **FRCompositionDocument.section:sectionNote** |
 | FRLMNote.codeSection | Section.code | Composition.section.code |
 | FRLMNote.titleSection | Section.title | Composition.section.title |
 | FRLMNote.description | Section.text | Composition.section.extension:section-note |
-| **FRLMOrderInformation** | **FRCDADICOMDemandeExamen** | **Composition.section (FRCompositionDocument.section:sectionOrder)** |
+| **FRLMOrderInformation** | **FRCDADICOMDemandeExamen** | **FRCompositionDocument.section:sectionOrder** |
 | FRLMOrderInformation.titleSection | Section.title | Composition.section.title |
 | FRLMOrderInformation.description | Section.text | Composition.section.text |
 | FRLMOrderInformation.codeSection | Section.code | Composition.section.code |
 | FRLMOrderInformation.entry.orderInformation |  | Composition.section.entry (FRServiceRequestDocument) |
-| **FRLMPatientEducation** | **FRCDAEducationDuPatient** | **Composition.section (FRCompositionDocument.section:sectionPatientEducation)** |
+| **FRLMPatientEducation** | **FRCDAEducationDuPatient** | **FRCompositionDocument.section:sectionPatientEducation** |
 | FRLMPatientEducation.codeSection | Section.code | Composition.section.code |
 | FRLMPatientEducation.titleSection | Section.title | Composition.section.title |
 | FRLMPatientEducation.description | Section.text | Composition.section.text |
 | FRLMPatientEducation.entry.procedure | Section.entry:frActe.procedure | Composition.section.entry (FRProcedureDocument) |
 | FRLMPatientEducation.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMPatientEducation.entry.reference | Section.entry:frReferencesExternes.act | Composition.section.entry (FRDocumentReferenceDocument) |
-| **FRLMPredictableAdverseDrugReaction** | **FRCDAEffetsIndesirables** | **Composition.section (FRCompositionDocument.section:sectionPredictableAdverseDrugReaction)** |
+| **FRLMPredictableAdverseDrugReaction** | **FRCDAEffetsIndesirables** | **FRCompositionDocument.section:sectionPredictableAdverseDrugReaction** |
 | FRLMPredictableAdverseDrugReaction.titleSection | Section.title | Composition.section.title |
 | FRLMPredictableAdverseDrugReaction.description | Section.text | Composition.section.text |
 | FRLMPredictableAdverseDrugReaction.entry.adverseEvent | Section.entry (FRCDAEffetIndesirable) | Composition.section.entry (FRAdverseEventDocument) |
-| **FRLMSectionPregnancyHistory** | **FRCDAHistoriqueDesGrossesses** | **Composition.section (FRCompositionDocument.section:sectionPregnancyHistory)** |
+| **FRLMSectionPregnancyHistory** | **FRCDAHistoriqueDesGrossesses** | **FRCompositionDocument.section:sectionPregnancyHistory** |
 | FRLMSectionPregnancyHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSectionPregnancyHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSectionPregnancyHistory.description | Section.text | Composition.section.text |
 | FRLMSectionPregnancyHistory.entry.pregnancyStatus | Section.entry:frObservationSurLaGrossesse.observation | Composition.section.entry (FRObservationPregnancyDocument) |
 | FRLMSectionPregnancyHistory.entry.pregnancyHistory | Section.entry:frHistoriqueDeLaGrossesse.organizer | Composition.section.entry (FRObservationPregnancyHistoryDocument) |
 | FRLMSectionPregnancyHistory.note |  | Composition.section.extension:section-note |
-| **FRLMPresentedForm** | **FRCDADocumentPDFCopie** | **Composition.section (FRCompositionDocument.section:sectionPresentedForm)** |
+| **FRLMPresentedForm** | **FRCDADocumentPDFCopie** | **FRCompositionDocument.section:sectionPresentedForm** |
 | FRLMPresentedForm.codeSection | Section.code | Composition.section.code |
 | FRLMPresentedForm.titleSection | Section.title | Composition.section.title |
 | FRLMPresentedForm.description | Section.text | Composition.section.text |
 | FRLMPresentedForm.entry.attachment | Section.entry (FRCDADocumentAttache) | Composition.section.entry (FRDocumentReferenceDocument) |
-| **FRLMProblems** | **FRCDAProblemesActifs** | **Composition.section (FRCompositionDocument.section:sectionProblems)** |
+| **FRLMProblems** | **FRCDAProblemesActifs** | **FRCompositionDocument.section:sectionProblems** |
 | FRLMProblems.codeSection | Section.code | Composition.section.code |
 | FRLMProblems.titleSection | Section.title | Composition.section.title |
 | FRLMProblems.description | Section.text | Composition.section.text |
 | FRLMProblems.entry.problem | Section.entry (FRCDAProbleme) | Composition.section.entry (FRConditionDocument) |
-| **FRLMProcedures** | **FRCDAHistoriqueDesActes** | **Composition.section (FRCompositionDocument.section:sectionProceduresHx)** |
+| **FRLMProcedures** | **FRCDAHistoriqueDesActes** | **FRCompositionDocument.section:sectionProceduresHx** |
 | FRLMProcedures.codeSection | Section.code | Composition.section.code |
 | FRLMProcedures.titleSection | Section.title | Composition.section.title |
 | FRLMProcedures.description | Section.text | Composition.section.text |
 | FRLMProcedures.entry.procedure | Section.entry:frActe.procedure | Composition.section.entry (FRProcedureDocument) |
-| **FRLMQRCode** | **FRCDACodeABarres** | **Composition.section (FRCompositionDocument.section:sectionQrCode)** |
+| **FRLMQRCode** | **FRCDACodeABarres** | **FRCompositionDocument.section:sectionQrCode** |
 | FRLMQRCode.codeSection | Section.code | Composition.section.code |
 | FRLMQRCode.titleSection | Section.title | Composition.section.title |
 | FRLMQRCode.description | Section.text | Composition.section.text |
 | FRLMQRCode.entry.observationMedia | Section.entry (FRCDAImageIllustrative) | Composition.section.entry (FRMediaDocument) |
-| **FRLMReasonForReferral** | **FRCDARaisonDeLaRecommandation** | **Composition.section (FRCompositionDocument.section:sectionReasonForReferral)** |
+| **FRLMReasonForReferral** | **FRCDARaisonDeLaRecommandation** | **FRCompositionDocument.section:sectionReasonForReferral** |
 | FRLMReasonForReferral.codeSection | Section.code | Composition.section.code |
 | FRLMReasonForReferral.titleSection | Section.title | Composition.section.title |
 | FRLMReasonForReferral.description | Section.text | Composition.section.text |
 | FRLMReasonForReferral.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMReasonForReferral.entry.problemes | Section.entry:frProbleme.observation | Composition.section.entry (FRConditionDocument) |
-| **FRLMObservationResults** | **FRCDASectionResultats** | **Composition.section (FRCompositionDocument.section:sectionResults)** |
+| **FRLMObservationResults** | **FRCDASectionResultats** | **FRCompositionDocument.section:sectionResults** |
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
 | FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (Observation) |
-| **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **Composition.section (FRCompositionDocument.section:sectionSocialHistory)** |
+| **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSocialHistory.description | Section.text | Composition.section.text |
 | FRLMSocialHistory.entry.observationSocialHistory | Section.entry (FRCDAHabitusModeDeVie) | Composition.section.entry (FRObservationSocialHistoryDocument) |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **Composition.section (FRCompositionDocument.section:sectionHistory)** |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **DiagnosticReport.extension:historiqueMedical (FRDiagnosticReportImagingDocument.extension:historiqueMedical)** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
 | FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
 | FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
 | FRLMSupportingInformation.description | Section.text | Composition.section.text |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
 | FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.device |  |  |
-| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
-| **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **Composition.section (FRCompositionDocument.section:sectionVitalSigns)** |
+| **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **FRCompositionDocument.section:sectionVitalSigns** |
 | FRLMVitalSigns.titleSection | Section.title | Composition.section.title |
-| FRLMVitalSigns.entry.observationVitalSign | Section.entry. component.observation (FRCDASigneVitalObserve) | Composition.section.entry (FRObservationVitalSignsDocument) |
+| FRLMVitalSigns.entry.observationVitalSign | Section.entry (FRCDASignesVitaux) | Composition.section.entry (FRObservationVitalSignsDocument) |
 
 ### Mapping des entrées entre : Modèle métier / CDA / FHIR
 
@@ -287,7 +287,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMAllergyIntolerance.certainty | Observation.entryRelationship:frCertitude | AllergyIntolerance.verificationStatus |
 | FRLMAllergyIntolerance.criticality | Observation.entryRelationship:frCriticite | AllergyIntolerance.criticality |
 | FRLMAllergyIntolerance.category |  | AllergyIntolerance.category |
-| **FRLMAttachment** | Organizer.component:frObservationMedia. observationMedia (FRCDADocumentAttache.component:frObservationMedia.observationMedia) | **DocumentReference.content.attachment (FRDocumentReferenceDocument.content.attachment)** |
+| **FRLMAttachment** | FRCDADocumentAttache.component:frObservationMedia.observationMedia | **FRDocumentReferenceDocument.content.attachment** |
 | FRLMAttachment.contentType | Organizer.component:frObservationMedia. observationMedia.value.mediaType | DocumentReference.content.attachment.contentType |
 | FRLMAttachment.language | Organizer.component:frObservationMedia. observationMedia.languageCode | DocumentReference.content.attachment.language |
 | FRLMAttachment.data | Organizer.component:frObservationMedia. observationMedia.value | DocumentReference.content.attachment.data |
@@ -315,7 +315,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMCondition.stage |  | Condition.stage.summary |
 | FRLMCondition.reference | Observation.reference. externalDocument.text.reference | Condition.evidence.detail |
 | FRLMCondition.note | Observation.entryRelationship:frCommentaireER | Condition.note |
-| **FRLMDevice** | Supply.participant. participantRole.playingDevice (FRCDADispositifMedical.participant.participantRole.playingDevice) | **Device** |
+| **FRLMDevice** | FRCDADispositifMedical.participant. participantRole.playingDevice | **Device** |
 | FRLMDevice.identifier | Supply.participant. participantRole.id | Device.identifier |
 | FRLMDevice.udi | Supply.participant. participantRole.id | Device.udiCarrier.deviceIdentifier |
 | FRLMDevice.manufacturer |  | Device.manufacturer |
@@ -397,14 +397,12 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMProcedure.code | Procedure.code | Procedure.code |
 | FRLMProcedure.header.status | Procedure.statusCode | Procedure.status |
 | FRLMProcedure.procedureDate[x] | Procedure.effectiveTime | Procedure.performed[x] |
-| FRLMProcedure.procedureDate[x].procedureDateDateTime | Procedure.effectiveTime |  |
-| FRLMProcedure.procedureDate[x].procedureDatePeriod | Procedure.effectiveTime |  |
 | FRLMProcedure.priority | Procedure.priorityCode | Procedure.extension:priority |
 | FRLMProcedure.bodySite | Procedure.targetSiteCode | Procedure.bodySite |
 | FRLMProcedure.bodySite | Procedure.targetSiteCode.qualifier | Procedure.bodySite |
 | FRLMProcedure.approachSiteCode | Procedure.approachSiteCode | Procedure.extension:approachBodySite |
 | FRLMProcedure.header.participant[x] | Procedure.participant | Procedure.extension:participant |
-| **FRLMQuantityExposure** | **FRCDADICOMQuantite** | **Observation.component (FRObservationRadiationExposureDocument.component)** |
+| **FRLMQuantityExposure** | **FRCDADICOMQuantite** | **FRObservationRadiationExposureDocument.component** |
 | FRLMQuantityExposure.header. participant[x].participantProfessional |  | Observation.performer:professionnelAutorisantExposition |
 | FRLMQuantityExposure.type | Observation.code | Observation.component.code |
 | FRLMQuantityExposure.quantity | Observation.value | Observation.component.value[x] |
@@ -531,10 +529,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationMedia.header.identifier | ObservationMedia.id | Media.identifier |
 | FRLMObservationMedia.content.data | ObservationMedia.value | Media.content.data |
 | FRLMObservationMedia.content.contentType | ObservationMedia.value | Media.content.contentType |
-| FRLMObservationMedia.subject[x] | ObservationMedia.subject | Media.subject |
-| FRLMObservationMedia.subject[x] | ObservationMedia.subject | Media.subject |
-| FRLMObservationMedia.subject[x] | ObservationMedia.specimen | Media.subject |
-| FRLMObservationMedia.subject[x] | ObservationMedia.specimen | Media.subject |
+| FRLMObservationMedia.subject | ObservationMedia.subject | Media.subject |
+| FRLMObservationMedia.subject | ObservationMedia.subject | Media.subject |
+| FRLMObservationMedia.subject | ObservationMedia.specimen | Media.subject |
+| FRLMObservationMedia.subject | ObservationMedia.specimen | Media.subject |
 | FRLMObservationMedia.note |  | Media.note |
 | FRLMObservationMedia.header.performer[x] | ObservationMedia.performer | Media.operator |
 | FRLMObservationMedia.header.participant[x] | ObservationMedia.participant |  |
@@ -848,48 +846,48 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMProcedure.deviceUsed | Procedure.entryRelationship:frReferenceInterneDM | Procedure.usedReference |
 | FRLMProcedure.focalDevice |  | Procedure.focalDevice.manipulated |
 | FRLMProcedure.note | Procedure.text | Procedure.note |
-| **FRLMAddendum** | **FRCDADicomAddendum** | **Composition.section (FRCompositionDocument.section:sectionAddendum)** |
+| **FRLMAddendum** | **FRCDADicomAddendum** | **FRCompositionDocument.section:sectionAddendum** |
 | FRLMAddendum.codeSection | Section.code | Composition.section.code |
 | FRLMAddendum.titleSection | Section.title | Composition.section.title |
 | FRLMAddendum.description | Section.text | Composition.section.text |
 | FRLMAddendum.author[x] | Section.author | Composition.author |
-| **FRLMAdvanceDirectives** | **FRCDADirectivesAnticipees** | **Composition.section (FRCompositionDocument.section:sectionAdvanceDirectives)** |
+| **FRLMAdvanceDirectives** | **FRCDADirectivesAnticipees** | **FRCompositionDocument.section:sectionAdvanceDirectives** |
 | FRLMAdvanceDirectives.codeSection | Section.code | Composition.section.code |
 | FRLMAdvanceDirectives.titleSection | Section.title | Composition.section.title |
 | FRLMAdvanceDirectives.description | Section.text | Composition.section.text |
-| FRLMAdvanceDirectives.entry.advanceDirective | Section.entry | Composition.section.entry (FRAdvanceDirectiveDocument) |
-| **FRLMAlerts** | **FRCDAPointsDeVigilancesNonCode** | **Composition.section (FRCompositionDocument.section:sectionAlerts)** |
+| FRLMAdvanceDirectives.entry.advanceDirective | Section.entry (FRCDADirectiveAnticipee) | Composition.section.entry (FRAdvanceDirectiveDocument) |
+| **FRLMAlerts** | **FRCDAPointsDeVigilancesNonCode** | **FRCompositionDocument.section:sectionAlerts** |
 | FRLMAlerts.codeSection | Section.code | Composition.section.code |
 | FRLMAlerts.titleSection | Section.title | Composition.section.title |
 | FRLMAlerts.description | Section.text | Composition.section.text |
 | FRLMAlerts.entry.alert |  | Composition.section.entry (Flag) |
-| **FRLMAllergiesAndIntolerances** | **FRCDAAllergiesEtHypersensibilites** | **Composition.section (FRCompositionDocument.section:sectionAllergiesAndIntolerances)** |
+| **FRLMAllergiesAndIntolerances** | **FRCDAAllergiesEtHypersensibilites** | **FRCompositionDocument.section:sectionAllergiesAndIntolerances** |
 | FRLMAllergiesAndIntolerances.codeSection | Section.code | Composition.section.code |
 | FRLMAllergiesAndIntolerances.titleSection | Section.title | Composition.section.title |
 | FRLMAllergiesAndIntolerances.description | Section.text | Composition.section.text |
 | FRLMAllergiesAndIntolerances.entry.allergieIntolerance | Section.entry (FRCDAAllergieOuHypersensibilite) | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| **FRLMAttachments** | **FRCDADocumentsAjoutes** | **Composition.section (FRCompositionDocument.section:sectionAttachments)** |
+| **FRLMAttachments** | **FRCDADocumentsAjoutes** | **FRCompositionDocument.section:sectionAttachments** |
 | FRLMAttachments.codeSection | Section.code | Composition.section.code |
 | FRLMAttachments.titleSection | Section.title | Composition.section.title |
 | FRLMAttachments.description | Section.text | Composition.section.text |
 | FRLMAttachments.entry.attachment | Section.entry:frDocumentAttache | Composition.section.entry (FRDocumentReferenceDocument) |
 | FRLMAttachments.entry.observation | Section.entry:frSimpleObservation | Composition.section.entry (Observation) |
-| **FRLMCarePlans** | **FRCDAPlanDeSoins** | **Composition.section (FRCompositionDocument.section:sectionPlanOfCare)** |
+| **FRLMCarePlans** | **FRCDAPlanDeSoins** | **FRCompositionDocument.section:sectionPlanOfCare** |
 | FRLMCarePlans.codeSection | Section.code | Composition.section.code |
 | FRLMCarePlans.titleSection | Section.title | Composition.section.title |
 | FRLMCarePlans.description | Section.text | Composition.section.text |
 | FRLMCarePlans.entry.carePlans | Section.entry | Composition.section.entry |
-| **FRLMComparisonStudy** | **FRCDADICOMExamenComparatif** | **Composition.section (FRCompositionDocument.section:sectionComparison)** |
+| **FRLMComparisonStudy** | **FRCDADICOMExamenComparatif** | **FRCompositionDocument.section:sectionComparison** |
 | FRLMComparisonStudy.codeSection | Section.code | Composition.section.code |
 | FRLMComparisonStudy.titleSection | Section.title | Composition.section.title |
 | FRLMComparisonStudy.description | Section.text | Composition.section.text |
-| **FRLMConclusion** | **FRCDADICOMConclusion** | **DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)** |
-| **FRLMConclusion** | **FRCDADICOMConclusion** | **Composition.section (FRCompositionDocument.section:sectionImpression)** |
+| **FRLMConclusion** | **FRCDADICOMConclusion** | **FRDiagnosticReportImagingDocument.conclusion** |
+| **FRLMConclusion** | **FRCDADICOMConclusion** | **FRCompositionDocument.section:sectionImpression** |
 | FRLMConclusion.codeSection | Section.code |  |
 | FRLMConclusion.description | Section.text |  |
 | FRLMConclusion.titleSection | Section.title |  |
 | FRLMConclusion.entry.conditionOrFinding[x] |  | DiagnosticReport.result |
-| **FRLMDicomStudyMetadata** | **FRCDADICOMObjectCatalog** | **Composition.section (FRCompositionDocument.section:sectionImagingStudy)** |
+| **FRLMDicomStudyMetadata** | **FRCDADICOMObjectCatalog** | **FRCompositionDocument.section:sectionImagingStudy** |
 | FRLMDicomStudyMetadata.titleSection | Section.title | Composition.section.title |
 | FRLMDicomStudyMetadata.codeSection | Section.code | Composition.section.code |
 | FRLMDicomStudyMetadata.description | Section.text | Composition.section.text |
@@ -903,39 +901,39 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | DiagnosticReport.extension:procedure |
 | FRLMExaminationReport.entry.adverseReactions |  | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| FRLMExaminationReport.subSection.conclusion | **FRCDASectionDICOMConclusion** | Composition.section (FRCompositionDocument.section:sectionImpression) |
-| FRLMExaminationReport.subSection.conclusion | **FRCDASectionDICOMConclusion** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | Composition.section.entry (Observation) |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | Composition.section.text |
-| FRLMExaminationReport.entry.results[x] | **FRCDADICOMResultats** | DiagnosticReport.result |
-| **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **Composition.section (FRCompositionDocument.section:sectionExposureRadiation)** |
+| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | Composition.section (FRCompositionDocument.section:sectionImpression) |
+| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.entry (Observation) |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.text |
+| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | DiagnosticReport.result |
+| **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **FRCompositionDocument.section:sectionExposureRadiation** |
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
 | FRLMExposureInformation.description | Section.text | Composition.section.text |
-| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation | Composition.section.entry (FRObservationRadiationExposureDocument) |
-| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **Composition.section (FRCompositionDocument.section:sectionFamilyMedicalHistory)** |
+| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation |  |
+| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration |  |
+| **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **FRCompositionDocument.section:sectionFamilyMedicalHistory** |
 | FRLMFamilyMedicalHistory.codeSection | Section.code | Composition.section.code |
 | FRLMFamilyMedicalHistory.titleSection | Section.title | Composition.section.title |
 | FRLMFamilyMedicalHistory.description | Section.text | Composition.section.text |
 | FRLMFamilyMedicalHistory.entry.familyMemberHistory | Section.entry (FRCDAAntecedentsFamiliaux) | Composition.section.entry (FRFamilyMemberHistoryDocument) |
-| **FRLMFunctionalStatus** | **FRCDAStatutFonctionnel** | **Composition.section (FRCompositionDocument.section:sectionFunctionalStatus)** |
+| **FRLMFunctionalStatus** | **FRCDAStatutFonctionnel** | **FRCompositionDocument.section:sectionFunctionalStatus** |
 | FRLMFunctionalStatus.codeSection | Section.code | Composition.section.code |
 | FRLMFunctionalStatus.titleSection | Section.title | Composition.section.title |
 | FRLMFunctionalStatus.description | Section.text | Composition.section.text |
-| FRLMFunctionalStatus.author | Section.author | Composition.author |
+| FRLMFunctionalStatus.author[x] | Section.author | Composition.author |
 | FRLMFunctionalStatus.informant | Section.informant | Composition.extension:informant |
 | FRLMFunctionalStatus.entry.assessment | Section.entry (FRCDAEvaluation) | Composition.section.entry (FRObservationAssessmentDocument) |
-| **FRLMHazardousWorkingConditions** | **FRCDAFacteursDeRisqueProfessionnelsNonCode** | **Composition.section (FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors)** |
+| **FRLMHazardousWorkingConditions** | **FRCDAFacteursDeRisqueProfessionnelsNonCode** | **FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors** |
 | FRLMHazardousWorkingConditions.codeSection | Section.code | Composition.section.code |
 | FRLMHazardousWorkingConditions.titleSection | Section.title | Composition.section.title |
 | FRLMHazardousWorkingConditions.description | Section.text | Composition.section.text |
-| **FRLMHospitalDischargeMedications** | **FRCDATraitementsALaSortie** | **Composition.section (FRCompositionDocument.section:sectionDischargeMedications)** |
+| **FRLMHospitalDischargeMedications** | **FRCDATraitementsALaSortie** | **FRCompositionDocument.section:sectionDischargeMedications** |
 | FRLMHospitalDischargeMedications.codeSection | Section.code | Composition.section.code |
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMImmunisations** | **FRCDAVaccinations** | **Composition.section (FRCompositionDocument.section:sectionImmunizations)** |
+| **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
@@ -957,127 +955,127 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMCRBIOSousChapitre.blocNarratif | Section.text |  |
 | FRLMCRBIOSousChapitre.titreSection | Section.title |  |
 | FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
-| **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalDevicePrescription)** |
+| **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |
 | FRLMMedicalDevicePrescriptions.titleSection | Section.title | Composition.section.title |
 | FRLMMedicalDevicePrescriptions.description | Section.text | Composition.section.text |
 | FRLMMedicalDevicePrescriptions.entry.deviceUse | Section.entry (FRCDADispositifMedical) | Composition.section.entry (FRDeviceUseStatementDocument) |
-| **FRLMMedicalDevicesAndImplants** | **FRCDADispositifsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalDevices)** |
+| **FRLMMedicalDevicesAndImplants** | **FRCDADispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevices** |
 | FRLMMedicalDevicesAndImplants.codeSection | Section.code | Composition.section.code |
 | FRLMMedicalDevicesAndImplants.titleSection | Section.title | Composition.section.title |
 | FRLMMedicalDevicesAndImplants.description | Section.text | Composition.section.text |
 | FRLMMedicalDevicesAndImplants.entry.deviceUse | Section.entry (FRCDADispositifMedical) | Composition.section.entry (FRDeviceUseStatementDocument) |
-| **FRLMHistoryOfPastIllness** | **FRCDAAntecedentsMedicaux** | **Composition.section (FRCompositionDocument.section:sectionMedicalHistory)** |
+| **FRLMHistoryOfPastIllness** | **FRCDAAntecedentsMedicaux** | **FRCompositionDocument.section:sectionMedicalHistory** |
 | FRLMHistoryOfPastIllness.codeSection | Section.code | Composition.section.code |
 | FRLMHistoryOfPastIllness.titleSection | Section.title | Composition.section.title |
 | FRLMHistoryOfPastIllness.description | Section.text | Composition.section.text |
 | FRLMHistoryOfPastIllness.entry.problem | Section.entry (FRCDAProbleme) | Composition.section.entry (FRConditionDocument) |
-| **FRLMMedicationDispensations** | **FRCDADispensationMedicaments** | **Composition.section (FRCompositionDocument.section:sectionMedicationDispense)** |
+| **FRLMMedicationDispensations** | **FRCDADispensationMedicaments** | **FRCompositionDocument.section:sectionMedicationDispense** |
 | FRLMMedicationDispensations.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationDispensations.description | Section.text | Composition.section.text |
 | FRLMMedicationDispensations.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationDispensations.entry.medicationDispense | Section.entry (FRCDATraitementDispense) | Composition.section.entry (FRMedicationDispenseDocument) |
-| **FRLMMedicationPrescription** | **FRCDAPrescriptionMedicaments** | **Composition.section (FRCompositionDocument.section:sectionMedicationRequest)** |
+| **FRLMMedicationPrescription** | **FRCDAPrescriptionMedicaments** | **FRCompositionDocument.section:sectionMedicationRequest** |
 | FRLMMedicationPrescription.author[x] | Section.author | Composition.section.author |
 | FRLMMedicationPrescription.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationPrescription.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationPrescription.description | Section.text | Composition.section.text |
 | FRLMMedicationPrescription.entry.prescriptionItem | Section.entry (FRCDATraitementPrescrit) | Composition.section.entry (FRMedicationRequestDocument) |
-| **FRLMMedicationSummary** | **FRCDATraitements** | **Composition.section (FRCompositionDocument.section:sectionMedications)** |
+| **FRLMMedicationSummary** | **FRCDATraitements** | **FRCompositionDocument.section:sectionMedications** |
 | FRLMMedicationSummary.codeSection | Section.code | Composition.section.code |
 | FRLMMedicationSummary.titleSection | Section.title | Composition.section.title |
 | FRLMMedicationSummary.description | Section.text | Composition.section.text |
 | FRLMMedicationSummary.entry.medicationAdministration | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMNote** | **FRCDACommentaireNonCode** | **Composition.section (FRCompositionDocument.section:sectionNote)** |
+| **FRLMNote** | **FRCDACommentaireNonCode** | **FRCompositionDocument.section:sectionNote** |
 | FRLMNote.codeSection | Section.code | Composition.section.code |
 | FRLMNote.titleSection | Section.title | Composition.section.title |
 | FRLMNote.description | Section.text | Composition.section.extension:section-note |
-| **FRLMOrderInformation** | **FRCDADICOMDemandeExamen** | **Composition.section (FRCompositionDocument.section:sectionOrder)** |
+| **FRLMOrderInformation** | **FRCDADICOMDemandeExamen** | **FRCompositionDocument.section:sectionOrder** |
 | FRLMOrderInformation.titleSection | Section.title | Composition.section.title |
 | FRLMOrderInformation.description | Section.text | Composition.section.text |
 | FRLMOrderInformation.codeSection | Section.code | Composition.section.code |
 | FRLMOrderInformation.entry.orderInformation |  | Composition.section.entry (FRServiceRequestDocument) |
-| **FRLMPatientEducation** | **FRCDAEducationDuPatient** | **Composition.section (FRCompositionDocument.section:sectionPatientEducation)** |
+| **FRLMPatientEducation** | **FRCDAEducationDuPatient** | **FRCompositionDocument.section:sectionPatientEducation** |
 | FRLMPatientEducation.codeSection | Section.code | Composition.section.code |
 | FRLMPatientEducation.titleSection | Section.title | Composition.section.title |
 | FRLMPatientEducation.description | Section.text | Composition.section.text |
 | FRLMPatientEducation.entry.procedure | Section.entry:frActe.procedure | Composition.section.entry (FRProcedureDocument) |
 | FRLMPatientEducation.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMPatientEducation.entry.reference | Section.entry:frReferencesExternes.act | Composition.section.entry (FRDocumentReferenceDocument) |
-| **FRLMPredictableAdverseDrugReaction** | **FRCDAEffetsIndesirables** | **Composition.section (FRCompositionDocument.section:sectionPredictableAdverseDrugReaction)** |
+| **FRLMPredictableAdverseDrugReaction** | **FRCDAEffetsIndesirables** | **FRCompositionDocument.section:sectionPredictableAdverseDrugReaction** |
 | FRLMPredictableAdverseDrugReaction.titleSection | Section.title | Composition.section.title |
 | FRLMPredictableAdverseDrugReaction.description | Section.text | Composition.section.text |
 | FRLMPredictableAdverseDrugReaction.entry.adverseEvent | Section.entry (FRCDAEffetIndesirable) | Composition.section.entry (FRAdverseEventDocument) |
-| **FRLMSectionPregnancyHistory** | **FRCDAHistoriqueDesGrossesses** | **Composition.section (FRCompositionDocument.section:sectionPregnancyHistory)** |
+| **FRLMSectionPregnancyHistory** | **FRCDAHistoriqueDesGrossesses** | **FRCompositionDocument.section:sectionPregnancyHistory** |
 | FRLMSectionPregnancyHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSectionPregnancyHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSectionPregnancyHistory.description | Section.text | Composition.section.text |
 | FRLMSectionPregnancyHistory.entry.pregnancyStatus | Section.entry:frObservationSurLaGrossesse.observation | Composition.section.entry (FRObservationPregnancyDocument) |
 | FRLMSectionPregnancyHistory.entry.pregnancyHistory | Section.entry:frHistoriqueDeLaGrossesse.organizer | Composition.section.entry (FRObservationPregnancyHistoryDocument) |
 | FRLMSectionPregnancyHistory.note |  | Composition.section.extension:section-note |
-| **FRLMPresentedForm** | **FRCDADocumentPDFCopie** | **Composition.section (FRCompositionDocument.section:sectionPresentedForm)** |
+| **FRLMPresentedForm** | **FRCDADocumentPDFCopie** | **FRCompositionDocument.section:sectionPresentedForm** |
 | FRLMPresentedForm.codeSection | Section.code | Composition.section.code |
 | FRLMPresentedForm.titleSection | Section.title | Composition.section.title |
 | FRLMPresentedForm.description | Section.text | Composition.section.text |
 | FRLMPresentedForm.entry.attachment | Section.entry (FRCDADocumentAttache) | Composition.section.entry (FRDocumentReferenceDocument) |
-| **FRLMProblems** | **FRCDAProblemesActifs** | **Composition.section (FRCompositionDocument.section:sectionProblems)** |
+| **FRLMProblems** | **FRCDAProblemesActifs** | **FRCompositionDocument.section:sectionProblems** |
 | FRLMProblems.codeSection | Section.code | Composition.section.code |
 | FRLMProblems.titleSection | Section.title | Composition.section.title |
 | FRLMProblems.description | Section.text | Composition.section.text |
 | FRLMProblems.entry.problem | Section.entry (FRCDAProbleme) | Composition.section.entry (FRConditionDocument) |
-| **FRLMProcedures** | **FRCDAHistoriqueDesActes** | **Composition.section (FRCompositionDocument.section:sectionProceduresHx)** |
+| **FRLMProcedures** | **FRCDAHistoriqueDesActes** | **FRCompositionDocument.section:sectionProceduresHx** |
 | FRLMProcedures.codeSection | Section.code | Composition.section.code |
 | FRLMProcedures.titleSection | Section.title | Composition.section.title |
 | FRLMProcedures.description | Section.text | Composition.section.text |
 | FRLMProcedures.entry.procedure | Section.entry:frActe.procedure | Composition.section.entry (FRProcedureDocument) |
-| **FRLMQRCode** | **FRCDACodeABarres** | **Composition.section (FRCompositionDocument.section:sectionQrCode)** |
+| **FRLMQRCode** | **FRCDACodeABarres** | **FRCompositionDocument.section:sectionQrCode** |
 | FRLMQRCode.codeSection | Section.code | Composition.section.code |
 | FRLMQRCode.titleSection | Section.title | Composition.section.title |
 | FRLMQRCode.description | Section.text | Composition.section.text |
 | FRLMQRCode.entry.observationMedia | Section.entry (FRCDAImageIllustrative) | Composition.section.entry (FRMediaDocument) |
-| **FRLMReasonForReferral** | **FRCDARaisonDeLaRecommandation** | **Composition.section (FRCompositionDocument.section:sectionReasonForReferral)** |
+| **FRLMReasonForReferral** | **FRCDARaisonDeLaRecommandation** | **FRCompositionDocument.section:sectionReasonForReferral** |
 | FRLMReasonForReferral.codeSection | Section.code | Composition.section.code |
 | FRLMReasonForReferral.titleSection | Section.title | Composition.section.title |
 | FRLMReasonForReferral.description | Section.text | Composition.section.text |
 | FRLMReasonForReferral.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMReasonForReferral.entry.problemes | Section.entry:frProbleme.observation | Composition.section.entry (FRConditionDocument) |
-| **FRLMObservationResults** | **FRCDASectionResultats** | **Composition.section (FRCompositionDocument.section:sectionResults)** |
+| **FRLMObservationResults** | **FRCDASectionResultats** | **FRCompositionDocument.section:sectionResults** |
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
 | FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (Observation) |
-| **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **Composition.section (FRCompositionDocument.section:sectionSocialHistory)** |
+| **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSocialHistory.description | Section.text | Composition.section.text |
 | FRLMSocialHistory.entry.observationSocialHistory | Section.entry (FRCDAHabitusModeDeVie) | Composition.section.entry (FRObservationSocialHistoryDocument) |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **Composition.section (FRCompositionDocument.section:sectionHistory)** |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **DiagnosticReport.extension:historiqueMedical (FRDiagnosticReportImagingDocument.extension:historiqueMedical)** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
 | FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
 | FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
 | FRLMSupportingInformation.description | Section.text | Composition.section.text |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
 | FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.device |  |  |
-| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical.value[x] |
+| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
-| **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **Composition.section (FRCompositionDocument.section:sectionVitalSigns)** |
+| **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **FRCompositionDocument.section:sectionVitalSigns** |
 | FRLMVitalSigns.titleSection | Section.title | Composition.section.title |
-| FRLMVitalSigns.entry.observationVitalSign | Section.entry. component.observation (FRCDASigneVitalObserve) | Composition.section.entry (FRObservationVitalSignsDocument) |
+| FRLMVitalSigns.entry.observationVitalSign | Section.entry (FRCDASignesVitaux) | Composition.section.entry (FRObservationVitalSignsDocument) |
 | **FRLMServiceRequest** | **FRCDADemandeDExamenOuDeSuivi** | **FRServiceRequestDocument** |
 | FRLMServiceRequest.header.status | Observation.statusCode | ServiceRequest.status |
 | FRLMServiceRequest.code | Observation.code | ServiceRequest.code |

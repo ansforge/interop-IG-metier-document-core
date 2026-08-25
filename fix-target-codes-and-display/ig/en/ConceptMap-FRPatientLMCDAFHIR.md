@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -175,20 +175,6 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMPatient.contact.name.family",
-      "target" : [{
-        "code" : "Patient.guardian",
-        "equivalence" : "wider"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.contact.name.given",
-      "target" : [{
-        "code" : "Patient.guardian",
-        "equivalence" : "wider"
-      }]
-    },
-    {
       "code" : "FRLMPatient.contact.organization",
       "target" : [{
         "code" : "Patient.guardian",
@@ -292,15 +278,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.deceased[x]",
         "equivalence" : "equivalent",
-        "comment" : "Cas où deceased[x] est de type boolean."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.deceased[x]",
-      "target" : [{
-        "code" : "Patient.deceased[x]",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où deceased[x] est de type dateTime."
+        "comment" : "deceased[x] est de type boolean ou dateTime des deux côtés."
       }]
     },
     {
@@ -308,15 +286,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.multipleBirth[x]",
         "equivalence" : "equivalent",
-        "comment" : "Cas où multipleBirth[x] est de type boolean."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.multipleBirth[x]",
-      "target" : [{
-        "code" : "Patient.multipleBirth[x]",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où multipleBirth[x] est de type integer."
+        "comment" : "multipleBirth[x] est de type boolean ou integer des deux côtés."
       }]
     },
     {
@@ -354,22 +324,6 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.contact.name",
         "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMPatient.contact.name.family",
-      "target" : [{
-        "code" : "Patient.contact.name",
-        "equivalence" : "relatedto",
-        "comment" : "Porté par le composant family de Patient.contact.name (HumanName)."
-      }]
-    },
-    {
-      "code" : "FRLMPatient.contact.name.given",
-      "target" : [{
-        "code" : "Patient.contact.name",
-        "equivalence" : "relatedto",
-        "comment" : "Porté par le composant given de Patient.contact.name (HumanName)."
       }]
     },
     {

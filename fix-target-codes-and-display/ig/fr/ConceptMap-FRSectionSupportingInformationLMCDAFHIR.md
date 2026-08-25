@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -265,7 +265,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence une Observation d'antécédent médical."
       }]
@@ -273,7 +273,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence une Observation d'antécédent chirurgical."
       }]
@@ -281,7 +281,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.contraIndication",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRObservationContraIndicationsDocument."
       }]
@@ -289,7 +289,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRConditionDocument."
       }]
@@ -297,7 +297,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.device",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRDeviceUseStatementDocument."
       }]
@@ -305,7 +305,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRObservationPregnancyDocument."
       }]
@@ -313,7 +313,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     {
       "code" : "FRLMSupportingInformation.entry.priorMedicationAdministration",
       "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical.value[x]",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRMedicationAdministrationDocument."
       }]

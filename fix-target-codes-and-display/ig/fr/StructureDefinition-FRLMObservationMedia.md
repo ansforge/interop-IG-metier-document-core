@@ -79,7 +79,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
   "name" : "FRLMObservationMedia",
   "title" : "Logical model - FR LM ObservationMedia",
   "status" : "draft",
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -131,8 +131,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
       "min" : 1
     },
     {
-      "id" : "FRLMObservationMedia.subject[x]",
-      "path" : "FRLMObservationMedia.subject[x]",
+      "id" : "FRLMObservationMedia.subject",
+      "path" : "FRLMObservationMedia.subject",
       "short" : "Patient ou spécimen concerné par l’image",
       "definition" : "Patient ou spécimen concerné par l’image",
       "min" : 1,

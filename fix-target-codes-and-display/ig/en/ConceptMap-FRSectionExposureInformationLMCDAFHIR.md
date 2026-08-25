@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMExposureInformation vers la sectio
   "title" : "Mapping Métier/CDA/FHIR : \"Exposition aux radiations\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-24T13:13:01+00:00",
+  "date" : "2026-08-25T11:34:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -120,7 +120,7 @@ Mapping des éléments du modèle métier FRLMExposureInformation vers la sectio
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.quantityExposure",
+      "code" : "FRLMExposureInformation.entry.quantityExposure",
       "target" : [{
         "code" : "Composition.section.entry",
         "display" : "FRObservationRadiationExposureDocument",
@@ -128,7 +128,7 @@ Mapping des éléments du modèle métier FRLMExposureInformation vers la sectio
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "code" : "FRLMExposureInformation.entry.radiopharmaceuticalAdministration",
       "target" : [{
         "code" : "Composition.section.entry",
         "display" : "FRMedicationAdministrationDocument",
