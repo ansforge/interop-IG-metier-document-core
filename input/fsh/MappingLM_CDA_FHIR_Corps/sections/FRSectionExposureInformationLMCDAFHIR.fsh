@@ -29,11 +29,11 @@ Description: "Mapping des éléments du modèle métier FRLMExposureInformation 
 * group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Quantité
-* group[=].element[+].code = #FRLMExposureInformation.subSection.quantityExposure
+* group[=].element[+].code = #FRLMExposureInformation.entry.quantityExposure
 * group[=].element[=].target[+].code = #Section.entry:frDicomQuantite.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée administration des produits radiopharmaceutiques
-* group[=].element[+].code = #FRLMExposureInformation.subSection.radiopharmaceuticalAdministration
+* group[=].element[+].code = #FRLMExposureInformation.entry.radiopharmaceuticalAdministration
 * group[=].element[=].target[+].code = #Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration
 * group[=].element[=].target[=].equivalence = #equivalent
 
