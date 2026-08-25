@@ -32,16 +32,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[+].code = #FRLMProcedure.procedureDate[x]
 * group[=].element[=].target.code = #Procedure.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
-// Date de début de l'acte
-* group[=].element[+].code = #FRLMProcedure.procedureDate[x].procedureDateDateTime
-* group[=].element[=].target.code = #Procedure.effectiveTime
-* group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
-// Date de fin de l'acte
-* group[=].element[+].code = #FRLMProcedure.procedureDate[x].procedureDatePeriod
-* group[=].element[=].target.code = #Procedure.effectiveTime
-* group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
+* group[=].element[=].target.comment = "Le CDA ne décompose pas l'intervalle en low/high distincts ; début et fin sont portés par l'ensemble de effectiveTime."
 // Priorité
 * group[=].element[+].code = #FRLMProcedure.priority
 * group[=].element[=].target.code = #Procedure.priorityCode

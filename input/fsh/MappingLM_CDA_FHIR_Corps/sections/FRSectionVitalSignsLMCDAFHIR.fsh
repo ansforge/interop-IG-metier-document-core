@@ -22,8 +22,8 @@ Description: "Mapping des éléments du modèle métier FRLMVitalSigns vers la s
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée Signes vitaux
 * group[=].element[+].code = #FRLMVitalSigns.entry.observationVitalSign
-* group[=].element[=].target.code = #Section.entry.component.observation
-* group[=].element[=].target.display = "FRCDASigneVitalObserve"
+* group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDASignesVitaux"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."
 

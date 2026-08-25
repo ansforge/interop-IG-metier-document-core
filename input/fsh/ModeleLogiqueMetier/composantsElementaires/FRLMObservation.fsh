@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * order 0..1 FRLMServiceRequest "Demande d'examen correspondante"
 * bodySite 0..1 FRLMBodyStructure "Localisation anatomique"
 * result 1..1 Base "Valeur de l'observation"
-  * Value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept or boolean "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation."
+  * value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept or boolean "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation."
 * referenceRange 0..* Base "Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis."
   * low 0..1 Quantity "Limite inférieure de l'intervalle"
     * ^binding.strength = #preferred
@@ -35,9 +35,7 @@ Characteristics: #can-be-target
   * appliesTo 0..* CodeableConcept "Population concernée pour cet intervalle"
     * ^binding.strength = #preferred
     * ^binding.description = "(preferred): SNOMED CT, HL7 v3-Race"
-  * age 0..1 Range "Tranche d'âge pour cet intervalle"
-    * ^binding.strength = #preferred
-    * ^binding.description = "(preferred): UCUM for units"
+  * age 0..1 Range "Tranche d'âge pour cet intervalle. (preferred): UCUM for units"
   * text 0..1 string "Texte libre"
 * interpretation 0..* CodeableConcept "Interprétation"
   * ^binding.strength = #required

@@ -148,37 +148,37 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[=].target.equivalence = #equivalent
 // antécédents médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence une Observation d'antécédent médical."
 // antécédents chirurgicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastProcedures
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence une Observation d'antécédent chirurgical."
 // contre-indications
 * group[=].element[+].code = #FRLMSupportingInformation.entry.contraIndication
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence un FRObservationContraIndicationsDocument."
 // Problème
 * group[=].element[+].code = #FRLMSupportingInformation.entry.condition
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence un FRConditionDocument."
 // dispositifs médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.device
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence un FRDeviceUseStatementDocument."
 // grossesse
 * group[=].element[+].code = #FRLMSupportingInformation.entry.pregnancyStatus
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence un FRObservationPregnancyDocument."
 // administration de produit de santé
 * group[=].element[+].code = #FRLMSupportingInformation.entry.priorMedicationAdministration
-* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical.value[x]
+* group[=].element[=].target.code = #DiagnosticReport.extension:historiqueMedical
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où value[x] référence un FRMedicationAdministrationDocument."
 // sexe clinique

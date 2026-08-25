@@ -35,13 +35,13 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.comment = "Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value."
 
 // Sujet
-* group[=].element[+].code = #FRLMObservationMedia.subject[x]
+* group[=].element[+].code = #FRLMObservationMedia.subject
 * group[=].element[=].target.code = #ObservationMedia.subject
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient."
 
 // Specimen
-* group[=].element[+].code = #FRLMObservationMedia.subject[x]
+* group[=].element[+].code = #FRLMObservationMedia.subject
 * group[=].element[=].target.code = #ObservationMedia.specimen
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMSpecimen."
@@ -98,13 +98,13 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sujet
-* group[=].element[+].code = #FRLMObservationMedia.subject[x]
+* group[=].element[+].code = #FRLMObservationMedia.subject
 * group[=].element[=].target.code = #Media.subject
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient."
 
 // Specimen
-* group[=].element[+].code = #FRLMObservationMedia.subject[x]
+* group[=].element[+].code = #FRLMObservationMedia.subject
 * group[=].element[=].target.code = #Media.subject
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."

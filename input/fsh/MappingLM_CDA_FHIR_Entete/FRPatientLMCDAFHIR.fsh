@@ -108,12 +108,6 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #FRLMPatient.contact.name
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[+].code = #FRLMPatient.contact.name.family
-* group[=].element[=].target.code = #Patient.guardian
-* group[=].element[=].target.equivalence = #wider
-* group[=].element[+].code = #FRLMPatient.contact.name.given
-* group[=].element[=].target.code = #Patient.guardian
-* group[=].element[=].target.equivalence = #wider
 * group[=].element[+].code = #FRLMPatient.contact.organization
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
@@ -188,21 +182,13 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #FRLMPatient.deceased[x]
 * group[=].element[=].target.code = #Patient.deceased[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où deceased[x] est de type boolean."
-* group[=].element[+].code = #FRLMPatient.deceased[x]
-* group[=].element[=].target.code = #Patient.deceased[x]
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où deceased[x] est de type dateTime."
+* group[=].element[=].target.comment = "deceased[x] est de type boolean ou dateTime des deux côtés."
 
 // Naissance multiple
 * group[=].element[+].code = #FRLMPatient.multipleBirth[x]
 * group[=].element[=].target.code = #Patient.multipleBirth[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type boolean."
-* group[=].element[+].code = #FRLMPatient.multipleBirth[x]
-* group[=].element[=].target.code = #Patient.multipleBirth[x]
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où multipleBirth[x] est de type integer."
+* group[=].element[=].target.comment = "multipleBirth[x] est de type boolean ou integer des deux côtés."
 
 // Lieu de naissance
 * group[=].element[+].code = #FRLMPatient.birthPlace
@@ -224,14 +210,6 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #FRLMPatient.contact.name
 * group[=].element[=].target.code = #Patient.contact.name
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #FRLMPatient.contact.name.family
-* group[=].element[=].target.code = #Patient.contact.name
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Porté par le composant family de Patient.contact.name (HumanName)."
-* group[=].element[+].code = #FRLMPatient.contact.name.given
-* group[=].element[=].target.code = #Patient.contact.name
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Porté par le composant given de Patient.contact.name (HumanName)."
 * group[=].element[+].code = #FRLMPatient.contact.organization
 * group[=].element[=].target.code = #Patient.contact.organization
 * group[=].element[=].target.equivalence = #equivalent

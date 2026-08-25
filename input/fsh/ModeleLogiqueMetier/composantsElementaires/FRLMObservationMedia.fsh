@@ -11,5 +11,5 @@ Characteristics: #can-be-target
 * content.data 1..1
 * content.contentType 1..1 
 
-* subject[x] 1..1 Reference(FRLMPatient or FRLMSpecimen) "Patient ou spécimen concerné par l’image"
+* subject 1..1 Reference(FRLMPatient or FRLMSpecimen) "Patient ou spécimen concerné par l’image"
 * note 0..*	string "Précondition"

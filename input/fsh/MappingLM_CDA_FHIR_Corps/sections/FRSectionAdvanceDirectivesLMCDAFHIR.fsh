@@ -31,6 +31,7 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 // Entrée Directive anticipée
 * group[=].element[+].code = #FRLMAdvanceDirectives.entry.advanceDirective
 * group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.display = "FRCDADirectiveAnticipee"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR

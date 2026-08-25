@@ -28,7 +28,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].element[=].target.code = #Section.text
 * group[=].element[=].target.equivalence = #equivalent
 // auteur
-* group[=].element[+].code = #FRLMFunctionalStatus.author
+* group[=].element[+].code = #FRLMFunctionalStatus.author[x]
 * group[=].element[=].target.code = #Section.author
 * group[=].element[=].target.equivalence = #equivalent
 // informateur
@@ -62,7 +62,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 * group[=].element[=].target.code = #Composition.section.text
 * group[=].element[=].target.equivalence = #equivalent
 // auteur
-* group[=].element[+].code = #FRLMFunctionalStatus.author
+* group[=].element[+].code = #FRLMFunctionalStatus.author[x]
 * group[=].element[=].target.code = #Composition.author
 * group[=].element[=].target.equivalence = #equivalent
 // informateur

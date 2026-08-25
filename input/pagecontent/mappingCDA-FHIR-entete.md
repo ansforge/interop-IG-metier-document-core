@@ -77,7 +77,7 @@ Elements AS (
     e.key AS elem_index,
     json_extract(e.value, '$.code') AS elem_code,
     CASE
-      WHEN json_extract(t.value, '$.code') LIKE '%.%'
+      WHEN json_extract(e.value, '$.code') LIKE '%.%'
        AND json_extract(t.value, '$.display') IS NOT NULL THEN
         json_extract(t.value, '$.code') || ' (' || json_extract(t.value, '$.display') || ')'
       ELSE COALESCE(json_extract(t.value, '$.display'), json_extract(t.value, '$.code'))
