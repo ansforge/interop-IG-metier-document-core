@@ -73,8 +73,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
 | FRLMExposureInformation.description | Section.text | Composition.section.text |
-| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation |  |
-| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration |  |
+| FRLMExposureInformation.entry.quantityExposure | Section.entry:frDicomQuantite.observation | Composition.section.entry (FRObservationRadiationExposureDocument) |
+| FRLMExposureInformation.entry.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **FRCompositionDocument.section:sectionFamilyMedicalHistory** |
 | FRLMFamilyMedicalHistory.codeSection | Section.code | Composition.section.code |
 | FRLMFamilyMedicalHistory.titleSection | Section.title | Composition.section.title |
@@ -910,8 +910,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
 | FRLMExposureInformation.description | Section.text | Composition.section.text |
-| FRLMExposureInformation.subSection.quantityExposure | Section.entry:frDicomQuantite.observation |  |
-| FRLMExposureInformation.subSection.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration |  |
+| FRLMExposureInformation.entry.quantityExposure | Section.entry:frDicomQuantite.observation | Composition.section.entry (FRObservationRadiationExposureDocument) |
+| FRLMExposureInformation.entry.radiopharmaceuticalAdministration | Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | **FRLMFamilyMedicalHistory** | **FRCDASectionAntecedentsFamiliaux** | **FRCompositionDocument.section:sectionFamilyMedicalHistory** |
 | FRLMFamilyMedicalHistory.codeSection | Section.code | Composition.section.code |
 | FRLMFamilyMedicalHistory.titleSection | Section.title | Composition.section.title |
