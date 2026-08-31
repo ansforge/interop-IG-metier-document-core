@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicalDevi
   "name" : "FRLMMedicalDevicePrescriptions",
   "title" : "Logical Model - FR LM Medical Device Prescriptions",
   "status" : "draft",
-  "date" : "2026-08-25T20:08:46+00:00",
+  "date" : "2026-08-31T08:09:30+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

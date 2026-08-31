@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAllergyIntole
   "name" : "FRLMAllergyIntolerance",
   "title" : "Logical model - FR LM Allergy Intolerance",
   "status" : "draft",
-  "date" : "2026-08-25T20:08:46+00:00",
+  "date" : "2026-08-31T08:09:30+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -170,8 +170,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAllergyIntole
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"]
+        "code" : "Period"
       }]
     },
     {
@@ -261,8 +260,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAllergyIntole
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"]
+        "code" : "Period"
       }]
     },
     {

@@ -34,12 +34,6 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
 
 Obligatoire : 0 élément(6 éléments obligatoire(s) imbriqué(s))
 
-**Structures**
-
-Cette structure fait référence à ces autres structures:
-
-* [Organization Period (http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0)](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-organization-period.html)
-
  **Vue différentielle** 
 
 Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md) 
@@ -57,12 +51,6 @@ Cette structure est dérivée de [FRLMEntry](StructureDefinition-FRLMEntry.md)
 ** Résumé **
 
 Obligatoire : 0 élément(6 éléments obligatoire(s) imbriqué(s))
-
-**Structures**
-
-Cette structure fait référence à ces autres structures:
-
-* [Organization Period (http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0)](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-organization-period.html)
 
  
 
@@ -85,7 +73,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
   "name" : "FRLMAllergyIntolerance",
   "title" : "Logical model - FR LM Allergy Intolerance",
   "status" : "draft",
-  "date" : "2026-08-25T20:08:46+00:00",
+  "date" : "2026-08-31T08:09:30+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -219,8 +207,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"]
+        "code" : "Period"
       }]
     },
     {
@@ -310,8 +297,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergyInto
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "Extension",
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0"]
+        "code" : "Period"
       }]
     },
     {
