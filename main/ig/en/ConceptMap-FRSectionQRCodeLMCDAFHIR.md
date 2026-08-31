@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
   "id" : "FRSectionQRCodeLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionQRCodeLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionQRCodeLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Code à barres\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMQRCode vers la section CDA FRCDAQR
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-qr-code",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMQRCode",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-code-a-barres",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMQRCode",
       "target" : [{
-        "code" : "FRCDACodeABarres",
+        "code" : "Section",
+        "display" : "FRCDACodeABarres",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.codeSection",
       "target" : [{
-        "code" : "FRCDACodeABarres.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.titleSection",
       "target" : [{
-        "code" : "FRCDACodeABarres.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.description",
       "target" : [{
-        "code" : "FRCDACodeABarres.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMQRCode.entry.observationMedia:FRLMObservationMedia",
+      "code" : "FRLMQRCode.entry.observationMedia",
       "target" : [{
-        "code" : "FRCDACodeABarres.entry.FRCDACodeABarres",
+        "code" : "Section.entry",
+        "display" : "FRCDAImageIllustrative",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-qr-code",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMQRCode",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMQRCode",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionQrCode",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionQrCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionQrCode.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionQrCode.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMQRCode.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionQrCode.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMQRCode.entry.observationMedia:FRLMObservationMedia",
+      "code" : "FRLMQRCode.entry.observationMedia",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionQrCode.entry:FRCDAMediaDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRMediaDocument",
         "equivalence" : "equivalent"
       }]
     }]

@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FROrderLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrderLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FROrderLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,28 +40,15 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-inFulfillment-of",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrder",
       "target" : [{
-        "code" : "inFulfillmentOf",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMOrder.orderId",
-      "target" : [{
-        "code" : "inFulfillmentOf.order.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMOrder.accessionNumber",
-      "target" : [{
-        "code" : "inFulfillmentOf.order.ps3-20:accessionNumber",
+        "code" : "InFulfillmentOf",
+        "display" : "inFulfillmentOf",
         "equivalence" : "equivalent"
       }]
     },
@@ -72,14 +60,14 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMOrder.orderPlacer",
+      "code" : "FRLMOrder.orderPlacer[x]",
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur."
       }]
     },
     {
-      "code" : "FRLMOrder.orderReason",
+      "code" : "FRLMOrder.orderReason[x]",
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif."
@@ -87,7 +75,27 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-order",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMOrder.orderId",
+      "target" : [{
+        "code" : "Order.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrder.accessionNumber",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié distinct pour l'accession number dans fr-cda-order (ne porte que Order.id)."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
     "targetVersion" : "4.0.1",
@@ -122,7 +130,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMOrder.orderPlacer",
+      "code" : "FRLMOrder.orderPlacer[x]",
       "target" : [{
         "code" : "ServiceRequest.requester",
         "equivalence" : "equivalent",
@@ -130,7 +138,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMOrder.orderReason",
+      "code" : "FRLMOrder.orderReason[x]",
       "target" : [{
         "code" : "ServiceRequest.reasonCode",
         "equivalence" : "relatedto",

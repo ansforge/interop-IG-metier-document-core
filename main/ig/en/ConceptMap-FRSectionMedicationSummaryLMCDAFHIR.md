@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicationSummary vers la section 
   "id" : "FRSectionMedicationSummaryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationSummaryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicationSummaryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitements\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMMedicationSummary vers la section 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-summary",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationSummary",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitements",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationSummary",
       "target" : [{
-        "code" : "FRCDATraitements",
+        "code" : "Section",
+        "display" : "FRCDATraitements",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.codeSection",
       "target" : [{
-        "code" : "FRCDATraitements.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.titleSection",
       "target" : [{
-        "code" : "FRCDATraitements.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.description",
       "target" : [{
-        "code" : "FRCDATraitements.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationSummary.entry.medicationAdministration:FRLMMedicationAdministration",
+      "code" : "FRLMMedicationSummary.entry.medicationAdministration",
       "target" : [{
-        "code" : "FRCDATraitements.entry:FRCDATraitement",
+        "code" : "Section.entry",
+        "display" : "FRCDATraitement",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-summary",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationSummary",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationSummary",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedications",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionMedications",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedications.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedications.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationSummary.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedications.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationSummary.entry.medicationAdministration:FRLMMedicationAdministration",
+      "code" : "FRLMMedicationSummary.entry.medicationAdministration",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedications.entry:FRMedicationAdministrationDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationAdministrationDocument",
         "equivalence" : "equivalent"
       }]
     }]

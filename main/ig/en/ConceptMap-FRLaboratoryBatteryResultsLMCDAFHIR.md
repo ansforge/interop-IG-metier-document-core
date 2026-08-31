@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale ve
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Batterie d'examens de biologie médicale\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,105 +35,106 @@ Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale ve
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-batterie-examens-biologie-medicale",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBatterieExamensBiologieMedicale",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMBatterieExamensBiologieMedicale",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale",
+        "code" : "Organizer",
+        "display" : "FRCDABatterieExamensDeBiologieMedicale",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.identifiant",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.id",
+        "code" : "Organizer.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.codeBatterieExamen",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.code",
+        "code" : "Organizer.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.statut",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.statusCode",
+        "code" : "Organizer.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.dateExamen",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.effectiveTime",
+        "code" : "Organizer.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.choice:FRLMSujetNonHumain",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.subject",
+        "code" : "Organizer.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.choice:FRLMPatientSujetNonHumain",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.subject",
+        "code" : "Organizer.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.laboratoireExecutant",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.performer",
+        "code" : "Organizer.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.auteur",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.author",
+        "code" : "Organizer.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.participant",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.participant",
+        "code" : "Organizer.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.prelevement",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frPrelevement",
+        "code" : "Organizer.component:frPrelevement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.resultatElementCliniquePertinent",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frResultatExamensDeBiologieElementCliniquePertinent",
+        "code" : "Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.imageIllustrative",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frImageIllustrative",
+        "code" : "Organizer.component:frImageIllustrative",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMBatterieExamensBiologieMedicale.commentaire",
       "target" : [{
-        "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frCommentaireER",
+        "code" : "Organizer.component:frCommentaireER",
         "equivalence" : "equivalent"
       }]
     }]
@@ -144,110 +145,111 @@ Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale ve
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRCDABatterieExamensDeBiologieMedicale",
+      "code" : "Organizer",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation",
+        "display" : "FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.id",
+      "code" : "Organizer.id",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.code",
+      "code" : "Organizer.code",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.statusCode",
+      "code" : "Organizer.statusCode",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.effectiveTime",
+      "code" : "Organizer.effectiveTime",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.effectivePeriod",
+        "code" : "Observation.effectivePeriod",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.subject",
+      "code" : "Organizer.subject",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.performer",
+      "code" : "Organizer.performer",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant",
+        "code" : "Observation.performer.extension:laboratoireExecutant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.author",
+      "code" : "Organizer.author",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.author",
+        "code" : "Observation.author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.participant",
+      "code" : "Organizer.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat",
+        "code" : "Observation.performer.extension:validateurResultat",
         "display" : "Authenticator (CDA participant) : participant/@typeCode='AUTHEN'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.participant",
+      "code" : "Organizer.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen",
+        "code" : "Observation.performer.extension:responsableExamen",
         "display" : "Responsible Party (CDA participant) : participant/@typeCode='RESP'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.participant",
+      "code" : "Organizer.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto",
+        "code" : "Observation.performer.extension:dispositifAuto",
         "display" : "Device (CDA participant) : participant/@typeCode='DEV'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frPrelevement",
+      "code" : "Organizer.component:frPrelevement",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frResultatExamensDeBiologieElementCliniquePertinent",
+      "code" : "Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frImageIllustrative",
+      "code" : "Organizer.component:frImageIllustrative",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.derivedFrom:FRMediaDocument",
+        "code" : "Observation.derivedFrom:FRMediaDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDABatterieExamensDeBiologieMedicale.component:frCommentaireER",
+      "code" : "Organizer.component:frCommentaireER",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     }]

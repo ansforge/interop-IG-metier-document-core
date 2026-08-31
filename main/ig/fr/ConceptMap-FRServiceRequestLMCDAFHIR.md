@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
   "id" : "FRServiceRequestLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRServiceRequestLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRServiceRequestLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Demande d'examen ou de suivi\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,28 +37,29 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-service-request",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-demande-d-examen-ou-de-suivi",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMServiceRequest",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi",
+        "code" : "Observation",
+        "display" : "FRCDADemandeDExamenOuDeSuivi",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.header.status",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.code",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
@@ -69,7 +72,7 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     {
       "code" : "FRLMServiceRequest.bodySite",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -82,133 +85,135 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
     {
       "code" : "FRLMServiceRequest.priority",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.priorityCode",
+        "code" : "Observation.priorityCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.supportingInformation[x]",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation",
+        "code" : "Observation.entryRelationship",
         "equivalence" : "inexact",
-        "comment" : "Le modèle métier FRLMServiceRequest.supportingInformation[x] correspond à la composante observation portée dans l'entrée CDA FRCDADemandeDExamenOuDeSuivi.entryRelationship.observation. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration alors que le type de l'élément entryRelationship.observation est uniquement Observation."
+        "comment" : "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi. Le mapping est inexact car le type de l'élément supportingInformation[x] peut être Observation, Condition, Procedure ou MedicationAdministration."
       }]
     },
     {
       "code" : "FRLMServiceRequest.specimen",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.encounter",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.entryRelationship.encounter",
-        "equivalence" : "equivalent"
+        "code" : "Observation.entryRelationship",
+        "equivalence" : "wider",
+        "comment" : "entryRelationship n'est pas typé/profilé dans FRCDADemandeDExamenOuDeSuivi ; la consultation à l'origine y est portée globalement."
       }]
     },
     {
       "code" : "FRLMServiceRequest.occurrence[x]",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.patientInstructions",
       "target" : [{
-        "code" : "FRCDADemandeDExamenOuDeSuivi.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-service-request",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-service-request-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMServiceRequest",
       "target" : [{
-        "code" : "FRServiceRequestDocument",
+        "code" : "ServiceRequest",
+        "display" : "FRServiceRequestDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.header.status",
       "target" : [{
-        "code" : "FRServiceRequestDocument.status",
+        "code" : "ServiceRequest.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.code",
       "target" : [{
-        "code" : "FRServiceRequestDocument.code",
+        "code" : "ServiceRequest.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.quantity",
       "target" : [{
-        "code" : "FRServiceRequestDocument.quantity",
+        "code" : "ServiceRequest.quantity[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.bodySite",
       "target" : [{
-        "code" : "FRServiceRequestDocument.bodySite",
+        "code" : "ServiceRequest.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.reason[x]",
       "target" : [{
-        "code" : "FRServiceRequestDocument.reasonCode",
+        "code" : "ServiceRequest.reasonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.priority",
       "target" : [{
-        "code" : "FRServiceRequestDocument.priority",
+        "code" : "ServiceRequest.priority",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.supportingInformation[x]",
       "target" : [{
-        "code" : "FRServiceRequestDocument.supportingInfo",
+        "code" : "ServiceRequest.supportingInfo",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.specimen",
       "target" : [{
-        "code" : "FRServiceRequestDocument.specimen",
+        "code" : "ServiceRequest.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.encounter",
       "target" : [{
-        "code" : "FRServiceRequestDocument.encounter",
+        "code" : "ServiceRequest.encounter",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.occurrence[x]",
       "target" : [{
-        "code" : "FRServiceRequestDocument.occurrence[x]",
+        "code" : "ServiceRequest.occurrence[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMServiceRequest.patientInstructions",
       "target" : [{
-        "code" : "FRServiceRequestDocument.note",
+        "code" : "ServiceRequest.note",
         "equivalence" : "equivalent"
       }]
     }]

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
   "id" : "FRSectionPregnancyHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPregnancyHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionPregnancyHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Historique des grossesses\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,49 +37,50 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-section-pregnancy-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionPregnancyHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-des-grossesses",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSectionPregnancyHistory",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses",
+        "code" : "Section",
+        "display" : "FRCDAHistoriqueDesGrossesses",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.codeSection",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.titleSection",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.description",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus:FRLMPregnancyStatus",
+      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses.entry:FRCDAObservationSurLaGrossesse",
+        "code" : "Section.entry:frObservationSurLaGrossesse.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory:FRLMPregnancyHistory",
+      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesGrossesses.entry:FRCDAHistoriqueDeLaGrossesse",
+        "code" : "Section.entry:frHistoriqueDeLaGrossesse.organizer",
         "equivalence" : "equivalent"
       }]
     },
@@ -89,56 +92,59 @@ Mapping des éléments du modèle métier FRLMSectionPregnancyHistory vers la se
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-section-pregnancy-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionPregnancyHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSectionPregnancyHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionPregnancyHistory",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus:FRLMPregnancyStatus",
+      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyStatus",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.entry:FRObservationPregnancyDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRObservationPregnancyDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory:FRLMPregnancyHistory",
+      "code" : "FRLMSectionPregnancyHistory.entry.pregnancyHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.entry:FRPregnancyHistoryDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRObservationPregnancyHistoryDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSectionPregnancyHistory.note",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPregnancyHistory.extension:section-note",
+        "code" : "Composition.section.extension:section-note",
         "equivalence" : "equivalent"
       }]
     }]

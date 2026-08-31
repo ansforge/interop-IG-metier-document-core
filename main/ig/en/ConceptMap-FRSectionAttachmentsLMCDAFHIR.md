@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
   "id" : "FRSectionAttachmentsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAttachmentsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAttachmentsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Documents ajoutés\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,97 +37,101 @@ Mapping des éléments du modèle métier FRLMAttachments vers la section CDA FR
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachments",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachments",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-documents-ajoutes",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAttachments",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes",
+        "code" : "Section",
+        "display" : "FRCDADocumentsAjoutes",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.codeSection",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.titleSection",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.description",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry.attachment:FRLMAttachment",
+      "code" : "FRLMAttachments.entry.attachment",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes.entry:frDocumentAttache",
+        "code" : "Section.entry:frDocumentAttache",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry.observation:FRLMObservation",
+      "code" : "FRLMAttachments.entry.observation",
       "target" : [{
-        "code" : "FRCDADocumentsAjoutes.entry:frSimpleObservation",
+        "code" : "Section.entry:frSimpleObservation",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachments",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachments",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAttachments",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionAttachments",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachments.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:attachment:FRLMAttachment",
+      "code" : "FRLMAttachments.entry.attachment",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments.entry:FRDocumentReferenceDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAttachments.entry:observation:FRLMObservation",
+      "code" : "FRLMAttachments.entry.observation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAttachments.entry:Observation",
+        "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     }]

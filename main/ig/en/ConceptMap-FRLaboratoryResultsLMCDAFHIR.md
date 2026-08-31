@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale v
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Résultats d'examens de biologie médicale\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,69 +35,71 @@ Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale v
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultats-examens-biologie-medicale",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-medicale",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-examens-de-biologie-medicale",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMResultatsExamensBiologieMedicale",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie",
+        "code" : "Act",
+        "display" : "FRCDAResultatExamensDeBiologie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.code",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.code",
+        "code" : "Act.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.statut",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.statusCode",
+        "code" : "Act.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.dateResultat",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.effectiveTime",
+        "code" : "Act.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.choice:FRLMSujetNonHumain",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.subject",
+        "code" : "Act.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.choice:FRLMPatientSujetNonHumain",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.subject",
+        "code" : "Act.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.laboratoireExecutant",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.performer",
+        "code" : "Act.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.auteur",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.author",
+        "code" : "Act.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.valideur",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.participant",
+        "code" : "Act.participant",
         "display" : "Authenticator (CDA participant) : participant/@typeCode='AUTHEN'",
         "equivalence" : "equivalent"
       }]
@@ -105,7 +107,7 @@ Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale v
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.responsable",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.participant",
+        "code" : "Act.participant",
         "display" : "Responsible Party (CDA participant) : participant/@typeCode='RESP'",
         "equivalence" : "equivalent"
       }]
@@ -113,7 +115,7 @@ Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale v
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.dispositifAutomatique",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.participant",
+        "code" : "Act.participant",
         "display" : "Device (CDA participant) : participant/@typeCode='DEV'",
         "equivalence" : "equivalent"
       }]
@@ -121,162 +123,164 @@ Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale v
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.prelevement",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frPrelevement",
+        "code" : "Act.entryRelationship:frPrelevement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.batterieExamensDeBiologieMedicale",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frBatterieExamensDeBiologieMedicale",
+        "code" : "Act.entryRelationship:frBatterieExamensDeBiologieMedicale",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.isolatMicrobiologique",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frIsolatMicrobiologique",
+        "code" : "Act.entryRelationship:frIsolatMicrobiologique",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.resultatElementCliniquePertinent",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent",
+        "code" : "Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.imageIllustrative",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frImageIllustrative",
+        "code" : "Act.entryRelationship:frImageIllustrative",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsExamensBiologieMedicale.commentaire",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frCommentaireER",
+        "code" : "Act.entryRelationship:frCommentaireER",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-medicale",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-examens-de-biologie-medicale",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRCDAResultatExamensDeBiologie",
+      "code" : "Act",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation",
+        "display" : "FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.code",
+      "code" : "Act.code",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.statusCode",
+      "code" : "Act.statusCode",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.effectiveTime",
+      "code" : "Act.effectiveTime",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.effectivePeriod",
+        "code" : "Observation.effectivePeriod",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.subject",
+      "code" : "Act.subject",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.performer",
+      "code" : "Act.performer",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant",
+        "code" : "Observation.performer.extension:laboratoireExecutant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.author",
+      "code" : "Act.author",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:author",
+        "code" : "Observation.performer.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.participant",
+      "code" : "Act.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat",
+        "code" : "Observation.performer.extension:validateurResultat",
         "display" : "Authenticator (CDA participant) : participant/@typeCode='AUTHEN'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.participant",
+      "code" : "Act.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen",
+        "code" : "Observation.performer.extension:responsableExamen",
         "display" : "Responsible Party (CDA participant) : participant/@typeCode='RESP'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.participant",
+      "code" : "Act.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto",
+        "code" : "Observation.performer.extension:dispositifAuto",
         "display" : "Device (CDA participant) : participant/@typeCode='DEV'",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frPrelevement",
+      "code" : "Act.entryRelationship:frPrelevement",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frCommentaireER",
+      "code" : "Act.entryRelationship:frCommentaireER",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frBatterieExamensDeBiologieMedicale",
+      "code" : "Act.entryRelationship:frBatterieExamensDeBiologieMedicale",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frIsolatMicrobiologique",
+      "code" : "Act.entryRelationship:frIsolatMicrobiologique",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent",
+      "code" : "Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologie.entryRelationship:frImageIllustrative",
+      "code" : "Act.entryRelationship:frImageIllustrative",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.derivedFrom:FRMediaDocument",
+        "code" : "Observation.derivedFrom:FRMediaDocument",
         "equivalence" : "equivalent"
       }]
     }]

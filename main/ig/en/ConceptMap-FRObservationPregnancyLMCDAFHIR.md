@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
   "id" : "FRObservationPregnancyLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationPregnancyLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationPregnancyLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Observation sur la grossesse\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,84 +37,85 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-observation-sur-la-grossesse",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPregnancyObservation",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse",
+        "code" : "Observation",
+        "display" : "FRCDAObservationSurLaGrossesse",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.header.status",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.directSubject[x]",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.observationDate[x]",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.type",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.method",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.methodCode",
+        "code" : "Observation.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result.dataAbsentReason",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.nullFlavor",
+        "code" : "Observation.nullFlavor",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result.referenceRange",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.referenceRange",
+        "code" : "Observation.referenceRange",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.interpretation",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.interpretationCode",
+        "code" : "Observation.interpretationCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.note",
       "target" : [{
-        "code" : "FRCDAObservationSurLaGrossesse.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
@@ -136,120 +139,126 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-pregnancy-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPregnancyObservation",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument",
+        "code" : "Observation",
+        "display" : "FRObservationPregnancyDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.directSubject[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.effective[x]",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.type",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.method",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.value",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result.dataAbsentReason",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.dataAbsentReason",
+        "code" : "Observation.dataAbsentReason",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.result.referenceRange",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.referenceRange",
+        "code" : "Observation.referenceRange",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.interpretation",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.note",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.component",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.component",
+        "code" : "Observation.component",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMObservation]",
+      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.derivedFrom:Observation",
-        "equivalence" : "equivalent"
+        "code" : "Observation.derivedFrom",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence une FRLMObservation générique."
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMLaboratoryObservation]",
+      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.derivedFrom:FRObservationLaboratoryReportResultsDocument",
-        "equivalence" : "equivalent"
+        "code" : "Observation.derivedFrom",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.derivedFrom[FRLMImagingStudy]",
+      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.derivedFrom:FRImagingStudyDocument",
-        "equivalence" : "equivalent"
+        "code" : "Observation.derivedFrom",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence un FRLMImagingStudy (FRImagingStudyDocument)."
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.hasMember[FRLMLaboratoryObservation]",
+      "code" : "FRLMPregnancyObservation.hasMember[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.hasMember:FRObservationLaboratoryReportResultsDocument",
-        "equivalence" : "equivalent"
+        "code" : "Observation.hasMember",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où hasMember[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
       }]
     },
     {
-      "code" : "FRLMPregnancyObservation.hasMember[FRLMObservation]",
+      "code" : "FRLMPregnancyObservation.hasMember[x]",
       "target" : [{
-        "code" : "FRObservationPregnancyDocument.hasMember:Observation",
-        "equivalence" : "equivalent"
+        "code" : "Observation.hasMember",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où hasMember[x] référence une FRLMObservation générique."
       }]
     }]
   }]

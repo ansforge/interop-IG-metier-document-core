@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMHazardousWorkingConditions vers la
   "id" : "FRSectionHazardousWorkingConditionsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionHazardousWorkingConditionsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionHazardousWorkingConditionsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Facteurs de risque professionnels\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,69 +37,71 @@ Mapping des éléments du modèle métier FRLMHazardousWorkingConditions vers la
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-hazardous-working-conditions",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHazardousWorkingConditions",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-facteurs-de-risque-professionnels-non-code",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHazardousWorkingConditions",
       "target" : [{
-        "code" : "FRCDAFacteursDeRisqueProfessionnelsNonCode",
+        "code" : "Section",
+        "display" : "FRCDAFacteursDeRisqueProfessionnelsNonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.codeSection",
       "target" : [{
-        "code" : "FRCDAFacteursDeRisqueProfessionnelsNonCode.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.titleSection",
       "target" : [{
-        "code" : "FRCDAFacteursDeRisqueProfessionnelsNonCode.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.description",
       "target" : [{
-        "code" : "FRCDAFacteursDeRisqueProfessionnelsNonCode.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-hazardous-working-conditions",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHazardousWorkingConditions",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHazardousWorkingConditions",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHazardousWorkingConditions.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionUncodedOccupationalRiskFactors.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     }]

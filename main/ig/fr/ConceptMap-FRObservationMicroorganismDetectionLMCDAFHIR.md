@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
   "id" : "FRObservationMicroorganismDetectionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationMicroorganismDetectionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Recherche de micro organismes\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,77 +37,78 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-micro-organism-search",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-recherche-de-micro-organismes",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMicroOrganismSearch",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes",
+        "code" : "Observation",
+        "display" : "FRCDARechercheDeMicroOrganismes",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.identifier",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.subject",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.author[x]",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.author",
+        "code" : "Observation.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.performer[x]",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.performer",
+        "code" : "Observation.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.participant[x]",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.participant",
+        "code" : "Observation.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.informant",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.informant",
+        "code" : "Observation.informant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.date",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.author.time",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.status",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.language",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.languageCode",
+        "code" : "Observation.languageCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -116,112 +119,114 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
       }]
     },
     {
-      "code" : "FRLMMicroOrganismSearch.observationDate",
+      "code" : "FRLMMicroOrganismSearch.header.date",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.type",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.result",
       "target" : [{
-        "code" : "FRCDARechercheDeMicroOrganismes.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-micro-organism-search",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMicroOrganismSearch",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-microorganism-detection-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMicroOrganismSearch",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument",
+        "code" : "Observation",
+        "display" : "FRObservationMicroorganismDetectionDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.identifier",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.subject",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.author[x]",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.extension:author",
+        "code" : "Observation.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.performer[x]",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.performer",
+        "code" : "Observation.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.participant[x]",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.extension:author",
+        "code" : "Observation.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.informant",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.extension:author",
+        "code" : "Observation.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.date",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.issued",
+        "code" : "Observation.issued",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.status",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.header.language",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.language",
+        "code" : "Observation.language",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.type",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMicroOrganismSearch.result",
       "target" : [{
-        "code" : "FRObservationMicroorganismDetectionDocument.valueBoolean",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     }]

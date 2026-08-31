@@ -4,14 +4,15 @@
   <id value="FRCustodianLMCDAFHIR"/>
   <language value="fr"/>
   <text>
-    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRCustodianLMCDAFHIR</b></p><a name="FRCustodianLMCDAFHIR"> </a><a name="hcFRCustodianLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href="StructureDefinition-fr-lm-header-document.html">Logical model - FR LM Header Document</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-custodian.html">CDA - custodian</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td colspan="3">FRLMHeaderDocument.custodian</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">custodian.assignedCustodian.representedCustodianOrganization</td><td>La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href="StructureDefinition-fr-lm-header-document.html">Logical model - FR LM Header Document</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html">FR Composition Document</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td colspan="3">FRLMHeaderDocument.custodian</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.custodian">Composition.custodian</a></td><td>1..1</td><td>todo</td><td>Composition.custodian.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr></table></div>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRCustodianLMCDAFHIR</b></p><a name="FRCustodianLMCDAFHIR"> </a><a name="hcFRCustodianLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href="StructureDefinition-FRLMHeaderDocument.html">Logical model - FR LM Header Document</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-custodian.html">CDA - custodian</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href="StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.custodian">FRLMHeaderDocument.custodian</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-custodian.html#s-Custodian.assignedCustodian">Custodian.assignedCustodian</a></td><td>1..1</td><td>todo</td><td>La structure chargée de la conservation du document est de type FRLMOrganisation ; cf. le groupe dédié ci-dessous pour le détail de son mapping vers fr-cda-represented-custodian-organization.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href="StructureDefinition-FRLMOrganisation.html">Logical model - FR LM Organisation</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-represented-custodian-organization.html">CDA - representedCustodianOrganization</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href="StructureDefinition-FRLMOrganisation.html#s-FRLMOrganisation.identifier">FRLMOrganisation.identifier</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-represented-custodian-organization.html#s-CustodianOrganization.id">CustodianOrganization.id</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href="StructureDefinition-FRLMOrganisation.html#s-FRLMOrganisation.name">FRLMOrganisation.name</a></td><td>0..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-represented-custodian-organization.html#s-CustodianOrganization.name">CustodianOrganization.name</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href="StructureDefinition-FRLMOrganisation.html#s-FRLMOrganisation.address">FRLMOrganisation.address</a></td><td>0..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-represented-custodian-organization.html#s-CustodianOrganization.addr">CustodianOrganization.addr</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href="StructureDefinition-FRLMOrganisation.html#s-FRLMOrganisation.telecom">FRLMOrganisation.telecom</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-represented-custodian-organization.html#s-CustodianOrganization.telecom">CustodianOrganization.telecom</a></td><td>0..1</td><td>todo</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <a href="StructureDefinition-FRLMHeaderDocument.html">Logical model - FR LM Header Document</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html">FR Composition Document</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href="StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.custodian">FRLMHeaderDocument.custodian</a></td><td>1..1</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.custodian">Composition.custodian</a></td><td>1..1</td><td>todo</td><td>Composition.custodian.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr></table></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCustodianLMCDAFHIR"/>
   <version value="0.1.0"/>
+  <name value="FRCustodianLMCDAFHIR"/>
   <title value="Mapping Métier/CDA/FHIR : &quot;Structure chargée de la conservation du document&quot;"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-08-20T08:45:34+00:00"/>
+  <date value="2026-08-31T15:12:23+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -29,21 +30,55 @@
     </coding>
   </jurisdiction>
   <group>
-    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"/>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"/>
     <sourceVersion value="0.1.0"/>
     <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-custodian"/>
     <targetVersion value="0.1.0"/>
     <element>
       <code value="FRLMHeaderDocument.custodian"/>
       <target>
-        <code value="custodian.assignedCustodian.representedCustodianOrganization"/>
+        <code value="Custodian.assignedCustodian"/>
         <equivalence value="equivalent"/>
-        <comment value="La structure chargée de la conservation du document est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR pour le détail de son mapping."/>
+        <comment value="La structure chargée de la conservation du document est de type FRLMOrganisation ; cf. le groupe dédié ci-dessous pour le détail de son mapping vers fr-cda-represented-custodian-organization."/>
       </target>
     </element>
   </group>
   <group>
-    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"/>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"/>
+    <sourceVersion value="0.1.0"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-custodian-organization"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMOrganisation.identifier"/>
+      <target>
+        <code value="CustodianOrganization.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.name"/>
+      <target>
+        <code value="CustodianOrganization.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.address"/>
+      <target>
+        <code value="CustodianOrganization.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrganisation.telecom"/>
+      <target>
+        <code value="CustodianOrganization.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"/>
     <sourceVersion value="0.1.0"/>
     <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"/>
     <targetVersion value="0.1.0"/>

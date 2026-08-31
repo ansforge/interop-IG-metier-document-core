@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRParticipantHeaderLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRParticipantHeaderLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRParticipantHeaderLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,78 +40,87 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-participant",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-participant-entete",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMParticipant",
       "target" : [{
-        "code" : "participant",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.identifier",
-      "target" : [{
-        "code" : "participant.associatedEntity.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.name",
-      "target" : [{
-        "code" : "participant.associatedEntity.name",
+        "code" : "Participant1",
+        "display" : "participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.type",
       "target" : [{
-        "code" : "participant@typeCode",
+        "code" : "Participant1.typeCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.role",
       "target" : [{
-        "code" : "participant.functionCode",
+        "code" : "Participant1.functionCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.period",
       "target" : [{
-        "code" : "participant.time",
+        "code" : "Participant1.time",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:healthProfessional",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
-        "code" : "participant.associatedEntity",
+        "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
         "comment" : "Le participant professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:organisation",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
-        "code" : "participant.associatedEntity",
+        "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
         "comment" : "Le participant structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:device",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
-        "code" : "participant.associatedEntity",
+        "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
         "comment" : "Le participant système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-associated-entity",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMParticipant.identifier",
+      "target" : [{
+        "code" : "AssociatedEntity.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.name",
+      "target" : [{
+        "code" : "AssociatedEntity.associatedPerson",
+        "equivalence" : "wider",
+        "comment" : "associatedPerson référence à son tour un profil CDA séparé (identité de la personne) ; le nom y est porté globalement."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/ParticipantExtension",
     "targetVersion" : "1.1.0",
@@ -159,7 +169,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:healthProfessional",
+      "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -167,7 +177,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:organisation",
+      "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -175,7 +185,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMParticipant.participant:device",
+      "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

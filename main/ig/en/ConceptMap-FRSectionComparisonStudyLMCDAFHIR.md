@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMComparisonStudy vers le profil CDA
   "id" : "FRSectionComparisonStudyLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionComparisonStudyLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionComparisonStudyLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Comparaison d'examens d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,69 +37,71 @@ Mapping des éléments du modèle métier FRLMComparisonStudy vers le profil CDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-comparison-study",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-examen-comparatif",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMComparisonStudy",
       "target" : [{
-        "code" : "FRCDADICOMExamenComparatif",
+        "code" : "Section",
+        "display" : "FRCDADICOMExamenComparatif",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMExamenComparatif.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMExamenComparatif.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.description",
       "target" : [{
-        "code" : "FRCDADICOMExamenComparatif.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-comparison-study",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMComparisonStudy",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionComparison",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionComparison",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionComparison.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionComparison.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMComparisonStudy.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionComparison.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     }]

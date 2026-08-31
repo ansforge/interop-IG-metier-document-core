@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA 
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Chapitre de BIO\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -36,92 +36,97 @@ Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA 
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-crbio-chapitre",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-cr-bio-chapitre",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMCRBIOChapitre",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre",
+        "code" : "Section",
+        "display" : "FRCDACRBIOChapitre",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCRBIOChapitre.code",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCRBIOChapitre.blocNarratif",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCRBIOChapitre.titreSection",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCRBIOChapitre.choice[x]:FRLMResultatsExamensBiologieMedicale",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale",
+        "code" : "Section.entry:FRCDAResultatsExamensDeBiologieMedicale",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCRBIOChapitre.choice[x]:FRLMCRBIOSousChapitre",
       "target" : [{
-        "code" : "FRCDACRBIOChapitre.component.section:FRCDACRBIOSousChapitre",
+        "code" : "Section.component.section:FRCDACRBIOSousChapitre",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-crbio-chapitre",
-    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document-section",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-cr-bio-chapitre",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRCDACRBIOChapitre",
+      "code" : "Section",
       "target" : [{
-        "code" : "FRCompositionDocument.section",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDACRBIOChapitre.code",
+      "code" : "Section.code",
       "target" : [{
-        "code" : "FRCompositionDocument.section.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDACRBIOChapitre.text",
+      "code" : "Section.text",
       "target" : [{
-        "code" : "FRCompositionDocument.section.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDACRBIOChapitre.title",
+      "code" : "Section.title",
       "target" : [{
-        "code" : "FRCompositionDocument.section.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDACRBIOChapitre.entry:FRCDAResultatsExamensDeBiologieMedicale",
+      "code" : "Section.entry:FRCDAResultatsExamensDeBiologieMedicale",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Composition.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDACRBIOChapitre.component.section:FRCDACRBIOSousChapitre",
+      "code" : "Section.component.section:FRCDACRBIOSousChapitre",
       "target" : [{
-        "code" : "FRCompositionDocument.section:avec-sous-sections.section",
+        "code" : "Composition.section:avec-sous-sections.section",
         "equivalence" : "equivalent"
       }]
     }]

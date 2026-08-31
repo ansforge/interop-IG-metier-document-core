@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
   "id" : "FRSectionAddendumLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAddendumLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAddendumLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Addendum\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,85 @@ Mapping des éléments du modèle métier FRLMAddendum vers la section CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-addendum",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAddendum",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-addendum",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAddendum",
       "target" : [{
-        "code" : "FRCDADicomAddendum",
+        "code" : "Section",
+        "display" : "FRCDADicomAddendum",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.codeSection",
       "target" : [{
-        "code" : "FRCDADicomAddendum.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.titleSection",
       "target" : [{
-        "code" : "FRCDADicomAddendum.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.description",
       "target" : [{
-        "code" : "FRCDADicomAddendum.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.author[x]",
       "target" : [{
-        "code" : "FRCDADicomAddendum.author",
+        "code" : "Section.author",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-addendum",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAddendum",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAddendum",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAddendum",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionAddendum",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAddendum.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAddendum.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAddendum.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAddendum.author[x]",
       "target" : [{
-        "code" : "FRCompositionDocument.author",
+        "code" : "Composition.author",
         "equivalence" : "equivalent"
       }]
     }]

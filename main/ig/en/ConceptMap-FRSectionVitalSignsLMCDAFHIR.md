@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
   "id" : "FRSectionVitalSignsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionVitalSignsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionVitalSignsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Signes vitaux",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,55 +37,60 @@ Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-vital-signs",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signes-vitaux",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-signes-vitaux",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMVitalSigns",
       "target" : [{
-        "code" : "FRCDASignesVitaux",
+        "code" : "Section",
+        "display" : "FRCDASectionSignesVitaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
-        "code" : "FRCDASignesVitaux.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "FRCDASignesVitaux.entry:FRCDASignesVitauxEntry",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry",
+        "display" : "FRCDASignesVitaux",
+        "equivalence" : "equivalent",
+        "comment" : "Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-vital-signs",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMVitalSigns",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionVitalSigns",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionVitalSigns",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMVitalSigns.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionVitalSigns.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMVitalSigns.entry.observationVitalSign:FRLMObservationVitalSign",
+      "code" : "FRLMVitalSigns.entry.observationVitalSign",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionVitalSigns.entry:FRObservationVitalSignsDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRObservationVitalSignsDocument",
         "equivalence" : "equivalent"
       }]
     }]

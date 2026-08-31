@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRConsentLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConsentLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRConsentLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,41 +40,43 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-consent",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-authorization",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMConsent",
       "target" : [{
-        "code" : "authorization",
+        "code" : "Authorization",
+        "display" : "authorization",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConsent.identifier",
       "target" : [{
-        "code" : "authorization.consent.id",
+        "code" : "Authorization.consent.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConsent.type",
       "target" : [{
-        "code" : "authorization.consent.code",
+        "code" : "Authorization.consent.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConsent.status",
       "target" : [{
-        "code" : "authorization.consent.statusCode=\"completed\"",
-        "equivalence" : "equivalent"
+        "code" : "Authorization.consent.statusCode",
+        "equivalence" : "equivalent",
+        "comment" : "Valeur fixée à 'completed'."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-consent",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/Consent",
     "targetVersion" : "4.0.1",

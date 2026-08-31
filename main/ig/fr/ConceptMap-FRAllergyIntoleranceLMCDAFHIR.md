@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
   "id" : "FRAllergyIntoleranceLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAllergyIntoleranceLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAllergyIntoleranceLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Allergie ou Hypersensibilité\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,77 +37,80 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergy-intolerance",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-allergie-ou-hypersensibilite",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAllergyIntolerance",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite",
+        "code" : "Observation",
+        "display" : "FRCDAAllergieOuHypersensibilite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.header.identifier",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.note",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.type",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.header.status",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.entryRelationship:frStatutDuProbleme",
+        "code" : "Observation.entryRelationship:frStatutDuProbleme",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.onsetDate",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; onsetDate correspond à effectiveTime.low."
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.endDate",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime (IVL-TS) n'est pas décomposé en low/high dans ce profil ; endDate correspond à effectiveTime.high."
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.agentOrAllergen",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.participant",
+        "code" : "Observation.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.entryRelationship:frProbleme",
+        "code" : "Observation.entryRelationship:frProbleme",
         "equivalence" : "equivalent"
       }]
     },
@@ -154,14 +159,14 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     {
       "code" : "FRLMAllergyIntolerance.certainty",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.entryRelationship:frCertitude",
+        "code" : "Observation.entryRelationship:frCertitude",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.criticality",
       "target" : [{
-        "code" : "FRCDAAllergieOuHypersensibilite.entryRelationship:frCriticite",
+        "code" : "Observation.entryRelationship:frCriticite",
         "equivalence" : "equivalent"
       }]
     },
@@ -174,126 +179,127 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-allergy-intolerance",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-allergy-intolerance-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAllergyIntolerance",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument",
+        "code" : "AllergyIntolerance",
+        "display" : "FRAllergyIntoleranceDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.header.identifier",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.identifier",
+        "code" : "AllergyIntolerance.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.note",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.note",
+        "code" : "AllergyIntolerance.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.type",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.type",
+        "code" : "AllergyIntolerance.type",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.header.status",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.clinicalStatus",
+        "code" : "AllergyIntolerance.clinicalStatus",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.agentOrAllergen",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.code",
+        "code" : "AllergyIntolerance.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.category",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.category",
+        "code" : "AllergyIntolerance.category",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.onsetPeriod",
+        "code" : "AllergyIntolerance.onset[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.onsetDate",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.onsetPeriod.start",
+        "code" : "AllergyIntolerance.onset[x]:onsetPeriod.start",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.period.endDate",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.onsetPeriod.end",
+        "code" : "AllergyIntolerance.onset[x]:onsetPeriod.end",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction",
+        "code" : "AllergyIntolerance.reaction",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction.agentOrAllergen",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction.substance",
+        "code" : "AllergyIntolerance.reaction.substance",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction.manifestation",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction.manifestation",
+        "code" : "AllergyIntolerance.reaction.manifestation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.certainty",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.verificationStatus",
+        "code" : "AllergyIntolerance.verificationStatus",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.criticality",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.criticality",
+        "code" : "AllergyIntolerance.criticality",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction.severity",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction.severity",
+        "code" : "AllergyIntolerance.reaction.severity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAllergyIntolerance.reaction.period",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction.onset",
+        "code" : "AllergyIntolerance.reaction.onset",
         "equivalence" : "narrower",
         "comment" : "Le modèle métier porte une période (début/fin), alors que FHIR reaction.onset est un seul instant dateTime."
       }]
@@ -301,7 +307,7 @@ Mapping des éléments du modèle métier FRLMAllergyIntolerance vers le profil 
     {
       "code" : "FRLMAllergyIntolerance.reaction.period.onsetDate",
       "target" : [{
-        "code" : "FRAllergyIntoleranceDocument.reaction.onset",
+        "code" : "AllergyIntolerance.reaction.onset",
         "equivalence" : "equivalent"
       }]
     },

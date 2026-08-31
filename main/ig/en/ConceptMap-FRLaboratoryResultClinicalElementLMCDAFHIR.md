@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Résultat d'examens de biologie - Élément clinique pertinent\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,91 +35,92 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultat-examens-biologie-element-clinique-pertinent",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent",
+        "code" : "Observation",
+        "display" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.identifiant",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.codeAnalyseObservation",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.dateHeureResultat",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.valeurResultat",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.interpretation",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode.code",
+        "code" : "Observation.interpretationCode.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.methode",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode",
+        "code" : "Observation.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMSujetNonHumain",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMPatientSujetNonHumain",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer",
+        "code" : "Observation.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.auteur",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.author",
+        "code" : "Observation.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.valideur",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+        "code" : "Observation.participant",
         "display" : "Authenticator (CDA participant) : participant/@typeCode='AUTHEN'",
         "equivalence" : "equivalent"
       }]
@@ -127,7 +128,7 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.responsable",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+        "code" : "Observation.participant",
         "display" : "Responsible Party (CDA participant) : participant/@typeCode='RESP'",
         "equivalence" : "equivalent"
       }]
@@ -135,7 +136,7 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+        "code" : "Observation.participant",
         "display" : "Device (CDA participant) : participant/@typeCode='DEV'",
         "equivalence" : "equivalent"
       }]
@@ -143,28 +144,28 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.commentaire",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER",
+        "code" : "Observation.entryRelationship:frCommentaireER",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.prelevement",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement",
+        "code" : "Observation.entryRelationship:frPrelevement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation",
+        "code" : "Observation.entryRelationship.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference",
       "target" : [{
-        "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange",
+        "code" : "Observation.referenceRange.observationRange",
         "equivalence" : "equivalent"
       }]
     }]
@@ -175,114 +176,115 @@ Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementClin
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.id",
+      "code" : "Observation.id",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.identifier",
+        "code" : "Observation.identifier",
+        "display" : "FRObservationLaboratoryReportResultsDocument.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.code",
+      "code" : "Observation.code",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.effectiveTime",
+      "code" : "Observation.effectiveTime",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.effectivePeriod",
+        "code" : "Observation.effectivePeriod",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.value",
+      "code" : "Observation.value",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.value[x]",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.interpretationCode",
+      "code" : "Observation.interpretationCode",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.methodCode",
+      "code" : "Observation.methodCode",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.subject",
+      "code" : "Observation.subject",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.performer",
+      "code" : "Observation.performer",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:laboratoireExecutant",
+        "code" : "Observation.performer.extension:laboratoireExecutant",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.author",
+      "code" : "Observation.author",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:author",
+        "code" : "Observation.performer.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+      "code" : "Observation.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:validateurResultat",
+        "code" : "Observation.performer.extension:validateurResultat",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+      "code" : "Observation.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:responsableExamen",
+        "code" : "Observation.performer.extension:responsableExamen",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.participant",
+      "code" : "Observation.participant",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.performer.extension:dispositifAuto",
+        "code" : "Observation.performer.extension:dispositifAuto",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frPrelevement",
+      "code" : "Observation.entryRelationship:frPrelevement",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship:frCommentaireER",
+      "code" : "Observation.entryRelationship:frCommentaireER",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.entryRelationship.observation",
+      "code" : "Observation.entryRelationship.observation",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.extension:workflow-supportingInfo",
+        "code" : "Observation.extension:workflow-supportingInfo",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatExamensDeBiologieElementCliniquePertinent.referenceRange.observationRange",
+      "code" : "Observation.referenceRange.observationRange",
       "target" : [{
-        "code" : "FRObservationLaboratoryReportResultsDocument.valueRange",
+        "code" : "Observation.valueRange",
         "equivalence" : "equivalent"
       }]
     }]

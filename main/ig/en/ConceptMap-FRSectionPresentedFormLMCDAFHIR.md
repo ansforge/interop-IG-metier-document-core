@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMPresentedForm vers la section CDA 
   "id" : "FRSectionPresentedFormLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPresentedFormLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionPresentedFormLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Document PDF-copie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMPresentedForm vers la section CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-presented-form",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPresentedForm",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-document-pdf-copie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPresentedForm",
       "target" : [{
-        "code" : "FRCDADocumentPDFCopie",
+        "code" : "Section",
+        "display" : "FRCDADocumentPDFCopie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.codeSection",
       "target" : [{
-        "code" : "FRCDADocumentPDFCopie.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.titleSection",
       "target" : [{
-        "code" : "FRCDADocumentPDFCopie.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.description",
       "target" : [{
-        "code" : "FRCDADocumentPDFCopie.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPresentedForm.entry.attachment:FRLMAttachment",
+      "code" : "FRLMPresentedForm.entry.attachment",
       "target" : [{
-        "code" : "FRCDADocumentPDFCopie.entry:FRCDADocumentAttache",
+        "code" : "Section.entry",
+        "display" : "FRCDADocumentAttache",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-presented-form",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPresentedForm",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPresentedForm",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPresentedForm",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionPresentedForm",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPresentedForm.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPresentedForm.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMPresentedForm.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPresentedForm.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMPresentedForm.entry.attachment:FRLMAttachment",
+      "code" : "FRLMPresentedForm.entry.attachment",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPresentedForm.entry:FRDocumentReferenceDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     }]

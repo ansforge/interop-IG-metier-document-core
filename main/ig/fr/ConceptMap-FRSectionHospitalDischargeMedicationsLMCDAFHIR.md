@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMHospitalDischargeMedications vers 
   "id" : "FRSectionHospitalDischargeMedicationsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionHospitalDischargeMedicationsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionHospitalDischargeMedicationsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitements à la sortie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMHospitalDischargeMedications vers 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-hospital-discharge-medications",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHospitalDischargeMedications",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitements-a-la-sortie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHospitalDischargeMedications",
       "target" : [{
-        "code" : "FRCDATraitementsALaSortie",
+        "code" : "Section",
+        "display" : "FRCDATraitementsALaSortie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHospitalDischargeMedications.codeSection",
       "target" : [{
-        "code" : "FRCDATraitementsALaSortie.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHospitalDischargeMedications.titleSection",
       "target" : [{
-        "code" : "FRCDATraitementsALaSortie.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHospitalDischargeMedications.description",
       "target" : [{
-        "code" : "FRCDATraitementsALaSortie.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications:FRLMMedicationAdministration",
-      "target" : [{
-        "code" : "FRCDATraitementsALaSortie.entry.FRCDATraitement",
-        "equivalence" : "equivalent"
-      }]
-    }]
-  },
-  {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-hospital-discharge-medications",
-    "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
-    "targetVersion" : "0.1.0",
-    "element" : [{
-      "code" : "FRLMHospitalDischargeMedications",
-      "target" : [{
-        "code" : "FRCompositionDocument.section:sectionDischargeMedications",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHospitalDischargeMedications.codeSection",
-      "target" : [{
-        "code" : "FRCompositionDocument.section:sectionDischargeMedications.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHospitalDischargeMedications.titleSection",
-      "target" : [{
-        "code" : "FRCompositionDocument.section:sectionDischargeMedications.title",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHospitalDischargeMedications.description",
-      "target" : [{
-        "code" : "FRCompositionDocument.section:sectionDischargeMedications.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionDischargeMedications.entry:FRMedicationAdministrationDocument",
+        "code" : "Section.entry",
+        "display" : "FRCDATraitement",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHospitalDischargeMedications",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHospitalDischargeMedications",
+      "target" : [{
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionDischargeMedications",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHospitalDischargeMedications.codeSection",
+      "target" : [{
+        "code" : "Composition.section.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHospitalDischargeMedications.titleSection",
+      "target" : [{
+        "code" : "Composition.section.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHospitalDischargeMedications.description",
+      "target" : [{
+        "code" : "Composition.section.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications",
+      "target" : [{
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationAdministrationDocument",
         "equivalence" : "equivalent"
       }]
     }]

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la secti
   "id" : "FRSectionMedicalHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicalHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicalHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Antécédents médicaux\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMHistoryOfPastIllness vers la secti
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-history-of-past-illness",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHistoryOfPastIllness",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedents-medicaux",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHistoryOfPastIllness",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux",
+        "code" : "Section",
+        "display" : "FRCDAAntecedentsMedicaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.codeSection",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.titleSection",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.description",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
+      "code" : "FRLMHistoryOfPastIllness.entry.problem",
       "target" : [{
-        "code" : "FRCDAAntecedentsMedicaux.entry.FRCDAListeDesProblemes.entryRelationship:FRCDAProbleme",
+        "code" : "Section.entry",
+        "display" : "FRCDAProbleme",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-history-of-past-illness",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHistoryOfPastIllness",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHistoryOfPastIllness",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalHistory",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionMedicalHistory",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalHistory.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalHistory.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHistoryOfPastIllness.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalHistory.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHistoryOfPastIllness.entry.problem:FRLMCondition",
+      "code" : "FRLMHistoryOfPastIllness.entry.problem",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalHistory.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     }]

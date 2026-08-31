@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA 
   "id" : "FRSectionSocialHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionSocialHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionSocialHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Habitus et modes de vie",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,82 +37,87 @@ Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-social-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-habitus-mode-de-vie-section",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-habitus-mode-de-vie",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSocialHistory",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVieSection",
+        "code" : "Section",
+        "display" : "FRCDAHabitusModeDeVieSection",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.codeSection",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVieSection.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.titleSection",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVieSection.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.description",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVieSection.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSocialHistory.entry.observationSocialHistory:FRLMObservationSocialHistory",
+      "code" : "FRLMSocialHistory.entry.observationSocialHistory",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVieSection.entry:FRCDAHabitusModeDeVie",
+        "code" : "Section.entry",
+        "display" : "FRCDAHabitusModeDeVie",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-social-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSocialHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionSocialHistory",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionSocialHistory",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionSocialHistory.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionSocialHistory.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSocialHistory.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionSocialHistory.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSocialHistory.entry.observationSocialHistory:FRLMObservationSocialHistory",
+      "code" : "FRLMSocialHistory.entry.observationSocialHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionSocialHistory.entry:FRObservationSocialHistoryDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRObservationSocialHistoryDocument",
         "equivalence" : "equivalent"
       }]
     }]

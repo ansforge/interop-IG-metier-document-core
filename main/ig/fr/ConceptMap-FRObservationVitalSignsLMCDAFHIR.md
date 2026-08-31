@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
   "id" : "FRObservationVitalSignsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationVitalSignsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationVitalSignsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Observation Vital Sign\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,167 +37,169 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-vital-sign",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signe-vital-observe",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationVitalSign",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve",
+        "code" : "Observation",
+        "display" : "FRCDASigneVitalObserve",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.header.identifier",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.observationDate[x]",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.type",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.header.status",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.method",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.methodCode",
+        "code" : "Observation.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.bodySite",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.result",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.interpretation",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.interpretationCode",
+        "code" : "Observation.interpretationCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.note",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationVitalSign.header.author",
+      "code" : "FRLMObservationVitalSign.header.author[x]",
       "target" : [{
-        "code" : "FRCDASigneVitalObserve.author",
+        "code" : "Observation.author",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-vital-sign",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-vital-signs-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationVitalSign",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument",
+        "code" : "Observation",
+        "display" : "FRObservationVitalSignsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.header.identifier",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.effectiveDateTime",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.type",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.header.status",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.method",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.bodySite",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.bodySite",
+        "code" : "Observation.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.result",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.component.valueQuantity",
+        "code" : "Observation.component.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.interpretation",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationVitalSign.note",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationVitalSign.header.author",
+      "code" : "FRLMObservationVitalSign.header.author[x]",
       "target" : [{
-        "code" : "FRObservationVitalSignsDocument.extension:author",
+        "code" : "Observation.extension:author",
         "equivalence" : "equivalent"
       }]
     }]

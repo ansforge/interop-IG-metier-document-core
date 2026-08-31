@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
   "id" : "FRSectionCarePlansLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionCarePlansLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionCarePlansLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,88 @@ Mapping des éléments du modèle métier FRLMCarePlans vers la section CDA FRCD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-plan-soins",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-plan-de-soins",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMCarePlans",
       "target" : [{
-        "code" : "FRCDAPlanDeSoins",
+        "code" : "Section",
+        "display" : "FRCDAPlanDeSoins",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.codeSection",
       "target" : [{
-        "code" : "FRCDAPlanDeSoins.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.titleSection",
       "target" : [{
-        "code" : "FRCDAPlanDeSoins.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.description",
       "target" : [{
-        "code" : "FRCDAPlanDeSoins.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMCarePlans.entry.carePlans:FRLMCarePlan",
+      "code" : "FRLMCarePlans.entry.carePlans",
       "target" : [{
-        "code" : "FRCDAPlanDeSoins.entry:FRCDAActe",
-        "equivalence" : "equivalent"
+        "code" : "Section.entry",
+        "equivalence" : "inexact",
+        "comment" : "Selon le type d'activité portée par FRLMCarePlan.activity, l'entrée CDA concrète est l'une des slices : Section.entry:frActe, :frDemandeDexamenOuDeSuivi, :frTraitement, :frVaccinRecommande ou :frRencontre."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plans",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMCarePlans",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPlanOfCare",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionPlanOfCare",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPlanOfCare.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPlanOfCare.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlans.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPlanOfCare.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAPlanDeSoins.entry:carePlans:FRLMCarePlan",
+      "code" : "FRLMCarePlans.entry.carePlans",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPlanOfCare.entry:FRCarePlanDocument",
-        "equivalence" : "equivalent"
+        "code" : "Composition.section.entry",
+        "equivalence" : "inexact",
+        "comment" : "Selon le type d'activité portée par FRLMCarePlan.activity, la ressource FHIR concrète référencée est l'une de : FRProcedureDocument, FRServiceRequestDocument, FRMedicationRequestDocument, FRImmunizationDocument ou FREncounterDocument."
       }]
     }]
   }]

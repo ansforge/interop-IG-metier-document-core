@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDAComm
   "id" : "FRSectionNoteLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionNoteLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionNoteLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Commentaire non codé\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,69 +37,71 @@ Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDAComm
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-note",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-commentaire-non-code",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMNote",
       "target" : [{
-        "code" : "FRCDACommentaireNonCode",
+        "code" : "Section",
+        "display" : "FRCDACommentaireNonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.codeSection",
       "target" : [{
-        "code" : "FRCDACommentaireNonCode.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.titleSection",
       "target" : [{
-        "code" : "FRCDACommentaireNonCode.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.description",
       "target" : [{
-        "code" : "FRCDACommentaireNonCode.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-note",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMNote",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionNote",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionNote",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionNote.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionNote.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMNote.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionNote.extension:section-note",
+        "code" : "Composition.section.extension:section-note",
         "equivalence" : "equivalent"
       }]
     }]

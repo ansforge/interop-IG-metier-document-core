@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecond
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : Résultats de laboratoire de biologie de seconde intention",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -36,93 +36,97 @@ Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecond
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-resultats-laboratoire-biologie-seconde-intention",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-biologie-de-seconde-intention",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention",
+        "code" : "Section",
+        "display" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention.codeSection",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention.titreSection",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention.blocNarratif",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention.entree.observation:FRLMObservation",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.entry:FRCDASimpleObservation",
+        "code" : "Section.entry:FRCDASimpleObservation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMResultatsLaboratoireBiologieSecondeIntention.entree.documentAttache:FRLMDocumentAttache",
       "target" : [{
-        "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.entry:FRCDADocumentAttache",
+        "code" : "Section.entry:FRCDADocumentAttache",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-laboratoire-de-biologie-de-seconde-intention",
+    "source" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-de-biologie-de-seconde-intention",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention",
+      "code" : "Section",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections",
+        "code" : "Composition.section:sans-sous-sections",
+        "display" : "FRCompositionDocument.section:sans",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.code",
+      "code" : "Section.code",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.code",
+        "code" : "Composition.section:sans-sous-sections.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.title",
+      "code" : "Section.title",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.title",
+        "code" : "Composition.section:sans-sous-sections.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.text",
+      "code" : "Section.text",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.text",
+        "code" : "Composition.section:sans-sous-sections.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.entry:FRCDASimpleObservation",
+      "code" : "Section.entry:FRCDASimpleObservation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument",
+        "code" : "Composition.section:sans-sous-sections.entry:FRObservationLaboratoryReportResultsDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention.entry:FRCDADocumentAttache",
+      "code" : "Section.entry:FRCDADocumentAttache",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sans-sous-sections.entry:FRDocumentReferenceDocument",
+        "code" : "Composition.section:sans-sous-sections.entry:FRDocumentReferenceDocument",
         "equivalence" : "equivalent"
       }]
     }]

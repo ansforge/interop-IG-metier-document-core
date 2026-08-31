@@ -10,8 +10,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | :--- | :--- | :--- |
 | Modèle métier | CDA | FHIR |
 | **FRLMHeaderDocument** | **ClinicalDocument** |  |
-| FRLMHeaderDocument.identifier:document | ClinicalDocument.id | Bundle.identifier |
-| FRLMHeaderDocument.identifier:versionSet | ClinicalDocument.setId | Composition.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.id | Bundle.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.id | Composition.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.setId | Bundle.identifier |
+| FRLMHeaderDocument.identifier | ClinicalDocument.setId | Composition.identifier |
 | FRLMHeaderDocument.documentType | ClinicalDocument.code | Composition.type |
 | FRLMHeaderDocument.documentTitle | ClinicalDocument.title | Composition.title |
 | FRLMHeaderDocument.date | ClinicalDocument.effectiveTime | Composition.date |
@@ -21,7 +23,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.status | ClinicalDocument.documentationOf. serviceEvent.lab:statusCode | Composition.status |
 | FRLMHeaderDocument.eventType | ClinicalDocument.documentationOf | Composition.event |
 | FRLMHeaderDocument.subject | ClinicalDocument.recordTarget | Composition.subject |
-| FRLMHeaderDocument.author | ClinicalDocument.author | Composition.author |
+| FRLMHeaderDocument.author[x] | ClinicalDocument.author | Composition.author |
 | FRLMHeaderDocument.dataEnterer | ClinicalDocument.dataEnterer | Composition.extension:data-enterer |
 | FRLMHeaderDocument.informant | ClinicalDocument.informant | Composition.extension:informant |
 | FRLMHeaderDocument.custodian | ClinicalDocument.custodian | Composition.custodian |
@@ -32,113 +34,141 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.order | ClinicalDocument.inFulfillmentOf | Composition.extension:basedOn |
 | FRLMHeaderDocument.consent | ClinicalDocument.authorization | Composition.extension:consent |
 | FRLMHeaderDocument.encounter | ClinicalDocument.componentOf | Composition.encounter |
-| **FRLMAttester** | **authenticator** | Composition.attester |
-| FRLMAttester.dateTime | authenticator.time | Composition.attester.time |
-| FRLMAttester.attester:healthProfessional | authenticator.assignedEntity | Composition.attester.party.PractitionerRole |
-| FRLMAttester.attester:device | authenticator.assignedEntity | Composition.attester.party.Device |
-| FRLMHeaderDocument.author | **author** | Composition.author |
-| FRLMHeaderDocument.author:healthProfessional | author.assignedAuthor | Composition.author.PractitionerRole |
-| FRLMHeaderDocument.author:organisation | author.assignedAuthor | Composition.author.Organization |
-| FRLMHeaderDocument.author:device | author.assignedAuthor.assignedAuthoringDevice | Composition.author.Device |
+| **FRLMAttester** | **authenticator** | **Composition.attester** |
+| FRLMAttester.dateTime | Authenticator.time | Composition.attester.time |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
 | **FRLMConsent** | **authorization** | **Consent** |
-| FRLMConsent.identifier | authorization.consent.id | Consent.identifier |
-| FRLMConsent.type | authorization.consent.code | Consent.category |
-| FRLMConsent.status | authorization.consent.statusCode="completed" | Consent.status |
-| FRLMHeaderDocument.custodian | custodian.assignedCustodian.representedCustodianOrganization | Composition.custodian |
+| FRLMConsent.identifier | Authorization.consent.id | Consent.identifier |
+| FRLMConsent.type | Authorization.consent.code | Consent.category |
+| FRLMConsent.status | Authorization.consent.statusCode | Consent.status |
+| FRLMHeaderDocument.custodian | Custodian.assignedCustodian | Composition.custodian |
+| FRLMOrganisation.identifier | CustodianOrganization.id |  |
+| FRLMOrganisation.name | CustodianOrganization.name |  |
+| FRLMOrganisation.address | CustodianOrganization.addr |  |
+| FRLMOrganisation.telecom | CustodianOrganization.telecom |  |
 | **FRLMDataEnterer** | **dataEnterer** | **Extension** |
-| FRLMDataEnterer.date | dataEnterer.time | Extension.extension:time.value[x] |
-| FRLMDataEnterer.dataEnterer:healthProfessional | dataEnterer.assignedEntity | Extension.extension:party.value[x] |
-| FRLMDataEnterer.dataEnterer:patient | dataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.date | DataEnterer.time | Extension.extension:time.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
+| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
 | **FRLMHealthProfessional** | **assignedEntity** | **PractitionerRole** |
 | **FRLMHealthProfessional** | **assignedEntity** | **Practitioner** |
-| FRLMHealthProfessional.identifier | assignedEntity.id | Practitioner.identifier |
-| FRLMHealthProfessional.name | assignedEntity.assignedPerson.name | Practitioner.name |
-| FRLMHealthProfessional.name.family | assignedEntity.assignedPerson. name.family | Practitioner.name.family |
-| FRLMHealthProfessional.name.given | assignedEntity.assignedPerson. name.given | Practitioner.name.given |
-| FRLMHealthProfessional.name.prefix | assignedEntity.assignedPerson. name.prefix | Practitioner.name.prefix |
-| FRLMHealthProfessional.name.suffix | assignedEntity.assignedPerson. name.suffix | Practitioner.name.suffix |
-| FRLMHealthProfessional.address | assignedEntity.addr | Practitioner.address |
-| FRLMHealthProfessional.telecom | assignedEntity.telecom | Practitioner.telecom |
-| FRLMHealthProfessional.professionalRole.role | assignedEntity.code | PractitionerRole.code |
-| FRLMHealthProfessional.professionalRole.organisation | assignedEntity.representedOrganization | PractitionerRole.organization |
+| FRLMHealthProfessional.identifier | AssignedEntity.id | Practitioner.identifier |
+| FRLMHealthProfessional.name |  | Practitioner.name |
+| FRLMHealthProfessional.address | AssignedEntity.addr | Practitioner.address |
+| FRLMHealthProfessional.telecom | AssignedEntity.telecom | Practitioner.telecom |
+| FRLMHealthProfessional.professionalRole.role | AssignedEntity.code | PractitionerRole.code |
+| FRLMHealthProfessional.professionalRole.organisation | AssignedEntity.representedOrganization | PractitionerRole.organization |
 | FRLMHealthProfessional.professionalRole.specialty |  | PractitionerRole.specialty |
+| FRLMHealthProfessional.name | Person.name | Practitioner.name |
+| FRLMHumanName.use | PN.use |  |
+| FRLMHumanName.family | PN.item.family | Practitioner.name.family |
+| FRLMHumanName.given | PN.item.given | Practitioner.name.given |
+| FRLMHumanName.prefix | PN.item.prefix | Practitioner.name.prefix |
+| FRLMHumanName.suffix | PN.item.suffix | Practitioner.name.suffix |
+| FRLMHumanName.period | PN.validTime |  |
 | **FRLMInformant** | **informant** | **Extension** |
-| FRLMInformant.informant:professional | informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant:organisation | informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant:patient | informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant:relatedPerson | informant.relatedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantProfessional | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantOrganisation | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
 | **FRLMIntendedRecipient** | **informationRecipient** | **Extension** |
-| FRLMIntendedRecipient.intendedRecipient:healthProfessional | informationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| FRLMIntendedRecipient.intendedRecipient:organisation | informationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| FRLMIntendedRecipient.intendedRecipient:patient | informationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| FRLMIntendedRecipient.intendedRecipient:relatedPerson | informationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| FRLMIntendedRecipient.intendedRecipient:device | informationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| **FRLMLegalAuthentication** | **legalAuthenticator** | Composition.attester |
-| FRLMLegalAuthentication.dateTime | legalAuthenticator.time | Composition.attester.time |
-| FRLMLegalAuthentication.legalAuthenticator:healthProfessional | legalAuthenticator.assignedEntity | Composition.attester.party.PractitionerRole |
-| FRLMLegalAuthentication.legalAuthenticator:patient | legalAuthenticator.assignedEntity | Composition.attester.party.Patient |
-| FRLMLegalAuthentication.legalAuthenticator:device | legalAuthenticator.assignedEntity | Composition.attester.party.Device |
-| FRLMLegalAuthentication.legalAuthenticator:organisation | legalAuthenticator.assignedEntity | Composition.attester.party.Organization |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| **FRLMLegalAuthentication** | **legalAuthenticator** | **Composition.attester** |
+| FRLMLegalAuthentication.dateTime | LegalAuthenticator.time | Composition.attester.time |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
+| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
 | **FRLMOrder** | **inFulfillmentOf** | **ServiceRequest** |
-| FRLMOrder.orderId | inFulfillmentOf.order.id | ServiceRequest.identifier |
-| FRLMOrder.accessionNumber | inFulfillmentOf.order.ps3-20:accessionNumber | ServiceRequest.identifier |
 | FRLMOrder.orderDateAndTime |  | ServiceRequest.authoredOn |
-| FRLMOrder.orderPlacer |  | ServiceRequest.requester |
-| FRLMOrder.orderReason |  | ServiceRequest.reasonCode |
+| FRLMOrder.orderPlacer[x] |  | ServiceRequest.requester |
+| FRLMOrder.orderReason[x] |  | ServiceRequest.reasonCode |
+| FRLMOrder.orderId | Order.id | ServiceRequest.identifier |
+| FRLMOrder.accessionNumber |  | ServiceRequest.identifier |
 | **FRLMOrganisation** | assignedEntity.representedOrganization | **Organization** |
-| FRLMOrganisation.identifier | assignedEntity.representedOrganization.id | Organization.identifier |
+| FRLMOrganisation.identifier | Organization.id | Organization.identifier |
 | FRLMOrganisation.type |  | Organization.type |
-| FRLMOrganisation.name | assignedEntity.representedOrganization.name | Organization.name |
-| FRLMOrganisation.address | assignedEntity.representedOrganization.addr | Organization.address |
-| FRLMOrganisation.telecom | assignedEntity.representedOrganization.telecom | Organization.telecom |
+| FRLMOrganisation.name | Organization.name | Organization.name |
+| FRLMOrganisation.address | Organization.addr | Organization.address |
+| FRLMOrganisation.telecom | Organization.telecom | Organization.telecom |
 | FRLMOrganisation.partOf |  | Organization.partOf |
-| FRLMOrganisation.industrySector | assignedEntity.representedOrganization.standardIndustryClassCode | Organization.type |
+| FRLMOrganisation.industrySector | Organization.standardIndustryClassCode | Organization.type |
 | **FRLMParticipant** | **participant** | **Extension** |
-| FRLMParticipant.identifier | participant.associatedEntity.id | Extension.extension:party.value[x] |
-| FRLMParticipant.name | participant.associatedEntity.name | Extension.extension:party.value[x] |
-| FRLMParticipant.type | participant@typeCode | Extension.extension:type.value[x] |
-| FRLMParticipant.role | participant.functionCode | Extension.extension:function.value[x] |
-| FRLMParticipant.period | participant.time | Extension.extension:time.value[x] |
-| FRLMParticipant.participant:healthProfessional | participant.associatedEntity | Extension.extension:party.value[x] |
-| FRLMParticipant.participant:organisation | participant.associatedEntity | Extension.extension:party.value[x] |
-| FRLMParticipant.participant:device | participant.associatedEntity | Extension.extension:party.value[x] |
+| FRLMParticipant.type | Participant1.typeCode | Extension.extension:type.value[x] |
+| FRLMParticipant.role | Participant1.functionCode | Extension.extension:function.value[x] |
+| FRLMParticipant.period | Participant1.time | Extension.extension:time.value[x] |
+| FRLMParticipant.participant.participantProfessional | Participant1.associatedEntity | Extension.extension:party.value[x] |
+| FRLMParticipant.participant.participantOrganisation | Participant1.associatedEntity | Extension.extension:party.value[x] |
+| FRLMParticipant.participant.participantDevice | Participant1.associatedEntity | Extension.extension:party.value[x] |
+| FRLMParticipant.identifier | AssociatedEntity.id | Extension.extension:party.value[x] |
+| FRLMParticipant.name | AssociatedEntity.associatedPerson | Extension.extension:party.value[x] |
 | **FRLMPatient** | **recordTarget** | **Patient** |
-| FRLMPatient.identifier | recordTarget.patientRole.id | Patient.identifier |
-| FRLMPatient.address | recordTarget.patientRole.addr | Patient.address |
-| FRLMPatient.telecom | recordTarget.patientRole.telecom | Patient.telecom |
-| FRLMPatient.name:officialName | recordTarget.patientRole. patient.name | Patient.name:officialName |
-| FRLMPatient.name:usualName | recordTarget.patientRole. patient.name | Patient.name:usualName |
-| FRLMPatient.name:officialName.family | recordTarget.patientRole. patient.name.family@qualifier='BR' | Patient.name:officialName.family |
-| FRLMPatient.name:usualName.family | recordTarget.patientRole. patient.name.family@qualifier='CL' | Patient.name:usualName.family |
-| FRLMPatient.name:officialName.given | recordTarget.patientRole. patient.name.given@qualifier='BR' | Patient.name:officialName.given |
-| FRLMPatient.name:usualName.given | recordTarget.patientRole. patient.name.given@qualifier='CL' | Patient.name:usualName.given |
-| FRLMPatient.name:officialName.use | recordTarget.patientRole. patient.name.family@qualifier='BR' | Patient.name:officialName.use |
-| FRLMPatient.name:usualName.use | recordTarget.patientRole. patient.name.family@qualifier='CL' | Patient.name:usualName.use |
-| FRLMPatient.administrativeGender | recordTarget.patientRole. patient.administrativeGenderCode | Patient.gender |
-| FRLMPatient.dateOfBirth | recordTarget.patientRole. patient.birthTime | Patient.birthDate |
-| FRLMPatient.deceased:boolean | recordTarget.patientRole. patient.sdtc:deceasedInd | Patient.deceased[x] |
-| FRLMPatient.deceased:dateTime | recordTarget.patientRole. patient.sdtc:deceasedTime | Patient.deceased[x] |
-| FRLMPatient.multipleBirth:boolean | recordTarget.patientRole. patient.sdtc:multipleBirthInd | Patient.multipleBirth[x] |
-| FRLMPatient.multipleBirth:integer | recordTarget.patientRole. patient.sdtc:multipleBirthOrderNumber | Patient.multipleBirth[x] |
-| FRLMPatient.birthPlace | recordTarget.patientRole. patient.birthPlace | Patient.extension:birthPlace |
-| FRLMPatient.contact | recordTarget.patientRole. patient.guardian | Patient.contact |
-| FRLMPatient.contact.address | recordTarget.patientRole. patient.guardian.addr | Patient.contact.address |
-| FRLMPatient.contact.telecom | recordTarget.patientRole. patient.guardian.telecom | Patient.contact.telecom |
-| FRLMPatient.contact.name | recordTarget.patientRole. patient.guardian.guardianPerson.name | Patient.contact.name |
-| FRLMPatient.contact. name.family | recordTarget.patientRole. patient.guardian.guardianPerson.family | Patient.contact.name |
-| FRLMPatient.contact. name.given | recordTarget.patientRole. patient.guardian.guardianPerson.given | Patient.contact.name |
-| FRLMPatient.contact.organization | recordTarget.patientRole. patient.guardian.guardianOrganization | Patient.contact.organization |
+| FRLMPatient.identifier | PatientRole.id | Patient.identifier |
+| FRLMPatient.address | PatientRole.addr | Patient.address |
+| FRLMPatient.telecom | PatientRole.telecom | Patient.telecom |
+| FRLMPatient.name | Patient.name | Patient.name:officialName |
+| FRLMPatient.name | Patient.name | Patient.name:usualName |
+| FRLMPatient.administrativeGender | Patient.administrativeGenderCode | Patient.gender |
+| FRLMPatient.dateOfBirth | Patient.birthTime | Patient.birthDate |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
+| FRLMPatient.deceased[x] | Patient.sdtcDeceasedTime | Patient.deceased[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthInd | Patient.multipleBirth[x] |
+| FRLMPatient.multipleBirth[x] | Patient.sdtcMultipleBirthOrderNumber | Patient.multipleBirth[x] |
+| FRLMPatient.birthPlace | Patient.birthplace | Patient.extension:birthPlace |
+| FRLMPatient.contact | Patient.guardian | Patient.contact |
+| FRLMPatient.contact.address | Patient.guardian | Patient.contact.address |
+| FRLMPatient.contact.telecom | Patient.guardian | Patient.contact.telecom |
+| FRLMPatient.contact.name | Patient.guardian | Patient.contact.name |
+| FRLMPatient.contact.organization | Patient.guardian | Patient.contact.organization |
+| FRLMHumanName.use | Patient.name.use |  |
+| FRLMHumanName.family | Patient.name. item.family |  |
+| FRLMHumanName.given | Patient.name. item.given |  |
 | **FRLMRelatedPerson** | **relatedEntity** | **RelatedPerson** |
 | FRLMRelatedPerson.identifier |  | RelatedPerson.identifier |
-| FRLMRelatedPerson.name | relatedEntity.relatedPerson.name | RelatedPerson.name |
-| FRLMRelatedPerson.name.family | relatedEntity.relatedPerson. name.family | RelatedPerson.name.family |
-| FRLMRelatedPerson.name.given | relatedEntity.relatedPerson. name.given | RelatedPerson.name.given |
-| FRLMRelatedPerson.name.prefix | relatedEntity.relatedPerson. name.prefix | RelatedPerson.name.prefix |
-| FRLMRelatedPerson.name.suffix | relatedEntity.relatedPerson. name.suffix | RelatedPerson.name.suffix |
+| FRLMRelatedPerson.name |  | RelatedPerson.name |
 | FRLMRelatedPerson.subject |  | RelatedPerson.patient |
-| FRLMRelatedPerson.relationship | relatedEntity.code | RelatedPerson.relationship |
-| FRLMRelatedPerson.address | relatedEntity.addr | RelatedPerson.address |
-| FRLMRelatedPerson.telecom | relatedEntity.telecom | RelatedPerson.telecom |
+| FRLMRelatedPerson.relationship | RelatedEntity.code | RelatedPerson.relationship |
+| FRLMRelatedPerson.address | RelatedEntity.addr | RelatedPerson.address |
+| FRLMRelatedPerson.telecom | RelatedEntity.telecom | RelatedPerson.telecom |
 | FRLMRelatedPerson.gender |  | RelatedPerson.gender |
 | FRLMRelatedPerson.birthDate |  | RelatedPerson.birthDate |
 | FRLMRelatedPerson.deceased |  |  |
@@ -146,4 +176,11 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMRelatedPerson.photo |  | RelatedPerson.photo |
 | FRLMRelatedPerson.period |  | RelatedPerson.period |
 | FRLMRelatedPerson.communication |  | RelatedPerson.communication |
+| FRLMRelatedPerson.name | Person.name | RelatedPerson.name |
+| FRLMHumanName.use | PN.use |  |
+| FRLMHumanName.family | PN.item.family | RelatedPerson.name.family |
+| FRLMHumanName.given | PN.item.given | RelatedPerson.name.given |
+| FRLMHumanName.prefix | PN.item.prefix | RelatedPerson.name.prefix |
+| FRLMHumanName.suffix | PN.item.suffix | RelatedPerson.name.suffix |
+| FRLMHumanName.period | PN.validTime |  |
 

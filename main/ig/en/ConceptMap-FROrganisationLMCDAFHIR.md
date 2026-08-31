@@ -19,9 +19,11 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
   "id" : "FROrganisationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrganisationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FROrganisationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Structure\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,22 +41,29 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrganisation",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization",
+        "code" : "AssignedEntity.representedOrganization",
+        "display" : "assignedEntity.representedOrganization",
         "equivalence" : "equivalent",
         "comment" : "Structure CDA générique reprise dans toutes les occurrences d'organisation (representedOrganization, representedCustodianOrganization, scopingOrganization, receivedOrganization, healthcareFacility.location, etc.), ici illustrée via assignedEntity.representedOrganization."
       }]
-    },
-    {
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-organization",
+    "targetVersion" : "0.1.0",
+    "element" : [{
       "code" : "FRLMOrganisation.identifier",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization.id",
+        "code" : "Organization.id",
         "equivalence" : "equivalent"
       }]
     },
@@ -68,21 +77,21 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     {
       "code" : "FRLMOrganisation.name",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization.name",
+        "code" : "Organization.name",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrganisation.address",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization.addr",
+        "code" : "Organization.addr",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrganisation.telecom",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization.telecom",
+        "code" : "Organization.telecom",
         "equivalence" : "equivalent"
       }]
     },
@@ -96,13 +105,13 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
     {
       "code" : "FRLMOrganisation.industrySector",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization.standardIndustryClassCode",
+        "code" : "Organization.standardIndustryClassCode",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/Organization",
     "targetVersion" : "4.0.1",

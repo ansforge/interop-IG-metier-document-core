@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
   "id" : "FRSectionAlertsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAlertsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAlertsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Points de vigilance\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,35 +37,36 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-alerts",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAlerts",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-points-de-vigilances-non-code",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAlerts",
       "target" : [{
-        "code" : "FRCDAPointsDeVigilancesNonCode",
+        "code" : "Section",
+        "display" : "FRCDAPointsDeVigilancesNonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.codeSection",
       "target" : [{
-        "code" : "FRCDAPointsDeVigilancesNonCode.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.titleSection",
       "target" : [{
-        "code" : "FRCDAPointsDeVigilancesNonCode.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.description",
       "target" : [{
-        "code" : "FRCDAPointsDeVigilancesNonCode.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
@@ -75,42 +78,44 @@ Mapping des éléments du modèle métier FRLMAlerts vers la section CDA FRCDAPo
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-alerts",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAlerts",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAlerts",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAlerts",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionAlerts",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAlerts.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAlerts.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAlerts.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAlerts.entry.alert",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAlerts.entry:Flag",
+        "code" : "Composition.section.entry",
+        "display" : "Flag",
         "equivalence" : "equivalent"
       }]
     }]

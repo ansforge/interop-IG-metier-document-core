@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRC
   "id" : "FRParticipantCorpsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRParticipantCorpsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRParticipantCorpsLMCDAFHIR",
   "title" : "Mapping Metier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,111 +37,124 @@ Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-participant",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-participant-corps",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMParticipant",
       "target" : [{
-        "code" : "FRCDAParticipant",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.identifier",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.name",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingEntity.name",
+        "code" : "Participant2",
+        "display" : "FRCDAParticipant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.type",
       "target" : [{
-        "code" : "FRCDAParticipant.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.role",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingEntity.code",
+        "code" : "Participant2.typeCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.period",
       "target" : [{
-        "code" : "FRCDAParticipant.time",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.participant.participantProfessional",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingEntity",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.participant.participantDevice",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.playingDevice",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.participant.participantOrganisation",
-      "target" : [{
-        "code" : "FRCDAParticipant.participantRole.scopingEntity",
+        "code" : "Participant2.time",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-actor-extension",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-participant-role",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMParticipant",
-      "target" : [{
-        "code" : "FRActorExtension",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMParticipant.type",
-      "target" : [{
-        "code" : "FRActorExtension.extension[typeCode].value[x]",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
       "code" : "FRLMParticipant.identifier",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.identifier",
+        "code" : "ParticipantRole.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMParticipant.name",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.name",
-        "equivalence" : "equivalent"
+        "code" : "ParticipantRole.playingEntity",
+        "equivalence" : "wider",
+        "comment" : "playingEntity (type CDA PlayingEntity) n'est pas décomposé ; le nom y est porté globalement."
       }]
     },
     {
       "code" : "FRLMParticipant.role",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument.practitioner.qualification",
+        "code" : "ParticipantRole.code",
         "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.participant.participantProfessional",
+      "target" : [{
+        "code" : "ParticipantRole.playingEntity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.participant.participantDevice",
+      "target" : [{
+        "code" : "ParticipantRole.playingDevice",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.participant.participantOrganisation",
+      "target" : [{
+        "code" : "ParticipantRole.scopingEntity",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-actor-extension",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMParticipant",
+      "target" : [{
+        "code" : "Extension",
+        "display" : "FRActorExtension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.type",
+      "target" : [{
+        "code" : "Extension.extension:typeCode.value[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.identifier",
+      "target" : [{
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "wider",
+        "comment" : "value[x] est une simple Reference ; l'identifiant n'est pas accessible sans résoudre la référence vers FRPractitionerRoleDocument."
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.name",
+      "target" : [{
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "wider",
+        "comment" : "value[x] est une simple Reference ; le nom n'est pas accessible sans résoudre la référence vers FRPractitionerRoleDocument."
+      }]
+    },
+    {
+      "code" : "FRLMParticipant.role",
+      "target" : [{
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "wider",
+        "comment" : "value[x] est une simple Reference ; la qualification n'est pas accessible sans résoudre la référence vers FRPractitionerRoleDocument."
       }]
     },
     {
@@ -152,22 +167,25 @@ Mapping des éléments du modèle métier FRLMParticipant vers le profil CDA FRC
     {
       "code" : "FRLMParticipant.participant.participantProfessional",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FRPractitionerRoleDocument",
-        "equivalence" : "equivalent"
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FRPractitionerRoleDocument."
       }]
     },
     {
       "code" : "FRLMParticipant.participant.participantDevice",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:Device",
-        "equivalence" : "equivalent"
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un Device."
       }]
     },
     {
       "code" : "FRLMParticipant.participant.participantOrganisation",
       "target" : [{
-        "code" : "FRActorExtension.extension[actor].value[x]:FROrganizationRoleDocument",
-        "equivalence" : "equivalent"
+        "code" : "Extension.extension:actor.value[x]",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où value[x] référence un FROrganizationRoleDocument."
       }]
     }]
   }]

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
   "id" : "FRProcedureLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRProcedureLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRProcedureLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Procedure\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,70 +37,71 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-acte",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedure",
       "target" : [{
-        "code" : "FRCDAActe",
+        "code" : "Procedure",
+        "display" : "FRCDAActe",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.code",
       "target" : [{
-        "code" : "FRCDAActe.code",
+        "code" : "Procedure.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.status",
       "target" : [{
-        "code" : "FRCDAActe.statusCode",
+        "code" : "Procedure.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.procedureDate[x]",
       "target" : [{
-        "code" : "FRCDAActe.effectiveTime",
+        "code" : "Procedure.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.priority",
       "target" : [{
-        "code" : "FRCDAActe.priorityCode",
+        "code" : "Procedure.priorityCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.bodySite",
       "target" : [{
-        "code" : "FRCDAActe.targetSiteCode",
+        "code" : "Procedure.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.approachSiteCode",
       "target" : [{
-        "code" : "FRCDAActe.approachSiteCode",
+        "code" : "Procedure.approachSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.difficulty",
       "target" : [{
-        "code" : "FRCDAActe.entryRelationship:frSimpleObservationDifficulte",
+        "code" : "Procedure.entryRelationship:frSimpleObservationDifficulte",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.reason[x]",
       "target" : [{
-        "code" : "FRCDAActe.entryRelationship:frReferenceInterneMotifActe",
+        "code" : "Procedure.entryRelationship:frReferenceInterneMotifActe",
         "equivalence" : "equivalent"
       }]
     },
@@ -119,7 +122,7 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
     {
       "code" : "FRLMProcedure.deviceUsed",
       "target" : [{
-        "code" : "FRCDAActe.entryRelationship:frReferenceInterneDM",
+        "code" : "Procedure.entryRelationship:frReferenceInterneDM",
         "equivalence" : "equivalent"
       }]
     },
@@ -133,118 +136,119 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
     {
       "code" : "FRLMProcedure.note",
       "target" : [{
-        "code" : "FRCDAActe.text",
+        "code" : "Procedure.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-procedure-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedure",
       "target" : [{
-        "code" : "FRProcedureDocument",
+        "code" : "Procedure",
+        "display" : "FRProcedureDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.code",
       "target" : [{
-        "code" : "FRProcedureDocument.code",
+        "code" : "Procedure.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.status",
       "target" : [{
-        "code" : "FRProcedureDocument.status",
+        "code" : "Procedure.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.procedureDate[x]",
       "target" : [{
-        "code" : "FRProcedureDocument.performed[x]",
+        "code" : "Procedure.performed[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.priority",
       "target" : [{
-        "code" : "FRProcedureDocument.extension:priority",
+        "code" : "Procedure.extension:priority",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.bodySite",
       "target" : [{
-        "code" : "FRProcedureDocument.bodySite.TargetSiteCode",
+        "code" : "Procedure.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.approachSiteCode",
       "target" : [{
-        "code" : "FRProcedureDocument.bodySite.ApproachSiteCode",
+        "code" : "Procedure.extension:approachBodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.difficulty",
       "target" : [{
-        "code" : "FRProcedureDocument.extension:difficulte",
+        "code" : "Procedure.extension:difficulte",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.reason[x]",
       "target" : [{
-        "code" : "FRProcedureDocument.reasonCode",
+        "code" : "Procedure.reasonCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.reason[x]",
       "target" : [{
-        "code" : "FRProcedureDocument.reasonReference",
+        "code" : "Procedure.reasonReference",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.outcome",
       "target" : [{
-        "code" : "FRProcedureDocument.outcome",
+        "code" : "Procedure.outcome",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.complication",
       "target" : [{
-        "code" : "FRProcedureDocument.complication",
+        "code" : "Procedure.complication",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.deviceUsed",
       "target" : [{
-        "code" : "FRProcedureDocument.usedReference",
+        "code" : "Procedure.usedReference",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.focalDevice",
       "target" : [{
-        "code" : "FRProcedureDocument.focalDevice.manipulated.device",
+        "code" : "Procedure.focalDevice.manipulated",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.note",
       "target" : [{
-        "code" : "FRProcedureDocument.note",
+        "code" : "Procedure.note",
         "equivalence" : "equivalent"
       }]
     }]

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
   "id" : "FRSectionMedicationDispenseLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicationDispenseLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicationDispenseLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispensation de médicaments\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMMedicationDispensations vers la se
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispensations",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispensations",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispensation-medicaments",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationDispensations",
       "target" : [{
-        "code" : "FRCDADispensationMedicaments",
+        "code" : "Section",
+        "display" : "FRCDADispensationMedicaments",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.codeSection",
       "target" : [{
-        "code" : "FRCDADispensationMedicaments.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.description",
       "target" : [{
-        "code" : "FRCDADispensationMedicaments.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.titleSection",
       "target" : [{
-        "code" : "FRCDADispensationMedicaments.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense",
       "target" : [{
-        "code" : "FRCDADispensationMedicaments.entry.FRCDATraitementDispense",
+        "code" : "Section.entry",
+        "display" : "FRCDATraitementDispense",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-dispensations",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispensations",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicationDispensations",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicationDispense",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionMedicationDispense",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicationDispense.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicationDispense.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicationDispensations.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicationDispense.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMMedicationDispensations.entry.medicationDispense:FRLMMedicationDispense",
+      "code" : "FRLMMedicationDispensations.entry.medicationDispense",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicationDispense.entry:FRMedicationDispenseDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationDispenseDocument",
         "equivalence" : "equivalent"
       }]
     }]

@@ -17,7 +17,7 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
   "version" : "0.1.0",
   "title" : "Mapping Metier/CDA/FHIR : \"Observation\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,105 +35,106 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-simple-observation",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservation",
       "target" : [{
-        "code" : "FRCDASimpleObservation",
+        "code" : "Observation",
+        "display" : "FRCDASimpleObservation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.status",
       "target" : [{
-        "code" : "FRCDASimpleObservation.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.directSubject[x]",
       "target" : [{
-        "code" : "FRCDASimpleObservation.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.observationDate[x]",
       "target" : [{
-        "code" : "FRCDASimpleObservation.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.type",
       "target" : [{
-        "code" : "FRCDASimpleObservation.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.originalName",
       "target" : [{
-        "code" : "FRCDASimpleObservation.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.method",
       "target" : [{
-        "code" : "FRCDASimpleObservation.methodCode",
+        "code" : "Observation.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.specimen",
       "target" : [{
-        "code" : "FRCDASimpleObservation.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.order",
       "target" : [{
-        "code" : "FRCDASimpleObservation.inFulfillmentOf",
+        "code" : "Observation.sdtcInFulfillmentOf1",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.bodySite",
       "target" : [{
-        "code" : "FRCDASimpleObservation.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.result",
       "target" : [{
-        "code" : "FRCDASimpleObservation.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.referenceRange",
       "target" : [{
-        "code" : "FRCDASimpleObservation.referenceRange",
+        "code" : "Observation.referenceRange",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.interpretation",
       "target" : [{
-        "code" : "FRCDASimpleObservation.interpretationCode",
+        "code" : "Observation.interpretationCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.note",
       "target" : [{
-        "code" : "FRCDASimpleObservation.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
@@ -146,23 +147,24 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
     {
       "code" : "FRLMObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRCDASimpleObservation.entryRelationship",
+        "code" : "Observation.entryRelationship",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.hasMember[x]",
       "target" : [{
-        "code" : "FRCDASimpleObservation.entryRelationship",
+        "code" : "Observation.entryRelationship",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-ml-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation",
+    "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/R4/StructureDefinition/Observation",
     "element" : [{
-      "code" : "FRMLObservation",
+      "code" : "FRLMObservation",
       "target" : [{
         "code" : "Observation",
         "equivalence" : "equivalent"
@@ -267,38 +269,43 @@ Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDA
       }]
     },
     {
-      "code" : "FRLMObservation.derivedFrom[FRLMObservation]",
+      "code" : "FRLMObservation.derivedFrom[x]",
       "target" : [{
         "code" : "Observation.derivedFrom:Observation",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence un FRLMObservation."
       }]
     },
     {
-      "code" : "FRLMObservation.derivedFrom[FRLMLaboratoryObservation]",
+      "code" : "FRLMObservation.derivedFrom[x]",
       "target" : [{
         "code" : "Observation.derivedFrom:FRObservationLaboratoryReportResultsDocument",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence un FRLMLaboratoryObservation."
       }]
     },
     {
-      "code" : "FRLMObservation.derivedFrom[FRLMImagingStudy]",
+      "code" : "FRLMObservation.derivedFrom[x]",
       "target" : [{
         "code" : "Observation.derivedFrom:FRImagingStudyDocument",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où derivedFrom[x] référence un FRLMImagingStudy."
       }]
     },
     {
-      "code" : "FRLMObservation.hasMember[FRLMLaboratoryObservation]",
+      "code" : "FRLMObservation.hasMember[x]",
       "target" : [{
         "code" : "Observation.hasMember:FRObservationLaboratoryReportResultsDocument",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où hasMember[x] référence un FRLMLaboratoryObservation."
       }]
     },
     {
-      "code" : "FRLMObservation.hasMember[FRLMObservation]",
+      "code" : "FRLMObservation.hasMember[x]",
       "target" : [{
         "code" : "Observation.hasMember:Observation",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Cas où hasMember[x] référence un FRLMObservation."
       }]
     }]
   }]

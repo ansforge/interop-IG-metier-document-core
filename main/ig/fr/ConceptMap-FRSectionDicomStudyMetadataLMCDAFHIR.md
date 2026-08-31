@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
   "id" : "FRSectionDicomStudyMetadataLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionDicomStudyMetadataLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionDicomStudyMetadataLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Catalogue des objets d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dicom-study-metadata",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-object-catalog",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMDicomStudyMetadata",
       "target" : [{
-        "code" : "FRCDADICOMObjectCatalog",
+        "code" : "Section",
+        "display" : "FRCDADICOMObjectCatalog",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMObjectCatalog.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMObjectCatalog.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.description",
       "target" : [{
-        "code" : "FRCDADICOMObjectCatalog.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
-        "code" : "FRCDADICOMObjectCatalog.entry:FRCDADICOMExamenImagerie",
+        "code" : "Section.entry",
+        "display" : "FRCDADICOMExamenImagerie",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dicom-study-metadata",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMDicomStudyMetadata",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionImagingStudy",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDicomStudyMetadata.entry.imagingStudy",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.entry:FRImagingStudyDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRImagingStudyDocument",
         "equivalence" : "equivalent"
       }]
     }]

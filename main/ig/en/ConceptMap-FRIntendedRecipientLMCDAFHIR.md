@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRIntendedRecipientLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRIntendedRecipientLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRIntendedRecipientLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Destinataire prévu\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,60 +40,61 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-information-recipient",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMIntendedRecipient",
       "target" : [{
-        "code" : "informationRecipient",
+        "code" : "InformationRecipient",
+        "display" : "informationRecipient",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:healthProfessional",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional",
       "target" : [{
-        "code" : "informationRecipient.intendedRecipient",
+        "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
         "comment" : "Le destinataire professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:organisation",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation",
       "target" : [{
-        "code" : "informationRecipient.intendedRecipient",
+        "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
         "comment" : "Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:patient",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient",
       "target" : [{
-        "code" : "informationRecipient.intendedRecipient",
+        "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
         "comment" : "Le destinataire patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:relatedPerson",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson",
       "target" : [{
-        "code" : "informationRecipient.intendedRecipient",
+        "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
         "comment" : "Le destinataire personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:device",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice",
       "target" : [{
-        "code" : "informationRecipient.intendedRecipient",
+        "code" : "InformationRecipient.intendedRecipient",
         "equivalence" : "equivalent",
         "comment" : "Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension",
     "targetVersion" : "1.1.0",
@@ -104,7 +106,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:healthProfessional",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -112,7 +114,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:organisation",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -120,7 +122,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:patient",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -128,7 +130,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:relatedPerson",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
@@ -136,7 +138,7 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMIntendedRecipient.intendedRecipient:device",
+      "code" : "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
   "id" : "FRSectionReasonForReferralLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionReasonForReferralLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionReasonForReferralLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Raison de la recommandation\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,97 +37,101 @@ Mapping des éléments du modèle métier FRLMReasonForReferral vers la section 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-reason-for-referral",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMReasonForReferral",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-raison-de-la-recommandation",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMReasonForReferral",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation",
+        "code" : "Section",
+        "display" : "FRCDARaisonDeLaRecommandation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.codeSection",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.titleSection",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.description",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation.entry:FRCDASimpleObservation",
+        "code" : "Section.entry:frSimpleObservation.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
-        "code" : "FRCDARaisonDeLaRecommandation.entry:FRCDAProbleme",
+        "code" : "Section.entry:frProbleme.observation",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-reason-for-referral",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMReasonForReferral",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMReasonForReferral",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionReasonForReferral",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.observation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral.entry:Observation",
+        "code" : "Composition.section.entry",
+        "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMReasonForReferral.entry.problemes",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionReasonForReferral.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     }]

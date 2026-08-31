@@ -4,14 +4,15 @@
   "language" : "fr",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FROrderLMCDAFHIR</b></p><a name=\"FROrderLMCDAFHIR\"> </a><a name=\"hcFROrderLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-fr-lm-order.html\">Logical model - FR LM Order</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-inFulfillment-of.html\">CDA - inFulfillmentOf</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td colspan=\"3\">FRLMOrder</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">inFulfillmentOf</td><td/></tr><tr><td colspan=\"3\">FRLMOrder.orderId</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">inFulfillmentOf.order.id</td><td/></tr><tr><td colspan=\"3\">FRLMOrder.accessionNumber</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">inFulfillmentOf.order.ps3-20:accessionNumber</td><td/></tr><tr><td colspan=\"3\">FRLMOrder.orderDateAndTime</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter sa date.</td></tr><tr><td colspan=\"3\">FRLMOrder.orderPlacer</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur.</td></tr><tr><td colspan=\"3\">FRLMOrder.orderReason</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-fr-lm-order.html\">Logical model - FR LM Order</a> to <a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td colspan=\"3\">FRLMOrder</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest\">ServiceRequest</a></td><td>0..*</td><td>todo</td><td>Référencé depuis Composition.extension:basedOn (event-basedOn.value[x]).</td></tr><tr><td colspan=\"3\">FRLMOrder.orderId</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.identifier\">ServiceRequest.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan=\"3\">FRLMOrder.accessionNumber</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.identifier\">ServiceRequest.identifier</a></td><td>0..*</td><td>todo</td><td>Autre occurrence de ServiceRequest.identifier.</td></tr><tr><td colspan=\"3\">FRLMOrder.orderDateAndTime</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.authoredOn\">ServiceRequest.authoredOn</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td colspan=\"3\">FRLMOrder.orderPlacer</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.requester\">ServiceRequest.requester</a></td><td>0..1</td><td>todo</td><td>ServiceRequest.requester.resolve().ofType(PractitionerRole, Organization ou Patient).</td></tr><tr><td colspan=\"3\">FRLMOrder.orderReason</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.reasonCode\">ServiceRequest.reasonCode</a></td><td>0..*</td><td>todo</td><td>orderReason peut porter un CodeableConcept simple (porté par ServiceRequest.reasonCode) ou une référence FRLMCondition/FRLMObservation (portée alors par ServiceRequest.reasonReference).</td></tr></table></div>"
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FROrderLMCDAFHIR</b></p><a name=\"FROrderLMCDAFHIR\"> </a><a name=\"hcFROrderLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMOrder.html\">Logical model - FR LM Order</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-inFulfillment-of.html\">CDA - inFulfillmentOf</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder\">FRLMOrder</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-inFulfillment-of.html#s-InFulfillmentOf\">InFulfillmentOf</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderDateAndTime\">FRLMOrder.orderDateAndTime</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter sa date.</td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderPlacer[x]\">FRLMOrder.orderPlacer[x]</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur.</td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderReason[x]\">FRLMOrder.orderReason[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMOrder.html\">Logical model - FR LM Order</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-order.html\">CDA - order</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderId\">FRLMOrder.orderId</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-order.html#s-Order.id\">Order.id</a></td><td>1..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.accessionNumber\">FRLMOrder.accessionNumber</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié distinct pour l'accession number dans fr-cda-order (ne porte que Order.id).</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <a href=\"StructureDefinition-FRLMOrder.html\">Logical model - FR LM Order</a> to <a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder\">FRLMOrder</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest\">ServiceRequest</a></td><td>0..*</td><td>todo</td><td>Référencé depuis Composition.extension:basedOn (event-basedOn.value[x]).</td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderId\">FRLMOrder.orderId</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.identifier\">ServiceRequest.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.accessionNumber\">FRLMOrder.accessionNumber</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.identifier\">ServiceRequest.identifier</a></td><td>0..*</td><td>todo</td><td>Autre occurrence de ServiceRequest.identifier.</td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderDateAndTime\">FRLMOrder.orderDateAndTime</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.authoredOn\">ServiceRequest.authoredOn</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderPlacer[x]\">FRLMOrder.orderPlacer[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.requester\">ServiceRequest.requester</a></td><td>0..1</td><td>todo</td><td>ServiceRequest.requester.resolve().ofType(PractitionerRole, Organization ou Patient).</td></tr><tr><td><a href=\"StructureDefinition-FRLMOrder.html#s-FRLMOrder.orderReason[x]\">FRLMOrder.orderReason[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html#s-ServiceRequest.reasonCode\">ServiceRequest.reasonCode</a></td><td>0..*</td><td>todo</td><td>orderReason peut porter un CodeableConcept simple (porté par ServiceRequest.reasonCode) ou une référence FRLMCondition/FRLMObservation (portée alors par ServiceRequest.reasonReference).</td></tr></table></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrderLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FROrderLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -29,28 +30,15 @@
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-inFulfillment-of",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrder",
       "target" : [{
-        "code" : "inFulfillmentOf",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMOrder.orderId",
-      "target" : [{
-        "code" : "inFulfillmentOf.order.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMOrder.accessionNumber",
-      "target" : [{
-        "code" : "inFulfillmentOf.order.ps3-20:accessionNumber",
+        "code" : "InFulfillmentOf",
+        "display" : "inFulfillmentOf",
         "equivalence" : "equivalent"
       }]
     },
@@ -62,14 +50,14 @@
       }]
     },
     {
-      "code" : "FRLMOrder.orderPlacer",
+      "code" : "FRLMOrder.orderPlacer[x]",
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur."
       }]
     },
     {
-      "code" : "FRLMOrder.orderReason",
+      "code" : "FRLMOrder.orderReason[x]",
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif."
@@ -77,7 +65,27 @@
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-order",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMOrder.orderId",
+      "target" : [{
+        "code" : "Order.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMOrder.accessionNumber",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié distinct pour l'accession number dans fr-cda-order (ne porte que Order.id)."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
     "targetVersion" : "4.0.1",
@@ -112,7 +120,7 @@
       }]
     },
     {
-      "code" : "FRLMOrder.orderPlacer",
+      "code" : "FRLMOrder.orderPlacer[x]",
       "target" : [{
         "code" : "ServiceRequest.requester",
         "equivalence" : "equivalent",
@@ -120,7 +128,7 @@
       }]
     },
     {
-      "code" : "FRLMOrder.orderReason",
+      "code" : "FRLMOrder.orderReason[x]",
       "target" : [{
         "code" : "ServiceRequest.reasonCode",
         "equivalence" : "relatedto",

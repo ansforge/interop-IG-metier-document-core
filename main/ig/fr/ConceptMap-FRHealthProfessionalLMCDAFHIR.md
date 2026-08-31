@@ -20,9 +20,11 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   "id" : "FRHealthProfessionalLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRHealthProfessionalLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRHealthProfessionalLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -40,14 +42,15 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMHealthProfessional",
       "target" : [{
-        "code" : "assignedEntity",
+        "code" : "AssignedEntity",
+        "display" : "assignedEntity",
         "equivalence" : "equivalent",
         "comment" : "assignedEntity et assignedAuthor (porté par ClinicalDocument.author) partagent une structure CDA équivalente pour représenter un professionnel de santé."
       }]
@@ -55,70 +58,42 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     {
       "code" : "FRLMHealthProfessional.identifier",
       "target" : [{
-        "code" : "assignedEntity.id",
+        "code" : "AssignedEntity.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHealthProfessional.name",
       "target" : [{
-        "code" : "assignedEntity.assignedPerson.name",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.family",
-      "target" : [{
-        "code" : "assignedEntity.assignedPerson.name.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.given",
-      "target" : [{
-        "code" : "assignedEntity.assignedPerson.name.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.prefix",
-      "target" : [{
-        "code" : "assignedEntity.assignedPerson.name.prefix",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.suffix",
-      "target" : [{
-        "code" : "assignedEntity.assignedPerson.name.suffix",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "AssignedEntity.assignedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupes dédiés ci-dessous."
       }]
     },
     {
       "code" : "FRLMHealthProfessional.address",
       "target" : [{
-        "code" : "assignedEntity.addr",
+        "code" : "AssignedEntity.addr",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHealthProfessional.telecom",
       "target" : [{
-        "code" : "assignedEntity.telecom",
+        "code" : "AssignedEntity.telecom",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHealthProfessional.professionalRole.role",
       "target" : [{
-        "code" : "assignedEntity.code",
+        "code" : "AssignedEntity.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMHealthProfessional.professionalRole.organisation",
       "target" : [{
-        "code" : "assignedEntity.representedOrganization",
+        "code" : "AssignedEntity.representedOrganization",
         "equivalence" : "equivalent",
         "comment" : "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure d'exercice."
       }]
@@ -132,7 +107,68 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHealthProfessional.name",
+      "target" : [{
+        "code" : "Person.name",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.use",
+      "target" : [{
+        "code" : "PN.use",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "PN.item.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "PN.item.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "PN.item.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "PN.item.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.period",
+      "target" : [{
+        "code" : "PN.validTime",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitionerRole-document",
     "targetVersion" : "0.1.0",
@@ -168,7 +204,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document",
     "targetVersion" : "0.1.0",
@@ -195,34 +231,6 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
       }]
     },
     {
-      "code" : "FRLMHealthProfessional.name.family",
-      "target" : [{
-        "code" : "Practitioner.name.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.given",
-      "target" : [{
-        "code" : "Practitioner.name.given",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.prefix",
-      "target" : [{
-        "code" : "Practitioner.name.prefix",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHealthProfessional.name.suffix",
-      "target" : [{
-        "code" : "Practitioner.name.suffix",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
       "code" : "FRLMHealthProfessional.address",
       "target" : [{
         "code" : "Practitioner.address",
@@ -233,6 +241,40 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
       "code" : "FRLMHealthProfessional.telecom",
       "target" : [{
         "code" : "Practitioner.telecom",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "Practitioner.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "Practitioner.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "Practitioner.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "Practitioner.name.suffix",
         "equivalence" : "equivalent"
       }]
     }]

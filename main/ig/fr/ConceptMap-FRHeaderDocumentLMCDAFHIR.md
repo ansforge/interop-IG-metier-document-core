@@ -23,7 +23,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -41,7 +41,7 @@ Ce ConceptMap présente trois groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document",
     "targetVersion" : "0.1.0",
@@ -53,19 +53,19 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier:document",
+      "code" : "FRLMHeaderDocument.identifier",
       "target" : [{
         "code" : "ClinicalDocument.id",
         "equivalence" : "equivalent",
-        "comment" : "Identifiant unique du document."
+        "comment" : "Cas où identifier référence l'identifiant unique du document."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier:versionSet",
+      "code" : "FRLMHeaderDocument.identifier",
       "target" : [{
         "code" : "ClinicalDocument.setId",
         "equivalence" : "equivalent",
-        "comment" : "Identifiant du lot de versions du document."
+        "comment" : "Cas où identifier référence l'identifiant du lot de versions du document."
       }]
     },
     {
@@ -134,7 +134,7 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
         "code" : "ClinicalDocument.author",
         "equivalence" : "equivalent",
@@ -223,21 +223,21 @@ Ce ConceptMap présente trois groupes de mapping :
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-bundle-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMHeaderDocument.identifier:document",
+      "code" : "FRLMHeaderDocument.identifier",
       "target" : [{
         "code" : "Bundle.identifier",
         "equivalence" : "equivalent",
-        "comment" : "Identifiant unique du document."
+        "comment" : "Cas où identifier référence l'identifiant unique du document."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
@@ -277,11 +277,11 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.identifier:versionSet",
+      "code" : "FRLMHeaderDocument.identifier",
       "target" : [{
         "code" : "Composition.identifier",
         "equivalence" : "equivalent",
-        "comment" : "Identifiant du lot de versions du document."
+        "comment" : "Cas où identifier référence l'identifiant du lot de versions du document."
       }]
     },
     {
@@ -308,7 +308,7 @@ Ce ConceptMap présente trois groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
         "code" : "Composition.author",
         "equivalence" : "equivalent",

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
   "id" : "FRSectionProblemsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionProblemsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionProblemsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Problèmes actifs\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMProblems vers la section CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-problems",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-problemes-actifs",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProblems",
       "target" : [{
-        "code" : "FRCDAProblemesActifs",
+        "code" : "Section",
+        "display" : "FRCDAProblemesActifs",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.codeSection",
       "target" : [{
-        "code" : "FRCDAProblemesActifs.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.titleSection",
       "target" : [{
-        "code" : "FRCDAProblemesActifs.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.description",
       "target" : [{
-        "code" : "FRCDAProblemesActifs.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProblems.entry.problem:FRLMCondition",
+      "code" : "FRLMProblems.entry.problem",
       "target" : [{
-        "code" : "FRCDAProblemesActifs.entry:FRCDAListeDesProblemes",
+        "code" : "Section.entry",
+        "display" : "FRCDAProbleme",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-problems",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProblems",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProblems",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionProblems",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProblems.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProblems.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProblems.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProblems.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProblems.entry.problem:FRLMCondition",
+      "code" : "FRLMProblems.entry.problem",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProblems.entry:FRConditionDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     }]

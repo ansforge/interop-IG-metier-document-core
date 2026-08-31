@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
   "id" : "FRSpecimenLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSpecimenLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSpecimenLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prélèvement\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,49 +37,50 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prelevement",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSpecimen",
       "target" : [{
-        "code" : "FRCDAPrelevement",
+        "code" : "Procedure",
+        "display" : "FRCDAPrelevement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.identifier",
       "target" : [{
-        "code" : "FRCDAPrelevement.id",
+        "code" : "Procedure.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSpecimen.header.status",
+      "code" : "FRLMSpecimen.status",
       "target" : [{
-        "code" : "FRCDAPrelevement.statusCode",
+        "code" : "Procedure.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.type",
       "target" : [{
-        "code" : "FRCDAPrelevement.code",
+        "code" : "Procedure.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
-        "code" : "FRCDAPrelevement.participant",
+        "code" : "Procedure.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.parentSpecimen",
       "target" : [{
-        "code" : "FRCDAPrelevement.participant:echantillonPreleve",
+        "code" : "Procedure.participant:EchantillonPreleve",
         "equivalence" : "equivalent"
       }]
     },
@@ -96,14 +99,14 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.collection.performer[x]",
       "target" : [{
-        "code" : "FRCDAPrelevement.performer",
+        "code" : "Procedure.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.collected[x]",
       "target" : [{
-        "code" : "FRCDAPrelevement.effectiveTime",
+        "code" : "Procedure.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -122,28 +125,28 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.collection.device",
       "target" : [{
-        "code" : "FRCDAPrelevement.participant:dispositifUtilise",
+        "code" : "Procedure.participant:DispositifUtilise",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.additive[x]",
       "target" : [{
-        "code" : "FRCDAPrelevement.participant:produitUtilise",
+        "code" : "Procedure.participant:ProduitUtilise",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.bodySite",
       "target" : [{
-        "code" : "FRCDAPrelevement.targetSiteCode",
+        "code" : "Procedure.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.receivedDate",
       "target" : [{
-        "code" : "FRCDAPrelevement.entryRelationship.act.effectiveTime",
+        "code" : "Procedure.entryRelationship.act.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -168,76 +171,80 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.note",
       "target" : [{
-        "code" : "FRCDAPrelevement.text",
+        "code" : "Procedure.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-specimen-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSpecimen",
       "target" : [{
-        "code" : "FRSpecimenDocument",
+        "code" : "Specimen",
+        "display" : "FRSpecimenDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.identifier",
       "target" : [{
-        "code" : "FRSpecimenDocument.identifier",
+        "code" : "Specimen.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSpecimen.header.status",
+      "code" : "FRLMSpecimen.status",
       "target" : [{
-        "code" : "FRSpecimenDocument.status",
+        "code" : "Specimen.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.type",
       "target" : [{
-        "code" : "FRSpecimenDocument.type",
+        "code" : "Specimen.type",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Patient",
+      "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.subject",
-        "equivalence" : "equivalent"
+        "code" : "Specimen.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où specimenSource[x] référence un FRLMPatient."
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Location",
+      "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.subject",
-        "equivalence" : "equivalent"
+        "code" : "Specimen.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où specimenSource[x] référence un FRLMLocation."
       }]
     },
     {
-      "code" : "FRLMSpecimen.specimenSource:Device",
+      "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.subject",
-        "equivalence" : "equivalent"
+        "code" : "Specimen.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où specimenSource[x] référence un FRLMDevice."
       }]
     },
     {
       "code" : "FRLMSpecimen.parentSpecimen",
       "target" : [{
-        "code" : "FRSpecimenDocument.parent",
+        "code" : "Specimen.parent",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.request",
       "target" : [{
-        "code" : "FRSpecimenDocument.request",
+        "code" : "Specimen.request",
         "equivalence" : "equivalent"
       }]
     },
@@ -250,28 +257,28 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.collection.performer[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.collector",
+        "code" : "Specimen.collection.collector",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.collected[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.collected[x]",
+        "code" : "Specimen.collection.collected[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.quantity",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.quantity",
+        "code" : "Specimen.collection.quantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.method",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.method",
+        "code" : "Specimen.collection.method",
         "equivalence" : "equivalent"
       }]
     },
@@ -284,49 +291,49 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
     {
       "code" : "FRLMSpecimen.collection.bodySite",
       "target" : [{
-        "code" : "FRSpecimenDocument.collection.bodySite",
+        "code" : "Specimen.collection.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.receivedDate",
       "target" : [{
-        "code" : "FRSpecimenDocument.receivedTime",
+        "code" : "Specimen.receivedTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.collection.additive[x]",
       "target" : [{
-        "code" : "FRSpecimenDocument.processing.additive",
+        "code" : "Specimen.processing.additive",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.container.specimenQuantity",
       "target" : [{
-        "code" : "FRSpecimenDocument.container.specimenQuantity",
+        "code" : "Specimen.container.specimenQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.container.containerDevice",
       "target" : [{
-        "code" : "FRSpecimenDocument.container.extension:device",
+        "code" : "Specimen.container.type.extension:device",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.condition",
       "target" : [{
-        "code" : "FRSpecimenDocument.condition",
+        "code" : "Specimen.condition",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSpecimen.note",
       "target" : [{
-        "code" : "FRSpecimenDocument.note",
+        "code" : "Specimen.note",
         "equivalence" : "equivalent"
       }]
     }]

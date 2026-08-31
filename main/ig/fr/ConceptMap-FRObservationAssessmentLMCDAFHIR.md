@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
   "id" : "FRObservationAssessmentLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationAssessmentLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationAssessmentLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Assessment (Evaluation)\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,42 +37,43 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-assessment",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-evaluation",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationAssessment",
       "target" : [{
-        "code" : "FRCDAEvaluation",
+        "code" : "Observation",
+        "display" : "FRCDAEvaluation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.header.identifier",
       "target" : [{
-        "code" : "FRCDAEvaluation.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.header.status",
       "target" : [{
-        "code" : "FRCDAEvaluation.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.observationDate[x]",
       "target" : [{
-        "code" : "FRCDAEvaluation.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.type",
       "target" : [{
-        "code" : "FRCDAEvaluation.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
@@ -83,117 +86,119 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
     {
       "code" : "FRLMObservationAssessment.bodySite",
       "target" : [{
-        "code" : "FRLMObservationAssessment.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.result",
       "target" : [{
-        "code" : "FRCDAEvaluation.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.interpretation",
       "target" : [{
-        "code" : "FRCDAEvaluation.interpretationCode",
+        "code" : "Observation.interpretationCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.note",
       "target" : [{
-        "code" : "FRCDAEvaluation.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.component",
       "target" : [{
-        "code" : "FRCDAEvaluation.entryRelationship:frEvaluationComposant",
+        "code" : "Observation.entryRelationship:frEvaluationComposant",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-assessment",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-survey-document",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-assessment-document",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationAssessment",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument",
+        "code" : "Observation",
+        "display" : "FRObservationAssessmentDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.header.identifier",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.header.status",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.status.extension:statusReason",
+        "code" : "Observation.status.extension:statusReason",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.effectiveDateTime",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.type",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.method",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.bodySite",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.bodySite",
+        "code" : "Observation.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.result",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.value[x]",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.interpretation",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.note",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationAssessment.component",
       "target" : [{
-        "code" : "FRObservationAssessmentDocument.component",
+        "code" : "Observation.component",
         "equivalence" : "equivalent"
       }]
     }]

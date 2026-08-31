@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
   "id" : "FRImmunisationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImmunisationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImmunisationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccination\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,112 +37,116 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccination",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisation",
       "target" : [{
-        "code" : "FRCDAVaccination",
+        "code" : "SubstanceAdministration",
+        "display" : "FRCDAVaccination",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImmunisation.identifiant",
+      "code" : "FRLMImmunisation.header.identifier",
       "target" : [{
-        "code" : "FRCDAVaccination.id",
+        "code" : "SubstanceAdministration.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.header.status",
       "target" : [{
-        "code" : "FRCDAVaccination.statusCode",
+        "code" : "SubstanceAdministration.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation",
       "target" : [{
-        "code" : "FRCDAVaccination.effectiveTime",
+        "code" : "SubstanceAdministration.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.startDate",
       "target" : [{
-        "code" : "FRCDAVaccination.effectiveTime.low",
-        "equivalence" : "equivalent"
+        "code" : "SubstanceAdministration.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime n'est pas décomposé en low/high dans ce profil ; startDate correspond à la borne basse de l'intervalle."
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.endDate",
       "target" : [{
-        "code" : "FRCDAVaccination.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "SubstanceAdministration.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "effectiveTime n'est pas décomposé en low/high dans ce profil ; endDate correspond à la borne haute de l'intervalle."
       }]
     },
     {
       "code" : "FRLMImmunisation.diseaseOrAgentTargeted",
       "target" : [{
-        "code" : "FRCDAVaccination.entryRelationship:frProbleme",
+        "code" : "SubstanceAdministration.entryRelationship:frProbleme",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.administeredProduct",
       "target" : [{
-        "code" : "FRCDAVaccination.consumable:FRCDAProduitDeSante",
+        "code" : "SubstanceAdministration.consumable",
+        "display" : "FRCDAProduitDeSante",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.route",
       "target" : [{
-        "code" : "FRCDAVaccination.routeCode",
+        "code" : "SubstanceAdministration.routeCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.site",
       "target" : [{
-        "code" : "FRCDAVaccination.approachSiteCode",
+        "code" : "SubstanceAdministration.approachSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.doseQuantity",
       "target" : [{
-        "code" : "FRCDAVaccination.doseQuantity",
+        "code" : "SubstanceAdministration.doseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.doseNumber",
       "target" : [{
-        "code" : "FRCDAVaccination.entryRelationship:frRangDeLaVaccination",
+        "code" : "SubstanceAdministration.entryRelationship:frRangDeLaVaccination",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.note",
       "target" : [{
-        "code" : "FRCDAVaccination.entryRelationship:frCommentaireER",
+        "code" : "SubstanceAdministration.entryRelationship:frCommentaireER",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.prescription",
       "target" : [{
-        "code" : "FRCDAVaccination.entryRelationship:frPrescription",
+        "code" : "SubstanceAdministration.entryRelationship:frPrescription",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.reaction",
       "target" : [{
-        "code" : "FRCDAVaccination.entryRelationship:frProbleme",
+        "code" : "SubstanceAdministration.entryRelationship:frProbleme",
         "equivalence" : "equivalent"
       }]
     },
@@ -153,119 +159,121 @@ Mapping des éléments du modèle métier FRLMImmunisation vers le profil CDA FR
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-immunization-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisation",
       "target" : [{
-        "code" : "FRImmunizationDocument",
+        "code" : "Immunization",
+        "display" : "FRImmunizationDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImmunisation.identifiant",
+      "code" : "FRLMImmunisation.header.identifier",
       "target" : [{
-        "code" : "FRImmunizationDocument.identifier",
+        "code" : "Immunization.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.header.status",
       "target" : [{
-        "code" : "FRImmunizationDocument.status",
+        "code" : "Immunization.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation",
       "target" : [{
-        "code" : "FRImmunizationDocument.occurrencePeriod",
-        "equivalence" : "equivalent"
+        "code" : "Immunization.occurrence[x]",
+        "equivalence" : "wider",
+        "comment" : "occurrence[x] est restreint à dateTime dans ce profil (pas de Period)."
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.startDate",
       "target" : [{
-        "code" : "FRImmunizationDocument.occurrencePeriod.start",
+        "code" : "Immunization.occurrence[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.periodOfImmunisation.endDate",
       "target" : [{
-        "code" : "FRImmunizationDocument.occurrencePeriod.end",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "occurrence[x] est restreint à dateTime dans ce profil ; aucune date de fin ne peut être portée."
       }]
     },
     {
       "code" : "FRLMImmunisation.diseaseOrAgentTargeted",
       "target" : [{
-        "code" : "FRImmunizationDocument.protocolApplied.targetDisease",
+        "code" : "Immunization.protocolApplied.targetDisease",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.administeredProduct",
       "target" : [{
-        "code" : "FRImmunizationDocument.vaccineCode",
+        "code" : "Immunization.vaccineCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.route",
       "target" : [{
-        "code" : "FRImmunizationDocument.route",
+        "code" : "Immunization.route",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.site",
       "target" : [{
-        "code" : "FRImmunizationDocument.site",
+        "code" : "Immunization.site",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.doseQuantity",
       "target" : [{
-        "code" : "FRImmunizationDocument.doseQuantity",
+        "code" : "Immunization.doseQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.doseNumber",
       "target" : [{
-        "code" : "FRImmunizationDocument.protocolApplied.doseNumber",
+        "code" : "Immunization.protocolApplied.doseNumber[x]:doseNumberPositiveInt",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.note",
       "target" : [{
-        "code" : "FRImmunizationDocument.note",
+        "code" : "Immunization.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.prescription",
       "target" : [{
-        "code" : "FRImmunizationDocument.basedOn",
+        "code" : "Immunization.extension:basedOnRequestR5",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.reaction",
       "target" : [{
-        "code" : "FRImmunizationDocument.reaction",
+        "code" : "Immunization.reaction",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisation.reasonCode",
       "target" : [{
-        "code" : "FRImmunizationDocument.reasonCode",
+        "code" : "Immunization.reasonCode",
         "equivalence" : "equivalent"
       }]
     }]

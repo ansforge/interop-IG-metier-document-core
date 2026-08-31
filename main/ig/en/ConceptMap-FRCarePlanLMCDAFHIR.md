@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
   "id" : "FRCarePlanLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCarePlanLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRCarePlanLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Plan de soins\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,14 +37,15 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plan",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlan",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-reference-item-plan-traitement",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMCarePlan",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement",
+        "code" : "SubstanceAdministration",
+        "display" : "FRCDAReferenceItemPlanTraitement",
         "equivalence" : "narrower",
         "comment" : "Le profil CDA cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil CDA cible."
       }]
@@ -50,14 +53,14 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     {
       "code" : "FRLMCarePlan.header.identifier",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.id",
+        "code" : "SubstanceAdministration.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlan.header.status",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.statusCode",
+        "code" : "SubstanceAdministration.statusCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -78,21 +81,22 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     {
       "code" : "FRLMCarePlan.activity",
       "target" : [{
-        "code" : "FRCDAReferenceItemPlanTraitement.entryRelationship:frItemPlanTraitement",
+        "code" : "SubstanceAdministration.entryRelationship",
         "equivalence" : "relatedto",
         "comment" : "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plan",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlan",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-care-plan-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMCarePlan",
       "target" : [{
-        "code" : "FRCarePlanDocument",
+        "code" : "CarePlan",
+        "display" : "FRCarePlanDocument",
         "equivalence" : "narrower",
         "comment" : "Le profil FHIR cible est un équivalent fonctionnel du modèle métier source, mais pas un équivalent exact : certains éléments du modèle métier n'ont pas de correspondance explicite dans le profil FHIR cible."
       }]
@@ -100,35 +104,35 @@ Mapping des éléments du modèle métier FRLMCarePlan vers le profil CDA FRCDAR
     {
       "code" : "FRLMCarePlan.header.identifier",
       "target" : [{
-        "code" : "FRCarePlanDocument.identifier",
+        "code" : "CarePlan.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlan.header.status",
       "target" : [{
-        "code" : "FRCarePlanDocument.status",
+        "code" : "CarePlan.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlan.addresses",
       "target" : [{
-        "code" : "FRCarePlanDocument.addresses",
+        "code" : "CarePlan.addresses",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlan.goal",
       "target" : [{
-        "code" : "FRCarePlanDocument.goal",
+        "code" : "CarePlan.goal",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMCarePlan.activity",
       "target" : [{
-        "code" : "FRCarePlanDocument.activity.reference:FRMedicationRequestDocument",
+        "code" : "CarePlan.activity.reference",
         "equivalence" : "narrower",
         "comment" : "Le modèle métier porte des références d'actions génériques; la cible FHIR contraint activity.reference à FRMedicationRequestDocument."
       }]

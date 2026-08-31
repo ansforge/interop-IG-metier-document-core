@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMAttachment vers le profil CDA FRCD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Document Referencé\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,42 +35,43 @@ Mapping des éléments du modèle métier FRLMAttachment vers le profil CDA FRCD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachment",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-document-attache",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAttachment",
       "target" : [{
-        "code" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia",
+        "code" : "Organizer.component:frObservationMedia.observationMedia",
+        "display" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.contentType",
       "target" : [{
-        "code" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia.value.mediaType",
+        "code" : "Organizer.component:frObservationMedia.observationMedia.value.mediaType",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.language",
       "target" : [{
-        "code" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia.languageCode",
+        "code" : "Organizer.component:frObservationMedia.observationMedia.languageCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.data",
       "target" : [{
-        "code" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia.value",
+        "code" : "Organizer.component:frObservationMedia.observationMedia.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.url",
       "target" : [{
-        "code" : "FRCDADocumentAttache.component:frObservationMedia.observationMedia.value.reference",
+        "code" : "Organizer.component:frObservationMedia.observationMedia.value.reference",
         "equivalence" : "equivalent"
       }]
     },
@@ -90,56 +91,57 @@ Mapping des éléments du modèle métier FRLMAttachment vers le profil CDA FRCD
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachment",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-document-reference-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAttachment",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment",
+        "code" : "DocumentReference.content.attachment",
+        "display" : "FRDocumentReferenceDocument.content.attachment",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.contentType",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.contentType",
+        "code" : "DocumentReference.content.attachment.contentType",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.language",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.language",
+        "code" : "DocumentReference.content.attachment.language",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.data",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.data",
+        "code" : "DocumentReference.content.attachment.data",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.url",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.url",
+        "code" : "DocumentReference.content.attachment.url",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.size",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.size",
+        "code" : "DocumentReference.content.attachment.size",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAttachment.title",
       "target" : [{
-        "code" : "FRDocumentReferenceDocument.content.attachment.title",
+        "code" : "DocumentReference.content.attachment.title",
         "equivalence" : "equivalent"
       }]
     }]

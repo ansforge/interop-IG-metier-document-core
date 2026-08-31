@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA 
   "id" : "FRSectionImmunisationsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionImmunisationsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionImmunisationsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Vaccinations\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMImmunisations vers la section CDA 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisations",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-vaccinations",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisations",
       "target" : [{
-        "code" : "FRCDAVaccinations",
+        "code" : "Section",
+        "display" : "FRCDAVaccinations",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.codeSection",
       "target" : [{
-        "code" : "FRCDAVaccinations.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.titleSection",
       "target" : [{
-        "code" : "FRCDAVaccinations.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.description",
       "target" : [{
-        "code" : "FRCDAVaccinations.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.entry.immunisation",
       "target" : [{
-        "code" : "FRCDAVaccinations.entry.FRCDAVaccination",
+        "code" : "Section.entry",
+        "display" : "FRCDAVaccination",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-immunisations",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisations",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImmunisations",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImmunizations",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionImmunizations",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImmunizations.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImmunizations.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImmunizations.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImmunisations.entry.immunisation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImmunizations.entry:FRImmunizationDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRImmunizationDocument",
         "equivalence" : "equivalent"
       }]
     }]

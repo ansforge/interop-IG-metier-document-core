@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Effet Indésirable\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,42 +35,43 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-adverse-drug-reaction",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effet-indesirable",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAdverseDrugReaction",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable",
+        "code" : "Observation",
+        "display" : "FRCDAEffetIndesirable",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.header.identifier",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.header.status",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.adverseDrugReactionType",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.header.date",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -84,83 +85,84 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
     {
       "code" : "FRLMAdverseDrugReaction.value",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.medicationAdministration",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.entryRelationship:frTraitement",
+        "code" : "Observation.entryRelationship:frTraitement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.reaction",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.entryRelationship:frProbleme",
+        "code" : "Observation.entryRelationship:frProbleme",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.causalityAssessment",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.entryRelationship:frImputabiliteEffetIndesirable",
+        "code" : "Observation.entryRelationship:frImputabiliteEffetIndesirable",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.severity",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.entryRelationship:frGraviteEffetIndesirable",
+        "code" : "Observation.entryRelationship:frGraviteEffetIndesirable",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.outcome",
       "target" : [{
-        "code" : "FRCDAEffetIndesirable.entryRelationship:frEvolutionEffetIndesirable",
+        "code" : "Observation.entryRelationship:frEvolutionEffetIndesirable",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-adverse-drug-reaction",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-adverse-event-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAdverseDrugReaction",
       "target" : [{
-        "code" : "FRAdverseEventDocument",
+        "code" : "AdverseEvent",
+        "display" : "FRAdverseEventDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.header.identifier",
       "target" : [{
-        "code" : "FRAdverseEventDocument.identifier",
+        "code" : "AdverseEvent.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.adverseDrugReactionType",
       "target" : [{
-        "code" : "FRAdverseEventDocument.category",
+        "code" : "AdverseEvent.category",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.header.date",
       "target" : [{
-        "code" : "FRAdverseEventDocument.date",
+        "code" : "AdverseEvent.date",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.detected",
       "target" : [{
-        "code" : "FRAdverseEventDocument.detected",
+        "code" : "AdverseEvent.detected",
         "equivalence" : "equivalent"
       }]
     },
@@ -173,35 +175,35 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
     {
       "code" : "FRLMAdverseDrugReaction.medicationAdministration",
       "target" : [{
-        "code" : "FRAdverseEventDocument.suspectEntity.instance",
+        "code" : "AdverseEvent.suspectEntity.instance",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.reaction",
       "target" : [{
-        "code" : "FRAdverseEventDocument.resultingCondition",
+        "code" : "AdverseEvent.resultingCondition",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.causalityAssessment",
       "target" : [{
-        "code" : "FRAdverseEventDocument.suspectEntity.causality",
+        "code" : "AdverseEvent.suspectEntity.causality",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.severity",
       "target" : [{
-        "code" : "FRAdverseEventDocument.severity",
+        "code" : "AdverseEvent.severity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdverseDrugReaction.outcome",
       "target" : [{
-        "code" : "FRAdverseEventDocument.outcome",
+        "code" : "AdverseEvent.outcome",
         "equivalence" : "equivalent"
       }]
     }]

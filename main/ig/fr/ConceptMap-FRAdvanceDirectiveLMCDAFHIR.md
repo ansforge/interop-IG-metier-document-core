@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
   "id" : "FRAdvanceDirectiveLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdvanceDirectiveLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAdvanceDirectiveLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Directive Anticipee\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,168 +37,182 @@ Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directive",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAdvanceDirective",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee",
+        "code" : "Observation",
+        "display" : "FRCDADirectiveAnticipee",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.header.identifier",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.category",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.header.status",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.header.date",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.value",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.note",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.url",
-      "target" : [{
-        "code" : "FRCDADirectiveAnticipee.reference.externalDocument.text.reference",
-        "equivalence" : "equivalent",
-        "comment" : "Référence externe portée par externalDocument.text.reference en CDA."
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
-        "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
-      "target" : [{
-        "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.id",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.data",
-      "target" : [{
-        "code" : "FRCDADirectiveAnticipee.entryRelationship.observationMedia.value",
+        "code" : "Observation.entryRelationship.observationMedia",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directive",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAdvanceDirective",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument",
+        "code" : "Consent",
+        "display" : "FRAdvanceDirectiveDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.header.identifier",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.identifier",
+        "code" : "Consent.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.category",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.provision.code",
+        "code" : "Consent.provision.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.note",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.provision.code.text",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Consent (FHIR R4) n'a pas de champ de texte libre équivalent à un commentaire ; l'information reste portée par provision.code."
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.header.status",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.status",
+        "code" : "Consent.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.date",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.dateTime",
+        "code" : "Consent.dateTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.value",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.provision.type",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMAdvanceDirective.attachment.url",
-      "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceReference",
+        "code" : "Consent.provision.type",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirective.attachment",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceAttachment",
+        "code" : "Consent.source[x]",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMAttachment.url",
+      "target" : [{
+        "code" : "Observation.reference.externalDocument.text.reference",
+        "equivalence" : "equivalent",
+        "comment" : "Référence externe portée par externalDocument.text.reference en CDA."
+      }]
+    },
+    {
+      "code" : "FRLMAttachment.header.identifier",
+      "target" : [{
+        "code" : "Observation.entryRelationship.observationMedia.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.header.identifier",
+      "code" : "FRLMAttachment.data",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceAttachment.id",
+        "code" : "Observation.entryRelationship.observationMedia.value",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMAttachment.url",
+      "target" : [{
+        "code" : "Consent.source[x]:sourceAttachment.url",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirective.attachment.data",
+      "code" : "FRLMAttachment.header.identifier",
       "target" : [{
-        "code" : "FRAdvanceDirectiveDocument.sourceAttachment.data",
+        "code" : "Consent.source[x]:sourceAttachment.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMAttachment.data",
+      "target" : [{
+        "code" : "Consent.source[x]:sourceAttachment.data",
         "equivalence" : "equivalent"
       }]
     }]

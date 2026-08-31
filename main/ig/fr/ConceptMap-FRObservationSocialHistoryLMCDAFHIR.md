@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
   "id" : "FRObservationSocialHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationSocialHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationSocialHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Habitus Mode de vie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,97 +37,99 @@ Mapping des éléments du modèle métier FRLMObservationSocialHistory vers le p
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationSocialHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-habitus-mode-de-vie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationSocialHistory",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie",
+        "code" : "Observation",
+        "display" : "FRCDAHabitusModeDeVie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.header.status",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.observationDate[x]",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.type",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.result",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.note",
       "target" : [{
-        "code" : "FRCDAHabitusModeDeVie.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-social-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationSocialHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-social-history-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationSocialHistory",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument",
+        "code" : "Observation",
+        "display" : "FRObservationSocialHistoryDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.header.status",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.effectiveDateTime",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.type",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.result",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.valueCodeableConcept",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationSocialHistory.note",
       "target" : [{
-        "code" : "FRObservationSocialHistoryDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     }]

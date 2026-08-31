@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedicalDevicesAndImplants vers la 
   "id" : "FRSectionMedicalDevicesAndImplantsLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionMedicalDevicesAndImplantsLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionMedicalDevicesAndImplantsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispositifs médicaux\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,82 +37,87 @@ Mapping des éléments du modèle métier FRLMMedicalDevicesAndImplants vers la 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-devices-and-implants",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositifs-medicaux",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-dispositifs-medicaux",
+    "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicalDevicesAndImplants",
       "target" : [{
-        "code" : "FRCDADispositifsMedicaux",
+        "code" : "Section",
+        "display" : "FRCDADispositifsMedicaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.codeSection",
       "target" : [{
-        "code" : "FRCDADispositifsMedicaux.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.titleSection",
       "target" : [{
-        "code" : "FRCDADispositifsMedicaux.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.description",
       "target" : [{
-        "code" : "FRCDADispositifsMedicaux.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.entry.deviceUse",
       "target" : [{
-        "code" : "FRCDADispositifsMedicaux.entry:FRCDADispositifMedical",
+        "code" : "Section.entry",
+        "display" : "FRCDADispositifMedical",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medical-devices-and-implants",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedicalDevicesAndImplants",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalDevices",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionMedicalDevices",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalDevices.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalDevices.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalDevices.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedicalDevicesAndImplants.entry.deviceUse",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionMedicalDevices.entry:FRDeviceUseStatementDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRDeviceUseStatementDocument",
         "equivalence" : "equivalent"
       }]
     }]

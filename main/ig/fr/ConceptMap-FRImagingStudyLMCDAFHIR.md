@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
   "id" : "FRImagingStudyLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingStudyLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingStudyLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,43 +37,37 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-examen-imagerie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImagingStudy",
       "target" : [{
-        "code" : "FRCDADICOMExamenImagerie",
+        "code" : "Act",
+        "display" : "FRCDADICOMExamenImagerie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.header.identifier",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.id",
+        "code" : "Act.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.modality",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.methodCode",
+        "code" : "Act.code.qualifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingStudy.bodySite:FRLMBodyStructure.locationQualifier",
-      "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Act ne porte pas de champ targetSiteCode (contrairement à Procedure/Observation) ; aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour bodySite."
       }]
     },
     {
@@ -84,7 +80,7 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     {
       "code" : "FRLMImagingStudy.started",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
+        "code" : "Act.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
@@ -132,91 +128,92 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMImagingStudy",
       "target" : [{
-        "code" : "FRImagingStudyDocument",
+        "code" : "ImagingStudy",
+        "display" : "FRImagingStudyDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.header.identifier",
       "target" : [{
-        "code" : "FRImagingStudyDocument.identifier",
+        "code" : "ImagingStudy.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.modality",
       "target" : [{
-        "code" : "FRImagingStudyDocument.modality",
+        "code" : "ImagingStudy.modality",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.bodySite",
       "target" : [{
-        "code" : "FRImagingStudyDocument.bodySite",
+        "code" : "ImagingStudy.series.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.encounter",
       "target" : [{
-        "code" : "FRImagingStudyDocument.encounter",
+        "code" : "ImagingStudy.encounter",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.started",
       "target" : [{
-        "code" : "FRImagingStudyDocument.started",
+        "code" : "ImagingStudy.started",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.basedOn",
       "target" : [{
-        "code" : "FRImagingStudyDocument.basedOn",
+        "code" : "ImagingStudy.basedOn",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.numberOfSeries",
       "target" : [{
-        "code" : "FRImagingStudyDocument.numberOfSeries",
+        "code" : "ImagingStudy.numberOfSeries",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.numberOfInstances",
       "target" : [{
-        "code" : "FRImagingStudyDocument.numberOfInstances",
+        "code" : "ImagingStudy.numberOfInstances",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.studyCustodian",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.performer.actor:Organization",
+        "code" : "ImagingStudy.series.performer.actor",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.studyEndpoint",
       "target" : [{
-        "code" : "FRImagingStudyDocument.endpoint",
+        "code" : "ImagingStudy.endpoint",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMImagingStudy.series",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series",
+        "code" : "ImagingStudy.series",
         "equivalence" : "equivalent"
       }]
     }]

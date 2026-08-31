@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la secti
   "id" : "FRSectionFamilyMedicalHistoryLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionFamilyMedicalHistoryLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionFamilyMedicalHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Antécédents familiaux\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,87 @@ Mapping des éléments du modèle métier FRLMFamilyMedicalHistory vers la secti
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-family-medical-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedents-familiaux",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-antecedents-familiaux",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMFamilyMedicalHistory",
       "target" : [{
-        "code" : "FRCDAAntecedentsFamiliaux",
+        "code" : "Section",
+        "display" : "FRCDASectionAntecedentsFamiliaux",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.codeSection",
       "target" : [{
-        "code" : "FRCDAAntecedentsFamiliaux.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.titleSection",
       "target" : [{
-        "code" : "FRCDAAntecedentsFamiliaux.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.description",
       "target" : [{
-        "code" : "FRCDAAntecedentsFamiliaux.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.entry.familyMemberHistory",
       "target" : [{
-        "code" : "FRCDAAntecedentsFamiliaux.entry:FRCDAAntecedentsFamiliaux",
+        "code" : "Section.entry",
+        "display" : "FRCDAAntecedentsFamiliaux",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-family-medical-history",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMFamilyMedicalHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionFamilyMedicalHistory",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionFamilyMedicalHistory",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionFamilyMedicalHistory.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionFamilyMedicalHistory.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionFamilyMedicalHistory.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMFamilyMedicalHistory.entry.familyMemberHistory",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionFamilyMedicalHistory.entry:FRFamilyMemberHistoryDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRFamilyMemberHistoryDocument",
         "equivalence" : "equivalent"
       }]
     }]

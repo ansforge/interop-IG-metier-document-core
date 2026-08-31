@@ -17,7 +17,7 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispositif médical\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,14 +35,15 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMDevice",
       "target" : [{
-        "code" : "FRCDADispositifMedical.participant.participantRole.playingDevice",
+        "code" : "Supply.participant.participantRole.playingDevice",
+        "display" : "FRCDADispositifMedical.participant.participantRole.playingDevice",
         "equivalence" : "relatedto",
         "comment" : "Le modèle métier FRLMDevice correspond à la composante playingDevice portée dans l'entrée CDA FRCDADispositifMedical."
       }]
@@ -50,14 +51,14 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
     {
       "code" : "FRLMDevice.identifier",
       "target" : [{
-        "code" : "FRCDADispositifMedical.participant.participantRole.id",
+        "code" : "Supply.participant.participantRole.id",
         "equivalence" : "relatedto"
       }]
     },
     {
       "code" : "FRLMDevice.udi",
       "target" : [{
-        "code" : "FRCDADispositifMedical.participant.participantRole.id",
+        "code" : "Supply.participant.participantRole.id",
         "equivalence" : "relatedto"
       }]
     },
@@ -99,14 +100,14 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
     {
       "code" : "FRLMDevice.name",
       "target" : [{
-        "code" : "FRCDADispositifMedical.text",
+        "code" : "Supply.text",
         "equivalence" : "relatedto"
       }]
     },
     {
       "code" : "FRLMDevice.name.value",
       "target" : [{
-        "code" : "FRCDADispositifMedical.text",
+        "code" : "Supply.text",
         "equivalence" : "relatedto"
       }]
     },
@@ -134,20 +135,20 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
     {
       "code" : "FRLMDevice.type",
       "target" : [{
-        "code" : "FRCDADispositifMedical.participant.participantRole.playingDevice.code",
+        "code" : "Supply.participant.participantRole.playingDevice.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMDevice.note",
       "target" : [{
-        "code" : "FRCDADispositifMedical.text",
+        "code" : "Supply.text",
         "equivalence" : "relatedto"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice",
     "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/Device",
     "targetVersion" : "4.0.1",

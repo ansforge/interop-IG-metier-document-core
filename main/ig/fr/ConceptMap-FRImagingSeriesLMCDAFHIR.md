@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
   "id" : "FRImagingSeriesLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingSeriesLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingSeriesLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Série d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,21 +37,22 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-series",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-serie-imagerie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSeries",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie",
+        "code" : "Act",
+        "display" : "FRCDADICOMSerieImagerie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.seriesUid",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.id",
+        "code" : "Act.id",
         "equivalence" : "equivalent"
       }]
     },
@@ -63,7 +66,7 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
     {
       "code" : "FRLMSeries.seriesModality",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.code.qualifier",
+        "code" : "Act.code.qualifier",
         "equivalence" : "equivalent"
       }]
     },
@@ -91,83 +94,98 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
     {
       "code" : "FRLMSeries.seriesEndpoint",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text",
-        "equivalence" : "relatedto"
+        "code" : "Act.entryRelationship.observation",
+        "equivalence" : "relatedto",
+        "comment" : "seriesEndpoint référence un FRLMEndpoint ; ses sous-champs sont mappés dans le sous-groupe Endpoint ci-dessous (Observation.text.reference/.mediaType)."
       }]
     },
     {
       "code" : "FRLMSeries.started",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.effectiveTime",
+        "code" : "Act.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.instanceSOP",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation",
-        "equivalence" : "equivalent"
+        "code" : "Act.entryRelationship.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Act.entryRelationship.observation référence le profil CDA FRCDADICOMSOPInstanceObservation ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
       }]
-    },
-    {
-      "code" : "FRLMSeries.instanceSOP.header.identifier",
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSOPInstance.header.identifier",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.sopClass",
+      "code" : "FRLMSOPInstance.sopClass",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.instanceNumber",
+      "code" : "FRLMSOPInstance.instanceNumber",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour instanceNumber."
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour instanceNumber."
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.numberOfFrames",
+      "code" : "FRLMSOPInstance.numberOfFrames",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfFrames."
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour numberOfFrames."
       }]
-    },
-    {
-      "code" : "FRLMSeries.seriesEndpoint.connectionType",
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMEndpoint.connectionType",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text.reference",
+        "code" : "Observation.text.reference",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMSeries.seriesEndpoint.payloadType",
+      "code" : "FRLMEndpoint.payloadType",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text.mediaType",
+        "code" : "Observation.text.mediaType",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMSeries.seriesEndpoint.address",
+      "code" : "FRLMEndpoint.address",
       "target" : [{
-        "code" : "FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text.reference",
+        "code" : "Observation.text.reference",
         "equivalence" : "relatedto"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-series",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMSeries",
       "target" : [{
-        "code" : "FRImagingStudyDocument",
+        "code" : "ImagingStudy",
+        "display" : "FRImagingStudyDocument",
         "equivalence" : "relatedto",
         "comment" : "Le modèle FRLMSeries alimente principalement ImagingStudy.series."
       }]
@@ -175,113 +193,125 @@ Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADIC
     {
       "code" : "FRLMSeries.seriesUid",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.uid",
+        "code" : "ImagingStudy.series.uid",
         "equivalence" : "relatedto"
       }]
     },
     {
       "code" : "FRLMSeries.number",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.number",
+        "code" : "ImagingStudy.series.number",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.seriesModality",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.modality",
+        "code" : "ImagingStudy.series.modality",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.bodySite",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.bodySite",
+        "code" : "ImagingStudy.series.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.specimen",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.specimen",
+        "code" : "ImagingStudy.series.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.numberOfInstances",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.numberOfInstances",
+        "code" : "ImagingStudy.series.numberOfInstances",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.seriesEndpoint",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.endpoint",
+        "code" : "ImagingStudy.series.endpoint",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.started",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.started",
+        "code" : "ImagingStudy.series.started",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMSeries.instanceSOP",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.instance",
+        "code" : "ImagingStudy.series.instance",
         "equivalence" : "equivalent"
       }]
-    },
-    {
-      "code" : "FRLMSeries.instanceSOP.header.identifier",
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSOPInstance.header.identifier",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.instance.uid",
+        "code" : "ImagingStudy.series.instance.uid",
         "equivalence" : "relatedto"
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.sopClass",
+      "code" : "FRLMSOPInstance.sopClass",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.instance.sopClass",
+        "code" : "ImagingStudy.series.instance.sopClass",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.instanceNumber",
+      "code" : "FRLMSOPInstance.instanceNumber",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.instance.number",
+        "code" : "ImagingStudy.series.instance.number",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMSeries.instanceSOP.numberOfFrames",
+      "code" : "FRLMSOPInstance.numberOfFrames",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.instance.extension:number-of-frames",
+        "code" : "ImagingStudy.series.instance.extension:number-of-frames",
         "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMEndpoint.connectionType",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; connectionType n'est pas accessible sans résoudre la référence."
       }]
     },
     {
-      "code" : "FRLMSeries.seriesEndpoint.connectionType",
+      "code" : "FRLMEndpoint.payloadType",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.endpoint.connectionType",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; payloadType n'est pas accessible sans résoudre la référence."
       }]
     },
     {
-      "code" : "FRLMSeries.seriesEndpoint.payloadType",
+      "code" : "FRLMEndpoint.address",
       "target" : [{
-        "code" : "FRImagingStudyDocument.series.endpoint.payloadType",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMSeries.seriesEndpoint.address",
-      "target" : [{
-        "code" : "FRImagingStudyDocument.series.endpoint.address",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; address n'est pas accessible sans résoudre la référence."
       }]
     }]
   }]

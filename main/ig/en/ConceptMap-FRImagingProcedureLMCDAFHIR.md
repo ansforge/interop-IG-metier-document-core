@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
   "id" : "FRImagingProcedureLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRImagingProcedureLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRImagingProcedureLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Technique imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,230 +37,219 @@ Mapping des éléments du modèle métier FRLMProcedure vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-technique-imagerie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedure",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie",
+        "code" : "Procedure",
+        "display" : "FRCDADICOMTechniqueImagerie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.identifier",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.id",
+        "code" : "Procedure.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.code",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.code",
+        "code" : "Procedure.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.status",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.statusCode",
+        "code" : "Procedure.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.procedureDate[x]",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMProcedure.procedureDateDateTime",
-      "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime.low",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMProcedure.procedureDatePeriod",
-      "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.effectiveTime.high",
-        "equivalence" : "equivalent"
+        "code" : "Procedure.effectiveTime",
+        "equivalence" : "equivalent",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; début et fin sont portés par l'ensemble de effectiveTime."
       }]
     },
     {
       "code" : "FRLMProcedure.priority",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.priorityCode",
+        "code" : "Procedure.priorityCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode",
+        "code" : "Procedure.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProcedure.bodySite:FRLMBodyStructure.locationQualifier",
+      "code" : "FRLMProcedure.bodySite",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.targetSiteCode.qualifier",
+        "code" : "Procedure.targetSiteCode.qualifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.approachSiteCode",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.approachSiteCode",
+        "code" : "Procedure.approachSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.participant[x]",
       "target" : [{
-        "code" : "FRCDADICOMTechniqueImagerie.participant",
+        "code" : "Procedure.participant",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-procedure-imaging-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedure",
       "target" : [{
-        "code" : "FRProcedureImagingDocument",
+        "code" : "Procedure",
+        "display" : "FRProcedureImagingDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.identifier",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.identifier",
+        "code" : "Procedure.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.code",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.code",
+        "code" : "Procedure.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.status",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.status",
+        "code" : "Procedure.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.procedureDate[x]",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.performed[x]",
+        "code" : "Procedure.performed[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.priority",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.extension:priority",
+        "code" : "Procedure.extension:priority",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.bodySite",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.bodySite",
+        "code" : "Procedure.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.approachSiteCode",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.extension:approachBodySite",
+        "code" : "Procedure.extension:approachBodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.difficulty",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.extension:difficulte",
+        "code" : "Procedure.extension:difficulte",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.reason[x]",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.reasonReference",
+        "code" : "Procedure.reasonReference",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.outcome",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.outcome",
+        "code" : "Procedure.outcome",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.complication",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.complication",
+        "code" : "Procedure.complication",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.deviceUsed",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.usedReference",
+        "code" : "Procedure.usedReference",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.focalDevice",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.focalDevice.manipulated",
+        "code" : "Procedure.focalDevice.manipulated",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.note",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.note",
+        "code" : "Procedure.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.performer[x]",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.performer:Intervenant.actor",
+        "code" : "Procedure.performer:intervenant.actor",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.author[x]",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.recorder",
+        "code" : "Procedure.recorder",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.informant",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.asserter",
+        "code" : "Procedure.asserter",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedure.header.participant[x]",
       "target" : [{
-        "code" : "FRProcedureImagingDocument.extension:participant",
+        "code" : "Procedure.extension:participant",
         "equivalence" : "equivalent"
       }]
     }]

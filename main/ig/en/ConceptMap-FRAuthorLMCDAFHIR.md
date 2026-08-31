@@ -18,10 +18,11 @@ Ce ConceptMap présente deux groupes de mapping :
   "id" : "FRAuthorLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRAuthorLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Auteur\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-20T08:45:34+00:00",
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -39,49 +40,50 @@ Ce ConceptMap présente deux groupes de mapping :
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-author",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMHeaderDocument.author",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "author",
+        "code" : "Author",
+        "display" : "author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:healthProfessional",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "author.assignedAuthor",
+        "code" : "Author.assignedAuthor",
         "equivalence" : "equivalent",
-        "comment" : "L'auteur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
+        "comment" : "Cas où l'auteur est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:organisation",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "author.assignedAuthor",
+        "code" : "Author.assignedAuthor",
         "equivalence" : "equivalent",
-        "comment" : "L'auteur structure est de type FRLMOrganisation, porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR."
+        "comment" : "Cas où l'auteur est de type FRLMOrganisation, porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:device",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "author.assignedAuthor.assignedAuthoringDevice",
+        "code" : "Author.assignedAuthor",
         "equivalence" : "equivalent",
-        "comment" : "L'auteur système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."
+        "comment" : "Cas où l'auteur est de type FRLMDevice, porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMHeaderDocument.author",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
         "code" : "Composition.author",
         "equivalence" : "equivalent",
@@ -89,25 +91,25 @@ Ce ConceptMap présente deux groupes de mapping :
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:healthProfessional",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "Composition.author.PractitionerRole",
+        "code" : "Composition.author",
         "equivalence" : "equivalent",
         "comment" : "Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:organisation",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "Composition.author.Organization",
+        "code" : "Composition.author",
         "equivalence" : "equivalent",
         "comment" : "Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
       }]
     },
     {
-      "code" : "FRLMHeaderDocument.author:device",
+      "code" : "FRLMHeaderDocument.author[x]",
       "target" : [{
-        "code" : "Composition.author.Device",
+        "code" : "Composition.author",
         "equivalence" : "equivalent",
         "comment" : "Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
       }]

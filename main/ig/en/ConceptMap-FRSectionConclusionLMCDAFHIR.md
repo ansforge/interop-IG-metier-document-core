@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMConclusion vers la section CDA FRC
   "id" : "FRSectionConclusionLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionConclusionLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionConclusionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Conclusion\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,35 +37,36 @@ Mapping des éléments du modèle métier FRLMConclusion vers la section CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-conclusion",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMConclusion",
       "target" : [{
-        "code" : "FRCDADICOMConclusion",
+        "code" : "Section",
+        "display" : "FRCDADICOMConclusion",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConclusion.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMConclusion.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConclusion.description",
       "target" : [{
-        "code" : "FRCDADICOMConclusion.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConclusion.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMConclusion.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
@@ -76,34 +79,36 @@ Mapping des éléments du modèle métier FRLMConclusion vers la section CDA FRC
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMConclusion",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.conclusion",
+        "code" : "DiagnosticReport.conclusion",
+        "display" : "FRDiagnosticReportImagingDocument.conclusion",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMConclusion.entry.conditionOrFinding[x]",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.result",
+        "code" : "DiagnosticReport.result",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-conclusion",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMConclusion",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImpression",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionImpression",
         "equivalence" : "equivalent"
       }]
     }]

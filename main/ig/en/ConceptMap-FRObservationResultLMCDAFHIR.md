@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
   "id" : "FRObservationResultLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationResultLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRObservationResultLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Résultat d'observation\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,113 +37,114 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservation",
       "target" : [{
-        "code" : "FRCDAResultat",
+        "code" : "Observation",
+        "display" : "FRCDAResultat",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.identifier",
       "target" : [{
-        "code" : "FRCDAResultat.id",
+        "code" : "Observation.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.status",
       "target" : [{
-        "code" : "FRCDAResultat.statusCode",
+        "code" : "Observation.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservation.directSubject[x]",
+      "code" : "FRLMObservation.header.directSubject[x]",
       "target" : [{
-        "code" : "FRCDAResultat.subject",
+        "code" : "Observation.subject",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.observationDate[x]",
       "target" : [{
-        "code" : "FRCDAResultat.effectiveTime",
+        "code" : "Observation.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.type",
       "target" : [{
-        "code" : "FRCDAResultat.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.originalName",
       "target" : [{
-        "code" : "FRCDAResultat.text",
+        "code" : "Observation.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.method",
       "target" : [{
-        "code" : "FRCDAResultat.methodCode",
+        "code" : "Observation.methodCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.specimen",
       "target" : [{
-        "code" : "FRCDAResultat.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.order",
       "target" : [{
-        "code" : "FRCDAResultat.inFulfillmentOf",
+        "code" : "Observation.sdtcInFulfillmentOf1",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.bodySite",
       "target" : [{
-        "code" : "FRCDAResultat.targetSiteCode",
+        "code" : "Observation.targetSiteCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.result",
       "target" : [{
-        "code" : "FRCDAResultat.value",
+        "code" : "Observation.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.referenceRange",
       "target" : [{
-        "code" : "FRCDAResultat.referenceRange",
+        "code" : "Observation.referenceRange",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.interpretation",
       "target" : [{
-        "code" : "FRCDAResultat.interpretationCode",
+        "code" : "Observation.interpretationCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.note",
       "target" : [{
-        "code" : "FRCDAResultat.entryRelationship:frCommentaireER",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à un commentaire dans FRCDAResultat (text est déjà utilisé pour le nom original de l'observation)."
       }]
     },
     {
@@ -164,133 +167,135 @@ Mapping des éléments du modèle métier FRLMObservation vers le profil CDA FRC
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-result-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservation",
       "target" : [{
-        "code" : "FRObservationResultDocument",
+        "code" : "Observation",
+        "display" : "FRObservationResultDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.identifier",
       "target" : [{
-        "code" : "FRObservationResultDocument.identifier",
+        "code" : "Observation.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.header.status",
       "target" : [{
-        "code" : "FRObservationResultDocument.status",
+        "code" : "Observation.status",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservation.directSubject[x]",
+      "code" : "FRLMObservation.header.directSubject[x]",
       "target" : [{
-        "code" : "FRObservationResultDocument.focus",
+        "code" : "Observation.focus",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.observationDate[x]",
       "target" : [{
-        "code" : "FRObservationResultDocument.effective[x]",
+        "code" : "Observation.effective[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.type",
       "target" : [{
-        "code" : "FRObservationResultDocument.code",
+        "code" : "Observation.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.originalName",
       "target" : [{
-        "code" : "FRObservationResultDocument.code.text",
-        "equivalence" : "equivalent"
+        "code" : "Observation.code",
+        "equivalence" : "wider",
+        "comment" : "Le composant text de la CodeableConcept n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de code."
       }]
     },
     {
       "code" : "FRLMObservation.method",
       "target" : [{
-        "code" : "FRObservationResultDocument.method",
+        "code" : "Observation.method",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.specimen",
       "target" : [{
-        "code" : "FRObservationResultDocument.specimen",
+        "code" : "Observation.specimen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.order",
       "target" : [{
-        "code" : "FRObservationResultDocument.basedOn:FRServiceRequestDocument",
+        "code" : "Observation.basedOn:serviceRequestAccessionNumber",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.bodySite",
       "target" : [{
-        "code" : "FRObservationResultDocument.bodySite",
+        "code" : "Observation.bodySite",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.result",
       "target" : [{
-        "code" : "FRObservationResultDocument.value[x]",
+        "code" : "Observation.value[x]",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.referenceRange",
       "target" : [{
-        "code" : "FRObservationResultDocument.referenceRange",
+        "code" : "Observation.referenceRange",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.interpretation",
       "target" : [{
-        "code" : "FRObservationResultDocument.interpretation",
+        "code" : "Observation.interpretation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.note",
       "target" : [{
-        "code" : "FRObservationResultDocument.note",
+        "code" : "Observation.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.component",
       "target" : [{
-        "code" : "FRObservationResultDocument.component",
+        "code" : "Observation.component",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.derivedFrom[x]",
       "target" : [{
-        "code" : "FRObservationResultDocument.derivedFrom",
+        "code" : "Observation.derivedFrom",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservation.hasMember[x]",
       "target" : [{
-        "code" : "FRObservationResultDocument.hasMember",
+        "code" : "Observation.hasMember",
         "equivalence" : "equivalent"
       }]
     }]

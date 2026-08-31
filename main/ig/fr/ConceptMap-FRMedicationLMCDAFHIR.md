@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
   "id" : "FRMedicationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRMedicationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Produit de santé\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,35 +37,36 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-produit-de-sante",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedication",
       "target" : [{
-        "code" : "FRCDAProduitDeSante",
+        "code" : "ManufacturedProduct",
+        "display" : "FRCDAProduitDeSante",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.identifyingCode[x]",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.code",
+        "code" : "ManufacturedProduct.manufacturedMaterial.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.classification",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:asSpecializedKind",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asSpecializedKind",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.productName",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.name",
+        "code" : "ManufacturedProduct.manufacturedMaterial.name",
         "equivalence" : "equivalent"
       }]
     },
@@ -76,7 +79,7 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.doseForm",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.pharm:formCode",
+        "code" : "ManufacturedProduct.manufacturedMaterial.formCode",
         "equivalence" : "equivalent"
       }]
     },
@@ -89,14 +92,14 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.ingredient.substance",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:ingredient.pharm:ingredient.pharm:code",
+        "code" : "ManufacturedProduct.manufacturedMaterial.ingredient.ingredient.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:ingredient.pharm:quantity",
+        "code" : "ManufacturedProduct.manufacturedMaterial.ingredient.quantity",
         "equivalence" : "equivalent"
       }]
     },
@@ -109,28 +112,27 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.item.unitOfPresentation",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:asContent",
-        "equivalence" : "relatedto"
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine.formCode",
+        "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.containedQuantity",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:asContent",
-        "equivalence" : "relatedto"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMMedication.item.amount",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:asContent",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine.capacityQuantity",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.packageType",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:asContent.pharm:containerPackagedMedicine",
+        "code" : "ManufacturedProduct.manufacturedMaterial.asContent.containerPackagedMedicine",
         "equivalence" : "equivalent"
       }]
     },
@@ -149,160 +151,159 @@ Mapping des éléments du modèle métier FRLMMedication vers le profil CDA FRCD
     {
       "code" : "FRLMMedication.batch.lotNumber",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.manufacturedProduct.manufacturedMaterial.lotNumberText",
+        "code" : "ManufacturedProduct.manufacturedMaterial.lotNumberText",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.batch.expirationDate",
       "target" : [{
-        "code" : "FRCDAProduitDeSante.pharm:expirationTime",
+        "code" : "ManufacturedProduct.manufacturedMaterial.expirationTime",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMMedication",
       "target" : [{
-        "code" : "FRMedicationDocument",
+        "code" : "Medication",
+        "display" : "FRMedicationDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.identifyingCode[x]",
       "target" : [{
-        "code" : "FRMedicationDocument.code",
+        "code" : "Medication.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.classification",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:classification",
+        "code" : "Medication.extension:classification",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.productName",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:productName",
+        "code" : "Medication.extension:productName",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.marketingAuthorisationHolder",
       "target" : [{
-        "code" : "FRMedicationDocument.manufacturer",
+        "code" : "Medication.manufacturer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient.itemReference",
+        "code" : "Medication.ingredient.item[x]:itemReference",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.doseForm",
       "target" : [{
-        "code" : "FRMedicationDocument.form",
+        "code" : "Medication.form",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient",
+        "code" : "Medication.ingredient",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.isActive",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient.isActive",
+        "code" : "Medication.ingredient.isActive",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.substance",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient.itemCodeableConcept",
+        "code" : "Medication.ingredient.item[x]:itemCodeableConcept",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.strengthInfo.strength",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient:substanceActive.strength",
+        "code" : "Medication.ingredient.strength",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance",
       "target" : [{
-        "code" : "FRMedicationDocument.ingredient.strength.extension:basisOfStrengthSubstance",
+        "code" : "Medication.ingredient.strength.extension:basisOfStrengthSubstance",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.unitOfPresentation",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:unitOfPresentation",
+        "code" : "Medication.extension:unitOfPresentation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.containedQuantity",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:sizeOfItem",
+        "code" : "Medication.extension:sizeOfItem",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.amount",
       "target" : [{
-        "code" : "FRMedicationDocument.amount",
+        "code" : "Medication.amount",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.item.packageType",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:packageType",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMMedication.device",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:device",
-        "equivalence" : "equivalent"
+        "equivalence" : "unmatched"
       }]
     },
     {
       "code" : "FRLMMedication.characteristic",
       "target" : [{
-        "code" : "FRMedicationDocument.extension:conditionnement",
+        "code" : "Medication.extension:conditionnement",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.batch.lotNumber",
       "target" : [{
-        "code" : "FRMedicationDocument.batch.lotNumber",
+        "code" : "Medication.batch.lotNumber",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMMedication.batch.expirationDate",
       "target" : [{
-        "code" : "FRMedicationDocument.batch.expirationDate",
+        "code" : "Medication.batch.expirationDate",
         "equivalence" : "equivalent"
       }]
     }]

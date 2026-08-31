@@ -11,14 +11,15 @@
   fhir:Resource.language [ fhir:value "en"] ;
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRIntendedRecipientLMCDAFHIR</b></p><a name=\"en-FRIntendedRecipientLMCDAFHIR\"> </a><a name=\"en-hcFRIntendedRecipientLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-fr-lm-intended-recipient.html\">Logical model - FR LM Intended Recipient</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html\">CDA - informationRecipient</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient</td><td/></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:healthProfessional</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient.intendedRecipient</td><td>Le destinataire professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:organisation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient.intendedRecipient</td><td>Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:patient</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient.intendedRecipient</td><td>Le destinataire patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient.intendedRecipient</td><td>Le destinataire personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:device</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">informationRecipient.intendedRecipient</td><td>Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-fr-lm-intended-recipient.html\">Logical model - FR LM Intended Recipient</a> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html\">Information Recipient Extension</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension\">Extension</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:healthProfessional</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:organisation</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:patient</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR.</td></tr><tr><td colspan=\"3\">FRLMIntendedRecipient.intendedRecipient:device</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div>"
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRIntendedRecipientLMCDAFHIR</b></p><a name=\"en-FRIntendedRecipientLMCDAFHIR\"> </a><a name=\"en-hcFRIntendedRecipientLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMIntendedRecipient.html\">Logical model - FR LM Intended Recipient</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html\">CDA - informationRecipient</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient\">FRLMIntendedRecipient</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient\">InformationRecipient</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient.intendedRecipient\">InformationRecipient.intendedRecipient</a></td><td>1..1</td><td>todo</td><td>Le destinataire professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient.intendedRecipient\">InformationRecipient.intendedRecipient</a></td><td>1..1</td><td>todo</td><td>Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient.intendedRecipient\">InformationRecipient.intendedRecipient</a></td><td>1..1</td><td>todo</td><td>Le destinataire patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient.intendedRecipient\">InformationRecipient.intendedRecipient</a></td><td>1..1</td><td>todo</td><td>Le destinataire personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-information-recipient.html#s-InformationRecipient.intendedRecipient\">InformationRecipient.intendedRecipient</a></td><td>1..1</td><td>todo</td><td>Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMIntendedRecipient.html\">Logical model - FR LM Intended Recipient</a> to <a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html\">Information Recipient Extension</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient\">FRLMIntendedRecipient</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension\">Extension</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(RelatedPerson) — cf. FRRelatedPersonLMCDAFHIR.</td></tr><tr><td><a href=\"StructureDefinition-FRLMIntendedRecipient.html#s-FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice\">FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-information-recipient-extension.html#s-Extension.extension:party.value[x]\">Extension.extension:party.value[x]</a></td><td>1..1</td><td>todo</td><td>Extension.extension:party.value[x].resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div>"
   ] ;
   fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRIntendedRecipientLMCDAFHIR"] ;
   fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRIntendedRecipientLMCDAFHIR"] ;
   fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Destinataire prévu\""] ;
   fhir:ConceptMap.status [ fhir:value "draft"] ;
   fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:ConceptMap.date [ fhir:value "2026-08-20T08:45:34+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.date [ fhir:value "2026-08-31T15:12:23+00:00"^^xsd:dateTime] ;
   fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ConceptMap.contact [
      fhir:index -1 ;
@@ -41,7 +42,7 @@
   ] ;
   fhir:ConceptMap.group [
      fhir:index -1 ;
-     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient" ] ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient" ] ;
      fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
      fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-information-recipient" ] ;
      fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
@@ -50,58 +51,59 @@
        fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "informationRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:healthProfessional" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient.intendedRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient.intendedRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
          fhir:ConceptMap.group.element.target.comment [ fhir:value "Le destinataire professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR." ]
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:organisation" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient.intendedRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient.intendedRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
          fhir:ConceptMap.group.element.target.comment [ fhir:value "Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR." ]
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:patient" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient.intendedRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient.intendedRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
          fhir:ConceptMap.group.element.target.comment [ fhir:value "Le destinataire patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR." ]
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:relatedPerson" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient.intendedRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient.intendedRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
          fhir:ConceptMap.group.element.target.comment [ fhir:value "Le destinataire personne liée au patient est de type FRLMRelatedPerson, cf. FRRelatedPersonLMCDAFHIR." ]
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:device" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "informationRecipient.intendedRecipient" ] ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "InformationRecipient.intendedRecipient" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
          fhir:ConceptMap.group.element.target.comment [ fhir:value "Le destinataire système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR." ]
        ]
      ]
   ], [
      fhir:index -1 ;
-     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient" ] ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient" ] ;
      fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
      fhir:ConceptMap.group.target [ fhir:value "http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/information-recipient-extension" ] ;
      fhir:ConceptMap.group.targetVersion [ fhir:value "1.1.0" ] ;
@@ -115,7 +117,7 @@
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:healthProfessional" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Extension.extension:party.value[x]" ] ;
@@ -124,7 +126,7 @@
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:organisation" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Extension.extension:party.value[x]" ] ;
@@ -133,7 +135,7 @@
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:patient" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Extension.extension:party.value[x]" ] ;
@@ -142,7 +144,7 @@
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:relatedPerson" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Extension.extension:party.value[x]" ] ;
@@ -151,7 +153,7 @@
        ]
      ], [
        fhir:index -1 ;
-       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient:device" ] ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Extension.extension:party.value[x]" ] ;

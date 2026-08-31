@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
   "id" : "FRMediaLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMediaLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRMediaLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Image illustrative\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,50 +37,54 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-media",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-image-illustrative",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationMedia",
       "target" : [{
-        "code" : "FRCDAImageIllustrative",
+        "code" : "ObservationMedia",
+        "display" : "FRCDAImageIllustrative",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationMedia.identifiant",
+      "code" : "FRLMObservationMedia.header.identifier",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.id",
+        "code" : "ObservationMedia.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.content.data",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.value",
+        "code" : "ObservationMedia.value",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.content.contentType",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.value.mediaType",
-        "equivalence" : "equivalent"
+        "code" : "ObservationMedia.value",
+        "equivalence" : "wider",
+        "comment" : "Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value."
       }]
     },
     {
-      "code" : "FRLMObservationMedia.subject:FRLMPatient",
+      "code" : "FRLMObservationMedia.subject",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.subject",
-        "equivalence" : "equivalent"
+        "code" : "ObservationMedia.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où subject[x] référence un FRLMPatient."
       }]
     },
     {
-      "code" : "FRLMObservationMedia.subject:FRLMSpecimen",
+      "code" : "FRLMObservationMedia.subject",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.specimen",
-        "equivalence" : "equivalent"
+        "code" : "ObservationMedia.specimen",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où subject[x] référence un FRLMSpecimen."
       }]
     },
     {
@@ -91,90 +97,93 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
     {
       "code" : "FRLMObservationMedia.header.performer[x]",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.performer",
+        "code" : "ObservationMedia.performer",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.header.participant[x]",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.participant",
+        "code" : "ObservationMedia.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.header.author[x]",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.author",
+        "code" : "ObservationMedia.author",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationMedia.header.informant[x]",
+      "code" : "FRLMObservationMedia.header.informant",
       "target" : [{
-        "code" : "FRCDAImageIllustrative.informant",
+        "code" : "ObservationMedia.informant",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-media",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-media-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMObservationMedia",
       "target" : [{
-        "code" : "FRMediaDocument",
+        "code" : "Media",
+        "display" : "FRMediaDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationMedia.identifiant",
+      "code" : "FRLMObservationMedia.header.identifier",
       "target" : [{
-        "code" : "FRMediaDocument.identifier",
+        "code" : "Media.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.content.data",
       "target" : [{
-        "code" : "FRMediaDocument.content.data",
+        "code" : "Media.content.data",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.content.contentType",
       "target" : [{
-        "code" : "FRMediaDocument.content.contentType",
+        "code" : "Media.content.contentType",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMObservationMedia.subject:FRLMPatient",
+      "code" : "FRLMObservationMedia.subject",
       "target" : [{
-        "code" : "FRMediaDocument.subject",
-        "equivalence" : "equivalent"
+        "code" : "Media.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où subject[x] référence un FRLMPatient."
       }]
     },
     {
-      "code" : "FRLMObservationMedia.subject:FRLMSpecimen",
+      "code" : "FRLMObservationMedia.subject",
       "target" : [{
-        "code" : "FRMediaDocument.specimen",
-        "equivalence" : "equivalent"
+        "code" : "Media.subject",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."
       }]
     },
     {
       "code" : "FRLMObservationMedia.note",
       "target" : [{
-        "code" : "FRMediaDocument.note",
+        "code" : "Media.note",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMObservationMedia.header.performer[x]",
       "target" : [{
-        "code" : "FRMediaDocument.operator",
+        "code" : "Media.operator",
         "equivalence" : "equivalent"
       }]
     },
@@ -191,7 +200,7 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
       }]
     },
     {
-      "code" : "FRLMObservationMedia.header.informant[x]",
+      "code" : "FRLMObservationMedia.header.informant",
       "target" : [{
         "equivalence" : "unmatched"
       }]

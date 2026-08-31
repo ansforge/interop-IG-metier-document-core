@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMAdvanceDirectives vers la section 
   "id" : "FRSectionAdvanceDirectivesLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionAdvanceDirectivesLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionAdvanceDirectivesLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Directives anticipées\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,82 +37,86 @@ Mapping des éléments du modèle métier FRLMAdvanceDirectives vers la section 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directives",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirectives",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directives-anticipees",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-directives-anticipees",
     "element" : [{
       "code" : "FRLMAdvanceDirectives",
       "target" : [{
-        "code" : "FRCDADirectivesAnticipees",
+        "code" : "Section",
+        "display" : "FRCDADirectivesAnticipees",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.codeSection",
       "target" : [{
-        "code" : "FRCDADirectivesAnticipees.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.titleSection",
       "target" : [{
-        "code" : "FRCDADirectivesAnticipees.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.description",
       "target" : [{
-        "code" : "FRCDADirectivesAnticipees.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirectives.entry.advanceDirective:FRLMAdvanceDirective",
+      "code" : "FRLMAdvanceDirectives.entry.advanceDirective",
       "target" : [{
-        "code" : "FRCDADirectivesAnticipees.entry:FRCDADirectiveAnticipee",
+        "code" : "Section.entry",
+        "display" : "FRCDADirectiveAnticipee",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-advance-directives",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirectives",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMAdvanceDirectives",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAdvanceDirectives",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionAdvanceDirectives",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAdvanceDirectives.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAdvanceDirectives.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMAdvanceDirectives.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAdvanceDirectives.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMAdvanceDirectives.entry.advanceDirective:FRLMAdvanceDirective",
+      "code" : "FRLMAdvanceDirectives.entry.advanceDirective",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionAdvanceDirectives.entry:FRAdvanceDirectiveDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRAdvanceDirectiveDocument",
         "equivalence" : "equivalent"
       }]
     }]

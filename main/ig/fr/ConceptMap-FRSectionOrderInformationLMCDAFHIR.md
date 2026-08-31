@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
   "id" : "FRSectionOrderInformationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionOrderInformationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionOrderInformationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Demande d'examen d'imagerie",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,35 +37,36 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order-information",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrderInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-demande-examen",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrderInformation",
       "target" : [{
-        "code" : "FRCDADICOMDemandeExamen",
+        "code" : "Section",
+        "display" : "FRCDADICOMDemandeExamen",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMDemandeExamen.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.description",
       "target" : [{
-        "code" : "FRCDADICOMDemandeExamen.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMDemandeExamen.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
@@ -76,42 +79,44 @@ Mapping des éléments du modèle métier FRLMOrderInformation vers la section C
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order-information",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrderInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMOrderInformation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionOrder",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionOrder",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionOrder.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionOrder.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionOrder.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMOrderInformation.entry.orderInformation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionOrder.entry:FRServiceRequestImagingDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRServiceRequestDocument",
         "equivalence" : "equivalent"
       }]
     }]

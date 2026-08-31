@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
   "id" : "FRSectionExaminationReportLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionExaminationReportLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionExaminationReportLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Acte d'imagerie\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,49 +37,50 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-acte-imagerie",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExaminationReport",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie",
+        "code" : "Section",
+        "display" : "FRCDADICOMActeImagerie",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.description",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie.entry.frDICOMTechniqueImagerie",
+        "code" : "Section.entry:frDicomTechniqueImagerie.procedure",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "FRCDADICOMActeImagerie.entry.frDICOMAdministrationProduitDeSante",
+        "code" : "Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration",
         "equivalence" : "equivalent"
       }]
     },
@@ -90,108 +93,116 @@ Mapping des éléments du modèle métier FRLMExaminationReport vers la section 
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-conclusion",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExaminationReport.subSection.conclusion",
       "target" : [{
-        "code" : "FRCDASectionDICOMConclusion",
+        "code" : "Section",
+        "display" : "FRCDASectionDICOMConclusion",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-resultats",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExaminationReport.entry.results[x]",
       "target" : [{
-        "code" : "FRCDADICOMResultats",
+        "code" : "Section",
+        "display" : "FRCDADICOMResultats",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExaminationReport.subSection.conclusion",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImpression",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionImpression",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRProcedureImagingDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionImagingStudy.entry:ImagingStudy.procedureReference:FRProcedureImagingDocument.partOf:FRMedicationAdministrationDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationAdministrationDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.adverseReactions",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionPredictableAdverseDrugReaction.entry:FRAdverseEventDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRAllergyIntoleranceDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.results[x]",
       "target" : [{
-        "code" : "FRCompositionDocument.section:Findings.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent",
         "comment" : "Cible narrative pour les resultats textuels dans la section Findings."
       },
       {
-        "code" : "FRCompositionDocument.section:Findings.entry:FRObservationResultDocument",
-        "equivalence" : "equivalent",
-        "comment" : "Cible structuree pour les resultats codes/observations dans la section Findings."
+        "code" : "Composition.section.entry",
+        "display" : "Observation",
+        "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-examination-report",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExaminationReport.subSection.conclusion",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.conclusion",
+        "code" : "DiagnosticReport.conclusion",
+        "display" : "FRDiagnosticReportImagingDocument.conclusion",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.imagingProcedures",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.extension:procedure",
+        "code" : "DiagnosticReport.extension:procedure",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.medicationAdministrations",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.extension:procedure.partOf:FRMedicationAdministrationDocument",
-        "equivalence" : "equivalent"
+        "code" : "DiagnosticReport.extension:procedure",
+        "equivalence" : "equivalent",
+        "comment" : "Cas où l'extension procedure référence un FRMedicationAdministrationDocument (partOf du FRProcedureImagingDocument)."
       }]
     },
     {
       "code" : "FRLMExaminationReport.entry.results[x]",
       "target" : [{
-        "code" : "FRDiagnosticReportImagingDocument.result",
+        "code" : "DiagnosticReport.result",
         "equivalence" : "equivalent"
       }]
     }]

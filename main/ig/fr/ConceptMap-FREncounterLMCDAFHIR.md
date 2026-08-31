@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
   "id" : "FREncounterLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FREncounterLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FREncounterLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Encounter\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,84 +37,86 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-rencontre",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMEncounter",
       "target" : [{
-        "code" : "FRCDARencontre",
+        "code" : "Encounter",
+        "display" : "FRCDARencontre",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.identifier",
       "target" : [{
-        "code" : "FRCDARencontre.id",
+        "code" : "Encounter.id",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.status",
       "target" : [{
-        "code" : "FRCDARencontre.statusCode",
+        "code" : "Encounter.statusCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.author[x]",
       "target" : [{
-        "code" : "FRCDARencontre.author",
+        "code" : "Encounter.author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.participant",
       "target" : [{
-        "code" : "FRCDARencontre.participant",
+        "code" : "Encounter.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.type",
       "target" : [{
-        "code" : "FRCDARencontre.code",
+        "code" : "Encounter.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.period",
       "target" : [{
-        "code" : "FRCDARencontre.effectiveTime",
+        "code" : "Encounter.effectiveTime",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.priority",
       "target" : [{
-        "code" : "FRCDARencontre.priorityCode",
+        "code" : "Encounter.priorityCode",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.participant",
       "target" : [{
-        "code" : "FRCDARencontre.participant:autresParticipants",
+        "code" : "Encounter.participant:autresParticipants",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.serviceProvider",
       "target" : [{
-        "code" : "FRCDARencontre.performer.assignedEntity.representedOrganization",
-        "equivalence" : "equivalent"
+        "code" : "Encounter.performer.assignedEntity",
+        "equivalence" : "wider",
+        "comment" : "L'organisation responsable est portée par representedOrganization au sein du type FRCDAAssignedEntity référencé par assignedEntity."
       }]
     },
     {
       "code" : "FRLMEncounter.referringProfessional",
       "target" : [{
-        "code" : "FRCDARencontre.performer",
+        "code" : "Encounter.performer",
         "equivalence" : "equivalent"
       }]
     },
@@ -182,7 +186,7 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.serviceLocation",
       "target" : [{
-        "code" : "FRCDARencontre.participant:lieuExecution",
+        "code" : "Encounter.participant:lieuExecution",
         "equivalence" : "relatedto",
         "comment" : "Les lieux de service sont rapprochés des participants de type lieu en CDA."
       }]
@@ -197,7 +201,7 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.serviceLocation.organisationPart[x]",
       "target" : [{
-        "code" : "FRCDARencontre.participant:lieuExecution",
+        "code" : "Encounter.participant:lieuExecution",
         "equivalence" : "relatedto"
       }]
     },
@@ -211,97 +215,98 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.note",
       "target" : [{
-        "code" : "FRCDARencontre.text",
+        "code" : "Encounter.text",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMEncounter",
       "target" : [{
-        "code" : "FREncounterDocument",
+        "code" : "Encounter",
+        "display" : "FREncounterDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.identifier",
       "target" : [{
-        "code" : "FREncounterDocument.identifier",
+        "code" : "Encounter.identifier",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.status",
       "target" : [{
-        "code" : "FREncounterDocument.status",
+        "code" : "Encounter.status",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.header.author[x]",
       "target" : [{
-        "code" : "FREncounterDocument.author",
+        "code" : "Encounter.participant.individual.extension:author",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.type",
       "target" : [{
-        "code" : "FREncounterDocument.class",
+        "code" : "Encounter.class",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.period",
       "target" : [{
-        "code" : "FREncounterDocument.period",
+        "code" : "Encounter.period",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.priority",
       "target" : [{
-        "code" : "FREncounterDocument.priority",
+        "code" : "Encounter.priority",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.participant",
       "target" : [{
-        "code" : "FREncounterDocument.participant",
+        "code" : "Encounter.participant",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.serviceProvider",
       "target" : [{
-        "code" : "FREncounterDocument.serviceProvider",
+        "code" : "Encounter.serviceProvider",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.referringProfessional",
       "target" : [{
-        "code" : "FREncounterDocument.participant.individual",
+        "code" : "Encounter.participant.individual",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.basedOn[x]",
       "target" : [{
-        "code" : "FREncounterDocument.basedOn",
+        "code" : "Encounter.basedOn",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.reason[x]",
       "target" : [{
-        "code" : "FREncounterDocument.reasonCode",
+        "code" : "Encounter.reasonCode",
         "equivalence" : "relatedto",
         "comment" : "reason[x] peut alimenter reasonCode ou reasonReference selon le type porté."
       }]
@@ -309,70 +314,70 @@ Mapping des éléments du modèle métier FRLMEncounter vers le profil CDA FRCDA
     {
       "code" : "FRLMEncounter.admission",
       "target" : [{
-        "code" : "FREncounterDocument.hospitalization",
+        "code" : "Encounter.hospitalization",
         "equivalence" : "relatedto"
       }]
     },
     {
       "code" : "FRLMEncounter.admission.admitter",
       "target" : [{
-        "code" : "FREncounterDocument.participant.individual",
+        "code" : "Encounter.participant.individual",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.admission.admitSource",
       "target" : [{
-        "code" : "FREncounterDocument.hospitalization.admitSource",
+        "code" : "Encounter.hospitalization.admitSource",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.dischargeDiagnosis[x]",
       "target" : [{
-        "code" : "FREncounterDocument.diagnosis.condition",
+        "code" : "Encounter.diagnosis.condition",
         "equivalence" : "relatedto"
       }]
     },
     {
       "code" : "FRLMEncounter.dischargeDestination.type",
       "target" : [{
-        "code" : "FREncounterDocument.hospitalization.dischargeDisposition",
+        "code" : "Encounter.hospitalization.dischargeDisposition",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.dischargeDestination.location[x]",
       "target" : [{
-        "code" : "FREncounterDocument.hospitalization.destination",
+        "code" : "Encounter.hospitalization.destination",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.serviceLocation",
       "target" : [{
-        "code" : "FREncounterDocument.location",
+        "code" : "Encounter.location",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.serviceLocation.period",
       "target" : [{
-        "code" : "FREncounterDocument.location.period",
+        "code" : "Encounter.location.period",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.serviceLocation.organisationPart[x]",
       "target" : [{
-        "code" : "FREncounterDocument.location.location",
+        "code" : "Encounter.location.location",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMEncounter.subEncounter",
       "target" : [{
-        "code" : "FREncounterDocument.partOf",
+        "code" : "Encounter.partOf",
         "equivalence" : "equivalent"
       }]
     },

@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMProcedures vers la section CDA FRC
   "id" : "FRSectionProceduresLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionProceduresLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionProceduresLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Historique des actes\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,83 +37,86 @@ Mapping des éléments du modèle métier FRLMProcedures vers la section CDA FRC
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedures",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedures",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-des-actes",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedures",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesActes",
+        "code" : "Section",
+        "display" : "FRCDAHistoriqueDesActes",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.codeSection",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesActes.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.titleSection",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesActes.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.description",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesActes.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProcedures.entry.procedure:FRLMProcedure",
+      "code" : "FRLMProcedures.entry.procedure",
       "target" : [{
-        "code" : "FRCDAHistoriqueDesActes.entry:FRCDAActe",
+        "code" : "Section.entry:frActe.procedure",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedures",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedures",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMProcedures",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProceduresHx",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionProceduresHx",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProceduresHx.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProceduresHx.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMProcedures.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProceduresHx.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMProcedures.entry.procedure:FRLMProcedure",
+      "code" : "FRLMProcedures.entry.procedure",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionProceduresHx.entry:FRProcedureDocument",
+        "code" : "Composition.section.entry",
+        "display" : "FRProcedureDocument",
         "equivalence" : "equivalent"
       }]
     }]

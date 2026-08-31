@@ -15,9 +15,11 @@ Mapping des éléments du modèle métier FRLMExposureInformation vers la sectio
   "id" : "FRSectionExposureInformationLMCDAFHIR",
   "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionExposureInformationLMCDAFHIR",
   "version" : "0.1.0",
+  "name" : "FRSectionExposureInformationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Exposition aux radiations\"",
   "status" : "draft",
-  "date" : "2026-08-20T08:45:34+00:00",
+  "experimental" : false,
+  "date" : "2026-08-31T15:12:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -35,97 +37,101 @@ Mapping des éléments du modèle métier FRLMExposureInformation vers la sectio
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-exposure-information",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExposureInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-exposition-aux-radiations",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExposureInformation",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations",
+        "code" : "Section",
+        "display" : "FRCDADICOMExpositionAuxRadiations",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.codeSection",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations.code",
+        "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.titleSection",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations.title",
+        "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.description",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations.text",
+        "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.quantityExposure",
+      "code" : "FRLMExposureInformation.entry.quantityExposure",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations.entry:frDICOMQuantite",
+        "code" : "Section.entry:frDicomQuantite.observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "code" : "FRLMExposureInformation.entry.radiopharmaceuticalAdministration",
       "target" : [{
-        "code" : "FRCDADICOMExpositionAuxRadiations.entry:frDICOMAdministrationRadiopharmaceutique",
+        "code" : "Section.entry:frDicomAdministrationRadiopharmaceutique.substanceAdministration",
         "equivalence" : "equivalent"
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-exposure-information",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExposureInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMExposureInformation",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation",
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionExposureRadiation",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.codeSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation.code",
+        "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.titleSection",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation.title",
+        "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
       "code" : "FRLMExposureInformation.description",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation.text",
+        "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.quantityExposure",
+      "code" : "FRLMExposureInformation.entry.quantityExposure",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.component",
+        "code" : "Composition.section.entry",
+        "display" : "FRObservationRadiationExposureDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMExposureInformation.subSection.radiopharmaceuticalAdministration",
+      "code" : "FRLMExposureInformation.entry.radiopharmaceuticalAdministration",
       "target" : [{
-        "code" : "FRCompositionDocument.section:sectionExposureRadiation.entry:FRObservationRadiationExposureDocument.partOf:medicationAdministrationRef",
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationAdministrationDocument",
         "equivalence" : "equivalent"
       }]
     }]
