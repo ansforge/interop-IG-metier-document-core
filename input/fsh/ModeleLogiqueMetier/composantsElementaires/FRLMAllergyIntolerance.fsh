@@ -33,7 +33,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis" 
-* period 1..1 period "Période"
+* period 1..1 Period "Période"
   * onsetDate 0..1 dateTime "Date de début"
   * endDate 0..1 dateTime "Date de fin"
 * reaction 0..* Base "Réaction observée"
@@ -48,6 +48,6 @@ CIM-11 / Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiq
     * ^binding.strength = #preferred
     * ^binding.description = "SNOMED_CT (preferred)"
     * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis"
-  * period 1..1 period "Période"
+  * period 1..1 Period "Période"
     * onsetDate 0..1 dateTime "Date de début"
     * endDate 0..1 dateTime "Date de fin"
