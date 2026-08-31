@@ -7,7 +7,7 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyHistory ver
 * status = #draft
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-historique-de-la-grossesse"
 
 // Élément racine
@@ -76,7 +76,7 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyHistory ver
 * group[=].element[=].target.comment = "Aucun champ CDA dédié aux observations associées au niveau de l'entrée FRCDAHistoriqueDeLaGrossesse."
 
 // Groupe Mapping 2 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-pregnancy-history"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyHistory"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-pregnancy-history-document"
 
 // Élément racine

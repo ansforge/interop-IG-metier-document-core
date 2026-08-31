@@ -1,5 +1,5 @@
 Logical: FRLMObservation
-Id: fr-lm-observation
+Id: FRLMObservation
 Parent: FRLMEntry
 Title: "Logical model - FR LM Observation"
 Description: """Résultat d'une observation réalisée sur le patient ou un dispositif médical."""
@@ -7,7 +7,7 @@ Characteristics: #can-be-target
 
 * header.status 1..1
   * ^short = "Statut de l'observation"
-  * directSubject[x] 0..1 FRLMPatient or FRLMDevice or FRLMHealthProfessional or FRLMOrganisation or FRLMProcedure "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations."
+* header.directSubject[x] 0..1 FRLMPatient or FRLMDevice or FRLMHealthProfessional or FRLMOrganisation or FRLMProcedure "Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations."
 * observationDate[x] 1..1 dateTime or Period "Date de l'observation"
 * type 1..1 CodeableConcept "Type d'observation"
   * ^binding.strength = #required
@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 * order 0..1 FRLMServiceRequest "Demande d'examen correspondante"
 * bodySite 0..1 FRLMBodyStructure "Localisation anatomique"
 * result 1..1 Base "Valeur de l'observation"
-  * Value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept or boolean "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation."
+  * value[x] 0..1 string or Quantity or Range or Ratio or CodeableConcept or boolean "Valeur de l'observation. Le type de donnée doit être adapté au type d'observation."
 * referenceRange 0..* Base "Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis."
   * low 0..1 Quantity "Limite inférieure de l'intervalle"
     * ^binding.strength = #preferred
@@ -35,9 +35,7 @@ Characteristics: #can-be-target
   * appliesTo 0..* CodeableConcept "Population concernée pour cet intervalle"
     * ^binding.strength = #preferred
     * ^binding.description = "(preferred): SNOMED CT, HL7 v3-Race"
-  * age 0..1 Range "Tranche d'âge pour cet intervalle"
-    * ^binding.strength = #preferred
-    * ^binding.description = "(preferred): UCUM for units"
+  * age 0..1 Range "Tranche d'âge pour cet intervalle. (preferred): UCUM for units"
   * text 0..1 string "Texte libre"
 * interpretation 0..* CodeableConcept "Interprétation"
   * ^binding.strength = #required

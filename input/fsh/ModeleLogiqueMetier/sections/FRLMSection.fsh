@@ -1,5 +1,5 @@
 Logical: FRLMSection
-Id: fr-lm-section
+Id: FRLMSection
 Title: "Logical model - FR LM Section"
 Description: """Section"""
 Characteristics: #can-be-target

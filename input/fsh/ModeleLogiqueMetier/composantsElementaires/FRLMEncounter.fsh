@@ -1,5 +1,5 @@
 Logical: FRLMEncounter
-Id: fr-lm-encounter
+Id: FRLMEncounter
 Parent : FRLMEntry
 Title: "Logical model - FR LM Encounter"
 Description: """Rencontre"""

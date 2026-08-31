@@ -1,5 +1,5 @@
 Logical: FRLMMedicationPrescription
-Id: fr-lm-medication-prescription
+Id: FRLMMedicationPrescription
 Parent: FRLMSection
 Title: "Logical model - FR LM FR LM Medication Prescription"
 Description: """Section Prescription de médicaments"""

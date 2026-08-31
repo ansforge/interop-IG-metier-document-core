@@ -1,5 +1,5 @@
 Logical: FRLMDevice
-Id: fr-lm-device
+Id: FRLMDevice
 Title: "Logical model - Device"
 Description: """Dispositif médical"""
 Characteristics: #can-be-target

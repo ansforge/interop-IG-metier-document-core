@@ -3,68 +3,75 @@ InstanceOf: ConceptMap
 Usage: #definition
 Title: "Mapping FRLMPatientEducation → FRCDAEducationDuPatient / FRLMPatientEducation → FRCompositionDocument.section:sectionPatientEducation"
 Description: "Mapping des éléments du modèle métier FRLMPatientEducation vers la section CDA FRCDAEducationDuPatient, puis vers la section FHIR FRCompositionDocument.section:sectionPatientEducation."
+* name = "FRSectionPatientEducationLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Education du patient\""
+* experimental = false
 * status = #draft
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient-education"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientEducation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-education-du-patient"
 // élément racine
 * group[=].element[+].code = #FRLMPatientEducation
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient
+* group[=].element[=].target[+].code = #Section
+* group[=].element[=].target[=].display = "FRCDAEducationDuPatient"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMPatientEducation.codeSection
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.code
+* group[=].element[=].target[+].code = #Section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMPatientEducation.titleSection
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.title
+* group[=].element[=].target[+].code = #Section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMPatientEducation.description
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.text
+* group[=].element[=].target[+].code = #Section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
-* group[=].element[+].code = #FRLMPatientEducation.entry.procedure:FRLMProcedure
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.entry:frActe
+* group[=].element[+].code = #FRLMPatientEducation.entry.procedure
+* group[=].element[=].target[+].code = #Section.entry:frActe.procedure
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
-* group[=].element[+].code = #FRLMPatientEducation.entry.observation:FRLMObservation
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.entry:frSimpleObservation
+* group[=].element[+].code = #FRLMPatientEducation.entry.observation
+* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation.observation
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée References externes
-* group[=].element[+].code = #FRLMPatientEducation.entry.reference:FRLMAttachment
-* group[=].element[=].target[+].code = #FRCDAEducationDuPatient.entry:frReferencesExternes
+* group[=].element[+].code = #FRLMPatientEducation.entry.reference
+* group[=].element[=].target[+].code = #Section.entry:frReferencesExternes.act
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient-education"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientEducation"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 // élément racine   
 * group[=].element[+].code = #FRLMPatientEducation
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation
+* group[=].element[=].target[+].code = #Composition.section
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionPatientEducation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMPatientEducation.codeSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.code
+* group[=].element[=].target[+].code = #Composition.section.code
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMPatientEducation.titleSection
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.title
+* group[=].element[=].target[+].code = #Composition.section.title
 * group[=].element[=].target[=].equivalence = #equivalent
 // bloc narratif de la section
 * group[=].element[+].code = #FRLMPatientEducation.description
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.text
+* group[=].element[=].target[+].code = #Composition.section.text
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
-* group[=].element[+].code = #FRLMPatientEducation.entry.procedure:FRLMProcedure
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.entry:FRProcedureDocument
+* group[=].element[+].code = #FRLMPatientEducation.entry.procedure
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRProcedureDocument"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
-* group[=].element[+].code = #FRLMPatientEducation.entry.observation:FRLMObservation
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.entry:Observation
+* group[=].element[+].code = #FRLMPatientEducation.entry.observation
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "Observation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée References externes
-* group[=].element[+].code = #FRLMPatientEducation.entry.reference:FRLMAttachment
-* group[=].element[=].target[+].code = #FRCompositionDocument.section:sectionPatientEducation.entry:FRDocumentReferenceDocument
+* group[=].element[+].code = #FRLMPatientEducation.entry.reference
+* group[=].element[=].target[+].code = #Composition.section.entry
+* group[=].element[=].target[=].display = "FRDocumentReferenceDocument"
 * group[=].element[=].target[=].equivalence = #equivalent

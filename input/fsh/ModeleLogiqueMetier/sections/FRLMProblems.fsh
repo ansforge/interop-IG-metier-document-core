@@ -1,5 +1,5 @@
 Logical: FRLMProblems
-Id: fr-lm-problems
+Id: FRLMProblems
 Parent: FRLMSection
 Title: "Logical model - FR LM Problems"
 Description: """Section Problems"""

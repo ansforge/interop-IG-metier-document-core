@@ -1,5 +1,5 @@
 Logical: FRLMMedicalDevicePrescriptions
-Id: fr-lm-medical-device-prescriptions
+Id: FRLMMedicalDevicePrescriptions
 Parent: FRLMSection
 Title: "Logical Model - FR LM Medical Device Prescriptions"
 Description: """Section Prescription de dispositifs médicaux"""

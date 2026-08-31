@@ -1,5 +1,5 @@
 Logical: FRLMHeaderDocument	
-Id: fr-lm-header-document						
+Id: FRLMHeaderDocument						
 Title: "Logical model - FR LM Header Document"				
 Description: "Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...)."										
 
@@ -14,6 +14,17 @@ Description: "Eléments de l'entête d'un document contenant les informations g�
 * eventType 1..* CodeableConcept "Evènement documenté et notamment le cadre d'exercice."				
 * subject 1..1 FRLMPatient "Patient / Usager."
 * author[x] 1..* FRLMHealthProfessional or FRLMOrganisation or FRLMDevice "Auteur du document."
+  * ^comment = """Voici les cas d'usage des documents et leurs auteurs :
+
+| Cas d'usage | Auteur(s) du document | Structure de l'auteur |
+|-------------|----------------------|-----------------------|
+| Création d'un document par un professionnel sur son logiciel professionnel | Professionnel | Structure |
+| Création d'un document patient par un professionnel sur son logiciel professionnel pour le compte du patient | Professionnel | Structure |
+| Création d'un document patient par le patient | Patient | non utilisé |
+| Création d'un document par un système (dispositif, automate, …) de structure (ES, …) | Système de structure | Structure |
+| Création d'un document par un Service numérique référencé (SNR) | SNR | Editeur |
+| Création d'un document par le DP | CNOP/DP | CNOP |
+"""
 * dataEnterer 0..1 FRLMDataEnterer "Opérateur de saisie."	
 * informant 0..* FRLMInformant "Informateur ayant fourni des informations utiles à la production du document."	
 * custodian 1..1 FRLMOrganisation "Structure chargée de la conservation du document."	

@@ -1,5 +1,5 @@
 Logical: FRLMAdmissionEvaluation
-Id: fr-lm-admission-evaluation
+Id: FRLMAdmissionEvaluation
 Parent: FRLMSection
 Title: "Logical model - FR LM Admission Evaluation"
 Description: """Section Évaluation à l'admission"""

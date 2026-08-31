@@ -1,5 +1,5 @@
 Logical: FRLMProcedures
-Id: fr-lm-procedures
+Id: FRLMProcedures
 Parent: FRLMSection
 Title: "logical model - FR LM Procedures"
 Description: """Section Historique des actes"""

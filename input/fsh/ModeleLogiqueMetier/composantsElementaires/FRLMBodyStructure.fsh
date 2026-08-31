@@ -1,5 +1,5 @@
 Logical: FRLMBodyStructure
-Id: fr-lm-body-structure	
+Id: FRLMBodyStructure	
 Title: "Logical model - FR LM Body Structure"
 Description: """Localisation anatomique"""
 Characteristics: #can-be-target

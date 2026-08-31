@@ -1,2 +1,2 @@
-* [Modèle logique métier](./StructureDefinition-fr-lm-header-document.html)
+* [Modèle logique métier](./StructureDefinition-FRLMHeaderDocument.html)
 * [Mapping Métier/CDA/FHIR](./mappingCDA-FHIR-entete.html)

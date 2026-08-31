@@ -12,7 +12,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * experimental = false
 
 // Groupe Mapping 1 : modèle métier → CDA
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-clinical-document"
 
 // Élément racine
@@ -21,15 +21,15 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant unique du document
-* group[=].element[+].code = #FRLMHeaderDocument.identifier:document
+* group[=].element[+].code = #FRLMHeaderDocument.identifier
 * group[=].element[=].target.code = #ClinicalDocument.id
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Identifiant unique du document."
+* group[=].element[=].target.comment = "Cas où identifier référence l'identifiant unique du document."
 // Identifiant du lot de versions
-* group[=].element[+].code = #FRLMHeaderDocument.identifier:versionSet
+* group[=].element[+].code = #FRLMHeaderDocument.identifier
 * group[=].element[=].target.code = #ClinicalDocument.setId
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Identifiant du lot de versions du document."
+* group[=].element[=].target.comment = "Cas où identifier référence l'identifiant du lot de versions du document."
 
 // Type de document
 * group[=].element[+].code = #FRLMHeaderDocument.documentType
@@ -79,7 +79,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.comment = "Cf. FRPatientLMCDAFHIR."
 
 // Auteur
-* group[=].element[+].code = #FRLMHeaderDocument.author
+* group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #ClinicalDocument.author
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cf. FRAuthorLMCDAFHIR."
@@ -145,16 +145,16 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.comment = "L'élément encounter est de type FRLMEncounter, cf. FREncounterLMCDAFHIR."
 
 // Groupe Mapping 2 : modèle métier → FHIR (identifiant du document)
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-bundle-document"
 
-* group[=].element[+].code = #FRLMHeaderDocument.identifier:document
+* group[=].element[+].code = #FRLMHeaderDocument.identifier
 * group[=].element[=].target.code = #Bundle.identifier
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Identifiant unique du document."
+* group[=].element[=].target.comment = "Cas où identifier référence l'identifiant unique du document."
 
 // Groupe Mapping 3 : modèle métier → FHIR
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-header-document"
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 
 // Type de document
@@ -183,10 +183,10 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant du lot de versions
-* group[=].element[+].code = #FRLMHeaderDocument.identifier:versionSet
+* group[=].element[+].code = #FRLMHeaderDocument.identifier
 * group[=].element[=].target.code = #Composition.identifier
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Identifiant du lot de versions du document."
+* group[=].element[=].target.comment = "Cas où identifier référence l'identifiant du lot de versions du document."
 
 // Version du document
 * group[=].element[+].code = #FRLMHeaderDocument.version
@@ -206,7 +206,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.comment = "Cf. FRPatientLMCDAFHIR."
 
 // Auteur
-* group[=].element[+].code = #FRLMHeaderDocument.author
+* group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #Composition.author
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Cf. FRAuthorLMCDAFHIR."

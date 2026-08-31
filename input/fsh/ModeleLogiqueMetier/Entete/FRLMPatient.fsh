@@ -1,5 +1,5 @@
 Logical: FRLMPatient
-Id: fr-lm-patient		
+Id: FRLMPatient		
 Title: "Logical model - FR LM Patient"				
 Description:  """Patient/Usager concerné par le document."""
 Characteristics: #can-be-target	

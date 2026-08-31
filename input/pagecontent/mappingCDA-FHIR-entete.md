@@ -76,7 +76,12 @@ Elements AS (
     cg.grp_type,
     e.key AS elem_index,
     json_extract(e.value, '$.code') AS elem_code,
-    json_extract(t.value, '$.code') AS elem_target_code
+    CASE
+      WHEN json_extract(e.value, '$.code') LIKE '%.%'
+       AND json_extract(t.value, '$.display') IS NOT NULL THEN
+        json_extract(t.value, '$.code') || ' (' || json_extract(t.value, '$.display') || ')'
+      ELSE COALESCE(json_extract(t.value, '$.display'), json_extract(t.value, '$.code'))
+    END AS elem_target_code
   FROM ClassifiedGroups cg
   JOIN json_each(cg.group_json, '$.element') e
   JOIN json_each(e.value, '$.target') t
@@ -168,7 +173,7 @@ END AS Metier,
     ELSE CDA
   END AS CDA,
   CASE
-    WHEN FHIR NOT LIKE '%.%' THEN '**' || FHIR || '**'
+    WHEN Metier NOT LIKE '%.%' THEN '**' || FHIR || '**'
     ELSE FHIR
   END AS FHIR,
   Name AS \"Titre du profil\",

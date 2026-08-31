@@ -1,5 +1,5 @@
 Logical: FRLMObservationResults
-Id: fr-lm-observation-results
+Id: FRLMObservationResults
 Parent: FRLMSection
 Title: "Logical model - FR LM ObservationResults"
 Description: """Section Résultats"""

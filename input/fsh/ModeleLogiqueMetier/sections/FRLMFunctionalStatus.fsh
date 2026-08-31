@@ -1,5 +1,5 @@
 Logical: FRLMFunctionalStatus
-Id: fr-lm-functional-status
+Id: FRLMFunctionalStatus
 Parent: FRLMSection
 Title: "logical model- FR LM Functional Status"
 Description: """Section Statut fonctionnel"""

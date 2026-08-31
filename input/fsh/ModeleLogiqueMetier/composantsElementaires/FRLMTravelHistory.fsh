@@ -1,5 +1,5 @@
 Logical: FRLMTravelHistory
-Id: fr-lm-travel-history
+Id: FRLMTravelHistory
 Parent : FRLMEntry
 Title: "Logical model - FR LM TravelHistory"
 Description: """Historique des voyages."""

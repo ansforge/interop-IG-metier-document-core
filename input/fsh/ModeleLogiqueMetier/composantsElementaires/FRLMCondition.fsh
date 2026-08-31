@@ -1,5 +1,5 @@
 Logical: FRLMCondition
-Id: fr-lm-condition
+Id: FRLMCondition
 Parent: FRLMEntry
 Title: "Logical model - FR LM Condition"
 Description: """Problème"""

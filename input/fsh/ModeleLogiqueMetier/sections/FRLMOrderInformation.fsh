@@ -1,5 +1,5 @@
 Logical: FRLMOrderInformation
-Id: fr-lm-order-information
+Id: FRLMOrderInformation
 Parent: FRLMSection
 Title: "Logical model - FR LM Order Information"
 Description: """Section Demande d'examen d'imagerie"""

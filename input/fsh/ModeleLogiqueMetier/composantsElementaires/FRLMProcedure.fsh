@@ -1,5 +1,5 @@
 Logical: FRLMProcedure
-Id: fr-lm-procedure
+Id: FRLMProcedure
 Parent: FRLMEntry
 Title: "Logical model- FR LM Procedure"
 Description: """Acte"""
@@ -13,9 +13,7 @@ Characteristics: #can-be-target
   * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)"
   * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis"
-* procedureDate[x] 1..1	period "Période de l'acte"
-  * procedureDateDateTime 0..1	dateTime "Date de début de l'acte"
-  * procedureDatePeriod	0..1	dateTime "Date de fin de l'acte"
+* procedureDate[x] 1..1 dateTime or Period "Période de l'acte. Si Period : porte la date de début et de fin de l'acte."
 * priority 0..1	CodeableConcept	"Priorité"
   * ^binding.strength = #required
   * ^binding.description = "jdv-hl7-v3-ActPriority-cisis (2.16.840.1.113883.1.11.16866) ou autre JDV"

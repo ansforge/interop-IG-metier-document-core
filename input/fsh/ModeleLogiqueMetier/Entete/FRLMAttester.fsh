@@ -1,5 +1,5 @@
 Logical: FRLMAttester	
-Id: fr-lm-attester	
+Id: FRLMAttester	
 Title: "Logical model - FR LM Attester"	
 Description: "Professionnel attestant la validité des informations portées dans le document sans pour autant en prendre la responsabilité. N'est pas utilisé dans un document d'expression personnelle du patient/usager et un document produit par un système." 	
 Characteristics: #can-be-target	

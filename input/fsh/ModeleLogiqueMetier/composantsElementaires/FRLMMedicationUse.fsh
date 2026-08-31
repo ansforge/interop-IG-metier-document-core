@@ -1,5 +1,5 @@
 Logical: FRLMMedicationUse
-Id: fr-lm-medication-use
+Id: FRLMMedicationUse
 Parent: FRLMEntry
 Title: "Logical model - FR LM Medication Use"
 Description: """Déclaration de l'utilisation d'un médicament, faisant partie d'une synthèse des traitements médicamenteux du patient."""
