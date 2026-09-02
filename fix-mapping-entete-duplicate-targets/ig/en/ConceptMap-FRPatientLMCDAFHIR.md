@@ -1,11 +1,11 @@
-# Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMPatient → FRCDARecordTarget → FRPatientINSDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument 
+## ConceptMap: Mapping FRLMPatient → FRCDARecordTarget → FRPatientINSDocument 
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "FRLMPatient" et l'élément CDA "recordTarget"
-* Mapping 2 : entre le modèle métier "FRLMPatient" et le profil FHIR "FrPatientDocument"
+* Mapping 2 : entre le modèle métier "FRLMPatient" et le profil FHIR "FRPatientINSDocument"
  
 
 
@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T10:43:57+00:00",
+  "date" : "2026-09-02T12:54:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -31,7 +31,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FrPatientDocument\\\" ",
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FRPatientINSDocument\\\" ",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -87,6 +87,7 @@ Ce ConceptMap présente deux groupes de mapping :
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name",
         "equivalence" : "equivalent"
@@ -219,6 +220,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "code" : "FRLMPatient",
       "target" : [{
         "code" : "Patient",
+        "display" : "FRPatientINSDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -245,6 +247,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name:officialName",
         "equivalence" : "equivalent",
@@ -253,6 +256,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name:usualName",
         "equivalence" : "equivalent",

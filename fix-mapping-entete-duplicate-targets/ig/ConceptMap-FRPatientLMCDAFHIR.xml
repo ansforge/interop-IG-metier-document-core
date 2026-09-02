@@ -11,7 +11,7 @@
   <title value="Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-09-02T10:43:57+00:00"/>
+  <date value="2026-09-02T12:54:48+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -20,7 +20,7 @@
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
-  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMPatient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMPatient\&quot; et le profil FHIR \&quot;FrPatientDocument\&quot; "/>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMPatient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMPatient\&quot; et le profil FHIR \&quot;FRPatientINSDocument\&quot; "/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -76,6 +76,7 @@
     <targetVersion value="0.1.0"/>
     <element>
       <code value="FRLMPatient.name"/>
+      <display value="FRLMHumanName"/>
       <target>
         <code value="Patient.name"/>
         <equivalence value="equivalent"/>
@@ -208,6 +209,7 @@
       <code value="FRLMPatient"/>
       <target>
         <code value="Patient"/>
+        <display value="FRPatientINSDocument"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
@@ -234,6 +236,7 @@
     </element>
     <element>
       <code value="FRLMPatient.name"/>
+      <display value="FRLMHumanName"/>
       <target>
         <code value="Patient.name:officialName"/>
         <equivalence value="equivalent"/>
@@ -242,6 +245,7 @@
     </element>
     <element>
       <code value="FRLMPatient.name"/>
+      <display value="FRLMHumanName"/>
       <target>
         <code value="Patient.name:usualName"/>
         <equivalence value="equivalent"/>

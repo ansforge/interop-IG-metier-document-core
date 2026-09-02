@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
   "title" : "Mapping Métier/CDA/FHIR : \"Image illustrative\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T10:43:57+00:00",
+  "date" : "2026-09-02T12:54:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -161,16 +161,9 @@ Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CD
       "code" : "FRLMObservationMedia.subject",
       "target" : [{
         "code" : "Media.subject",
+        "display" : "FRPatientINSDocument / FRSpecimenDocument",
         "equivalence" : "equivalent",
-        "comment" : "Cas où subject[x] référence un FRLMPatient."
-      }]
-    },
-    {
-      "code" : "FRLMObservationMedia.subject",
-      "target" : [{
-        "code" : "Media.subject",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."
+        "comment" : "Cas où subject[x] référence un FRLMPatient, ou un FRLMSpecimen (Media.subject n'a pas de champ specimen dédié séparé)."
       }]
     },
     {

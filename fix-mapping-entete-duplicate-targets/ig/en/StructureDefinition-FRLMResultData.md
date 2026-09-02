@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMResultData.cs
   "name" : "FRLMResultData",
   "title" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
   "status" : "draft",
-  "date" : "2026-09-02T10:43:57+00:00",
+  "date" : "2026-09-02T12:54:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

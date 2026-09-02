@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
   "title" : "Mapping Métier/CDA/FHIR : \"Observation sur la grossesse\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T10:43:57+00:00",
+  "date" : "2026-09-02T12:54:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -225,40 +225,18 @@ Mapping des éléments du modèle métier FRLMPregnancyObservation vers le profi
       "code" : "FRLMPregnancyObservation.derivedFrom[x]",
       "target" : [{
         "code" : "Observation.derivedFrom",
+        "display" : "Observation / FRObservationLaboratoryReportResultsDocument / FRImagingStudyDocument",
         "equivalence" : "equivalent",
-        "comment" : "Cas où derivedFrom[x] référence une FRLMObservation générique."
-      }]
-    },
-    {
-      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
-      "target" : [{
-        "code" : "Observation.derivedFrom",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où derivedFrom[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
-      }]
-    },
-    {
-      "code" : "FRLMPregnancyObservation.derivedFrom[x]",
-      "target" : [{
-        "code" : "Observation.derivedFrom",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où derivedFrom[x] référence un FRLMImagingStudy (FRImagingStudyDocument)."
+        "comment" : "Cas où derivedFrom[x] référence une FRLMObservation générique, une FRLMLaboratoryObservation ou un FRLMImagingStudy."
       }]
     },
     {
       "code" : "FRLMPregnancyObservation.hasMember[x]",
       "target" : [{
         "code" : "Observation.hasMember",
+        "display" : "FRObservationLaboratoryReportResultsDocument / Observation",
         "equivalence" : "equivalent",
-        "comment" : "Cas où hasMember[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
-      }]
-    },
-    {
-      "code" : "FRLMPregnancyObservation.hasMember[x]",
-      "target" : [{
-        "code" : "Observation.hasMember",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où hasMember[x] référence une FRLMObservation générique."
+        "comment" : "Cas où hasMember[x] référence une FRLMLaboratoryObservation ou une FRLMObservation générique."
       }]
     }]
   }]

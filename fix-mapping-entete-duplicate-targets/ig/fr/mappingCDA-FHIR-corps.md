@@ -64,11 +64,11 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | DiagnosticReport.extension:procedure |
 | FRLMExaminationReport.entry.adverseReactions |  | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | Composition.section (FRCompositionDocument.section:sectionImpression) |
-| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.entry (Observation) |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.text |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | DiagnosticReport.result |
+| **FRLMExaminationReport.subSection.conclusion** | **Section (FRCDASectionDICOMConclusion)** | **Composition.section (FRCompositionDocument.section:sectionImpression)** |
+| **FRLMExaminationReport.subSection.conclusion** | **Section (FRCDASectionDICOMConclusion)** | **DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **Composition.section.entry (Observation)** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **Composition.section.text** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **DiagnosticReport.result** |
 | **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **FRCompositionDocument.section:sectionExposureRadiation** |
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
@@ -287,7 +287,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMAllergyIntolerance.certainty | Observation.entryRelationship:frCertitude | AllergyIntolerance.verificationStatus |
 | FRLMAllergyIntolerance.criticality | Observation.entryRelationship:frCriticite | AllergyIntolerance.criticality |
 | FRLMAllergyIntolerance.category |  | AllergyIntolerance.category |
-| **FRLMAttachment** | FRCDADocumentAttache.component:frObservationMedia.observationMedia | **FRDocumentReferenceDocument.content.attachment** |
+| **FRLMAttachment** | **FRCDADocumentAttache.component:frObservationMedia.observationMedia** | **FRDocumentReferenceDocument.content.attachment** |
 | FRLMAttachment.contentType | Organizer.component:frObservationMedia. observationMedia.value.mediaType | DocumentReference.content.attachment.contentType |
 | FRLMAttachment.language | Organizer.component:frObservationMedia. observationMedia.languageCode | DocumentReference.content.attachment.language |
 | FRLMAttachment.data | Organizer.component:frObservationMedia. observationMedia.value | DocumentReference.content.attachment.data |
@@ -315,7 +315,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMCondition.stage |  | Condition.stage.summary |
 | FRLMCondition.reference | Observation.reference. externalDocument.text.reference | Condition.evidence.detail |
 | FRLMCondition.note | Observation.entryRelationship:frCommentaireER | Condition.note |
-| **FRLMDevice** | FRCDADispositifMedical.participant. participantRole.playingDevice | **Device** |
+| **FRLMDevice** | **FRCDADispositifMedical.participant.participantRole.playingDevice** | **Device** |
 | FRLMDevice.identifier | Supply.participant. participantRole.id | Device.identifier |
 | FRLMDevice.udi | Supply.participant. participantRole.id | Device.udiCarrier.deviceIdentifier |
 | FRLMDevice.manufacturer |  | Device.manufacturer |
@@ -341,21 +341,13 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMDeviceUse.device | Supply.participant | DeviceUseStatement.device |
 | FRLMDeviceUse.bodySite |  | DeviceUseStatement.bodySite |
 | FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecALD | DeviceUseStatement.reasonCode |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecALD | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecALD | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecALD | DeviceUseStatement.reasonReference |
+| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecALD | DeviceUseStatement.reasonReference (FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument) |
 | FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecAccidentTravail | DeviceUseStatement.reasonCode |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecAccidentTravail | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecAccidentTravail | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecAccidentTravail | DeviceUseStatement.reasonReference |
+| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecAccidentTravail | DeviceUseStatement.reasonReference (FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument) |
 | FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecLaPrevention | DeviceUseStatement.reasonCode |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecLaPrevention | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecLaPrevention | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecLaPrevention | DeviceUseStatement.reasonReference |
+| FRLMDeviceUse.reason[x] | Supply.entryRelationship:frEnRapportAvecLaPrevention | DeviceUseStatement.reasonReference (FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument) |
 | FRLMDeviceUse.reason[x] |  | DeviceUseStatement.reasonCode |
-| FRLMDeviceUse.reason[x] |  | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] |  | DeviceUseStatement.reasonReference |
-| FRLMDeviceUse.reason[x] |  | DeviceUseStatement.reasonReference |
+| FRLMDeviceUse.reason[x] |  | DeviceUseStatement.reasonReference (FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument) |
 | FRLMDeviceUse.note | Supply.text | DeviceUseStatement.note |
 | **FRLMEncounter** | **FRCDARencontre** | **FREncounterDocument** |
 | FRLMEncounter.header.identifier | Encounter.id | Encounter.identifier |
@@ -529,10 +521,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationMedia.header.identifier | ObservationMedia.id | Media.identifier |
 | FRLMObservationMedia.content.data | ObservationMedia.value | Media.content.data |
 | FRLMObservationMedia.content.contentType | ObservationMedia.value | Media.content.contentType |
-| FRLMObservationMedia.subject | ObservationMedia.subject | Media.subject |
-| FRLMObservationMedia.subject | ObservationMedia.subject | Media.subject |
-| FRLMObservationMedia.subject | ObservationMedia.specimen | Media.subject |
-| FRLMObservationMedia.subject | ObservationMedia.specimen | Media.subject |
+| FRLMObservationMedia.subject | ObservationMedia.subject | Media.subject (FRPatientINSDocument / FRSpecimenDocument) |
+| FRLMObservationMedia.subject | ObservationMedia.specimen | Media.subject (FRPatientINSDocument / FRSpecimenDocument) |
 | FRLMObservationMedia.note |  | Media.note |
 | FRLMObservationMedia.header.performer[x] | ObservationMedia.performer | Media.operator |
 | FRLMObservationMedia.header.participant[x] | ObservationMedia.participant |  |
@@ -769,11 +759,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPregnancyObservation.interpretation | Observation.interpretationCode | Observation.interpretation |
 | FRLMPregnancyObservation.note | Observation.text | Observation.note |
 | FRLMPregnancyObservation.component |  | Observation.component |
-| FRLMPregnancyObservation.derivedFrom[x] |  | Observation.derivedFrom |
-| FRLMPregnancyObservation.derivedFrom[x] |  | Observation.derivedFrom |
-| FRLMPregnancyObservation.derivedFrom[x] |  | Observation.derivedFrom |
-| FRLMPregnancyObservation.hasMember[x] |  | Observation.hasMember |
-| FRLMPregnancyObservation.hasMember[x] |  | Observation.hasMember |
+| FRLMPregnancyObservation.derivedFrom[x] |  | Observation.derivedFrom (Observation / FRObservationLaboratoryReportResultsDocument / FRImagingStudyDocument) |
+| FRLMPregnancyObservation.hasMember[x] |  | Observation.hasMember (FRObservationLaboratoryReportResultsDocument / Observation) |
 | **FRLMObservation** | **FRCDAResultat** | **FRObservationResultDocument** |
 | FRLMObservation.header.identifier | Observation.id | Observation.identifier |
 | FRLMObservation.header.status | Observation.statusCode | Observation.status |
@@ -901,11 +888,11 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | Composition.section.entry (FRMedicationAdministrationDocument) |
 | FRLMExaminationReport.entry.medicationAdministrations | Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration | DiagnosticReport.extension:procedure |
 | FRLMExaminationReport.entry.adverseReactions |  | Composition.section.entry (FRAllergyIntoleranceDocument) |
-| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | Composition.section (FRCompositionDocument.section:sectionImpression) |
-| FRLMExaminationReport.subSection.conclusion | **Section (FRCDASectionDICOMConclusion)** | DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion) |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.entry (Observation) |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | Composition.section.text |
-| FRLMExaminationReport.entry.results[x] | **Section (FRCDADICOMResultats)** | DiagnosticReport.result |
+| **FRLMExaminationReport.subSection.conclusion** | **Section (FRCDASectionDICOMConclusion)** | **Composition.section (FRCompositionDocument.section:sectionImpression)** |
+| **FRLMExaminationReport.subSection.conclusion** | **Section (FRCDASectionDICOMConclusion)** | **DiagnosticReport.conclusion (FRDiagnosticReportImagingDocument.conclusion)** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **Composition.section.entry (Observation)** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **Composition.section.text** |
+| **FRLMExaminationReport.entry.results[x]** | **Section (FRCDADICOMResultats)** | **DiagnosticReport.result** |
 | **FRLMExposureInformation** | **FRCDADICOMExpositionAuxRadiations** | **FRCompositionDocument.section:sectionExposureRadiation** |
 | FRLMExposureInformation.codeSection | Section.code | Composition.section.code |
 | FRLMExposureInformation.titleSection | Section.title | Composition.section.title |
@@ -1092,9 +1079,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMSpecimen.identifier | Procedure.id | Specimen.identifier |
 | FRLMSpecimen.status | Procedure.statusCode | Specimen.status |
 | FRLMSpecimen.type | Procedure.code | Specimen.type |
-| FRLMSpecimen.specimenSource[x] | Procedure.participant | Specimen.subject |
-| FRLMSpecimen.specimenSource[x] | Procedure.participant | Specimen.subject |
-| FRLMSpecimen.specimenSource[x] | Procedure.participant | Specimen.subject |
+| FRLMSpecimen.specimenSource[x] | Procedure.participant | Specimen.subject (FRPatientINSDocument / FRLocationDocument / Device) |
 | FRLMSpecimen.parentSpecimen | Procedure.participant:EchantillonPreleve | Specimen.parent |
 | FRLMSpecimen.request |  | Specimen.request |
 | FRLMSpecimen.combined |  |  |

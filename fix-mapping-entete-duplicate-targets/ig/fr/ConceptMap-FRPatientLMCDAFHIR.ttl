@@ -19,7 +19,7 @@
   fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Patient/Usager\""] ;
   fhir:ConceptMap.status [ fhir:value "draft"] ;
   fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
-  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T12:54:48+00:00"^^xsd:dateTime] ;
   fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ConceptMap.contact [
      fhir:index -1 ;
@@ -30,7 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
      ]
   ] ;
-  fhir:ConceptMap.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FrPatientDocument\\\" "] ;
+  fhir:ConceptMap.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FRPatientINSDocument\\\" "] ;
   fhir:ConceptMap.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [
@@ -96,6 +96,7 @@
      fhir:ConceptMap.group.element [
        fhir:index -1 ;
        fhir:ConceptMap.group.element.code [ fhir:value "FRLMPatient.name" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "FRLMHumanName" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.name" ] ;
@@ -247,6 +248,7 @@
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Patient" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRPatientINSDocument" ] ;
          fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
        ]
      ], [
@@ -276,6 +278,7 @@
      ], [
        fhir:index -1 ;
        fhir:ConceptMap.group.element.code [ fhir:value "FRLMPatient.name" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "FRLMHumanName" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.name:officialName" ] ;
@@ -285,6 +288,7 @@
      ], [
        fhir:index -1 ;
        fhir:ConceptMap.group.element.code [ fhir:value "FRLMPatient.name" ] ;
+       fhir:ConceptMap.group.element.display [ fhir:value "FRLMHumanName" ] ;
        fhir:ConceptMap.group.element.target [
          fhir:index -1 ;
          fhir:ConceptMap.group.element.target.code [ fhir:value "Patient.name:usualName" ] ;

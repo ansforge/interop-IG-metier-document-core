@@ -366,7 +366,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div></td></tr><tr><td><a href="ConceptMap-FRPatientLMCDAFHIR.html">FRPatientLMCDAFHIR</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
 <li>Mapping 1 : entre le modèle métier &quot;FRLMPatient&quot; et l'élément CDA &quot;recordTarget&quot;</li>
-<li>Mapping 2 : entre le modèle métier &quot;FRLMPatient&quot; et le profil FHIR &quot;FrPatientDocument&quot;</li>
+<li>Mapping 2 : entre le modèle métier &quot;FRLMPatient&quot; et le profil FHIR &quot;FRPatientINSDocument&quot;</li>
 </ul>
 </div></td></tr><tr><td><a href="ConceptMap-FRRelatedPersonLMCDAFHIR.html">FRRelatedPersonLMCDAFHIR</a></td><td><div><p>Ce ConceptMap présente deux groupes de mapping :</p>
 <ul>
@@ -466,9 +466,9 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMAttester.attester[x]</p>
 </div></td><td><div><p>Authenticator.assignedEntity</p>
 </div></td><td><div><p>Composition.attester.party</p>
-</div></td></tr><tr><td><div><p>FRLMHeaderDocument.author[x]</p>
+</div></td></tr><tr><td><div><p><strong>FRLMHeaderDocument.author[x]</strong></p>
 </div></td><td><div><p><strong>Author (author)</strong></p>
-</div></td><td><div><p>Composition.author</p>
+</div></td><td><div><p><strong>Composition.author</strong></p>
 </div></td></tr><tr><td><div><p>FRLMHeaderDocument.author[x]</p>
 </div></td><td><div><p>Author.assignedAuthor</p>
 </div></td><td><div><p>Composition.author</p>
@@ -484,7 +484,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMConsent.status</p>
 </div></td><td><div><p>Authorization.consent.statusCode</p>
 </div></td><td><div><p>Consent.status</p>
-</div></td></tr><tr><td><div><p>FRLMHeaderDocument.custodian</p>
+</div></td></tr><tr><td><div><p>FRLMHeaderDocument.custodian (FRLMOrganisation)</p>
 </div></td><td><div><p>Custodian.assignedCustodian</p>
 </div></td><td><div><p>Composition.custodian</p>
 </div></td></tr><tr><td><div><p>FRLMOrganisation.identifier</p>
@@ -513,7 +513,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMHealthProfessional.identifier</p>
 </div></td><td><div><p>AssignedEntity.id</p>
 </div></td><td><div><p>Practitioner.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMHealthProfessional.name</p>
+</div></td></tr><tr><td><div><p>FRLMHealthProfessional.name (FRLMHumanName)</p>
 </div></td><td /><td><div><p>Practitioner.name</p>
 </div></td></tr><tr><td><div><p>FRLMHealthProfessional.address</p>
 </div></td><td><div><p>AssignedEntity.addr</p>
@@ -529,7 +529,7 @@ serviceEvent.lab:statusCode</p>
 </div></td><td><div><p>PractitionerRole.organization</p>
 </div></td></tr><tr><td><div><p>FRLMHealthProfessional.professionalRole.specialty</p>
 </div></td><td /><td><div><p>PractitionerRole.specialty</p>
-</div></td></tr><tr><td><div><p>FRLMHealthProfessional.name</p>
+</div></td></tr><tr><td><div><p>FRLMHealthProfessional.name (FRLMHumanName)</p>
 </div></td><td><div><p>Person.name</p>
 </div></td><td><div><p>Practitioner.name</p>
 </div></td></tr><tr><td><div><p>FRLMHumanName.use</p>
@@ -554,7 +554,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantProfessional</p>
 </div></td><td><div><p>Informant.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantOrganisation</p>
+</div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantOrganisation (FRLMOrganisation)</p>
 </div></td><td><div><p>Informant.assignedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMInformant.informant[x].informantPersonne[x]</p>
@@ -569,7 +569,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional</p>
 </div></td><td><div><p>InformationRecipient.intendedRecipient</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation</p>
+</div></td></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation (FRLMOrganisation)</p>
 </div></td><td><div><p>InformationRecipient.intendedRecipient</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient</p>
@@ -605,7 +605,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMOrder.accessionNumber</p>
 </div></td><td /><td><div><p>ServiceRequest.identifier</p>
 </div></td></tr><tr><td><div><p><strong>FRLMOrganisation</strong></p>
-</div></td><td><div><p>assignedEntity.representedOrganization</p>
+</div></td><td><div><p><strong>assignedEntity.representedOrganization</strong></p>
 </div></td><td><div><p><strong>Organization</strong></p>
 </div></td></tr><tr><td><div><p>FRLMOrganisation.identifier</p>
 </div></td><td><div><p>Organization.id</p>
@@ -641,7 +641,7 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMParticipant.participant.participantProfessional</p>
 </div></td><td><div><p>Participant1.associatedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
-</div></td></tr><tr><td><div><p>FRLMParticipant.participant.participantOrganisation</p>
+</div></td></tr><tr><td><div><p>FRLMParticipant.participant.participantOrganisation (FRLMOrganisation)</p>
 </div></td><td><div><p>Participant1.associatedEntity</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p>FRLMParticipant.participant.participantDevice</p>
@@ -655,7 +655,7 @@ serviceEvent.lab:statusCode</p>
 </div></td><td><div><p>Extension.extension:party.value[x]</p>
 </div></td></tr><tr><td><div><p><strong>FRLMPatient</strong></p>
 </div></td><td><div><p><strong>recordTarget</strong></p>
-</div></td><td><div><p><strong>Patient</strong></p>
+</div></td><td><div><p><strong>FRPatientINSDocument</strong></p>
 </div></td></tr><tr><td><div><p>FRLMPatient.identifier</p>
 </div></td><td><div><p>PatientRole.id</p>
 </div></td><td><div><p>Patient.identifier</p>
@@ -665,10 +665,10 @@ serviceEvent.lab:statusCode</p>
 </div></td></tr><tr><td><div><p>FRLMPatient.telecom</p>
 </div></td><td><div><p>PatientRole.telecom</p>
 </div></td><td><div><p>Patient.telecom</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.name</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.name (FRLMHumanName)</p>
 </div></td><td><div><p>Patient.name</p>
 </div></td><td><div><p>Patient.name:officialName</p>
-</div></td></tr><tr><td><div><p>FRLMPatient.name</p>
+</div></td></tr><tr><td><div><p>FRLMPatient.name (FRLMHumanName)</p>
 </div></td><td><div><p>Patient.name</p>
 </div></td><td><div><p>Patient.name:usualName</p>
 </div></td></tr><tr><td><div><p>FRLMPatient.administrativeGender</p>
@@ -720,7 +720,7 @@ item.given</p>
 </div></td><td><div><p><strong>RelatedPerson</strong></p>
 </div></td></tr><tr><td><div><p>FRLMRelatedPerson.identifier</p>
 </div></td><td /><td><div><p>RelatedPerson.identifier</p>
-</div></td></tr><tr><td><div><p>FRLMRelatedPerson.name</p>
+</div></td></tr><tr><td><div><p>FRLMRelatedPerson.name (FRLMHumanName)</p>
 </div></td><td /><td><div><p>RelatedPerson.name</p>
 </div></td></tr><tr><td><div><p>FRLMRelatedPerson.subject</p>
 </div></td><td /><td><div><p>RelatedPerson.patient</p>
@@ -745,7 +745,7 @@ item.given</p>
 </div></td><td /><td><div><p>RelatedPerson.period</p>
 </div></td></tr><tr><td><div><p>FRLMRelatedPerson.communication</p>
 </div></td><td /><td><div><p>RelatedPerson.communication</p>
-</div></td></tr><tr><td><div><p>FRLMRelatedPerson.name</p>
+</div></td></tr><tr><td><div><p>FRLMRelatedPerson.name (FRLMHumanName)</p>
 </div></td><td><div><p>Person.name</p>
 </div></td><td><div><p>RelatedPerson.name</p>
 </div></td></tr><tr><td><div><p>FRLMHumanName.use</p>
@@ -815,7 +815,7 @@ item.given</p>
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Package ans.fr.document-core#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-09-02 10:43:00 +0000">
+  <span title="2026-09-02 12:54:00 +0000">
     2026-09-02
   </span>
 
