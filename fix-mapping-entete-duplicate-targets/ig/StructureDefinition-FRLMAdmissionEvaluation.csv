@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMAdmissionEvaluation","FRLMAdmissionEvaluation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Admission Evaluation","Section Évaluation à l'admission","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMAdmissionEvaluation.codeSection","FRLMAdmissionEvaluation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMAdmissionEvaluation.titleSection","FRLMAdmissionEvaluation.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMAdmissionEvaluation.description","FRLMAdmissionEvaluation.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMAdmissionEvaluation.author[x]","FRLMAdmissionEvaluation.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMAdmissionEvaluation.author[x].authorProfessional","FRLMAdmissionEvaluation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMAdmissionEvaluation.author[x].authorOrganisation","FRLMAdmissionEvaluation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMAdmissionEvaluation.author[x].authorDevice","FRLMAdmissionEvaluation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMAdmissionEvaluation.informant","FRLMAdmissionEvaluation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMAdmissionEvaluation.subSection","FRLMAdmissionEvaluation.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMAdmissionEvaluation.entry","FRLMAdmissionEvaluation.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMAdmissionEvaluation.entry.encounterInformation","FRLMAdmissionEvaluation.entry.encounterInformation","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}
+","Entrée Informations sur la rencontre","Entrée Informations sur la rencontre","","","","","","","","","",,,,,"",,,,"FRLMAdmissionEvaluation.entry.encounterInformation",0,1,"",""
+"FRLMAdmissionEvaluation.entry.objectiveFindings","FRLMAdmissionEvaluation.entry.objectiveFindings","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+","Constatations objectives","Constatations objectives","","","","","","","","","",,,,,"",,,,"FRLMAdmissionEvaluation.entry.objectiveFindings",0,*,"",""
+"FRLMAdmissionEvaluation.entry.functionalStatus[x]","FRLMAdmissionEvaluation.entry.functionalStatus[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Statut fonctionnel","Statut fonctionnel","","","","","","","","","",,,,,"",,,,"FRLMAdmissionEvaluation.entry.functionalStatus[x]",0,*,"",""
+"FRLMAdmissionEvaluation.entry.note","FRLMAdmissionEvaluation.entry.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMAdmissionEvaluation.entry.note",0,1,"",""

@@ -1,0 +1,305 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRDeviceLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRDeviceLMCDAFHIR</b></p><a name=\"FRDeviceLMCDAFHIR\"> </a><a name=\"hcFRDeviceLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMDevice.html\">Logical model - Device</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html\">CDA - FR Dispositif medical</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice\">FRLMDevice</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.participant.participantRole.playingDevice\">Supply.participant.participantRole.playingDevice</a></td><td>1..1</td><td>todo</td><td>Le modèle métier FRLMDevice correspond à la composante playingDevice portée dans l'entrée CDA FRCDADispositifMedical.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.identifier\">FRLMDevice.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.participant.participantRole.id\">Supply.participant.participantRole.id</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.udi\">FRLMDevice.udi</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.participant.participantRole.id\">Supply.participant.participantRole.id</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.manufacturer\">FRLMDevice.manufacturer</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de fabricant dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.manufactureDate\">FRLMDevice.manufactureDate</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de date de fabrication dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.expiryDate\">FRLMDevice.expiryDate</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de date d'expiration dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.lotNumber\">FRLMDevice.lotNumber</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de numéro de lot dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.serialNumber\">FRLMDevice.serialNumber</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de numéro de série dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name\">FRLMDevice.name</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.text\">Supply.text</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name.value\">FRLMDevice.name.value</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.text\">Supply.text</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name.type\">FRLMDevice.name.type</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite pour typer le nom dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.modelNumber\">FRLMDevice.modelNumber</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de numéro de modèle dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.version\">FRLMDevice.version</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ explicite de version dans FRCDADispositifMedical.playingDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.type\">FRLMDevice.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.participant.participantRole.playingDevice.code\">Supply.participant.participantRole.playingDevice.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.note\">FRLMDevice.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html#s-Supply.text\">Supply.text</a></td><td>0..1</td><td>todo</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMDevice.html\">Logical model - Device</a> to <a href=\"http://hl7.org/fhir/R4/device.html\">Device</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice\">FRLMDevice</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device\">Device</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.identifier\">FRLMDevice.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.identifier\">Device.identifier</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.udi\">FRLMDevice.udi</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.udiCarrier.deviceIdentifier\">Device.udiCarrier.deviceIdentifier</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.manufacturer\">FRLMDevice.manufacturer</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.manufacturer\">Device.manufacturer</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.manufactureDate\">FRLMDevice.manufactureDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.manufactureDate\">Device.manufactureDate</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.expiryDate\">FRLMDevice.expiryDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.expirationDate\">Device.expirationDate</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.lotNumber\">FRLMDevice.lotNumber</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.lotNumber\">Device.lotNumber</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.serialNumber\">FRLMDevice.serialNumber</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.serialNumber\">Device.serialNumber</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name\">FRLMDevice.name</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.deviceName\">Device.deviceName</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name.value\">FRLMDevice.name.value</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.deviceName.name\">Device.deviceName.name</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.name.type\">FRLMDevice.name.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.deviceName.type\">Device.deviceName.type</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.modelNumber\">FRLMDevice.modelNumber</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.modelNumber\">Device.modelNumber</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.version\">FRLMDevice.version</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.version.value\">Device.version.value</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.type\">FRLMDevice.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.type\">Device.type</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMDevice.html#s-FRLMDevice.note\">FRLMDevice.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"http://hl7.org/fhir/R4/device.html#s-Device.note\">Device.note</a></td><td>0..*</td><td>todo</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Dispositif médical\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADispositifMedical, puis vers la ressource FHIR Device."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.participant.participantRole.playingDevice" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDADispositifMedical.participant.participantRole.playingDevice" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Le modèle métier FRLMDevice correspond à la composante playingDevice portée dans l'entrée CDA FRCDADispositifMedical." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.participant.participantRole.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.udi" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.participant.participantRole.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.manufacturer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de fabricant dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.manufactureDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de date de fabrication dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.expiryDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de date d'expiration dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.lotNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de numéro de lot dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.serialNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de numéro de série dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name.value" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite pour typer le nom dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.modelNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de numéro de modèle dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.version" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ explicite de version dans FRCDADispositifMedical.playingDevice." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.participant.participantRole.playingDevice.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Supply.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "http://hl7.org/fhir/StructureDefinition/Device" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "4.0.1" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.udi" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.udiCarrier.deviceIdentifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.manufacturer" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.manufacturer" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.manufactureDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.manufactureDate" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.expiryDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.expirationDate" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.lotNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.lotNumber" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.serialNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.serialNumber" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.deviceName" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name.value" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.deviceName.name" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.name.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.deviceName.type" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.modelNumber" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.modelNumber" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.version" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.version.value" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.type" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMDevice.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Device.note" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

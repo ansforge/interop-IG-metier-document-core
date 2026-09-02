@@ -1,0 +1,396 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSpecimenLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRSpecimenLMCDAFHIR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRSpecimenLMCDAFHIR</b></p><a name=\"FRSpecimenLMCDAFHIR\"> </a><a name=\"hcFRSpecimenLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMSpecimen.html\">Logical model - FR LM Specimen</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html\">CDA - FR Prelevement</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen\">FRLMSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure\">Procedure</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.identifier\">FRLMSpecimen.identifier</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.id\">Procedure.id</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.status\">FRLMSpecimen.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.statusCode\">Procedure.statusCode</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.type\">FRLMSpecimen.type</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.code\">Procedure.code</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant\">Procedure.participant</a></td><td>1..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.parentSpecimen\">FRLMSpecimen.parentSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:EchantillonPreleve\">Procedure.participant:EchantillonPreleve</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.request\">FRLMSpecimen.request</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.combined\">FRLMSpecimen.combined</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.performer[x]\">FRLMSpecimen.collection.performer[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.performer\">Procedure.performer</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.collected[x]\">FRLMSpecimen.collection.collected[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.effectiveTime\">Procedure.effectiveTime</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.quantity\">FRLMSpecimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.method\">FRLMSpecimen.collection.method</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.device\">FRLMSpecimen.collection.device</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:DispositifUtilise\">Procedure.participant:DispositifUtilise</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.additive[x]\">FRLMSpecimen.collection.additive[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:ProduitUtilise\">Procedure.participant:ProduitUtilise</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.bodySite\">FRLMSpecimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.targetSiteCode\">Procedure.targetSiteCode</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.receivedDate\">FRLMSpecimen.receivedDate</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.entryRelationship.act.effectiveTime\">Procedure.entryRelationship.act.effectiveTime</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.specimenQuantity\">FRLMSpecimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.containerDevice\">FRLMSpecimen.container.containerDevice</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.condition\">FRLMSpecimen.condition</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.note\">FRLMSpecimen.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.text\">Procedure.text</a></td><td>0..1</td><td>todo</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMSpecimen.html\">Logical model - FR LM Specimen</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html\">Specimen - FR Specimen Document</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen\">FRLMSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen\">Specimen</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.identifier\">FRLMSpecimen.identifier</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.identifier\">Specimen.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.status\">FRLMSpecimen.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.status\">Specimen.status</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.type\">FRLMSpecimen.type</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.type\">Specimen.type</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMPatient.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMLocation.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.parentSpecimen\">FRLMSpecimen.parentSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.parent\">Specimen.parent</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.request\">FRLMSpecimen.request</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.request\">Specimen.request</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.combined\">FRLMSpecimen.combined</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.performer[x]\">FRLMSpecimen.collection.performer[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.collector\">Specimen.collection.collector</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.collected[x]\">FRLMSpecimen.collection.collected[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.collected[x]\">Specimen.collection.collected[x]</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.quantity\">FRLMSpecimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.quantity\">Specimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.method\">FRLMSpecimen.collection.method</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.method\">Specimen.collection.method</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.device\">FRLMSpecimen.collection.device</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.bodySite\">FRLMSpecimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.bodySite\">Specimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.receivedDate\">FRLMSpecimen.receivedDate</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.receivedTime\">Specimen.receivedTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.additive[x]\">FRLMSpecimen.collection.additive[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.processing.additive\">Specimen.processing.additive</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.specimenQuantity\">FRLMSpecimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.container.specimenQuantity\">Specimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.containerDevice\">FRLMSpecimen.container.containerDevice</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.container.type.extension:device\">Specimen.container.type.extension:device</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.condition\">FRLMSpecimen.condition</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.condition\">Specimen.condition</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.note\">FRLMSpecimen.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.note\">Specimen.note</a></td><td>0..*</td><td>todo</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSpecimenLMCDAFHIR</b></p><a name=\"en-FRSpecimenLMCDAFHIR\"> </a><a name=\"en-hcFRSpecimenLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMSpecimen.html\">Logical model - FR LM Specimen</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html\">CDA - FR Prelevement</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen\">FRLMSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure\">Procedure</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.identifier\">FRLMSpecimen.identifier</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.id\">Procedure.id</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.status\">FRLMSpecimen.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.statusCode\">Procedure.statusCode</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.type\">FRLMSpecimen.type</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.code\">Procedure.code</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant\">Procedure.participant</a></td><td>1..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.parentSpecimen\">FRLMSpecimen.parentSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:EchantillonPreleve\">Procedure.participant:EchantillonPreleve</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.request\">FRLMSpecimen.request</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.combined\">FRLMSpecimen.combined</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.performer[x]\">FRLMSpecimen.collection.performer[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.performer\">Procedure.performer</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.collected[x]\">FRLMSpecimen.collection.collected[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.effectiveTime\">Procedure.effectiveTime</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.quantity\">FRLMSpecimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.method\">FRLMSpecimen.collection.method</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.device\">FRLMSpecimen.collection.device</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:DispositifUtilise\">Procedure.participant:DispositifUtilise</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.additive[x]\">FRLMSpecimen.collection.additive[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.participant:ProduitUtilise\">Procedure.participant:ProduitUtilise</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.bodySite\">FRLMSpecimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.targetSiteCode\">Procedure.targetSiteCode</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.receivedDate\">FRLMSpecimen.receivedDate</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.entryRelationship.act.effectiveTime\">Procedure.entryRelationship.act.effectiveTime</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.specimenQuantity\">FRLMSpecimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.containerDevice\">FRLMSpecimen.container.containerDevice</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.condition\">FRLMSpecimen.condition</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.note\">FRLMSpecimen.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html#s-Procedure.text\">Procedure.text</a></td><td>0..1</td><td>todo</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMSpecimen.html\">Logical model - FR LM Specimen</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html\">Specimen - FR Specimen Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen\">FRLMSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen\">Specimen</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.identifier\">FRLMSpecimen.identifier</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.identifier\">Specimen.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.status\">FRLMSpecimen.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.status\">Specimen.status</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.type\">FRLMSpecimen.type</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.type\">Specimen.type</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMPatient.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMLocation.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.specimenSource[x]\">FRLMSpecimen.specimenSource[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.subject\">Specimen.subject</a></td><td>1..1</td><td>todo</td><td>Cas où specimenSource[x] référence un FRLMDevice.</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.parentSpecimen\">FRLMSpecimen.parentSpecimen</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.parent\">Specimen.parent</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.request\">FRLMSpecimen.request</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.request\">Specimen.request</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.combined\">FRLMSpecimen.combined</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.performer[x]\">FRLMSpecimen.collection.performer[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.collector\">Specimen.collection.collector</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.collected[x]\">FRLMSpecimen.collection.collected[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.collected[x]\">Specimen.collection.collected[x]</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.quantity\">FRLMSpecimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.quantity\">Specimen.collection.quantity</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.method\">FRLMSpecimen.collection.method</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.method\">Specimen.collection.method</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.device\">FRLMSpecimen.collection.device</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.bodySite\">FRLMSpecimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.collection.bodySite\">Specimen.collection.bodySite</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.receivedDate\">FRLMSpecimen.receivedDate</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.receivedTime\">Specimen.receivedTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.collection.additive[x]\">FRLMSpecimen.collection.additive[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.processing.additive\">Specimen.processing.additive</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.specimenQuantity\">FRLMSpecimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.container.specimenQuantity\">Specimen.container.specimenQuantity</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.container.containerDevice\">FRLMSpecimen.container.containerDevice</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.container.type.extension:device\">Specimen.container.type.extension:device</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.condition\">FRLMSpecimen.condition</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.condition\">Specimen.condition</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMSpecimen.html#s-FRLMSpecimen.note\">FRLMSpecimen.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html#s-Specimen.note\">Specimen.note</a></td><td>0..*</td><td>todo</td><td/></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSpecimenLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRSpecimenLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Prélèvement\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prelevement" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.specimenSource[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.participant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.parentSpecimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.participant:EchantillonPreleve" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.request" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.combined" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.performer[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.performer" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.collected[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.quantity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.device" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.participant:DispositifUtilise" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.additive[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.participant:ProduitUtilise" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.targetSiteCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.receivedDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.entryRelationship.act.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.container.specimenQuantity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.container.containerDevice" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.condition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Procedure.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-specimen-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRSpecimenDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.status" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 3 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.type" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.specimenSource[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Cas où specimenSource[x] référence un FRLMPatient." ]
+       ]
+     ], [
+       fhir:index 5 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.specimenSource[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Cas où specimenSource[x] référence un FRLMLocation." ]
+       ]
+     ], [
+       fhir:index 6 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.specimenSource[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.subject" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Cas où specimenSource[x] référence un FRLMDevice." ]
+       ]
+     ], [
+       fhir:index 7 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.parentSpecimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.parent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 8 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.request" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.request" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 9 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.combined" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 10 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.performer[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.collection.collector" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 11 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.collected[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.collection.collected[x]" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 12 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.quantity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.collection.quantity" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 13 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.collection.method" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 14 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.device" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index 15 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.collection.bodySite" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 16 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.receivedDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.receivedTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 17 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.collection.additive[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.processing.additive" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 18 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.container.specimenQuantity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.container.specimenQuantity" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 19 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.container.containerDevice" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.container.type.extension:device" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 20 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.condition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.condition" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 21 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMSpecimen.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Specimen.note" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSpecimenLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

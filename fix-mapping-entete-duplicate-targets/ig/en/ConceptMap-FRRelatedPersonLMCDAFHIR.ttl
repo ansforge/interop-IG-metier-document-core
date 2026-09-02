@@ -1,0 +1,416 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRRelatedPersonLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRRelatedPersonLMCDAFHIR</b></p><a name=\"en-FRRelatedPersonLMCDAFHIR\"> </a><a name=\"en-hcFRRelatedPersonLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMRelatedPerson.html\">Logical model - FR LM Related Person</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html\">CDA - relatedEntity</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson\">FRLMRelatedPerson</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html#s-RelatedEntity\">RelatedEntity</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.identifier\">FRLMRelatedPerson.identifier</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de champ id explicite porté par relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.name\">FRLMRelatedPerson.name</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.subject\">FRLMRelatedPerson.subject</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Porté implicitement par le contexte : relatedEntity est un sous-élément du patient dans recordTarget.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.relationship\">FRLMRelatedPerson.relationship</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html#s-RelatedEntity.code\">RelatedEntity.code</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.address\">FRLMRelatedPerson.address</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html#s-RelatedEntity.addr\">RelatedEntity.addr</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.telecom\">FRLMRelatedPerson.telecom</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html#s-RelatedEntity.telecom\">RelatedEntity.telecom</a></td><td>1..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.gender\">FRLMRelatedPerson.gender</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié au sexe de la personne liée dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.birthDate\">FRLMRelatedPerson.birthDate</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la date de naissance de la personne liée dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.deceased\">FRLMRelatedPerson.deceased</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié au décès de la personne liée dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.multipleBirth\">FRLMRelatedPerson.multipleBirth</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la naissance multiple de la personne liée dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.photo\">FRLMRelatedPerson.photo</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la photo de la personne liée dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.period\">FRLMRelatedPerson.period</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la période de validité du lien dans relatedEntity.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.communication\">FRLMRelatedPerson.communication</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMRelatedPerson.html\">Logical model - FR LM Related Person</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-assigned-person.html\">CDA - assignedPerson</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.name\">FRLMRelatedPerson.name</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-assigned-person.html#s-Person.name\">Person.name</a></td><td>1..1</td><td>todo</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-FRLMHumanName.html\">Logical model - FR LM Human Name</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html\">CDA - Name</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.use\">FRLMHumanName.use</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.use\">PN.use</a></td><td>0..0</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.family\">FRLMHumanName.family</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.item.family\">PN.item.family</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.given\">FRLMHumanName.given</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.item.given\">PN.item.given</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.prefix\">FRLMHumanName.prefix</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.item.prefix\">PN.item.prefix</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.suffix\">FRLMHumanName.suffix</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.item.suffix\">PN.item.suffix</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.period\">FRLMHumanName.period</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html#s-PN.validTime\">PN.validTime</a></td><td>0..0</td><td>todo</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-FRLMRelatedPerson.html\">Logical model - FR LM Related Person</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html\">FR RelatedPerson Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson\">FRLMRelatedPerson</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson\">RelatedPerson</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.identifier\">FRLMRelatedPerson.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.identifier\">RelatedPerson.identifier</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.name\">FRLMRelatedPerson.name</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.name\">RelatedPerson.name</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.subject\">FRLMRelatedPerson.subject</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.patient\">RelatedPerson.patient</a></td><td>1..1</td><td>todo</td><td>RelatedPerson.patient.resolve().ofType(Patient)</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.relationship\">FRLMRelatedPerson.relationship</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.relationship\">RelatedPerson.relationship</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.address\">FRLMRelatedPerson.address</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.address\">RelatedPerson.address</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.telecom\">FRLMRelatedPerson.telecom</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.telecom\">RelatedPerson.telecom</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.gender\">FRLMRelatedPerson.gender</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.gender\">RelatedPerson.gender</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.birthDate\">FRLMRelatedPerson.birthDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.birthDate\">RelatedPerson.birthDate</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.deceased\">FRLMRelatedPerson.deceased</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedPerson R4 ne porte pas nativement d'indicateur de décès.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.multipleBirth\">FRLMRelatedPerson.multipleBirth</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedPerson R4 ne porte pas nativement d'indicateur de naissance multiple.</td></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.photo\">FRLMRelatedPerson.photo</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.photo\">RelatedPerson.photo</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.period\">FRLMRelatedPerson.period</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.period\">RelatedPerson.period</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.communication\">FRLMRelatedPerson.communication</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.communication\">RelatedPerson.communication</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.communication.language\">FRLMRelatedPerson.communication.language</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.communication.language\">RelatedPerson.communication.language</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMRelatedPerson.html#s-FRLMRelatedPerson.communication.preferred\">FRLMRelatedPerson.communication.preferred</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.communication.preferred\">RelatedPerson.communication.preferred</a></td><td>0..1</td><td>todo</td><td/></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-FRLMHumanName.html\">Logical model - FR LM Human Name</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html\">FR RelatedPerson Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.family\">FRLMHumanName.family</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.name.family\">RelatedPerson.name.family</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.given\">FRLMHumanName.given</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.name.given\">RelatedPerson.name.given</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.prefix\">FRLMHumanName.prefix</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.name.prefix\">RelatedPerson.name.prefix</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMHumanName.html#s-FRLMHumanName.suffix\">FRLMHumanName.suffix</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html#s-RelatedPerson.name.suffix\">RelatedPerson.name.suffix</a></td><td>0..*</td><td>todo</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRRelatedPersonLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Personne liée au patient\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et la ressource FHIR \\\"RelatedPerson\\\"\n\nCe mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.)."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-related-entity" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedEntity" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "relatedEntity" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas de champ id explicite porté par relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.name" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.subject" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Porté implicitement par le contexte : relatedEntity est un sous-élément du patient dans recordTarget." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.relationship" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedEntity.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.address" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedEntity.addr" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.telecom" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedEntity.telecom" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.gender" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié au sexe de la personne liée dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.birthDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié à la date de naissance de la personne liée dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.deceased" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié au décès de la personne liée dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.multipleBirth" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié à la naissance multiple de la personne liée dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.photo" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié à la photo de la personne liée dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié à la période de validité du lien dans relatedEntity." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.communication" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity." ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.name" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Person.name" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.use" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.use" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.family" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.item.family" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.given" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.item.given" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.prefix" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.item.prefix" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.suffix" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.item.suffix" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "PN.validTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.name" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.name" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.subject" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.patient" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "RelatedPerson.patient.resolve().ofType(Patient)" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.relationship" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.relationship" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.address" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.address" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.telecom" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.telecom" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.gender" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.gender" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.birthDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.birthDate" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.deceased" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "RelatedPerson R4 ne porte pas nativement d'indicateur de décès." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.multipleBirth" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "RelatedPerson R4 ne porte pas nativement d'indicateur de naissance multiple." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.photo" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.photo" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.period" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.communication" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.communication" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.communication.language" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.communication.language" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMRelatedPerson.communication.preferred" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.communication.preferred" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.family" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.name.family" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.given" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.name.given" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.prefix" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.name.prefix" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHumanName.suffix" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "RelatedPerson.name.suffix" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

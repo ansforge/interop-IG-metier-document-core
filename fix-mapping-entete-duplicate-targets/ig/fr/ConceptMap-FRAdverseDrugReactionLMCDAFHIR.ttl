@@ -1,0 +1,248 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdverseDrugReactionLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRAdverseDrugReactionLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRAdverseDrugReactionLMCDAFHIR</b></p><a name=\"FRAdverseDrugReactionLMCDAFHIR\"> </a><a name=\"hcFRAdverseDrugReactionLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMAdverseDrugReaction.html\">Modèle logique métier - FR LM Adverse Drug Reaction</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html\">CDA - FR Effet indesirable</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction\">FRLMAdverseDrugReaction</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation\">Observation</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.header.identifier\">FRLMAdverseDrugReaction.header.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.id\">Observation.id</a></td><td>1..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.header.status\">FRLMAdverseDrugReaction.header.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.statusCode\">Observation.statusCode</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.adverseDrugReactionType\">FRLMAdverseDrugReaction.adverseDrugReactionType</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.code\">Observation.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.header.date\">FRLMAdverseDrugReaction.header.date</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.effectiveTime\">Observation.effectiveTime</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.detected\">FRLMAdverseDrugReaction.detected</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">La date de détection de l'effet indésirable n'est pas mappée dans le profil CDA FRCDAEffetIndesirable. Elle est mappée dans le profil FHIR FRAdverseEventDocument.</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.value\">FRLMAdverseDrugReaction.value</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.value\">Observation.value</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.medicationAdministration\">FRLMAdverseDrugReaction.medicationAdministration</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.entryRelationship:frTraitement\">Observation.entryRelationship:frTraitement</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.reaction\">FRLMAdverseDrugReaction.reaction</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.entryRelationship:frProbleme\">Observation.entryRelationship:frProbleme</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.causalityAssessment\">FRLMAdverseDrugReaction.causalityAssessment</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.entryRelationship:frImputabiliteEffetIndesirable\">Observation.entryRelationship:frImputabiliteEffetIndesirable</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.severity\">FRLMAdverseDrugReaction.severity</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.entryRelationship:frGraviteEffetIndesirable\">Observation.entryRelationship:frGraviteEffetIndesirable</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.outcome\">FRLMAdverseDrugReaction.outcome</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-effet-indesirable.html#s-Observation.entryRelationship:frEvolutionEffetIndesirable\">Observation.entryRelationship:frEvolutionEffetIndesirable</a></td><td>0..1</td><td>todo</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMAdverseDrugReaction.html\">Modèle logique métier - FR LM Adverse Drug Reaction</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html\">AdverseEvent - FR adverse event Document</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction\">FRLMAdverseDrugReaction</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent\">AdverseEvent</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.header.identifier\">FRLMAdverseDrugReaction.header.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.identifier\">AdverseEvent.identifier</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.adverseDrugReactionType\">FRLMAdverseDrugReaction.adverseDrugReactionType</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.category\">AdverseEvent.category</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.header.date\">FRLMAdverseDrugReaction.header.date</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.date\">AdverseEvent.date</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.detected\">FRLMAdverseDrugReaction.detected</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.detected\">AdverseEvent.detected</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.value\">FRLMAdverseDrugReaction.value</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.medicationAdministration\">FRLMAdverseDrugReaction.medicationAdministration</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.suspectEntity.instance\">AdverseEvent.suspectEntity.instance</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.reaction\">FRLMAdverseDrugReaction.reaction</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.resultingCondition\">AdverseEvent.resultingCondition</a></td><td>0..*</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.causalityAssessment\">FRLMAdverseDrugReaction.causalityAssessment</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.suspectEntity.causality\">AdverseEvent.suspectEntity.causality</a></td><td>0..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.severity\">FRLMAdverseDrugReaction.severity</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.severity\">AdverseEvent.severity</a></td><td>1..1</td><td>todo</td></tr><tr><td><a href=\"StructureDefinition-FRLMAdverseDrugReaction.html#s-FRLMAdverseDrugReaction.outcome\">FRLMAdverseDrugReaction.outcome</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-adverse-event-document.html#s-AdverseEvent.outcome\">AdverseEvent.outcome</a></td><td>0..1</td><td>todo</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdverseDrugReactionLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Effet Indésirable\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil CDA FRCDAEffetIndesirable, puis vers le profil FHIR FRAdverseEventDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effet-indesirable" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAEffetIndesirable" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.adverseDrugReactionType" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.header.date" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.detected" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "La date de détection de l'effet indésirable n'est pas mappée dans le profil CDA FRCDAEffetIndesirable. Elle est mappée dans le profil FHIR FRAdverseEventDocument." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.value" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.value" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.medicationAdministration" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frTraitement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.reaction" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frProbleme" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.causalityAssessment" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frImputabiliteEffetIndesirable" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.severity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frGraviteEffetIndesirable" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.outcome" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frEvolutionEffetIndesirable" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-adverse-event-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRAdverseEventDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.adverseDrugReactionType" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.category" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.header.date" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.date" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.detected" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.detected" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.value" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.medicationAdministration" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.suspectEntity.instance" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.reaction" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.resultingCondition" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.causalityAssessment" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.suspectEntity.causality" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.severity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.severity" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMAdverseDrugReaction.outcome" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "AdverseEvent.outcome" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdverseDrugReactionLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

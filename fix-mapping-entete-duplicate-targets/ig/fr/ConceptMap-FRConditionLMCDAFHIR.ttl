@@ -1,0 +1,309 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConditionLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRConditionLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRConditionLMCDAFHIR</b></p><a name=\"FRConditionLMCDAFHIR\"> </a><a name=\"hcFRConditionLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMCondition.html\">Logical model - FR LM Condition</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html\">CDA - FR Probleme</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition\">FRLMCondition</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation\">Observation</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.header.identifier\">FRLMCondition.header.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.id\">Observation.id</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.type\">FRLMCondition.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.code\">Observation.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.problem\">FRLMCondition.problem</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.value\">Observation.value</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period\">FRLMCondition.period</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.effectiveTime\">Observation.effectiveTime</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period.onsetDate\">FRLMCondition.period.onsetDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.effectiveTime\">Observation.effectiveTime</a></td><td>1..1</td><td>todo</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime.</td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period.endDate\">FRLMCondition.period.endDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.effectiveTime\">Observation.effectiveTime</a></td><td>1..1</td><td>todo</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime.</td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.header.status\">FRLMCondition.header.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.entryRelationship:frStatutDuProbleme\">Observation.entryRelationship:frStatutDuProbleme</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.severity\">FRLMCondition.severity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.entryRelationship:frSeverite\">Observation.entryRelationship:frSeverite</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.diagnosisAssertionStatus\">FRLMCondition.diagnosisAssertionStatus</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.entryRelationship:frCertitude\">Observation.entryRelationship:frCertitude</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.clinicalStatus\">FRLMCondition.clinicalStatus</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.entryRelationship:frStatutCliniqueDuPatient\">Observation.entryRelationship:frStatutCliniqueDuPatient</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.bodySite\">FRLMCondition.bodySite</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de bodySite dans le profil CDA FRCDAProbleme.</td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.stage\">FRLMCondition.stage</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de stage dans le profil CDA FRCDAProbleme.</td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.reference\">FRLMCondition.reference</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.reference.externalDocument.text.reference\">Observation.reference.externalDocument.text.reference</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.note\">FRLMCondition.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html#s-Observation.entryRelationship:frCommentaireER\">Observation.entryRelationship:frCommentaireER</a></td><td>0..1</td><td>todo</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMCondition.html\">Logical model - FR LM Condition</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html\">Condition - FR Condition Document</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition\">FRLMCondition</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition\">Condition</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.header.identifier\">FRLMCondition.header.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.identifier\">Condition.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.type\">FRLMCondition.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.category\">Condition.category</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.problem\">FRLMCondition.problem</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.code\">Condition.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.header.status\">FRLMCondition.header.status</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.clinicalStatus\">Condition.clinicalStatus</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period\">FRLMCondition.period</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td colspan=\"3\"/><td>La période source est portée par deux éléments FHIR distincts: onsetDateTime et abatementDateTime.</td></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period.onsetDate\">FRLMCondition.period.onsetDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.onset[x]:onsetDateTime\">Condition.onset[x]:onsetDateTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.period.endDate\">FRLMCondition.period.endDate</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.abatement[x]:abatementDateTime\">Condition.abatement[x]:abatementDateTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.severity\">FRLMCondition.severity</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.severity\">Condition.severity</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.diagnosisAssertionStatus\">FRLMCondition.diagnosisAssertionStatus</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.verificationStatus\">Condition.verificationStatus</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.clinicalStatus\">FRLMCondition.clinicalStatus</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.stage.summary\">Condition.stage.summary</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.bodySite\">FRLMCondition.bodySite</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.bodySite\">Condition.bodySite</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.stage\">FRLMCondition.stage</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.stage.summary\">Condition.stage.summary</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.reference\">FRLMCondition.reference</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.evidence.detail\">Condition.evidence.detail</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMCondition.html#s-FRLMCondition.note\">FRLMCondition.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html#s-Condition.note\">Condition.note</a></td><td>0..*</td><td>todo</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConditionLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRConditionLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Problème\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-probleme" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAProbleme" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.id" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.problem" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.value" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period.onsetDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period.endDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frStatutDuProbleme" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.severity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frSeverite" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.diagnosisAssertionStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frCertitude" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.clinicalStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frStatutCliniqueDuPatient" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite de bodySite dans le profil CDA FRCDAProbleme." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.stage" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune correspondance explicite de stage dans le profil CDA FRCDAProbleme." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.reference" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.reference.externalDocument.text.reference" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-condition-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRConditionDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.category" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.problem" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.clinicalStatus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "La période source est portée par deux éléments FHIR distincts: onsetDateTime et abatementDateTime." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period.onsetDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.onset[x]:onsetDateTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.period.endDate" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.abatement[x]:abatementDateTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.severity" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.severity" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.diagnosisAssertionStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.verificationStatus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.clinicalStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.stage.summary" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.bodySite" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.stage" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.stage.summary" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.reference" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.evidence.detail" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMCondition.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Condition.note" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRConditionLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

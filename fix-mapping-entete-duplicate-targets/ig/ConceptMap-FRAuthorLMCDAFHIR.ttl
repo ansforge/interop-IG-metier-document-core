@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRAuthorLMCDAFHIR"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRAuthorLMCDAFHIR</b></p><a name=\"FRAuthorLMCDAFHIR\"> </a><a name=\"hcFRAuthorLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-FRLMHeaderDocument.html\">Logical model - FR LM Header Document</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html\">CDA - author</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html#s-Author\">Author</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html#s-Author.assignedAuthor\">Author.assignedAuthor</a></td><td>1..1</td><td>todo</td><td>Cas où l'auteur est de type FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR), FRLMOrganisation (porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR) ou FRLMDevice (porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR).</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-FRLMHeaderDocument.html\">Logical model - FR LM Header Document</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html\">FR Composition Document</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Commentaire</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.author\">Composition.author</a></td><td>1..*</td><td>todo</td><td>Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR. Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR. Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRAuthorLMCDAFHIR</b></p><a name=\"en-FRAuthorLMCDAFHIR\"> </a><a name=\"en-hcFRAuthorLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMHeaderDocument.html\">Logical model - FR LM Header Document</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html\">CDA - author</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html#s-Author\">Author</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-author.html#s-Author.assignedAuthor\">Author.assignedAuthor</a></td><td>1..1</td><td>todo</td><td>Cas où l'auteur est de type FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR), FRLMOrganisation (porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR) ou FRLMDevice (porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR).</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMHeaderDocument.html\">Logical model - FR LM Header Document</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html\">FR Composition Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMHeaderDocument.html#s-FRLMHeaderDocument.author[x]\">FRLMHeaderDocument.author[x]</a></td><td>1..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html#s-Composition.author\">Composition.author</a></td><td>1..*</td><td>todo</td><td>Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR. Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR. Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRAuthorLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Auteur\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-02T10:43:57+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre l'élément métier \\\"author[x]\\\" du modèle FRLMHeaderDocument et l'élément CDA \\\"author\\\"\n - Mapping 2 : entre l'élément métier \\\"author[x]\\\" et l'élément FHIR \\\"Composition.author\\\" "] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index 0 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-author" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHeaderDocument.author[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Author" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHeaderDocument.author[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Author.assignedAuthor" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Cas où l'auteur est de type FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR), FRLMOrganisation (porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR) ou FRLMDevice (porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR)." ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index 0 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMHeaderDocument.author[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index 0 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Composition.author" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR. Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR. Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)." ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
