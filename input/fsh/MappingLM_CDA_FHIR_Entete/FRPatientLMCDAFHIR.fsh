@@ -57,6 +57,29 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #Patient.name
 * group[=].element[=].target.equivalence = #equivalent
 
+// Sous-groupe de mapping : modèle métier → CDA (nom du patient référencé par FRLMHumanName)
+// FRLMPatient.name référence le type métier séparé FRLMHumanName ; ses sous-champs sont
+// donc mappés dans un groupe dédié.
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient"
+
+// Identifie le type de nom
+* group[=].element[+].code = #FRLMHumanName.use
+* group[=].element[=].target.code = #Patient.name.use
+* group[=].element[=].target.equivalence = #equivalent
+// Nom
+* group[=].element[+].code = #FRLMHumanName.family
+* group[=].element[=].target.code = #Patient.name.item.family
+* group[=].element[=].target.equivalence = #equivalent
+// Prénom
+* group[=].element[+].code = #FRLMHumanName.given
+* group[=].element[=].target.code = #Patient.name.item.given
+* group[=].element[=].target.equivalence = #equivalent
+
+// Suite du mapping modèle métier → CDA (fr-cda-patient)
+* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"
+* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient"
+
 // Sexe administratif
 * group[=].element[+].code = #FRLMPatient.administrativeGender
 * group[=].element[=].target.code = #Patient.administrativeGenderCode
@@ -100,38 +123,23 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[+].code = #FRLMPatient.contact
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Patient.guardian (type CDA Guardian) n'est pas décomposé/profilé : adresse, téléphone, nom et organisation du représentant y sont tous portés globalement, sans champ dédié séparé."
 * group[=].element[+].code = #FRLMPatient.contact.address
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Adresse du représentant ; portée globalement par Patient.guardian, non décomposée."
 * group[=].element[+].code = #FRLMPatient.contact.telecom
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Téléphone du représentant ; porté globalement par Patient.guardian, non décomposé."
 * group[=].element[+].code = #FRLMPatient.contact.name
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
+* group[=].element[=].target.comment = "Nom du représentant ; porté globalement par Patient.guardian, non décomposé."
 * group[=].element[+].code = #FRLMPatient.contact.organization
 * group[=].element[=].target.code = #Patient.guardian
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient ; non adressable séparément dans le type CDA Guardian ici."
-
-// Sous-groupe de mapping : modèle métier → CDA (nom du patient référencé par FRLMHumanName)
-// FRLMPatient.name référence le type métier séparé FRLMHumanName ; ses sous-champs sont
-// donc mappés dans un groupe dédié.
-* group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
-* group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient"
-
-// Identifie le type de nom
-* group[=].element[+].code = #FRLMHumanName.use
-* group[=].element[=].target.code = #Patient.name.use
-* group[=].element[=].target.equivalence = #equivalent
-// Nom
-* group[=].element[+].code = #FRLMHumanName.family
-* group[=].element[=].target.code = #Patient.name.item.family
-* group[=].element[=].target.equivalence = #equivalent
-// Prénom
-* group[=].element[+].code = #FRLMHumanName.given
-* group[=].element[=].target.code = #Patient.name.item.given
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Organisation du représentant ; portée globalement par Patient.guardian, non décomposée. Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"

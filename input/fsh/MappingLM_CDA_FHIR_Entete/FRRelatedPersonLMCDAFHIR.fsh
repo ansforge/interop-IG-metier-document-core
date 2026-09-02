@@ -28,10 +28,8 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * group[=].element[=].target.equivalence = #unmatched
 * group[=].element[=].target.comment = "Pas de champ id explicite porté par relatedEntity."
 
-// Nom
-* group[=].element[+].code = #FRLMRelatedPerson.name
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous."
+// Nom : porté par RelatedEntity.relatedPerson, cf. groupes dédiés ci-dessous
+// (fr-cda-assigned-person puis fr-cda-name) pour le mapping concret.
 
 // Patient / usager concerné
 * group[=].element[+].code = #FRLMRelatedPerson.subject

@@ -30,10 +30,8 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.code = #AssignedEntity.id
 * group[=].element[=].target.equivalence = #equivalent
 
-// Nom
-* group[=].element[+].code = #FRLMHealthProfessional.name
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "AssignedEntity.assignedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupes dédiés ci-dessous."
+// Nom : porté par AssignedEntity.assignedPerson, cf. groupes dédiés ci-dessous
+// (fr-cda-assigned-person puis fr-cda-name) pour le mapping concret.
 
 // Adresse
 * group[=].element[+].code = #FRLMHealthProfessional.address
