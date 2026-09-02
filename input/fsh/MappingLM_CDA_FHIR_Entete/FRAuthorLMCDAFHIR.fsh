@@ -21,48 +21,18 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.display = "author"
 * group[=].element[=].target.equivalence = #equivalent
 
-// Auteur professionnel de santé
+// Auteur professionnel de santé, organisation ou système
 * group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #Author.assignedAuthor
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où l'auteur est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
-
-// Auteur organisation
-* group[=].element[+].code = #FRLMHeaderDocument.author[x]
-* group[=].element[=].target.code = #Author.assignedAuthor
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où l'auteur est de type FRLMOrganisation, porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR."
-
-// Auteur système
-* group[=].element[+].code = #FRLMHeaderDocument.author[x]
-* group[=].element[=].target.code = #Author.assignedAuthor
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où l'auteur est de type FRLMDevice, porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où l'auteur est de type FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR), FRLMOrganisation (porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR) ou FRLMDevice (porté par assignedAuthor.assignedAuthoringDevice, cf. FRDeviceLMCDAFHIR)."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"
 
-// Élément racine
+// Élément racine (professionnel de santé, organisation ou système)
 * group[=].element[+].code = #FRLMHeaderDocument.author[x]
 * group[=].element[=].target.code = #Composition.author
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole or Organization or Device)"
-
-// Auteur professionnel de santé
-* group[=].element[+].code = #FRLMHeaderDocument.author[x]
-* group[=].element[=].target.code = #Composition.author
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."
-
-// Auteur organisation
-* group[=].element[+].code = #FRLMHeaderDocument.author[x]
-* group[=].element[=].target.code = #Composition.author
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
-
-// Auteur système
-* group[=].element[+].code = #FRLMHeaderDocument.author[x]
-* group[=].element[=].target.code = #Composition.author
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."
+* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR. Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR. Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."

@@ -66,14 +66,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."
 
-// Informateur patient/usager
+// Informateur patient/usager ou personne de confiance
 * group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
-
-// Informateur personne de confiance
-* group[=].element[+].code = #FRLMInformant.informant[x].informantPersonne[x]
-* group[=].element[=].target.code = #Extension.extension:party.value[x]
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMRelatedPerson (Extension.extension:party.value[x].resolve().ofType(RelatedPerson)) — cf. FRRelatedPersonLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où informantPersonne[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR. Cas où informantPersonne[x] référence un FRLMRelatedPerson (Extension.extension:party.value[x].resolve().ofType(RelatedPerson)) — cf. FRRelatedPersonLMCDAFHIR."

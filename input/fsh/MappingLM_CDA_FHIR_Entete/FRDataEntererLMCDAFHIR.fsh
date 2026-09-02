@@ -26,17 +26,11 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #DataEnterer.time
 * group[=].element[=].target.equivalence = #equivalent
 
-// Opérateur de saisie professionnel de santé
+// Opérateur de saisie professionnel de santé ou patient/usager
 * group[=].element[+].code = #FRLMDataEnterer.dataEnterer[x]
 * group[=].element[=].target.code = #DataEnterer.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
-
-// Opérateur de saisie patient/usager
-* group[=].element[+].code = #FRLMDataEnterer.dataEnterer[x]
-* group[=].element[=].target.code = #DataEnterer.assignedEntity
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMPatient, cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR) ou un FRLMPatient (cf. FRPatientLMCDAFHIR)."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDataEnterer"
@@ -52,14 +46,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #Extension.extension:time.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 
-// Opérateur de saisie professionnel de santé
+// Opérateur de saisie professionnel de santé ou patient/usager
 * group[=].element[+].code = #FRLMDataEnterer.dataEnterer[x]
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMHealthProfessional (Extension.extension:party.value[x].resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
-
-// Opérateur de saisie patient/usager
-* group[=].element[+].code = #FRLMDataEnterer.dataEnterer[x]
-* group[=].element[=].target.code = #Extension.extension:party.value[x]
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où dataEnterer[x] référence un FRLMHealthProfessional (Extension.extension:party.value[x].resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR. Cas où dataEnterer[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
