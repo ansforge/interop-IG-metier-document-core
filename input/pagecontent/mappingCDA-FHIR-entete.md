@@ -76,6 +76,7 @@ Elements AS (
     cg.grp_type,
     e.key AS elem_index,
     json_extract(e.value, '$.code') AS elem_code,
+    json_extract(e.value, '$.display') AS elem_display,
     CASE
       WHEN json_extract(e.value, '$.code') LIKE '%.%'
        AND json_extract(t.value, '$.display') IS NOT NULL THEN
@@ -95,6 +96,7 @@ MetierToCDA AS (
     group_index,
     elem_index,
     elem_code AS Metier,
+    elem_display AS MetierDisplayCDA,
     elem_target_code AS CDA
   FROM Elements
   WHERE grp_type = 'CDA'
@@ -106,6 +108,7 @@ MetierToFHIR AS (
     group_index,
     elem_index,
     elem_code AS Metier,
+    elem_display AS MetierDisplayFHIR,
     elem_target_code AS FHIR
   FROM Elements
   WHERE grp_type = 'FHIR'
@@ -115,7 +118,9 @@ FinalMapping AS (
   -- Joint Métier->CDA avec Métier->FHIR sur le code métier (identique dans
   -- les deux groupes). Quand un même code métier est mappé vers plusieurs
   -- profils FHIR (ex: PractitionerRole ET Practitioner), la jointure
-  -- produit naturellement une ligne par cible FHIR.
+  -- produit naturellement une ligne par cible FHIR. Le display du code
+  -- métier (ex: nom du type métier séparé référencé) est récupéré côté
+  -- CDA ou, à défaut, côté FHIR.
   SELECT
     m.cm_id,
     m.Web,
@@ -124,6 +129,7 @@ FinalMapping AS (
     m.elem_index,
     f.group_index AS fhir_group_index,
     m.Metier,
+    COALESCE(m.MetierDisplayCDA, f.MetierDisplayFHIR) AS MetierDisplay,
     m.CDA,
     f.FHIR
   FROM MetierToCDA m
@@ -133,8 +139,9 @@ FinalMapping AS (
 )
 
 SELECT
-  CASE
-    WHEN Metier NOT LIKE '%.%' THEN
+  (CASE
+    WHEN Metier NOT LIKE '%.%'
+     OR (CDA NOT LIKE '%@%' AND CDA NOT LIKE '%.%') THEN
       '**' || Metier || '**'
 
     WHEN (LENGTH(Metier) - LENGTH(REPLACE(Metier, '.', ''))) > 2 THEN
@@ -151,10 +158,14 @@ SELECT
         + instr(substr(Metier, instr(Metier, '.') + 1), '.') + 1
       )
     ELSE Metier
-END AS Metier,
+  END)
+  -- Si le code métier référence un type métier séparé (ex: FRLMHumanName),
+  -- son nom est ajouté entre parenthèses, comme pour les cibles CDA/FHIR.
+  || CASE WHEN MetierDisplay IS NOT NULL THEN ' (' || MetierDisplay || ')' ELSE '' END
+AS Metier,
   CASE
-    WHEN CDA NOT LIKE '%@%' 
-     AND CDA NOT LIKE '%.%' THEN
+    WHEN Metier NOT LIKE '%.%'
+     OR (CDA NOT LIKE '%@%' AND CDA NOT LIKE '%.%') THEN
       '**' || CDA || '**'
 
     WHEN (LENGTH(CDA) - LENGTH(REPLACE(CDA, '.', ''))) > 2 THEN
@@ -173,7 +184,8 @@ END AS Metier,
     ELSE CDA
   END AS CDA,
   CASE
-    WHEN Metier NOT LIKE '%.%' THEN '**' || FHIR || '**'
+    WHEN Metier NOT LIKE '%.%'
+     OR (CDA NOT LIKE '%@%' AND CDA NOT LIKE '%.%') THEN '**' || FHIR || '**'
     ELSE FHIR
   END AS FHIR,
   Name AS \"Titre du profil\",

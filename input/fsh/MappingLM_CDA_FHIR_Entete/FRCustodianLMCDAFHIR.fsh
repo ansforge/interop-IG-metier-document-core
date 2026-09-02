@@ -17,6 +17,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Structure de conservation
 * group[=].element[+].code = #FRLMHeaderDocument.custodian
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Custodian.assignedCustodian
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "La structure chargée de la conservation du document est de type FRLMOrganisation ; cf. le groupe dédié ci-dessous pour le détail de son mapping vers fr-cda-represented-custodian-organization."
@@ -51,6 +52,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Structure de conservation
 * group[=].element[+].code = #FRLMHeaderDocument.custodian
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Composition.custodian
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.custodian.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."

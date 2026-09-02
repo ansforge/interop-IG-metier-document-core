@@ -1,10 +1,10 @@
 Instance: FRPatientLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument"
+Title: "Mapping FRLMPatient → FRCDARecordTarget → FRPatientINSDocument"
 Description: """Ce ConceptMap présente deux groupes de mapping :
  - Mapping 1 : entre le modèle métier \"FRLMPatient\" et l'élément CDA \"recordTarget\"
- - Mapping 2 : entre le modèle métier \"FRLMPatient\" et le profil FHIR \"FrPatientDocument\" """
+ - Mapping 2 : entre le modèle métier \"FRLMPatient\" et le profil FHIR \"FRPatientINSDocument\" """
 
 * name = "FRPatientLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : \"Patient/Usager\""
@@ -53,6 +53,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 // Le modèle métier ne distingue pas nom officiel/nom usuel : FRLMPatient.name est une
 // occurrence unique (1..1).
 * group[=].element[+].code = #FRLMPatient.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Patient.name
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -139,6 +140,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 // Élément racine
 * group[=].element[+].code = #FRLMPatient
 * group[=].element[=].target.code = #Patient
+* group[=].element[=].target.display = "FRPatientINSDocument"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Identifiant
@@ -160,10 +162,12 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 // Le modèle métier ne distingue pas nom officiel/nom usuel : FRLMPatient.name est une
 // occurrence unique (1..1), reprise ici sur les deux slices FHIR.
 * group[=].element[+].code = #FRLMPatient.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Patient.name:officialName
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom de naissance."
 * group[=].element[+].code = #FRLMPatient.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Patient.name:usualName
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom usuel."

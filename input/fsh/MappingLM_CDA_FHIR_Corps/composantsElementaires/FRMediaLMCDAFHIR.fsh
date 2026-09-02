@@ -97,17 +97,12 @@ Description: "Mapping des éléments du modèle métier FRLMObservationMedia ver
 * group[=].element[=].target.code = #Media.content.contentType
 * group[=].element[=].target.equivalence = #equivalent
 
-// Sujet
+// Sujet ou specimen
 * group[=].element[+].code = #FRLMObservationMedia.subject
 * group[=].element[=].target.code = #Media.subject
+* group[=].element[=].target.display = "FRPatientINSDocument / FRSpecimenDocument"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient."
-
-// Specimen
-* group[=].element[+].code = #FRLMObservationMedia.subject
-* group[=].element[=].target.code = #Media.subject
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."
+* group[=].element[=].target.comment = "Cas où subject[x] référence un FRLMPatient, ou un FRLMSpecimen (Media.subject n'a pas de champ specimen dédié séparé)."
 
 // Note
 * group[=].element[+].code = #FRLMObservationMedia.note

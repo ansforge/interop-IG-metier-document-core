@@ -83,6 +83,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person"
 // Nom
 * group[=].element[+].code = #FRLMRelatedPerson.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Person.name
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -127,6 +128,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
 
 // Nom
 * group[=].element[+].code = #FRLMRelatedPerson.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #RelatedPerson.name
 * group[=].element[=].target.equivalence = #equivalent
 

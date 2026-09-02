@@ -29,6 +29,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Informateur organisation
 * group[=].element[+].code = #FRLMInformant.informant[x].informantOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Informant.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'informateur structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
@@ -62,6 +63,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Informateur organisation
 * group[=].element[+].code = #FRLMInformant.informant[x].informantOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."

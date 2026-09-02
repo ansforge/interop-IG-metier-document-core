@@ -68,6 +68,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person"
 // Nom
 * group[=].element[+].code = #FRLMHealthProfessional.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Person.name
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -139,6 +140,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 
 // Nom
 * group[=].element[+].code = #FRLMHealthProfessional.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Practitioner.name
 * group[=].element[=].target.equivalence = #equivalent
 
