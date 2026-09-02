@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
   "name" : "FRLMHeaderDocument",
   "title" : "Logical model - FR LM Header Document",
   "status" : "draft",
-  "date" : "2026-09-02T12:54:48+00:00",
+  "date" : "2026-09-02T15:48:56+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -298,6 +298,58 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "max" : "1",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter"
+      }]
+    },
+    {
+      "id" : "FRLMHeaderDocument.presentedForm",
+      "path" : "FRLMHeaderDocument.presentedForm",
+      "short" : "Pièces jointes (par exemple une version PDF du document).",
+      "definition" : "Pièces jointes (par exemple une version PDF du document).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
+      }]
+    },
+    {
+      "id" : "FRLMHeaderDocument.documentReference",
+      "path" : "FRLMHeaderDocument.documentReference",
+      "short" : "Document de référence (à remplacer, transformé, …).",
+      "definition" : "Document de référence (à remplacer, transformé, …).",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "Base"
+      }]
+    },
+    {
+      "id" : "FRLMHeaderDocument.documentReference.relationType",
+      "path" : "FRLMHeaderDocument.documentReference.relationType",
+      "short" : "Nature de la relation avec le document cible (replaces | transforms | signs | appends).",
+      "definition" : "Nature de la relation avec le document cible (replaces | transforms | signs | appends).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "description" : "(required): DocumentRelationshipType",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1"
+      }
+    },
+    {
+      "id" : "FRLMHeaderDocument.documentReference.targetDocument[x]",
+      "path" : "FRLMHeaderDocument.documentReference.targetDocument[x]",
+      "short" : "Document cible de la relation, référencé par son identifiant ou par référence directe.",
+      "definition" : "Document cible de la relation, référencé par son identifiant ou par référence directe.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Identifier"
+      },
+      {
+        "code" : "Reference"
       }]
     }]
   }

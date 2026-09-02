@@ -34,6 +34,10 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.order | ClinicalDocument.inFulfillmentOf | Composition.extension:basedOn |
 | FRLMHeaderDocument.consent | ClinicalDocument.authorization | Composition.extension:consent |
 | FRLMHeaderDocument.encounter | ClinicalDocument.componentOf | Composition.encounter |
+| FRLMHeaderDocument.presentedForm |  | Composition.section (FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm) |
+| FRLMHeaderDocument.documentReference | ClinicalDocument.relatedDocument | Composition.relatesTo |
+| FRLMHeaderDocument.documentReference.relationType | RelatedDocument.typeCode | Composition.relatesTo.code |
+| FRLMHeaderDocument.documentReference.targetDocument[x] | RelatedDocument.parentDocument | Composition.relatesTo.target[x] |
 | **FRLMAttester** | **authenticator** | **Composition.attester** |
 | FRLMAttester.dateTime | Authenticator.time | Composition.attester.time |
 | FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
@@ -54,7 +58,6 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | **FRLMHealthProfessional** | **assignedEntity** | **PractitionerRole** |
 | **FRLMHealthProfessional** | **assignedEntity** | **Practitioner** |
 | FRLMHealthProfessional.identifier | AssignedEntity.id | Practitioner.identifier |
-| FRLMHealthProfessional.name (FRLMHumanName) |  | Practitioner.name |
 | FRLMHealthProfessional.address | AssignedEntity.addr | Practitioner.address |
 | FRLMHealthProfessional.telecom | AssignedEntity.telecom | Practitioner.telecom |
 | FRLMHealthProfessional.professionalRole.role | AssignedEntity.code | PractitionerRole.code |
@@ -110,6 +113,9 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPatient.telecom | PatientRole.telecom | Patient.telecom |
 | FRLMPatient.name (FRLMHumanName) | Patient.name | Patient.name:officialName |
 | FRLMPatient.name (FRLMHumanName) | Patient.name | Patient.name:usualName |
+| FRLMHumanName.use | Patient.name.use |  |
+| FRLMHumanName.family | Patient.name. item.family |  |
+| FRLMHumanName.given | Patient.name. item.given |  |
 | FRLMPatient.administrativeGender | Patient.administrativeGenderCode | Patient.gender |
 | FRLMPatient.dateOfBirth | Patient.birthTime | Patient.birthDate |
 | FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
@@ -122,12 +128,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPatient.contact.telecom | Patient.guardian | Patient.contact.telecom |
 | FRLMPatient.contact.name | Patient.guardian | Patient.contact.name |
 | FRLMPatient.contact.organization | Patient.guardian | Patient.contact.organization |
-| FRLMHumanName.use | Patient.name.use |  |
-| FRLMHumanName.family | Patient.name. item.family |  |
-| FRLMHumanName.given | Patient.name. item.given |  |
 | **FRLMRelatedPerson** | **relatedEntity** | **RelatedPerson** |
 | FRLMRelatedPerson.identifier |  | RelatedPerson.identifier |
-| FRLMRelatedPerson.name (FRLMHumanName) |  | RelatedPerson.name |
 | FRLMRelatedPerson.subject |  | RelatedPerson.patient |
 | FRLMRelatedPerson.relationship | RelatedEntity.code | RelatedPerson.relationship |
 | FRLMRelatedPerson.address | RelatedEntity.addr | RelatedPerson.address |

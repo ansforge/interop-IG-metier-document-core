@@ -23,7 +23,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T12:54:48+00:00",
+  "date" : "2026-09-02T15:48:56+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -220,6 +220,34 @@ Ce ConceptMap présente trois groupes de mapping :
         "equivalence" : "equivalent",
         "comment" : "L'élément encounter est de type FRLMEncounter, cf. FREncounterLMCDAFHIR."
       }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.presentedForm",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun équivalent direct au niveau entête CDA ; les pièces jointes sont portées par les sections de corps dédiées, cf. FRSectionAttachmentsLMCDAFHIR / FRSectionPresentedFormLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference",
+      "target" : [{
+        "code" : "ClinicalDocument.relatedDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference.relationType",
+      "target" : [{
+        "code" : "RelatedDocument.typeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference.targetDocument[x]",
+      "target" : [{
+        "code" : "RelatedDocument.parentDocument",
+        "equivalence" : "equivalent"
+      }]
     }]
   },
   {
@@ -401,6 +429,36 @@ Ce ConceptMap présente trois groupes de mapping :
         "code" : "Composition.encounter",
         "equivalence" : "equivalent",
         "comment" : "Composition.encounter.resolve().ofType(Encounter) — https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document, cf. FREncounterLMCDAFHIR."
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.presentedForm",
+      "target" : [{
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm",
+        "equivalence" : "wider",
+        "comment" : "Soit par l'extension diagnosticReport (DiagnosticReport.presentedForm)."
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference",
+      "target" : [{
+        "code" : "Composition.relatesTo",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference.relationType",
+      "target" : [{
+        "code" : "Composition.relatesTo.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHeaderDocument.documentReference.targetDocument[x]",
+      "target" : [{
+        "code" : "Composition.relatesTo.target[x]",
+        "equivalence" : "equivalent"
       }]
     }]
   }]
