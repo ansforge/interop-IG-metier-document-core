@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMMedicalDevicePrescriptions vers la
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription de dispositifs médicaux\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T15:48:56+00:00",
+  "date" : "2026-09-03T10:02:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

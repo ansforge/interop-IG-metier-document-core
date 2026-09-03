@@ -23,7 +23,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T15:48:56+00:00",
+  "date" : "2026-09-03T10:02:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -436,8 +436,13 @@ Ce ConceptMap présente trois groupes de mapping :
       "target" : [{
         "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm",
+        "equivalence" : "wider"
+      },
+      {
+        "code" : "Composition.extension",
+        "display" : "FRCompositionDocument.extension:diagnosticReport.presentedForm",
         "equivalence" : "wider",
-        "comment" : "Soit par l'extension diagnosticReport (DiagnosticReport.presentedForm)."
+        "comment" : "Composition.extension:diagnosticReport.resolve().ofType(DiagnosticReport).presentedForm."
       }]
     },
     {

@@ -24,7 +24,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-02T15:48:56+00:00",
+  "date" : "2026-09-03T10:02:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
