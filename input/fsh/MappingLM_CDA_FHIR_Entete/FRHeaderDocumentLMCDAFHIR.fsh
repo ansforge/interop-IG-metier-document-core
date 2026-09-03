@@ -295,12 +295,15 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.encounter.resolve().ofType(Encounter) — https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document, cf. FREncounterLMCDAFHIR."
 
-// Représentation PDF du document : Soit par l'extension diagnosticReport (DiagnosticReport.presentedForm)
+// Représentation PDF du document
 * group[=].element[+].code = #FRLMHeaderDocument.presentedForm
-* group[=].element[=].target.code = #Composition.section
-* group[=].element[=].target.display = "FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm"
-* group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Soit par l'extension diagnosticReport (DiagnosticReport.presentedForm)."
+* group[=].element[=].target[+].code = #Composition.section
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[+].code = #Composition.extension
+* group[=].element[=].target[=].display = "FRCompositionDocument.extension:diagnosticReport.presentedForm"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[=].comment = "Composition.extension:diagnosticReport.resolve().ofType(DiagnosticReport).presentedForm."
 
 // Document de référence
 * group[=].element[+].code = #FRLMHeaderDocument.documentReference
