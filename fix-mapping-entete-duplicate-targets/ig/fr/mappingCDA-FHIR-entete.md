@@ -35,7 +35,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.consent | ClinicalDocument.authorization | Composition.extension:consent |
 | FRLMHeaderDocument.encounter | ClinicalDocument.componentOf | Composition.encounter |
 | FRLMHeaderDocument.presentedForm |  | Composition.extension (FRCompositionDocument.extension:diagnosticReport.presentedForm) |
-| FRLMHeaderDocument.presentedForm |  | Composition.section (FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm) |
+| FRLMHeaderDocument.presentedForm |  | Composition.section (FRCompositionDocument.section:sectionPresentedForm) |
 | FRLMHeaderDocument.documentReference | ClinicalDocument.relatedDocument | Composition.relatesTo |
 | FRLMHeaderDocument.documentReference.relationType | RelatedDocument.typeCode | Composition.relatesTo.code |
 | FRLMHeaderDocument.documentReference.targetDocument[x] | RelatedDocument.parentDocument | Composition.relatesTo.target[x] |

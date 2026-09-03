@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMResultatExame
   "name" : "FRLMResultatExamensBiologieElementCliniquePertinent",
   "title" : "Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent",
   "status" : "draft",
-  "date" : "2026-09-03T10:02:14+00:00",
+  "date" : "2026-09-03T10:35:28+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
