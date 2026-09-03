@@ -298,7 +298,7 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 // Représentation PDF du document
 * group[=].element[+].code = #FRLMHeaderDocument.presentedForm
 * group[=].element[=].target[+].code = #Composition.section
-* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionAttachments ou FRCompositionDocument.section:sectionPresentedForm"
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionPresentedForm"
 * group[=].element[=].target[=].equivalence = #wider
 * group[=].element[=].target[+].code = #Composition.extension
 * group[=].element[=].target[=].display = "FRCompositionDocument.extension:diagnosticReport.presentedForm"
