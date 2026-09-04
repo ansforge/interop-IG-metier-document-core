@@ -23,7 +23,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
   "title" : "Mapping Métier/CDA/FHIR : \"Personne liée au patient\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -58,13 +58,6 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
       "target" : [{
         "equivalence" : "unmatched",
         "comment" : "Pas de champ id explicite porté par relatedEntity."
-      }]
-    },
-    {
-      "code" : "FRLMRelatedPerson.name",
-      "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous."
       }]
     },
     {
@@ -152,6 +145,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMRelatedPerson.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Person.name",
         "equivalence" : "equivalent"
@@ -227,6 +221,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
     },
     {
       "code" : "FRLMRelatedPerson.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "RelatedPerson.name",
         "equivalence" : "equivalent"

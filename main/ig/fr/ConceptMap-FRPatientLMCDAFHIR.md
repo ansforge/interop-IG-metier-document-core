@@ -1,11 +1,11 @@
-# Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMPatient → FRCDARecordTarget → FRPatientINSDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMPatient → FRCDARecordTarget → FrPatientDocument 
+## ConceptMap: Mapping FRLMPatient → FRCDARecordTarget → FRPatientINSDocument 
 
  
 Ce ConceptMap présente deux groupes de mapping : 
 * Mapping 1 : entre le modèle métier "FRLMPatient" et l'élément CDA "recordTarget"
-* Mapping 2 : entre le modèle métier "FRLMPatient" et le profil FHIR "FrPatientDocument"
+* Mapping 2 : entre le modèle métier "FRLMPatient" et le profil FHIR "FRPatientINSDocument"
  
 
 
@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Patient/Usager\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -31,7 +31,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FrPatientDocument\\\" ",
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMPatient\\\" et l'élément CDA \\\"recordTarget\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMPatient\\\" et le profil FHIR \\\"FRPatientINSDocument\\\" ",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -87,12 +87,46 @@ Ce ConceptMap présente deux groupes de mapping :
     "targetVersion" : "0.1.0",
     "element" : [{
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name",
         "equivalence" : "equivalent"
       }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.use",
+      "target" : [{
+        "code" : "Patient.name.use",
+        "equivalence" : "equivalent"
+      }]
     },
     {
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "Patient.name.item.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "Patient.name.item.given",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient",
+    "targetVersion" : "0.1.0",
+    "element" : [{
       "code" : "FRLMPatient.administrativeGender",
       "target" : [{
         "code" : "Patient.administrativeGenderCode",
@@ -150,28 +184,32 @@ Ce ConceptMap présente deux groupes de mapping :
       "code" : "FRLMPatient.contact",
       "target" : [{
         "code" : "Patient.guardian",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Patient.guardian (type CDA Guardian) n'est pas décomposé/profilé : adresse, téléphone, nom et organisation du représentant y sont tous portés globalement, sans champ dédié séparé."
       }]
     },
     {
       "code" : "FRLMPatient.contact.address",
       "target" : [{
         "code" : "Patient.guardian",
-        "equivalence" : "wider"
+        "equivalence" : "wider",
+        "comment" : "Adresse du représentant ; portée globalement par Patient.guardian, non décomposée."
       }]
     },
     {
       "code" : "FRLMPatient.contact.telecom",
       "target" : [{
         "code" : "Patient.guardian",
-        "equivalence" : "wider"
+        "equivalence" : "wider",
+        "comment" : "Téléphone du représentant ; porté globalement par Patient.guardian, non décomposé."
       }]
     },
     {
       "code" : "FRLMPatient.contact.name",
       "target" : [{
         "code" : "Patient.guardian",
-        "equivalence" : "wider"
+        "equivalence" : "wider",
+        "comment" : "Nom du représentant ; porté globalement par Patient.guardian, non décomposé."
       }]
     },
     {
@@ -179,34 +217,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Patient.guardian",
         "equivalence" : "wider",
-        "comment" : "Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient ; non adressable séparément dans le type CDA Guardian ici."
-      }]
-    }]
-  },
-  {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
-    "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient",
-    "targetVersion" : "0.1.0",
-    "element" : [{
-      "code" : "FRLMHumanName.use",
-      "target" : [{
-        "code" : "Patient.name.use",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHumanName.family",
-      "target" : [{
-        "code" : "Patient.name.item.family",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMHumanName.given",
-      "target" : [{
-        "code" : "Patient.name.item.given",
-        "equivalence" : "equivalent"
+        "comment" : "Organisation du représentant ; portée globalement par Patient.guardian, non décomposée. Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure."
       }]
     }]
   },
@@ -219,6 +230,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "code" : "FRLMPatient",
       "target" : [{
         "code" : "Patient",
+        "display" : "FRPatientINSDocument",
         "equivalence" : "equivalent"
       }]
     },
@@ -245,6 +257,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name:officialName",
         "equivalence" : "equivalent",
@@ -253,6 +266,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMPatient.name",
+      "display" : "FRLMHumanName",
       "target" : [{
         "code" : "Patient.name:usualName",
         "equivalence" : "equivalent",

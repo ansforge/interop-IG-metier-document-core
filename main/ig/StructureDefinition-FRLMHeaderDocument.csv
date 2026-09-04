@@ -52,3 +52,11 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisa
 ","Consentement associé au document.","Consentement associé au document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.consent",0,*,"",""
 "FRLMHeaderDocument.encounter","FRLMHeaderDocument.encounter","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}
 ","Association du document à une prise en charge.","Association du document à une prise en charge.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.encounter",1,1,"",""
+"FRLMHeaderDocument.presentedForm","FRLMHeaderDocument.presentedForm","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment {[]} {[]}
+","Pièces jointes (par exemple une version PDF du document).","Pièces jointes (par exemple une version PDF du document).","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.presentedForm",0,*,"",""
+"FRLMHeaderDocument.documentReference","FRLMHeaderDocument.documentReference","","","",1,*,"","","","Base {[]} {[]}
+","Document de référence (à remplacer, transformé, …).","Document de référence (à remplacer, transformé, …).","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.documentReference",1,*,"",""
+"FRLMHeaderDocument.documentReference.relationType","FRLMHeaderDocument.documentReference.relationType","","","",1,1,"","","","code {[]} {[]}
+","Nature de la relation avec le document cible (replaces | transforms | signs | appends).","Nature de la relation avec le document cible (replaces | transforms | signs | appends).","","","","","","","","","",,"required","(required): DocumentRelationshipType","http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1","",,,,"FRLMHeaderDocument.documentReference.relationType",1,1,"",""
+"FRLMHeaderDocument.documentReference.targetDocument[x]","FRLMHeaderDocument.documentReference.targetDocument[x]","","","",1,1,"","","","Identifier {[]} {[]}
+Reference {[]} {[]}","Document cible de la relation, référencé par son identifiant ou par référence directe.","Document cible de la relation, référencé par son identifiant ou par référence directe.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.documentReference.targetDocument[x]",1,1,"",""

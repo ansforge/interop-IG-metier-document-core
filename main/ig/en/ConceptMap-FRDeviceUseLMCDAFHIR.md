@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
   "title" : "Mapping Métier/CDA/FHIR : \"Utilisation de dispositif médical\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -240,24 +240,9 @@ Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDA
       "code" : "FRLMDeviceUse.reason[x]",
       "target" : [{
         "code" : "DeviceUseStatement.reasonReference",
+        "display" : "FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument",
         "equivalence" : "equivalent",
-        "comment" : "Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier."
-      }]
-    },
-    {
-      "code" : "FRLMDeviceUse.reason[x]",
-      "target" : [{
-        "code" : "DeviceUseStatement.reasonReference",
-        "equivalence" : "equivalent",
-        "comment" : "Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier."
-      }]
-    },
-    {
-      "code" : "FRLMDeviceUse.reason[x]",
-      "target" : [{
-        "code" : "DeviceUseStatement.reasonReference",
-        "equivalence" : "equivalent",
-        "comment" : "Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier."
+        "comment" : "Cible non slicée ; le motif référence l'une de ces observations selon le contexte métier."
       }]
     },
     {

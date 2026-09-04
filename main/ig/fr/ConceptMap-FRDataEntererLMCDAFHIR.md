@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Opérateur de saisie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -64,15 +64,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "DataEnterer.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMDataEnterer.dataEnterer[x]",
-      "target" : [{
-        "code" : "DataEnterer.assignedEntity",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où dataEnterer[x] référence un FRLMPatient, cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR) ou un FRLMPatient (cf. FRPatientLMCDAFHIR)."
       }]
     }]
   },
@@ -100,15 +92,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",
-        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional (Extension.extension:party.value[x].resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMDataEnterer.dataEnterer[x]",
-      "target" : [{
-        "code" : "Extension.extension:party.value[x]",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où dataEnterer[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
+        "comment" : "Cas où dataEnterer[x] référence un FRLMHealthProfessional (Extension.extension:party.value[x].resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR. Cas où dataEnterer[x] référence un FRLMPatient (Extension.extension:party.value[x].resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
       }]
     }]
   }]

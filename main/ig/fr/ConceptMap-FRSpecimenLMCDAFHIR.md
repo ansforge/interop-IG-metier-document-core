@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
   "title" : "Mapping Métier/CDA/FHIR : \"Prélèvement\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -214,24 +214,9 @@ Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAP
       "code" : "FRLMSpecimen.specimenSource[x]",
       "target" : [{
         "code" : "Specimen.subject",
+        "display" : "FRPatientINSDocument / FRLocationDocument / Device",
         "equivalence" : "equivalent",
-        "comment" : "Cas où specimenSource[x] référence un FRLMPatient."
-      }]
-    },
-    {
-      "code" : "FRLMSpecimen.specimenSource[x]",
-      "target" : [{
-        "code" : "Specimen.subject",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où specimenSource[x] référence un FRLMLocation."
-      }]
-    },
-    {
-      "code" : "FRLMSpecimen.specimenSource[x]",
-      "target" : [{
-        "code" : "Specimen.subject",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où specimenSource[x] référence un FRLMDevice."
+        "comment" : "Cas où specimenSource[x] référence un FRLMPatient, un FRLMLocation ou un FRLMDevice."
       }]
     },
     {

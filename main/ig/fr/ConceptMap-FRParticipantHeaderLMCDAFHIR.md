@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Participant\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,6 +83,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMParticipant.participant.participantOrganisation",
+      "display" : "FRLMOrganisation",
       "target" : [{
         "code" : "Participant1.associatedEntity",
         "equivalence" : "equivalent",
@@ -178,6 +179,7 @@ Ce ConceptMap présente deux groupes de mapping :
     },
     {
       "code" : "FRLMParticipant.participant.participantOrganisation",
+      "display" : "FRLMOrganisation",
       "target" : [{
         "code" : "Extension.extension:party.value[x]",
         "equivalence" : "equivalent",

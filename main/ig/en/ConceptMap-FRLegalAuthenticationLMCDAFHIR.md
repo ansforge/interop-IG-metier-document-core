@@ -22,7 +22,7 @@ Ce ConceptMap présente deux groupes de mapping :
   "title" : "Mapping Métier/CDA/FHIR : \"Responsable du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-08-31T15:12:23+00:00",
+  "date" : "2026-09-04T14:19:44+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -64,31 +64,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "LegalAuthenticator.assignedEntity",
         "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "LegalAuthenticator.assignedEntity",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMPatient (document d'expression personnelle), cf. FRPatientLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "LegalAuthenticator.assignedEntity",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMDevice, cf. FRDeviceLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "LegalAuthenticator.assignedEntity",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMOrganisation (ex : Dossier Pharmaceutique), cf. FROrganisationLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR), un FRLMPatient (document d'expression personnelle, cf. FRPatientLMCDAFHIR), un FRLMDevice (cf. FRDeviceLMCDAFHIR) ou une FRLMOrganisation (ex : Dossier Pharmaceutique, cf. FROrganisationLMCDAFHIR)."
       }]
     }]
   },
@@ -117,31 +93,7 @@ Ce ConceptMap présente deux groupes de mapping :
       "target" : [{
         "code" : "Composition.attester.party",
         "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "Composition.attester.party",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMPatient (attester.party.resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "Composition.attester.party",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun)."
-      }]
-    },
-    {
-      "code" : "FRLMLegalAuthentication.legalAuthenticator[x]",
-      "target" : [{
-        "code" : "Composition.attester.party",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où legalAuthenticator[x] référence un FRLMOrganisation (attester.party.resolve().ofType(Organization)) — cf. FROrganisationLMCDAFHIR."
+        "comment" : "Cas où legalAuthenticator[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR. Cas où legalAuthenticator[x] référence un FRLMPatient (attester.party.resolve().ofType(Patient)) — cf. FRPatientLMCDAFHIR. Cas où legalAuthenticator[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun). Cas où legalAuthenticator[x] référence un FRLMOrganisation (attester.party.resolve().ofType(Organization)) — cf. FROrganisationLMCDAFHIR."
       }]
     }]
   }]

@@ -34,33 +34,21 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHeaderDocument.order | ClinicalDocument.inFulfillmentOf | Composition.extension:basedOn |
 | FRLMHeaderDocument.consent | ClinicalDocument.authorization | Composition.extension:consent |
 | FRLMHeaderDocument.encounter | ClinicalDocument.componentOf | Composition.encounter |
+| FRLMHeaderDocument.presentedForm |  | Composition.extension:diagnosticReport.presentedForm |
+| FRLMHeaderDocument.presentedForm |  | Composition.section (FRCompositionDocument.section:sectionPresentedForm) |
+| FRLMHeaderDocument.documentReference | ClinicalDocument.relatedDocument | Composition.relatesTo |
+| FRLMHeaderDocument.documentReference.relationType | RelatedDocument.typeCode | Composition.relatesTo.code |
+| FRLMHeaderDocument.documentReference.targetDocument[x] | RelatedDocument.parentDocument | Composition.relatesTo.target[x] |
 | **FRLMAttester** | **authenticator** | **Composition.attester** |
 | FRLMAttester.dateTime | Authenticator.time | Composition.attester.time |
 | FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMAttester.attester[x] | Authenticator.assignedEntity | Composition.attester.party |
-| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
-| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
-| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
-| FRLMHeaderDocument.author[x] | **Author (author)** | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
-| FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
+| **FRLMHeaderDocument.author[x]** | **Author (author)** | **Composition.author** |
 | FRLMHeaderDocument.author[x] | Author.assignedAuthor | Composition.author |
 | **FRLMConsent** | **authorization** | **Consent** |
 | FRLMConsent.identifier | Authorization.consent.id | Consent.identifier |
 | FRLMConsent.type | Authorization.consent.code | Consent.category |
 | FRLMConsent.status | Authorization.consent.statusCode | Consent.status |
-| FRLMHeaderDocument.custodian | Custodian.assignedCustodian | Composition.custodian |
+| FRLMHeaderDocument.custodian (FRLMOrganisation) | Custodian.assignedCustodian | Composition.custodian |
 | FRLMOrganisation.identifier | CustodianOrganization.id |  |
 | FRLMOrganisation.name | CustodianOrganization.name |  |
 | FRLMOrganisation.address | CustodianOrganization.addr |  |
@@ -68,19 +56,15 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | **FRLMDataEnterer** | **dataEnterer** | **Extension** |
 | FRLMDataEnterer.date | DataEnterer.time | Extension.extension:time.value[x] |
 | FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
-| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
-| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
-| FRLMDataEnterer.dataEnterer[x] | DataEnterer.assignedEntity | Extension.extension:party.value[x] |
 | **FRLMHealthProfessional** | **assignedEntity** | **PractitionerRole** |
 | **FRLMHealthProfessional** | **assignedEntity** | **Practitioner** |
 | FRLMHealthProfessional.identifier | AssignedEntity.id | Practitioner.identifier |
-| FRLMHealthProfessional.name |  | Practitioner.name |
 | FRLMHealthProfessional.address | AssignedEntity.addr | Practitioner.address |
 | FRLMHealthProfessional.telecom | AssignedEntity.telecom | Practitioner.telecom |
 | FRLMHealthProfessional.professionalRole.role | AssignedEntity.code | PractitionerRole.code |
 | FRLMHealthProfessional.professionalRole.organisation | AssignedEntity.representedOrganization | PractitionerRole.organization |
 | FRLMHealthProfessional.professionalRole.specialty |  | PractitionerRole.specialty |
-| FRLMHealthProfessional.name | Person.name | Practitioner.name |
+| FRLMHealthProfessional.name (FRLMHumanName) | Person.name | Practitioner.name |
 | FRLMHumanName.use | PN.use |  |
 | FRLMHumanName.family | PN.item.family | Practitioner.name.family |
 | FRLMHumanName.given | PN.item.given | Practitioner.name.given |
@@ -89,34 +73,17 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHumanName.period | PN.validTime |  |
 | **FRLMInformant** | **informant** | **Extension** |
 | FRLMInformant.informant[x].informantProfessional | Informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant[x].informantOrganisation | Informant.assignedEntity | Extension.extension:party.value[x] |
+| FRLMInformant.informant[x].informantOrganisation (FRLMOrganisation) | Informant.assignedEntity | Extension.extension:party.value[x] |
 | FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant[x].informantPersonne[x] | Informant.assignedEntity | Extension.extension:party.value[x] |
-| FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
 | FRLMInformant.informant[x].informantPersonne[x] | Informant.relatedEntity | Extension.extension:party.value[x] |
 | **FRLMIntendedRecipient** | **informationRecipient** | **Extension** |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientHealthProfessional | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
-| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
+| FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation (FRLMOrganisation) | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientPatient | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientRelatedPerson | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientDevice | InformationRecipient.intendedRecipient | Extension.extension:party.value[x] |
 | **FRLMLegalAuthentication** | **legalAuthenticator** | **Composition.attester** |
 | FRLMLegalAuthentication.dateTime | LegalAuthenticator.time | Composition.attester.time |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
-| FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
 | FRLMLegalAuthentication.legalAuthenticator[x] | LegalAuthenticator.assignedEntity | Composition.attester.party |
 | **FRLMOrder** | **inFulfillmentOf** | **ServiceRequest** |
 | FRLMOrder.orderDateAndTime |  | ServiceRequest.authoredOn |
@@ -124,7 +91,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMOrder.orderReason[x] |  | ServiceRequest.reasonCode |
 | FRLMOrder.orderId | Order.id | ServiceRequest.identifier |
 | FRLMOrder.accessionNumber |  | ServiceRequest.identifier |
-| **FRLMOrganisation** | assignedEntity.representedOrganization | **Organization** |
+| **FRLMOrganisation** | **assignedEntity.representedOrganization** | **Organization** |
 | FRLMOrganisation.identifier | Organization.id | Organization.identifier |
 | FRLMOrganisation.type |  | Organization.type |
 | FRLMOrganisation.name | Organization.name | Organization.name |
@@ -137,16 +104,19 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMParticipant.role | Participant1.functionCode | Extension.extension:function.value[x] |
 | FRLMParticipant.period | Participant1.time | Extension.extension:time.value[x] |
 | FRLMParticipant.participant.participantProfessional | Participant1.associatedEntity | Extension.extension:party.value[x] |
-| FRLMParticipant.participant.participantOrganisation | Participant1.associatedEntity | Extension.extension:party.value[x] |
+| FRLMParticipant.participant.participantOrganisation (FRLMOrganisation) | Participant1.associatedEntity | Extension.extension:party.value[x] |
 | FRLMParticipant.participant.participantDevice | Participant1.associatedEntity | Extension.extension:party.value[x] |
 | FRLMParticipant.identifier | AssociatedEntity.id | Extension.extension:party.value[x] |
 | FRLMParticipant.name | AssociatedEntity.associatedPerson | Extension.extension:party.value[x] |
-| **FRLMPatient** | **recordTarget** | **Patient** |
+| **FRLMPatient** | **recordTarget** | **FRPatientINSDocument** |
 | FRLMPatient.identifier | PatientRole.id | Patient.identifier |
 | FRLMPatient.address | PatientRole.addr | Patient.address |
 | FRLMPatient.telecom | PatientRole.telecom | Patient.telecom |
-| FRLMPatient.name | Patient.name | Patient.name:officialName |
-| FRLMPatient.name | Patient.name | Patient.name:usualName |
+| FRLMPatient.name (FRLMHumanName) | Patient.name | Patient.name:officialName |
+| FRLMPatient.name (FRLMHumanName) | Patient.name | Patient.name:usualName |
+| FRLMHumanName.use | Patient.name.use |  |
+| FRLMHumanName.family | Patient.name. item.family |  |
+| FRLMHumanName.given | Patient.name. item.given |  |
 | FRLMPatient.administrativeGender | Patient.administrativeGenderCode | Patient.gender |
 | FRLMPatient.dateOfBirth | Patient.birthTime | Patient.birthDate |
 | FRLMPatient.deceased[x] | Patient.sdtcDeceasedInd | Patient.deceased[x] |
@@ -159,12 +129,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPatient.contact.telecom | Patient.guardian | Patient.contact.telecom |
 | FRLMPatient.contact.name | Patient.guardian | Patient.contact.name |
 | FRLMPatient.contact.organization | Patient.guardian | Patient.contact.organization |
-| FRLMHumanName.use | Patient.name.use |  |
-| FRLMHumanName.family | Patient.name. item.family |  |
-| FRLMHumanName.given | Patient.name. item.given |  |
 | **FRLMRelatedPerson** | **relatedEntity** | **RelatedPerson** |
 | FRLMRelatedPerson.identifier |  | RelatedPerson.identifier |
-| FRLMRelatedPerson.name |  | RelatedPerson.name |
 | FRLMRelatedPerson.subject |  | RelatedPerson.patient |
 | FRLMRelatedPerson.relationship | RelatedEntity.code | RelatedPerson.relationship |
 | FRLMRelatedPerson.address | RelatedEntity.addr | RelatedPerson.address |
@@ -176,7 +142,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMRelatedPerson.photo |  | RelatedPerson.photo |
 | FRLMRelatedPerson.period |  | RelatedPerson.period |
 | FRLMRelatedPerson.communication |  | RelatedPerson.communication |
-| FRLMRelatedPerson.name | Person.name | RelatedPerson.name |
+| FRLMRelatedPerson.name (FRLMHumanName) | Person.name | RelatedPerson.name |
 | FRLMHumanName.use | PN.use |  |
 | FRLMHumanName.family | PN.item.family | RelatedPerson.name.family |
 | FRLMHumanName.given | PN.item.given | RelatedPerson.name.given |
