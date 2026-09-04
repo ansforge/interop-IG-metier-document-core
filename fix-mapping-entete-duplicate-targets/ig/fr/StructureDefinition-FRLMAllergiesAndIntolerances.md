@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAllergiesAn
   "name" : "FRLMAllergiesAndIntolerances",
   "title" : "Logical model - FR LM Allergies And Intolerances",
   "status" : "draft",
-  "date" : "2026-09-03T10:35:28+00:00",
+  "date" : "2026-09-04T09:35:26+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
