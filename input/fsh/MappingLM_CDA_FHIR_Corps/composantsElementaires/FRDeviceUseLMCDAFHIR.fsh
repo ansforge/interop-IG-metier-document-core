@@ -153,21 +153,12 @@ Description: "Mapping des éléments du modèle métier FRLMDeviceUse vers le pr
 * group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.code = #DeviceUseStatement.reasonCode
 * group[=].element[=].target.equivalence = #equivalent
-// ALD
+// ALD, accident du travail ou prévention
 * group[=].element[+].code = #FRLMDeviceUse.reason[x]
 * group[=].element[=].target.code = #DeviceUseStatement.reasonReference
+* group[=].element[=].target.display = "FRObservationALDDocument / FRObservationWorkRelatedAccidentDocument / FRObservationPreventionDocument"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier."
-// Accident du travail
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]
-* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier."
-// Prévention
-* group[=].element[+].code = #FRLMDeviceUse.reason[x]
-* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier."
+* group[=].element[=].target.comment = "Cible non slicée ; le motif référence l'une de ces observations selon le contexte métier."
 // Commentaire
 * group[=].element[+].code = #FRLMDeviceUse.note
 * group[=].element[=].target.code = #DeviceUseStatement.note

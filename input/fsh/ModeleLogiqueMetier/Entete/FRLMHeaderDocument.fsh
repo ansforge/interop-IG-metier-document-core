@@ -34,4 +34,11 @@ Description: "Eléments de l'entête d'un document contenant les informations g�
 * participant 0..* FRLMParticipant "Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire."							
 * order  0..* FRLMOrder "Association du document à une prescription."				
 * consent 0..* FRLMConsent "Consentement associé au document."
-* encounter 1..1 FRLMEncounter "Association du document à une prise en charge."			
+* encounter 1..1 FRLMEncounter "Association du document à une prise en charge."
+* presentedForm 0..* FRLMAttachment "Pièces jointes (par exemple une version PDF du document)."
+* documentReference 1..* Base "Document de référence (à remplacer, transformé, …)."
+  * relationType 1..1 code "Nature de la relation avec le document cible (replaces | transforms | signs | appends)."
+    * ^binding.strength = #required
+    * ^binding.description = "(required): DocumentRelationshipType"
+    * ^binding.valueSet = "http://hl7.org/fhir/ValueSet/document-relationship-type"
+  * targetDocument[x] 1..1 Identifier or Reference "Document cible de la relation, référencé par son identifiant ou par référence directe."

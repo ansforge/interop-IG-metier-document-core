@@ -29,6 +29,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Destinataire organisation
 * group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #InformationRecipient.intendedRecipient
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le destinataire structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
@@ -68,6 +69,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Destinataire organisation
 * group[=].element[+].code = #FRLMIntendedRecipient.intendedRecipient[x].intendedRecipientOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."

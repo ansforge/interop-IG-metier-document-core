@@ -30,10 +30,8 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].element[=].target.code = #AssignedEntity.id
 * group[=].element[=].target.equivalence = #equivalent
 
-// Nom
-* group[=].element[+].code = #FRLMHealthProfessional.name
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "AssignedEntity.assignedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupes dédiés ci-dessous."
+// Nom : porté par AssignedEntity.assignedPerson, cf. groupes dédiés ci-dessous
+// (fr-cda-assigned-person puis fr-cda-name) pour le mapping concret.
 
 // Adresse
 * group[=].element[+].code = #FRLMHealthProfessional.address
@@ -68,6 +66,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person"
 // Nom
 * group[=].element[+].code = #FRLMHealthProfessional.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Person.name
 * group[=].element[=].target.equivalence = #equivalent
 
@@ -139,6 +138,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 
 // Nom
 * group[=].element[+].code = #FRLMHealthProfessional.name
+* group[=].element[=].display = "FRLMHumanName"
 * group[=].element[=].target.code = #Practitioner.name
 * group[=].element[=].target.equivalence = #equivalent
 

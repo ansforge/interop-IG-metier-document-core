@@ -106,21 +106,12 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[+].code = #FRLMSpecimen.type
 * group[=].element[=].target.code = #Specimen.type
 * group[=].element[=].target.equivalence = #equivalent
-// Origine du prélèvement - Patient
+// Origine du prélèvement - Patient, Location ou Device
 * group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
 * group[=].element[=].target.code = #Specimen.subject
+* group[=].element[=].target.display = "FRPatientINSDocument / FRLocationDocument / Device"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMPatient."
-// Origine du prélèvement - Location
-* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
-* group[=].element[=].target.code = #Specimen.subject
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMLocation."
-// Origine du prélèvement - Device
-* group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
-* group[=].element[=].target.code = #Specimen.subject
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMDevice."
+* group[=].element[=].target.comment = "Cas où specimenSource[x] référence un FRLMPatient, un FRLMLocation ou un FRLMDevice."
 // Prélèvement parent
 * group[=].element[+].code = #FRLMSpecimen.parentSpecimen
 * group[=].element[=].target.code = #Specimen.parent

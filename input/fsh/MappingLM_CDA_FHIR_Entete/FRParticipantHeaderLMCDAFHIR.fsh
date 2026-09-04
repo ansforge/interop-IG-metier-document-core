@@ -44,6 +44,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Participant organisation
 * group[=].element[+].code = #FRLMParticipant.participant.participantOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Participant1.associatedEntity
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Le participant structure est de type FRLMOrganisation, cf. FROrganisationLMCDAFHIR."
@@ -113,6 +114,7 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Participant organisation
 * group[=].element[+].code = #FRLMParticipant.participant.participantOrganisation
+* group[=].element[=].display = "FRLMOrganisation"
 * group[=].element[=].target.code = #Extension.extension:party.value[x]
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Extension.extension:party.value[x].resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."

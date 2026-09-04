@@ -26,17 +26,11 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #Authenticator.time
 * group[=].element[=].target.equivalence = #equivalent
 
-// Validateur professionnel de santé
+// Validateur professionnel de santé ou système
 * group[=].element[+].code = #FRLMAttester.attester[x]
 * group[=].element[=].target.code = #Authenticator.assignedEntity
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."
-
-// Validateur système
-* group[=].element[+].code = #FRLMAttester.attester[x]
-* group[=].element[=].target.code = #Authenticator.assignedEntity
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMDevice (composant commun), cf. FRDeviceLMCDAFHIR."
+* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMHealthProfessional (cf. FRHealthProfessionalLMCDAFHIR) ou un FRLMDevice (composant commun, cf. FRDeviceLMCDAFHIR)."
 
 // Groupe Mapping 2 : modèle métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttester"
@@ -53,14 +47,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 * group[=].element[=].target.code = #Composition.attester.time
 * group[=].element[=].target.equivalence = #equivalent
 
-// Validateur professionnel de santé
+// Validateur professionnel de santé ou système
 * group[=].element[+].code = #FRLMAttester.attester[x]
 * group[=].element[=].target.code = #Composition.attester.party
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) — cf. FRHealthProfessionalLMCDAFHIR."
-
-// Validateur système
-* group[=].element[+].code = #FRLMAttester.attester[x]
-* group[=].element[=].target.code = #Composition.attester.party
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRDeviceLMCDAFHIR (composant commun)."
+* group[=].element[=].target.comment = "Cas où attester[x] référence un FRLMHealthProfessional (attester.party.resolve().ofType(PractitionerRole)) ou un FRLMDevice (attester.party.resolve().ofType(Device)) — cf. FRHealthProfessionalLMCDAFHIR / FRDeviceLMCDAFHIR (composant commun)."

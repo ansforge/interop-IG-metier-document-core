@@ -141,32 +141,16 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyObservation
 * group[=].element[=].target.code = #Observation.component
 * group[=].element[=].target.equivalence = #equivalent
 
-// Dérivé de - FRLMObservation
+// Dérivé de - FRLMObservation, FRLMLaboratoryObservation ou FRLMImagingStudy
 * group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
 * group[=].element[=].target.code = #Observation.derivedFrom
+* group[=].element[=].target.display = "Observation / FRObservationLaboratoryReportResultsDocument / FRImagingStudyDocument"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence une FRLMObservation générique."
+* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence une FRLMObservation générique, une FRLMLaboratoryObservation ou un FRLMImagingStudy."
 
-// Dérivé de - FRLMLaboratoryObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
-* group[=].element[=].target.code = #Observation.derivedFrom
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
-
-// Dérivé de - FRLMImagingStudy
-* group[=].element[+].code = #FRLMPregnancyObservation.derivedFrom[x]
-* group[=].element[=].target.code = #Observation.derivedFrom
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où derivedFrom[x] référence un FRLMImagingStudy (FRImagingStudyDocument)."
-
-// Membres - FRLMLaboratoryObservation
+// Membres - FRLMLaboratoryObservation ou FRLMObservation
 * group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
 * group[=].element[=].target.code = #Observation.hasMember
+* group[=].element[=].target.display = "FRObservationLaboratoryReportResultsDocument / Observation"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où hasMember[x] référence une FRLMLaboratoryObservation (FRObservationLaboratoryReportResultsDocument)."
-
-// Membres - FRLMObservation
-* group[=].element[+].code = #FRLMPregnancyObservation.hasMember[x]
-* group[=].element[=].target.code = #Observation.hasMember
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Cas où hasMember[x] référence une FRLMObservation générique."
+* group[=].element[=].target.comment = "Cas où hasMember[x] référence une FRLMLaboratoryObservation ou une FRLMObservation générique."

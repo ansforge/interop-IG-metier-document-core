@@ -144,6 +144,24 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "L'élément encounter est de type FRLMEncounter, cf. FREncounterLMCDAFHIR."
 
+// Représentation PDF du document
+* group[=].element[+].code = #FRLMHeaderDocument.presentedForm
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun équivalent direct au niveau entête CDA ; les pièces jointes sont portées par les sections de corps dédiées, cf. FRSectionAttachmentsLMCDAFHIR / FRSectionPresentedFormLMCDAFHIR."
+
+// Document de référence
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference
+* group[=].element[=].target.code = #ClinicalDocument.relatedDocument
+* group[=].element[=].target.equivalence = #equivalent
+// Nature de la relation
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference.relationType
+* group[=].element[=].target.code = #RelatedDocument.typeCode
+* group[=].element[=].target.equivalence = #equivalent
+// Document cible
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference.targetDocument[x]
+* group[=].element[=].target.code = #RelatedDocument.parentDocument
+* group[=].element[=].target.equivalence = #equivalent
+
 // Groupe Mapping 2 : modèle métier → FHIR (identifiant du document)
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-bundle-document"
@@ -276,3 +294,24 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target.code = #Composition.encounter
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.encounter.resolve().ofType(Encounter) — https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-encounter-document, cf. FREncounterLMCDAFHIR."
+
+// Représentation PDF du document
+* group[=].element[+].code = #FRLMHeaderDocument.presentedForm
+* group[=].element[=].target[+].code = #Composition.section
+* group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionPresentedForm"
+* group[=].element[=].target[=].equivalence = #wider
+* group[=].element[=].target[+].code = #Composition.extension:diagnosticReport.presentedForm
+* group[=].element[=].target[=].equivalence = #wider
+
+// Document de référence
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference
+* group[=].element[=].target.code = #Composition.relatesTo
+* group[=].element[=].target.equivalence = #equivalent
+// Nature de la relation
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference.relationType
+* group[=].element[=].target.code = #Composition.relatesTo.code
+* group[=].element[=].target.equivalence = #equivalent
+// Document cible
+* group[=].element[+].code = #FRLMHeaderDocument.documentReference.targetDocument[x]
+* group[=].element[=].target.code = #Composition.relatesTo.target[x]
+* group[=].element[=].target.equivalence = #equivalent
