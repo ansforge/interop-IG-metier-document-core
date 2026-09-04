@@ -300,10 +300,8 @@ Description: """Ce ConceptMap présente trois groupes de mapping :
 * group[=].element[=].target[+].code = #Composition.section
 * group[=].element[=].target[=].display = "FRCompositionDocument.section:sectionPresentedForm"
 * group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[+].code = #Composition.extension
-* group[=].element[=].target[=].display = "FRCompositionDocument.extension:diagnosticReport.presentedForm"
+* group[=].element[=].target[+].code = #Composition.extension:diagnosticReport.presentedForm
 * group[=].element[=].target[=].equivalence = #wider
-* group[=].element[=].target[=].comment = "Composition.extension:diagnosticReport.resolve().ofType(DiagnosticReport).presentedForm."
 
 // Document de référence
 * group[=].element[+].code = #FRLMHeaderDocument.documentReference
