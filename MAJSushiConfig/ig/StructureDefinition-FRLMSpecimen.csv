@@ -7,29 +7,29 @@
 ","Disponibilité du prélèvement","Disponibilité du prélèvement","","","","","","","","","",,"preferred","(preferred): HL7 specimen-status","","",,,,"FRLMSpecimen.status",0,1,"",""
 "FRLMSpecimen.type","FRLMSpecimen.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Échantillon prélevé","Échantillon prélevé","","","","","","","","","",,"required","jdv-specimen-type-cisis (1.2.250.1.213.1.1.5.819)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-cisis|20260716085852","",,,,"FRLMSpecimen.type",0,1,"",""
-"FRLMSpecimen.specimenSource[x]","FRLMSpecimen.specimenSource[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient {[]} {[]}
-https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLocation {[]} {[]}https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.specimenSource[x]",0,1,"",""
-"FRLMSpecimen.parentSpecimen","FRLMSpecimen.parentSpecimen","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSpecimen {[]} {[]}
+"FRLMSpecimen.specimenSource[x]","FRLMSpecimen.specimenSource[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","Origine du prélèvement : il peut provenir d'un patient, d'un lieu ou d'un dispositif","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.specimenSource[x]",0,1,"",""
+"FRLMSpecimen.parentSpecimen","FRLMSpecimen.parentSpecimen","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen {[]} {[]}
 ","Prélèvement dont provient cet échantillon","Prélèvement dont provient cet échantillon","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.parentSpecimen",0,*,"",""
-"FRLMSpecimen.request","FRLMSpecimen.request","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMServiceRequest {[]} {[]}
+"FRLMSpecimen.request","FRLMSpecimen.request","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest {[]} {[]}
 ","Demande à l'origine du prélèvement","Demande à l'origine du prélèvement","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.request",0,*,"",""
 "FRLMSpecimen.combined","FRLMSpecimen.combined","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Binding Description: (preferred): HL7 specimen-combined","Binding Description: (preferred): HL7 specimen-combined","","","","","","","","","",,"preferred","(preferred): HL7 specimen-combined","","",,,,"FRLMSpecimen.combined",0,1,"",""
 "FRLMSpecimen.collection","FRLMSpecimen.collection","","","",0,*,"","","","Base {[]} {[]}
 ","Détails de la collecte","Détails de la collecte","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection",0,*,"",""
-"FRLMSpecimen.collection.performer[x]","FRLMSpecimen.collection.performer[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
-https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient {[]} {[]}https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMRelatedPerson {[]} {[]}","Organisation prélevante","Organisation prélevante","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.performer[x]",0,1,"",""
+"FRLMSpecimen.collection.performer[x]","FRLMSpecimen.collection.performer[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson {[]} {[]}","Organisation prélevante","Organisation prélevante","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.performer[x]",0,1,"",""
 "FRLMSpecimen.collection.collected[x]","FRLMSpecimen.collection.collected[x]","","","",1,1,"","","","dateTime {[]} {[]}
 Period {[]} {[]}","Date du prélèvement","Date du prélèvement","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.collected[x]",1,1,"",""
 "FRLMSpecimen.collection.quantity","FRLMSpecimen.collection.quantity","","","",0,1,"","","","Quantity {[]} {[]}
 ","Quantité","Quantité","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.quantity",0,1,"",""
 "FRLMSpecimen.collection.method","FRLMSpecimen.collection.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Acte de prélèvement","Acte de prélèvement","","","","","","","","","",,"required","NABM (1.2.250.1.215.300.2) ou 33882-2 [LOINC] Prélèvement","","",,,,"FRLMSpecimen.collection.method",0,1,"",""
-"FRLMSpecimen.collection.device","FRLMSpecimen.collection.device","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDeviceUse {[]} {[]}
+"FRLMSpecimen.collection.device","FRLMSpecimen.collection.device","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse {[]} {[]}
 ","Dispositif utilisé","Dispositif utilisé","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.device",0,*,"",""
 "FRLMSpecimen.collection.additive[x]","FRLMSpecimen.collection.additive[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
-https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Produit utilisé","Produit utilisé","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.additive[x]",0,*,"",""
-"FRLMSpecimen.collection.bodySite","FRLMSpecimen.collection.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBodyStructure {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Produit utilisé","Produit utilisé","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.additive[x]",0,*,"",""
+"FRLMSpecimen.collection.bodySite","FRLMSpecimen.collection.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure {[]} {[]}
 ","Localisation du prélèvement","Localisation du prélèvement","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.collection.bodySite",0,1,"",""
 "FRLMSpecimen.receivedDate","FRLMSpecimen.receivedDate","","","",1,1,"","","","dateTime {[]} {[]}
 ","Date de réception de l'échantillon","Date de réception de l'échantillon","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.receivedDate",1,1,"",""
@@ -37,7 +37,7 @@ https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMD
 ","Contenant du prélèvement","Contenant du prélèvement","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.container",0,*,"",""
 "FRLMSpecimen.container.specimenQuantity","FRLMSpecimen.container.specimenQuantity","","","",0,1,"","","","Quantity {[]} {[]}
 ","Quantité de prélèvement dans le contenant","Quantité de prélèvement dans le contenant","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.container.specimenQuantity",0,1,"",""
-"FRLMSpecimen.container.containerDevice","FRLMSpecimen.container.containerDevice","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+"FRLMSpecimen.container.containerDevice","FRLMSpecimen.container.containerDevice","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
 ","Dispositif utilisé comme contenant","Dispositif utilisé comme contenant","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.container.containerDevice",1,1,"",""
 "FRLMSpecimen.condition","FRLMSpecimen.condition","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","État de l'échantillon","État de l'échantillon","","","","","","","","","",,"preferred","(preferred): HL7 specimenCondition","","",,,,"FRLMSpecimen.condition",0,*,"",""

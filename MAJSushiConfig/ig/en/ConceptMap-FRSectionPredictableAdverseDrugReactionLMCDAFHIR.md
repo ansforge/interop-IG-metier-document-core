@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
 {
   "resourceType" : "ConceptMap",
   "id" : "FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRSectionPredictableAdverseDrugReactionLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Effets indésirables\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effets-indesirables",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -73,6 +74,7 @@ Mapping des éléments du modèle métier FRLMPredictableAdverseDrugReaction ver
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{

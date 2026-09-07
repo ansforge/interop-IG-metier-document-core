@@ -9,7 +9,7 @@ Résultats d'examen de biologie médicale
 
 * Use this Logical Model: [Logical model - Laboratory Observation](StructureDefinition-FRLMLaboratoryObservation.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md) and [Logical model- FR LM Pregnancy Status](StructureDefinition-FRLMPregnancyStatus.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMLaboratoryObservation.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMLaboratoryObservation.json)
 
 ### Formal Views of Profile Content
 
@@ -35,12 +35,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLaboratoryObs
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLaboratoryObservation",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation",
   "version" : "0.1.0",
   "name" : "FRLMLaboratoryObservation",
   "title" : "Logical model - Laboratory Observation",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,8 +60,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLaboratoryObs
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLaboratoryObservation",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservation|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -83,10 +83,10 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLaboratoryObs
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLaboratoryObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
     },
     {
@@ -97,7 +97,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLaboratoryObs
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -130,7 +130,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLaboratoryObs
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLaboratoryObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation"
       }]
     },
     {

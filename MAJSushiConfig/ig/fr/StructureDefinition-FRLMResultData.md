@@ -9,7 +9,7 @@ Section Compte rendu de biologie de 1er niveau
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMResultData)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMResultData)
 
 ### Vues formelles du contenu du profil
 
@@ -62,12 +62,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultData",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultData",
   "version" : "0.1.0",
   "name" : "FRLMResultData",
   "title" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -87,8 +87,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultData",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultData",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -110,7 +110,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale"
       }]
     }]
   }

@@ -13,11 +13,11 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
 {
   "resourceType" : "ConceptMap",
   "id" : "FRAdverseDrugReactionLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRAdverseDrugReactionLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAdverseDrugReactionLMCDAFHIR",
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Effet Indésirable\"",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -36,6 +36,7 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-effet-indesirable",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -126,6 +127,7 @@ Mapping des éléments du modèle métier FRLMAdverseDrugReaction vers le profil
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdverseDrugReaction",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-adverse-event-document",
     "targetVersion" : "0.1.0",
     "element" : [{

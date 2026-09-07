@@ -9,7 +9,7 @@ Transfusion de produits sanguins
 
 * Ce Modèle logique n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMTransfusionDeProduitsSanguins)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMTransfusionDeProduitsSanguins)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMTransfusion
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMTransfusionDeProduitsSanguins",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMTransfusionDeProduitsSanguins",
   "version" : "0.1.0",
   "name" : "FRLMTransfusionDeProduitsSanguins",
   "title" : "Logical model - FR LM Transfusion de produits sanguins",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,8 +81,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMTransfusion
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMTransfusionDeProduitsSanguins",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMTransfusionDeProduitsSanguins",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{

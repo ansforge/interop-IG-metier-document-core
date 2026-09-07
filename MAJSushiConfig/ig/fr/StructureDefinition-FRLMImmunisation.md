@@ -9,7 +9,7 @@ Vaccination
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Immunisations](StructureDefinition-FRLMImmunisations.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMImmunisation)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMImmunisation)
 
 ### Vues formelles du contenu du profil
 
@@ -72,12 +72,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMImmunisation",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation",
   "version" : "0.1.0",
   "name" : "FRLMImmunisation",
   "title" : "Logical model - FR LM Immunisation",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -97,8 +97,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMImmunisation",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -166,7 +166,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedication"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication"
       }]
     },
     {
@@ -210,7 +210,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDoseNumber"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDoseNumber"
       }]
     },
     {
@@ -232,7 +232,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPrescriptionEntree"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPrescriptionEntree"
       }]
     },
     {
@@ -243,7 +243,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMImmunisatio
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCondition"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
       }]
     },
     {

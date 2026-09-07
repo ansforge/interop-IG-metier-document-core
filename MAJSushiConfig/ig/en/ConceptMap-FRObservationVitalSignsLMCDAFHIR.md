@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
 {
   "resourceType" : "ConceptMap",
   "id" : "FRObservationVitalSignsLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRObservationVitalSignsLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationVitalSignsLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRObservationVitalSignsLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Observation Vital Sign\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-signe-vital-observe",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -121,6 +122,7 @@ Mapping des éléments du modèle métier FRLMObservationVitalSign vers le profi
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationVitalSign",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-vital-signs-document",
     "targetVersion" : "0.1.0",
     "element" : [{

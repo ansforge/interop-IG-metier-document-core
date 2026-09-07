@@ -16,13 +16,13 @@ Ce ConceptMap présente deux groupes de mapping :
 {
   "resourceType" : "ConceptMap",
   "id" : "FRCustodianLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRCustodianLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRCustodianLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRCustodianLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Structure chargée de la conservation du document\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -41,6 +41,7 @@ Ce ConceptMap présente deux groupes de mapping :
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-custodian",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -54,6 +55,7 @@ Ce ConceptMap présente deux groupes de mapping :
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-represented-custodian-organization",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -87,6 +89,7 @@ Ce ConceptMap présente deux groupes de mapping :
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{

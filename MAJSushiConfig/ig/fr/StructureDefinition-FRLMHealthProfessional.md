@@ -9,7 +9,7 @@ Une personne (professionnel ou patient ou autre)
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Attester](StructureDefinition-FRLMAttester.md), [Logical model - FR LM Data Enterer](StructureDefinition-FRLMDataEnterer.md), [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md)... Show 13 more, [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md), [Logical model - FR LM Informant](StructureDefinition-FRLMInformant.md), [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Modèle logique métier - FR LM Laboratoire exécutant](StructureDefinition-FRLMLaboratoireExecutant.md), [Logical model - FR LM Legal Authentication](StructureDefinition-FRLMLegalAuthentication.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Order](StructureDefinition-FRLMOrder.md), [Logical model - FR LM Participant](StructureDefinition-FRLMParticipant.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model - FR LM Section](StructureDefinition-FRLMSection.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMHealthProfessional)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMHealthProfessional)
 
 ### Vues formelles du contenu du profil
 
@@ -52,12 +52,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHealthProfe
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
   "version" : "0.1.0",
   "name" : "FRLMHealthProfessional",
   "title" : "Logical model - FR LM Health Professional",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -77,7 +77,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHealthProfe
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -106,7 +106,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHealthProfe
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
       }]
     },
     {
@@ -161,7 +161,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHealthProfe
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {

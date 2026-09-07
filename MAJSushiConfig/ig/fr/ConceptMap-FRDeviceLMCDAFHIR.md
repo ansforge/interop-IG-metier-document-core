@@ -13,11 +13,11 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
 {
   "resourceType" : "ConceptMap",
   "id" : "FRDeviceLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRDeviceLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDeviceLMCDAFHIR",
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Dispositif médical\"",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -36,6 +36,7 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -148,6 +149,7 @@ Mapping des éléments du modèle métier FRLMDevice vers le profil CDA FRCDADis
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice",
+    "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/Device",
     "targetVersion" : "4.0.1",
     "element" : [{

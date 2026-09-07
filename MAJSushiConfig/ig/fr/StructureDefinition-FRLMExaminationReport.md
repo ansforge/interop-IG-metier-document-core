@@ -9,7 +9,7 @@ Section Acte d'imagerie
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMExaminationReport)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMExaminationReport)
 
 ### Vues formelles du contenu du profil
 
@@ -60,12 +60,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMExaminationReport",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
   "version" : "0.1.0",
   "name" : "FRLMExaminationReport",
   "title" : "Logical model - FR LM Examination Report",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -85,8 +85,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMExaminationReport",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -108,7 +108,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMConclusion"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion"
       }]
     },
     {
@@ -119,7 +119,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMProcedure"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
       }]
     },
     {
@@ -130,7 +130,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationAdministration"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration"
       }]
     },
     {
@@ -141,7 +141,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAllergyIntolerance"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance"
       }]
     },
     {
@@ -152,7 +152,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMExamination
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       },
       {
         "code" : "string"

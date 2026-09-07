@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
 {
   "resourceType" : "ConceptMap",
   "id" : "FRSectionSupportingInformationLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionSupportingInformationLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionSupportingInformationLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRSectionSupportingInformationLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-historique-medical",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -139,6 +140,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -242,6 +244,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document",
     "targetVersion" : "0.1.0",
     "element" : [{

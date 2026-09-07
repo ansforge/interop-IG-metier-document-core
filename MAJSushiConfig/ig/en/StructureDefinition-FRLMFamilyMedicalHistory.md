@@ -9,7 +9,7 @@ Section Antécédents familiaux
 
 * Use this Logical Model: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMFamilyMedicalHistory.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMFamilyMedicalHistory.json)
 
 ### Formal Views of Profile Content
 
@@ -35,12 +35,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMFamilyMedical
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
   "version" : "0.1.0",
   "name" : "FRLMFamilyMedicalHistory",
   "title" : "Logical model - FR LM Family Medical History",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -60,8 +60,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMFamilyMedical
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -88,7 +88,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMFamilyMedical
       "min" : 1,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMFamilyMemberHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory"
       }]
     }]
   }

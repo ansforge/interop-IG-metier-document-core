@@ -9,7 +9,7 @@ Une structure (organisation) pour les professionnels de santé.
 
 * Use this Logical Model: [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md), [Logical model - FR LM Health Professional](StructureDefinition-FRLMHealthProfessional.md)... Show 15 more, [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md), [Logical model - FR LM Informant](StructureDefinition-FRLMInformant.md), [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Modèle logique métier - FR LM Laboratoire exécutant](StructureDefinition-FRLMLaboratoireExecutant.md), [Logical model - FR LM Legal Authentication](StructureDefinition-FRLMLegalAuthentication.md), [Logical model - FR LM Location](StructureDefinition-FRLMLocation.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Order](StructureDefinition-FRLMOrder.md), [Logical model - FR LM Organisation](StructureDefinition-FRLMOrganisation.md), [Logical model - FR LM Participant](StructureDefinition-FRLMParticipant.md), [Logical model - FR LM Patient](StructureDefinition-FRLMPatient.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model - FR LM Section](StructureDefinition-FRLMSection.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMOrganisation.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMOrganisation.json)
 
 ### Formal Views of Profile Content
 
@@ -27,12 +27,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrganisation.
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMOrganisation",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
   "version" : "0.1.0",
   "name" : "FRLMOrganisation",
   "title" : "Logical model - FR LM Organisation",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrganisation.
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -132,7 +132,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrganisation.
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {

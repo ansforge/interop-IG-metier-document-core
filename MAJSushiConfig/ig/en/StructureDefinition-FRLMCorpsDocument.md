@@ -9,7 +9,7 @@ Eléments métier du corps d'un document contenant les sections du document.
 
 * This Logical Model is not used by any profiles in this Specification
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMCorpsDocument.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMCorpsDocument.json)
 
 ### Formal Views of Profile Content
 
@@ -27,12 +27,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMCorpsDocument",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCorpsDocument",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCorpsDocument",
   "version" : "0.1.0",
   "name" : "FRLMCorpsDocument",
   "title" : "Logical model - FR LM Corps document",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCorpsDocument",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCorpsDocument",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAlerts"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAlerts"
       }]
     },
     {
@@ -81,7 +81,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAllergiesAndIntolerances"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergiesAndIntolerances"
       }]
     },
     {
@@ -92,7 +92,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMProblems"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems"
       }]
     },
     {
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationSummary"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationSummary"
       }]
     },
     {
@@ -114,7 +114,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicesAndImplants"
       }]
     },
     {
@@ -125,7 +125,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMProcedures"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedures"
       }]
     },
     {
@@ -136,7 +136,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMImmunisations"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisations"
       }]
     },
     {
@@ -147,7 +147,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMFunctionalStatus"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFunctionalStatus"
       }]
     },
     {
@@ -158,7 +158,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSocialHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory"
       }]
     },
     {
@@ -169,7 +169,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSectionPregnancyHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionPregnancyHistory"
       }]
     },
     {
@@ -180,7 +180,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAdvanceDirectives"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirectives"
       }]
     },
     {
@@ -191,7 +191,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservationResults"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationResults"
       }]
     },
     {
@@ -202,7 +202,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCarePlans"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans"
       }]
     },
     {
@@ -213,7 +213,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMFamilyMedicalHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMedicalHistory"
       }]
     },
     {
@@ -224,7 +224,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHistoryOfPastIllness"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHistoryOfPastIllness"
       }]
     },
     {
@@ -235,7 +235,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPredictableAdverseDrugReaction"
       }]
     },
     {
@@ -246,7 +246,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHazardousWorkingConditions"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHazardousWorkingConditions"
       }]
     },
     {
@@ -257,7 +257,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMQRCode"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMQRCode"
       }]
     },
     {
@@ -268,7 +268,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMNote"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote"
       }]
     },
     {
@@ -279,7 +279,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationPrescription"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationPrescription"
       }]
     },
     {
@@ -290,7 +290,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicalDevicePrescriptions"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicalDevicePrescriptions"
       }]
     },
     {
@@ -301,7 +301,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPresentedForm"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPresentedForm"
       }]
     },
     {
@@ -312,7 +312,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAttachments"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachments"
       }]
     },
     {
@@ -323,7 +323,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSectionTravelHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSectionTravelHistory"
       }]
     },
     {
@@ -334,7 +334,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatientStory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientStory"
       }]
     },
     {
@@ -345,7 +345,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAddendum"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAddendum"
       }]
     },
     {
@@ -356,7 +356,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMVitalSigns"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns"
       }]
     },
     {
@@ -367,7 +367,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultData"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultData"
       }]
     },
     {
@@ -378,7 +378,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMExaminationReport"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExaminationReport"
       }]
     },
     {
@@ -389,7 +389,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrderInformation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrderInformation"
       }]
     },
     {
@@ -400,7 +400,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMComparisonStudy"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy"
       }]
     },
     {
@@ -411,7 +411,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMExposureInformation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExposureInformation"
       }]
     },
     {
@@ -422,7 +422,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSupportingInformation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation"
       }]
     },
     {
@@ -433,7 +433,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDicomStudyMetadata"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata"
       }]
     },
     {
@@ -444,7 +444,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMRecommendation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRecommendation"
       }]
     },
     {
@@ -455,7 +455,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMConclusion"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion"
       }]
     },
     {
@@ -466,7 +466,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationDispensations"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispensations"
       }]
     },
     {
@@ -477,7 +477,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatientEducation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientEducation"
       }]
     },
     {
@@ -488,7 +488,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatientHistory"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientHistory"
       }]
     },
     {
@@ -499,7 +499,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMReasonForReferral"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMReasonForReferral"
       }]
     },
     {
@@ -510,7 +510,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCourseOfEncounter"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCourseOfEncounter"
       }]
     },
     {
@@ -521,7 +521,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCorpsDocument
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHospitalDischargeMedications"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHospitalDischargeMedications"
       }]
     }]
   }

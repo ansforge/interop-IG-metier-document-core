@@ -9,7 +9,7 @@ Dispositif médical usage
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical Model - FR LM Medical Device Prescriptions](StructureDefinition-FRLMMedicalDevicePrescriptions.md), [Logical Model - FR LM Medical Devices and Implants](StructureDefinition-FRLMMedicalDevicesAndImplants.md), [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md) and [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMDeviceUse)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMDeviceUse)
 
 ### Vues formelles du contenu du profil
 
@@ -80,12 +80,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDeviceUse",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse",
   "version" : "0.1.0",
   "name" : "FRLMDeviceUse",
   "title" : "Logical model - FR LM Device use",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -105,8 +105,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDeviceUse",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -179,7 +179,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -190,7 +190,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBodyStructure"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure"
       }]
     },
     {
@@ -204,13 +204,13 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
         "code" : "CodeableConcept"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCondition"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMProcedure"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure"
       }]
     },
     {

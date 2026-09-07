@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
 {
   "resourceType" : "ConceptMap",
   "id" : "FRObservationAssessmentLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRObservationAssessmentLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRObservationAssessmentLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRObservationAssessmentLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Assessment (Evaluation)\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-evaluation",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -120,6 +121,7 @@ Mapping des éléments du modèle métier FRLMObservationAssessment vers le prof
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-assessment-document",
     "targetVersion" : "0.1.0",
     "element" : [{

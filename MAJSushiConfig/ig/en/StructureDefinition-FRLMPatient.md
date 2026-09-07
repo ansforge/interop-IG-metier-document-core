@@ -10,7 +10,7 @@ Patient/Usager concerné par le document.
 * Use this Logical Model: [Logical model - FR LM Data Enterer](StructureDefinition-FRLMDataEnterer.md), [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md), [Logical model - FR LM Informant](StructureDefinition-FRLMInformant.md)... Show 9 more, [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Logical model - FR LM Legal Authentication](StructureDefinition-FRLMLegalAuthentication.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Order](StructureDefinition-FRLMOrder.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model - FR LM Related Person](StructureDefinition-FRLMRelatedPerson.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 * Refer to this Logical Model: [Logical model - FR LM ObservationMedia](StructureDefinition-FRLMObservationMedia.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMPatient.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMPatient.json)
 
 ### Formal Views of Profile Content
 
@@ -32,12 +32,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient",
   "version" : "0.1.0",
   "name" : "FRLMPatient",
   "title" : "Logical model - FR LM Patient",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -110,7 +110,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
       }]
     },
     {
@@ -215,7 +215,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
       }]
     },
     {
@@ -226,7 +226,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     }]
   }

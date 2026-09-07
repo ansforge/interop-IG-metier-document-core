@@ -9,7 +9,7 @@ Modele logique metier - FR LM Human Name
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Health Professional](StructureDefinition-FRLMHealthProfessional.md), [Logical model - FR LM Participant](StructureDefinition-FRLMParticipant.md), [Logical model - FR LM Patient](StructureDefinition-FRLMPatient.md) and [Logical model - FR LM Related Person](StructureDefinition-FRLMRelatedPerson.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMHumanName)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMHumanName)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHumanName.c
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMHumanName",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
   "version" : "0.1.0",
   "name" : "FRLMHumanName",
   "title" : "Logical model - FR LM Human Name",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,7 +81,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHumanName.c
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {

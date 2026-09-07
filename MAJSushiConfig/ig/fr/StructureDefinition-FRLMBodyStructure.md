@@ -9,7 +9,7 @@ Localisation anatomique
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Condition](StructureDefinition-FRLMCondition.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Family Member History](StructureDefinition-FRLMFamilyMemberHistory.md), [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md)... Show 8 more, [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Assessment](StructureDefinition-FRLMObservationAssessment.md), [Logical model - FR LM Observation Vital Sign](StructureDefinition-FRLMObservationVitalSign.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [Logical model - FR LM Quantity Exposure](StructureDefinition-FRLMQuantityExposure.md), [Logical model - FR LM Series](StructureDefinition-FRLMSeries.md), [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMBodyStructure)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMBodyStructure)
 
 ### Vues formelles du contenu du profil
 
@@ -60,12 +60,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMBodyStructu
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBodyStructure",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure",
   "version" : "0.1.0",
   "name" : "FRLMBodyStructure",
   "title" : "Logical model - FR LM Body Structure",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMBodyStructu
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBodyStructure",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {

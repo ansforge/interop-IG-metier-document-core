@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
 {
   "resourceType" : "ConceptMap",
   "id" : "FRMedicationDispenseLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRMedicationDispenseLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationDispenseLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRMedicationDispenseLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement dispensé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement-dispense",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -126,6 +127,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-dispense-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -216,6 +218,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -386,6 +389,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-dispense-document",
     "targetVersion" : "0.1.0",
     "element" : [{

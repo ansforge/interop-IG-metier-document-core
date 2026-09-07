@@ -9,7 +9,7 @@ Section Comparaison d'examens d'imagerie
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMComparisonStudy)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMComparisonStudy)
 
 ### Vues formelles du contenu du profil
 
@@ -62,12 +62,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMComparisonS
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMComparisonStudy",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy",
   "version" : "0.1.0",
   "name" : "FRLMComparisonStudy",
   "title" : "Logical model - FR LM Comparison Study",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -87,8 +87,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMComparisonS
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMComparisonStudy",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMComparisonStudy",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{

@@ -9,7 +9,7 @@ Modèle logique représentant l'entrée
 
 * Derived from this Logical Model: [Logical model - FR LM Advance Directive](StructureDefinition-FRLMAdvanceDirective.md), [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-FRLMAdverseDrugReaction.md), [Logical model - FR LM Alert](StructureDefinition-FRLMAlert.md), [Logical model - FR LM Allergy Intolerance](StructureDefinition-FRLMAllergyIntolerance.md)... Show 38 more, [Logical model - FR LM Attachment](StructureDefinition-FRLMAttachment.md), [Modèle logique métier - FR LM Batterie d'examens de biologie médicale](StructureDefinition-FRLMBatterieExamensBiologieMedicale.md), [Logical model - FR LM Care Plan](StructureDefinition-FRLMCarePlan.md), [Logical model - FR LM Condition](StructureDefinition-FRLMCondition.md), [Logical model - FR LM DICOM Medication Administration](StructureDefinition-FRLMDICOMMedicationAdministration.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Endpoint](StructureDefinition-FRLMEndpoint.md), [Logical model - FR LM Family Member History](StructureDefinition-FRLMFamilyMemberHistory.md), [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md), [Logical model - FR LM Immunisation](StructureDefinition-FRLMImmunisation.md), [Modèle logique métier - FR LM Isolat microbiologique](StructureDefinition-FRLMIsolatMicrobiologique.md), [Logical model- FR LM Medication Administration ](StructureDefinition-FRLMMedicationAdministration.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md), [Logical model - FR LM Micro Organism Search](StructureDefinition-FRLMMicroOrganismSearch.md), [Logical model - FR LM Multidrug Resistant Microorganism Identification](StructureDefinition-FRLMMultidrugResistantMicroorganismIdentification.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Assessment](StructureDefinition-FRLMObservationAssessment.md), [Logical model - FR LM ObservationMedia](StructureDefinition-FRLMObservationMedia.md), [Logical model- FR LM Observation Social History](StructureDefinition-FRLMObservationSocialHistory.md), [Logical model - FR LM Observation Vital Sign](StructureDefinition-FRLMObservationVitalSign.md), [Logical model - FR LM Patient Transfer.](StructureDefinition-FRLMPatientTransfer.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model- FR LM Pregnancy Status](StructureDefinition-FRLMPregnancyStatus.md), [Logical model - FR LM Prescription](StructureDefinition-FRLMPrescriptionEntree.md), [Logical model - FR LM Medication Prescription](StructureDefinition-FRLMPrescriptionItem.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [Logical model - FR LM Quantity Exposure](StructureDefinition-FRLMQuantityExposure.md), [Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent](StructureDefinition-FRLMResultatExamensBiologieElementCliniquePertinent.md), [Logical model - FR LM Resultats d'examens de biologie medicale](StructureDefinition-FRLMResultatsExamensBiologieMedicale.md), [Logical model - FR LM SOP Instance](StructureDefinition-FRLMSOPInstance.md), [Logical model - FR LM Series](StructureDefinition-FRLMSeries.md), [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md), [Logical model - FR LM Transfusion accidents](StructureDefinition-FRLMTransfusionAccidents.md), [Logical model - FR LM Transfusion de produits sanguins](StructureDefinition-FRLMTransfusionDeProduitsSanguins.md) and [Logical model - FR LM TravelHistory](StructureDefinition-FRLMTravelHistory.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMEntry.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMEntry.json)
 
 ### Formal Views of Profile Content
 
@@ -27,12 +27,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMEntry",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry",
   "version" : "0.1.0",
   "name" : "FRLMEntry",
   "title" : "Logical model - FR LM Entry",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -81,7 +81,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"
       }]
     },
     {
@@ -114,7 +114,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       }]
     },
     {
@@ -125,7 +125,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -136,7 +136,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -147,10 +147,10 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -172,7 +172,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       }]
     },
     {
@@ -183,7 +183,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -194,7 +194,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -205,7 +205,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEntry.csv), [
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMInformant"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant"
       }]
     },
     {

@@ -9,7 +9,7 @@ Informant (personne ayant fourni des informations utiles à la production du doc
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md) and [Logical model - FR LM Section](StructureDefinition-FRLMSection.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMInformant)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMInformant)
 
 ### Vues formelles du contenu du profil
 
@@ -48,12 +48,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMInformant.c
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMInformant",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMInformant",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant",
   "version" : "0.1.0",
   "name" : "FRLMInformant",
   "title" : "Logical model - FR LM Informant",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,7 +73,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMInformant.c
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMInformant",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -102,7 +102,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMInformant.c
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       }]
     },
     {
@@ -113,7 +113,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMInformant.c
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -124,10 +124,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMInformant.c
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMRelatedPerson"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"
       }]
     }]
   }

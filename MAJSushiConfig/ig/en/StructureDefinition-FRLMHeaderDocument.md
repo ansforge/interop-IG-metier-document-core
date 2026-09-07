@@ -9,7 +9,7 @@ Eléments de l'entête d'un document contenant les informations générales et n
 
 * This Logical Model is not used by any profiles in this Specification
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMHeaderDocument.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMHeaderDocument.json)
 
 ### Formal Views of Profile Content
 
@@ -27,12 +27,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMHeaderDocument",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHeaderDocument",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
   "version" : "0.1.0",
   "name" : "FRLMHeaderDocument",
   "title" : "Logical model - FR LM Header Document",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHeaderDocument",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHeaderDocument",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -169,7 +169,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"
       }]
     },
     {
@@ -181,13 +181,13 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 1,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -198,7 +198,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDataEnterer"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDataEnterer"
       }]
     },
     {
@@ -209,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMInformant"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant"
       }]
     },
     {
@@ -220,7 +220,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -231,7 +231,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMIntendedRecipient"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient"
       }]
     },
     {
@@ -242,7 +242,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLegalAuthentication"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLegalAuthentication"
       }]
     },
     {
@@ -253,7 +253,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAttester"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttester"
       }]
     },
     {
@@ -264,7 +264,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMParticipant"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant"
       }]
     },
     {
@@ -275,7 +275,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrder"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder"
       }]
     },
     {
@@ -286,7 +286,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMConsent"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent"
       }]
     },
     {
@@ -297,7 +297,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHeaderDocumen
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEncounter"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter"
       }]
     }]
   }

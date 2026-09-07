@@ -9,7 +9,7 @@ Section
 
 * Dérivé de ce Modèle logique: [Logical model - FR LM Addendum](StructureDefinition-FRLMAddendum.md), [Logical model - FR LM Admission Evaluation](StructureDefinition-FRLMAdmissionEvaluation.md), [Logical model - FR LM Advance Directives](StructureDefinition-FRLMAdvanceDirectives.md), [Logical model - FR LM Alerts](StructureDefinition-FRLMAlerts.md)... Show 40 more, [Logical model - FR LM Allergies And Intolerances](StructureDefinition-FRLMAllergiesAndIntolerances.md), [Logical model - FR LM Attachments](StructureDefinition-FRLMAttachments.md), [Logical model - FR LM CarePlans](StructureDefinition-FRLMCarePlans.md), [Logical model - FR LM Comparison Study](StructureDefinition-FRLMComparisonStudy.md), [Logical model - FR LM Conclusion](StructureDefinition-FRLMConclusion.md), [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM DICOM Study Metadata](StructureDefinition-FRLMDicomStudyMetadata.md), [Logical model - FR LM Encounter Information](StructureDefinition-FRLMEncounterInformation.md), [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md), [Logical model - FR LM Exposure Information](StructureDefinition-FRLMExposureInformation.md), [Logical model - FR LM Family Medical History](StructureDefinition-FRLMFamilyMedicalHistory.md), [logical model- FR LM Functional Status](StructureDefinition-FRLMFunctionalStatus.md), [Logical model - FR LM Hazardous Working Conditions](StructureDefinition-FRLMHazardousWorkingConditions.md), [Logical model - FR LM FRLM History Of Past Illness](StructureDefinition-FRLMHistoryOfPastIllness.md), [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-FRLMHospitalDischargeMedications.md), [Logical model - FR LM Immunisations](StructureDefinition-FRLMImmunisations.md), [Logical Model - FR LM Medical Device Prescriptions](StructureDefinition-FRLMMedicalDevicePrescriptions.md), [Logical Model - FR LM Medical Devices and Implants](StructureDefinition-FRLMMedicalDevicesAndImplants.md), [Logical model - FR LM Medication Dispensations](StructureDefinition-FRLMMedicationDispensations.md), [Logical model - FR LM FR LM Medication Prescription](StructureDefinition-FRLMMedicationPrescription.md), [Logical model - FR LM Medication Summary](StructureDefinition-FRLMMedicationSummary.md), [Logical model - FR LM Note](StructureDefinition-FRLMNote.md), [Logical model - FR LM ObservationResults](StructureDefinition-FRLMObservationResults.md), [Logical model - FR LM Order Information](StructureDefinition-FRLMOrderInformation.md), [Logical model - FR LM Patient Education](StructureDefinition-FRLMPatientEducation.md), [Logical model - FR LM Patient History](StructureDefinition-FRLMPatientHistory.md), [Logical model - FR LM Patient Story](StructureDefinition-FRLMPatientStory.md), [Logical model - FR LM Predictable Adverse Drug Reaction](StructureDefinition-FRLMPredictableAdverseDrugReaction.md), [Logical model - FR LM Presented Form](StructureDefinition-FRLMPresentedForm.md), [Logical model - FR LM Problems](StructureDefinition-FRLMProblems.md), [logical model - FR LM Procedures](StructureDefinition-FRLMProcedures.md), [Logical model - FR LM QR Code](StructureDefinition-FRLMQRCode.md), [Logical model - FR LM Reason for referral](StructureDefinition-FRLMReasonForReferral.md), [Logical model - FR LM Recommendation](StructureDefinition-FRLMRecommendation.md), [Logical model - FR LM Compte rendu de biologie de 1er niveau](StructureDefinition-FRLMResultData.md), [Logical model - FR LM Pregnancy History](StructureDefinition-FRLMSectionPregnancyHistory.md), [Logical model - FR LM Travel History](StructureDefinition-FRLMSectionTravelHistory.md), [Logical model - FR LM SocialHistory](StructureDefinition-FRLMSocialHistory.md), [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md) and [Logical model - FR LM Vital Signs](StructureDefinition-FRLMVitalSigns.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMSection)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMSection)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection",
   "version" : "0.1.0",
   "name" : "FRLMSection",
   "title" : "Logical model - FR LM Section",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,7 +81,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSection",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSection",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -143,7 +143,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHealthProfessional"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional"
       }]
     },
     {
@@ -154,7 +154,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -165,7 +165,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {
@@ -176,7 +176,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSection.csv
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMInformant"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant"
       }]
     },
     {

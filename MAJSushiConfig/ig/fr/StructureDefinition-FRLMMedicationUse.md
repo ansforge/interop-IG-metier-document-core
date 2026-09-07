@@ -9,7 +9,7 @@ Déclaration de l'utilisation d'un médicament, faisant partie d'une synthèse d
 
 * Ce Modèle logique n'est utilisé par aucun autre profil dans ce guide d'implémentation
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMMedicationUse)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMMedicationUse)
 
 ### Vues formelles du contenu du profil
 
@@ -52,12 +52,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationU
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMMedicationUse",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationUse",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationUse",
   "version" : "0.1.0",
   "name" : "FRLMMedicationUse",
   "title" : "Logical model - FR LM Medication Use",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -77,8 +77,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationU
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationUse",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationUse",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -127,7 +127,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationU
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedication"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication"
       }]
     },
     {
@@ -152,7 +152,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationU
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDosageInstructions"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions"
       }]
     },
     {
@@ -174,13 +174,13 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationU
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPrescriptionItem"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPrescriptionItem"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationDispense"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationAdministration"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration"
       }]
     },
     {

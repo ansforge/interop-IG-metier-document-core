@@ -18,13 +18,13 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
 {
   "resourceType" : "ConceptMap",
   "id" : "FRHealthProfessionalLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRHealthProfessionalLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRHealthProfessionalLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRHealthProfessionalLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -43,6 +43,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-entity",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -107,6 +108,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -119,6 +121,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -166,6 +169,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitionerRole-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -201,6 +205,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -242,6 +247,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-practitioner-document",
     "targetVersion" : "0.1.0",
     "element" : [{

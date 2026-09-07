@@ -9,7 +9,7 @@ Produit de santé
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Immunisation](StructureDefinition-FRLMImmunisation.md), [Logical model- FR LM Medication Administration ](StructureDefinition-FRLMMedicationAdministration.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md)... Show 2 more, [Logical model - FR LM Medication Prescription](StructureDefinition-FRLMPrescriptionItem.md) and [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMMedication)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMMedication)
 
 ### Vues formelles du contenu du profil
 
@@ -68,12 +68,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedication.
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedication",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
   "version" : "0.1.0",
   "name" : "FRLMMedication",
   "title" : "Logical model - FR LM Medication",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -93,7 +93,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedication.
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedication",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -364,7 +364,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedication.
         "code" : "CodeableConcept"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDevice"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice"
       }]
     },
     {

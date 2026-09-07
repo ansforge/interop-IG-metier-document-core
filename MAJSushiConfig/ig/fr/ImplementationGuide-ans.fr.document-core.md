@@ -7,14 +7,14 @@
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fr.metier.document.core",
+  "id" : "ans.fr.document-core",
   "language" : "fr",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ImplementationGuide/ans.fr.metier.document.core",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ImplementationGuide/ans.fr.document-core",
   "version" : "0.1.0",
   "name" : "FRLogicalModelDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -31,7 +31,7 @@
       "display" : "France (la)"
     }]
   }],
-  "packageId" : "ans.fr.metier.document.core",
+  "packageId" : "ans.fr.document-core",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -322,7 +322,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://interop.esante.gouv.fr/ig/metier/document-core/history.html"
+        "valueString" : "https://interop.esante.gouv.fr/ig/document-core/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -728,7 +728,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "https://interop.esante.gouv.fr/ig/metier/document-core/history.html"
+        "valueString" : "https://interop.esante.gouv.fr/ig/document-core/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

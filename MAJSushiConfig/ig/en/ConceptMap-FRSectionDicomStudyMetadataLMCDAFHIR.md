@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
 {
   "resourceType" : "ConceptMap",
   "id" : "FRSectionDicomStudyMetadataLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionDicomStudyMetadataLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionDicomStudyMetadataLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRSectionDicomStudyMetadataLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Catalogue des objets d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-object-catalog",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -80,6 +81,7 @@ Mapping des éléments du modèle métier FRLMDicomStudyMetadata vers la section
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{

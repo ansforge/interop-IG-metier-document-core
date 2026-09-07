@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA 
 {
   "resourceType" : "ConceptMap",
   "id" : "FRSectionSocialHistoryLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionSocialHistoryLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionSocialHistoryLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRSectionSocialHistoryLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : Habitus et modes de vie",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA 
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-habitus-mode-de-vie",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -80,6 +81,7 @@ Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA 
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSocialHistory",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{

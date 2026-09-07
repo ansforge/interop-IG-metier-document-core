@@ -9,7 +9,7 @@ Lieu
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Location](StructureDefinition-FRLMLocation.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMLocation)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMLocation)
 
 ### Vues formelles du contenu du profil
 
@@ -60,12 +60,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMLocation.cs
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLocation",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation",
   "version" : "0.1.0",
   "name" : "FRLMLocation",
   "title" : "Logical model - FR LM Location",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMLocation.cs
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLocation",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -162,7 +162,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMLocation.cs
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMOrganisation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation"
       }]
     },
     {
@@ -173,7 +173,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMLocation.cs
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLocation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation"
       }]
     }]
   }

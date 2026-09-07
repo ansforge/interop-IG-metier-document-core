@@ -16,13 +16,13 @@ Ce ConceptMap présente deux groupes de mapping :
 {
   "resourceType" : "ConceptMap",
   "id" : "FROrderLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FROrderLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrderLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FROrderLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Prescription\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -41,6 +41,7 @@ Ce ConceptMap présente deux groupes de mapping :
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-inFulfillment-of",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -75,6 +76,7 @@ Ce ConceptMap présente deux groupes de mapping :
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-order",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -94,6 +96,7 @@ Ce ConceptMap présente deux groupes de mapping :
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder",
+    "sourceVersion" : "0.1.0",
     "target" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
     "targetVersion" : "4.0.1",
     "element" : [{

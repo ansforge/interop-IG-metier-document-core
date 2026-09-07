@@ -9,7 +9,7 @@ Related Person
 
 * Use this Logical Model: [Logical model - FR LM Family Member History](StructureDefinition-FRLMFamilyMemberHistory.md), [Logical model - FR LM Informant](StructureDefinition-FRLMInformant.md), [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMRelatedPerson.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMRelatedPerson.json)
 
 ### Formal Views of Profile Content
 
@@ -27,12 +27,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
 {
   "resourceType" : "StructureDefinition",
   "id" : "FRLMRelatedPerson",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMRelatedPerson",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
   "version" : "0.1.0",
   "name" : "FRLMRelatedPerson",
   "title" : "Logical model - FR LM Related Person",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -52,7 +52,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMRelatedPerson",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {
@@ -81,7 +81,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMHumanName"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"
       }]
     },
     {
@@ -92,7 +92,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMRelatedPerson
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMPatient"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"
       }]
     },
     {

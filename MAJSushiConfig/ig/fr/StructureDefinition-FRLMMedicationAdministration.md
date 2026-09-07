@@ -9,7 +9,7 @@ Traitement
 
 * Utilise ce/t/te Modèle logique: [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-FRLMAdverseDrugReaction.md), [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md), [Logical model - FR LM Exposure Information](StructureDefinition-FRLMExposureInformation.md)... Show 4 more, [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-FRLMHospitalDischargeMedications.md), [Logical model - FR LM Medication Summary](StructureDefinition-FRLMMedicationSummary.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md) and [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMMedicationAdministration)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMMedicationAdministration)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationAdministration",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration",
   "version" : "0.1.0",
   "name" : "FRLMMedicationAdministration",
   "title" : "Logical model- FR LM Medication Administration\t",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,8 +81,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedicationAdministration",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -99,7 +99,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMMedication"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication"
       }]
     },
     {
@@ -127,10 +127,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
         "code" : "CodeableConcept"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMCondition"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
       },
       {
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
     },
     {
@@ -141,7 +141,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDosageInstructions"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions"
       }]
     },
     {

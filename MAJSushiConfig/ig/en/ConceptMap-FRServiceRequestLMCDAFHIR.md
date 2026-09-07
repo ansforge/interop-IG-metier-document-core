@@ -13,13 +13,13 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
 {
   "resourceType" : "ConceptMap",
   "id" : "FRServiceRequestLMCDAFHIR",
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRServiceRequestLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRServiceRequestLMCDAFHIR",
   "version" : "0.1.0",
   "name" : "FRServiceRequestLMCDAFHIR",
   "title" : "Mapping Métier/CDA/FHIR : \"Demande d'examen ou de suivi\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -38,6 +38,7 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
   }],
   "group" : [{
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-demande-d-examen-ou-de-suivi",
     "targetVersion" : "0.1.0",
     "element" : [{
@@ -128,6 +129,7 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
   },
   {
     "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest",
+    "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-service-request-document",
     "targetVersion" : "0.1.0",
     "element" : [{

@@ -9,7 +9,7 @@ SOP Instance
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Series](StructureDefinition-FRLMSeries.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMSOPInstance)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMSOPInstance)
 
 ### Vues formelles du contenu du profil
 
@@ -64,12 +64,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSOPInstance
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSOPInstance",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
   "version" : "0.1.0",
   "name" : "FRLMSOPInstance",
   "title" : "Logical model - FR LM SOP Instance",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -89,8 +89,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSOPInstance
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSOPInstance",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{

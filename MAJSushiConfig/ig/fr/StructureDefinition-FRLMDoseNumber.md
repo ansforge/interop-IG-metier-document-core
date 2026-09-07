@@ -9,7 +9,7 @@ Rang de la vaccination
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Immunisation](StructureDefinition-FRLMImmunisation.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMDoseNumber)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMDoseNumber)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDoseNumber.
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDoseNumber",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDoseNumber",
   "version" : "0.1.0",
   "name" : "FRLMDoseNumber",
   "title" : "Logical model - FR LM Dose Number",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,7 +81,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDoseNumber.
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMDoseNumber",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDoseNumber",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base|4.0.1",
   "derivation" : "specialization",
   "differential" : {

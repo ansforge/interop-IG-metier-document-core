@@ -9,7 +9,7 @@ Séries d'actes d'imagerie
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMSeries)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMSeries)
 
 ### Vues formelles du contenu du profil
 
@@ -64,12 +64,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSeries",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
   "version" : "0.1.0",
   "name" : "FRLMSeries",
   "title" : "Logical model - FR LM Series",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -89,8 +89,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSeries",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -145,7 +145,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
       "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBodyStructure"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure"
       }]
     },
     {
@@ -156,7 +156,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSpecimen"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen"
       }]
     },
     {
@@ -178,7 +178,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEndpoint"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint"
       }]
     },
     {
@@ -200,7 +200,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSeries.csv)
       "min" : 1,
       "max" : "1",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSOPInstance"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance"
       }]
     }]
   }

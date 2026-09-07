@@ -9,7 +9,7 @@ Resultats d'examens de biologie medicale
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Compte rendu de biologie de 1er niveau](StructureDefinition-FRLMResultData.md)
 
-Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.metier.document.core|current/StructureDefinition/FRLMResultatsExamensBiologieMedicale)
+Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMResultatsExamensBiologieMedicale)
 
 ### Vues formelles du contenu du profil
 
@@ -56,12 +56,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale",
   "version" : "0.1.0",
   "name" : "FRLMResultatsExamensBiologieMedicale",
   "title" : "Logical model - FR LM Resultats d'examens de biologie medicale",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -81,8 +81,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
@@ -115,7 +115,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMLaboratoireExecutant"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoireExecutant"
       }]
     },
     {
@@ -126,7 +126,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMSpecimen"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen"
       }]
     },
     {
@@ -137,7 +137,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMBatterieExamensBiologieMedicale"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBatterieExamensBiologieMedicale"
       }]
     },
     {
@@ -148,7 +148,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMIsolatMicrobiologique"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIsolatMicrobiologique"
       }]
     },
     {
@@ -159,7 +159,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent"
       }]
     },
     {
@@ -170,7 +170,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultatsEx
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMObservationMedia"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"
       }]
     },
     {

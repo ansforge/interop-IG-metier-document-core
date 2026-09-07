@@ -9,7 +9,7 @@ Allergie ou Hypersensibilité
 
 * Use this Logical Model: [Logical model - FR LM Allergies And Intolerances](StructureDefinition-FRLMAllergiesAndIntolerances.md) and [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.metier.document.core|current/StructureDefinition/StructureDefinition-FRLMAllergyIntolerance.json)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMAllergyIntolerance.json)
 
 ### Formal Views of Profile Content
 
@@ -31,12 +31,12 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAllergyIntole
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
     "valueCode" : "can-be-target"
   }],
-  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAllergyIntolerance",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance",
   "version" : "0.1.0",
   "name" : "FRLMAllergyIntolerance",
   "title" : "Logical model - FR LM Allergy Intolerance",
   "status" : "draft",
-  "date" : "2026-09-07T10:25:17+00:00",
+  "date" : "2026-09-07T11:26:50+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -56,8 +56,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAllergyIntole
   "fhirVersion" : "4.0.1",
   "kind" : "logical",
   "abstract" : false,
-  "type" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMAllergyIntolerance",
-  "baseDefinition" : "https://interop.esante.gouv.fr/ig/metier/document-core/StructureDefinition/FRLMEntry|0.1.0",
+  "type" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEntry|0.1.0",
   "derivation" : "specialization",
   "differential" : {
     "element" : [{
