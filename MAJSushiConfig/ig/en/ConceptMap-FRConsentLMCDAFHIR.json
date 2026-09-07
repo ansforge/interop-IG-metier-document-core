@@ -1,0 +1,101 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRConsentLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRConsentLMCDAFHIR</b></p><a name=\"en-FRConsentLMCDAFHIR\"> </a><a name=\"en-hcFRConsentLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-authorization.html\">CDA - authorizationversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMConsent</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Authorization</td><td/></tr><tr><td>FRLMConsent.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Authorization.consent.id (Identifiant du consentement)</td><td/></tr><tr><td>FRLMConsent.type</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Authorization.consent.code (Type de consentement)</td><td/></tr><tr><td>FRLMConsent.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Authorization.consent.statusCode</td><td>Valeur fixée à 'completed'.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent</code> to <a href=\"http://hl7.org/fhir/R4/consent.html\">Consentversion: 4.0.1)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMConsent</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Consent (A healthcare consumer's  choices to permit or deny recipients or roles to perform actions for specific purposes and periods of time)</td><td>Référencé depuis Composition.extension:consent (ConsentExtension.value[x]:valueReference).</td></tr><tr><td>FRLMConsent.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Consent.identifier (Identifier for this record (external references))</td><td/></tr><tr><td>FRLMConsent.type</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Consent.category (Classification of the consent statement - for indexing/retrieval)</td><td/></tr><tr><td>FRLMConsent.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Consent.status (draft | proposed | active | rejected | inactive | entered-in-error)</td><td/></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRConsentLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRConsentLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Consentement\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMConsent\\\" et l'élément CDA \\\"authorization\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMConsent\\\" et la ressource FHIR \\\"Consent\\\" (référencée depuis Composition via l'extension ConsentExtension)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-authorization",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMConsent",
+      "target" : [{
+        "code" : "Authorization",
+        "display" : "authorization",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConsent.identifier",
+      "target" : [{
+        "code" : "Authorization.consent.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConsent.type",
+      "target" : [{
+        "code" : "Authorization.consent.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConsent.status",
+      "target" : [{
+        "code" : "Authorization.consent.statusCode",
+        "equivalence" : "equivalent",
+        "comment" : "Valeur fixée à 'completed'."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent",
+    "target" : "http://hl7.org/fhir/StructureDefinition/Consent",
+    "targetVersion" : "4.0.1",
+    "element" : [{
+      "code" : "FRLMConsent",
+      "target" : [{
+        "code" : "Consent",
+        "equivalence" : "equivalent",
+        "comment" : "Référencé depuis Composition.extension:consent (ConsentExtension.value[x]:valueReference)."
+      }]
+    },
+    {
+      "code" : "FRLMConsent.identifier",
+      "target" : [{
+        "code" : "Consent.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConsent.type",
+      "target" : [{
+        "code" : "Consent.category",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMConsent.status",
+      "target" : [{
+        "code" : "Consent.status",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,346 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRRelatedPersonLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRRelatedPersonLMCDAFHIR</b></p><a name=\"FRRelatedPersonLMCDAFHIR\"> </a><a name=\"hcFRRelatedPersonLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-related-entity.html\">CDA - relatedEntityversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMRelatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedEntity</td><td/></tr><tr><td>FRLMRelatedPerson.identifier</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de champ id explicite porté par relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.name</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous.</td></tr><tr><td>FRLMRelatedPerson.subject</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Porté implicitement par le contexte : relatedEntity est un sous-élément du patient dans recordTarget.</td></tr><tr><td>FRLMRelatedPerson.relationship</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedEntity.code (Lien de la personne avec le patient/usager.)</td><td/></tr><tr><td>FRLMRelatedPerson.address</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedEntity.addr (Adresse géopostale.)</td><td/></tr><tr><td>FRLMRelatedPerson.telecom</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedEntity.telecom (Coordonnées télécom.)</td><td/></tr><tr><td>FRLMRelatedPerson.gender</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié au sexe de la personne liée dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.birthDate</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la date de naissance de la personne liée dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.deceased</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié au décès de la personne liée dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.multipleBirth</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la naissance multiple de la personne liée dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.photo</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la photo de la personne liée dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.period</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la période de validité du lien dans relatedEntity.</td></tr><tr><td>FRLMRelatedPerson.communication</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-assigned-person.html\">CDA - assignedPersonversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMRelatedPerson.name</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Person.name (Identité de la personne physique responsable)</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-name.html\">CDA - Nameversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMHumanName.use</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.use (Use Code)</td></tr><tr><td>FRLMHumanName.family</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.item.family (Nom de famille ou nom d’usage)</td></tr><tr><td>FRLMHumanName.given</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.item.given (Prénom)</td></tr><tr><td>FRLMHumanName.prefix</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.item.prefix (Civilité)</td></tr><tr><td>FRLMHumanName.suffix</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.item.suffix (Titre)</td></tr><tr><td>FRLMHumanName.period</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>PN.validTime (Valid Time)</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html\">FR RelatedPerson Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMRelatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson (A person that is related to a patient, but who is not a direct target of care)</td><td/></tr><tr><td>FRLMRelatedPerson.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.identifier (A human identifier for this person)</td><td/></tr><tr><td>FRLMRelatedPerson.name</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.name (Nom de la personne)</td><td/></tr><tr><td>FRLMRelatedPerson.subject</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.patient (The patient this person is related to)</td><td>RelatedPerson.patient.resolve().ofType(Patient)</td></tr><tr><td>FRLMRelatedPerson.relationship</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.relationship (The nature of the relationship)</td><td/></tr><tr><td>FRLMRelatedPerson.address</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.address (An address expressed using postal conventions (as opposed to GPS or other location definition formats))</td><td/></tr><tr><td>FRLMRelatedPerson.telecom</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.telecom (Details of a Technology mediated contact point (phone, fax, email, etc.))</td><td/></tr><tr><td>FRLMRelatedPerson.gender</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.gender (male | female | other | unknown)</td><td/></tr><tr><td>FRLMRelatedPerson.birthDate</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.birthDate (The date on which the related person was born)</td><td/></tr><tr><td>FRLMRelatedPerson.deceased</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedPerson R4 ne porte pas nativement d'indicateur de décès.</td></tr><tr><td>FRLMRelatedPerson.multipleBirth</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">RelatedPerson R4 ne porte pas nativement d'indicateur de naissance multiple.</td></tr><tr><td>FRLMRelatedPerson.photo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.photo (Image of the person)</td><td/></tr><tr><td>FRLMRelatedPerson.period</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.period (Period of time that this relationship is considered valid)</td><td/></tr><tr><td>FRLMRelatedPerson.communication</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.communication (A language which may be used to communicate with about the patient's health)</td><td/></tr><tr><td>FRLMRelatedPerson.communication.language</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.communication.language (The language which can be used to communicate with the patient about his or her health)</td><td/></tr><tr><td>FRLMRelatedPerson.communication.preferred</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.communication.preferred (Language preference indicator)</td><td/></tr></table><hr/><p><b>Groupe 5 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-related-person-document.html\">FR RelatedPerson Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMHumanName.family</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.name.family (Family name (often called 'Surname'))</td></tr><tr><td>FRLMHumanName.given</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.name.given (Given names (not always 'first'). Includes middle names)</td></tr><tr><td>FRLMHumanName.prefix</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.name.prefix (Civilité)</td></tr><tr><td>FRLMHumanName.suffix</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>RelatedPerson.name.suffix (Titre)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRRelatedPersonLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRRelatedPersonLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Personne liée au patient\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Ce ConceptMap présente deux groupes de mapping :\n - Mapping 1 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et l'élément CDA \\\"relatedEntity\\\"\n - Mapping 2 : entre le modèle métier \\\"FRLMRelatedPerson\\\" et la ressource FHIR \\\"RelatedPerson\\\"\n\nCe mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-related-entity",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMRelatedPerson",
+      "target" : [{
+        "code" : "RelatedEntity",
+        "display" : "relatedEntity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.identifier",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Pas de champ id explicite porté par relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.name",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "RelatedEntity.relatedPerson référence le profil CDA SÉPARÉ fr-cda-assigned-person ; cf. groupe dédié ci-dessous."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.subject",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Porté implicitement par le contexte : relatedEntity est un sous-élément du patient dans recordTarget."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.relationship",
+      "target" : [{
+        "code" : "RelatedEntity.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.address",
+      "target" : [{
+        "code" : "RelatedEntity.addr",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.telecom",
+      "target" : [{
+        "code" : "RelatedEntity.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.gender",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié au sexe de la personne liée dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.birthDate",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la date de naissance de la personne liée dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.deceased",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié au décès de la personne liée dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.multipleBirth",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la naissance multiple de la personne liée dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.photo",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la photo de la personne liée dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.period",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la période de validité du lien dans relatedEntity."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.communication",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun champ CDA dédié à la langue de communication de la personne liée dans relatedEntity."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-assigned-person",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMRelatedPerson.name",
+      "target" : [{
+        "code" : "Person.name",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-name",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.use",
+      "target" : [{
+        "code" : "PN.use",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "PN.item.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "PN.item.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "PN.item.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "PN.item.suffix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.period",
+      "target" : [{
+        "code" : "PN.validTime",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMRelatedPerson",
+      "target" : [{
+        "code" : "RelatedPerson",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.identifier",
+      "target" : [{
+        "code" : "RelatedPerson.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.name",
+      "target" : [{
+        "code" : "RelatedPerson.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.subject",
+      "target" : [{
+        "code" : "RelatedPerson.patient",
+        "equivalence" : "equivalent",
+        "comment" : "RelatedPerson.patient.resolve().ofType(Patient)"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.relationship",
+      "target" : [{
+        "code" : "RelatedPerson.relationship",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.address",
+      "target" : [{
+        "code" : "RelatedPerson.address",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.telecom",
+      "target" : [{
+        "code" : "RelatedPerson.telecom",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.gender",
+      "target" : [{
+        "code" : "RelatedPerson.gender",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.birthDate",
+      "target" : [{
+        "code" : "RelatedPerson.birthDate",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.deceased",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "RelatedPerson R4 ne porte pas nativement d'indicateur de décès."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.multipleBirth",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "RelatedPerson R4 ne porte pas nativement d'indicateur de naissance multiple."
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.photo",
+      "target" : [{
+        "code" : "RelatedPerson.photo",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.period",
+      "target" : [{
+        "code" : "RelatedPerson.period",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.communication",
+      "target" : [{
+        "code" : "RelatedPerson.communication",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.communication.language",
+      "target" : [{
+        "code" : "RelatedPerson.communication.language",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMRelatedPerson.communication.preferred",
+      "target" : [{
+        "code" : "RelatedPerson.communication.preferred",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-related-person-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMHumanName.family",
+      "target" : [{
+        "code" : "RelatedPerson.name.family",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.given",
+      "target" : [{
+        "code" : "RelatedPerson.name.given",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.prefix",
+      "target" : [{
+        "code" : "RelatedPerson.name.prefix",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMHumanName.suffix",
+      "target" : [{
+        "code" : "RelatedPerson.name.suffix",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSpecimenLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSpecimenLMCDAFHIR</b></p><a name="en-FRSpecimenLMCDAFHIR"> </a><a name="en-hcFRSpecimenLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-prelevement.html">CDA - FR Prelevementversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMSpecimen</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure (FRCDAPrelevement)</td></tr><tr><td>FRLMSpecimen.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.id</td></tr><tr><td>FRLMSpecimen.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.statusCode</td></tr><tr><td>FRLMSpecimen.type</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.code (Acte de prélèvement - Pour un prélèvement en vue d'examen de biologie médicale, le code affiné NABM de l'acte de prélèvement doit être renseigné si connu, sauf dans le cas d'un recueil d'échantillon effectué par le patient lui-même. Un prélèvement cytologique ou de tissu en vue d'un examen d'anatomie ou de cytologie pathologiques est codé à l'aide d'une nomenclature précisée dans les modèles de contenus métiers.Par défaut, utiliser le code suivant : code='33882-2' displayName='Prélèvement' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC')</td></tr><tr><td>FRLMSpecimen.specimenSource[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.participant</td></tr><tr><td>FRLMSpecimen.parentSpecimen</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.participant:EchantillonPreleve (Échantillon prélevé)</td></tr><tr><td>FRLMSpecimen.request</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.combined</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.collection.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.performer (Organisation prélevante)</td></tr><tr><td>FRLMSpecimen.collection.collected[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.effectiveTime (Date du prélèvement: La date et heure de prélèvement doit être renseignée si elle est connue. En cas d'acte ponctuel, c'est la date et heure de fin (élément high) qui horodate le prélèvement.)</td></tr><tr><td>FRLMSpecimen.collection.quantity</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.collection.method</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.collection.device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.participant:DispositifUtilise (Dispositif utilisé)</td></tr><tr><td>FRLMSpecimen.collection.additive[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.participant:ProduitUtilise (Produit utilisé)</td></tr><tr><td>FRLMSpecimen.collection.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.targetSiteCode (Localisation du prélèvement SNOMED CT (2.16.840.1.113883.6.96))</td></tr><tr><td>FRLMSpecimen.receivedDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.entryRelationship.act.effectiveTime (Date de réception de l'échantillon)</td></tr><tr><td>FRLMSpecimen.container.specimenQuantity</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.container.containerDevice</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.condition</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Procedure.text</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-specimen-document.html">Specimen - FR Specimen Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMSpecimen</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen (FRSpecimenDocument)</td><td/></tr><tr><td>FRLMSpecimen.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.identifier (Identifiant de l'échantillon : L'identifiant de l'échantillon est éventuellement multiple (premier identifiant attribué par le préleveur, puis réidentification par le laboratoire).
+L'un des identifiants est visible sur l'échantillon matériel (par exemple en code barre sur le tube ou le bocal).)</td><td/></tr><tr><td>FRLMSpecimen.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.status (Statut du specimen)</td><td/></tr><tr><td>FRLMSpecimen.type</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.type (Échantillon prélevé (Si specimen provenant du corps du patient))</td><td/></tr><tr><td>FRLMSpecimen.specimenSource[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject (Source de l’échantillon(substance) : Si specimen extérieur au patient)</td><td>Cas où specimenSource[x] référence un FRLMPatient.</td></tr><tr><td>FRLMSpecimen.specimenSource[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject (Source de l’échantillon(substance) : Si specimen extérieur au patient)</td><td>Cas où specimenSource[x] référence un FRLMLocation.</td></tr><tr><td>FRLMSpecimen.specimenSource[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.subject (Source de l’échantillon(substance) : Si specimen extérieur au patient)</td><td>Cas où specimenSource[x] référence un FRLMDevice.</td></tr><tr><td>FRLMSpecimen.parentSpecimen</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.parent (Specimen from which this specimen originated)</td><td/></tr><tr><td>FRLMSpecimen.request</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.request (Why the specimen was collected)</td><td/></tr><tr><td>FRLMSpecimen.combined</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.collection.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.collector (Organisation prélevante)</td><td/></tr><tr><td>FRLMSpecimen.collection.collected[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.collected[x] (Date du prélèvement :
+La date et heure de prélèvement doit être renseignée si elle est connue. En cas d'acte ponctuel, c'est la date et heure de fin (élément collectedPeriod.end) qui horodate le prélèvement.)</td><td/></tr><tr><td>FRLMSpecimen.collection.quantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.quantity (The quantity of specimen collected)</td><td/></tr><tr><td>FRLMSpecimen.collection.method</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.method (Actes de prélèvement)</td><td/></tr><tr><td>FRLMSpecimen.collection.device</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMSpecimen.collection.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.collection.bodySite (Localisation anatomique)</td><td/></tr><tr><td>FRLMSpecimen.receivedDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.receivedTime (Date de réception de l'échantillon)</td><td/></tr><tr><td>FRLMSpecimen.collection.additive[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.processing.additive (Produit utilisé)</td><td/></tr><tr><td>FRLMSpecimen.container.specimenQuantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.container.specimenQuantity (Quantity of specimen within container)</td><td/></tr><tr><td>FRLMSpecimen.container.containerDevice</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.container.type.extension:device (Dispositif utilisé)</td><td/></tr><tr><td>FRLMSpecimen.condition</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.condition (State of the specimen)</td><td/></tr><tr><td>FRLMSpecimen.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Specimen.note (Comments)</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSpecimenLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRSpecimenLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Prélèvement&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMSpecimen vers le profil CDA FRCDAPrelevement, puis vers le profil FHIR FRSpecimenDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-prelevement"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMSpecimen"/>
+      <target>
+        <code value="Procedure"/>
+        <display value="FRCDAPrelevement"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.identifier"/>
+      <target>
+        <code value="Procedure.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.status"/>
+      <target>
+        <code value="Procedure.statusCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.type"/>
+      <target>
+        <code value="Procedure.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.specimenSource[x]"/>
+      <target>
+        <code value="Procedure.participant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.parentSpecimen"/>
+      <target>
+        <code value="Procedure.participant:EchantillonPreleve"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.request"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.combined"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.performer[x]"/>
+      <target>
+        <code value="Procedure.performer"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.collected[x]"/>
+      <target>
+        <code value="Procedure.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.quantity"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.method"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.device"/>
+      <target>
+        <code value="Procedure.participant:DispositifUtilise"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.additive[x]"/>
+      <target>
+        <code value="Procedure.participant:ProduitUtilise"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.bodySite"/>
+      <target>
+        <code value="Procedure.targetSiteCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.receivedDate"/>
+      <target>
+        <code value="Procedure.entryRelationship.act.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.container.specimenQuantity"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.container.containerDevice"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.condition"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.note"/>
+      <target>
+        <code value="Procedure.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-specimen-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMSpecimen"/>
+      <target>
+        <code value="Specimen"/>
+        <display value="FRSpecimenDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.identifier"/>
+      <target>
+        <code value="Specimen.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.status"/>
+      <target>
+        <code value="Specimen.status"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.type"/>
+      <target>
+        <code value="Specimen.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.specimenSource[x]"/>
+      <target>
+        <code value="Specimen.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où specimenSource[x] référence un FRLMPatient."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.specimenSource[x]"/>
+      <target>
+        <code value="Specimen.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où specimenSource[x] référence un FRLMLocation."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.specimenSource[x]"/>
+      <target>
+        <code value="Specimen.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où specimenSource[x] référence un FRLMDevice."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.parentSpecimen"/>
+      <target>
+        <code value="Specimen.parent"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.request"/>
+      <target>
+        <code value="Specimen.request"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.combined"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.performer[x]"/>
+      <target>
+        <code value="Specimen.collection.collector"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.collected[x]"/>
+      <target>
+        <code value="Specimen.collection.collected[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.quantity"/>
+      <target>
+        <code value="Specimen.collection.quantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.method"/>
+      <target>
+        <code value="Specimen.collection.method"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.device"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.bodySite"/>
+      <target>
+        <code value="Specimen.collection.bodySite"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.receivedDate"/>
+      <target>
+        <code value="Specimen.receivedTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.collection.additive[x]"/>
+      <target>
+        <code value="Specimen.processing.additive"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.container.specimenQuantity"/>
+      <target>
+        <code value="Specimen.container.specimenQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.container.containerDevice"/>
+      <target>
+        <code value="Specimen.container.type.extension:device"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.condition"/>
+      <target>
+        <code value="Specimen.condition"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMSpecimen.note"/>
+      <target>
+        <code value="Specimen.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

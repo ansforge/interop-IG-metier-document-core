@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRAdvanceDirectiveLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRAdvanceDirectiveLMCDAFHIR</b></p><a name="FRAdvanceDirectiveLMCDAFHIR"> </a><a name="hcFRAdvanceDirectiveLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-directive-anticipee.html">CDA - FR Directive anticipeeversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMAdvanceDirective</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation (FRCDADirectiveAnticipee)</td></tr><tr><td>FRLMAdvanceDirective.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.id (Identifiant de l'entrée)</td></tr><tr><td>FRLMAdvanceDirective.category</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code (Type de la directive anticipée - La valeur est issue du jeu de valeurs JDV_TypeDirectiveAnticipee_CISIS (1.2.250.1.213.1.1.5.136).)</td></tr><tr><td>FRLMAdvanceDirective.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.statusCode (Statut de l'observation - Fixé à la valeur 'completed')</td></tr><tr><td>FRLMAdvanceDirective.header.date</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.effectiveTime (Date de la directive anticipée)</td></tr><tr><td>FRLMAdvanceDirective.value</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.value (Procédure autorisée ou pas - La valeur de la directive identifiée est un élément booléen (xsi:type='BL') qui permet d’indiquer l’autorisation ou la non autorisation, sauf :- si l’élément 'code' est 'Autre directive' : dans ce cas, l'élément 'value' n'est pas présent et la précision est fournie dans la partie narrative (via l'élément: text/reference), - si l’élément 'code' est 'Directives anticipées' : dans ce cas, l'élément 'value' n'est pas présent et un document encodé en B64 est encapsulé dans l'élément 'component/observationMedia'.)</td></tr><tr><td>FRLMAdvanceDirective.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.text (Partie narrative de l'observation)</td></tr><tr><td>FRLMAdvanceDirective.attachment</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.entryRelationship.observationMedia (observationMedia)</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-advance-directive-document.html">Consent - FR Advance directive Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMAdvanceDirective</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent (FRAdvanceDirectiveDocument)</td><td/></tr><tr><td>FRLMAdvanceDirective.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.identifier (Identifier for this record (external references))</td><td/></tr><tr><td>FRLMAdvanceDirective.category</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.provision.code (Type de la directive anticipée)</td><td/></tr><tr><td>FRLMAdvanceDirective.note</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Consent (FHIR R4) n'a pas de champ de texte libre équivalent à un commentaire ; l'information reste portée par provision.code.</td></tr><tr><td>FRLMAdvanceDirective.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.status (Statut)</td><td/></tr><tr><td>FRLMAdvanceDirective.date</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.dateTime (Date de la directive anticipée)</td><td/></tr><tr><td>FRLMAdvanceDirective.value</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.provision.type (Procédure autorisée ou pas :
+Le type de la directive identifiée permet d’indiquer l’autorisation ou la non autorisation :
+- si l’élément &lt;&lt;provision.code&gt;&gt; est 'Autre directive' : dans ce cas, l'élément &lt;&lt;provision.type&gt;&gt; n'est pas présent
+- si l’élément &lt;&lt;provision.code&gt;&gt; est 'Directives anticipées' : dans ce cas, l'élément &lt;&lt;provision.type&gt;&gt; n'est pas présent et un document encodé en B64 est encapsulé dans l'élément 'sourceAttachment'.)</td><td/></tr><tr><td>FRLMAdvanceDirective.attachment</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.source[x] (Documents)</td><td/></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-directive-anticipee.html">CDA - FR Directive anticipeeversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMAttachment.url</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.reference.externalDocument.text.reference (Reference)</td><td>Référence externe portée par externalDocument.text.reference en CDA.</td></tr><tr><td>FRLMAttachment.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.entryRelationship.observationMedia.id (Identifiant observationMedia)</td><td/></tr><tr><td>FRLMAttachment.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.entryRelationship.observationMedia.value (Document encapsulé encodée en Base64)</td><td/></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-advance-directive-document.html">Consent - FR Advance directive Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMAttachment.url</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.source[x]:sourceAttachment.url (URI)</td></tr><tr><td>FRLMAttachment.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.source[x]:sourceAttachment.id (Unique id for inter-element referencing)</td></tr><tr><td>FRLMAttachment.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Consent.source[x]:sourceAttachment.data (Representation en B64)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRAdvanceDirectiveLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRAdvanceDirectiveLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Directive Anticipee&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMAdvanceDirective vers le profil CDA FRCDADirectiveAnticipee, puis vers le profil FHIR FRAdvanceDirectiveDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAdvanceDirective"/>
+      <target>
+        <code value="Observation"/>
+        <display value="FRCDADirectiveAnticipee"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.header.identifier"/>
+      <target>
+        <code value="Observation.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.category"/>
+      <target>
+        <code value="Observation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.header.status"/>
+      <target>
+        <code value="Observation.statusCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.header.date"/>
+      <target>
+        <code value="Observation.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.value"/>
+      <target>
+        <code value="Observation.value"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.note"/>
+      <target>
+        <code value="Observation.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.attachment"/>
+      <target>
+        <code value="Observation.entryRelationship.observationMedia"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAdvanceDirective"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAdvanceDirective"/>
+      <target>
+        <code value="Consent"/>
+        <display value="FRAdvanceDirectiveDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.header.identifier"/>
+      <target>
+        <code value="Consent.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.category"/>
+      <target>
+        <code value="Consent.provision.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.note"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Consent (FHIR R4) n'a pas de champ de texte libre équivalent à un commentaire ; l'information reste portée par provision.code."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.header.status"/>
+      <target>
+        <code value="Consent.status"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.date"/>
+      <target>
+        <code value="Consent.dateTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.value"/>
+      <target>
+        <code value="Consent.provision.type"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAdvanceDirective.attachment"/>
+      <target>
+        <code value="Consent.source[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-directive-anticipee"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAttachment.url"/>
+      <target>
+        <code value="Observation.reference.externalDocument.text.reference"/>
+        <equivalence value="equivalent"/>
+        <comment value="Référence externe portée par externalDocument.text.reference en CDA."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttachment.header.identifier"/>
+      <target>
+        <code value="Observation.entryRelationship.observationMedia.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttachment.data"/>
+      <target>
+        <code value="Observation.entryRelationship.observationMedia.value"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMAttachment.url"/>
+      <target>
+        <code value="Consent.source[x]:sourceAttachment.url"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttachment.header.identifier"/>
+      <target>
+        <code value="Consent.source[x]:sourceAttachment.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMAttachment.data"/>
+      <target>
+        <code value="Consent.source[x]:sourceAttachment.data"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

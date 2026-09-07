@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRImagingStudyLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRImagingStudyLMCDAFHIR</b></p><a name="FRImagingStudyLMCDAFHIR"> </a><a name="hcFRImagingStudyLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-examen-imagerie.html">CDA - FR DICOM Examen imagerieversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Act (FRCDADICOMExamenImagerie)</td><td/></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Act.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMImagingStudy.modality</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Act.code.qualifier (Qualifier)</td><td/></tr><tr><td>FRLMImagingStudy.bodySite</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Act ne porte pas de champ targetSiteCode (contrairement à Procedure/Observation) ; aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour bodySite.</td></tr><tr><td>FRLMImagingStudy.encounter</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter.</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Act.effectiveTime (Date de l'acte)</td><td/></tr><tr><td>FRLMImagingStudy.basedOn</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie).</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries.</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances.</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation.</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. .</td></tr><tr><td>FRLMImagingStudy.series</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-imaging-study-document.html">ImagingStudy - FR Imaging study Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMImagingStudy</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy (FRImagingStudyDocument)</td></tr><tr><td>FRLMImagingStudy.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.identifier (Study Instance UUID)</td></tr><tr><td>FRLMImagingStudy.modality</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.modality (Modalité d'acquisition de l'acte d'imagerie)</td></tr><tr><td>FRLMImagingStudy.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.series.bodySite (Localisation anatomique en SNOMED CT)</td></tr><tr><td>FRLMImagingStudy.encounter</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.encounter (Encounter with which this imaging study is associated)</td></tr><tr><td>FRLMImagingStudy.started</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.started (Date de l'acte)</td></tr><tr><td>FRLMImagingStudy.basedOn</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.basedOn (Request fulfilled)</td></tr><tr><td>FRLMImagingStudy.numberOfSeries</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.numberOfSeries (Nombre de séries)</td></tr><tr><td>FRLMImagingStudy.numberOfInstances</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.numberOfInstances (Number of Study Related Instances)</td></tr><tr><td>FRLMImagingStudy.studyCustodian</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.series.performer.actor (Who performed the series)</td></tr><tr><td>FRLMImagingStudy.studyEndpoint</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.endpoint (Study access endpoint)</td></tr><tr><td>FRLMImagingStudy.series</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ImagingStudy.series (Séries d'examen)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRImagingStudyLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRImagingStudyLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Examen d'imagerie&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-examen-imagerie"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMImagingStudy"/>
+      <target>
+        <code value="Act"/>
+        <display value="FRCDADICOMExamenImagerie"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.header.identifier"/>
+      <target>
+        <code value="Act.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.modality"/>
+      <target>
+        <code value="Act.code.qualifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.bodySite"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Act ne porte pas de champ targetSiteCode (contrairement à Procedure/Observation) ; aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour bodySite."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.encounter"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour encounter."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.started"/>
+      <target>
+        <code value="Act.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.basedOn"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.numberOfSeries"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.numberOfInstances"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.studyCustodian"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.studyEndpoint"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.series"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMImagingStudy"/>
+      <target>
+        <code value="ImagingStudy"/>
+        <display value="FRImagingStudyDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.header.identifier"/>
+      <target>
+        <code value="ImagingStudy.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.modality"/>
+      <target>
+        <code value="ImagingStudy.modality"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.bodySite"/>
+      <target>
+        <code value="ImagingStudy.series.bodySite"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.encounter"/>
+      <target>
+        <code value="ImagingStudy.encounter"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.started"/>
+      <target>
+        <code value="ImagingStudy.started"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.basedOn"/>
+      <target>
+        <code value="ImagingStudy.basedOn"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.numberOfSeries"/>
+      <target>
+        <code value="ImagingStudy.numberOfSeries"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.numberOfInstances"/>
+      <target>
+        <code value="ImagingStudy.numberOfInstances"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.studyCustodian"/>
+      <target>
+        <code value="ImagingStudy.series.performer.actor"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.studyEndpoint"/>
+      <target>
+        <code value="ImagingStudy.endpoint"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMImagingStudy.series"/>
+      <target>
+        <code value="ImagingStudy.series"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

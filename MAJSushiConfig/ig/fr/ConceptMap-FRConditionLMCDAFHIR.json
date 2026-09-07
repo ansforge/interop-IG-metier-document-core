@@ -1,0 +1,256 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRConditionLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRConditionLMCDAFHIR</b></p><a name=\"FRConditionLMCDAFHIR\"> </a><a name=\"hcFRConditionLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-probleme.html\">CDA - FR Problemeversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMCondition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation (FRCDAProbleme)</td><td/></tr><tr><td>FRLMCondition.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMCondition.type</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code (Type d'observation)</td><td/></tr><tr><td>FRLMCondition.problem</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.value (Problème observé. La valeur de l'élément value peut être: CIM-10 pour les pathologie\u00a0 et réactions à une vaccination :\u00a0Si le problème observé n'est pas trouvé dans la terminologie CIM-10, utiliser le\u00a0code='R69' displayName='Causes inconnues et non précisées de morbidité' codeSystem='2.16.840.1.113883.6.3' codeSystemName='CIM-10'\u00a0et décrire le problème sous forme de texte libre dans la partie narrative avec une référence vers l'entrée correspondante ; Réaction allergique: CIM-11\u00a0(2.16.840.1.113883.6.347) provenant du JDV_AllergieReaction_CISIS\u00a0(1.2.250.1.213.1.1.5.674)/ Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiques ou d'hyper-sensibilité ; &gt;Si pas de problème ou pas d'information &lt;/b&gt;: JDV_AbsentOrUnknownProblem_CISIS\u00a0(1.2.250.1.213.1.1.5.662))</td><td/></tr><tr><td>FRLMCondition.period</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.effectiveTime (Dates de début et de fin du problème)</td><td/></tr><tr><td>FRLMCondition.period.onsetDate</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider\" title=\"wider\">maps to wider concept</a></td><td>Observation.effectiveTime (Dates de début et de fin du problème)</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime.</td></tr><tr><td>FRLMCondition.period.endDate</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider\" title=\"wider\">maps to wider concept</a></td><td>Observation.effectiveTime (Dates de début et de fin du problème)</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime.</td></tr><tr><td>FRLMCondition.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.entryRelationship:frStatutDuProbleme (Statut du problème)</td><td/></tr><tr><td>FRLMCondition.severity</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.entryRelationship:frSeverite (Sévérité)</td><td/></tr><tr><td>FRLMCondition.diagnosisAssertionStatus</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.entryRelationship:frCertitude (certitude)</td><td/></tr><tr><td>FRLMCondition.clinicalStatus</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.entryRelationship:frStatutCliniqueDuPatient (Statut clinique du patient)</td><td/></tr><tr><td>FRLMCondition.bodySite</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de bodySite dans le profil CDA FRCDAProbleme.</td></tr><tr><td>FRLMCondition.stage</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite de stage dans le profil CDA FRCDAProbleme.</td></tr><tr><td>FRLMCondition.reference</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.reference.externalDocument.text.reference (Reference)</td><td/></tr><tr><td>FRLMCondition.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.entryRelationship:frCommentaireER (Commentaire)</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-condition-document.html\">Condition - FR Condition Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMCondition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition (FRConditionDocument)</td><td/></tr><tr><td>FRLMCondition.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.identifier (Identifiant)</td><td/></tr><tr><td>FRLMCondition.type</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.category (Type d'observation)</td><td/></tr><tr><td>FRLMCondition.problem</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.code (Identification de la condition, du problème ou du diagnostic :\nCIM-10 pour les pathologie  et réactions à une vaccination : Si le problème observé n'est pas trouvé dans la terminologie CIM-10, utiliser le code='R69' display='Causes inconnues et non précisées de morbidité' system='https://smt.esante.gouv.fr/terminologie-cim-10' et décrire le problème sous forme de texte libre\nRéaction allergique : CIM-11 (2.16.840.1.113883.6.347) / Chapitre 04 Maladies du système immunitaire / Bloc Affections allergiques ou d'hyper-sensibilité\nSi pas de problème ou pas d'information : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-absent-or-unknown-problem-cisis)</td><td/></tr><tr><td>FRLMCondition.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.clinicalStatus (Statut du problème)</td><td/></tr><tr><td>FRLMCondition.period</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td/><td>La période source est portée par deux éléments FHIR distincts: onsetDateTime et abatementDateTime.</td></tr><tr><td>FRLMCondition.period.onsetDate</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.onset[x]:onsetDateTime (Date de début du problème)</td><td/></tr><tr><td>FRLMCondition.period.endDate</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.abatement[x]:abatementDateTime (Date de fin du problème (si applicable))</td><td/></tr><tr><td>FRLMCondition.severity</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.severity (Subjective severity of condition)</td><td/></tr><tr><td>FRLMCondition.diagnosisAssertionStatus</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.verificationStatus (Certitude)</td><td/></tr><tr><td>FRLMCondition.clinicalStatus</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.stage.summary (Statut clinique du patient)</td><td/></tr><tr><td>FRLMCondition.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.bodySite (Localisation anatomique)</td><td/></tr><tr><td>FRLMCondition.stage</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.stage.summary (Statut clinique du patient)</td><td/></tr><tr><td>FRLMCondition.reference</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.evidence.detail (Supporting information found elsewhere)</td><td/></tr><tr><td>FRLMCondition.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Condition.note (Commentaire)</td><td/></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRConditionLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRConditionLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Problème\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMCondition vers le profil CDA FRCDAProbleme, puis vers le profil FHIR FRConditionDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-probleme",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMCondition",
+      "target" : [{
+        "code" : "Observation",
+        "display" : "FRCDAProbleme",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.header.identifier",
+      "target" : [{
+        "code" : "Observation.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.type",
+      "target" : [{
+        "code" : "Observation.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.problem",
+      "target" : [{
+        "code" : "Observation.value",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period",
+      "target" : [{
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period.onsetDate",
+      "target" : [{
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period.endDate",
+      "target" : [{
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "wider",
+        "comment" : "Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.header.status",
+      "target" : [{
+        "code" : "Observation.entryRelationship:frStatutDuProbleme",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.severity",
+      "target" : [{
+        "code" : "Observation.entryRelationship:frSeverite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.diagnosisAssertionStatus",
+      "target" : [{
+        "code" : "Observation.entryRelationship:frCertitude",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.clinicalStatus",
+      "target" : [{
+        "code" : "Observation.entryRelationship:frStatutCliniqueDuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.bodySite",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite de bodySite dans le profil CDA FRCDAProbleme."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.stage",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite de stage dans le profil CDA FRCDAProbleme."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.reference",
+      "target" : [{
+        "code" : "Observation.reference.externalDocument.text.reference",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.note",
+      "target" : [{
+        "code" : "Observation.entryRelationship:frCommentaireER",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-condition-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMCondition",
+      "target" : [{
+        "code" : "Condition",
+        "display" : "FRConditionDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.header.identifier",
+      "target" : [{
+        "code" : "Condition.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.type",
+      "target" : [{
+        "code" : "Condition.category",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.problem",
+      "target" : [{
+        "code" : "Condition.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.header.status",
+      "target" : [{
+        "code" : "Condition.clinicalStatus",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period",
+      "target" : [{
+        "equivalence" : "relatedto",
+        "comment" : "La période source est portée par deux éléments FHIR distincts: onsetDateTime et abatementDateTime."
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period.onsetDate",
+      "target" : [{
+        "code" : "Condition.onset[x]:onsetDateTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.period.endDate",
+      "target" : [{
+        "code" : "Condition.abatement[x]:abatementDateTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.severity",
+      "target" : [{
+        "code" : "Condition.severity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.diagnosisAssertionStatus",
+      "target" : [{
+        "code" : "Condition.verificationStatus",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.clinicalStatus",
+      "target" : [{
+        "code" : "Condition.stage.summary",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.bodySite",
+      "target" : [{
+        "code" : "Condition.bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.stage",
+      "target" : [{
+        "code" : "Condition.stage.summary",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.reference",
+      "target" : [{
+        "code" : "Condition.evidence.detail",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMCondition.note",
+      "target" : [{
+        "code" : "Condition.note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

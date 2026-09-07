@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRDeviceUseLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRDeviceUseLMCDAFHIR</b></p><a name="en-FRDeviceUseLMCDAFHIR"> </a><a name="en-hcFRDeviceUseLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dispositif-medical.html">CDA - FR Dispositif medicalversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMDeviceUse</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply (FRCDADispositifMedical)</td><td/></tr><tr><td>FRLMDeviceUse.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.id (Identifiant de la fourniture du DM -Sous la forme UID (UUID ou OID). Cet identifiant correspond à l'identifiant de la fourniture du dispositf médical (p. ex. procédure d'implant). Si l'identifiant n'est pas connu, utiliser la valeur nullFlavor='UNK'.)</td><td/></tr><tr><td>FRLMDeviceUse.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.statusCode (Statut de l'entrée)</td><td/></tr><tr><td>FRLMDeviceUse.periodOfUse</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.effectiveTime (Date d'utilisation ou de présence chez le patient - Si la date n'est pas connue, utiliser la valeur nullFlavor='UNK'.)</td><td/></tr><tr><td>FRLMDeviceUse.periodOfUse.onsetDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Supply.effectiveTime (Date d'utilisation ou de présence chez le patient - Si la date n'est pas connue, utiliser la valeur nullFlavor='UNK'.)</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime.</td></tr><tr><td>FRLMDeviceUse.periodOfUse.endDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Supply.effectiveTime (Date d'utilisation ou de présence chez le patient - Si la date n'est pas connue, utiliser la valeur nullFlavor='UNK'.)</td><td>Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime.</td></tr><tr><td>FRLMDeviceUse.periodOfUse.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.expectedUseTime (Durée d'utilisation - Si la date n’est pas connue, utiliser la valeur nullFla-vor='UNK')</td><td/></tr><tr><td>FRLMDeviceUse.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>Supply.performer (Dispensateur)</td><td/></tr><tr><td>FRLMDeviceUse.device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.participant (Dispositif médical)</td><td/></tr><tr><td>FRLMDeviceUse.bodySite</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune correspondance explicite de bodySite dans FRCDADispositifMedical.</td></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>Supply.entryRelationship:frEnRapportAvecALD (Entrée En rapport avec une Affection Longue Durée (ALD))</td><td/></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>Supply.entryRelationship:frEnRapportAvecAccidentTravail (Entrée En rapport avec accident travail)</td><td/></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>Supply.entryRelationship:frEnRapportAvecLaPrevention (Entrée En rapport avec la prevention)</td><td/></tr><tr><td>FRLMDeviceUse.reason[x]</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun entryRelationship explicite FRCDADispositifMedical pour le motif de type acte.</td></tr><tr><td>FRLMDeviceUse.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>Supply.text (Description narrative)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-device-use-statement-document.html">DeviceUseStatement - FR Device Use Statement Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMDeviceUse</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement (FRDeviceUseStatementDocument)</td><td/></tr><tr><td>FRLMDeviceUse.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.identifier (Identifiant de la fourniture du DM.)</td><td/></tr><tr><td>FRLMDeviceUse.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.status (active | completed | entered-in-error +)</td><td/></tr><tr><td>FRLMDeviceUse.periodOfUse</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.timing[x] (How often  the device was used)</td><td/></tr><tr><td>FRLMDeviceUse.periodOfUse.onsetDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>DeviceUseStatement.timing[x] (How often  the device was used)</td><td>timing[x] n'est pas décomposé en start/end distincts sur ce profil ; le début est porté par l'ensemble du choix de type.</td></tr><tr><td>FRLMDeviceUse.periodOfUse.endDate</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>DeviceUseStatement.timing[x] (How often  the device was used)</td><td>timing[x] n'est pas décomposé en start/end distincts sur ce profil ; la fin est portée par l'ensemble du choix de type.</td></tr><tr><td>FRLMDeviceUse.periodOfUse.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>DeviceUseStatement.timing[x] (How often  the device was used)</td><td>Le modèle métier porte une durée dédiée, alors que la cible FHIR ne fournit pas un champ direct équivalent sur DeviceUseStatement.</td></tr><tr><td>FRLMDeviceUse.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.extension:performer (Dispensateur: référence au professionnel de santé ou à l'organisation ayant initié ou dispensé le dispositif)</td><td/></tr><tr><td>FRLMDeviceUse.device</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.device (Dispositif médical)</td><td/></tr><tr><td>FRLMDeviceUse.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>DeviceUseStatement.bodySite (Target body site)</td><td/></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.reasonCode (Why device was used)</td><td/></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.reasonReference (Raisons liées à l'utilisation du dispositif médical)</td><td>Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier.</td></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.reasonReference (Raisons liées à l'utilisation du dispositif médical)</td><td>Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier.</td></tr><tr><td>FRLMDeviceUse.reason[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.reasonReference (Raisons liées à l'utilisation du dispositif médical)</td><td>Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier.</td></tr><tr><td>FRLMDeviceUse.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>DeviceUseStatement.note (Addition details (comments, instructions))</td><td/></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRDeviceUseLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRDeviceUseLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Utilisation de dispositif médical&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMDeviceUse vers le profil CDA FRCDADispositifMedical, puis vers le profil FHIR FRDeviceUseStatementDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dispositif-medical"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMDeviceUse"/>
+      <target>
+        <code value="Supply"/>
+        <display value="FRCDADispositifMedical"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.identifier"/>
+      <target>
+        <code value="Supply.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.status"/>
+      <target>
+        <code value="Supply.statusCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse"/>
+      <target>
+        <code value="Supply.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.onsetDate"/>
+      <target>
+        <code value="Supply.effectiveTime"/>
+        <equivalence value="wider"/>
+        <comment value="Le CDA ne décompose pas l'intervalle en low/high distincts ; le début est porté par l'ensemble de effectiveTime."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.endDate"/>
+      <target>
+        <code value="Supply.effectiveTime"/>
+        <equivalence value="wider"/>
+        <comment value="Le CDA ne décompose pas l'intervalle en low/high distincts ; la fin est portée par l'ensemble de effectiveTime."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.duration"/>
+      <target>
+        <code value="Supply.expectedUseTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.performer[x]"/>
+      <target>
+        <code value="Supply.performer"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.device"/>
+      <target>
+        <code value="Supply.participant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.bodySite"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucune correspondance explicite de bodySite dans FRCDADispositifMedical."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="Supply.entryRelationship:frEnRapportAvecALD"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="Supply.entryRelationship:frEnRapportAvecAccidentTravail"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="Supply.entryRelationship:frEnRapportAvecLaPrevention"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Aucun entryRelationship explicite FRCDADispositifMedical pour le motif de type acte."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.note"/>
+      <target>
+        <code value="Supply.text"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-device-use-statement-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMDeviceUse"/>
+      <target>
+        <code value="DeviceUseStatement"/>
+        <display value="FRDeviceUseStatementDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.identifier"/>
+      <target>
+        <code value="DeviceUseStatement.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.status"/>
+      <target>
+        <code value="DeviceUseStatement.status"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse"/>
+      <target>
+        <code value="DeviceUseStatement.timing[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.onsetDate"/>
+      <target>
+        <code value="DeviceUseStatement.timing[x]"/>
+        <equivalence value="wider"/>
+        <comment value="timing[x] n'est pas décomposé en start/end distincts sur ce profil ; le début est porté par l'ensemble du choix de type."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.endDate"/>
+      <target>
+        <code value="DeviceUseStatement.timing[x]"/>
+        <equivalence value="wider"/>
+        <comment value="timing[x] n'est pas décomposé en start/end distincts sur ce profil ; la fin est portée par l'ensemble du choix de type."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.periodOfUse.duration"/>
+      <target>
+        <code value="DeviceUseStatement.timing[x]"/>
+        <equivalence value="relatedto"/>
+        <comment value="Le modèle métier porte une durée dédiée, alors que la cible FHIR ne fournit pas un champ direct équivalent sur DeviceUseStatement."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.header.performer[x]"/>
+      <target>
+        <code value="DeviceUseStatement.extension:performer"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.device"/>
+      <target>
+        <code value="DeviceUseStatement.device"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.bodySite"/>
+      <target>
+        <code value="DeviceUseStatement.bodySite"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="DeviceUseStatement.reasonCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="DeviceUseStatement.reasonReference"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cible non slicée ; le motif référence FRObservationALDDocument selon le contexte métier."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="DeviceUseStatement.reasonReference"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cible non slicée ; le motif référence FRObservationWorkRelatedAccidentDocument selon le contexte métier."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.reason[x]"/>
+      <target>
+        <code value="DeviceUseStatement.reasonReference"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cible non slicée ; le motif référence FRObservationPreventionDocument selon le contexte métier."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDeviceUse.note"/>
+      <target>
+        <code value="DeviceUseStatement.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

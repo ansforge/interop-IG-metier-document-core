@@ -1,0 +1,305 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRImagingSeriesLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRImagingSeriesLMCDAFHIR</b></p><a name=\"en-FRImagingSeriesLMCDAFHIR\"> </a><a name=\"en-hcFRImagingSeriesLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-serie-imagerie.html\">CDA - FR DICOM Serie imagerieversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMSeries</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Act (FRCDADICOMSerieImagerie)</td><td/></tr><tr><td>FRLMSeries.seriesUid</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Act.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMSeries.number</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour number.</td></tr><tr><td>FRLMSeries.seriesModality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Act.code.qualifier (Qualifier)</td><td/></tr><tr><td>FRLMSeries.bodySite</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour bodySite.</td></tr><tr><td>FRLMSeries.specimen</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite identifiée dans FRCDADICOMSerieImagerie pour specimen.</td></tr><tr><td>FRLMSeries.numberOfInstances</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfInstances.</td></tr><tr><td>FRLMSeries.seriesEndpoint</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Act.entryRelationship.observation</td><td>seriesEndpoint référence un FRLMEndpoint ; ses sous-champs sont mappés dans le sous-groupe Endpoint ci-dessous (Observation.text.reference/.mediaType).</td></tr><tr><td>FRLMSeries.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Act.effectiveTime (Date de la série d'actes)</td><td/></tr><tr><td>FRLMSeries.instanceSOP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Act.entryRelationship.observation</td><td>Act.entryRelationship.observation référence le profil CDA FRCDADICOMSOPInstanceObservation ; ses sous-champs sont mappés dans le groupe dédié ci-dessous.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-sop-instance-observation.html\">CDA - FR DICOM SOP instance observationversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMSOPInstance.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMSOPInstance.sopClass</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code (Classe SOP - valeur issue du\u00a0JDV-SOPClass_CISIS (1.2.250.1.213.1.1.5.689).)</td><td/></tr><tr><td>FRLMSOPInstance.instanceNumber</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour instanceNumber.</td></tr><tr><td>FRLMSOPInstance.numberOfFrames</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour numberOfFrames.</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-sop-instance-observation.html\">CDA - FR DICOM SOP instance observationversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMEndpoint.connectionType</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.text.reference (Reference)</td></tr><tr><td>FRLMEndpoint.payloadType</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.text.mediaType (Media Type)</td></tr><tr><td>FRLMEndpoint.address</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.text.reference (Reference)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-imaging-study-document.html\">ImagingStudy - FR Imaging study Documentversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMSeries</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>ImagingStudy (FRImagingStudyDocument)</td><td>Le modèle FRLMSeries alimente principalement ImagingStudy.series.</td></tr><tr><td>FRLMSeries.seriesUid</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>ImagingStudy.series.uid (DICOM Series Instance UID)</td><td/></tr><tr><td>FRLMSeries.number</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.number (Numeric identifier of this series)</td><td/></tr><tr><td>FRLMSeries.seriesModality</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.modality (Modalité d'acquisition de la série d'acte)</td><td/></tr><tr><td>FRLMSeries.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.bodySite (Localisation anatomique en SNOMED CT)</td><td/></tr><tr><td>FRLMSeries.specimen</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.specimen (Specimen imaged)</td><td/></tr><tr><td>FRLMSeries.numberOfInstances</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.numberOfInstances (Number of Series Related Instances)</td><td/></tr><tr><td>FRLMSeries.seriesEndpoint</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.endpoint (Référence WADO)</td><td/></tr><tr><td>FRLMSeries.started</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.started (Date de la série d'actes)</td><td/></tr><tr><td>FRLMSeries.instanceSOP</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.instance (Url permettant d’accéder aux images sur la Drim box source)</td><td/></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-imaging-study-document.html\">ImagingStudy - FR Imaging study Documentversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMSOPInstance.header.identifier</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>ImagingStudy.series.instance.uid (DICOM SOP Instance UID)</td></tr><tr><td>FRLMSOPInstance.sopClass</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.instance.sopClass (DICOM class type)</td></tr><tr><td>FRLMSOPInstance.instanceNumber</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.instance.number (The number of this instance in the series)</td></tr><tr><td>FRLMSOPInstance.numberOfFrames</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ImagingStudy.series.instance.extension:number-of-frames (Nombre de cadres dans une instance d'image)</td></tr></table><hr/><p><b>Group 6 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-imaging-study-document.html\">ImagingStudy - FR Imaging study Documentversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMEndpoint.connectionType</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; connectionType n'est pas accessible sans résoudre la référence.</td></tr><tr><td>FRLMEndpoint.payloadType</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; payloadType n'est pas accessible sans résoudre la référence.</td></tr><tr><td>FRLMEndpoint.address</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; address n'est pas accessible sans résoudre la référence.</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRImagingSeriesLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRImagingSeriesLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Série d'imagerie\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMSeries vers le profil CDA FRCDADICOMSerieImagerie, puis vers le profil FHIR FRImagingStudyDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-serie-imagerie",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSeries",
+      "target" : [{
+        "code" : "Act",
+        "display" : "FRCDADICOMSerieImagerie",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesUid",
+      "target" : [{
+        "code" : "Act.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.number",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour number."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesModality",
+      "target" : [{
+        "code" : "Act.code.qualifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.bodySite",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour bodySite."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.specimen",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite identifiée dans FRCDADICOMSerieImagerie pour specimen."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.numberOfInstances",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfInstances."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesEndpoint",
+      "target" : [{
+        "code" : "Act.entryRelationship.observation",
+        "equivalence" : "relatedto",
+        "comment" : "seriesEndpoint référence un FRLMEndpoint ; ses sous-champs sont mappés dans le sous-groupe Endpoint ci-dessous (Observation.text.reference/.mediaType)."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.started",
+      "target" : [{
+        "code" : "Act.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.instanceSOP",
+      "target" : [{
+        "code" : "Act.entryRelationship.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Act.entryRelationship.observation référence le profil CDA FRCDADICOMSOPInstanceObservation ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSOPInstance.header.identifier",
+      "target" : [{
+        "code" : "Observation.id",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.sopClass",
+      "target" : [{
+        "code" : "Observation.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.instanceNumber",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour instanceNumber."
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.numberOfFrames",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut explicite identifié dans FRCDADICOMSOPInstanceObservation pour numberOfFrames."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-sop-instance-observation",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMEndpoint.connectionType",
+      "target" : [{
+        "code" : "Observation.text.reference",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMEndpoint.payloadType",
+      "target" : [{
+        "code" : "Observation.text.mediaType",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMEndpoint.address",
+      "target" : [{
+        "code" : "Observation.text.reference",
+        "equivalence" : "relatedto"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSeries",
+      "target" : [{
+        "code" : "ImagingStudy",
+        "display" : "FRImagingStudyDocument",
+        "equivalence" : "relatedto",
+        "comment" : "Le modèle FRLMSeries alimente principalement ImagingStudy.series."
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesUid",
+      "target" : [{
+        "code" : "ImagingStudy.series.uid",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.number",
+      "target" : [{
+        "code" : "ImagingStudy.series.number",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesModality",
+      "target" : [{
+        "code" : "ImagingStudy.series.modality",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.bodySite",
+      "target" : [{
+        "code" : "ImagingStudy.series.bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.specimen",
+      "target" : [{
+        "code" : "ImagingStudy.series.specimen",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.numberOfInstances",
+      "target" : [{
+        "code" : "ImagingStudy.series.numberOfInstances",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.seriesEndpoint",
+      "target" : [{
+        "code" : "ImagingStudy.series.endpoint",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.started",
+      "target" : [{
+        "code" : "ImagingStudy.series.started",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSeries.instanceSOP",
+      "target" : [{
+        "code" : "ImagingStudy.series.instance",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSOPInstance",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMSOPInstance.header.identifier",
+      "target" : [{
+        "code" : "ImagingStudy.series.instance.uid",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.sopClass",
+      "target" : [{
+        "code" : "ImagingStudy.series.instance.sopClass",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.instanceNumber",
+      "target" : [{
+        "code" : "ImagingStudy.series.instance.number",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSOPInstance.numberOfFrames",
+      "target" : [{
+        "code" : "ImagingStudy.series.instance.extension:number-of-frames",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-imaging-study-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMEndpoint.connectionType",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; connectionType n'est pas accessible sans résoudre la référence."
+      }]
+    },
+    {
+      "code" : "FRLMEndpoint.payloadType",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; payloadType n'est pas accessible sans résoudre la référence."
+      }]
+    },
+    {
+      "code" : "FRLMEndpoint.address",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "ImagingStudy.series.endpoint est une simple Reference(Endpoint) ; address n'est pas accessible sans résoudre la référence."
+      }]
+    }]
+  }]
+}

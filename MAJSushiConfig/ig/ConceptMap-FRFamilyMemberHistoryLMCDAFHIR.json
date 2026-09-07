@@ -1,0 +1,192 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRFamilyMemberHistoryLMCDAFHIR",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRFamilyMemberHistoryLMCDAFHIR</b></p><a name=\"FRFamilyMemberHistoryLMCDAFHIR\"> </a><a name=\"hcFRFamilyMemberHistoryLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-antecedents-familiaux.html\">CDA - FR Entrée Antecedents familiauxversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMFamilyMemberHistory</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer (FRCDAAntecedentsFamiliaux)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.statusCode (Statut de l’entrée -Fixé à la valeur 'completed')</td><td/></tr><tr><td>FRLMFamilyMemberHistory.relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.subject (Identification du parent)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.component.observation</td><td>Organizer.component.observation référence le profil CDA FRCDAAntecedentFamilialObserve ; ses sous-champs sont mappés dans le groupe dédié ci-dessous.</td></tr><tr><td>FRLMFamilyMemberHistory.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Organizer.sdtcText</td><td>Le commentaire métier est porté dans la narration CDA.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-antecedent-familial-observe.html\">CDA - FR Antecedent familial observeversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMFamilyMemberHistory.condition.code</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code (Type de l'observation)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.outcome</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.value</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.contributedToDeath</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.value</td><td>La contribution au décès est rapprochée de la valeur d'observation faute d'attribut CDA dédié explicite.</td></tr><tr><td>FRLMFamilyMemberHistory.condition.onset[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.effectiveTime (Horodatage de l'entrée)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.targetSiteCode (Site)</td><td/></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-family-member-history-document.html\">FamilyMemberHistory - FR Family Member History Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMFamilyMemberHistory</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory (FRFamilyMemberHistoryDocument)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.status (Statut de l'antécédent familial)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>FamilyMemberHistory.relationship (Lien avec un autre sujet)</td><td>relatedPerson contient plus d'information que relationship; la relation familiale est conservée.</td></tr><tr><td>FRLMFamilyMemberHistory.condition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition (Problème)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.code</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.code (Problème rencontré par le patient)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.outcome</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.outcome (Résultat de l'observation effectuée)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.contributedToDeath</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.contributedToDeath (Whether the condition contributed to the cause of death)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.onset[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.onset[x] (When condition first manifested)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.extension:bodySite (Localisation anatomique)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.note (General note about related person)</td><td/></tr></table></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRFamilyMemberHistoryLMCDAFHIR</b></p><a name=\"en-FRFamilyMemberHistoryLMCDAFHIR\"> </a><a name=\"en-hcFRFamilyMemberHistoryLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-antecedents-familiaux.html\">CDA - FR Entrée Antecedents familiauxversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMFamilyMemberHistory</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer (FRCDAAntecedentsFamiliaux)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.statusCode (Statut de l’entrée -Fixé à la valeur 'completed')</td><td/></tr><tr><td>FRLMFamilyMemberHistory.relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.subject (Identification du parent)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Organizer.component.observation</td><td>Organizer.component.observation référence le profil CDA FRCDAAntecedentFamilialObserve ; ses sous-champs sont mappés dans le groupe dédié ci-dessous.</td></tr><tr><td>FRLMFamilyMemberHistory.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Organizer.sdtcText</td><td>Le commentaire métier est porté dans la narration CDA.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-antecedent-familial-observe.html\">CDA - FR Antecedent familial observeversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMFamilyMemberHistory.condition.code</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code (Type de l'observation)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.outcome</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.value</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.contributedToDeath</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.value</td><td>La contribution au décès est rapprochée de la valeur d'observation faute d'attribut CDA dédié explicite.</td></tr><tr><td>FRLMFamilyMemberHistory.condition.onset[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.effectiveTime (Horodatage de l'entrée)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.targetSiteCode (Site)</td><td/></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-family-member-history-document.html\">FamilyMemberHistory - FR Family Member History Documentversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMFamilyMemberHistory</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory (FRFamilyMemberHistoryDocument)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.status (Statut de l'antécédent familial)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.relatedPerson</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>FamilyMemberHistory.relationship (Lien avec un autre sujet)</td><td>relatedPerson contient plus d'information que relationship; la relation familiale est conservée.</td></tr><tr><td>FRLMFamilyMemberHistory.condition</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition (Problème)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.code</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.code (Problème rencontré par le patient)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.outcome</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.outcome (Résultat de l'observation effectuée)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.contributedToDeath</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.contributedToDeath (Whether the condition contributed to the cause of death)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.onset[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.onset[x] (When condition first manifested)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.condition.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.condition.extension:bodySite (Localisation anatomique)</td><td/></tr><tr><td>FRLMFamilyMemberHistory.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FamilyMemberHistory.note (General note about related person)</td><td/></tr></table></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRFamilyMemberHistoryLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRFamilyMemberHistoryLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Antécédent familial\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMFamilyMemberHistory vers le profil CDA FRCDAAntecedentsFamiliaux, puis vers le profil FHIR FRFamilyMemberHistoryDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedents-familiaux",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMFamilyMemberHistory",
+      "target" : [{
+        "code" : "Organizer",
+        "display" : "FRCDAAntecedentsFamiliaux",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.header.status",
+      "target" : [{
+        "code" : "Organizer.statusCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.relatedPerson",
+      "target" : [{
+        "code" : "Organizer.subject",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition",
+      "target" : [{
+        "code" : "Organizer.component.observation",
+        "equivalence" : "equivalent",
+        "comment" : "Organizer.component.observation référence le profil CDA FRCDAAntecedentFamilialObserve ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.note",
+      "target" : [{
+        "code" : "Organizer.sdtcText",
+        "equivalence" : "relatedto",
+        "comment" : "Le commentaire métier est porté dans la narration CDA."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-antecedent-familial-observe",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMFamilyMemberHistory.condition.code",
+      "target" : [{
+        "code" : "Observation.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.outcome",
+      "target" : [{
+        "code" : "Observation.value",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.contributedToDeath",
+      "target" : [{
+        "code" : "Observation.value",
+        "equivalence" : "relatedto",
+        "comment" : "La contribution au décès est rapprochée de la valeur d'observation faute d'attribut CDA dédié explicite."
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.onset[x]",
+      "target" : [{
+        "code" : "Observation.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.bodySite",
+      "target" : [{
+        "code" : "Observation.targetSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMFamilyMemberHistory",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-family-member-history-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMFamilyMemberHistory",
+      "target" : [{
+        "code" : "FamilyMemberHistory",
+        "display" : "FRFamilyMemberHistoryDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.header.status",
+      "target" : [{
+        "code" : "FamilyMemberHistory.status",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.relatedPerson",
+      "target" : [{
+        "code" : "FamilyMemberHistory.relationship",
+        "equivalence" : "relatedto",
+        "comment" : "relatedPerson contient plus d'information que relationship; la relation familiale est conservée."
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.code",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.outcome",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition.outcome",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.contributedToDeath",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition.contributedToDeath",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.onset[x]",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition.onset[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.condition.bodySite",
+      "target" : [{
+        "code" : "FamilyMemberHistory.condition.extension:bodySite",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFamilyMemberHistory.note",
+      "target" : [{
+        "code" : "FamilyMemberHistory.note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

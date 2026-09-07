@@ -1,0 +1,268 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRImagingMedicationAministrationLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRImagingMedicationAministrationLMCDAFHIR</b></p><a name=\"FRImagingMedicationAministrationLMCDAFHIR\"> </a><a name=\"hcFRImagingMedicationAministrationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-administration-produit-de-sante.html\">CDA - FR DICOM Administration produit de santeversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMMedicationAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration (FRCDADICOMAdministrationProduitDeSante)</td><td/></tr><tr><td>FRLMMedicationAdministration.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.statusCode (Status de l'entrée)</td><td/></tr><tr><td>FRLMMedicationAdministration.occurrence[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.effectiveTime</td><td/></tr><tr><td>FRLMMedicationAdministration.medication</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.consumable (Médicament)</td><td/></tr><tr><td>FRLMMedicationAdministration.dosage</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>SubstanceAdministration.text (Partie narrative de l'entrée)</td><td/></tr><tr><td>FRLMMedicationAdministration.reason[x]</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance CDA explicite unique pour reason[x] dans ce profil DICOM d'administration.</td></tr><tr><td>FRLMMedicationAdministration.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.text (Partie narrative de l'entrée)</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-administration-produit-de-sante.html\">CDA - FR DICOM Administration produit de santeversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.code (Choix parmi les éléments suivants: code et nullFlavor. \n      Code du produit de santé. \n      - CIP : Code Identifiant de Présentation (1.2.250.1.213.2.3.2)\n      - UCD : Unités Communes de Dispensation (1.2.250.1.213.2.61) \n      + code ATC)</td></tr><tr><td>FRLMMedication.productName</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.name (Nom de marque du produit)</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.lotNumberText (Numéro de lot)</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-dicom-administration-produit-de-sante.html\">CDA - FR DICOM Administration produit de santeversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>SubstanceAdministration.text (Partie narrative de l'entrée)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>SubstanceAdministration.routeCode (Voie d'administration Terminologie utilisée :  EDQM - Standard terms / classe ROA (Voie d'administration))</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>SubstanceAdministration.doseQuantity (Dose à administrer. S'il n'y a pas de traitement, utiliser une valeur nullFlavor.\nS'il y a un traitement, les sous-éléments 'low' et 'high' permettent de fournir les doses minimales et maximales à administrer. Dans le cas où la dose est fixe, ces deux sous-éléments prendront les mêmes valeurs. Dans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.\nDans le cas où l'on s'exprime en quantités indénombrables, l'unité doit être transmise. Les unités sont exprimées selon le système de codage UCUM.\nDans le cas où l'on s'exprime en quantités dénombrables (capsules, comprimés, gélules, etc.) l'unité ne doit pas être renseignée. A la place, on ajoute un champ 'translation' qui permet de pointer sur l'élément de la partie narrative relative à cette information.)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto\" title=\"relatedto\">is related to</a></td><td>SubstanceAdministration.rateQuantity (Rythme d'administration.\nLe rythme d'administration permet d'indiquer la quantité de produit à administrer par unité de temps.\nLes sous-éléments 'low' et 'high' permettent de fournir le rythme minimal et maximal de l'administration. Dans le cas où le rythme est fixe, ces deux sous-éléments prendront les mêmes valeurs.\nL'argument @value permet d'indiquer la quantité de produit à administrer.\nL'argument @unit permet d'indiquer le rythme d'administration en combinant l'unité de quantité et l'unité de temps (séparés par le caractère ‘/'). Les unités sont exprimées selon le système de codage UCUM.\nDans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.)</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-administration-document.html\">MedicationAdministration - FR Medication Administration Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMMedicationAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration (FRMedicationAdministrationDocument)</td></tr><tr><td>FRLMMedicationAdministration.header.status</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.status (Statut)</td></tr><tr><td>FRLMMedicationAdministration.occurrence[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.effective[x] (Durée du traitement)</td></tr><tr><td>FRLMMedicationAdministration.medication</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.medication[x] (What was administered)</td></tr><tr><td>FRLMMedicationAdministration.dosage</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage (Details of how medication was taken)</td></tr><tr><td>FRLMMedicationAdministration.reason[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.reasonReference (Motif du traitement)</td></tr><tr><td>FRLMMedicationAdministration.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.note (Permet de décrire les conditions préalables à l'utilisation du médicament.)</td></tr></table><hr/><p><b>Groupe 5 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-administration-document.html\">MedicationAdministration - FR Medication Administration Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMMedication.identifyingCode[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider\" title=\"wider\">maps to wider concept</a></td><td>MedicationAdministration.medication[x] (What was administered)</td><td>medication[x] n'est pas décomposé plus finement dans ce profil ; le code est porté par l'ensemble du choix de type.</td></tr><tr><td>FRLMMedication.productName</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite pour le nom du produit sur medication[x] dans ce profil.</td></tr><tr><td>FRLMMedication.batch.lotNumber</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune correspondance explicite pour le numéro de lot sur medication[x] dans ce profil.</td></tr></table><hr/><p><b>Groupe 6 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-administration-document.html\">MedicationAdministration - FR Medication Administration Documentversion : 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage.text (Instruction au patient)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage.route (Voie d'administration)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage.dose (Dose à administrer)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage.rate[x] (Dose quantity per unit of time)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.sequence</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationAdministration.dosage.extension:sequence (FR Medication Administration Sequence Extension)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRImagingMedicationAministrationLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRImagingMedicationAministrationLMCDAFHIR",
+  "title" : "Mapping Metier/CDA/FHIR : \"Medication Administration en imagerie\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des elements du modele metier FRLMMedicationAdministration vers le profil CDA FRCDADICOMAdministrationProduitDeSante, puis vers le profil FHIR FRMedicationAdministrationDocument.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedicationAdministration",
+      "target" : [{
+        "code" : "SubstanceAdministration",
+        "display" : "FRCDADICOMAdministrationProduitDeSante",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.header.status",
+      "target" : [{
+        "code" : "SubstanceAdministration.statusCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.occurrence[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.medication",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage",
+      "target" : [{
+        "code" : "SubstanceAdministration.text",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.reason[x]",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance CDA explicite unique pour reason[x] dans ce profil DICOM d'administration."
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.note",
+      "target" : [{
+        "code" : "SubstanceAdministration.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.name",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "code" : "SubstanceAdministration.consumable.manufacturedProduct.manufacturedMaterial.lotNumberText",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-administration-produit-de-sante",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMDosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "SubstanceAdministration.text",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "SubstanceAdministration.routeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.doseQuantity",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "SubstanceAdministration.rateQuantity",
+        "equivalence" : "relatedto"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedicationAdministration",
+      "target" : [{
+        "code" : "MedicationAdministration",
+        "display" : "FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.header.status",
+      "target" : [{
+        "code" : "MedicationAdministration.status",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.occurrence[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.effective[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.medication",
+      "target" : [{
+        "code" : "MedicationAdministration.medication[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.reason[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.reasonReference",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.note",
+      "target" : [{
+        "code" : "MedicationAdministration.note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedication.identifyingCode[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.medication[x]",
+        "equivalence" : "wider",
+        "comment" : "medication[x] n'est pas décomposé plus finement dans ce profil ; le code est porté par l'ensemble du choix de type."
+      }]
+    },
+    {
+      "code" : "FRLMMedication.productName",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite pour le nom du produit sur medication[x] dans ce profil."
+      }]
+    },
+    {
+      "code" : "FRLMMedication.batch.lotNumber",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune correspondance explicite pour le numéro de lot sur medication[x] dans ce profil."
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMDosageInstructions.renderedDosageInstruction",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.route",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.dose",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.rate[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMDosageInstructions.dosageDetails.sequence",
+      "target" : [{
+        "code" : "MedicationAdministration.dosage.extension:sequence",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

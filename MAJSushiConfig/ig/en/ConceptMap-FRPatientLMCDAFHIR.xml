@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRPatientLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRPatientLMCDAFHIR</b></p><a name="en-FRPatientLMCDAFHIR"> </a><a name="en-hcFRPatientLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-record-target.html">CDA - recordTargetversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMPatient</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>RecordTarget</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-patient-role.html">CDA - patientRoleversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMPatient.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>PatientRole.id (Identifiant du patient.)</td></tr><tr><td>FRLMPatient.address</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>PatientRole.addr (Adresse géopostale.)</td></tr><tr><td>FRLMPatient.telecom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>PatientRole.telecom (Coordonnées télécom.)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-patient.html">CDA - patientversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMPatient.name</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name (Noms et prénoms.)</td><td/></tr><tr><td>FRLMPatient.administrativeGender</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.administrativeGenderCode (Sexe.)</td><td/></tr><tr><td>FRLMPatient.dateOfBirth</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthTime (Date de naissance.)</td><td/></tr><tr><td>FRLMPatient.deceased[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.sdtcDeceasedInd (Patient décédé ou pas ?)</td><td>Cas où deceased[x] est de type boolean.</td></tr><tr><td>FRLMPatient.deceased[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.sdtcDeceasedTime (Date de décès.)</td><td>Cas où deceased[x] est de type dateTime.</td></tr><tr><td>FRLMPatient.multipleBirth[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.sdtcMultipleBirthInd (Patient né d'une grossesse multiple.)</td><td>Cas où multipleBirth[x] est de type boolean.</td></tr><tr><td>FRLMPatient.multipleBirth[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.sdtcMultipleBirthOrderNumber (Numéro d’ordre de naissance (si issu d'une grossesse multiple).)</td><td>Cas où multipleBirth[x] est de type integer.</td></tr><tr><td>FRLMPatient.birthPlace</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthplace (Lieu de naissance.)</td><td>FRLMPatient.birthPlace est une Address simple ; nom du lieu, adresse et code officiel géographique sont portés par les composantes standard de cette adresse (text, line, city, country, etc.).</td></tr><tr><td>FRLMPatient.contact</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.guardian (Représentant du patient/usager.)</td><td/></tr><tr><td>FRLMPatient.contact.address</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Patient.guardian (Représentant du patient/usager.)</td><td/></tr><tr><td>FRLMPatient.contact.telecom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Patient.guardian (Représentant du patient/usager.)</td><td/></tr><tr><td>FRLMPatient.contact.name</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Patient.guardian (Représentant du patient/usager.)</td><td/></tr><tr><td>FRLMPatient.contact.organization</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>Patient.guardian (Représentant du patient/usager.)</td><td>Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient ; non adressable séparément dans le type CDA Guardian ici.</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-patient.html">CDA - patientversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMHumanName.use</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name.use (Use Code)</td></tr><tr><td>FRLMHumanName.family</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name.item.family</td></tr><tr><td>FRLMHumanName.given</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name.item.given</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-patient-ins-document.html">FR Patient INS Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMPatient</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient (Information about an individual or animal receiving health care services)</td><td/></tr><tr><td>FRLMPatient.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.identifier (An identifier for this patient | Identifiant patient. Pour modéliser un patient avec une INS validée, il est nécessaire de respecter la conformité au profil FrCorePatientINS. Les identifiants NIR et NIA ne sont définis uniquement dans le cas du FRCorePatientINS.)</td><td/></tr><tr><td>FRLMPatient.address</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.address (An address expressed using postal conventions (as opposed to GPS or other location definition formats))</td><td/></tr><tr><td>FRLMPatient.telecom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.telecom (Details of a Technology mediated contact point (phone, fax, email, etc.))</td><td/></tr><tr><td>FRLMPatient.name</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name:officialName (Name of a human | Nom de naissance)</td><td>Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom de naissance.</td></tr><tr><td>FRLMPatient.name</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.name:usualName (Name of a human | Nom utilisé)</td><td>Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom usuel.</td></tr><tr><td>FRLMPatient.administrativeGender</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.gender (male | female | unknown)</td><td/></tr><tr><td>FRLMPatient.dateOfBirth</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.birthDate (The date of birth for the french patient checked with the INSitelservice | Date de naissance du patient. Dans le cas d'une identité récupérée du téléservice INSi, la date de naissance est modifiée selon les règles du RNIV dans le cas de dates exceptionnelles.)</td><td/></tr><tr><td>FRLMPatient.deceased[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.deceased[x] (Indicates if the individual is deceased or not)</td><td>deceased[x] est de type boolean ou dateTime des deux côtés.</td></tr><tr><td>FRLMPatient.multipleBirth[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.multipleBirth[x] (Whether patient is part of a multiple birth)</td><td>multipleBirth[x] est de type boolean ou integer des deux côtés.</td></tr><tr><td>FRLMPatient.birthPlace</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.extension:birthPlace (Place of Birth for patient)</td><td>Patient.extension:birthPlace.value[FRCoreAddressProfile]</td></tr><tr><td>FRLMPatient.contact</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.contact (A contact party (e.g. guardian, partner, friend) for the patient)</td><td>Patient.contact.relationship:Role='GUARD'</td></tr><tr><td>FRLMPatient.contact.address</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.contact.address (Address for the contact person)</td><td/></tr><tr><td>FRLMPatient.contact.telecom</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.contact.telecom (Details of a Technology mediated contact point (phone, fax, email, etc.))</td><td/></tr><tr><td>FRLMPatient.contact.name</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.contact.name (Name of a human - parts and usage)</td><td/></tr><tr><td>FRLMPatient.contact.organization</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Patient.contact.organization (Organization that is associated with the contact)</td><td>Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient.</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRPatientLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRPatientLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Patient/Usager&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMPatient\&quot; et l'élément CDA \&quot;recordTarget\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMPatient\&quot; et le profil FHIR \&quot;FrPatientDocument\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-record-target"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMPatient"/>
+      <target>
+        <code value="RecordTarget"/>
+        <display value="recordTarget"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient-role"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMPatient.identifier"/>
+      <target>
+        <code value="PatientRole.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.address"/>
+      <target>
+        <code value="PatientRole.addr"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.telecom"/>
+      <target>
+        <code value="PatientRole.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMPatient.name"/>
+      <target>
+        <code value="Patient.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.administrativeGender"/>
+      <target>
+        <code value="Patient.administrativeGenderCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.dateOfBirth"/>
+      <target>
+        <code value="Patient.birthTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.deceased[x]"/>
+      <target>
+        <code value="Patient.sdtcDeceasedInd"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où deceased[x] est de type boolean."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.deceased[x]"/>
+      <target>
+        <code value="Patient.sdtcDeceasedTime"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où deceased[x] est de type dateTime."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.multipleBirth[x]"/>
+      <target>
+        <code value="Patient.sdtcMultipleBirthInd"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où multipleBirth[x] est de type boolean."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.multipleBirth[x]"/>
+      <target>
+        <code value="Patient.sdtcMultipleBirthOrderNumber"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où multipleBirth[x] est de type integer."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.birthPlace"/>
+      <target>
+        <code value="Patient.birthplace"/>
+        <equivalence value="equivalent"/>
+        <comment value="FRLMPatient.birthPlace est une Address simple ; nom du lieu, adresse et code officiel géographique sont portés par les composantes standard de cette adresse (text, line, city, country, etc.)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact"/>
+      <target>
+        <code value="Patient.guardian"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.address"/>
+      <target>
+        <code value="Patient.guardian"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.telecom"/>
+      <target>
+        <code value="Patient.guardian"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.name"/>
+      <target>
+        <code value="Patient.guardian"/>
+        <equivalence value="wider"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.organization"/>
+      <target>
+        <code value="Patient.guardian"/>
+        <equivalence value="wider"/>
+        <comment value="Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient ; non adressable séparément dans le type CDA Guardian ici."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-patient"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMHumanName.use"/>
+      <target>
+        <code value="Patient.name.use"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHumanName.family"/>
+      <target>
+        <code value="Patient.name.item.family"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHumanName.given"/>
+      <target>
+        <code value="Patient.name.item.given"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-patient-ins-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMPatient"/>
+      <target>
+        <code value="Patient"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.identifier"/>
+      <target>
+        <code value="Patient.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.address"/>
+      <target>
+        <code value="Patient.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.telecom"/>
+      <target>
+        <code value="Patient.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.name"/>
+      <target>
+        <code value="Patient.name:officialName"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom de naissance."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.name"/>
+      <target>
+        <code value="Patient.name:usualName"/>
+        <equivalence value="equivalent"/>
+        <comment value="Le modèle métier ne porte qu'un seul nom (1..1) ; utilisé comme nom usuel."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.administrativeGender"/>
+      <target>
+        <code value="Patient.gender"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.dateOfBirth"/>
+      <target>
+        <code value="Patient.birthDate"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.deceased[x]"/>
+      <target>
+        <code value="Patient.deceased[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="deceased[x] est de type boolean ou dateTime des deux côtés."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.multipleBirth[x]"/>
+      <target>
+        <code value="Patient.multipleBirth[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="multipleBirth[x] est de type boolean ou integer des deux côtés."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.birthPlace"/>
+      <target>
+        <code value="Patient.extension:birthPlace"/>
+        <equivalence value="equivalent"/>
+        <comment value="Patient.extension:birthPlace.value[FRCoreAddressProfile]"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact"/>
+      <target>
+        <code value="Patient.contact"/>
+        <equivalence value="equivalent"/>
+        <comment value="Patient.contact.relationship:Role='GUARD'"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.address"/>
+      <target>
+        <code value="Patient.contact.address"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.telecom"/>
+      <target>
+        <code value="Patient.contact.telecom"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.name"/>
+      <target>
+        <code value="Patient.contact.name"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMPatient.contact.organization"/>
+      <target>
+        <code value="Patient.contact.organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cf. FROrganisationLMCDAFHIR pour le détail du mapping de la structure représentant le patient."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

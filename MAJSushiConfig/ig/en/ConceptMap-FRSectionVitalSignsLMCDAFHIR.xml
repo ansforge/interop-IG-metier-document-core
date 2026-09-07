@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRSectionVitalSignsLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionVitalSignsLMCDAFHIR</b></p><a name="en-FRSectionVitalSignsLMCDAFHIR"> </a><a name="en-hcFRSectionVitalSignsLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-section-signes-vitaux.html">CDA - FR Section Signes vitauxversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMVitalSigns</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section (FRCDASectionSignesVitaux)</td><td/></tr><tr><td>FRLMVitalSigns.titleSection</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.title (Titre de la section)</td><td/></tr><tr><td>FRLMVitalSigns.entry.observationVitalSign</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.entry (FRCDASignesVitaux)</td><td>Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve).</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html">FR Composition Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMVitalSigns</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Composition.section (FRCompositionDocument.section:sectionVitalSigns)</td></tr><tr><td>FRLMVitalSigns.titleSection</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Composition.section.title (Label for section (e.g. for ToC))</td></tr><tr><td>FRLMVitalSigns.entry.observationVitalSign</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Composition.section.entry (FRObservationVitalSignsDocument)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionVitalSignsLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRSectionVitalSignsLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : Signes vitaux"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMVitalSigns vers la section CDA FRCDASignesVitaux, puis vers le profil FHIR FRCompositionDocument.section:VitalSigns."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-signes-vitaux"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMVitalSigns"/>
+      <target>
+        <code value="Section"/>
+        <display value="FRCDASectionSignesVitaux"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMVitalSigns.titleSection"/>
+      <target>
+        <code value="Section.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMVitalSigns.entry.observationVitalSign"/>
+      <target>
+        <code value="Section.entry"/>
+        <display value="FRCDASignesVitaux"/>
+        <equivalence value="equivalent"/>
+        <comment value="Section.entry référence l'Organizer FRCDASignesVitaux, qui regroupe via .component chaque signe vital observé (FRCDASigneVitalObserve)."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMVitalSigns"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMVitalSigns"/>
+      <target>
+        <code value="Composition.section"/>
+        <display value="FRCompositionDocument.section:sectionVitalSigns"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMVitalSigns.titleSection"/>
+      <target>
+        <code value="Composition.section.title"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMVitalSigns.entry.observationVitalSign"/>
+      <target>
+        <code value="Composition.section.entry"/>
+        <display value="FRObservationVitalSignsDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

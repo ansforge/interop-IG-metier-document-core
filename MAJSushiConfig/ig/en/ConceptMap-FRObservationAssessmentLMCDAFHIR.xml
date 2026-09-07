@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRObservationAssessmentLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRObservationAssessmentLMCDAFHIR</b></p><a name="en-FRObservationAssessmentLMCDAFHIR"> </a><a name="en-hcFRObservationAssessmentLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-evaluation.html">CDA - FR Evaluationversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMObservationAssessment</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation (FRCDAEvaluation)</td></tr><tr><td>FRLMObservationAssessment.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.id (Identifiant de l'entrée)</td></tr><tr><td>FRLMObservationAssessment.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.statusCode (Statut de l’entrée - Fixé à la valeur 'completed')</td></tr><tr><td>FRLMObservationAssessment.observationDate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.effectiveTime (Date)</td></tr><tr><td>FRLMObservationAssessment.type</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code (Type d'évaluation :LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autreSi le type d'évaluation n'est pas trouvé dans les terminologies proposées, utiliser le code='54522-8' displayName='Statut fonctionnel' codeSystem=' 2.16.840.1.113883.6.1' codeSystemName='LOINC' et décrire le type d'évaluation sous forme de texte libre dans la partie narrative avec une référence vers l'entrée correspondante.)</td></tr><tr><td>FRLMObservationAssessment.method</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMObservationAssessment.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.targetSiteCode</td></tr><tr><td>FRLMObservationAssessment.result</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.value (Valeur de l'évaluation : Le type (code) et la valeur de la mesure (réponse) dépendent du volet utilisant cette entrée et sont spécifiquement précisés dans les volets de contenus.)</td></tr><tr><td>FRLMObservationAssessment.interpretation</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.interpretationCode (Interprétation - Un code d’interprétation de la valeur pourra être utilisé pour donner une évaluation de la réponse.)</td></tr><tr><td>FRLMObservationAssessment.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.text (Description narrative)</td></tr><tr><td>FRLMObservationAssessment.component</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.entryRelationship:frEvaluationComposant</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-assessment-document.html">Observation - FR Observation Assessment Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMObservationAssessment</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation (FRObservationAssessmentDocument)</td></tr><tr><td>FRLMObservationAssessment.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.identifier (Business Identifier for observation)</td></tr><tr><td>FRLMObservationAssessment.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.status.extension:statusReason (Motif du statut métier)</td></tr><tr><td>FRLMObservationAssessment.observationDate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.effective[x] (Clinically relevant time/time-period for observation)</td></tr><tr><td>FRLMObservationAssessment.type</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.code (Type d'évaluation)</td></tr><tr><td>FRLMObservationAssessment.method</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.method (How it was done)</td></tr><tr><td>FRLMObservationAssessment.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.bodySite (Observed body part)</td></tr><tr><td>FRLMObservationAssessment.result</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.value[x] (Valeur de l'évaluation)</td></tr><tr><td>FRLMObservationAssessment.interpretation</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.interpretation (Interprétation)</td></tr><tr><td>FRLMObservationAssessment.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.note (Commentaires (Annotations))</td></tr><tr><td>FRLMObservationAssessment.component</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Observation.component (Composants de l'évaluation)</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRObservationAssessmentLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRObservationAssessmentLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Assessment (Evaluation)&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMObservationAssessment vers le profil CDA FRCDAEvaluation, puis vers le profil FHIR FRObservationAssessmentDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-evaluation"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMObservationAssessment"/>
+      <target>
+        <code value="Observation"/>
+        <display value="FRCDAEvaluation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.header.identifier"/>
+      <target>
+        <code value="Observation.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.header.status"/>
+      <target>
+        <code value="Observation.statusCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.observationDate[x]"/>
+      <target>
+        <code value="Observation.effectiveTime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.type"/>
+      <target>
+        <code value="Observation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.method"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.bodySite"/>
+      <target>
+        <code value="Observation.targetSiteCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.result"/>
+      <target>
+        <code value="Observation.value"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.interpretation"/>
+      <target>
+        <code value="Observation.interpretationCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.note"/>
+      <target>
+        <code value="Observation.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.component"/>
+      <target>
+        <code value="Observation.entryRelationship:frEvaluationComposant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationAssessment"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-assessment-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMObservationAssessment"/>
+      <target>
+        <code value="Observation"/>
+        <display value="FRObservationAssessmentDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.header.identifier"/>
+      <target>
+        <code value="Observation.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.header.status"/>
+      <target>
+        <code value="Observation.status.extension:statusReason"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.observationDate[x]"/>
+      <target>
+        <code value="Observation.effective[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.type"/>
+      <target>
+        <code value="Observation.code"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.method"/>
+      <target>
+        <code value="Observation.method"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.bodySite"/>
+      <target>
+        <code value="Observation.bodySite"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.result"/>
+      <target>
+        <code value="Observation.value[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.interpretation"/>
+      <target>
+        <code value="Observation.interpretation"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.note"/>
+      <target>
+        <code value="Observation.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationAssessment.component"/>
+      <target>
+        <code value="Observation.component"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

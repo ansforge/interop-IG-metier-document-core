@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRMedicationDispenseLMCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRMedicationDispenseLMCDAFHIR</b></p><a name="FRMedicationDispenseLMCDAFHIR"> </a><a name="hcFRMedicationDispenseLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-traitement-dispense.html">CDA - FR Traitement dispenseversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMMedicationDispense</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply (FRCDATraitementDispense)</td><td/></tr><tr><td>FRLMMedicationDispense.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMMedicationDispense.header.author[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.code (Complétude de la dispensation : Valeur issue du JDV_CompletudeDispensation_CISIS (1.2.250.1.213.1.1.5.765))</td><td>Supply.code (Complétude de la dispensation, lié à jdv-completude-dispensation-cisis) porte cette information, pas Supply.statusCode (statut technique de l'entrée CDA).</td></tr><tr><td>FRLMMedicationDispense.receiver[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.relatedRequest</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frReferenceItemPrescription (Référence de la prescription)</td><td/></tr><tr><td>FRLMMedicationDispense.medicament</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.product (Médicament délivré)</td><td/></tr><tr><td>FRLMMedicationDispense.dispensedQuantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.quantity (Quantité : Unité issue de EDQM Packaging)</td><td/></tr><tr><td>FRLMMedicationDispense.timeOfDispensation</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.substitutionOccurred</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frActeSubstitution (Substitution)</td><td/></tr><tr><td>FRLMMedicationDispense.dosageInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frTraitement (Posologie)</td><td/></tr><tr><td>FRLMMedicationDispense.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frNotesDuDispensateur (Notes du dispensateur)</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-dispense-document.html">MedicationDispense - FR Medication Dispense Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td></tr><tr><td>FRLMMedicationDispense</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense (FRMedicationDispenseDocument)</td></tr><tr><td>FRLMMedicationDispense.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.identifier (Identifiant)</td></tr><tr><td>FRLMMedicationDispense.header.author[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.performer.actor (Individual who was performing)</td></tr><tr><td>FRLMMedicationDispense.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.status (preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown)</td></tr><tr><td>FRLMMedicationDispense.receiver[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.receiver (Who collected the medication)</td></tr><tr><td>FRLMMedicationDispense.relatedRequest</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.authorizingPrescription (Référence de la prescription)</td></tr><tr><td>FRLMMedicationDispense.medicament</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.medication[x] (Médicament délivré)</td></tr><tr><td>FRLMMedicationDispense.dispensedQuantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.quantity (Quantité : Unité issue de EDQM Packaging / classe CON (Récipient))</td></tr><tr><td>FRLMMedicationDispense.timeOfDispensation</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.whenHandedOver (When product was given out)</td></tr><tr><td>FRLMMedicationDispense.substitutionOccurred</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.substitution.wasSubstituted (Whether a substitution was or was not performed on the dispense)</td></tr><tr><td>FRLMMedicationDispense.dosageInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction (How the medication is to be used by the patient or administered by the caregiver)</td></tr><tr><td>FRLMMedicationDispense.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.note (Information about the dispense)</td></tr></table><hr/><p><b>Groupe 3 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-traitement.html">CDA - FR Traitementversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.text (Partie narrative de l’entrée)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.sequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.doseQuantity (Dose à administrer : 
+
+S'il n'y a pas de traitement, utiliser une valeur nullFlavor.
+S'il y a un traitement, les sous-éléments 'low' et 'high' permettent de fournir les doses minimales et maximales à administrer. Dans le cas où la dose est fixe, ces deux sous-éléments prendront les mêmes valeurs. Dans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.
+Dans le cas où l'on s'exprime en quantités indénombrables, l'unité doit être transmise. Les unités sont exprimées selon le système de codage UCUM.
+Dans le cas où l'on s'exprime en quantités dénombrables (capsules, comprimés, gélules, etc.) l'unité ne doit pas être renseignée. A la place, on ajoute un champ 'translation' qui permet de pointer sur l'élément de la partie narrative relative à cette information.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.rateQuantity (Rythme d'administration : 
+
+Le rythme d'administration permet d'indiquer la quantité de produit à administrer par unité de temps.
+Les sous-éléments 'low' et 'high' permettent de fournir le rythme minimal et maximal de l'administration. Dans le cas où le rythme est fixe, ces deux sous-éléments prendront les mêmes valeurs.
+L'argument @value permet d'indiquer la quantité de produit à administrer.
+L'argument @unit permet d'indiquer le rythme d'administration en combinant l'unité de quantité et l'unité de temps (séparés par le caractère ‘/'). Les unités sont exprimées selon le système de codage UCUM.
+Dans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.period</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.timeOfDay</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.dateOfAdministration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA dédié à une liste de dates précises de prise dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.conditionOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.precondition (Précondition : 
+
+Permet de décrire les conditions préalables à l'utilisation du médicament.      L'attribut @value de l'élément 'reference' est une URI qui pointe vers la partie narrative du document CDA décrivant ces conditions préalables.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.date[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeDuree (Durée de traitement)</td><td>effectiveTime:effectiveTimeDuree porte la durée de traitement globale (IVL-TS) ; le modèle métier permet en plus une durée ou un intervalle de durée non distingués séparément côté CDA.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA dédié à une durée d'administration ponctuelle (ex. perfusion) dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td>Pas d'élément CDA structuré pour un événement déclencheur ; porté par le texte libre des instructions au patient.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventEndSequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.approachSiteCode (Région anatomique d'administration : La région anatomique d'administration provient du JDV_HumanSubstanceAdministrationSite_CISIS (1.2.250.1.213.1.1.5.686) (Terminologie SNOMED CT 2.16.840.1.113883.6.96). Cet élément doit contenir une référence pointant sur l'élément correspondant de la partie narrative où la région anatomique est décrite.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.routeCode (Voie d'administration : Si la voie d'administration est connue, elle doit être indiquée (code et displayName). Si elle n'est pas connue, la raison pour laquelle elle est inconnue peut être décrite en utilisant l'attribut nullFlavor.Terminologie utilisée :  EDQM - Standard terms / classe ROA (Voie d'administration))</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.maxDoseQuantity.numerator (Numerator)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.maxDoseQuantity.denominator (Denominator)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerAdministration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA distinct pour une dose maximale par administration ; maxDoseQuantity est déjà utilisé pour la dose maximale par période.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxLifetimeDose</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA distinct pour une dose maximale sur la durée de vie ; maxDoseQuantity est déjà utilisé pour la dose maximale par période.</td></tr></table><hr/><p><b>Groupe 4 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-dispense-document.html">MedicationDispense - FR Medication Dispense Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.text (Instructions au dispensateur)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.sequence</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.sequence (The order of the dosage instructions)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.patientInstruction (Instructions au patient)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.doseAndRate.dose[x] (Amount of medication per dose)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.doseAndRate.rate[x] (Amount of medication per unit of time)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>Ce profil n'expose pas timing.repeat.* : le regroupement fréquence est porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.frequency n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.period</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.period n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.dayOfWeek n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.timeOfDay</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.timeOfDay n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>MedicationDispense.dosageInstruction.additionalInstruction (Instruction au patient sous forme codée)</td><td>Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.dateOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.event n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.conditionOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.asNeeded[x] (Take &quot;as needed&quot; (for x))</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.date[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.bounds[x] n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.duration* n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationValue</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.duration n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationUnit</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.durationUnit n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationMax</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.durationMax n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.when/offset ne sont pas exposés séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime.eventTimeCode</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.when n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime.offset</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.offset n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventEndSequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.site (Body site to administer to)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.route (How drug should enter body)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.maxDosePerPeriod (Upper limit on medication per unit of time)</td><td>maxDosePerPeriod.numerator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.maxDosePerPeriod (Upper limit on medication per unit of time)</td><td>maxDosePerPeriod.denominator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.maxDosePerAdministration (Upper limit on medication per administration)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxLifetimeDose</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.maxDosePerLifetime (Upper limit on medication per lifetime of the patient)</td><td/></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRMedicationDispenseLMCDAFHIR</b></p><a name="en-FRMedicationDispenseLMCDAFHIR"> </a><a name="en-hcFRMedicationDispenseLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-traitement-dispense.html">CDA - FR Traitement dispenseversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMMedicationDispense</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply (FRCDATraitementDispense)</td><td/></tr><tr><td>FRLMMedicationDispense.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMMedicationDispense.header.author[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.code (Complétude de la dispensation : Valeur issue du JDV_CompletudeDispensation_CISIS (1.2.250.1.213.1.1.5.765))</td><td>Supply.code (Complétude de la dispensation, lié à jdv-completude-dispensation-cisis) porte cette information, pas Supply.statusCode (statut technique de l'entrée CDA).</td></tr><tr><td>FRLMMedicationDispense.receiver[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.relatedRequest</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frReferenceItemPrescription (Référence de la prescription)</td><td/></tr><tr><td>FRLMMedicationDispense.medicament</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.product (Médicament délivré)</td><td/></tr><tr><td>FRLMMedicationDispense.dispensedQuantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.quantity (Quantité : Unité issue de EDQM Packaging)</td><td/></tr><tr><td>FRLMMedicationDispense.timeOfDispensation</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMMedicationDispense.substitutionOccurred</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frActeSubstitution (Substitution)</td><td/></tr><tr><td>FRLMMedicationDispense.dosageInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frTraitement (Posologie)</td><td/></tr><tr><td>FRLMMedicationDispense.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Supply.entryRelationship:frNotesDuDispensateur (Notes du dispensateur)</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-dispense-document.html">MedicationDispense - FR Medication Dispense Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMMedicationDispense</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense (FRMedicationDispenseDocument)</td></tr><tr><td>FRLMMedicationDispense.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.identifier (Identifiant)</td></tr><tr><td>FRLMMedicationDispense.header.author[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.performer.actor (Individual who was performing)</td></tr><tr><td>FRLMMedicationDispense.header.status</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.status (preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown)</td></tr><tr><td>FRLMMedicationDispense.receiver[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.receiver (Who collected the medication)</td></tr><tr><td>FRLMMedicationDispense.relatedRequest</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.authorizingPrescription (Référence de la prescription)</td></tr><tr><td>FRLMMedicationDispense.medicament</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.medication[x] (Médicament délivré)</td></tr><tr><td>FRLMMedicationDispense.dispensedQuantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.quantity (Quantité : Unité issue de EDQM Packaging / classe CON (Récipient))</td></tr><tr><td>FRLMMedicationDispense.timeOfDispensation</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.whenHandedOver (When product was given out)</td></tr><tr><td>FRLMMedicationDispense.substitutionOccurred</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.substitution.wasSubstituted (Whether a substitution was or was not performed on the dispense)</td></tr><tr><td>FRLMMedicationDispense.dosageInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction (How the medication is to be used by the patient or administered by the caregiver)</td></tr><tr><td>FRLMMedicationDispense.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.note (Information about the dispense)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-traitement.html">CDA - FR Traitementversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.text (Partie narrative de l’entrée)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.sequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.doseQuantity (Dose à administrer : 
+
+S'il n'y a pas de traitement, utiliser une valeur nullFlavor.
+S'il y a un traitement, les sous-éléments 'low' et 'high' permettent de fournir les doses minimales et maximales à administrer. Dans le cas où la dose est fixe, ces deux sous-éléments prendront les mêmes valeurs. Dans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.
+Dans le cas où l'on s'exprime en quantités indénombrables, l'unité doit être transmise. Les unités sont exprimées selon le système de codage UCUM.
+Dans le cas où l'on s'exprime en quantités dénombrables (capsules, comprimés, gélules, etc.) l'unité ne doit pas être renseignée. A la place, on ajoute un champ 'translation' qui permet de pointer sur l'élément de la partie narrative relative à cette information.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.rateQuantity (Rythme d'administration : 
+
+Le rythme d'administration permet d'indiquer la quantité de produit à administrer par unité de temps.
+Les sous-éléments 'low' et 'high' permettent de fournir le rythme minimal et maximal de l'administration. Dans le cas où le rythme est fixe, ces deux sous-éléments prendront les mêmes valeurs.
+L'argument @value permet d'indiquer la quantité de produit à administrer.
+L'argument @unit permet d'indiquer le rythme d'administration en combinant l'unité de quantité et l'unité de temps (séparés par le caractère ‘/'). Les unités sont exprimées selon le système de codage UCUM.
+Dans chaque élément 'low' et 'high', un élément 'translation' peut permettre de pointer sur l'élément de la partie narrative relative à cette information.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.period</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.timeOfDay</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeFrequence (Fréquence d'administration)</td><td>Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.dateOfAdministration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA dédié à une liste de dates précises de prise dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.conditionOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.precondition (Précondition : 
+
+Permet de décrire les conditions préalables à l'utilisation du médicament.      L'attribut @value de l'élément 'reference' est une URI qui pointe vers la partie narrative du document CDA décrivant ces conditions préalables.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.date[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.effectiveTime:effectiveTimeDuree (Durée de traitement)</td><td>effectiveTime:effectiveTimeDuree porte la durée de traitement globale (IVL-TS) ; le modèle métier permet en plus une durée ou un intervalle de durée non distingués séparément côté CDA.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA dédié à une durée d'administration ponctuelle (ex. perfusion) dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>SubstanceAdministration.entryRelationship:frInstructionsAuPatient</td><td>Pas d'élément CDA structuré pour un événement déclencheur ; porté par le texte libre des instructions au patient.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventEndSequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.approachSiteCode (Région anatomique d'administration : La région anatomique d'administration provient du JDV_HumanSubstanceAdministrationSite_CISIS (1.2.250.1.213.1.1.5.686) (Terminologie SNOMED CT 2.16.840.1.113883.6.96). Cet élément doit contenir une référence pointant sur l'élément correspondant de la partie narrative où la région anatomique est décrite.)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.routeCode (Voie d'administration : Si la voie d'administration est connue, elle doit être indiquée (code et displayName). Si elle n'est pas connue, la raison pour laquelle elle est inconnue peut être décrite en utilisant l'attribut nullFlavor.Terminologie utilisée :  EDQM - Standard terms / classe ROA (Voie d'administration))</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.maxDoseQuantity.numerator (Numerator)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>SubstanceAdministration.maxDoseQuantity.denominator (Denominator)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerAdministration</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA distinct pour une dose maximale par administration ; maxDoseQuantity est déjà utilisé pour la dose maximale par période.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxLifetimeDose</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Pas d'élément CDA distinct pour une dose maximale sur la durée de vie ; maxDoseQuantity est déjà utilisé pour la dose maximale par période.</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-dispense-document.html">MedicationDispense - FR Medication Dispense Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMDosageInstructions.renderedDosageInstruction</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.text (Instructions au dispensateur)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.sequence</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.sequence (The order of the dosage instructions)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.patientInstruction (Instructions au patient)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.doseAndRate.dose[x] (Amount of medication per dose)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.doseAndRate.rate[x] (Amount of medication per unit of time)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>Ce profil n'expose pas timing.repeat.* : le regroupement fréquence est porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.frequency n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.period</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.period n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.dayOfWeek n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.timeOfDay</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.timeOfDay n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-relatedto" title="relatedto">is related to</a></td><td>MedicationDispense.dosageInstruction.additionalInstruction (Instruction au patient sous forme codée)</td><td>Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.dateOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.event n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.conditionOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.asNeeded[x] (Take &quot;as needed&quot; (for x))</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.date[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.bounds[x] n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.duration* n'est pas exposé séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationValue</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.duration n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationUnit</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.durationUnit n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.duration.durationMax</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.durationMax n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.timing (When medication should be administered)</td><td>timing.repeat.when/offset ne sont pas exposés séparément dans ce profil ; porté globalement par timing.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime.eventTimeCode</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.when n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventTime.offset</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">timing.repeat.offset n'est pas exposé dans ce profil.</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.eventEndSequence</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.bodySite</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.site (Body site to administer to)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.routeOfAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.route (How drug should enter body)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.maxDosePerPeriod (Upper limit on medication per unit of time)</td><td>maxDosePerPeriod.numerator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>MedicationDispense.dosageInstruction.maxDosePerPeriod (Upper limit on medication per unit of time)</td><td>maxDosePerPeriod.denominator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio).</td></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxDosePerAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.maxDosePerAdministration (Upper limit on medication per administration)</td><td/></tr><tr><td>FRLMDosageInstructions.dosageDetails.maxLifetimeDose</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>MedicationDispense.dosageInstruction.maxDosePerLifetime (Upper limit on medication per lifetime of the patient)</td><td/></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRMedicationDispenseLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRMedicationDispenseLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Traitement dispensé&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil CDA FRCDATraitementDispense (Groupe 1), et vers le profil FHIR FRMedicationDispenseDocument (Groupe 2)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement-dispense"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMMedicationDispense"/>
+      <target>
+        <code value="Supply"/>
+        <display value="FRCDATraitementDispense"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.identifier"/>
+      <target>
+        <code value="Supply.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.author[x]"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.status"/>
+      <target>
+        <code value="Supply.code"/>
+        <equivalence value="equivalent"/>
+        <comment value="Supply.code (Complétude de la dispensation, lié à jdv-completude-dispensation-cisis) porte cette information, pas Supply.statusCode (statut technique de l'entrée CDA)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.receiver[x]"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.relatedRequest"/>
+      <target>
+        <code value="Supply.entryRelationship:frReferenceItemPrescription"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.medicament"/>
+      <target>
+        <code value="Supply.product"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.dispensedQuantity"/>
+      <target>
+        <code value="Supply.quantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.timeOfDispensation"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.substitutionOccurred"/>
+      <target>
+        <code value="Supply.entryRelationship:frActeSubstitution"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.dosageInstructions"/>
+      <target>
+        <code value="Supply.entryRelationship:frTraitement"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.note"/>
+      <target>
+        <code value="Supply.entryRelationship:frNotesDuDispensateur"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationDispense"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-dispense-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMMedicationDispense"/>
+      <target>
+        <code value="MedicationDispense"/>
+        <display value="FRMedicationDispenseDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.identifier"/>
+      <target>
+        <code value="MedicationDispense.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.author[x]"/>
+      <target>
+        <code value="MedicationDispense.performer.actor"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.header.status"/>
+      <target>
+        <code value="MedicationDispense.status"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.receiver[x]"/>
+      <target>
+        <code value="MedicationDispense.receiver"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.relatedRequest"/>
+      <target>
+        <code value="MedicationDispense.authorizingPrescription"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.medicament"/>
+      <target>
+        <code value="MedicationDispense.medication[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.dispensedQuantity"/>
+      <target>
+        <code value="MedicationDispense.quantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.timeOfDispensation"/>
+      <target>
+        <code value="MedicationDispense.whenHandedOver"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.substitutionOccurred"/>
+      <target>
+        <code value="MedicationDispense.substitution.wasSubstituted"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.dosageInstructions"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMMedicationDispense.note"/>
+      <target>
+        <code value="MedicationDispense.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMDosageInstructions.renderedDosageInstruction"/>
+      <target>
+        <code value="SubstanceAdministration.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.sequence"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.note"/>
+      <target>
+        <code value="SubstanceAdministration.entryRelationship:frInstructionsAuPatient"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]"/>
+      <target>
+        <code value="SubstanceAdministration.doseQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]"/>
+      <target>
+        <code value="SubstanceAdministration.rateQuantity"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeFrequence"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeFrequence"/>
+        <equivalence value="wider"/>
+        <comment value="Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.period"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeFrequence"/>
+        <equivalence value="wider"/>
+        <comment value="Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeFrequence"/>
+        <equivalence value="wider"/>
+        <comment value="Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.timeOfDay"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeFrequence"/>
+        <equivalence value="wider"/>
+        <comment value="Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions"/>
+      <target>
+        <code value="SubstanceAdministration.entryRelationship:frInstructionsAuPatient"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.dateOfAdministration"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Pas d'élément CDA dédié à une liste de dates précises de prise dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.conditionOfAdministration"/>
+      <target>
+        <code value="SubstanceAdministration.precondition"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.date[x]"/>
+      <target>
+        <code value="SubstanceAdministration.effectiveTime:effectiveTimeDuree"/>
+        <equivalence value="wider"/>
+        <comment value="effectiveTime:effectiveTimeDuree porte la durée de traitement globale (IVL-TS) ; le modèle métier permet en plus une durée ou un intervalle de durée non distingués séparément côté CDA."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.duration"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Pas d'élément CDA dédié à une durée d'administration ponctuelle (ex. perfusion) dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventTime"/>
+      <target>
+        <code value="SubstanceAdministration.entryRelationship:frInstructionsAuPatient"/>
+        <equivalence value="wider"/>
+        <comment value="Pas d'élément CDA structuré pour un événement déclencheur ; porté par le texte libre des instructions au patient."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventEndSequence"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.bodySite"/>
+      <target>
+        <code value="SubstanceAdministration.approachSiteCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.routeOfAdministration"/>
+      <target>
+        <code value="SubstanceAdministration.routeCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity"/>
+      <target>
+        <code value="SubstanceAdministration.maxDoseQuantity.numerator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration"/>
+      <target>
+        <code value="SubstanceAdministration.maxDoseQuantity.denominator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerAdministration"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Pas d'élément CDA distinct pour une dose maximale par administration ; maxDoseQuantity est déjà utilisé pour la dose maximale par période."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxLifetimeDose"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Pas d'élément CDA distinct pour une dose maximale sur la durée de vie ; maxDoseQuantity est déjà utilisé pour la dose maximale par période."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-dispense-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMDosageInstructions.renderedDosageInstruction"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.text"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.sequence"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.sequence"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.note"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.patientInstruction"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.doseAndRate.dose[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.doseAndRate.rate[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="relatedto"/>
+        <comment value="Ce profil n'expose pas timing.repeat.* : le regroupement fréquence est porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.frequency n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.period"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.period n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.dayOfWeek n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.timeOfDay"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.timeOfDay n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.additionalInstruction"/>
+        <equivalence value="relatedto"/>
+        <comment value="Type source string vers CodeableConcept cible : nécessite un codage ou l'usage de additionalInstruction.text."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.dateOfAdministration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.event n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.conditionOfAdministration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.asNeeded[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.date[x]"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.bounds[x] n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.duration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.duration* n'est pas exposé séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.duration.durationValue"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="timing.repeat.duration n'est pas exposé dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.duration.durationUnit"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="timing.repeat.durationUnit n'est pas exposé dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.duration.durationMax"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="timing.repeat.durationMax n'est pas exposé dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventTime"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.timing"/>
+        <equivalence value="wider"/>
+        <comment value="timing.repeat.when/offset ne sont pas exposés séparément dans ce profil ; porté globalement par timing."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventTime.eventTimeCode"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="timing.repeat.when n'est pas exposé dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventTime.offset"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="timing.repeat.offset n'est pas exposé dans ce profil."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.eventEndSequence"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.bodySite"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.site"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.routeOfAdministration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.route"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.quantity"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.maxDosePerPeriod"/>
+        <equivalence value="wider"/>
+        <comment value="maxDosePerPeriod.numerator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.maxDosePerPeriod"/>
+        <equivalence value="wider"/>
+        <comment value="maxDosePerPeriod.denominator n'est pas exposé séparément dans ce profil ; porté globalement par maxDosePerPeriod (Ratio)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxDosePerAdministration"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.maxDosePerAdministration"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDosageInstructions.dosageDetails.maxLifetimeDose"/>
+      <target>
+        <code value="MedicationDispense.dosageInstruction.maxDosePerLifetime"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

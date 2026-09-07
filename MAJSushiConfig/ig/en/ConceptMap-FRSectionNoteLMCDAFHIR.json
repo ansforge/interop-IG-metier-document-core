@@ -1,0 +1,100 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionNoteLMCDAFHIR",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionNoteLMCDAFHIR</b></p><a name=\"en-FRSectionNoteLMCDAFHIR\"> </a><a name=\"en-hcFRSectionNoteLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-commentaire-non-code.html\">CDA - FR Commentaire non codeversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMNote</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section (FRCDACommentaireNonCode)</td></tr><tr><td>FRLMNote.codeSection</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.code (Code de la section)</td></tr><tr><td>FRLMNote.titleSection</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.title (Titre de la section)</td></tr><tr><td>FRLMNote.description</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.text (Bloc narratif)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote</code> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-composition-document.html\">FR Composition Documentversion: 0.1.0)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>FRLMNote</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.section (FRCompositionDocument.section:sectionNote)</td></tr><tr><td>FRLMNote.codeSection</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.section.code (Classification of section (recommended))</td></tr><tr><td>FRLMNote.titleSection</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.section.title (Label for section (e.g. for ToC))</td></tr><tr><td>FRLMNote.description</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.section.extension:section-note (Commentaires supplémentaires pour chaque section.)</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRSectionNoteLMCDAFHIR",
+  "version" : "0.1.0",
+  "name" : "FRSectionNoteLMCDAFHIR",
+  "title" : "Mapping Métier/CDA/FHIR : \"Commentaire non codé\"",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-07T10:25:17+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMNote vers la section CDA FRCDACommentaireNonCode, puis vers le profil FHIR FRCompositionDocument.section:sectionNote.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-commentaire-non-code",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMNote",
+      "target" : [{
+        "code" : "Section",
+        "display" : "FRCDACommentaireNonCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.codeSection",
+      "target" : [{
+        "code" : "Section.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.titleSection",
+      "target" : [{
+        "code" : "Section.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.description",
+      "target" : [{
+        "code" : "Section.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMNote",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMNote",
+      "target" : [{
+        "code" : "Composition.section",
+        "display" : "FRCompositionDocument.section:sectionNote",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.codeSection",
+      "target" : [{
+        "code" : "Composition.section.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.titleSection",
+      "target" : [{
+        "code" : "Composition.section.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMNote.description",
+      "target" : [{
+        "code" : "Composition.section.extension:section-note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

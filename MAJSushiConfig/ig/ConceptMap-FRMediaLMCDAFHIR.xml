@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRMediaLMCDAFHIR"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRMediaLMCDAFHIR</b></p><a name="FRMediaLMCDAFHIR"> </a><a name="hcFRMediaLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-image-illustrative.html">CDA - FR Image illustrativeversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMObservationMedia</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia (FRCDAImageIllustrative)</td><td/></tr><tr><td>FRLMObservationMedia.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMObservationMedia.content.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.value (Image encodée en Base6. Les attributs de cet élément prennent les valeurs suivantes :
+- mediaType='image/gif' ou 'image/jpeg' ou 'image/png' ou 'image/bm'
+- representation='B64'
+- Dans cette entrée utilisée dans les résultats d’examens de biologie, seules les petites images sont autorisées (en format gif, jpeg, png ou bmp). Ce ne sont pas dans la plupart des cas des images réelles mais des graphismes simples, comme un graphique électrophoresis, intégré dans le rapport, ou une illustration des résultats des tests.)</td><td/></tr><tr><td>FRLMObservationMedia.content.contentType</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>ObservationMedia.value (Image encodée en Base6. Les attributs de cet élément prennent les valeurs suivantes :
+- mediaType='image/gif' ou 'image/jpeg' ou 'image/png' ou 'image/bm'
+- representation='B64'
+- Dans cette entrée utilisée dans les résultats d’examens de biologie, seules les petites images sont autorisées (en format gif, jpeg, png ou bmp). Ce ne sont pas dans la plupart des cas des images réelles mais des graphismes simples, comme un graphique électrophoresis, intégré dans le rapport, ou une illustration des résultats des tests.)</td><td>Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.subject</td><td>Cas où subject[x] référence un FRLMPatient.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.specimen</td><td>Cas où subject[x] référence un FRLMSpecimen.</td></tr><tr><td>FRLMObservationMedia.note</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Le profil CDA ne comporte pas d'élément dédié pour représenter une note.</td></tr><tr><td>FRLMObservationMedia.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.performer</td><td/></tr><tr><td>FRLMObservationMedia.header.participant[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.participant</td><td/></tr><tr><td>FRLMObservationMedia.header.author[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.author</td><td/></tr><tr><td>FRLMObservationMedia.header.informant</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.informant</td><td/></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-media-document.html">Media - FR Media Documentversion : 0.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMObservationMedia</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media (FRMediaDocument)</td><td/></tr><tr><td>FRLMObservationMedia.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.identifier (Identifier(s) for the image)</td><td/></tr><tr><td>FRLMObservationMedia.content.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.content.data (Image encodée en base64)</td><td/></tr><tr><td>FRLMObservationMedia.content.contentType</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.content.contentType (Type MIME du média)</td><td/></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.subject (Patient ou specimen concerné par l'image)</td><td>Cas où subject[x] référence un FRLMPatient.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.subject (Patient ou specimen concerné par l'image)</td><td>Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé.</td></tr><tr><td>FRLMObservationMedia.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.note (Comments made about the media)</td><td/></tr><tr><td>FRLMObservationMedia.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.operator (The person who generated the image)</td><td/></tr><tr><td>FRLMObservationMedia.header.participant[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMObservationMedia.header.author[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMObservationMedia.header.informant</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr></table></div><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRMediaLMCDAFHIR</b></p><a name="en-FRMediaLMCDAFHIR"> </a><a name="en-hcFRMediaLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-image-illustrative.html">CDA - FR Image illustrativeversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMObservationMedia</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia (FRCDAImageIllustrative)</td><td/></tr><tr><td>FRLMObservationMedia.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.id (Identifiant de l'entrée)</td><td/></tr><tr><td>FRLMObservationMedia.content.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.value (Image encodée en Base6. Les attributs de cet élément prennent les valeurs suivantes :
+- mediaType='image/gif' ou 'image/jpeg' ou 'image/png' ou 'image/bm'
+- representation='B64'
+- Dans cette entrée utilisée dans les résultats d’examens de biologie, seules les petites images sont autorisées (en format gif, jpeg, png ou bmp). Ce ne sont pas dans la plupart des cas des images réelles mais des graphismes simples, comme un graphique électrophoresis, intégré dans le rapport, ou une illustration des résultats des tests.)</td><td/></tr><tr><td>FRLMObservationMedia.content.contentType</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-wider" title="wider">maps to wider concept</a></td><td>ObservationMedia.value (Image encodée en Base6. Les attributs de cet élément prennent les valeurs suivantes :
+- mediaType='image/gif' ou 'image/jpeg' ou 'image/png' ou 'image/bm'
+- representation='B64'
+- Dans cette entrée utilisée dans les résultats d’examens de biologie, seules les petites images sont autorisées (en format gif, jpeg, png ou bmp). Ce ne sont pas dans la plupart des cas des images réelles mais des graphismes simples, comme un graphique électrophoresis, intégré dans le rapport, ou une illustration des résultats des tests.)</td><td>Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.subject</td><td>Cas où subject[x] référence un FRLMPatient.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.specimen</td><td>Cas où subject[x] référence un FRLMSpecimen.</td></tr><tr><td>FRLMObservationMedia.note</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Le profil CDA ne comporte pas d'élément dédié pour représenter une note.</td></tr><tr><td>FRLMObservationMedia.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.performer</td><td/></tr><tr><td>FRLMObservationMedia.header.participant[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.participant</td><td/></tr><tr><td>FRLMObservationMedia.header.author[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.author</td><td/></tr><tr><td>FRLMObservationMedia.header.informant</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>ObservationMedia.informant</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia</code> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-media-document.html">Media - FR Media Documentversion: 0.1.0)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMObservationMedia</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media (FRMediaDocument)</td><td/></tr><tr><td>FRLMObservationMedia.header.identifier</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.identifier (Identifier(s) for the image)</td><td/></tr><tr><td>FRLMObservationMedia.content.data</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.content.data (Image encodée en base64)</td><td/></tr><tr><td>FRLMObservationMedia.content.contentType</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.content.contentType (Type MIME du média)</td><td/></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.subject (Patient ou specimen concerné par l'image)</td><td>Cas où subject[x] référence un FRLMPatient.</td></tr><tr><td>FRLMObservationMedia.subject</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.subject (Patient ou specimen concerné par l'image)</td><td>Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé.</td></tr><tr><td>FRLMObservationMedia.note</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.note (Comments made about the media)</td><td/></tr><tr><td>FRLMObservationMedia.header.performer[x]</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Media.operator (The person who generated the image)</td><td/></tr><tr><td>FRLMObservationMedia.header.participant[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMObservationMedia.header.author[x]</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>FRLMObservationMedia.header.informant</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr></table></div></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/metier/document-core/ConceptMap/FRMediaLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <name value="FRMediaLMCDAFHIR"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Image illustrative&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-09-07T10:25:17+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Mapping des éléments du modèle métier FRLMObservationMedia vers le profil CDA FRCDAImageIllustrative, puis vers le profil FHIR FRMediaDocument."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"/>
+    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-image-illustrative"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMObservationMedia"/>
+      <target>
+        <code value="ObservationMedia"/>
+        <display value="FRCDAImageIllustrative"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.identifier"/>
+      <target>
+        <code value="ObservationMedia.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.content.data"/>
+      <target>
+        <code value="ObservationMedia.value"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.content.contentType"/>
+      <target>
+        <code value="ObservationMedia.value"/>
+        <equivalence value="wider"/>
+        <comment value="Cet attribut n'est pas décomposé séparément dans ce profil ; il est porté par l'ensemble de value."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.subject"/>
+      <target>
+        <code value="ObservationMedia.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où subject[x] référence un FRLMPatient."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.subject"/>
+      <target>
+        <code value="ObservationMedia.specimen"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où subject[x] référence un FRLMSpecimen."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.note"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="Le profil CDA ne comporte pas d'élément dédié pour représenter une note."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.performer[x]"/>
+      <target>
+        <code value="ObservationMedia.performer"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.participant[x]"/>
+      <target>
+        <code value="ObservationMedia.participant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.author[x]"/>
+      <target>
+        <code value="ObservationMedia.author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.informant"/>
+      <target>
+        <code value="ObservationMedia.informant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia"/>
+    <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-media-document"/>
+    <targetVersion value="0.1.0"/>
+    <element>
+      <code value="FRLMObservationMedia"/>
+      <target>
+        <code value="Media"/>
+        <display value="FRMediaDocument"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.identifier"/>
+      <target>
+        <code value="Media.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.content.data"/>
+      <target>
+        <code value="Media.content.data"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.content.contentType"/>
+      <target>
+        <code value="Media.content.contentType"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.subject"/>
+      <target>
+        <code value="Media.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où subject[x] référence un FRLMPatient."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.subject"/>
+      <target>
+        <code value="Media.subject"/>
+        <equivalence value="equivalent"/>
+        <comment value="Cas où subject[x] référence un FRLMSpecimen ; Media.subject n'a pas de champ specimen dédié séparé."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.note"/>
+      <target>
+        <code value="Media.note"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.performer[x]"/>
+      <target>
+        <code value="Media.operator"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.participant[x]"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.author[x]"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMObservationMedia.header.informant"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
