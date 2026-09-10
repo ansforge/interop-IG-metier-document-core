@@ -1,0 +1,17 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMLocation","FRLMLocation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Location","Lieu","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMLocation.identifier","FRLMLocation.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant du lieu","Identifiant du lieu","","","","","","","","","",,,,,"",,,,"FRLMLocation.identifier",0,*,"",""
+"FRLMLocation.name","FRLMLocation.name","","","",0,1,"","","","string {[]} {[]}
+","Nom du lieu","Nom du lieu","","","","","","","","","",,,,,"",,,,"FRLMLocation.name",0,1,"",""
+"FRLMLocation.description","FRLMLocation.description","","","",0,1,"","","","string {[]} {[]}
+","Informations complémentaires sur le lieu permettant de mieux l'identifier, au-delà de son nom.","Informations complémentaires sur le lieu permettant de mieux l'identifier, au-delà de son nom.","","","","","","","","","",,,,,"",,,,"FRLMLocation.description",0,1,"",""
+"FRLMLocation.type","FRLMLocation.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type de fonction exercée sur le lieu","Type de fonction exercée sur le lieu","","","","","","","","","",,"preferred","(preferred): https://terminology.hl7.org/ValueSet-v3-ServiceDeliveryLocationRoleType.html","","",,,,"FRLMLocation.type",0,*,"",""
+"FRLMLocation.address","FRLMLocation.address","","","",0,1,"","","","Address {[]} {[]}
+","Adresse du lieu","Adresse du lieu","","","","","","","","","",,,,,"",,,,"FRLMLocation.address",0,1,"",""
+"FRLMLocation.managingOrganisation","FRLMLocation.managingOrganisation","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Organisation responsable du lieu","Organisation responsable du lieu","","","","","","","","","",,,,,"",,,,"FRLMLocation.managingOrganisation",0,1,"",""
+"FRLMLocation.partOf","FRLMLocation.partOf","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation {[]} {[]}
+","Lieu dont celui-ci fait physiquement partie","Lieu dont celui-ci fait physiquement partie","","","","","","","","","",,,,,"",,,,"FRLMLocation.partOf",0,1,"",""

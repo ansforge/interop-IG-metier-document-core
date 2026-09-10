@@ -1,0 +1,51 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMMedicationAdministration","FRLMMedicationAdministration","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Medication Administration	","Traitement","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMMedicationAdministration.header","FRLMMedicationAdministration.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMMedicationAdministration.header.subject","FRLMMedicationAdministration.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMMedicationAdministration.header.identifier","FRLMMedicationAdministration.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMMedicationAdministration.header.author[x]","FRLMMedicationAdministration.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMMedicationAdministration.header.author[x].authorProfessional","FRLMMedicationAdministration.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMMedicationAdministration.header.author[x].authorOrganisation","FRLMMedicationAdministration.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMMedicationAdministration.header.author[x].authorDevice","FRLMMedicationAdministration.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMMedicationAdministration.header.performer[x]","FRLMMedicationAdministration.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMMedicationAdministration.header.participant[x]","FRLMMedicationAdministration.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMMedicationAdministration.header.participant[x].participantProfessional","FRLMMedicationAdministration.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMMedicationAdministration.header.participant[x].participantOrganisation","FRLMMedicationAdministration.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMMedicationAdministration.header.participant[x].participantDevice","FRLMMedicationAdministration.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMMedicationAdministration.header.informant","FRLMMedicationAdministration.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMMedicationAdministration.header.date","FRLMMedicationAdministration.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMMedicationAdministration.header.status","FRLMMedicationAdministration.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMMedicationAdministration.header.source","FRLMMedicationAdministration.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMMedicationAdministration.header.language","FRLMMedicationAdministration.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMMedicationAdministration.medication","FRLMMedicationAdministration.medication","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication {[]} {[]}
+","Médicament","Médicament","","","","","","","","","",,,,,"",,,,"FRLMMedicationAdministration.medication",1,1,"",""
+"FRLMMedicationAdministration.occurrence[x]","FRLMMedicationAdministration.occurrence[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","date/ durée du traitement","date/ durée du traitement","","","","","","","","","",,,,,"",,,,"FRLMMedicationAdministration.occurrence[x]",1,1,"",""
+"FRLMMedicationAdministration.reason[x]","FRLMMedicationAdministration.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Motif du traitement","Motif du traitement","","","","","","","","","",,,,,"",,,,"FRLMMedicationAdministration.reason[x]",0,*,"",""
+"FRLMMedicationAdministration.dosage","FRLMMedicationAdministration.dosage","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions {[]} {[]}
+","Posologie","Posologie","","","","","","","","","",,,,,"",,,,"FRLMMedicationAdministration.dosage",0,1,"",""
+"FRLMMedicationAdministration.note","FRLMMedicationAdministration.note","","","",0,1,"","","","string {[]} {[]}
+","Note","Note","","","","","","","","","",,,,,"",,,,"FRLMMedicationAdministration.note",0,1,"",""

@@ -1,0 +1,53 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMAttachment","FRLMAttachment","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Attachment","Document attaché","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMAttachment.header","FRLMAttachment.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMAttachment.header.subject","FRLMAttachment.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMAttachment.header.identifier","FRLMAttachment.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMAttachment.header.author[x]","FRLMAttachment.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMAttachment.header.author[x].authorProfessional","FRLMAttachment.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMAttachment.header.author[x].authorOrganisation","FRLMAttachment.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMAttachment.header.author[x].authorDevice","FRLMAttachment.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMAttachment.header.performer[x]","FRLMAttachment.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMAttachment.header.participant[x]","FRLMAttachment.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMAttachment.header.participant[x].participantProfessional","FRLMAttachment.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMAttachment.header.participant[x].participantOrganisation","FRLMAttachment.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMAttachment.header.participant[x].participantDevice","FRLMAttachment.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMAttachment.header.informant","FRLMAttachment.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMAttachment.header.date","FRLMAttachment.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMAttachment.header.status","FRLMAttachment.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMAttachment.header.source","FRLMAttachment.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMAttachment.header.language","FRLMAttachment.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMAttachment.contentType","FRLMAttachment.contentType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type MIME de la piece jointe, avec encodage de caracteres, etc.","Type MIME de la piece jointe, avec encodage de caracteres, etc.","","","","","","","","","",,"preferred","(preferred): BCP-13","","",,,,"FRLMAttachment.contentType",0,1,"",""
+"FRLMAttachment.language","FRLMAttachment.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Langue du contenu","Langue du contenu","","","","","","","","","",,"preferred","(preferred): BCP 47","","",,,,"FRLMAttachment.language",0,1,"",""
+"FRLMAttachment.data","FRLMAttachment.data","","","",0,1,"","","","base64Binary {[]} {[]}
+","Contenu encode en base64","Contenu encode en base64","","","","","","","","","",,,,,"",,,,"FRLMAttachment.data",0,1,"",""
+"FRLMAttachment.url","FRLMAttachment.url","","","",0,1,"","","","uri {[]} {[]}
+","URL de la ressource","URL de la ressource","","","","","","","","","",,,,,"",,,,"FRLMAttachment.url",0,1,"",""
+"FRLMAttachment.size","FRLMAttachment.size","","","",0,1,"","","","unsignedInt {[]} {[]}
+","Taille de la piece jointe avant encodage en base64","Taille de la piece jointe avant encodage en base64","","","","","","","","","",,,,,"",,,,"FRLMAttachment.size",0,1,"",""
+"FRLMAttachment.title","FRLMAttachment.title","","","",0,1,"","","","string {[]} {[]}
+","Titre de la piece jointe","Titre de la piece jointe","","","","","","","","","",,,,,"",,,,"FRLMAttachment.title",0,1,"",""

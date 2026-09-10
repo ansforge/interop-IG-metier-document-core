@@ -1,0 +1,81 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMEncounter","FRLMEncounter","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Encounter","Rencontre","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMEncounter.header","FRLMEncounter.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMEncounter.header.subject","FRLMEncounter.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMEncounter.header.identifier","FRLMEncounter.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMEncounter.header.author[x]","FRLMEncounter.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","Responsable de la rencontre","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMEncounter.header.author[x].authorProfessional","FRLMEncounter.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMEncounter.header.author[x].authorOrganisation","FRLMEncounter.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMEncounter.header.author[x].authorDevice","FRLMEncounter.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMEncounter.header.performer[x]","FRLMEncounter.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMEncounter.header.participant[x]","FRLMEncounter.header.participant[x]","","","",0,0,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMEncounter.header.participant[x].participantProfessional","FRLMEncounter.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMEncounter.header.participant[x].participantOrganisation","FRLMEncounter.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMEncounter.header.participant[x].participantDevice","FRLMEncounter.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMEncounter.header.informant","FRLMEncounter.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMEncounter.header.date","FRLMEncounter.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMEncounter.header.status","FRLMEncounter.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMEncounter.header.source","FRLMEncounter.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMEncounter.header.language","FRLMEncounter.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMEncounter.participant","FRLMEncounter.participant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant {[]} {[]}
+","Personne impliquée dans la rencontre","Personne impliquée dans la rencontre","","","","","","","","","",,,,,"",,,,"FRLMEncounter.participant",0,*,"",""
+"FRLMEncounter.period","FRLMEncounter.period","","","",1,1,"","","","Period {[]} {[]}
+","Date de début et de fin de la rencontre.","Date de début et de fin de la rencontre.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.period",1,1,"",""
+"FRLMEncounter.priority","FRLMEncounter.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priorité de la rencontre (ex : urgence, etc.).","Priorité de la rencontre (ex : urgence, etc.).","","","","","","","","","",,,,,"",,,,"FRLMEncounter.priority",0,1,"",""
+"FRLMEncounter.type","FRLMEncounter.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de la rencontre (hospitalisation, soins à domicile, etc.).","Type de la rencontre (hospitalisation, soins à domicile, etc.).","","","","","","","","","",,,,,"",,,,"FRLMEncounter.type",1,1,"",""
+"FRLMEncounter.serviceProvider","FRLMEncounter.serviceProvider","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Organisation (établissement) responsable de cette rencontre","Organisation (établissement) responsable de cette rencontre","","","","","","","","","",,,,,"",,,,"FRLMEncounter.serviceProvider",0,1,"",""
+"FRLMEncounter.referringProfessional","FRLMEncounter.referringProfessional","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Professionnel de santé référent","Professionnel de santé référent","","","","","","","","","",,,,,"",,,,"FRLMEncounter.referringProfessional",0,1,"",""
+"FRLMEncounter.basedOn[x]","FRLMEncounter.basedOn[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlan {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest {[]} {[]}","Référence à la demande ayant initié cette rencontre","Référence à la demande ayant initié cette rencontre","","","","","","","","","",,,,,"",,,,"FRLMEncounter.basedOn[x]",0,*,"",""
+"FRLMEncounter.reason[x]","FRLMEncounter.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}string {[]} {[]}","Motif(s) de l'admission, ex : problème, procédure ou constatation.","Motif(s) de l'admission, ex : problème, procédure ou constatation.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.reason[x]",0,*,"",""
+"FRLMEncounter.admission","FRLMEncounter.admission","","","",0,1,"","","","Base {[]} {[]}
+","Détails de l'admission","Détails de l'admission","","","","","","","","","",,,,,"",,,,"FRLMEncounter.admission",0,1,"",""
+"FRLMEncounter.admission.admitter","FRLMEncounter.admission.admitter","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Professionnel de santé ayant admis le patient","Professionnel de santé ayant admis le patient","","","","","","","","","",,,,,"",,,,"FRLMEncounter.admission.admitter",0,1,"",""
+"FRLMEncounter.admission.admitSource","FRLMEncounter.admission.admitSource","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Modalité d'entrée d'un patient en ES (urgence, programmée, etc...).","Modalité d'entrée d'un patient en ES (urgence, programmée, etc...).","","","","","","","","","",,"required","jdv-modalite-entree : Modalité d'entrée en établissement de santé","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis|20260716085852","",,,,"FRLMEncounter.admission.admitSource",0,1,"",""
+"FRLMEncounter.dischargeDiagnosis[x]","FRLMEncounter.dischargeDiagnosis[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}","Les diagnostics au moment de la sortie.","Les diagnostics au moment de la sortie.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.dischargeDiagnosis[x]",0,*,"",""
+"FRLMEncounter.dischargeDestination","FRLMEncounter.dischargeDestination","","","",0,1,"","","","Base {[]} {[]}
+","modalité de sortie du patient d'un ES (retour à domicile, EHPAD, HAD, etc...)","modalité de sortie du patient d'un ES (retour à domicile, EHPAD, HAD, etc...)","","","","","","","","","",,,,,"",,,,"FRLMEncounter.dischargeDestination",0,1,"",""
+"FRLMEncounter.dischargeDestination.type","FRLMEncounter.dischargeDestination.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type de sortie","Type de sortie","","","","","","","","","",,"required","JDV_ModaliteSortie_CISIS (1.2.250.1.213.1.1.5.74) ou autre JDV spécifique à un volet","","",,,,"FRLMEncounter.dischargeDestination.type",0,1,"",""
+"FRLMEncounter.dischargeDestination.location[x]","FRLMEncounter.dischargeDestination.location[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation {[]} {[]}","Le lieu ou l'organisation","Le lieu ou l'organisation","","","","","","","","","",,,,,"",,,,"FRLMEncounter.dischargeDestination.location[x]",0,1,"",""
+"FRLMEncounter.serviceLocation","FRLMEncounter.serviceLocation","","","",0,*,"","","","Base {[]} {[]}
+","Liste des lieux où le patient était présent pendant cette rencontre.","Liste des lieux où le patient était présent pendant cette rencontre.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.serviceLocation",0,*,"",""
+"FRLMEncounter.serviceLocation.period","FRLMEncounter.serviceLocation.period","","","",0,1,"","","","Period {[]} {[]}
+","Période pendant laquelle le patient était présent au lieu","Période pendant laquelle le patient était présent au lieu","","","","","","","","","",,,,,"",,,,"FRLMEncounter.serviceLocation.period",0,1,"",""
+"FRLMEncounter.serviceLocation.organisationPart[x]","FRLMEncounter.serviceLocation.organisationPart[x]","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLocation {[]} {[]}","Organisation ou partie d'une organisation (ex : département) où le patient était présent pendant la rencontre.","Organisation ou partie d'une organisation (ex : département) où le patient était présent pendant la rencontre.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.serviceLocation.organisationPart[x]",1,1,"",""
+"FRLMEncounter.subEncounter","FRLMEncounter.subEncounter","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}
+","référence aux rencontres considérées comme faisant partie de cette rencontre.","référence aux rencontres considérées comme faisant partie de cette rencontre.","","","","","","","","","",,,,,"",,,,"FRLMEncounter.subEncounter",0,*,"",""
+"FRLMEncounter.note","FRLMEncounter.note","","","",0,1,"","","","string {[]} {[]}
+","Notes","Notes","","","","","","","","","",,,,,"",,,,"FRLMEncounter.note",0,1,"",""
