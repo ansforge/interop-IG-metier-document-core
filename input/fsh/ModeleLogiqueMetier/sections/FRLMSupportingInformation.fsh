@@ -9,9 +9,9 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * entry 1..*
   * previousResultsInformation 0..* FRLMObservation "Résultats d'examens antérieurs pertinents"
-  * historyOfPastIllness 1..1 FRLMObservation "Observation"
-  * historyOfPastProcedures 1..1 FRLMObservation "Observation"
-  * contraIndication 0..1 FRLMObservation "Observation"
+  * historyOfPastIllness[x] 0..* FRLMCondition or FRLMObservation "Antécédents médicaux"
+  * historyOfPastProcedures 0..* FRLMObservation "Antécédents chirurgicaux"
+  * contraIndication 0..* FRLMObservation "Contre-indications"
   * condition 0..* FRLMCondition "Problème"
   * device 0..* FRLMDeviceUse "Dispositif médical"
   * pregnancyStatus 0..1 FRLMPregnancyObservation "Statut grossesse"
