@@ -15,5 +15,7 @@ Characteristics: #can-be-target
   * condition 0..* FRLMCondition "Problème"
   * device 0..* FRLMDeviceUse "Dispositif médical"
   * pregnancyStatus 0..1 FRLMPregnancyObservation "Statut grossesse"
-  * priorMedicationAdministration 0..* FRLMDICOMMedicationAdministration "Produits de santé administré avant l'examen d'imagerie"
+  * priorMedicationAdministration[x] 0..* FRLMDICOMMedicationAdministration or FRLMMedicationAdministration "Produits de santé administré avant l'examen d'imagerie / avant l'examen de biologie"
   * sexForClinicalUse 0..1 CodeableConcept "Sexe Clinique"
+  * vaccination 0..* FRLMImmunisation "Historique vaccinal du patient"
+  * otherSupportingInformation 0..* Reference  "Autres informations cliniques pertinentes"
