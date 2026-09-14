@@ -1,0 +1,23 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMComparisonStudy","FRLMComparisonStudy","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Comparison Study","Section Comparaison d'examens d'imagerie","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMComparisonStudy.codeSection","FRLMComparisonStudy.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMComparisonStudy.titleSection","FRLMComparisonStudy.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMComparisonStudy.description","FRLMComparisonStudy.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMComparisonStudy.author[x]","FRLMComparisonStudy.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMComparisonStudy.author[x].authorProfessional","FRLMComparisonStudy.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMComparisonStudy.author[x].authorOrganisation","FRLMComparisonStudy.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMComparisonStudy.author[x].authorDevice","FRLMComparisonStudy.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMComparisonStudy.informant","FRLMComparisonStudy.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMComparisonStudy.subSection","FRLMComparisonStudy.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMComparisonStudy.entry","FRLMComparisonStudy.entry","","","",0,0,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""

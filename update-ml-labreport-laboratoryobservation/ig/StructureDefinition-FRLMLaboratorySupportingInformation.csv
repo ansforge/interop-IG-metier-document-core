@@ -1,0 +1,35 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Laboratory Supporting Information","Section Informations Cliniques pour les examens de biologie médicale","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMLaboratorySupportingInformation.codeSection","FRLMLaboratorySupportingInformation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMLaboratorySupportingInformation.titleSection","FRLMLaboratorySupportingInformation.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMLaboratorySupportingInformation.description","FRLMLaboratorySupportingInformation.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMLaboratorySupportingInformation.author[x]","FRLMLaboratorySupportingInformation.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMLaboratorySupportingInformation.author[x].authorProfessional","FRLMLaboratorySupportingInformation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMLaboratorySupportingInformation.author[x].authorOrganisation","FRLMLaboratorySupportingInformation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMLaboratorySupportingInformation.author[x].authorDevice","FRLMLaboratorySupportingInformation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMLaboratorySupportingInformation.informant","FRLMLaboratorySupportingInformation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMLaboratorySupportingInformation.subSection","FRLMLaboratorySupportingInformation.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry","FRLMLaboratorySupportingInformation.entry","","","",1,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry.observation","FRLMLaboratorySupportingInformation.entry.observation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+","Résultats cliniques et autres observations","Résultats cliniques et autres observations","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.observation",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry.condition","FRLMLaboratorySupportingInformation.entry.condition","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+","Problèmes","Problèmes","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.condition",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry.medicationAdministration","FRLMLaboratorySupportingInformation.entry.medicationAdministration","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}
+","Produits de santé administré avant l'examen de biologie","Produits de santé administré avant l'examen de biologie","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.medicationAdministration",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry.sexForClinicalUse","FRLMLaboratorySupportingInformation.entry.sexForClinicalUse","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Sexe Clinique","Sexe Clinique","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.sexForClinicalUse",0,1,"",""
+"FRLMLaboratorySupportingInformation.entry.vaccination","FRLMLaboratorySupportingInformation.entry.vaccination","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation {[]} {[]}
+","Historique vaccinal du patient","Historique vaccinal du patient","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.vaccination",0,*,"",""
+"FRLMLaboratorySupportingInformation.entry.otherSupportingInformation","FRLMLaboratorySupportingInformation.entry.otherSupportingInformation","","","",0,*,"","","","Resource {[]} {[]}
+","Autres informations cliniques pertinentes","Autres informations cliniques pertinentes","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.otherSupportingInformation",0,*,"",""

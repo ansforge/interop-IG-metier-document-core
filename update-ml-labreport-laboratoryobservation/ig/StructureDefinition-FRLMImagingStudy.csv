@@ -1,0 +1,61 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMImagingStudy","FRLMImagingStudy","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Imaging Study","DICOM Examen Imagerie","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMImagingStudy.header","FRLMImagingStudy.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMImagingStudy.header.subject","FRLMImagingStudy.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMImagingStudy.header.identifier","FRLMImagingStudy.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","UUID instance examen","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMImagingStudy.header.author[x]","FRLMImagingStudy.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMImagingStudy.header.author[x].authorProfessional","FRLMImagingStudy.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMImagingStudy.header.author[x].authorOrganisation","FRLMImagingStudy.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMImagingStudy.header.author[x].authorDevice","FRLMImagingStudy.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMImagingStudy.header.performer[x]","FRLMImagingStudy.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMImagingStudy.header.participant[x]","FRLMImagingStudy.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMImagingStudy.header.participant[x].participantProfessional","FRLMImagingStudy.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMImagingStudy.header.participant[x].participantOrganisation","FRLMImagingStudy.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMImagingStudy.header.participant[x].participantDevice","FRLMImagingStudy.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMImagingStudy.header.informant","FRLMImagingStudy.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMImagingStudy.header.date","FRLMImagingStudy.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMImagingStudy.header.status","FRLMImagingStudy.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMImagingStudy.header.source","FRLMImagingStudy.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMImagingStudy.header.language","FRLMImagingStudy.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMImagingStudy.modality","FRLMImagingStudy.modality","","","",1,*,"","","","CodeableConcept {[]} {[]}
+","Modalités d'imagerie utilisées lors de l'examen (DICOM CID029)","Modalités d'imagerie utilisées lors de l'examen (DICOM CID029)","","","","","","","","","",,"required","jdv-modalite-acquisition-cisis : Modalité d'imagerie","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-acquisition-cisis|20260420150250","",,,,"FRLMImagingStudy.modality",1,*,"",""
+"FRLMImagingStudy.bodySite","FRLMImagingStudy.bodySite","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBodyStructure {[]} {[]}
+","Localisations anatomiques","Localisations anatomiques","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.bodySite",0,*,"",""
+"FRLMImagingStudy.encounter","FRLMImagingStudy.encounter","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}
+","Rencontre associée à l'examen","Rencontre associée à l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.encounter",0,1,"",""
+"FRLMImagingStudy.started","FRLMImagingStudy.started","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de l'examen","Date de l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.started",0,1,"",""
+"FRLMImagingStudy.basedOn","FRLMImagingStudy.basedOn","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMServiceRequest {[]} {[]}
+","Demande d'examen","Demande d'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.basedOn",0,*,"",""
+"FRLMImagingStudy.numberOfSeries","FRLMImagingStudy.numberOfSeries","","","",0,1,"","","","integer {[]} {[]}
+","Nombre de séries d'actes d'imagerie composant l'examen","Nombre de séries d'actes d'imagerie composant l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.numberOfSeries",0,1,"",""
+"FRLMImagingStudy.numberOfInstances","FRLMImagingStudy.numberOfInstances","","","",0,1,"","","","integer {[]} {[]}
+","Nombre d'instances d'imagerie composant l'examen","Nombre d'instances d'imagerie composant l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.numberOfInstances",0,1,"",""
+"FRLMImagingStudy.studyCustodian","FRLMImagingStudy.studyCustodian","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Organisation responsable de l'examen","Organisation responsable de l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.studyCustodian",0,1,"",""
+"FRLMImagingStudy.studyEndpoint","FRLMImagingStudy.studyEndpoint","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEndpoint {[]} {[]}
+","Endpoint de l'examen d'imagerie","Endpoint de l'examen d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.studyEndpoint",0,*,"",""
+"FRLMImagingStudy.series","FRLMImagingStudy.series","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries {[]} {[]}
+","Séries d'actes d'imagerie composant l'examen","Séries d'actes d'imagerie composant l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.series",1,1,"",""

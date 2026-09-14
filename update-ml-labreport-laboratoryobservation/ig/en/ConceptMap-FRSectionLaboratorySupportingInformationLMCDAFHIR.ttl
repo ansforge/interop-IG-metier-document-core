@@ -1,0 +1,212 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRSectionLaboratorySupportingInformationLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRSectionLaboratorySupportingInformationLMCDAFHIR</b></p><a name=\"en-FRSectionLaboratorySupportingInformationLMCDAFHIR\"> </a><a name=\"en-hcFRSectionLaboratorySupportingInformationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html\">Logical model - FR LM Laboratory Supporting Informationversion: 0.1.0)</a> to <code>https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-informations-cliniques</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMLaboratorySupportingInformation (Logical model - FR LM Laboratory Supporting Information)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section (FRCDASectionInformationsCliniques)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.codeSection (Code de la section)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.code</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.titleSection (Titre de la section)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.title</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.description (Bloc narratif)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.text</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.observation (Résultats cliniques et autres observations)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.entry.observation (FRCDASimpleObservation)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.condition (Problèmes)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.entry.observation (FRCDAProbleme)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.medicationAdministration (Produits de santé administré avant l'examen de biologie)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.entry.substanceAdministration (FRCDATraitement)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.sexForClinicalUse (Sexe Clinique)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée relève du contexte patient.</td></tr><tr><td>FRLMLaboratorySupportingInformation.entry.vaccination (Historique vaccinal du patient)</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Section.entry.substanceAdministration (FRCDAVaccination)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.otherSupportingInformation (Autres informations cliniques pertinentes)</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.otherSupportingInformation ; la ressource référencée n'est pas typée.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html\">Logical model - FR LM Laboratory Supporting Information</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html\">ServiceRequest - FR Service Request Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation\">FRLMLaboratorySupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">Composition.basedOn.serviceRequest.supportingInformation</td><td>ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.observation\">FRLMLaboratorySupportingInformation.entry.observation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.condition\">FRLMLaboratorySupportingInformation.entry.condition</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.medicationAdministration\">FRLMLaboratorySupportingInformation.entry.medicationAdministration</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.sexForClinicalUse\">FRLMLaboratorySupportingInformation.entry.sexForClinicalUse</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Aucune cible FHIR explicite identifiée pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.vaccination\">FRLMLaboratorySupportingInformation.entry.vaccination</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.otherSupportingInformation\">FRLMLaboratorySupportingInformation.entry.otherSupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">ServiceRequest.supportingInformation</td><td>supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation.</td></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRSectionLaboratorySupportingInformationLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : Informations cliniques (biologie)"] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-14T13:28:49+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn)."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-informations-cliniques" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDASectionInformationsCliniques" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.codeSection" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.titleSection" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.title" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.description" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.observation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.entry.observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDASimpleObservation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.condition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.entry.observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAProbleme" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.medicationAdministration" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.entry.substanceAdministration" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDATraitement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.sexForClinicalUse" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée relève du contexte patient." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.vaccination" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Section.entry.substanceAdministration" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAVaccination" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.otherSupportingInformation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.otherSupportingInformation ; la ressource référencée n'est pas typée." ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-service-request-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Composition.basedOn.serviceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRServiceRequestDocument.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.observation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ServiceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "Observation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.condition" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ServiceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRConditionDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.medicationAdministration" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ServiceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRMedicationAdministrationDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.sexForClinicalUse" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Aucune cible FHIR explicite identifiée pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.vaccination" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ServiceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRImmunizationDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratorySupportingInformation.entry.otherSupportingInformation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "ServiceRequest.supportingInformation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation." ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

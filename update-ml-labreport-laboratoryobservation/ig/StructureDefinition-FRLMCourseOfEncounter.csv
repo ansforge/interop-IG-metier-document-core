@@ -1,0 +1,43 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMCourseOfEncounter","FRLMCourseOfEncounter","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Course of encounter","Section Résultats d'événements","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMCourseOfEncounter.codeSection","FRLMCourseOfEncounter.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMCourseOfEncounter.titleSection","FRLMCourseOfEncounter.titleSection","","","",0,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMCourseOfEncounter.description","FRLMCourseOfEncounter.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMCourseOfEncounter.author[x]","FRLMCourseOfEncounter.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMCourseOfEncounter.author[x].authorProfessional","FRLMCourseOfEncounter.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMCourseOfEncounter.author[x].authorOrganisation","FRLMCourseOfEncounter.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMCourseOfEncounter.author[x].authorDevice","FRLMCourseOfEncounter.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMCourseOfEncounter.informant","FRLMCourseOfEncounter.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMCourseOfEncounter.subSection","FRLMCourseOfEncounter.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMCourseOfEncounter.entry","FRLMCourseOfEncounter.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMCourseOfEncounter.entry.testResults","FRLMCourseOfEncounter.entry.testResults","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+","Résultats","Résultats","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.testResults",1,*,"",""
+"FRLMCourseOfEncounter.entry.patientTransfer","FRLMCourseOfEncounter.entry.patientTransfer","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatientTransfer {[]} {[]}
+","Transfert du patient","Transfert du patient","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.patientTransfer",0,*,"",""
+"FRLMCourseOfEncounter.entry.diagnosticSummary","FRLMCourseOfEncounter.entry.diagnosticSummary","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+","Problème","Problème","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.diagnosticSummary",0,*,"",""
+"FRLMCourseOfEncounter.entry.procedures","FRLMCourseOfEncounter.entry.procedures","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}
+","Acte","Acte","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.procedures",0,*,"",""
+"FRLMCourseOfEncounter.entry.medicalDevicesAndImplants","FRLMCourseOfEncounter.entry.medicalDevicesAndImplants","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse {[]} {[]}
+","Dispositif médical et implant","Dispositif médical et implant","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.medicalDevicesAndImplants",0,*,"",""
+"FRLMCourseOfEncounter.entry.medications","FRLMCourseOfEncounter.entry.medications","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}
+","Traitement administré pendant le séjour","Traitement administré pendant le séjour","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.medications",0,*,"",""
+"FRLMCourseOfEncounter.entry.reactions","FRLMCourseOfEncounter.entry.reactions","","","",0,*,"","","","Base {[]} {[]}
+","événement indésirable","événement indésirable","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.reactions",0,*,"",""
+"FRLMCourseOfEncounter.entry.reactions.reactionDuringEncounter","FRLMCourseOfEncounter.entry.reactions.reactionDuringEncounter","","","",0,1,"","","","string {[]} {[]}
+","Description sous forme textuelle des évènements indésirables survenus pendant l'hospitalisation","Description sous forme textuelle des évènements indésirables survenus pendant l'hospitalisation","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.reactions.reactionDuringEncounter",0,1,"",""
+"FRLMCourseOfEncounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives","FRLMCourseOfEncounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives","","","",0,1,"","","","string {[]} {[]}
+","Description sous forme textuelle des réactions indésirables survenues après l'administration de dérivés sanguins","Description sous forme textuelle des réactions indésirables survenues après l'administration de dérivés sanguins","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.reactions.reactionFollowingAdministrationBloodDerivatives",0,1,"",""
+"FRLMCourseOfEncounter.entry.notes","FRLMCourseOfEncounter.entry.notes","","","",0,1,"","","","string {[]} {[]}
+","Note","Note","","","","","","","","","",,,,,"",,,,"FRLMCourseOfEncounter.entry.notes",0,1,"",""

@@ -1,0 +1,993 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryObservationLMCDAFHIR> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "FRLaboratoryObservationLMCDAFHIR"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap FRLaboratoryObservationLMCDAFHIR</b></p><a name=\"en-FRLaboratoryObservationLMCDAFHIR\"> </a><a name=\"en-hcFRLaboratoryObservationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratoryObservation.html\">Logical model - Laboratory Observation</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html\">CDA - FR Resultats examens de biologie medicale</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation\">FRLMLaboratoryObservation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act\">Act</a></td><td>1..1</td><td>todo</td><td>Niveau racine de la hiérarchie d'un compte rendu de biologie.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.status\">FRLMLaboratoryObservation.header.status</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.statusCode\">Act.statusCode</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.type\">FRLMLaboratoryObservation.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.code\">Act.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.originalName\">FRLMLaboratoryObservation.originalName</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Act.code ne porte pas de originalText dans ce profil.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.observationDate[x]\">FRLMLaboratoryObservation.observationDate[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.effectiveTime\">Act.effectiveTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.specimen\">FRLMLaboratoryObservation.specimen</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frPrelevement\">Act.entryRelationship:frPrelevement</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.order\">FRLMLaboratoryObservation.order</a></td><td>0..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">La demande d'examen est portée globalement au niveau du document (inFulfillmentOf), pas à ce niveau d'entrée.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.bodySite\">FRLMLaboratoryObservation.bodySite</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.result\">FRLMLaboratoryObservation.result</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Ce niveau regroupe des résultats, il n'en porte pas directement.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.referenceRange\">FRLMLaboratoryObservation.referenceRange</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.interpretation\">FRLMLaboratoryObservation.interpretation</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.method\">FRLMLaboratoryObservation.method</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.note\">FRLMLaboratoryObservation.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frCommentaireER\">Act.entryRelationship:frCommentaireER</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.component\">FRLMLaboratoryObservation.component</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.derivedFrom[x]\">FRLMLaboratoryObservation.derivedFrom[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frImageIllustrative\">Act.entryRelationship:frImageIllustrative</a></td><td>0..*</td><td>todo</td><td>Seul le cas d'une image illustrative est representable à ce niveau ; les autres références d'observations sont portées au niveau Résultat/élément clinique pertinent.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.hasMember[x]\">FRLMLaboratoryObservation.hasMember[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frBatterieExamensDeBiologieMedicale\">Act.entryRelationship:frBatterieExamensDeBiologieMedicale</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan=\"3\" style=\"opacity: 0.5\">\"</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frIsolatMicrobiologique\">Act.entryRelationship:frIsolatMicrobiologique</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan=\"3\" style=\"opacity: 0.5\">\"</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent\">Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent</a></td><td>0..*</td><td>todo</td><td>Une Observation peut regrouper des Batteries, des Isolats et/ou des Résultats/éléments cliniques pertinents ; ces trois types d'entrées sont représentés par des entryRelationship distincts dans le CDA, mais par un seul hasMember dans le FHIR (la hiérarchie étant représentée par hasMember).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.previousResults\">FRLMLaboratoryObservation.previousResults</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Ce niveau ne porte pas cette relation ; voir le niveau Résultat/élément clinique pertinent.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.testKit\">FRLMLaboratoryObservation.testKit</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultats-examens-de-biologie-medicale.html#s-Act.participant:frParticipantDispositifAutomatique\">Act.participant:frParticipantDispositifAutomatique</a></td><td>0..1</td><td>todo</td><td>participant[frParticipantDispositifAutomatique] (typeCode DEV) désigne plus largement un dispositif automatique impliqué dans la production du résultat, sans distinguer spécifiquement un test kit.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.calibrator\">FRLMLaboratoryObservation.calibrator</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.accreditationStatus\">FRLMLaboratoryObservation.accreditationStatus</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.pointOfCareTest\">FRLMLaboratoryObservation.pointOfCareTest</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.triggeredBy[x]\">FRLMLaboratoryObservation.triggeredBy[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratoryObservation.html\">Logical model - Laboratory Observation</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html\">CDA - FR Batterie examens de biologie medicale</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation\">FRLMLaboratoryObservation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer\">Organizer</a></td><td>1..1</td><td>todo</td><td>Niveau intermédiaire de regroupement d'un ensemble d'examens biologiques (Batterie) ; ne porte pas de valeur de résultat en propre.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.status\">FRLMLaboratoryObservation.header.status</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.statusCode\">Organizer.statusCode</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.type\">FRLMLaboratoryObservation.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.code\">Organizer.code</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.originalName\">FRLMLaboratoryObservation.originalName</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.code.originalText.reference\">Organizer.code.originalText.reference</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.observationDate[x]\">FRLMLaboratoryObservation.observationDate[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.effectiveTime\">Organizer.effectiveTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.specimen\">FRLMLaboratoryObservation.specimen</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.component:frPrelevement\">Organizer.component:frPrelevement</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.order\">FRLMLaboratoryObservation.order</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.bodySite\">FRLMLaboratoryObservation.bodySite</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.result\">FRLMLaboratoryObservation.result</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Ce niveau regroupe des résultats, il n'en porte pas directement.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.referenceRange\">FRLMLaboratoryObservation.referenceRange</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.interpretation\">FRLMLaboratoryObservation.interpretation</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.method\">FRLMLaboratoryObservation.method</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.note\">FRLMLaboratoryObservation.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.component:frCommentaireER\">Organizer.component:frCommentaireER</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.component\">FRLMLaboratoryObservation.component</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.derivedFrom[x]\">FRLMLaboratoryObservation.derivedFrom[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.component:frImageIllustrative\">Organizer.component:frImageIllustrative</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.hasMember[x]\">FRLMLaboratoryObservation.hasMember[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent\">Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent</a></td><td>0..*</td><td>todo</td><td>Une Batterie ne peut regrouper que des Résultats/éléments cliniques pertinents ; ces deux types d'entrées sont représentés par des entryRelationship distincts dans le CDA, mais par un seul hasMember dans le FHIR (la hiérarchie étant représentée par hasMember).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.previousResults\">FRLMLaboratoryObservation.previousResults</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.testKit\">FRLMLaboratoryObservation.testKit</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-batterie-examens-de-biologie-medicale.html#s-Organizer.participant\">Organizer.participant</a></td><td>0..*</td><td>todo</td><td>participant (typeCode DEV, non slicé dans ce profil) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.calibrator\">FRLMLaboratoryObservation.calibrator</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.accreditationStatus\">FRLMLaboratoryObservation.accreditationStatus</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.pointOfCareTest\">FRLMLaboratoryObservation.pointOfCareTest</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.triggeredBy[x]\">FRLMLaboratoryObservation.triggeredBy[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratoryObservation.html\">Logical model - Laboratory Observation</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html\">CDA - FR Isolat microbiologique</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation\">FRLMLaboratoryObservation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer\">Organizer</a></td><td>1..1</td><td>todo</td><td>Niveau de regroupement des résultats obtenus sur un isolat microbiologique ; ne porte pas de valeur de résultat en propre.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.status\">FRLMLaboratoryObservation.header.status</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.statusCode\">Organizer.statusCode</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.type\">FRLMLaboratoryObservation.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.code\">Organizer.code</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.originalName\">FRLMLaboratoryObservation.originalName</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.observationDate[x]\">FRLMLaboratoryObservation.observationDate[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.effectiveTime\">Organizer.effectiveTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.specimen\">FRLMLaboratoryObservation.specimen</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.specimen\">Organizer.specimen</a></td><td>1..1</td><td>todo</td><td>specimen porte ici l'isolat microbiologique lui-même (1..1), pas un prélèvement générique : il n'y a pas de sous-entrée Prélèvement à ce niveau.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.order\">FRLMLaboratoryObservation.order</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.bodySite\">FRLMLaboratoryObservation.bodySite</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.result\">FRLMLaboratoryObservation.result</a></td><td>1..1</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Ce niveau regroupe des résultats, il n'en porte pas directement.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.referenceRange\">FRLMLaboratoryObservation.referenceRange</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.interpretation\">FRLMLaboratoryObservation.interpretation</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.method\">FRLMLaboratoryObservation.method</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.note\">FRLMLaboratoryObservation.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.component:frCommentaireER\">Organizer.component:frCommentaireER</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.component\">FRLMLaboratoryObservation.component</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.derivedFrom[x]\">FRLMLaboratoryObservation.derivedFrom[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.component:frImageIllustrative\">Organizer.component:frImageIllustrative</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.hasMember[x]\">FRLMLaboratoryObservation.hasMember[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.component:frBatterieExamensDeBiologieMedicale\">Organizer.component:frBatterieExamensDeBiologieMedicale</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan=\"3\" style=\"opacity: 0.5\">\"</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent\">Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.previousResults\">FRLMLaboratoryObservation.previousResults</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.testKit\">FRLMLaboratoryObservation.testKit</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-isolat-microbiologique.html#s-Organizer.participant:frParticipantDispositif\">Organizer.participant:frParticipantDispositif</a></td><td>0..*</td><td>todo</td><td>participant[frParticipantDispositif] (typeCode DEV) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.calibrator\">FRLMLaboratoryObservation.calibrator</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.accreditationStatus\">FRLMLaboratoryObservation.accreditationStatus</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.pointOfCareTest\">FRLMLaboratoryObservation.pointOfCareTest</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.triggeredBy[x]\">FRLMLaboratoryObservation.triggeredBy[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 4 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratoryObservation.html\">Logical model - Laboratory Observation</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html\">CDA - FR Resultat examens de biologie element clinique pertinent</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation\">FRLMLaboratoryObservation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation\">Observation</a></td><td>1..1</td><td>todo</td><td>Observation qui porte directement une valeur de résultat.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.status\">FRLMLaboratoryObservation.header.status</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.statusCode\">Observation.statusCode</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.type\">FRLMLaboratoryObservation.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.code\">Observation.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.originalName\">FRLMLaboratoryObservation.originalName</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.code.originalText.reference\">Observation.code.originalText.reference</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.observationDate[x]\">FRLMLaboratoryObservation.observationDate[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.effectiveTime\">Observation.effectiveTime</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.specimen\">FRLMLaboratoryObservation.specimen</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.entryRelationship:frPrelevement\">Observation.entryRelationship:frPrelevement</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.order\">FRLMLaboratoryObservation.order</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.bodySite\">FRLMLaboratoryObservation.bodySite</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.result\">FRLMLaboratoryObservation.result</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.value\">Observation.value</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.referenceRange\">FRLMLaboratoryObservation.referenceRange</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.referenceRange\">Observation.referenceRange</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.interpretation\">FRLMLaboratoryObservation.interpretation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.interpretationCode\">Observation.interpretationCode</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.method\">FRLMLaboratoryObservation.method</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.methodCode\">Observation.methodCode</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.note\">FRLMLaboratoryObservation.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.entryRelationship:frCommentaireER\">Observation.entryRelationship:frCommentaireER</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.component\">FRLMLaboratoryObservation.component</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.derivedFrom[x]\">FRLMLaboratoryObservation.derivedFrom[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de sous-entrée Image illustrative à ce niveau (uniquement aux niveaux Batterie, Isolat et Examen de biologie médicale).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.hasMember[x]\">FRLMLaboratoryObservation.hasMember[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td><td style=\"background-color: #efefef\">Pas de sous-entrée hasMember à ce niveau (uniquement aux niveaux Batterie, Isolat et Examen de biologie médicale).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.previousResults\">FRLMLaboratoryObservation.previousResults</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.entryRelationship:frResultatsAnterieurs\">Observation.entryRelationship:frResultatsAnterieurs</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.testKit\">FRLMLaboratoryObservation.testKit</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-resultat-examens-de-biologie-element-clinique-pertinent.html#s-Observation.participant\">Observation.participant</a></td><td>0..*</td><td>todo</td><td>participant (typeCode DEV, non slicé dans ce profil) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.calibrator\">FRLMLaboratoryObservation.calibrator</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.accreditationStatus\">FRLMLaboratoryObservation.accreditationStatus</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.pointOfCareTest\">FRLMLaboratoryObservation.pointOfCareTest</a></td><td>0..1</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.triggeredBy[x]\">FRLMLaboratoryObservation.triggeredBy[x]</a></td><td>0..*</td><td>todo</td><td colspan=\"4\" style=\"background-color: #efefef\">(not mapped)</td></tr></table><hr/><p><b>Group 5 </b>Mapping from <a href=\"StructureDefinition-FRLMLaboratoryObservation.html\">Logical model - Laboratory Observation</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html\">Observation - FR Observation Laboratory Report Results Document</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation\">FRLMLaboratoryObservation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation\">Observation</a></td><td>0..*</td><td>todo</td><td>Un seul profil FHIR porte les quatre rôles CDA (Examen de biologie médicale, Batterie, Isolat, Résultat clinique) ; la hiérarchie entre occurrences est portée par Observation.hasMember.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.identifier\">FRLMLaboratoryObservation.header.identifier</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.identifier\">Observation.identifier</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.status\">FRLMLaboratoryObservation.header.status</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.status\">Observation.status</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.header.directSubject[x]\">FRLMLaboratoryObservation.header.directSubject[x]</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.focus\">Observation.focus</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.observationDate[x]\">FRLMLaboratoryObservation.observationDate[x]</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.effective[x]\">Observation.effective[x]</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.type\">FRLMLaboratoryObservation.type</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.code\">Observation.code</a></td><td>1..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.originalName\">FRLMLaboratoryObservation.originalName</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.code.text\">Observation.code.text</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.method\">FRLMLaboratoryObservation.method</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.method\">Observation.method</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.specimen\">FRLMLaboratoryObservation.specimen</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.specimen\">Observation.specimen</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.order\">FRLMLaboratoryObservation.order</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.basedOn\">Observation.basedOn</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.bodySite\">FRLMLaboratoryObservation.bodySite</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.bodySite\">Observation.bodySite</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.result\">FRLMLaboratoryObservation.result</a></td><td>1..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.value[x]\">Observation.value[x]</a></td><td>0..1</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.referenceRange\">FRLMLaboratoryObservation.referenceRange</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.referenceRange\">Observation.referenceRange</a></td><td>0..*</td><td>todo</td><td>Ce profil définit par ailleurs value[x]:valueRange, utilisé quand l'observation est elle-même une déclaration d'intervalle de référence plutôt qu'un résultat mesuré.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.interpretation\">FRLMLaboratoryObservation.interpretation</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.interpretation\">Observation.interpretation</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.note\">FRLMLaboratoryObservation.note</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.note\">Observation.note</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.component\">FRLMLaboratoryObservation.component</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.component\">Observation.component</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.derivedFrom[x]\">FRLMLaboratoryObservation.derivedFrom[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#wider\" title=\"wider\">maps to wider concept</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.derivedFrom\">Observation.derivedFrom</a></td><td>0..*</td><td>todo</td><td>Observation.derivedFrom est restreint à Reference(FRMediaDocument) (image illustrative) dans ce profil.</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.hasMember[x]\">FRLMLaboratoryObservation.hasMember[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.hasMember\">Observation.hasMember</a></td><td>0..*</td><td>todo</td><td>Observation.hasMember est restreint à Reference(FRObservationLaboratoryReportResultsDocument).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.previousResults\">FRLMLaboratoryObservation.previousResults</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.extension:supportingInfo\">Observation.extension:supportingInfo</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.testKit\">FRLMLaboratoryObservation.testKit</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">Observation.extension:testKit</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.calibrator\">FRLMLaboratoryObservation.calibrator</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">Observation.extension:calibrator</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.accreditationStatus\">FRLMLaboratoryObservation.accreditationStatus</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">Observation.extension:accreditationStatus</td><td/></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.pointOfCareTest\">FRLMLaboratoryObservation.pointOfCareTest</a></td><td>0..1</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td><a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-observation-laboratory-report-results-document.html#s-Observation.category\">Observation.category</a></td><td>0..*</td><td>todo</td><td>Observation.category porte déjà le code du chapitre dans ce profil ; l'indicateur de test de point de soins y serait porté comme un codage additionnel distinct au sein du même élément (0..*).</td></tr><tr><td><a href=\"StructureDefinition-FRLMLaboratoryObservation.html#s-FRLMLaboratoryObservation.triggeredBy[x]\">FRLMLaboratoryObservation.triggeredBy[x]</a></td><td>0..*</td><td>todo</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">Observation.extension:triggeredBy</td><td/></tr></table></div>"
+  ] ;
+  fhir:ConceptMap.url [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryObservationLMCDAFHIR"] ;
+  fhir:ConceptMap.version [ fhir:value "0.1.0"] ;
+  fhir:ConceptMap.name [ fhir:value "FRLaboratoryObservationLMCDAFHIR"] ;
+  fhir:ConceptMap.title [ fhir:value "Mapping Métier/CDA/FHIR : \"Résultat d'examen de biologie médicale\""] ;
+  fhir:ConceptMap.status [ fhir:value "draft"] ;
+  fhir:ConceptMap.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ConceptMap.date [ fhir:value "2026-09-14T13:28:49+00:00"^^xsd:dateTime] ;
+  fhir:ConceptMap.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:ConceptMap.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:ConceptMap.description [ fhir:value "Mapping des éléments du modèle métier FRLMLaboratoryObservation vers ses quatre représentations CDA possibles selon le niveau de la hiérarchie du compte rendu de biologie (Examen de biologie médicale, Batterie, Isolat microbiologique, Résultat/élément clinique pertinent), puis vers l'unique profil FHIR FRObservationLaboratoryReportResultsDocument (qui porte lui-même ces quatre rôles, la hiérarchie étant représentée par Observation.hasMember)."] ;
+  fhir:ConceptMap.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ConceptMap.group [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultats-examens-de-biologie-medicale" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAResultatsExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Niveau racine de la hiérarchie d'un compte rendu de biologie." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Act.code ne porte pas de originalText dans ce profil." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.order" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "La demande d'examen est portée globalement au niveau du document (inFulfillmentOf), pas à ce niveau d'entrée." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.result" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Ce niveau regroupe des résultats, il n'en porte pas directement." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDACommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.component" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Seul le cas d'une image illustrative est representable à ce niveau ; les autres références d'observations sont portées au niveau Résultat/élément clinique pertinent." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frBatterieExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDABatterieExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frIsolatMicrobiologique" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAIsolatMicrobiologique" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Une Observation peut regrouper des Batteries, des Isolats et/ou des Résultats/éléments cliniques pertinents ; ces trois types d'entrées sont représentés par des entryRelationship distincts dans le CDA, mais par un seul hasMember dans le FHIR (la hiérarchie étant représentée par hasMember)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Ce niveau ne porte pas cette relation ; voir le niveau Résultat/élément clinique pertinent." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Act.participant:frParticipantDispositifAutomatique" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "participant[frParticipantDispositifAutomatique] (typeCode DEV) désigne plus largement un dispositif automatique impliqué dans la production du résultat, sans distinguer spécifiquement un test kit." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-batterie-examens-de-biologie-medicale" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDABatterieExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Niveau intermédiaire de regroupement d'un ensemble d'examens biologiques (Batterie) ; ne porte pas de valeur de résultat en propre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.code.originalText.reference" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.order" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.result" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Ce niveau regroupe des résultats, il n'en porte pas directement." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDACommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.component" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Une Batterie ne peut regrouper que des Résultats/éléments cliniques pertinents ; ces deux types d'entrées sont représentés par des entryRelationship distincts dans le CDA, mais par un seul hasMember dans le FHIR (la hiérarchie étant représentée par hasMember)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.participant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "participant (typeCode DEV, non slicé dans ce profil) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-isolat-microbiologique" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAIsolatMicrobiologique" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Niveau de regroupement des résultats obtenus sur un isolat microbiologique ; ne porte pas de valeur de résultat en propre." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.specimen" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "specimen porte ici l'isolat microbiologique lui-même (1..1), pas un prélèvement générique : il n'y a pas de sous-entrée Prélèvement à ce niveau." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.order" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.result" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Ce niveau regroupe des résultats, il n'en porte pas directement." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDACommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.component" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAImageIllustrative" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frBatterieExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDABatterieExamensDeBiologieMedicale" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Organizer.participant:frParticipantDispositif" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "participant[frParticipantDispositif] (typeCode DEV) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-resultat-examens-de-biologie-element-clinique-pertinent" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAResultatExamensDeBiologieElementCliniquePertinent" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Observation qui porte directement une valeur de résultat." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.statusCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code.originalText.reference" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effectiveTime" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDAPrelevement" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.order" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.result" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.value" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.referenceRange" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.interpretationCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.methodCode" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frCommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRCDACommentaireER" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.component" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas de sous-entrée Image illustrative à ce niveau (uniquement aux niveaux Batterie, Isolat et Examen de biologie médicale)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Pas de sous-entrée hasMember à ce niveau (uniquement aux niveaux Batterie, Isolat et Examen de biologie médicale)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.entryRelationship:frResultatsAnterieurs" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.participant" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "participant (typeCode DEV, non slicé dans ce profil) désigne plus largement un dispositif automatique, sans distinguer spécifiquement un test kit." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "unmatched" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ConceptMap.group.source [ fhir:value "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation" ] ;
+     fhir:ConceptMap.group.sourceVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.target [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-observation-laboratory-report-results-document" ] ;
+     fhir:ConceptMap.group.targetVersion [ fhir:value "0.1.0" ] ;
+     fhir:ConceptMap.group.element [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation" ] ;
+         fhir:ConceptMap.group.element.target.display [ fhir:value "FRObservationLaboratoryReportResultsDocument" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Un seul profil FHIR porte les quatre rôles CDA (Examen de biologie médicale, Batterie, Isolat, Résultat clinique) ; la hiérarchie entre occurrences est portée par Observation.hasMember." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.identifier" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.identifier" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.status" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.status" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.header.directSubject[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.focus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.observationDate[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.effective[x]" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.type" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.originalName" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.code.text" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.method" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.method" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.specimen" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.specimen" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.order" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.basedOn" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.bodySite" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.bodySite" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.result" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.value[x]" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.referenceRange" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.referenceRange" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Ce profil définit par ailleurs value[x]:valueRange, utilisé quand l'observation est elle-même une déclaration d'intervalle de référence plutôt qu'un résultat mesuré." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.interpretation" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.interpretation" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.note" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.note" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.component" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.component" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.derivedFrom[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.derivedFrom" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "wider" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Observation.derivedFrom est restreint à Reference(FRMediaDocument) (image illustrative) dans ce profil." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.hasMember[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.hasMember" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Observation.hasMember est restreint à Reference(FRObservationLaboratoryReportResultsDocument)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.previousResults" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.extension:supportingInfo" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.testKit" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.extension:testKit" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.calibrator" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.extension:calibrator" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.accreditationStatus" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.extension:accreditationStatus" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.pointOfCareTest" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.category" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "relatedto" ] ;
+         fhir:ConceptMap.group.element.target.comment [ fhir:value "Observation.category porte déjà le code du chapitre dans ce profil ; l'indicateur de test de point de soins y serait porté comme un codage additionnel distinct au sein du même élément (0..*)." ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ConceptMap.group.element.code [ fhir:value "FRLMLaboratoryObservation.triggeredBy[x]" ] ;
+       fhir:ConceptMap.group.element.target [
+         fhir:index -1 ;
+         fhir:ConceptMap.group.element.target.code [ fhir:value "Observation.extension:triggeredBy" ] ;
+         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRLaboratoryObservationLMCDAFHIR.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
