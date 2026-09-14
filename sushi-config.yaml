@@ -143,7 +143,8 @@ groups:
       - StructureDefinition/FRLMOrderInformation
       - StructureDefinition/FRLMComparisonStudy
       - StructureDefinition/FRLMExposureInformation
-      - StructureDefinition/FRLMSupportingInformation
+      - StructureDefinition/FRLMImagingSupportingInformation
+      - StructureDefinition/FRLMLaboratorySupportingInformation
       - StructureDefinition/FRLMDicomStudyMetadata
       - StructureDefinition/FRLMRecommendation
       - StructureDefinition/FRLMConclusion
@@ -193,16 +194,12 @@ groups:
       - StructureDefinition/FRLMPregnancyHistory
       - StructureDefinition/FRLMMedication
       - StructureDefinition/FRLMDoseNumber
-      - StructureDefinition/FRLMResultatsExamensBiologieMedicale
       - StructureDefinition/FRLMObservationVitalSign
       - StructureDefinition/FRLMMedicationAdministration
       - StructureDefinition/FRLMDICOMMedicationAdministration
       - StructureDefinition/FRLMImmunisation
       - StructureDefinition/FRLMMedicationDispense
       - StructureDefinition/FRLMSpecimen
-      - StructureDefinition/FRLMBatterieExamensBiologieMedicale
-      - StructureDefinition/FRLMIsolatMicrobiologique
-      - StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent
       - StructureDefinition/FRLMImagingStudy
       - StructureDefinition/FRLMSeries
       - StructureDefinition/FRLMSOPInstance
@@ -212,7 +209,6 @@ groups:
       - StructureDefinition/FRLMMultidrugResistantMicroorganismIdentification
       - StructureDefinition/FRLMTransfusionAccidents
       - StructureDefinition/FRLMPatientTransfer
-      - StructureDefinition/FRLMLaboratoireExecutant
       - StructureDefinition/FRLMDevice
       - StructureDefinition/FRLMDosageInstructions
       - StructureDefinition/FRLMPrescriptionEntree
@@ -246,7 +242,8 @@ groups:
   mapping-sections:
     name: Concept Maps sections de document
     resources:
-      - FRSectionSupportingInformationLMCDAFHIR
+      - FRSectionImagingSupportingInformationLMCDAFHIR
+      - FRSectionLaboratorySupportingInformationLMCDAFHIR
       - FRSectionOrderInformationLMCDAFHIR
       - FRSectionExposureInformationLMCDAFHIR
       - FRSectionExaminationReportLMCDAFHIR
@@ -260,8 +257,7 @@ groups:
       - FRSectionComparisonStudyLMCDAFHIR
       - FRSectionConclusionLMCDAFHIR
       - FRSectionMedicalHistoryLMCDAFHIR
-      - FRSectionLaboratoryChapterLMCDAFHIR
-      - FRSectionLaboratorySubChapterLMCDAFHIR
+      - FRSectionResultDataLMCDAFHIR
       - FRSectionAdvanceDirectivesLMCDAFHIR
       - FRSectionMedicalDevicesAndImplantsLMCDAFHIR
       - FRSectionPresentedFormLMCDAFHIR
@@ -279,7 +275,6 @@ groups:
       - FRSectionProblemsLMCDAFHIR
       - FRSectionReasonForReferralLMCDAFHIR
       - FRSectionResultsLMCDAFHIR
-      - FRSectionLaboratorySecondIntentionResultsLMCDAFHIR
       - FRSectionVitalSignsLMCDAFHIR
       - FRSectionMedicationSummaryLMCDAFHIR
       - FRSectionHospitalDischargeMedicationsLMCDAFHIR
@@ -310,10 +305,6 @@ groups:
       - FRMedicationLMCDAFHIR
       - FRMedicationRequestLMCDAFHIR
       - FRMedicationStatementLMCDAFHIR
-      - FRLaboratoryIsolateResultsLMCDAFHIR
-      - FRLaboratoryBatteryResultsLMCDAFHIR
-      - FRLaboratoryResultsLMCDAFHIR
-      - FRLaboratoryResultClinicalElementLMCDAFHIR
       - FRObservationMicroorganismDetectionLMCDAFHIR
       - FRObservationMultiresistantMicroorganismsIdentificationLMCDAFHIR
       - FRObservationPregnancyLMCDAFHIR
@@ -328,3 +319,4 @@ groups:
       - FRImagingMedicationAministrationLMCDAFHIR
       - FRParticipantCorpsLMCDAFHIR
       - FRObservationLMCDAFHIR
+      - FRLaboratoryObservationLMCDAFHIR

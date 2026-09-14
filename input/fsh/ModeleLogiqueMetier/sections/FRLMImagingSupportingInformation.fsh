@@ -1,7 +1,7 @@
-Logical: FRLMSupportingInformation
-Id: FRLMSupportingInformation
+Logical: FRLMImagingSupportingInformation
+Id: FRLMImagingSupportingInformation
 Parent: FRLMSection
-Title: "Logical model - FR LM Supporting Information"
+Title: "Logical model - FR LM Imaging Supporting Information"
 Description: """Section Informations Cliniques"""
 Characteristics: #can-be-target
 
