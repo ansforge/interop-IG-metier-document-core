@@ -26,7 +26,7 @@ Cette structure est dérivée de [FRLMSection](StructureDefinition-FRLMSection.m
 
 ** Résumé **
 
-Obligatoire : 2 éléments(2 éléments obligatoire(s) imbriqué(s))
+Obligatoire : 2 éléments
  Interdit : 1 élément
 
  **Vue différentielle** 
@@ -39,7 +39,7 @@ Cette structure est dérivée de [FRLMSection](StructureDefinition-FRLMSection.m
 
 ** Résumé **
 
-Obligatoire : 2 éléments(2 éléments obligatoire(s) imbriqué(s))
+Obligatoire : 2 éléments
  Interdit : 1 élément
 
  
@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
   "name" : "FRLMSupportingInformation",
   "title" : "Logical model - FR LM Supporting Information",
   "status" : "draft",
-  "date" : "2026-09-04T14:19:44+00:00",
+  "date" : "2026-09-14T09:04:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -124,23 +124,26 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
       }]
     },
     {
-      "id" : "FRLMSupportingInformation.entry.historyOfPastIllness",
-      "path" : "FRLMSupportingInformation.entry.historyOfPastIllness",
-      "short" : "Observation",
-      "definition" : "Observation",
-      "min" : 1,
-      "max" : "1",
+      "id" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
+      "path" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
+      "short" : "Antécédents médicaux",
+      "definition" : "Antécédents médicaux",
+      "min" : 0,
+      "max" : "*",
       "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
+      },
+      {
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
     },
     {
       "id" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "path" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
-      "short" : "Observation",
-      "definition" : "Observation",
-      "min" : 1,
-      "max" : "1",
+      "short" : "Antécédents chirurgicaux",
+      "definition" : "Antécédents chirurgicaux",
+      "min" : 0,
+      "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
@@ -148,10 +151,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
     {
       "id" : "FRLMSupportingInformation.entry.contraIndication",
       "path" : "FRLMSupportingInformation.entry.contraIndication",
-      "short" : "Observation",
-      "definition" : "Observation",
+      "short" : "Contre-indications",
+      "definition" : "Contre-indications",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]

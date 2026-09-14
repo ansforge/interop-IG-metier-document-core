@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-04T14:19:44+00:00",
+  "date" : "2026-09-14T09:04:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -79,10 +79,19 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
+      "display" : "FRLMObservation",
       "target" : [{
         "code" : "Section.entry.observation",
         "display" : "FRCDASimpleObservation",
         "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
+      "display" : "FRLMCondition",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.historyOfPastIllnessFRLMCondition."
       }]
     },
     {
@@ -182,9 +191,19 @@ Mapping des éléments du modèle métier FRLMSupportingInformation vers la sect
     },
     {
       "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
+      "display" : "FRLMObservation",
       "target" : [{
         "code" : "Composition.section.entry",
         "display" : "Observation",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMSupportingInformation.entry.historyOfPastIllness",
+      "display" : "FRLMCondition",
+      "target" : [{
+        "code" : "Composition.section.entry",
+        "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     },

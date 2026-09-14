@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSupportingInf
   "name" : "FRLMSupportingInformation",
   "title" : "Logical model - FR LM Supporting Information",
   "status" : "draft",
-  "date" : "2026-09-04T14:19:44+00:00",
+  "date" : "2026-09-14T09:04:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -97,23 +97,26 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSupportingInf
       }]
     },
     {
-      "id" : "FRLMSupportingInformation.entry.historyOfPastIllness",
-      "path" : "FRLMSupportingInformation.entry.historyOfPastIllness",
-      "short" : "Observation",
-      "definition" : "Observation",
-      "min" : 1,
-      "max" : "1",
+      "id" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
+      "path" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
+      "short" : "Antécédents médicaux",
+      "definition" : "Antécédents médicaux",
+      "min" : 0,
+      "max" : "*",
       "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
+      },
+      {
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
     },
     {
       "id" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
       "path" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
-      "short" : "Observation",
-      "definition" : "Observation",
-      "min" : 1,
-      "max" : "1",
+      "short" : "Antécédents chirurgicaux",
+      "definition" : "Antécédents chirurgicaux",
+      "min" : 0,
+      "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]
@@ -121,10 +124,10 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSupportingInf
     {
       "id" : "FRLMSupportingInformation.entry.contraIndication",
       "path" : "FRLMSupportingInformation.entry.contraIndication",
-      "short" : "Observation",
-      "definition" : "Observation",
+      "short" : "Contre-indications",
+      "definition" : "Contre-indications",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
       }]

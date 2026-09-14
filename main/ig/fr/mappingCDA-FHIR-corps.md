@@ -220,8 +220,12 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMSupportingInformation.description | Section.text | Composition.section.text |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
@@ -1044,8 +1048,12 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMSupportingInformation.description | Section.text | Composition.section.text |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
 | FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
 | FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
