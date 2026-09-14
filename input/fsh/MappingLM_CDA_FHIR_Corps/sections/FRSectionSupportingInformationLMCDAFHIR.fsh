@@ -34,9 +34,15 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[=].target.comment = "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.previousResultsInformation."
 // antécédents médicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
+* group[=].element[=].display = "FRLMObservation"
 * group[=].element[=].target.code = #Section.entry.observation
 * group[=].element[=].target.display = "FRCDASimpleObservation"
 * group[=].element[=].target.equivalence = #equivalent
+// antécédents médicaux
+* group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
+* group[=].element[=].display = "FRLMCondition"
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.historyOfPastIllnessFRLMCondition."
 // antécédents chirurgicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastProcedures
 * group[=].element[=].target.code = #Section.entry.observation
@@ -94,10 +100,17 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 * group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.display = "Observation"
 * group[=].element[=].target.equivalence = #equivalent
-// antécédents médicaux
+// antécédents médicaux (observation)
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
+* group[=].element[=].display = "FRLMObservation"
 * group[=].element[=].target.code = #Composition.section.entry
 * group[=].element[=].target.display = "Observation"
+* group[=].element[=].target.equivalence = #equivalent
+// antécédents médicaux (condition)
+* group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastIllness
+* group[=].element[=].display = "FRLMCondition"
+* group[=].element[=].target.code = #Composition.section.entry
+* group[=].element[=].target.display = "FRConditionDocument"
 * group[=].element[=].target.equivalence = #equivalent
 // antécédents chirurgicaux
 * group[=].element[+].code = #FRLMSupportingInformation.entry.historyOfPastProcedures
