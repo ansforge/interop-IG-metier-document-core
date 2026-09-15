@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationP
   "name" : "FRLMMedicationPrescription",
   "title" : "Logical model - FR LM FR LM Medication Prescription",
   "status" : "draft",
-  "date" : "2026-09-15T10:02:45+00:00",
+  "date" : "2026-09-15T11:02:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
