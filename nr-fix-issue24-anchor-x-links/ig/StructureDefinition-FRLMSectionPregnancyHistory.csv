@@ -1,0 +1,29 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMSectionPregnancyHistory","FRLMSectionPregnancyHistory","","","",0,*,"","","","null {[]} {[]}
+","Logical model  - FR LM Pregnancy History","Section Historique des grossesses","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMSectionPregnancyHistory.codeSection","FRLMSectionPregnancyHistory.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMSectionPregnancyHistory.titleSection","FRLMSectionPregnancyHistory.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMSectionPregnancyHistory.description","FRLMSectionPregnancyHistory.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMSectionPregnancyHistory.author[x]","FRLMSectionPregnancyHistory.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMSectionPregnancyHistory.author[x].authorProfessional","FRLMSectionPregnancyHistory.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMSectionPregnancyHistory.author[x].authorOrganisation","FRLMSectionPregnancyHistory.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMSectionPregnancyHistory.author[x].authorDevice","FRLMSectionPregnancyHistory.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMSectionPregnancyHistory.informant","FRLMSectionPregnancyHistory.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMSectionPregnancyHistory.subSection","FRLMSectionPregnancyHistory.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMSectionPregnancyHistory.entry","FRLMSectionPregnancyHistory.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMSectionPregnancyHistory.entry.pregnancyStatus","FRLMSectionPregnancyHistory.entry.pregnancyStatus","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyStatus {[]} {[]}
+","Statut de grossesse","Statut de grossesse","","","","","","","","","",,,,,"",,,,"FRLMSectionPregnancyHistory.entry.pregnancyStatus",0,1,"",""
+"FRLMSectionPregnancyHistory.entry.pregnancyHistory","FRLMSectionPregnancyHistory.entry.pregnancyHistory","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyHistory {[]} {[]}
+","Historique des grossesses. Exemple : nb d'enfants nés vivants, etc…","Historique des grossesses. Exemple : nb d'enfants nés vivants, etc…","","","","","","","","","",,,,,"",,,,"FRLMSectionPregnancyHistory.entry.pregnancyHistory",0,*,"",""
+"FRLMSectionPregnancyHistory.note","FRLMSectionPregnancyHistory.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMSectionPregnancyHistory.note",0,1,"",""

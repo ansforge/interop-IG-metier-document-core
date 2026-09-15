@@ -1,0 +1,33 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMExaminationReport","FRLMExaminationReport","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Examination Report","Section Acte d'imagerie","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMExaminationReport.codeSection","FRLMExaminationReport.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMExaminationReport.titleSection","FRLMExaminationReport.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMExaminationReport.description","FRLMExaminationReport.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMExaminationReport.author[x]","FRLMExaminationReport.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMExaminationReport.author[x].authorProfessional","FRLMExaminationReport.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMExaminationReport.author[x].authorOrganisation","FRLMExaminationReport.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMExaminationReport.author[x].authorDevice","FRLMExaminationReport.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMExaminationReport.informant","FRLMExaminationReport.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMExaminationReport.subSection","FRLMExaminationReport.subSection","","","",0,*,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMExaminationReport.subSection.conclusion","FRLMExaminationReport.subSection.conclusion","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConclusion {[]} {[]}
+","Conclusion de l'examen","Conclusion de l'examen","","","","","","","","","",,,,,"",,,,"FRLMExaminationReport.subSection.conclusion",0,1,"",""
+"FRLMExaminationReport.entry","FRLMExaminationReport.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMExaminationReport.entry.imagingProcedures","FRLMExaminationReport.entry.imagingProcedures","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProcedure {[]} {[]}
+","Entrée Techniques d'imagerie","Entrée Techniques d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMExaminationReport.entry.imagingProcedures",1,1,"",""
+"FRLMExaminationReport.entry.medicationAdministrations","FRLMExaminationReport.entry.medicationAdministrations","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}
+","Entrée Produits de santé administrés pendant l'acte d'imagerie","Entrée Produits de santé administrés pendant l'acte d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMExaminationReport.entry.medicationAdministrations",0,*,"",""
+"FRLMExaminationReport.entry.adverseReactions","FRLMExaminationReport.entry.adverseReactions","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergyIntolerance {[]} {[]}
+","Entrée allergies et intolérances","Entrée allergies et intolérances","","","","","","","","","",,,,,"",,,,"FRLMExaminationReport.entry.adverseReactions",0,*,"",""
+"FRLMExaminationReport.entry.results[x]","FRLMExaminationReport.entry.results[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+string {[]} {[]}","Résultats d'examens","Résultats d'examens","","","","","","","","","",,,,,"",,,,"FRLMExaminationReport.entry.results[x]",0,*,"",""
