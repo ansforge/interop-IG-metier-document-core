@@ -7,7 +7,7 @@ Traitement
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-FRLMAdverseDrugReaction.md), [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md), [Logical model - FR LM Exposure Information](StructureDefinition-FRLMExposureInformation.md)... Show 5 more, [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-FRLMHospitalDischargeMedications.md), [Logical model - FR LM Laboratory Supporting Information](StructureDefinition-FRLMLaboratorySupportingInformation.md), [Logical model - FR LM Medication Summary](StructureDefinition-FRLMMedicationSummary.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md) and [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md)
+* Utilise ce/t/te Modèle logique: [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-FRLMAdverseDrugReaction.md), [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md), [Logical model - FR LM Exposure Information](StructureDefinition-FRLMExposureInformation.md)... Show 5 more, [Logical model - FR LM Hospital Discharge Medications](StructureDefinition-FRLMHospitalDischargeMedications.md), [Logical model - FR LM Medication Summary](StructureDefinition-FRLMMedicationSummary.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md), [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md) and [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMMedicationAdministration)
 
@@ -61,7 +61,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationA
   "name" : "FRLMMedicationAdministration",
   "title" : "Logical model- FR LM Medication Administration\t",
   "status" : "draft",
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -14,7 +14,7 @@
   "name" : "FRLogicalModelDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -1536,30 +1536,13 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMImagingSupportingInformation.html"
+        "valueUri" : "StructureDefinition-FRLMSupportingInformation.html"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/FRLMImagingSupportingInformation"
+        "reference" : "StructureDefinition/FRLMSupportingInformation"
       },
-      "name" : "Logical model - FR LM Imaging Supporting Information",
+      "name" : "Logical model - FR LM Supporting Information",
       "description" : "Section Informations Cliniques",
-      "exampleBoolean" : false,
-      "groupingId" : "metier-sections"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMLaboratorySupportingInformation.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/FRLMLaboratorySupportingInformation"
-      },
-      "name" : "Logical model - FR LM Laboratory Supporting Information",
-      "description" : "Section Informations Cliniques pour les examens de biologie médicale",
       "exampleBoolean" : false,
       "groupingId" : "metier-sections"
     },
@@ -3003,8 +2986,8 @@
       "reference" : {
         "reference" : "ConceptMap/FRSectionImagingSupportingInformationLMCDAFHIR"
       },
-      "name" : "Mapping FRLMImagingSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMImagingSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMImagingSupportingInformation → FRDiagnosticReportImagingDocument",
-      "description" : "Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument.",
+      "name" : "Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument",
+      "description" : "Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping biologie) vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument, pour le contexte imagerie.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-sections"
     },
@@ -3020,8 +3003,8 @@
       "reference" : {
         "reference" : "ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR"
       },
-      "name" : "Mapping FRLMLaboratorySupportingInformation → FRCDASectionInformationsCliniques / FRLMLaboratorySupportingInformation → FRServiceRequestDocument.supportingInformation",
-      "description" : "Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn).",
+      "name" : "Mapping FRLMSupportingInformation → FRServiceRequestDocument.supportingInformation",
+      "description" : "Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie.",
       "exampleBoolean" : false,
       "groupingId" : "mapping-sections"
     },

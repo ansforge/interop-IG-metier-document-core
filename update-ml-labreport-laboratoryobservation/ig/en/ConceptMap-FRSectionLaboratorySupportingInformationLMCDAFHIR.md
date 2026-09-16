@@ -1,9 +1,9 @@
-# Mapping FRLMLaboratorySupportingInformation → FRCDASectionInformationsCliniques / FRLMLaboratorySupportingInformation → FRServiceRequestDocument.supportingInformation - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMSupportingInformation → FRServiceRequestDocument.supportingInformation - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMLaboratorySupportingInformation → FRCDASectionInformationsCliniques / FRLMLaboratorySupportingInformation → FRServiceRequestDocument.supportingInformation 
+## ConceptMap: Mapping FRLMSupportingInformation → FRServiceRequestDocument.supportingInformation 
 
  
-Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn). 
+Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie. 
 
 
 
@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation ve
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques (biologie)",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -28,7 +28,7 @@ Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation ve
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn).",
+  "description" : "Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -37,117 +37,49 @@ Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation ve
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
     "sourceVersion" : "0.1.0",
-    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-informations-cliniques",
     "element" : [{
-      "code" : "FRLMLaboratorySupportingInformation",
-      "target" : [{
-        "code" : "Section",
-        "display" : "FRCDASectionInformationsCliniques",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.codeSection",
-      "target" : [{
-        "code" : "Section.code",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.titleSection",
-      "target" : [{
-        "code" : "Section.title",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.description",
-      "target" : [{
-        "code" : "Section.text",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.observation",
-      "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDASimpleObservation",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.condition",
-      "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDAProbleme",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.medicationAdministration",
-      "target" : [{
-        "code" : "Section.entry.substanceAdministration",
-        "display" : "FRCDATraitement",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.sexForClinicalUse",
+      "code" : "FRLMSupportingInformation",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée relève du contexte patient."
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.vaccination",
-      "target" : [{
-        "code" : "Section.entry.substanceAdministration",
-        "display" : "FRCDAVaccination",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMLaboratorySupportingInformation.entry.otherSupportingInformation",
-      "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.otherSupportingInformation ; la ressource référencée n'est pas typée."
+        "comment" : "Aucun équivalent CDA identifié."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-service-request-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMLaboratorySupportingInformation",
+      "code" : "FRLMSupportingInformation",
       "target" : [{
-        "code" : "Composition.basedOn.serviceRequest.supportingInformation",
-        "display" : "FRServiceRequestDocument.supportingInformation",
+        "code" : "Composition.basedOn.serviceRequest.supportingInfo",
+        "display" : "FRServiceRequestDocument.supportingInfo",
         "equivalence" : "equivalent",
         "comment" : "ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section."
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.observation",
+      "code" : "FRLMSupportingInformation.entry.observation",
       "target" : [{
-        "code" : "ServiceRequest.supportingInformation",
+        "code" : "ServiceRequest.supportingInfo",
         "display" : "Observation",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.condition",
+      "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
-        "code" : "ServiceRequest.supportingInformation",
+        "code" : "ServiceRequest.supportingInfo",
         "display" : "FRConditionDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.medicationAdministration",
+      "code" : "FRLMSupportingInformation.entry.medicationAdministration",
+      "display" : "FRLMMedicationAdministration",
       "target" : [{
         "code" : "ServiceRequest.supportingInformation",
         "display" : "FRMedicationAdministrationDocument",
@@ -155,24 +87,27 @@ Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation ve
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.sexForClinicalUse",
+      "code" : "FRLMSupportingInformation.entry.sexForClinicalUse",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible FHIR explicite identifiée pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient."
+        "comment" : "Aucune cible FHIR explicite identifiée pour FRLMSupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient."
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.vaccination",
+      "code" : "FRLMSupportingInformation.entry.vaccination",
+      "display" : "FRLMImmunisation",
       "target" : [{
-        "code" : "ServiceRequest.supportingInformation",
+        "code" : "ServiceRequest.supportingInfo",
         "display" : "FRImmunizationDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMLaboratorySupportingInformation.entry.otherSupportingInformation",
+      "code" : "FRLMSupportingInformation.entry.otherSupportingInformation",
+      "display" : "Resource",
       "target" : [{
-        "code" : "ServiceRequest.supportingInformation",
+        "code" : "ServiceRequest.supportingInfo",
+        "display" : "Reference(Resource)",
         "equivalence" : "equivalent",
         "comment" : "supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation."
       }]

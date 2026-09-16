@@ -766,10 +766,8 @@ Binding Description: (preferred): e.g. TNM, ICD-O-3, Bi-Rads, Li-Rads, …","","
 ","Section Examen comparatif","Section Examen comparatif","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.comparisonStudy",0,*,"",""
 "FRLMCorpsDocument","FRLMCorpsDocument.exposureInformation","FRLMCorpsDocument.exposureInformation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMExposureInformation {[]} {[]}
 ","Section Exposition aux radiations","Section Exposition aux radiations","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.exposureInformation",0,*,"",""
-"FRLMCorpsDocument","FRLMCorpsDocument.imagingSupportingInformation","FRLMCorpsDocument.imagingSupportingInformation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingSupportingInformation {[]} {[]}
-","Section Informations cliniques (imagerie)","Section Informations cliniques (imagerie)","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.imagingSupportingInformation",0,*,"",""
-"FRLMCorpsDocument","FRLMCorpsDocument.laboratorySupportingInformation","FRLMCorpsDocument.laboratorySupportingInformation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation {[]} {[]}
-","Section Informations cliniques (biologie)","Section Informations cliniques (biologie)","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.laboratorySupportingInformation",0,*,"",""
+"FRLMCorpsDocument","FRLMCorpsDocument.supportingInformation","FRLMCorpsDocument.supportingInformation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation {[]} {[]}
+","Section Informations cliniques","Section Informations cliniques","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.supportingInformation",0,*,"",""
 "FRLMCorpsDocument","FRLMCorpsDocument.dicomStudyMetadata","FRLMCorpsDocument.dicomStudyMetadata","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDicomStudyMetadata {[]} {[]}
 ","Section object catalog","Section object catalog","","","","","","","","","",,,,,"",,,,"FRLMCorpsDocument.dicomStudyMetadata",0,*,"",""
 "FRLMCorpsDocument","FRLMCorpsDocument.recommendation","FRLMCorpsDocument.recommendation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRecommendation {[]} {[]}
@@ -1726,46 +1724,6 @@ La partie en majuscules indique le code pays (ISO-3166)","","","","","","","",""
 ","Endpoint de l'examen d'imagerie","Endpoint de l'examen d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.studyEndpoint",0,*,"",""
 "FRLMImagingStudy","FRLMImagingStudy.series","FRLMImagingStudy.series","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSeries {[]} {[]}
 ","Séries d'actes d'imagerie composant l'examen","Séries d'actes d'imagerie composant l'examen","","","","","","","","","",,,,,"",,,,"FRLMImagingStudy.series",1,1,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation","FRLMImagingSupportingInformation","","","",0,*,"","","","null {[]} {[]}
-","Logical model - FR LM Imaging Supporting Information","Section Informations Cliniques","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.codeSection","FRLMImagingSupportingInformation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.titleSection","FRLMImagingSupportingInformation.titleSection","","","",1,1,"","","","string {[]} {[]}
-","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.description","FRLMImagingSupportingInformation.description","","","",1,1,"","","","string {[]} {[]}
-","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.author[x]","FRLMImagingSupportingInformation.author[x]","","","",0,*,"","","","Base {[]} {[]}
-","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.author[x].authorProfessional","FRLMImagingSupportingInformation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
-","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.author[x].authorOrganisation","FRLMImagingSupportingInformation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
-","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.author[x].authorDevice","FRLMImagingSupportingInformation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
-","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.informant","FRLMImagingSupportingInformation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
-","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.subSection","FRLMImagingSupportingInformation.subSection","","","",0,0,"","","","Base {[]} {[]}
-","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry","FRLMImagingSupportingInformation.entry","","","",1,*,"","","","Base {[]} {[]}
-","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.previousResultsInformation","FRLMImagingSupportingInformation.entry.previousResultsInformation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
-","Résultats d'examens antérieurs pertinents","Résultats d'examens antérieurs pertinents","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.previousResultsInformation",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.historyOfPastIllness[x]","FRLMImagingSupportingInformation.entry.historyOfPastIllness[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
-https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}","Antécédents médicaux","Antécédents médicaux","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.historyOfPastIllness[x]",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.historyOfPastProcedures","FRLMImagingSupportingInformation.entry.historyOfPastProcedures","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
-","Antécédents chirurgicaux","Antécédents chirurgicaux","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.historyOfPastProcedures",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.contraIndication","FRLMImagingSupportingInformation.entry.contraIndication","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
-","Contre-indications","Contre-indications","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.contraIndication",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.condition","FRLMImagingSupportingInformation.entry.condition","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
-","Problème","Problème","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.condition",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.device","FRLMImagingSupportingInformation.entry.device","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse {[]} {[]}
-","Dispositif médical","Dispositif médical","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.device",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.pregnancyStatus","FRLMImagingSupportingInformation.entry.pregnancyStatus","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation {[]} {[]}
-","Statut grossesse","Statut grossesse","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.pregnancyStatus",0,1,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.priorMedicationAdministration","FRLMImagingSupportingInformation.entry.priorMedicationAdministration","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDICOMMedicationAdministration {[]} {[]}
-","Produits de santé administré avant l'examen d'imagerie","Produits de santé administré avant l'examen d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.priorMedicationAdministration",0,*,"",""
-"FRLMImagingSupportingInformation","FRLMImagingSupportingInformation.entry.sexForClinicalUse","FRLMImagingSupportingInformation.entry.sexForClinicalUse","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Sexe Clinique","Sexe Clinique","","","","","","","","","",,,,,"",,,,"FRLMImagingSupportingInformation.entry.sexForClinicalUse",0,1,"",""
 "FRLMImmunisation","FRLMImmunisation","FRLMImmunisation","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Immunisation","Vaccination","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "FRLMImmunisation","FRLMImmunisation.header","FRLMImmunisation.header","","","",1,1,"","","","Base {[]} {[]}
@@ -1993,40 +1951,6 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservat
 ","Résultats précédents de la même observation","Résultats précédents de la même observation","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.previousResults",0,*,"",""
 "FRLMLaboratoryObservation","FRLMLaboratoryObservation.pointOfCareTest","FRLMLaboratoryObservation.pointOfCareTest","","","",0,1,"","","","boolean {[]} {[]}
 ","Indique si l'observation est un test de point de soins ou non.","Indique si l'observation est un test de point de soins ou non.","","","","","","","","","",,,,,"",,,,"FRLMLaboratoryObservation.pointOfCareTest",0,1,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation","","","",0,*,"","","","null {[]} {[]}
-","Logical model - FR LM Laboratory Supporting Information","Section Informations Cliniques pour les examens de biologie médicale","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.codeSection","FRLMLaboratorySupportingInformation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.titleSection","FRLMLaboratorySupportingInformation.titleSection","","","",1,1,"","","","string {[]} {[]}
-","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.description","FRLMLaboratorySupportingInformation.description","","","",1,1,"","","","string {[]} {[]}
-","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.author[x]","FRLMLaboratorySupportingInformation.author[x]","","","",0,*,"","","","Base {[]} {[]}
-","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.author[x].authorProfessional","FRLMLaboratorySupportingInformation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
-","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.author[x].authorOrganisation","FRLMLaboratorySupportingInformation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
-","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.author[x].authorDevice","FRLMLaboratorySupportingInformation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
-","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.informant","FRLMLaboratorySupportingInformation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
-","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.subSection","FRLMLaboratorySupportingInformation.subSection","","","",0,0,"","","","Base {[]} {[]}
-","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry","FRLMLaboratorySupportingInformation.entry","","","",1,*,"","","","Base {[]} {[]}
-","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.observation","FRLMLaboratorySupportingInformation.entry.observation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
-","Résultats cliniques et autres observations","Résultats cliniques et autres observations","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.observation",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.condition","FRLMLaboratorySupportingInformation.entry.condition","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
-","Problèmes","Problèmes","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.condition",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.medicationAdministration","FRLMLaboratorySupportingInformation.entry.medicationAdministration","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}
-","Produits de santé administré avant l'examen de biologie","Produits de santé administré avant l'examen de biologie","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.medicationAdministration",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.sexForClinicalUse","FRLMLaboratorySupportingInformation.entry.sexForClinicalUse","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","Sexe Clinique","Sexe Clinique","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.sexForClinicalUse",0,1,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.vaccination","FRLMLaboratorySupportingInformation.entry.vaccination","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation {[]} {[]}
-","Historique vaccinal du patient","Historique vaccinal du patient","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.vaccination",0,*,"",""
-"FRLMLaboratorySupportingInformation","FRLMLaboratorySupportingInformation.entry.otherSupportingInformation","FRLMLaboratorySupportingInformation.entry.otherSupportingInformation","","","",0,*,"","","","Resource {[]} {[]}
-","Autres informations cliniques pertinentes","Autres informations cliniques pertinentes","","","","","","","","","",,,,,"",,,,"FRLMLaboratorySupportingInformation.entry.otherSupportingInformation",0,*,"",""
 "FRLMLegalAuthentication","FRLMLegalAuthentication","FRLMLegalAuthentication","","","",1,1,"","","","null {[]} {[]}
 ","Logical model - FR LM Legal Authentication","Représente le responsable du document, qui est : 
  - soit le professionnel qui prend la responsabilité du document produit par un lui-même ou un autre professionnel. 
@@ -4194,6 +4118,44 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {
 ","État de l'échantillon","État de l'échantillon","","","","","","","","","",,"preferred","(preferred): HL7 specimenCondition","","",,,,"FRLMSpecimen.condition",0,*,"",""
 "FRLMSpecimen","FRLMSpecimen.note","FRLMSpecimen.note","","","",0,1,"","","","string {[]} {[]}
 ","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMSpecimen.note",0,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation","FRLMSupportingInformation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Supporting Information","Section Informations Cliniques","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.codeSection","FRLMSupportingInformation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.titleSection","FRLMSupportingInformation.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.description","FRLMSupportingInformation.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.author[x]","FRLMSupportingInformation.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.author[x].authorProfessional","FRLMSupportingInformation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.author[x].authorOrganisation","FRLMSupportingInformation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.author[x].authorDevice","FRLMSupportingInformation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.informant","FRLMSupportingInformation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.subSection","FRLMSupportingInformation.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry","FRLMSupportingInformation.entry","","","",1,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.observation","FRLMSupportingInformation.entry.observation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation {[]} {[]}
+","Observation (résultat d'examen antérieur, antécédent médical ou chirurgical, contre-indication et autre observation)","Observation (résultat d'examen antérieur, antécédent médical ou chirurgical, contre-indication et autre observation)","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.observation",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.condition","FRLMSupportingInformation.entry.condition","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+","Problème (antécédent médical, problème de santé, etc.)","Problème (antécédent médical, problème de santé, etc.)","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.condition",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.device","FRLMSupportingInformation.entry.device","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDeviceUse {[]} {[]}
+","Dispositif médical","Dispositif médical","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.device",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.pregnancyStatus","FRLMSupportingInformation.entry.pregnancyStatus","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPregnancyObservation {[]} {[]}
+","Statut grossesse","Statut grossesse","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.pregnancyStatus",0,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.medicationAdministration[x]","FRLMSupportingInformation.entry.medicationAdministration[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDICOMMedicationAdministration {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration {[]} {[]}","Produits de santé administré avant l'examen de biologie ou d'imagerie","Produits de santé administré avant l'examen de biologie ou d'imagerie","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.medicationAdministration[x]",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.sexForClinicalUse","FRLMSupportingInformation.entry.sexForClinicalUse","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Sexe Clinique","Sexe Clinique","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.sexForClinicalUse",0,1,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.vaccination","FRLMSupportingInformation.entry.vaccination","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation {[]} {[]}
+","Historique vaccinal du patient","Historique vaccinal du patient","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.vaccination",0,*,"",""
+"FRLMSupportingInformation","FRLMSupportingInformation.entry.otherSupportingInformation","FRLMSupportingInformation.entry.otherSupportingInformation","","","",0,*,"","","","Resource {[]} {[]}
+","Autres informations cliniques pertinentes","Autres informations cliniques pertinentes","","","","","","","","","",,,,,"",,,,"FRLMSupportingInformation.entry.otherSupportingInformation",0,*,"",""
 "FRLMTransfusionAccidents","FRLMTransfusionAccidents","FRLMTransfusionAccidents","","","",0,*,"","","","null {[]} {[]}
 ","Logical model - FR LM Transfusion accidents","Accidents transfusionnels","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "FRLMTransfusionAccidents","FRLMTransfusionAccidents.header","FRLMTransfusionAccidents.header","","","",1,1,"","","","Base {[]} {[]}

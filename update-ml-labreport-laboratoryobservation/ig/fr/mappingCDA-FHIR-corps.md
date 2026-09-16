@@ -96,48 +96,26 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMImagingSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
-| **FRLMImagingSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
-| FRLMImagingSupportingInformation.codeSection | Section.code | Composition.section.code |
-| FRLMImagingSupportingInformation.titleSection | Section.title | Composition.section.title |
-| FRLMImagingSupportingInformation.description | Section.text | Composition.section.text |
-| FRLMImagingSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMImagingSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMImagingSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.device |  |  |
-| FRLMImagingSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMImagingSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMImagingSupportingInformation.entry.sexForClinicalUse |  |  |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
+| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
+| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
+| FRLMSupportingInformation.description | Section.text | Composition.section.text |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | DiagnosticReport.extension:historiqueMedical (Observation or FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument) |
+| FRLMSupportingInformation.entry.condition (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical (FRConditionDocument) |
+| FRLMSupportingInformation.entry.device |  | Composition.section.entry (FRDeviceUseStatementDocument) |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical (Device) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | Composition.section.entry (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | DiagnosticReport.extension:historiqueMedical (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
 | FRLMImmunisations.entry.immunisation | Section.entry (FRCDAVaccination) | Composition.section.entry (FRImmunizationDocument) |
-| **FRLMLaboratorySupportingInformation** | **FRCDASectionInformationsCliniques** | **FRServiceRequestDocument.supportingInformation** |
-| FRLMLaboratorySupportingInformation.codeSection | Section.code |  |
-| FRLMLaboratorySupportingInformation.titleSection | Section.title |  |
-| FRLMLaboratorySupportingInformation.description | Section.text |  |
-| FRLMLaboratorySupportingInformation.entry.observation | Section.entry.observation (FRCDASimpleObservation) | ServiceRequest.supportingInformation (Observation) |
-| FRLMLaboratorySupportingInformation.entry.condition | Section.entry.observation (FRCDAProbleme) | ServiceRequest.supportingInformation (FRConditionDocument) |
-| FRLMLaboratorySupportingInformation.entry.medicationAdministration | Section.entry.substanceAdministration (FRCDATraitement) | ServiceRequest.supportingInformation (FRMedicationAdministrationDocument) |
-| FRLMLaboratorySupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMLaboratorySupportingInformation.entry.vaccination | Section.entry.substanceAdministration (FRCDAVaccination) | ServiceRequest.supportingInformation (FRImmunizationDocument) |
-| FRLMLaboratorySupportingInformation.entry.otherSupportingInformation |  | ServiceRequest.supportingInformation |
 | **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |
@@ -946,48 +924,26 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
-| **FRLMImagingSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
-| **FRLMImagingSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
-| FRLMImagingSupportingInformation.codeSection | Section.code | Composition.section.code |
-| FRLMImagingSupportingInformation.titleSection | Section.title | Composition.section.title |
-| FRLMImagingSupportingInformation.description | Section.text | Composition.section.text |
-| FRLMImagingSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMImagingSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMImagingSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMImagingSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMImagingSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.device |  |  |
-| FRLMImagingSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMImagingSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMImagingSupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMImagingSupportingInformation.entry.sexForClinicalUse |  |  |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
+| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
+| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
+| FRLMSupportingInformation.description | Section.text | Composition.section.text |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | DiagnosticReport.extension:historiqueMedical (Observation or FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument) |
+| FRLMSupportingInformation.entry.condition (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical (FRConditionDocument) |
+| FRLMSupportingInformation.entry.device |  | Composition.section.entry (FRDeviceUseStatementDocument) |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical (Device) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | Composition.section.entry (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | DiagnosticReport.extension:historiqueMedical (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
 | FRLMImmunisations.entry.immunisation | Section.entry (FRCDAVaccination) | Composition.section.entry (FRImmunizationDocument) |
-| **FRLMLaboratorySupportingInformation** | **FRCDASectionInformationsCliniques** | **FRServiceRequestDocument.supportingInformation** |
-| FRLMLaboratorySupportingInformation.codeSection | Section.code |  |
-| FRLMLaboratorySupportingInformation.titleSection | Section.title |  |
-| FRLMLaboratorySupportingInformation.description | Section.text |  |
-| FRLMLaboratorySupportingInformation.entry.observation | Section.entry.observation (FRCDASimpleObservation) | ServiceRequest.supportingInformation (Observation) |
-| FRLMLaboratorySupportingInformation.entry.condition | Section.entry.observation (FRCDAProbleme) | ServiceRequest.supportingInformation (FRConditionDocument) |
-| FRLMLaboratorySupportingInformation.entry.medicationAdministration | Section.entry.substanceAdministration (FRCDATraitement) | ServiceRequest.supportingInformation (FRMedicationAdministrationDocument) |
-| FRLMLaboratorySupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMLaboratorySupportingInformation.entry.vaccination | Section.entry.substanceAdministration (FRCDAVaccination) | ServiceRequest.supportingInformation (FRImmunizationDocument) |
-| FRLMLaboratorySupportingInformation.entry.otherSupportingInformation |  | ServiceRequest.supportingInformation |
 | **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |

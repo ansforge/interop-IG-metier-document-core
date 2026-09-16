@@ -53,7 +53,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMCorpsDocume
   "name" : "FRLMCorpsDocument",
   "title" : "Logical model - FR LM Corps document",
   "status" : "draft",
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -436,25 +436,14 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMCorpsDocume
       }]
     },
     {
-      "id" : "FRLMCorpsDocument.imagingSupportingInformation",
-      "path" : "FRLMCorpsDocument.imagingSupportingInformation",
-      "short" : "Section Informations cliniques (imagerie)",
-      "definition" : "Section Informations cliniques (imagerie)",
+      "id" : "FRLMCorpsDocument.supportingInformation",
+      "path" : "FRLMCorpsDocument.supportingInformation",
+      "short" : "Section Informations cliniques",
+      "definition" : "Section Informations cliniques",
       "min" : 0,
       "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingSupportingInformation"
-      }]
-    },
-    {
-      "id" : "FRLMCorpsDocument.laboratorySupportingInformation",
-      "path" : "FRLMCorpsDocument.laboratorySupportingInformation",
-      "short" : "Section Informations cliniques (biologie)",
-      "definition" : "Section Informations cliniques (biologie)",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation"
       }]
     },
     {

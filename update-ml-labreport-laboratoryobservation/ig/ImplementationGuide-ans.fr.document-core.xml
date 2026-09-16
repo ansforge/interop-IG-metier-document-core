@@ -13,7 +13,7 @@
   <name value="FRLogicalModelDocumentCore"/>
   <title value="FR Document Core (Modèle métier)"/>
   <status value="draft"/>
-  <date value="2026-09-14T13:28:49+00:00"/>
+  <date value="2026-09-16T13:00:57+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -1117,22 +1117,10 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FRLMImagingSupportingInformation"/>
+        <reference value="StructureDefinition/FRLMSupportingInformation"/>
       </reference>
-      <name value="Logical model - FR LM Imaging Supporting Information"/>
+      <name value="Logical model - FR LM Supporting Information"/>
       <description value="Section Informations Cliniques"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FRLMLaboratorySupportingInformation"/>
-      </reference>
-      <name value="Logical model - FR LM Laboratory Supporting Information"/>
-      <description value="Section Informations Cliniques pour les examens de biologie médicale"/>
       <exampleBoolean value="false"/>
       <groupingId value="metier-sections"/>
     </resource>
@@ -2151,8 +2139,8 @@
       <reference>
         <reference value="ConceptMap/FRSectionImagingSupportingInformationLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMImagingSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMImagingSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMImagingSupportingInformation → FRDiagnosticReportImagingDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument."/>
+      <name value="Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping biologie) vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument, pour le contexte imagerie."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2163,8 +2151,8 @@
       <reference>
         <reference value="ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMLaboratorySupportingInformation → FRCDASectionInformationsCliniques / FRLMLaboratorySupportingInformation → FRServiceRequestDocument.supportingInformation"/>
-      <description value="Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn)."/>
+      <name value="Mapping FRLMSupportingInformation → FRServiceRequestDocument.supportingInformation"/>
+      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>

@@ -4,7 +4,7 @@
   <id value="FRSectionLaboratorySupportingInformationLMCDAFHIR"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionLaboratorySupportingInformationLMCDAFHIR</b></p><a name="en-FRSectionLaboratorySupportingInformationLMCDAFHIR"> </a><a name="en-hcFRSectionLaboratorySupportingInformationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-FRLMLaboratorySupportingInformation.html">Logical model - FR LM Laboratory Supporting Informationversion: 0.1.0)</a> to <code>https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-informations-cliniques</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMLaboratorySupportingInformation (Logical model - FR LM Laboratory Supporting Information)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section (FRCDASectionInformationsCliniques)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.codeSection (Code de la section)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.code</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.titleSection (Titre de la section)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.title</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.description (Bloc narratif)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.text</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.observation (Résultats cliniques et autres observations)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.entry.observation (FRCDASimpleObservation)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.condition (Problèmes)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.entry.observation (FRCDAProbleme)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.medicationAdministration (Produits de santé administré avant l'examen de biologie)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.entry.substanceAdministration (FRCDATraitement)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.sexForClinicalUse (Sexe Clinique)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée relève du contexte patient.</td></tr><tr><td>FRLMLaboratorySupportingInformation.entry.vaccination (Historique vaccinal du patient)</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#concept-map-equivalence-equivalent" title="equivalent">is equivalent to</a></td><td>Section.entry.substanceAdministration (FRCDAVaccination)</td><td/></tr><tr><td>FRLMLaboratorySupportingInformation.entry.otherSupportingInformation (Autres informations cliniques pertinentes)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.otherSupportingInformation ; la ressource référencée n'est pas typée.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-FRLMLaboratorySupportingInformation.html">Logical model - FR LM Laboratory Supporting Information</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html">ServiceRequest - FR Service Request Document</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation">FRLMLaboratorySupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.basedOn.serviceRequest.supportingInformation</td><td>ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section.</td></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.observation">FRLMLaboratorySupportingInformation.entry.observation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.condition">FRLMLaboratorySupportingInformation.entry.condition</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.medicationAdministration">FRLMLaboratorySupportingInformation.entry.medicationAdministration</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.sexForClinicalUse">FRLMLaboratorySupportingInformation.entry.sexForClinicalUse</a></td><td>0..1</td><td>todo</td><td colspan="5" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune cible FHIR explicite identifiée pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient.</td></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.vaccination">FRLMLaboratorySupportingInformation.entry.vaccination</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href="StructureDefinition-FRLMLaboratorySupportingInformation.html#s-FRLMLaboratorySupportingInformation.entry.otherSupportingInformation">FRLMLaboratorySupportingInformation.entry.otherSupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td>supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation.</td></tr></table></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRSectionLaboratorySupportingInformationLMCDAFHIR</b></p><a name="en-FRSectionLaboratorySupportingInformationLMCDAFHIR"> </a><a name="en-hcFRSectionLaboratorySupportingInformationLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-FRLMSupportingInformation.html">Logical model - FR LM Supporting Informationversion: 0.1.0)</a> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMSupportingInformation (Logical model - FR LM Supporting Information)</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucun équivalent CDA identifié.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-FRLMSupportingInformation.html">Logical model - FR LM Supporting Information</a> to <a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html">ServiceRequest - FR Service Request Document</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>Comment</b></td></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation">FRLMSupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">Composition.basedOn.serviceRequest.supportingInfo</td><td>ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section.</td></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation.entry.observation">FRLMSupportingInformation.entry.observation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html#s-ServiceRequest.supportingInfo">ServiceRequest.supportingInfo</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation.entry.condition">FRLMSupportingInformation.entry.condition</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html#s-ServiceRequest.supportingInfo">ServiceRequest.supportingInfo</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td colspan="3">FRLMSupportingInformation.entry.medicationAdministration</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td colspan="3">ServiceRequest.supportingInformation</td><td/></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation.entry.sexForClinicalUse">FRLMSupportingInformation.entry.sexForClinicalUse</a></td><td>0..1</td><td>todo</td><td colspan="5" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">Aucune cible FHIR explicite identifiée pour FRLMSupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient.</td></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation.entry.vaccination">FRLMSupportingInformation.entry.vaccination</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html#s-ServiceRequest.supportingInfo">ServiceRequest.supportingInfo</a></td><td>0..*</td><td>todo</td><td/></tr><tr><td><a href="StructureDefinition-FRLMSupportingInformation.html#s-FRLMSupportingInformation.entry.otherSupportingInformation">FRLMSupportingInformation.entry.otherSupportingInformation</a></td><td>0..*</td><td>todo</td><td><a href="http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td><a href="https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-service-request-document.html#s-ServiceRequest.supportingInfo">ServiceRequest.supportingInfo</a></td><td>0..*</td><td>todo</td><td>supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation.</td></tr></table></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR"/>
   <version value="0.1.0"/>
@@ -12,7 +12,7 @@
   <title value="Mapping Métier/CDA/FHIR : Informations cliniques (biologie)"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2026-09-14T13:28:49+00:00"/>
+  <date value="2026-09-16T13:00:57+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -21,7 +21,7 @@
       <value value="https://esante.gouv.fr"/>
     </telecom>
   </contact>
-  <description value="Mapping des éléments du modèle métier FRLMLaboratorySupportingInformation vers la section CDA FRCDASectionInformationsCliniques, puis vers FRServiceRequestDocument.supportingInformation (référencé depuis Composition.basedOn)."/>
+  <description value="Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -30,117 +30,49 @@
     </coding>
   </jurisdiction>
   <group>
-    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation"/>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation"/>
     <sourceVersion value="0.1.0"/>
-    <target value="https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-section-informations-cliniques"/>
     <element>
-      <code value="FRLMLaboratorySupportingInformation"/>
-      <target>
-        <code value="Section"/>
-        <display value="FRCDASectionInformationsCliniques"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.codeSection"/>
-      <target>
-        <code value="Section.code"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.titleSection"/>
-      <target>
-        <code value="Section.title"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.description"/>
-      <target>
-        <code value="Section.text"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.observation"/>
-      <target>
-        <code value="Section.entry.observation"/>
-        <display value="FRCDASimpleObservation"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.condition"/>
-      <target>
-        <code value="Section.entry.observation"/>
-        <display value="FRCDAProbleme"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.medicationAdministration"/>
-      <target>
-        <code value="Section.entry.substanceAdministration"/>
-        <display value="FRCDATraitement"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.sexForClinicalUse"/>
+      <code value="FRLMSupportingInformation"/>
       <target>
         <equivalence value="unmatched"/>
-        <comment value="Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée relève du contexte patient."/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.vaccination"/>
-      <target>
-        <code value="Section.entry.substanceAdministration"/>
-        <display value="FRCDAVaccination"/>
-        <equivalence value="equivalent"/>
-      </target>
-    </element>
-    <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.otherSupportingInformation"/>
-      <target>
-        <equivalence value="unmatched"/>
-        <comment value="Aucune cible CDA explicite identifiée dans FRCDASectionInformationsCliniques pour FRLMLaboratorySupportingInformation.entry.otherSupportingInformation ; la ressource référencée n'est pas typée."/>
+        <comment value="Aucun équivalent CDA identifié."/>
       </target>
     </element>
   </group>
   <group>
-    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratorySupportingInformation"/>
+    <source value="https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation"/>
     <sourceVersion value="0.1.0"/>
     <target value="https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-service-request-document"/>
     <targetVersion value="0.1.0"/>
     <element>
-      <code value="FRLMLaboratorySupportingInformation"/>
+      <code value="FRLMSupportingInformation"/>
       <target>
-        <code value="Composition.basedOn.serviceRequest.supportingInformation"/>
-        <display value="FRServiceRequestDocument.supportingInformation"/>
+        <code value="Composition.basedOn.serviceRequest.supportingInfo"/>
+        <display value="FRServiceRequestDocument.supportingInfo"/>
         <equivalence value="equivalent"/>
         <comment value="ServiceRequest est référencé depuis Composition.extension:basedOn (cf. FROrderLMCDAFHIR / FRServiceRequestLMCDAFHIR) ; son supportingInformation porte le contenu de la section."/>
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.observation"/>
+      <code value="FRLMSupportingInformation.entry.observation"/>
       <target>
-        <code value="ServiceRequest.supportingInformation"/>
+        <code value="ServiceRequest.supportingInfo"/>
         <display value="Observation"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.condition"/>
+      <code value="FRLMSupportingInformation.entry.condition"/>
       <target>
-        <code value="ServiceRequest.supportingInformation"/>
+        <code value="ServiceRequest.supportingInfo"/>
         <display value="FRConditionDocument"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.medicationAdministration"/>
+      <code value="FRLMSupportingInformation.entry.medicationAdministration"/>
+      <display value="FRLMMedicationAdministration"/>
       <target>
         <code value="ServiceRequest.supportingInformation"/>
         <display value="FRMedicationAdministrationDocument"/>
@@ -148,24 +80,27 @@
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.sexForClinicalUse"/>
+      <code value="FRLMSupportingInformation.entry.sexForClinicalUse"/>
       <target>
         <equivalence value="unmatched"/>
-        <comment value="Aucune cible FHIR explicite identifiée pour FRLMLaboratorySupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient."/>
+        <comment value="Aucune cible FHIR explicite identifiée pour FRLMSupportingInformation.entry.sexForClinicalUse ; cette donnée existe dans le patient."/>
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.vaccination"/>
+      <code value="FRLMSupportingInformation.entry.vaccination"/>
+      <display value="FRLMImmunisation"/>
       <target>
-        <code value="ServiceRequest.supportingInformation"/>
+        <code value="ServiceRequest.supportingInfo"/>
         <display value="FRImmunizationDocument"/>
         <equivalence value="equivalent"/>
       </target>
     </element>
     <element>
-      <code value="FRLMLaboratorySupportingInformation.entry.otherSupportingInformation"/>
+      <code value="FRLMSupportingInformation.entry.otherSupportingInformation"/>
+      <display value="Resource"/>
       <target>
-        <code value="ServiceRequest.supportingInformation"/>
+        <code value="ServiceRequest.supportingInfo"/>
+        <display value="Reference(Resource)"/>
         <equivalence value="equivalent"/>
         <comment value="supportingInformation est une Reference générique dans ce profil, cohérente avec le type Reference(Resource) non typé de otherSupportingInformation."/>
       </target>

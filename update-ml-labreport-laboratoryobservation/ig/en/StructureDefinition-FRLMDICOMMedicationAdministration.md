@@ -7,7 +7,7 @@ Administration de produit de santé dans le contexte de l'imagerie médicale
 
 **Usages:**
 
-* Use this Logical Model: [Logical model - FR LM Imaging Supporting Information](StructureDefinition-FRLMImagingSupportingInformation.md)
+* Use this Logical Model: [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/ans.fr.document-core|current/StructureDefinition/StructureDefinition-FRLMDICOMMedicationAdministration.json)
 
@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDICOMMedicati
   "name" : "FRLMDICOMMedicationAdministration",
   "title" : "Logical model - FR LM DICOM Medication Administration",
   "status" : "draft",
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

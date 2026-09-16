@@ -1,9 +1,9 @@
-# Mapping FRLMImagingSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMImagingSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMImagingSupportingInformation → FRDiagnosticReportImagingDocument - FR Document Core (Modèle métier) v0.1.0
+# Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument - FR Document Core (Modèle métier) v0.1.0
 
-## ConceptMap: Mapping FRLMImagingSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMImagingSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMImagingSupportingInformation → FRDiagnosticReportImagingDocument 
+## ConceptMap: Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument 
 
  
-Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument. 
+Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping biologie) vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument, pour le contexte imagerie. 
 
 
 
@@ -19,7 +19,7 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
   "title" : "Mapping Métier/CDA/FHIR : Informations cliniques",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -28,7 +28,7 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument.",
+  "description" : "Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping biologie) vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument, pour le contexte imagerie.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -37,12 +37,12 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
     }]
   }],
   "group" : [{
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingSupportingInformation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-dicom-historique-medical",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMImagingSupportingInformation",
+      "code" : "FRLMSupportingInformation",
       "target" : [{
         "code" : "Section",
         "display" : "FRCDADICOMHistoriqueMedical",
@@ -50,110 +50,72 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.codeSection",
+      "code" : "FRLMSupportingInformation.codeSection",
       "target" : [{
         "code" : "Section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.titleSection",
+      "code" : "FRLMSupportingInformation.titleSection",
       "target" : [{
         "code" : "Section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.description",
+      "code" : "FRLMSupportingInformation.description",
       "target" : [{
         "code" : "Section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.previousResultsInformation",
-      "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.previousResultsInformation."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastIllness",
+      "code" : "FRLMSupportingInformation.entry.observation",
       "display" : "FRLMObservation",
       "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDASimpleObservation",
+        "code" : "Section.section.entry.observation",
+        "display" : "FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastIllness",
-      "display" : "FRLMCondition",
+      "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.historyOfPastIllnessFRLMCondition."
+        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.condition."
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastProcedures",
-      "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDASimpleObservation",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.pregnancyStatus",
-      "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDAObservationSurLaGrossesse",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.contraIndication",
-      "target" : [{
-        "code" : "Section.entry.observation",
-        "display" : "FRCDASimpleObservation",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.condition",
+      "code" : "FRLMSupportingInformation.entry.device",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.condition."
+        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.device."
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.device",
+      "code" : "FRLMSupportingInformation.entry.medicationAdministration",
+      "display" : "FRLMDICOMMedicationAdministration",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.device."
+        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.medicationAdministration."
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.priorMedicationAdministration",
+      "code" : "FRLMSupportingInformation.entry.sexForClinicalUse",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.priorMedicationAdministration."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.sexForClinicalUse",
-      "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMImagingSupportingInformation.entry.sexForClinicalUse."
+        "comment" : "Aucune cible CDA explicite identifieé dans FRCDADICOMHistoriqueMedical pour FRLMSupportingInformation.entry.sexForClinicalUse."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingSupportingInformation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-composition-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMImagingSupportingInformation",
+      "code" : "FRLMSupportingInformation",
       "target" : [{
         "code" : "Composition.section",
         "display" : "FRCompositionDocument.section:sectionHistory",
@@ -161,36 +123,28 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.codeSection",
+      "code" : "FRLMSupportingInformation.codeSection",
       "target" : [{
         "code" : "Composition.section.code",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.titleSection",
+      "code" : "FRLMSupportingInformation.titleSection",
       "target" : [{
         "code" : "Composition.section.title",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.description",
+      "code" : "FRLMSupportingInformation.description",
       "target" : [{
         "code" : "Composition.section.text",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.previousResultsInformation",
-      "target" : [{
-        "code" : "Composition.section.entry",
-        "display" : "Observation",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastIllness",
+      "code" : "FRLMSupportingInformation.entry.observation",
       "display" : "FRLMObservation",
       "target" : [{
         "code" : "Composition.section.entry",
@@ -199,7 +153,7 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastIllness",
+      "code" : "FRLMSupportingInformation.entry.condition",
       "display" : "FRLMCondition",
       "target" : [{
         "code" : "Composition.section.entry",
@@ -208,38 +162,15 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastProcedures",
+      "code" : "FRLMSupportingInformation.entry.device",
       "target" : [{
         "code" : "Composition.section.entry",
-        "display" : "Observation",
+        "display" : "FRDeviceUseStatementDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.contraIndication",
-      "target" : [{
-        "code" : "Composition.section.entry",
-        "display" : "FRObservationContraIndicationsDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.condition",
-      "target" : [{
-        "code" : "Composition.section.entry",
-        "display" : "FRConditionDocument",
-        "equivalence" : "equivalent"
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.device",
-      "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Aucune cible FHIR explicite identifieé dans FRCompositionDocument.section:sectionHistory pour FRLMImagingSupportingInformation.entry.device."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.pregnancyStatus",
+      "code" : "FRLMSupportingInformation.entry.pregnancyStatus",
       "target" : [{
         "code" : "Composition.section.entry",
         "display" : "FRObservationPregnancyDocument",
@@ -247,27 +178,29 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.priorMedicationAdministration",
+      "code" : "FRLMSupportingInformation.entry.medicationAdministration",
+      "display" : "FRLMDICOMMedicationAdministration",
       "target" : [{
-        "equivalence" : "unmatched",
-        "comment" : "Aucune cible FHIR explicite identifieé dans FRCompositionDocument.section:sectionHistory pour FRLMImagingSupportingInformation.entry.priorMedicationAdministration."
+        "code" : "Composition.section.entry",
+        "display" : "FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.sexForClinicalUse",
+      "code" : "FRLMSupportingInformation.entry.sexForClinicalUse",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible FHIR explicite identifieé dans FRCompositionDocument.section:sectionHistory pour FRLMImagingSupportingInformation.entry.sexForClinicalUse."
+        "comment" : "Aucune cible explicite identifiée pour FRLMSupportingInformation.entry.sexForClinicalUse. Cette donnée existe dans le patient."
       }]
     }]
   },
   {
-    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingSupportingInformation",
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSupportingInformation",
     "sourceVersion" : "0.1.0",
     "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-diagnostic-report-imaging-document",
     "targetVersion" : "0.1.0",
     "element" : [{
-      "code" : "FRLMImagingSupportingInformation",
+      "code" : "FRLMSupportingInformation",
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical",
         "display" : "FRDiagnosticReportImagingDocument.extension:historiqueMedical",
@@ -275,73 +208,45 @@ Mapping des éléments du modèle métier FRLMImagingSupportingInformation vers 
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.previousResultsInformation",
+      "code" : "FRLMSupportingInformation.entry.observation",
       "target" : [{
-        "code" : "DiagnosticReport.result:resultatAnterieur",
+        "code" : "DiagnosticReport.extension:historiqueMedical",
+        "display" : "Observation or FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument",
         "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastIllness",
+      "code" : "FRLMSupportingInformation.entry.condition",
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence une Observation d'antécédent médical."
+        "display" : "FRConditionDocument",
+        "equivalence" : "equivalent"
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.historyOfPastProcedures",
+      "code" : "FRLMSupportingInformation.entry.device",
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical",
+        "display" : "Device",
         "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence une Observation d'antécédent chirurgical."
+        "comment" : "value[x] référence un Device."
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.contraIndication",
+      "code" : "FRLMSupportingInformation.entry.medicationAdministration",
+      "display" : "FRLMDICOMMedicationAdministration",
       "target" : [{
         "code" : "DiagnosticReport.extension:historiqueMedical",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRObservationContraIndicationsDocument."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.condition",
-      "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRConditionDocument."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.device",
-      "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRDeviceUseStatementDocument."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.pregnancyStatus",
-      "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical",
-        "equivalence" : "equivalent",
-        "comment" : "Cas où value[x] référence un FRObservationPregnancyDocument."
-      }]
-    },
-    {
-      "code" : "FRLMImagingSupportingInformation.entry.priorMedicationAdministration",
-      "target" : [{
-        "code" : "DiagnosticReport.extension:historiqueMedical",
+        "display" : "FRMedicationAdministrationDocument",
         "equivalence" : "equivalent",
         "comment" : "Cas où value[x] référence un FRMedicationAdministrationDocument."
       }]
     },
     {
-      "code" : "FRLMImagingSupportingInformation.entry.sexForClinicalUse",
+      "code" : "FRLMSupportingInformation.entry.sexForClinicalUse",
       "target" : [{
         "equivalence" : "unmatched",
-        "comment" : "Aucune cible explicite identifiée pour FRLMImagingSupportingInformation.entry.sexForClinicalUse. Cette donnée existe dans le patient."
+        "comment" : "Aucune cible explicite identifiée pour FRLMSupportingInformation.entry.sexForClinicalUse. Cette donnée existe dans le patient."
       }]
     }]
   }]

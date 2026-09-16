@@ -7,7 +7,7 @@ Dispositif médical usage
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Imaging Supporting Information](StructureDefinition-FRLMImagingSupportingInformation.md), [Logical Model - FR LM Medical Device Prescriptions](StructureDefinition-FRLMMedicalDevicePrescriptions.md), [Logical Model - FR LM Medical Devices and Implants](StructureDefinition-FRLMMedicalDevicesAndImplants.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
+* Utilise ce/t/te Modèle logique: [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical Model - FR LM Medical Device Prescriptions](StructureDefinition-FRLMMedicalDevicePrescriptions.md), [Logical Model - FR LM Medical Devices and Implants](StructureDefinition-FRLMMedicalDevicesAndImplants.md), [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md) and [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMDeviceUse)
 
@@ -85,7 +85,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDeviceUse.c
   "name" : "FRLMDeviceUse",
   "title" : "Logical model - FR LM Device use",
   "status" : "draft",
-  "date" : "2026-09-14T13:28:49+00:00",
+  "date" : "2026-09-16T13:00:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
