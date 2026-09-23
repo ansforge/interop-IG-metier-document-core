@@ -7,7 +7,7 @@ Résultats d'examen de biologie médicale
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Logical model - Laboratory Observation](StructureDefinition-FRLMLaboratoryObservation.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md) and [Logical model- FR LM Pregnancy Status](StructureDefinition-FRLMPregnancyStatus.md)
+* Utilise ce/t/te Modèle logique: [Logical model - Laboratory Observation](StructureDefinition-FRLMLaboratoryObservation.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md)... Show 2 more, [Logical model- FR LM Pregnancy Status](StructureDefinition-FRLMPregnancyStatus.md) and [Logical model - FR LM Result Data](StructureDefinition-FRLMResultData.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMLaboratoryObservation)
 
@@ -65,7 +65,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMLaboratoryO
   "name" : "FRLMLaboratoryObservation",
   "title" : "Logical model - Laboratory Observation",
   "status" : "draft",
-  "date" : "2026-09-14T09:04:12+00:00",
+  "date" : "2026-09-23T09:36:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

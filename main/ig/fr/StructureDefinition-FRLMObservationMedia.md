@@ -7,7 +7,7 @@ Image illustrative.
 
 **Utilisations:**
 
-* Utilise ce/t/te Modèle logique: [Modèle logique métier - FR LM Batterie d'examens de biologie médicale](StructureDefinition-FRLMBatterieExamensBiologieMedicale.md), [Modèle logique métier - FR LM Isolat microbiologique](StructureDefinition-FRLMIsolatMicrobiologique.md), [Logical model - FR LM QR Code](StructureDefinition-FRLMQRCode.md) and [Logical model - FR LM Resultats d'examens de biologie medicale](StructureDefinition-FRLMResultatsExamensBiologieMedicale.md)
+* Utilise ce/t/te Modèle logique: [Logical model - FR LM QR Code](StructureDefinition-FRLMQRCode.md)
 
 Vous pouvez également vérifier [les usages dans le FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fr.document-core|current/StructureDefinition/FRLMObservationMedia)
 
@@ -79,7 +79,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
   "name" : "FRLMObservationMedia",
   "title" : "Logical model - FR LM ObservationMedia",
   "status" : "draft",
-  "date" : "2026-09-14T09:04:12+00:00",
+  "date" : "2026-09-23T09:36:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -1,6 +1,6 @@
-# Logical model - FR LM Compte rendu de biologie de 1er niveau - FR Document Core (Modèle métier) v0.1.0
+# Logical model - FR LM Result Data - FR Document Core (Modèle métier) v0.1.0
 
-## Modèle logique: Logical model - FR LM Compte rendu de biologie de 1er niveau 
+## Modèle logique: Logical model - FR LM Result Data 
 
  
 Section Compte rendu de biologie de 1er niveau 
@@ -26,8 +26,7 @@ Cette structure est dérivée de [FRLMSection](StructureDefinition-FRLMSection.m
 
 ** Résumé **
 
-Obligatoire : 0 élément(1 élément obligatoire(s) imbriqué(s))
- Interdit : 1 élément
+Interdit : 1 élément
 
  **Vue différentielle** 
 
@@ -39,8 +38,7 @@ Cette structure est dérivée de [FRLMSection](StructureDefinition-FRLMSection.m
 
 ** Résumé **
 
-Obligatoire : 0 élément(1 élément obligatoire(s) imbriqué(s))
- Interdit : 1 élément
+Interdit : 1 élément
 
  
 
@@ -65,9 +63,9 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
   "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultData",
   "version" : "0.1.0",
   "name" : "FRLMResultData",
-  "title" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
+  "title" : "Logical model - FR LM Result Data",
   "status" : "draft",
-  "date" : "2026-09-14T09:04:12+00:00",
+  "date" : "2026-09-23T09:36:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -94,7 +92,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
     "element" : [{
       "id" : "FRLMResultData",
       "path" : "FRLMResultData",
-      "short" : "Logical model - FR LM Compte rendu de biologie de 1er niveau",
+      "short" : "Logical model - FR LM Result Data",
       "definition" : "Section Compte rendu de biologie de 1er niveau"
     },
     {
@@ -103,14 +101,14 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMResultData.
       "max" : "0"
     },
     {
-      "id" : "FRLMResultData.entry.resultatsExamensBiologieMedicale",
-      "path" : "FRLMResultData.entry.resultatsExamensBiologieMedicale",
-      "short" : "Entrée Résultats d'examens de biologie médicale",
-      "definition" : "Entrée Résultats d'examens de biologie médicale",
-      "min" : 1,
-      "max" : "1",
+      "id" : "FRLMResultData.entry.laboratoryTestResults",
+      "path" : "FRLMResultData.entry.laboratoryTestResults",
+      "short" : "Résultats d'examens de biologie médicale",
+      "definition" : "Résultats d'examens de biologie médicale",
+      "min" : 0,
+      "max" : "*",
       "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatsExamensBiologieMedicale"
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoryObservation"
       }]
     }]
   }

@@ -99,28 +99,26 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
+| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
+| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
+| FRLMSupportingInformation.description | Section.text | Composition.section.text |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | DiagnosticReport.extension:historiqueMedical (Observation or FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument) |
+| FRLMSupportingInformation.entry.condition (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical (FRConditionDocument) |
+| FRLMSupportingInformation.entry.device |  | Composition.section.entry (FRDeviceUseStatementDocument) |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical (Device) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | Composition.section.entry (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | DiagnosticReport.extension:historiqueMedical (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
 | FRLMImmunisations.entry.immunisation | Section.entry (FRCDAVaccination) | Composition.section.entry (FRImmunizationDocument) |
-| **FRLMCRBIOChapitre** | **FRCDACRBIOChapitre** |  |
-| FRLMCRBIOChapitre.code | Section.code |  |
-| FRLMCRBIOChapitre.blocNarratif | Section.text |  |
-| FRLMCRBIOChapitre.titreSection | Section.title |  |
-| FRLMCRBIOChapitre.choice[x]:FRLMResultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
-| FRLMCRBIOChapitre.choice[x]:FRLMCRBIOSousChapitre | Section.component.section:FRCDACRBIOSousChapitre |  |
-| **FRLMResultatsLaboratoireBiologieSecondeIntention** | **FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention** |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.codeSection | Section.code |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.titreSection | Section.title |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.blocNarratif | Section.text |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.entree.observation:FRLMObservation | Section.entry:FRCDASimpleObservation |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.entree.documentAttache:FRLMDocumentAttache | Section.entry:FRCDADocumentAttache |  |
-| **FRLMCRBIOSousChapitre** | **FRCDACRBIOSousChapitre** |  |
-| FRLMCRBIOSousChapitre.codeSection | Section.code |  |
-| FRLMCRBIOSousChapitre.blocNarratif | Section.text |  |
-| FRLMCRBIOSousChapitre.titreSection | Section.title |  |
-| FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
 | **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |
@@ -206,6 +204,14 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMReasonForReferral.description | Section.text | Composition.section.text |
 | FRLMReasonForReferral.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMReasonForReferral.entry.problemes | Section.entry:frProbleme.observation | Composition.section.entry (FRConditionDocument) |
+| **FRLMResultData** | **FRCDACRBIOChapitre** | **FRDiagnosticReportBIOChapterDocument** |
+| FRLMResultData.codeSection | Section.code | DiagnosticReport.category:chapitreBIO |
+| FRLMResultData.titleSection | Section.title |  |
+| FRLMResultData.description | Section.text | DiagnosticReport.conclusion |
+| FRLMResultData.description | Section.text | DiagnosticReport.conclusionCode |
+| FRLMResultData.description | Section.text | Composition.section.text |
+| FRLMResultData.entry.laboratoryTestResults | Section.entry.act (FRCDAResultatsExamensDeBiologieMedicale) | DiagnosticReport.result (FRObservationLaboratoryReportResultsDocument) |
+| FRLMResultData.entry.laboratoryTestResults | Section.entry.act (FRCDAResultatsExamensDeBiologieMedicale) | Composition.section.entry (FRObservationLaboratoryReportResultsDocument) |
 | **FRLMObservationResults** | **FRCDASectionResultats** | **FRCompositionDocument.section:sectionResults** |
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
@@ -216,33 +222,6 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSocialHistory.description | Section.text | Composition.section.text |
 | FRLMSocialHistory.entry.observationSocialHistory | Section.entry (FRCDAHabitusModeDeVie) | Composition.section.entry (FRObservationSocialHistoryDocument) |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
-| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
-| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
-| FRLMSupportingInformation.description | Section.text | Composition.section.text |
-| FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.device |  |  |
-| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **FRCompositionDocument.section:sectionVitalSigns** |
 | FRLMVitalSigns.titleSection | Section.title | Composition.section.title |
 | FRLMVitalSigns.entry.observationVitalSign | Section.entry (FRCDASignesVitaux) | Composition.section.entry (FRObservationVitalSignsDocument) |
@@ -454,76 +433,97 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMImmunisation.prescription | SubstanceAdministration.entryRelationship:frPrescription | Immunization.extension:basedOnRequestR5 |
 | FRLMImmunisation.reaction | SubstanceAdministration.entryRelationship:frProbleme | Immunization.reaction |
 | FRLMImmunisation.reasonCode |  | Immunization.reasonCode |
-| **FRLMBatterieExamensBiologieMedicale** | **FRCDABatterieExamensDeBiologieMedicale** |  |
-| FRLMBatterieExamensBiologieMedicale.identifiant | Organizer.id |  |
-| FRLMBatterieExamensBiologieMedicale.codeBatterieExamen | Organizer.code |  |
-| FRLMBatterieExamensBiologieMedicale.statut | Organizer.statusCode |  |
-| FRLMBatterieExamensBiologieMedicale.dateExamen | Organizer.effectiveTime |  |
-| FRLMBatterieExamensBiologieMedicale.choice:FRLMSujetNonHumain | Organizer.subject |  |
-| FRLMBatterieExamensBiologieMedicale.choice:FRLMPatientSujetNonHumain | Organizer.subject |  |
-| FRLMBatterieExamensBiologieMedicale.laboratoireExecutant | Organizer.performer |  |
-| FRLMBatterieExamensBiologieMedicale.auteur | Organizer.author |  |
-| FRLMBatterieExamensBiologieMedicale.participant | Organizer.participant |  |
-| FRLMBatterieExamensBiologieMedicale.prelevement | Organizer.component:frPrelevement |  |
-| FRLMBatterieExamensBiologieMedicale.resultatElementCliniquePertinent | Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent |  |
-| FRLMBatterieExamensBiologieMedicale.imageIllustrative | Organizer.component:frImageIllustrative |  |
-| FRLMBatterieExamensBiologieMedicale.commentaire | Organizer.component:frCommentaireER |  |
-| **FRLMIsolatMicrobiologique** | **FRCDAIsolatMicrobiologique** |  |
-| FRLMIsolatMicrobiologique.identifiant | Organizer.id |  |
-| FRLMIsolatMicrobiologique.codeIsolat | Organizer.code |  |
-| FRLMIsolatMicrobiologique.statut | Organizer.statusCode |  |
-| FRLMIsolatMicrobiologique.dateResultat | Organizer.effectiveTime |  |
-| FRLMIsolatMicrobiologique.choice:SujetNonHumain | Organizer.subject |  |
-| FRLMIsolatMicrobiologique.choice:PatientSujetNonHumain | Organizer.subject |  |
-| FRLMIsolatMicrobiologique.isolatMicrobiologique | Organizer.specimen |  |
-| FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat | Organizer.specimen.specimenRole |  |
-| FRLMIsolatMicrobiologique.isolatMicrobiologique. isolat.identifiant | Organizer.specimen. specimenRole.id |  |
-| FRLMIsolatMicrobiologique.isolatMicrobiologique. isolat.agent | Organizer.specimen. specimenRole.specimenPlayingEntity |  |
-| FRLMIsolatMicrobiologique.isolatMicrobiologique. isolat.agent.code | Organizer.specimen. specimenRole.specimenPlayingEntity.code |  |
-| FRLMIsolatMicrobiologique.laboratoireExecutant | Organizer.performer |  |
-| FRLMIsolatMicrobiologique.auteur | Organizer.author |  |
-| FRLMIsolatMicrobiologique.valideur | Organizer.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN') |  |
-| FRLMIsolatMicrobiologique.responsable | Organizer.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP') |  |
-| FRLMIsolatMicrobiologique.dispositifAutomatique | Organizer.participant (Device (CDA participant) : participant/@typeCode='DEV') |  |
-| FRLMIsolatMicrobiologique.batterieExamensDeBiologieMedicale | Organizer.component:frBatterieExamensDeBiologieMedicale |  |
-| FRLMIsolatMicrobiologique.resultatElementCliniquePertinent | Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent |  |
-| FRLMIsolatMicrobiologique.imageIllustrative | Organizer.component:frImageIllustrative |  |
-| FRLMIsolatMicrobiologique.commentaire | Organizer.component:frCommentaireER |  |
-| **FRLMResultatExamensBiologieElementCliniquePertinent** | **FRCDAResultatExamensDeBiologieElementCliniquePertinent** |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.identifiant | Observation.id |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.codeAnalyseObservation | Observation.code |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.dateHeureResultat | Observation.effectiveTime |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.valeurResultat | Observation.value |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.interpretation | Observation.interpretationCode.code |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.methode | Observation.methodCode |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMSujetNonHumain | Observation.subject |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.choice:FRLMPatientSujetNonHumain | Observation.subject |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.laboratoireExecutant | Observation.performer |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.auteur | Observation.author |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.valideur | Observation.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN') |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.responsable | Observation.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP') |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.dispositifAutomatique | Observation.participant (Device (CDA participant) : participant/@typeCode='DEV') |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.commentaire | Observation.entryRelationship:frCommentaireER |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.prelevement | Observation.entryRelationship:frPrelevement |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.resultatsAnterieurs | Observation.entryRelationship.observation |  |
-| FRLMResultatExamensBiologieElementCliniquePertinent.intervallesReference | Observation.referenceRange.observationRange |  |
-| **FRLMResultatsExamensBiologieMedicale** | **FRCDAResultatExamensDeBiologie** |  |
-| FRLMResultatsExamensBiologieMedicale.code | Act.code |  |
-| FRLMResultatsExamensBiologieMedicale.statut | Act.statusCode |  |
-| FRLMResultatsExamensBiologieMedicale.dateResultat | Act.effectiveTime |  |
-| FRLMResultatsExamensBiologieMedicale.choice:FRLMSujetNonHumain | Act.subject |  |
-| FRLMResultatsExamensBiologieMedicale.choice:FRLMPatientSujetNonHumain | Act.subject |  |
-| FRLMResultatsExamensBiologieMedicale.laboratoireExecutant | Act.performer |  |
-| FRLMResultatsExamensBiologieMedicale.auteur | Act.author |  |
-| FRLMResultatsExamensBiologieMedicale.valideur | Act.participant (Authenticator (CDA participant) : participant/@typeCode='AUTHEN') |  |
-| FRLMResultatsExamensBiologieMedicale.responsable | Act.participant (Responsible Party (CDA participant) : participant/@typeCode='RESP') |  |
-| FRLMResultatsExamensBiologieMedicale.dispositifAutomatique | Act.participant (Device (CDA participant) : participant/@typeCode='DEV') |  |
-| FRLMResultatsExamensBiologieMedicale.prelevement | Act.entryRelationship:frPrelevement |  |
-| FRLMResultatsExamensBiologieMedicale.batterieExamensDeBiologieMedicale | Act.entryRelationship:frBatterieExamensDeBiologieMedicale |  |
-| FRLMResultatsExamensBiologieMedicale.isolatMicrobiologique | Act.entryRelationship:frIsolatMicrobiologique |  |
-| FRLMResultatsExamensBiologieMedicale.resultatElementCliniquePertinent | Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent |  |
-| FRLMResultatsExamensBiologieMedicale.imageIllustrative | Act.entryRelationship:frImageIllustrative |  |
-| FRLMResultatsExamensBiologieMedicale.commentaire | Act.entryRelationship:frCommentaireER |  |
+| **FRLMLaboratoryObservation** | **FRCDAResultatsExamensDeBiologieMedicale** | **FRObservationLaboratoryReportResultsDocument** |
+| FRLMLaboratoryObservation.header.status | Act.statusCode | Observation.status |
+| FRLMLaboratoryObservation.type | Act.code | Observation.code |
+| FRLMLaboratoryObservation.originalName |  | Observation.code.text |
+| FRLMLaboratoryObservation.observationDate[x] | Act.effectiveTime | Observation.effective[x] |
+| FRLMLaboratoryObservation.specimen | Act.entryRelationship:frPrelevement (FRCDAPrelevement) | Observation.specimen |
+| FRLMLaboratoryObservation.order |  | Observation.basedOn |
+| FRLMLaboratoryObservation.bodySite |  | Observation.bodySite |
+| FRLMLaboratoryObservation.result |  | Observation.value[x] |
+| FRLMLaboratoryObservation.referenceRange |  | Observation.referenceRange |
+| FRLMLaboratoryObservation.interpretation |  | Observation.interpretation |
+| FRLMLaboratoryObservation.method |  | Observation.method |
+| FRLMLaboratoryObservation.note | Act.entryRelationship:frCommentaireER (FRCDACommentaireER) | Observation.note |
+| FRLMLaboratoryObservation.component |  | Observation.component |
+| FRLMLaboratoryObservation.derivedFrom[x] | Act.entryRelationship:frImageIllustrative (FRCDAImageIllustrative) | Observation.derivedFrom |
+| FRLMLaboratoryObservation.hasMember[x] | Act.entryRelationship:frBatterieExamensDeBiologieMedicale (FRCDABatterieExamensDeBiologieMedicale) | Observation.hasMember |
+| FRLMLaboratoryObservation.hasMember[x] | Act.entryRelationship:frIsolatMicrobiologique (FRCDAIsolatMicrobiologique) | Observation.hasMember |
+| FRLMLaboratoryObservation.hasMember[x] | Act.entryRelationship:frResultatExamensDeBiologieElementCliniquePertinent (FRCDAResultatExamensDeBiologieElementCliniquePertinent) | Observation.hasMember |
+| FRLMLaboratoryObservation.previousResults |  | Observation.extension:supportingInfo |
+| FRLMLaboratoryObservation.testKit | Act.participant:frParticipantDispositifAutomatique | Observation.extension:testKit |
+| FRLMLaboratoryObservation.calibrator |  | Observation.extension:calibrator |
+| FRLMLaboratoryObservation.accreditationStatus |  | Observation.extension:accreditationStatus |
+| FRLMLaboratoryObservation.pointOfCareTest |  | Observation.category |
+| FRLMLaboratoryObservation.triggeredBy[x] |  | Observation.extension:triggeredBy |
+| **FRLMLaboratoryObservation** | **FRCDABatterieExamensDeBiologieMedicale** | **FRObservationLaboratoryReportResultsDocument** |
+| FRLMLaboratoryObservation.header.status | Organizer.statusCode | Observation.status |
+| FRLMLaboratoryObservation.type | Organizer.code | Observation.code |
+| FRLMLaboratoryObservation.originalName | Organizer.code. originalText.reference | Observation.code.text |
+| FRLMLaboratoryObservation.observationDate[x] | Organizer.effectiveTime | Observation.effective[x] |
+| FRLMLaboratoryObservation.specimen | Organizer.component:frPrelevement (FRCDAPrelevement) | Observation.specimen |
+| FRLMLaboratoryObservation.order |  | Observation.basedOn |
+| FRLMLaboratoryObservation.bodySite |  | Observation.bodySite |
+| FRLMLaboratoryObservation.result |  | Observation.value[x] |
+| FRLMLaboratoryObservation.referenceRange |  | Observation.referenceRange |
+| FRLMLaboratoryObservation.interpretation |  | Observation.interpretation |
+| FRLMLaboratoryObservation.method |  | Observation.method |
+| FRLMLaboratoryObservation.note | Organizer.component:frCommentaireER (FRCDACommentaireER) | Observation.note |
+| FRLMLaboratoryObservation.component |  | Observation.component |
+| FRLMLaboratoryObservation.derivedFrom[x] | Organizer.component:frImageIllustrative (FRCDAImageIllustrative) | Observation.derivedFrom |
+| FRLMLaboratoryObservation.hasMember[x] | Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent (FRCDAResultatExamensDeBiologieElementCliniquePertinent) | Observation.hasMember |
+| FRLMLaboratoryObservation.previousResults |  | Observation.extension:supportingInfo |
+| FRLMLaboratoryObservation.testKit | Organizer.participant | Observation.extension:testKit |
+| FRLMLaboratoryObservation.calibrator |  | Observation.extension:calibrator |
+| FRLMLaboratoryObservation.accreditationStatus |  | Observation.extension:accreditationStatus |
+| FRLMLaboratoryObservation.pointOfCareTest |  | Observation.category |
+| FRLMLaboratoryObservation.triggeredBy[x] |  | Observation.extension:triggeredBy |
+| **FRLMLaboratoryObservation** | **FRCDAIsolatMicrobiologique** | **FRObservationLaboratoryReportResultsDocument** |
+| FRLMLaboratoryObservation.header.status | Organizer.statusCode | Observation.status |
+| FRLMLaboratoryObservation.type | Organizer.code | Observation.code |
+| FRLMLaboratoryObservation.originalName |  | Observation.code.text |
+| FRLMLaboratoryObservation.observationDate[x] | Organizer.effectiveTime | Observation.effective[x] |
+| FRLMLaboratoryObservation.specimen | Organizer.specimen | Observation.specimen |
+| FRLMLaboratoryObservation.order |  | Observation.basedOn |
+| FRLMLaboratoryObservation.bodySite |  | Observation.bodySite |
+| FRLMLaboratoryObservation.result |  | Observation.value[x] |
+| FRLMLaboratoryObservation.referenceRange |  | Observation.referenceRange |
+| FRLMLaboratoryObservation.interpretation |  | Observation.interpretation |
+| FRLMLaboratoryObservation.method |  | Observation.method |
+| FRLMLaboratoryObservation.note | Organizer.component:frCommentaireER (FRCDACommentaireER) | Observation.note |
+| FRLMLaboratoryObservation.component |  | Observation.component |
+| FRLMLaboratoryObservation.derivedFrom[x] | Organizer.component:frImageIllustrative (FRCDAImageIllustrative) | Observation.derivedFrom |
+| FRLMLaboratoryObservation.hasMember[x] | Organizer.component:frBatterieExamensDeBiologieMedicale (FRCDABatterieExamensDeBiologieMedicale) | Observation.hasMember |
+| FRLMLaboratoryObservation.hasMember[x] | Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent (FRCDAResultatExamensDeBiologieElementCliniquePertinent) | Observation.hasMember |
+| FRLMLaboratoryObservation.previousResults |  | Observation.extension:supportingInfo |
+| FRLMLaboratoryObservation.testKit | Organizer.participant:frParticipantDispositif | Observation.extension:testKit |
+| FRLMLaboratoryObservation.calibrator |  | Observation.extension:calibrator |
+| FRLMLaboratoryObservation.accreditationStatus |  | Observation.extension:accreditationStatus |
+| FRLMLaboratoryObservation.pointOfCareTest |  | Observation.category |
+| FRLMLaboratoryObservation.triggeredBy[x] |  | Observation.extension:triggeredBy |
+| **FRLMLaboratoryObservation** | **FRCDAResultatExamensDeBiologieElementCliniquePertinent** | **FRObservationLaboratoryReportResultsDocument** |
+| FRLMLaboratoryObservation.header.status | Observation.statusCode | Observation.status |
+| FRLMLaboratoryObservation.type | Observation.code | Observation.code |
+| FRLMLaboratoryObservation.originalName | Observation.code. originalText.reference | Observation.code.text |
+| FRLMLaboratoryObservation.observationDate[x] | Observation.effectiveTime | Observation.effective[x] |
+| FRLMLaboratoryObservation.specimen | Observation.entryRelationship:frPrelevement (FRCDAPrelevement) | Observation.specimen |
+| FRLMLaboratoryObservation.order |  | Observation.basedOn |
+| FRLMLaboratoryObservation.bodySite |  | Observation.bodySite |
+| FRLMLaboratoryObservation.result | Observation.value | Observation.value[x] |
+| FRLMLaboratoryObservation.referenceRange | Observation.referenceRange | Observation.referenceRange |
+| FRLMLaboratoryObservation.interpretation | Observation.interpretationCode | Observation.interpretation |
+| FRLMLaboratoryObservation.method | Observation.methodCode | Observation.method |
+| FRLMLaboratoryObservation.note | Observation.entryRelationship:frCommentaireER (FRCDACommentaireER) | Observation.note |
+| FRLMLaboratoryObservation.component |  | Observation.component |
+| FRLMLaboratoryObservation.derivedFrom[x] |  | Observation.derivedFrom |
+| FRLMLaboratoryObservation.hasMember[x] |  | Observation.hasMember |
+| FRLMLaboratoryObservation.previousResults | Observation.entryRelationship:frResultatsAnterieurs | Observation.extension:supportingInfo |
+| FRLMLaboratoryObservation.testKit | Observation.participant | Observation.extension:testKit |
+| FRLMLaboratoryObservation.calibrator |  | Observation.extension:calibrator |
+| FRLMLaboratoryObservation.accreditationStatus |  | Observation.extension:accreditationStatus |
+| FRLMLaboratoryObservation.pointOfCareTest |  | Observation.category |
+| FRLMLaboratoryObservation.triggeredBy[x] |  | Observation.extension:triggeredBy |
 | **FRLMObservationMedia** | **FRCDAImageIllustrative** | **FRMediaDocument** |
 | FRLMObservationMedia.header.identifier | ObservationMedia.id | Media.identifier |
 | FRLMObservationMedia.content.data | ObservationMedia.value | Media.content.data |
@@ -927,28 +927,26 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMHospitalDischargeMedications.titleSection | Section.title | Composition.section.title |
 | FRLMHospitalDischargeMedications.description | Section.text | Composition.section.text |
 | FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications | Section.entry (FRCDATraitement) | Composition.section.entry (FRMedicationAdministrationDocument) |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
+| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
+| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
+| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
+| FRLMSupportingInformation.description | Section.text | Composition.section.text |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | Composition.section.entry (Observation) |
+| FRLMSupportingInformation.entry.observation (FRLMObservation) | Section.section. entry.observation (FRCDASectionDICOMHistoriqueMedical.entry(FRCDASimpleObservation)) | DiagnosticReport.extension:historiqueMedical (Observation or FRObservationPregnancyDocument or FRObservationContraIndicationsImagingDocument) |
+| FRLMSupportingInformation.entry.condition (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
+| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical (FRConditionDocument) |
+| FRLMSupportingInformation.entry.device |  | Composition.section.entry (FRDeviceUseStatementDocument) |
+| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical (Device) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | Composition.section.entry (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.medicationAdministration (FRLMDICOMMedicationAdministration) |  | DiagnosticReport.extension:historiqueMedical (FRMedicationAdministrationDocument) |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
+| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMImmunisations** | **FRCDAVaccinations** | **FRCompositionDocument.section:sectionImmunizations** |
 | FRLMImmunisations.codeSection | Section.code | Composition.section.code |
 | FRLMImmunisations.titleSection | Section.title | Composition.section.title |
 | FRLMImmunisations.description | Section.text | Composition.section.text |
 | FRLMImmunisations.entry.immunisation | Section.entry (FRCDAVaccination) | Composition.section.entry (FRImmunizationDocument) |
-| **FRLMCRBIOChapitre** | **FRCDACRBIOChapitre** |  |
-| FRLMCRBIOChapitre.code | Section.code |  |
-| FRLMCRBIOChapitre.blocNarratif | Section.text |  |
-| FRLMCRBIOChapitre.titreSection | Section.title |  |
-| FRLMCRBIOChapitre.choice[x]:FRLMResultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
-| FRLMCRBIOChapitre.choice[x]:FRLMCRBIOSousChapitre | Section.component.section:FRCDACRBIOSousChapitre |  |
-| **FRLMResultatsLaboratoireBiologieSecondeIntention** | **FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention** |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.codeSection | Section.code |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.titreSection | Section.title |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.blocNarratif | Section.text |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.entree.observation:FRLMObservation | Section.entry:FRCDASimpleObservation |  |
-| FRLMResultatsLaboratoireBiologieSecondeIntention.entree.documentAttache:FRLMDocumentAttache | Section.entry:FRCDADocumentAttache |  |
-| **FRLMCRBIOSousChapitre** | **FRCDACRBIOSousChapitre** |  |
-| FRLMCRBIOSousChapitre.codeSection | Section.code |  |
-| FRLMCRBIOSousChapitre.blocNarratif | Section.text |  |
-| FRLMCRBIOSousChapitre.titreSection | Section.title |  |
-| FRLMCRBIOSousChapitre.entree.resultatsExamensBiologieMedicale | Section.entry:FRCDAResultatsExamensDeBiologieMedicale |  |
 | **FRLMMedicalDevicePrescriptions** | **FRCDAPrescriptionDispositifsMedicaux** | **FRCompositionDocument.section:sectionMedicalDevicePrescription** |
 | FRLMMedicalDevicePrescriptions.author[x] | Section.author | Composition.section.author |
 | FRLMMedicalDevicePrescriptions.codeSection | Section.code | Composition.section.code |
@@ -1034,6 +1032,14 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMReasonForReferral.description | Section.text | Composition.section.text |
 | FRLMReasonForReferral.entry.observation | Section.entry:frSimpleObservation.observation | Composition.section.entry (Observation) |
 | FRLMReasonForReferral.entry.problemes | Section.entry:frProbleme.observation | Composition.section.entry (FRConditionDocument) |
+| **FRLMResultData** | **FRCDACRBIOChapitre** | **FRDiagnosticReportBIOChapterDocument** |
+| FRLMResultData.codeSection | Section.code | DiagnosticReport.category:chapitreBIO |
+| FRLMResultData.titleSection | Section.title |  |
+| FRLMResultData.description | Section.text | DiagnosticReport.conclusion |
+| FRLMResultData.description | Section.text | DiagnosticReport.conclusionCode |
+| FRLMResultData.description | Section.text | Composition.section.text |
+| FRLMResultData.entry.laboratoryTestResults | Section.entry.act (FRCDAResultatsExamensDeBiologieMedicale) | DiagnosticReport.result (FRObservationLaboratoryReportResultsDocument) |
+| FRLMResultData.entry.laboratoryTestResults | Section.entry.act (FRCDAResultatsExamensDeBiologieMedicale) | Composition.section.entry (FRObservationLaboratoryReportResultsDocument) |
 | **FRLMObservationResults** | **FRCDASectionResultats** | **FRCompositionDocument.section:sectionResults** |
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
@@ -1044,33 +1050,6 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
 | FRLMSocialHistory.description | Section.text | Composition.section.text |
 | FRLMSocialHistory.entry.observationSocialHistory | Section.entry (FRCDAHabitusModeDeVie) | Composition.section.entry (FRObservationSocialHistoryDocument) |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRCompositionDocument.section:sectionHistory** |
-| **FRLMSupportingInformation** | **FRCDADICOMHistoriqueMedical** | **FRDiagnosticReportImagingDocument.extension:historiqueMedical** |
-| FRLMSupportingInformation.codeSection | Section.code | Composition.section.code |
-| FRLMSupportingInformation.titleSection | Section.title | Composition.section.title |
-| FRLMSupportingInformation.description | Section.text | Composition.section.text |
-| FRLMSupportingInformation.entry.previousResultsInformation |  | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.previousResultsInformation |  | DiagnosticReport.result:resultatAnterieur |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMObservation) | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastIllness (FRLMCondition) |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (Observation) |
-| FRLMSupportingInformation.entry.historyOfPastProcedures | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | Composition.section.entry (FRObservationPregnancyDocument) |
-| FRLMSupportingInformation.entry.pregnancyStatus | Section.entry.observation (FRCDAObservationSurLaGrossesse) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | Composition.section.entry (FRObservationContraIndicationsDocument) |
-| FRLMSupportingInformation.entry.contraIndication | Section.entry.observation (FRCDASimpleObservation) | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.condition |  | Composition.section.entry (FRConditionDocument) |
-| FRLMSupportingInformation.entry.condition |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.device |  |  |
-| FRLMSupportingInformation.entry.device |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  |  |
-| FRLMSupportingInformation.entry.priorMedicationAdministration |  | DiagnosticReport.extension:historiqueMedical |
-| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
-| FRLMSupportingInformation.entry.sexForClinicalUse |  |  |
 | **FRLMVitalSigns** | **FRCDASectionSignesVitaux** | **FRCompositionDocument.section:sectionVitalSigns** |
 | FRLMVitalSigns.titleSection | Section.title | Composition.section.title |
 | FRLMVitalSigns.entry.observationVitalSign | Section.entry (FRCDASignesVitaux) | Composition.section.entry (FRObservationVitalSignsDocument) |

@@ -12,7 +12,7 @@
   <name value="FRLogicalModelDocumentCore"/>
   <title value="FR Document Core (Modèle métier)"/>
   <status value="draft"/>
-  <date value="2026-09-14T09:04:12+00:00"/>
+  <date value="2026-09-23T09:36:17+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -38,7 +38,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.3.0"/>
+    <version value="7.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -1058,7 +1058,7 @@
       <reference>
         <reference value="StructureDefinition/FRLMResultData"/>
       </reference>
-      <name value="Logical model - FR LM Compte rendu de biologie de 1er niveau"/>
+      <name value="Logical model - FR LM Result Data"/>
       <description value="Section Compte rendu de biologie de 1er niveau"/>
       <exampleBoolean value="false"/>
       <groupingId value="metier-sections"/>
@@ -1083,7 +1083,7 @@
         <reference value="StructureDefinition/FRLMOrderInformation"/>
       </reference>
       <name value="Logical model - FR LM Order Information"/>
-      <description value="Section Demande d'examen d'imagerie"/>
+      <description value="Section Demande d'examen d'imagerie / Demande de biologie médicale"/>
       <exampleBoolean value="false"/>
       <groupingId value="metier-sections"/>
     </resource>
@@ -1656,18 +1656,6 @@
         <valueString value="StructureDefinition:logical"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/FRLMResultatsExamensBiologieMedicale"/>
-      </reference>
-      <name value="Logical model - FR LM Resultats d'examens de biologie medicale"/>
-      <description value="Resultats d'examens de biologie medicale"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/FRLMObservationVitalSign"/>
       </reference>
       <name value="Logical model - FR LM Observation Vital Sign"/>
@@ -1732,42 +1720,6 @@
       </reference>
       <name value="Logical model - FR LM Specimen"/>
       <description value="Prélèvement"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FRLMBatterieExamensBiologieMedicale"/>
-      </reference>
-      <name value="Modèle logique métier - FR LM Batterie d'examens de biologie médicale"/>
-      <description value="Entrée Batterie d'examens de biologie médicale"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FRLMIsolatMicrobiologique"/>
-      </reference>
-      <name value="Modèle logique métier - FR LM Isolat microbiologique"/>
-      <description value="Isolat microbiologique"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent"/>
-      </reference>
-      <name value="Modèle logique métier - FR LM Résultat d'examens de biologie / élement clinique pertinent"/>
-      <description value="Résultat d'examens de biologie / élement clinique pertinent"/>
       <exampleBoolean value="false"/>
       <groupingId value="metier-composants-communs"/>
     </resource>
@@ -1876,18 +1828,6 @@
       </reference>
       <name value="Logical model - FR LM Patient Transfer."/>
       <description value="Transfert du patient"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="metier-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:logical"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/FRLMLaboratoireExecutant"/>
-      </reference>
-      <name value="Modèle logique métier - FR LM Laboratoire exécutant"/>
-      <description value="Laboratoire exécutant"/>
       <exampleBoolean value="false"/>
       <groupingId value="metier-composants-communs"/>
     </resource>
@@ -2196,10 +2136,22 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionSupportingInformationLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionImagingSupportingInformationLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMSupportingInformation → FRCDADICOMHistoriqueMedical / FRLMSupportingInformation → FRCompositionDocument.section:sectionHistory / FRLMSupportingInformation → FRDiagnosticReportImagingDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument."/>
+      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping biologie) vers la section CDA FRCDADICOMHistoriqueMedical, puis vers la section FHIR FRCompositionDocument.section:sectionHistory et le profil FRDiagnosticReportImagingDocument, pour le contexte imagerie."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-sections"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRSectionLaboratorySupportingInformationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMSupportingInformation → FRServiceRequestDocument.supportingInformation"/>
+      <description value="Mapping des éléments du modèle métier FRLMSupportingInformation (partagé avec le mapping imagerie) vers FRServiceRequestDocument.supportingInfo (référencé depuis Composition.basedOn), pour le contexte biologie."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2364,22 +2316,10 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRSectionLaboratoryChapterLMCDAFHIR"/>
+        <reference value="ConceptMap/FRSectionResultDataLMCDAFHIR"/>
       </reference>
-      <name value="Mapping FRLMCRBIOChapitre → FRCDACRBIOChapitre → FRCompositionDocument.section"/>
-      <description value="Mapping des éléments du modèle métier FRLMCRBIOChapitre vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRCompositionDocument.section."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionLaboratorySubChapterLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMCRBIOSousChapitre → FRCDACRBIOSousChapitre → FRCompositionDocument.section:avec-sous-sections.section"/>
-      <description value="Mapping des éléments du modèle métier FRLMCRBIOSousChapitre vers la section CDA FRCDACRBIOSousChapitre, puis vers le profil FHIR FRCompositionDocument.section:avec-sous-sections.section."/>
+      <name value="Mapping FRLMResultData → FRCDACRBIOChapitre / FRLMResultData → FRDiagnosticReportBIOChapterDocument / FRLMResultData → FRCompositionDocument.section.entry"/>
+      <description value="Mapping des éléments du modèle métier FRLMResultData vers la section CDA FRCDACRBIOChapitre, puis vers le profil FHIR FRDiagnosticReportBIOChapterDocument et vers FRCompositionDocument.section.entry / section.text."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2584,18 +2524,6 @@
       </reference>
       <name value="Mapping FRLMObservationResults → FRCDAResultats / FRLMObservationResults → FRCompositionDocument.section:sectionResults"/>
       <description value="Mapping des éléments du modèle métier FRLMObservationResults vers la section CDA FRCDAResultats, puis vers la section FHIR FRCompositionDocument.section:sectionResults."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-sections"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRSectionLaboratorySecondIntentionResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMResultatsLaboratoireBiologieSecondeIntention → FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention → FRCompositionDocument.section:sans-sous-sections"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsLaboratoireBiologieSecondeIntention vers la section CDA FRCDAResultatsDeLaboratoireDeBiologieDeSecondeIntention, puis vers le profil FHIR FRCompositionDocument.section:LaboratoryResults."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-sections"/>
     </resource>
@@ -2916,54 +2844,6 @@
         <valueString value="ConceptMap"/>
       </extension>
       <reference>
-        <reference value="ConceptMap/FRLaboratoryIsolateResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMIsolatMicrobiologique → FRCDAIsolatMicrobiologique → FRObservationLaboratoryReportResultsDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMIsolatMicrobiologique vers le profil CDA FRCDAIsolatMicrobiologique, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRLaboratoryBatteryResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMBatterieExamensBiologieMedicale → FRCDABatterieExamensDeBiologieMedicale → FRObservationLaboratoryReportResultsDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMBatterieExamensBiologieMedicale vers le profil CDA FRCDABatterieExamensDeBiologieMedicale, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRLaboratoryResultsLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMResultatsExamensBiologieMedicale → FRCDAResultatExamensDeBiologie → FRObservationLaboratoryReportResultsDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatsExamensBiologieMedicale vers le profil CDA FRCDAResultatExamensDeBiologie, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
-        <reference value="ConceptMap/FRLaboratoryResultClinicalElementLMCDAFHIR"/>
-      </reference>
-      <name value="Mapping FRLMResultatExamensBiologieElementCliniquePertinent → Profile: FRCDAResultatExamensDeBiologieElementCliniquePertinent&#xA; → FRObservationLaboratoryReportResultsDocument"/>
-      <description value="Mapping des éléments du modèle métier FRLMResultatExamensBiologieElementCliniquePertinent vers le profil CDA FRCDAResultatExamensDeBiologieElementCliniquePertinent, puis vers le profil FHIR FRObservationLaboratoryReportResultsDocument."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="mapping-composants-communs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ConceptMap"/>
-      </extension>
-      <reference>
         <reference value="ConceptMap/FRObservationMicroorganismDetectionLMCDAFHIR"/>
       </reference>
       <name value="Mapping FRLMMicroOrganismSearch → FRCDARechercheDeMicroOrganismes / FRLMMicroOrganismSearch → FRObservationMicroorganismDetectionDocument"/>
@@ -3124,6 +3004,18 @@
       </reference>
       <name value="Mapping FRLMObservation -&gt; FRCDASimpleObservation / FRLMObservation -&gt; Observation"/>
       <description value="Mapping des éléments du modele metier FRLMObservation vers le profil CDA FRCDASimpleObservation, puis vers le profil FHIR Observation."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="mapping-composants-communs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ConceptMap"/>
+      </extension>
+      <reference>
+        <reference value="ConceptMap/FRLaboratoryObservationLMCDAFHIR"/>
+      </reference>
+      <name value="Mapping FRLMLaboratoryObservation → FRCDAResultatsExamensDeBiologieMedicale / FRCDABatterieExamensDeBiologieMedicale / FRCDAIsolatMicrobiologique / FRCDAResultatExamensDeBiologieElementCliniquePertinent / FRLMLaboratoryObservation → FRObservationLaboratoryReportResultsDocument"/>
+      <description value="Mapping des éléments du modèle métier FRLMLaboratoryObservation vers ses quatre représentations CDA possibles selon le niveau de la hiérarchie du compte rendu de biologie (Examen de biologie médicale, Batterie, Isolat microbiologique, Résultat/élément clinique pertinent), puis vers l'unique profil FHIR FRObservationLaboratoryReportResultsDocument (qui porte lui-même ces quatre rôles, la hiérarchie étant représentée par Observation.hasMember)."/>
       <exampleBoolean value="false"/>
       <groupingId value="mapping-composants-communs"/>
     </resource>

@@ -3,7 +3,7 @@
 ## Logical Model: Logical model - FR LM Order Information 
 
  
-Section Demande d'examen d'imagerie 
+Section Demande d'examen d'imagerie / Demande de biologie médicale 
 
 **Usages:**
 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrderInformat
   "name" : "FRLMOrderInformation",
   "title" : "Logical model - FR LM Order Information",
   "status" : "draft",
-  "date" : "2026-09-14T09:04:12+00:00",
+  "date" : "2026-09-23T09:36:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -49,7 +49,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrderInformat
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "description" : "Section Demande d'examen d'imagerie",
+  "description" : "Section Demande d'examen d'imagerie / Demande de biologie médicale",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -68,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrderInformat
       "id" : "FRLMOrderInformation",
       "path" : "FRLMOrderInformation",
       "short" : "Logical model - FR LM Order Information",
-      "definition" : "Section Demande d'examen d'imagerie"
+      "definition" : "Section Demande d'examen d'imagerie / Demande de biologie médicale"
     },
     {
       "id" : "FRLMOrderInformation.titleSection",
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrderInformat
     {
       "id" : "FRLMOrderInformation.entry.orderInformation",
       "path" : "FRLMOrderInformation.entry.orderInformation",
-      "short" : "Entrée Demande d'examen d'imagerie",
-      "definition" : "Entrée Demande d'examen d'imagerie",
+      "short" : "Entrée Demande d'examen d'imagerie / Demande de biologie médicale",
+      "definition" : "Entrée Demande d'examen d'imagerie / Demande de biologie médicale",
       "min" : 0,
       "max" : "1",
       "type" : [{

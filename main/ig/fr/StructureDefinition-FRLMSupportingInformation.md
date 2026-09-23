@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
   "name" : "FRLMSupportingInformation",
   "title" : "Logical model - FR LM Supporting Information",
   "status" : "draft",
-  "date" : "2026-09-14T09:04:12+00:00",
+  "date" : "2026-09-23T09:36:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -113,46 +113,10 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
       "min" : 1
     },
     {
-      "id" : "FRLMSupportingInformation.entry.previousResultsInformation",
-      "path" : "FRLMSupportingInformation.entry.previousResultsInformation",
-      "short" : "Résultats d'examens antérieurs pertinents",
-      "definition" : "Résultats d'examens antérieurs pertinents",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
-      }]
-    },
-    {
-      "id" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
-      "path" : "FRLMSupportingInformation.entry.historyOfPastIllness[x]",
-      "short" : "Antécédents médicaux",
-      "definition" : "Antécédents médicaux",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition"
-      },
-      {
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
-      }]
-    },
-    {
-      "id" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
-      "path" : "FRLMSupportingInformation.entry.historyOfPastProcedures",
-      "short" : "Antécédents chirurgicaux",
-      "definition" : "Antécédents chirurgicaux",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservation"
-      }]
-    },
-    {
-      "id" : "FRLMSupportingInformation.entry.contraIndication",
-      "path" : "FRLMSupportingInformation.entry.contraIndication",
-      "short" : "Contre-indications",
-      "definition" : "Contre-indications",
+      "id" : "FRLMSupportingInformation.entry.observation",
+      "path" : "FRLMSupportingInformation.entry.observation",
+      "short" : "Observation (résultat d'examen antérieur, antécédent médical ou chirurgical, contre-indication et autre observation)",
+      "definition" : "Observation (résultat d'examen antérieur, antécédent médical ou chirurgical, contre-indication et autre observation)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -162,8 +126,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
     {
       "id" : "FRLMSupportingInformation.entry.condition",
       "path" : "FRLMSupportingInformation.entry.condition",
-      "short" : "Problème",
-      "definition" : "Problème",
+      "short" : "Problème (antécédent médical, problème de santé, etc.)",
+      "definition" : "Problème (antécédent médical, problème de santé, etc.)",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -193,14 +157,17 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
       }]
     },
     {
-      "id" : "FRLMSupportingInformation.entry.priorMedicationAdministration",
-      "path" : "FRLMSupportingInformation.entry.priorMedicationAdministration",
-      "short" : "Produits de santé administré avant l'examen d'imagerie",
-      "definition" : "Produits de santé administré avant l'examen d'imagerie",
+      "id" : "FRLMSupportingInformation.entry.medicationAdministration[x]",
+      "path" : "FRLMSupportingInformation.entry.medicationAdministration[x]",
+      "short" : "Produits de santé administré avant l'examen de biologie ou d'imagerie",
+      "definition" : "Produits de santé administré avant l'examen de biologie ou d'imagerie",
       "min" : 0,
       "max" : "*",
       "type" : [{
         "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDICOMMedicationAdministration"
+      },
+      {
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationAdministration"
       }]
     },
     {
@@ -212,6 +179,28 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMSupportingI
       "max" : "1",
       "type" : [{
         "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "FRLMSupportingInformation.entry.vaccination",
+      "path" : "FRLMSupportingInformation.entry.vaccination",
+      "short" : "Historique vaccinal du patient",
+      "definition" : "Historique vaccinal du patient",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImmunisation"
+      }]
+    },
+    {
+      "id" : "FRLMSupportingInformation.entry.otherSupportingInformation",
+      "path" : "FRLMSupportingInformation.entry.otherSupportingInformation",
+      "short" : "Autres informations cliniques pertinentes",
+      "definition" : "Autres informations cliniques pertinentes",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Resource"
       }]
     }]
   }
