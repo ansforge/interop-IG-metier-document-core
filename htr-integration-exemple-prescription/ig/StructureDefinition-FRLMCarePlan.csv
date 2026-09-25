@@ -1,0 +1,47 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMCarePlan","FRLMCarePlan","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Care Plan","Plan de soins","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMCarePlan.header","FRLMCarePlan.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMCarePlan.header.subject","FRLMCarePlan.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMCarePlan.header.identifier","FRLMCarePlan.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMCarePlan.header.author[x]","FRLMCarePlan.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMCarePlan.header.author[x].authorProfessional","FRLMCarePlan.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMCarePlan.header.author[x].authorOrganisation","FRLMCarePlan.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMCarePlan.header.author[x].authorDevice","FRLMCarePlan.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMCarePlan.header.performer[x]","FRLMCarePlan.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMCarePlan.header.participant[x]","FRLMCarePlan.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMCarePlan.header.participant[x].participantProfessional","FRLMCarePlan.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMCarePlan.header.participant[x].participantOrganisation","FRLMCarePlan.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMCarePlan.header.participant[x].participantDevice","FRLMCarePlan.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMCarePlan.header.informant","FRLMCarePlan.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMCarePlan.header.date","FRLMCarePlan.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMCarePlan.header.status","FRLMCarePlan.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut du plan de soin (projet, actif, suspendu, annulé, terminé, erreur, inconnu)","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMCarePlan.header.source","FRLMCarePlan.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMCarePlan.header.language","FRLMCarePlan.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMCarePlan.addresses","FRLMCarePlan.addresses","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+","Problèmes de santé traités par ce plan","Problèmes de santé traités par ce plan","","","","","","","","","",,,,,"",,,,"FRLMCarePlan.addresses",0,*,"",""
+"FRLMCarePlan.goal","FRLMCarePlan.goal","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Résultat souhaité du plan","Résultat souhaité du plan","","","","","","","","","",,,,,"",,,,"FRLMCarePlan.goal",0,*,"",""
+"FRLMCarePlan.activity","FRLMCarePlan.activity","","","",0,*,"","","","Reference {[]} {[]}
+","Action incluse dans ce plan de soins","Action incluse dans ce plan de soins","","","","","","","","","",,,,,"",,,,"FRLMCarePlan.activity",0,*,"",""

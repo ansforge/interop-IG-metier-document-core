@@ -1,0 +1,25 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMRecommendation","FRLMRecommendation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Recommendation","Section Recommandation","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMRecommendation.codeSection","FRLMRecommendation.codeSection","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de la section","Code de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.codeSection",1,1,"",""
+"FRLMRecommendation.titleSection","FRLMRecommendation.titleSection","","","",1,1,"","","","string {[]} {[]}
+","Titre de la section","Titre de la section","","","","","","","","","",,,,,"",,,,"FRLMSection.titleSection",0,1,"",""
+"FRLMRecommendation.description","FRLMRecommendation.description","","","",1,1,"","","","string {[]} {[]}
+","Bloc narratif","Bloc narratif","","","","","","","","","",,,,,"",,,,"FRLMSection.description",1,1,"",""
+"FRLMRecommendation.author[x]","FRLMRecommendation.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x]",0,*,"",""
+"FRLMRecommendation.author[x].authorProfessional","FRLMRecommendation.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorProfessional",0,*,"",""
+"FRLMRecommendation.author[x].authorOrganisation","FRLMRecommendation.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorOrganisation",0,*,"",""
+"FRLMRecommendation.author[x].authorDevice","FRLMRecommendation.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMSection.author[x].authorDevice",0,*,"",""
+"FRLMRecommendation.informant","FRLMRecommendation.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMSection.informant",0,*,"",""
+"FRLMRecommendation.subSection","FRLMRecommendation.subSection","","","",0,0,"","","","Base {[]} {[]}
+","Sous-sections","Sous-sections","","","","","","","","","",,,,,"",,,,"FRLMSection.subSection",0,*,"",""
+"FRLMRecommendation.entry","FRLMRecommendation.entry","","","",0,*,"","","","Base {[]} {[]}
+","Entrées","Entrées","","","","","","","","","",,,,,"",,,,"FRLMSection.entry",0,*,"",""
+"FRLMRecommendation.entry.carePlan","FRLMRecommendation.entry.carePlan","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlan {[]} {[]}
+","Recommandation sous forme de plan de soins","Recommandation sous forme de plan de soins","","","","","","","","","",,,,,"",,,,"FRLMRecommendation.entry.carePlan",0,*,"",""

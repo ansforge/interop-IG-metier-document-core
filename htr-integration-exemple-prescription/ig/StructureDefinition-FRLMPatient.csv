@@ -1,0 +1,39 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMPatient","FRLMPatient","","","",1,1,"","","","null {[]} {[]}
+","Logical model - FR LM Patient","Patient/Usager concerné par le document.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMPatient.identifier","FRLMPatient.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifiant du patient / usager.
+- Première occurrence obligatoire pour un document mis en partage dans un système d’information de santé partagé : Matricule INS du patient/usager tel que défini dans le cadre juridique.
+- Occurrence(s) suivante(s) (optionnelles) : Identifiant connu pour le patient/usager dans le système d’information du producteur du document (IPP, NIP, etc.).","Identifiant du patient / usager.
+- Première occurrence obligatoire pour un document mis en partage dans un système d’information de santé partagé : Matricule INS du patient/usager tel que défini dans le cadre juridique.
+- Occurrence(s) suivante(s) (optionnelles) : Identifiant connu pour le patient/usager dans le système d’information du producteur du document (IPP, NIP, etc.).","","","","","","","","","",,,,,"",,,,"FRLMPatient.identifier",1,*,"",""
+"FRLMPatient.address","FRLMPatient.address","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale du patient/usager.","Adresse géopostale du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.address",0,*,"",""
+"FRLMPatient.telecom","FRLMPatient.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","","","","","","","","","",,,,,"",,,,"FRLMPatient.telecom",0,*,"",""
+"FRLMPatient.name","FRLMPatient.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName {[]} {[]}
+","Noms et prénoms du patient/usager.","Noms et prénoms du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.name",1,1,"",""
+"FRLMPatient.administrativeGender","FRLMPatient.administrativeGender","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Sexe administratif du patient/usager.","Sexe administratif du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.administrativeGender",1,1,"",""
+"FRLMPatient.dateOfBirth","FRLMPatient.dateOfBirth","","","",1,1,"","","","dateTime {[]} {[]}
+","Date et heure de naissance du patient/usager.","Date et heure de naissance du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.dateOfBirth",1,1,"",""
+"FRLMPatient.deceased[x]","FRLMPatient.deceased[x]","","","",0,1,"","","","boolean {[]} {[]}
+dateTime {[]} {[]}","Patient/usager décédé / Date et heure du décès.","Patient/usager décédé / Date et heure du décès.","","","","","","","","","",,,,,"",,,,"FRLMPatient.deceased[x]",0,1,"",""
+"FRLMPatient.multipleBirth[x]","FRLMPatient.multipleBirth[x]","","","",0,1,"","","","boolean {[]} {[]}
+integer {[]} {[]}","Patient/usager né d'une grossesse multiple / Nombre d'ordres de naissance.","Patient/usager né d'une grossesse multiple / Nombre d'ordres de naissance.","","","","","","","","","",,,,,"",,,,"FRLMPatient.multipleBirth[x]",0,1,"",""
+"FRLMPatient.birthPlace","FRLMPatient.birthPlace","","","",0,1,"","","","Address {[]} {[]}
+","Lieu de naissance.
+  - Obligatoire si le matricule INS est présent pour porter le code officiel géographique (COG) du lieu de naissance.
+  - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager.","Lieu de naissance.
+  - Obligatoire si le matricule INS est présent pour porter le code officiel géographique (COG) du lieu de naissance.
+  - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.birthPlace",0,1,"",""
+"FRLMPatient.contact","FRLMPatient.contact","","","",0,*,"","","","Base {[]} {[]}
+","Représentant du patient/usager.","Représentant du patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.contact",0,*,"",""
+"FRLMPatient.contact.address","FRLMPatient.contact.address","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale.","Adresse géopostale.","","","","","","","","","",,,,,"",,,,"FRLMPatient.contact.address",0,*,"",""
+"FRLMPatient.contact.telecom","FRLMPatient.contact.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom.","Coordonnées télécom.","","","","","","","","","",,,,,"",,,,"FRLMPatient.contact.telecom",0,*,"",""
+"FRLMPatient.contact.name","FRLMPatient.contact.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHumanName {[]} {[]}
+","Noms et Prénoms du représentant.","Noms et Prénoms du représentant.","","","","","","","","","",,,,,"",,,,"FRLMPatient.contact.name",1,1,"",""
+"FRLMPatient.contact.organization","FRLMPatient.contact.organization","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Structure représentant le patient/usager.","Structure représentant le patient/usager.","","","","","","","","","",,,,,"",,,,"FRLMPatient.contact.organization",0,1,"",""
