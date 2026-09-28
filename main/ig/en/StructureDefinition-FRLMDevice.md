@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDevice.csv), 
   "name" : "FRLMDevice",
   "title" : "Logical model - Device",
   "status" : "draft",
-  "date" : "2026-09-23T09:36:17+00:00",
+  "date" : "2026-09-28T10:07:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

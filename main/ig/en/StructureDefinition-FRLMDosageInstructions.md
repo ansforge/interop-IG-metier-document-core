@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
   "name" : "FRLMDosageInstructions",
   "title" : "Logical model- FR LM Dosage Instructions",
   "status" : "draft",
-  "date" : "2026-09-23T09:36:17+00:00",
+  "date" : "2026-09-28T10:07:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -124,8 +124,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
     {
       "id" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
       "path" : "FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]",
-      "short" : "La quantité de médicament administrée par prise\nExemple - 20mg: {'value':20,'unit':'mg','system':'http://unitsofmeasure.org','code':'mg'}\nExemple - 1 à 3 comprimés: {'low':{'value':1,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'},'high':{'value':3,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'}}",
-      "definition" : "La quantité de médicament administrée par prise\nExemple - 20mg: {'value':20,'unit':'mg','system':'http://unitsofmeasure.org','code':'mg'}\nExemple - 1 à 3 comprimés: {'low':{'value':1,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'},'high':{'value':3,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'}}",
+      "short" : "La quantité de médicament administrée par prise",
+      "definition" : "La quantité de médicament administrée par prise",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -133,13 +133,39 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
       },
       {
         "code" : "Range"
+      }],
+      "example" : [{
+        "label" : "- 20mg",
+        "valueQuantity" : {
+          "value" : 20,
+          "unit" : "mg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mg"
+        }
+      },
+      {
+        "label" : "- 1 à 3 comprimés",
+        "valueRange" : {
+          "low" : {
+            "value" : 1,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          },
+          "high" : {
+            "value" : 3,
+            "unit" : "Comprimé",
+            "system" : "http://standardterms.edqm.eu",
+            "code" : "15054000"
+          }
+        }
       }]
     },
     {
       "id" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
       "path" : "FRLMDosageInstructions.dosageDetails.doseAndRate.rate[x]",
-      "short" : "Rythme d'administration\nPériode temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.\nExemple - 400µg pendant une minute (perfusion): {'numerator':{'value':400,'unit':'µg','system':'http://unitsofmeasure.org','code':'µg'},'denominator':{'value':1,'unit':'min','system':'http://unitsofmeasure.org','code':'min'}}",
-      "definition" : "Rythme d'administration\nPériode temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.\nExemple - 400µg pendant une minute (perfusion): {'numerator':{'value':400,'unit':'µg','system':'http://unitsofmeasure.org','code':'µg'},'denominator':{'value':1,'unit':'min','system':'http://unitsofmeasure.org','code':'min'}}",
+      "short" : "Rythme d'administration\nPériode temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.",
+      "definition" : "Rythme d'administration\nPériode temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -150,6 +176,23 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
       },
       {
         "code" : "Range"
+      }],
+      "example" : [{
+        "label" : "- 400µg pendant une minute (perfusion)",
+        "valueRatio" : {
+          "numerator" : {
+            "value" : 400,
+            "unit" : "µg",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "µg"
+          },
+          "denominator" : {
+            "value" : 1,
+            "unit" : "min",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "min"
+          }
+        }
       }]
     },
     {
@@ -177,8 +220,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
     {
       "id" : "FRLMDosageInstructions.dosageDetails.date[x]",
       "path" : "FRLMDosageInstructions.dosageDetails.date[x]",
-      "short" : "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)\nExemple - La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours)): {}",
-      "definition" : "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)\nExemple - La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours)): {}",
+      "short" : "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)",
+      "definition" : "Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -189,17 +232,23 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
       },
       {
         "code" : "Range"
+      }],
+      "example" : [{
+        "label" : "- La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours))"
       }]
     },
     {
       "id" : "FRLMDosageInstructions.dosageDetails.duration",
       "path" : "FRLMDosageInstructions.dosageDetails.duration",
-      "short" : "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)\nExemple - Administration pendant 10 minutes: {}",
-      "definition" : "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)\nExemple - Administration pendant 10 minutes: {}",
+      "short" : "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)",
+      "definition" : "Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Base"
+      }],
+      "example" : [{
+        "label" : "- Administration pendant 10 minutes"
       }]
     },
     {
@@ -393,12 +442,15 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
     {
       "id" : "FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration",
       "path" : "FRLMDosageInstructions.dosageDetails.maxDosePerPeriod.duration",
-      "short" : "Durée pour laquelle il y a une dose maximale administrable\nExemple - Par jour, par semaine, par mois, ...: {}",
-      "definition" : "Durée pour laquelle il y a une dose maximale administrable\nExemple - Par jour, par semaine, par mois, ...: {}",
+      "short" : "Durée pour laquelle il y a une dose maximale administrable",
+      "definition" : "Durée pour laquelle il y a une dose maximale administrable",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Quantity"
+      }],
+      "example" : [{
+        "label" : "- Par jour, par semaine, par mois, ..."
       }]
     },
     {
