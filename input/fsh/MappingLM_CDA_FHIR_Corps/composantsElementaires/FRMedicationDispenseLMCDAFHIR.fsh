@@ -103,9 +103,13 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 * group[=].element[+].code = #FRLMMedicationDispense.timeOfDispensation
 * group[=].element[=].target.code = #MedicationDispense.whenHandedOver
 * group[=].element[=].target.equivalence = #equivalent
-// Autorisation de substitution
-* group[=].element[+].code = #FRLMMedicationDispense.substitutionOccurred
-* group[=].element[=].target.code = #MedicationDispense.substitution.wasSubstituted
+// Autorisation de substitution : type de substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.type
+* group[=].element[=].target.code = #MedicationDispense.substitution.type
+* group[=].element[=].target.equivalence = #equivalent
+// Autorisation de substitution : motif de non substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.reason[x]
+* group[=].element[=].target.code = #MedicationDispense.substitution.reason
 * group[=].element[=].target.equivalence = #equivalent
 
 // Posologie

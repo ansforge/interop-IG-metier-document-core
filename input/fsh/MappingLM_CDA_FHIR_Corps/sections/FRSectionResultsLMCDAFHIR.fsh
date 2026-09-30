@@ -56,5 +56,5 @@ Description: "Mapping des éléments du modèle métier FRLMObservationResults v
 // Entrée Resultats
 * group[=].element[+].code = #FRLMObservationResults.entry.observationResult
 * group[=].element[=].target[+].code = #Composition.section.entry
-* group[=].element[=].target[=].display = "Observation"
+* group[=].element[=].target[=].display = "DiagnosticReport(FRDiagnosticReportDocument)"
 * group[=].element[=].target[=].equivalence = #equivalent
