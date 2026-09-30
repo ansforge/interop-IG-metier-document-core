@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry 1..1 
-  * attachment 1..1 FRLMAttachment  "Entrée Document attaché"
+  * attachment 1..1 FRLMAttachment  "Document attaché"

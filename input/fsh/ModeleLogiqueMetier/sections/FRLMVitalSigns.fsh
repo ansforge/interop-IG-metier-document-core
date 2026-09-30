@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * observationVitalSign 1..* FRLMObservationVitalSign "Entrée Signes vitaux"
+  * observationVitalSign 1..* FRLMObservationVitalSign "Signes vitaux"

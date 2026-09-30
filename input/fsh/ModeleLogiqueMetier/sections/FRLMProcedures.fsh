@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * procedure 1..* FRLMProcedure "Entrée Acte"
+  * procedure 1..* FRLMProcedure "Acte"

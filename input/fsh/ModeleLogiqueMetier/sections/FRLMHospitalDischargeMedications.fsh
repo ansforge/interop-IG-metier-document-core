@@ -7,4 +7,4 @@ Characteristics: #can-be-target
 
 * subSection 0..0
 * entry 1..*
-  * hospitalDischargeMedications 1..* FRLMMedicationAdministration "Entrée Traitement à la sortie"
+  * hospitalDischargeMedications 1..* FRLMMedicationAdministration "Traitement à la sortie"

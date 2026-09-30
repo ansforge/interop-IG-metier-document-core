@@ -5,7 +5,7 @@ Description: "Modèle logique représentant l'entrée"
 
 * header 1..1 Base "Métadonnées de base"
   * subject 1..1 FRLMPatient "Patient / Usager"
-  * identifier 0..* Identifier "Identifiant de l’entrée"
+  * identifier 0..* Identifier "Identifiant"
   * author[x] 0..* Base	"author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système."
     * authorProfessional 0..* FRLMHealthProfessional "L'auteur est un professionnel de santé"
     * authorOrganisation 0..* FRLMOrganisation "L'auteur est une organisation"

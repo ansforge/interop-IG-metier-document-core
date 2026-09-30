@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0 
 * entry 1..*
-  * medicationDispense 1..* FRLMMedicationDispense "Entrée Traitement dispensé"
+  * medicationDispense 1..* FRLMMedicationDispense "Traitement dispensé"

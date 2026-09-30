@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * immunisation 1..* FRLMImmunisation "Entrée Vaccination"
+  * immunisation 1..* FRLMImmunisation "Vaccination"

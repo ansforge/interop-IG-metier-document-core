@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * problem 1..* FRLMCondition "Entrée Problème"
+  * problem 1..* FRLMCondition "Problème"

@@ -19,7 +19,7 @@ Characteristics: #can-be-target
     * type 0..1 Coding "Type d'incertitude"
   * dataAbsentReason 0..1 CodeableConcept "Raison de l'absence de resultat"
 * note 0..1 string "Commentaire"
-* hasMember[x] 0..* Base "Observations rattachées a cette entrée"
+* hasMember[x] 0..* Base "Observations rattachées"
   * hasMemberFRLMLaboratoryObservation 0..* FRLMLaboratoryObservation "Observation de laboratoire associée"
   * hasMemberEstimatedDeliveryDate 0..* FRLMObservation "Observation associée a la date d'accouchement. Le type de l'observation doit être issu du jeu de valeurs jdv-date-accouchement-cisis (1.2.250.1.213.1.1.5.853) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-date-accouchement-cisis"
   * hasMemberGestationalAge 0..* FRLMObservation "Observation associée a l'age gestationnel. Le type de l'observation doit être issu du jeu de valeurs jdv-age-gestationnel-cisis (1.2.250.1.213.1.1.5.854) : https://smt.esante.gouv.fr/fhir/ValueSet/jdv-age-gestationnel-cisis"

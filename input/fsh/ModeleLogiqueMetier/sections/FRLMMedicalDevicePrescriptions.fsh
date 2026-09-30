@@ -7,4 +7,4 @@ Characteristics: #can-be-target
 
 * subSection 0..0
 * entry 1..*
-  * deviceUse  1..* FRLMDeviceUse "Entrée Dispositif médical prescrit"
+  * deviceUse  1..* FRLMDeviceUse "Dispositif médical prescrit"

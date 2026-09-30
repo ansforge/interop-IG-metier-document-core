@@ -7,4 +7,4 @@ Characteristics: #can-be-target
 
 * subSection 0..0
 * entry 1..*
-  * familyMemberHistory 1..* FRLMFamilyMemberHistory "Entrée Antécédents familiaux"
+  * familyMemberHistory 1..* FRLMFamilyMemberHistory "Antécédents familiaux"

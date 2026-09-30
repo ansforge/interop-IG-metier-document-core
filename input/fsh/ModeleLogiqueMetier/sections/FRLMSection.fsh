@@ -13,4 +13,4 @@ Characteristics: #can-be-target
   * authorDevice 0..* FRLMDevice "L'auteur est un système"
 * informant 0..* FRLMInformant "Informateur"
 * subSection 0..* Base "Sous-sections"
-* entry 0..* Base "Entrées"
+* entry 0..* Base "Modèles logiques contenus dans la section"
