@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMOrderInform
   "name" : "FRLMOrderInformation",
   "title" : "Logical model - FR LM Order Information",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -110,8 +110,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMOrderInform
     {
       "id" : "FRLMOrderInformation.entry.orderInformation",
       "path" : "FRLMOrderInformation.entry.orderInformation",
-      "short" : "Entrée Demande d'examen d'imagerie / Demande de biologie médicale",
-      "definition" : "Entrée Demande d'examen d'imagerie / Demande de biologie médicale",
+      "short" : "Demande d'examen d'imagerie / Demande de biologie médicale",
+      "definition" : "Demande d'examen d'imagerie / Demande de biologie médicale",
       "min" : 0,
       "max" : "1",
       "type" : [{

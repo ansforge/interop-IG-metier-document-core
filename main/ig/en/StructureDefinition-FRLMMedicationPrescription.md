@@ -1,6 +1,6 @@
-# Logical model - FR LM FR LM Medication Prescription - FR Document Core (Modèle métier) v0.1.0
+# Logical model - FR LM Medication Prescription - FR Document Core (Modèle métier) v0.1.0
 
-## Logical Model: Logical model - FR LM FR LM Medication Prescription 
+## Logical Model: Logical model - FR LM Medication Prescription 
 
  
 Section Prescription de médicaments 
@@ -38,9 +38,9 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationPre
   "url" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedicationPrescription",
   "version" : "0.1.0",
   "name" : "FRLMMedicationPrescription",
-  "title" : "Logical model - FR LM FR LM Medication Prescription",
+  "title" : "Logical model - FR LM Medication Prescription",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -67,7 +67,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationPre
     "element" : [{
       "id" : "FRLMMedicationPrescription",
       "path" : "FRLMMedicationPrescription",
-      "short" : "Logical model - FR LM FR LM Medication Prescription",
+      "short" : "Logical model - FR LM Medication Prescription",
       "definition" : "Section Prescription de médicaments"
     },
     {
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationPre
     {
       "id" : "FRLMMedicationPrescription.entry.prescriptionItem",
       "path" : "FRLMMedicationPrescription.entry.prescriptionItem",
-      "short" : "Entrée Traitement prescrit",
-      "definition" : "Entrée Traitement prescrit",
+      "short" : "Traitement prescrit",
+      "definition" : "Traitement prescrit",
       "min" : 1,
       "max" : "*",
       "type" : [{

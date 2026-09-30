@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMProcedure.c
   "name" : "FRLMProcedure",
   "title" : "Logical model- FR LM Procedure",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -107,7 +107,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMProcedure.c
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-v3-ActStatus-cisis (2.16.840.1.113883.1.11.15933)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActStatus-cisis|20260916095454"
       }
     },
     {

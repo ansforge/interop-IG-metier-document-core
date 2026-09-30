@@ -65,7 +65,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMQRCode.csv)
   "name" : "FRLMQRCode",
   "title" : "Logical model - FR LM QR Code",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -103,8 +103,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMQRCode.csv)
     {
       "id" : "FRLMQRCode.entry.observationMedia",
       "path" : "FRLMQRCode.entry.observationMedia",
-      "short" : "Codes à barres : Entrée Image illustrative",
-      "definition" : "Codes à barres : Entrée Image illustrative",
+      "short" : "Codes à barres : image illustrative",
+      "definition" : "Codes à barres : image illustrative",
       "min" : 0,
       "max" : "*",
       "type" : [{

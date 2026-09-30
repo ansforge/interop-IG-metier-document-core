@@ -69,7 +69,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMParticipant
   "name" : "FRLMParticipant",
   "title" : "Logical model - FR LM Participant",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -134,7 +134,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMParticipant
       "binding" : {
         "strength" : "required",
         "description" : "jdv-hl7-v3-ParticipationType-cisis (2.16.840.1.113883.1.11.10901)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis|20260420150251"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ParticipationType-cisis|20260916095457"
       }
     },
     {

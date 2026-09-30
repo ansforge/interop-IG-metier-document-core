@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationD
   "name" : "FRLMMedicationDispensations",
   "title" : "Logical model - FR LM Medication Dispensations",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -115,8 +115,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMMedicationD
     {
       "id" : "FRLMMedicationDispensations.entry.medicationDispense",
       "path" : "FRLMMedicationDispensations.entry.medicationDispense",
-      "short" : "Entrée Traitement dispensé",
-      "definition" : "Entrée Traitement dispensé",
+      "short" : "Traitement dispensé",
+      "definition" : "Traitement dispensé",
       "min" : 1,
       "max" : "*",
       "type" : [{

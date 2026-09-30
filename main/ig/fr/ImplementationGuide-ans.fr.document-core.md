@@ -14,7 +14,7 @@
   "name" : "FRLogicalModelDocumentCore",
   "title" : "FR Document Core (Modèle métier)",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -58,7 +58,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.13.0"
+    "version" : "1.14.0"
   },
   {
     "id" : "ans_fhir_fr_document_core",
@@ -1694,7 +1694,7 @@
       "reference" : {
         "reference" : "StructureDefinition/FRLMMedicationPrescription"
       },
-      "name" : "Logical model - FR LM FR LM Medication Prescription",
+      "name" : "Logical model - FR LM Medication Prescription",
       "description" : "Section Prescription de médicaments",
       "exampleBoolean" : false,
       "groupingId" : "metier-sections"
@@ -2488,57 +2488,6 @@
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMTransfusionDeProduitsSanguins.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/FRLMTransfusionDeProduitsSanguins"
-      },
-      "name" : "Logical model - FR LM Transfusion de produits sanguins",
-      "description" : "Transfusion de produits sanguins",
-      "exampleBoolean" : false,
-      "groupingId" : "metier-composants-communs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMMultidrugResistantMicroorganismIdentification.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/FRLMMultidrugResistantMicroorganismIdentification"
-      },
-      "name" : "Logical model - FR LM Multidrug Resistant Microorganism Identification",
-      "description" : "Identification de micro-organismes multirésistants",
-      "exampleBoolean" : false,
-      "groupingId" : "metier-composants-communs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMTransfusionAccidents.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/FRLMTransfusionAccidents"
-      },
-      "name" : "Logical model - FR LM Transfusion accidents",
-      "description" : "Accidents transfusionnels",
-      "exampleBoolean" : false,
-      "groupingId" : "metier-composants-communs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "StructureDefinition-FRLMPatientTransfer.html"
       }],
       "reference" : {
@@ -2699,23 +2648,6 @@
       },
       "name" : "Logical model - FR LM Medication Use",
       "description" : "Déclaration de l'utilisation d'un médicament, faisant partie d'une synthèse des traitements médicamenteux du patient.",
-      "exampleBoolean" : false,
-      "groupingId" : "metier-composants-communs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:logical"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "StructureDefinition-FRLMMicroOrganismSearch.html"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/FRLMMicroOrganismSearch"
-      },
-      "name" : "Logical model - FR LM Micro Organism Search",
-      "description" : "Recherche de micro organismes",
       "exampleBoolean" : false,
       "groupingId" : "metier-composants-communs"
     },

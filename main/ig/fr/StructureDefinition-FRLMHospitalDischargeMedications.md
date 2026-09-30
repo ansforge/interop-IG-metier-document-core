@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHospitalDis
   "name" : "FRLMHospitalDischargeMedications",
   "title" : "Logical model - FR LM Hospital Discharge Medications",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -110,8 +110,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHospitalDis
     {
       "id" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications",
       "path" : "FRLMHospitalDischargeMedications.entry.hospitalDischargeMedications",
-      "short" : "Entrée Traitement à la sortie",
-      "definition" : "Entrée Traitement à la sortie",
+      "short" : "Traitement à la sortie",
+      "definition" : "Traitement à la sortie",
       "min" : 1,
       "max" : "*",
       "type" : [{

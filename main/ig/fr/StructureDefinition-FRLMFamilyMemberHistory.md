@@ -73,7 +73,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMFamilyMembe
   "name" : "FRLMFamilyMemberHistory",
   "title" : "Logical model - FR LM Family Member History",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -109,7 +109,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMFamilyMembe
       "min" : 1,
       "binding" : {
         "strength" : "required",
-        "description" : "Statut de l'entrée provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status",
+        "description" : "Statut provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status",
         "valueSet" : "https://hl7.org/fhir/R4/valueset-history-status.html"
       }
     },
@@ -159,7 +159,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMFamilyMembe
       "binding" : {
         "strength" : "required",
         "description" : "Statut provenant du jdv-health-status-code-cisis (1.2.250.1.213.1.1.4.2.283.1)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455"
       }
     },
     {

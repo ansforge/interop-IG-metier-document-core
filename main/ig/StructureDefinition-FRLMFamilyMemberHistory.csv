@@ -6,7 +6,7 @@
 "FRLMFamilyMemberHistory.header.subject","FRLMFamilyMemberHistory.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
 ","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
 "FRLMFamilyMemberHistory.header.identifier","FRLMFamilyMemberHistory.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
-","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+","Identifiant","Identifiant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
 "FRLMFamilyMemberHistory.header.author[x]","FRLMFamilyMemberHistory.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
 ","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
 "FRLMFamilyMemberHistory.header.author[x].authorProfessional","FRLMFamilyMemberHistory.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
@@ -30,7 +30,7 @@ https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisa
 "FRLMFamilyMemberHistory.header.date","FRLMFamilyMemberHistory.header.date","","","",0,1,"","","","dateTime {[]} {[]}
 ","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
 "FRLMFamilyMemberHistory.header.status","FRLMFamilyMemberHistory.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
-","Statut","Statut","","","","","","","","","",,"required","Statut de l'entrée provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status","https://hl7.org/fhir/R4/valueset-history-status.html","",,,,"FRLMEntry.header.status",0,1,"",""
+","Statut","Statut","","","","","","","","","",,"required","Statut provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status","https://hl7.org/fhir/R4/valueset-history-status.html","",,,,"FRLMEntry.header.status",0,1,"",""
 "FRLMFamilyMemberHistory.header.source","FRLMFamilyMemberHistory.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
 "FRLMFamilyMemberHistory.header.language","FRLMFamilyMemberHistory.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
@@ -60,7 +60,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "FRLMFamilyMemberHistory.condition.code","FRLMFamilyMemberHistory.condition.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Problème du membre de la famille","Problème du membre de la famille","","","","","","","","","",,,,,"",,,,"FRLMFamilyMemberHistory.condition.code",1,1,"",""
 "FRLMFamilyMemberHistory.condition.outcome","FRLMFamilyMemberHistory.condition.outcome","","","",0,1,"","","","CodeableConcept {[]} {[]}
-","mort(e) | incapacité ; sévère | etc.","mort(e) | incapacité ; sévère | etc.","","","","","","","","","",,"required","Statut provenant du jdv-health-status-code-cisis (1.2.250.1.213.1.1.4.2.283.1)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260716085852","",,,,"FRLMFamilyMemberHistory.condition.outcome",0,1,"",""
+","mort(e) | incapacité ; sévère | etc.","mort(e) | incapacité ; sévère | etc.","","","","","","","","","",,"required","Statut provenant du jdv-health-status-code-cisis (1.2.250.1.213.1.1.4.2.283.1)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-health-status-code-cisis|20260916095455","",,,,"FRLMFamilyMemberHistory.condition.outcome",0,1,"",""
 "FRLMFamilyMemberHistory.condition.contributedToDeath","FRLMFamilyMemberHistory.condition.contributedToDeath","","","",0,1,"","","","boolean {[]} {[]}
 ","problème cause du décès (O/N)","problème cause du décès (O/N)","","","","","","","","","",,,,,"",,,,"FRLMFamilyMemberHistory.condition.contributedToDeath",0,1,"",""
 "FRLMFamilyMemberHistory.condition.onset[x]","FRLMFamilyMemberHistory.condition.onset[x]","","","",0,1,"","","","dateTime {[]} {[]}

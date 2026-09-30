@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExaminationRe
   "name" : "FRLMExaminationReport",
   "title" : "Logical model - FR LM Examination Report",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -89,8 +89,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExaminationRe
     {
       "id" : "FRLMExaminationReport.entry.imagingProcedures",
       "path" : "FRLMExaminationReport.entry.imagingProcedures",
-      "short" : "Entrée Techniques d'imagerie",
-      "definition" : "Entrée Techniques d'imagerie",
+      "short" : "Techniques d'imagerie",
+      "definition" : "Techniques d'imagerie",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -100,8 +100,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExaminationRe
     {
       "id" : "FRLMExaminationReport.entry.medicationAdministrations",
       "path" : "FRLMExaminationReport.entry.medicationAdministrations",
-      "short" : "Entrée Produits de santé administrés pendant l'acte d'imagerie",
-      "definition" : "Entrée Produits de santé administrés pendant l'acte d'imagerie",
+      "short" : "Produits de santé administrés pendant l'acte d'imagerie",
+      "definition" : "Produits de santé administrés pendant l'acte d'imagerie",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -111,8 +111,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMExaminationRe
     {
       "id" : "FRLMExaminationReport.entry.adverseReactions",
       "path" : "FRLMExaminationReport.entry.adverseReactions",
-      "short" : "Entrée allergies et intolérances",
-      "definition" : "Entrée allergies et intolérances",
+      "short" : "Allergies et intolérances",
+      "definition" : "Allergies et intolérances",
       "min" : 0,
       "max" : "*",
       "type" : [{

@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPregnancyStat
   "name" : "FRLMPregnancyStatus",
   "title" : "Logical model- FR LM Pregnancy Status",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -132,7 +132,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPregnancyStat
       "binding" : {
         "strength" : "required",
         "description" : "Statut de grossesse de la patiente (enceinte, pas enceinte, etc.)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-statut-grossesse-cisis|20260916095454"
       }
     },
     {
@@ -193,8 +193,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPregnancyStat
     {
       "id" : "FRLMPregnancyStatus.hasMember[x]",
       "path" : "FRLMPregnancyStatus.hasMember[x]",
-      "short" : "Observations rattachées a cette entrée",
-      "definition" : "Observations rattachées a cette entrée",
+      "short" : "Observations rattachées",
+      "definition" : "Observations rattachées",
       "min" : 0,
       "max" : "*",
       "type" : [{

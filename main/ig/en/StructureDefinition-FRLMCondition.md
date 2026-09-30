@@ -36,7 +36,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
   "name" : "FRLMCondition",
   "title" : "Logical model - FR LM Condition",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -73,7 +73,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
       "binding" : {
         "strength" : "required",
         "description" : "Valeur issue du jdv-hl7-condition-clinical-cisis (2.16.840.1.113883.4.642.3.164)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-clinical-cisis|20260916095455"
       }
     },
     {
@@ -89,7 +89,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
       "binding" : {
         "strength" : "required",
         "description" : "Valeur issue du jdv-code-probleme-cisis (1.2.250.1.213.1.1.5.172)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260716085853"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-code-probleme-cisis|20260916095457"
       }
     },
     {
@@ -150,7 +150,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
       "binding" : {
         "strength" : "required",
         "description" : "SNOMED_CT => Valeur issue du jdv-severite-observation-cisis (1.2.250.1.213.1.1.5.675)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-severite-observation-cisis|20260916095454"
       }
     },
     {
@@ -199,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
       "binding" : {
         "strength" : "required",
         "description" : "Valeur issue du jdv-hl7-condition-ver-status-cisis (2.16.840.1.113883.4.642.3.166)",
-        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260716085852"
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-condition-ver-status-cisis|20260916095455"
       }
     },
     {

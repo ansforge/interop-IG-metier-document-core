@@ -69,5 +69,5 @@ Par exemple : une synthèse médicale rédigée par le médecin traitant du pati
 
 #### Terminologies de références
 
-Voir [https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html](https://ansforge.github.io/IG-terminologie-de-sante/ig/main/index.html)
+Voir [https://interop.esante.gouv.fr/terminologies/index.html](https://interop.esante.gouv.fr/terminologies/index.html)
 

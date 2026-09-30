@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHistoryOfPast
   "name" : "FRLMHistoryOfPastIllness",
   "title" : "Logical model - FR LM FRLM History Of Past Illness",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -88,8 +88,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMHistoryOfPast
     {
       "id" : "FRLMHistoryOfPastIllness.entry.problem",
       "path" : "FRLMHistoryOfPastIllness.entry.problem",
-      "short" : "Entrée Problème",
-      "definition" : "Entrée Problème",
+      "short" : "Problème",
+      "definition" : "Problème",
       "min" : 1,
       "max" : "*",
       "type" : [{

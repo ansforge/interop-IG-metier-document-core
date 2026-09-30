@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatientEducat
   "name" : "FRLMPatientEducation",
   "title" : "Logical model - FR LM Patient Education",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -78,8 +78,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatientEducat
     {
       "id" : "FRLMPatientEducation.entry.procedure",
       "path" : "FRLMPatientEducation.entry.procedure",
-      "short" : "Entrée Acte",
-      "definition" : "Entrée Acte",
+      "short" : "Acte",
+      "definition" : "Acte",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -89,8 +89,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatientEducat
     {
       "id" : "FRLMPatientEducation.entry.observation",
       "path" : "FRLMPatientEducation.entry.observation",
-      "short" : "Entrée Simple observation",
-      "definition" : "Entrée Simple observation",
+      "short" : "Observation",
+      "definition" : "Observation",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -100,8 +100,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatientEducat
     {
       "id" : "FRLMPatientEducation.entry.reference",
       "path" : "FRLMPatientEducation.entry.reference",
-      "short" : "Entrée Références externes",
-      "definition" : "Entrée Références externes",
+      "short" : "Référence externe",
+      "definition" : "Référence externe",
       "min" : 0,
       "max" : "*",
       "type" : [{

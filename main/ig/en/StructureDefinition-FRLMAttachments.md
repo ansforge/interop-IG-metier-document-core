@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAttachments.c
   "name" : "FRLMAttachments",
   "title" : "Logical model - FR LM Attachments",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -78,8 +78,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAttachments.c
     {
       "id" : "FRLMAttachments.entry.observation",
       "path" : "FRLMAttachments.entry.observation",
-      "short" : "Entrée Simple observation : Permet d'indiquer la nature des documents ajoutés",
-      "definition" : "Entrée Simple observation : Permet d'indiquer la nature des documents ajoutés",
+      "short" : "Permet d'indiquer la nature des documents ajoutés",
+      "definition" : "Permet d'indiquer la nature des documents ajoutés",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -89,8 +89,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAttachments.c
     {
       "id" : "FRLMAttachments.entry.attachment",
       "path" : "FRLMAttachments.entry.attachment",
-      "short" : "Entrée Document attaché",
-      "definition" : "Entrée Document attaché",
+      "short" : "Document attaché",
+      "definition" : "Document attaché",
       "min" : 1,
       "max" : "*",
       "type" : [{

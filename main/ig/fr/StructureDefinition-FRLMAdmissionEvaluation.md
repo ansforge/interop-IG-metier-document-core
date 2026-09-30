@@ -67,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAdmissionEv
   "name" : "FRLMAdmissionEvaluation",
   "title" : "Logical model - FR LM Admission Evaluation",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -110,8 +110,8 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAdmissionEv
     {
       "id" : "FRLMAdmissionEvaluation.entry.encounterInformation",
       "path" : "FRLMAdmissionEvaluation.entry.encounterInformation",
-      "short" : "Entrée Informations sur la rencontre",
-      "definition" : "Entrée Informations sur la rencontre",
+      "short" : "Informations sur la rencontre",
+      "definition" : "Informations sur la rencontre",
       "min" : 0,
       "max" : "1",
       "type" : [{

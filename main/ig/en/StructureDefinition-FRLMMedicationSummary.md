@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationSum
   "name" : "FRLMMedicationSummary",
   "title" : "Logical model - FR LM Medication Summary",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationSum
     {
       "id" : "FRLMMedicationSummary.entry.medicationAdministration",
       "path" : "FRLMMedicationSummary.entry.medicationAdministration",
-      "short" : "Entrée Traitement",
-      "definition" : "Entrée Traitement",
+      "short" : "Traitement",
+      "definition" : "Traitement",
       "min" : 1,
       "max" : "*",
       "type" : [{

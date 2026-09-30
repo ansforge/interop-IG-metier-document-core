@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAdvanceDirect
   "name" : "FRLMAdvanceDirectives",
   "title" : "Logical model - FR LM Advance Directives",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAdvanceDirect
     {
       "id" : "FRLMAdvanceDirectives.entry.advanceDirective",
       "path" : "FRLMAdvanceDirectives.entry.advanceDirective",
-      "short" : "Entrée Directive anticipée",
-      "definition" : "Entrée Directive anticipée",
+      "short" : "Directive anticipée",
+      "definition" : "Directive anticipée",
       "min" : 0,
       "max" : "*",
       "type" : [{

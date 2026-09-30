@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSocialHistory
   "name" : "FRLMSocialHistory",
   "title" : "Logical model - FR LM SocialHistory",
   "status" : "draft",
-  "date" : "2026-09-28T10:07:47+00:00",
+  "date" : "2026-09-30T20:10:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMSocialHistory
     {
       "id" : "FRLMSocialHistory.entry.observationSocialHistory",
       "path" : "FRLMSocialHistory.entry.observationSocialHistory",
-      "short" : "Entrée Habitus, Mode de vie",
-      "definition" : "Entrée Habitus, Mode de vie",
+      "short" : "Habitus, Mode de vie",
+      "definition" : "Habitus, Mode de vie",
       "min" : 0,
       "max" : "*",
       "type" : [{
