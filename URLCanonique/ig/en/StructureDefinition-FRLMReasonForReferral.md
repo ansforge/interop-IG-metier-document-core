@@ -40,7 +40,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMReasonForRefe
   "name" : "FRLMReasonForReferral",
   "title" : "Logical model - FR LM Reason for referral",
   "status" : "draft",
-  "date" : "2026-09-30T08:39:54+00:00",
+  "date" : "2026-09-30T08:56:57+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -83,8 +83,8 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMReasonForRefe
     {
       "id" : "FRLMReasonForReferral.entry.observation",
       "path" : "FRLMReasonForReferral.entry.observation",
-      "short" : "Simple observation",
-      "definition" : "Simple observation",
+      "short" : "Observation",
+      "definition" : "Observation",
       "min" : 1,
       "max" : "1",
       "type" : [{
