@@ -7,5 +7,5 @@ Characteristics: #can-be-target
 
 * subSection 0..0
 * entry 1..*
-  * observation  1..1 FRLMObservation "Simple observation"
+  * observation  1..1 FRLMObservation "Observation"
   * problemes  1..* FRLMCondition "Problème"

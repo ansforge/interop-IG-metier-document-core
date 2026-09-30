@@ -8,5 +8,5 @@ Characteristics: #can-be-target
 * subSection 0..0 
 * entry 
   * procedure  0..* FRLMProcedure "Acte"
-  * observation  0..* FRLMObservation "Simple observation"
-  * reference 0..* FRLMAttachment "Références externes"
+  * observation  0..* FRLMObservation "Observation"
+  * reference 0..* FRLMAttachment "Référence externe"
