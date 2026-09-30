@@ -28,6 +28,9 @@ Par exemple, motif pour lequelle la ligne de prescription a été invalidée ou 
     * ^binding.description = "jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis (2.16.840.1.113883.1.11.16621)"
     * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis"
   * reason[x] 0..1 CodeableConcept or string  "Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle)."
+    * ^binding.strength = #required
+    * ^binding.description = "Valeur issue du jdv-substitution-medicament-prescripteur-cisis (1.2.250.1.213.1.1.5.860)"
+    * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-substitution-medicament-prescripteur-cisis"
 * numberOfRepeats 0..1 integer "Nombre de renouvellement(s) possible(s). Non renseigné si pas de limite du nombre de dispensation. '0'=dispensation unique. Le nombre total de dispensation = nombre de renouvellement + 1."
 * minimumDispenseInterval 0..1 Quantity "Intervalle minimal de délivrance. Si une ordonnance autorise des délivrances répétées, l'intervalle entre ces délivrances doit être indiqué ici."
 * offLabel 1..1 Base "Hors AMM. Indique que le prescripteur a sciemment prescrit le médicament pour une indication, un groupe d'âge, une posologie ou une voie d'administration non approuvée par les organismes de réglementation et non mentionnée dans la notice du médicament."
