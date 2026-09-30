@@ -1,9 +1,0 @@
-Logical: FRLMTransfusionAccidents
-Id: FRLMTransfusionAccidents
-Parent: FRLMEntry
-Title: "Logical model - FR LM Transfusion accidents"
-Description: """Accidents transfusionnels"""
-Characteristics: #can-be-target
-
-* code 1..1 CodeableConcept "Code de l’observation"
-* valeur 1..1 string  "Description sous forme textuelle de l'accident transfusionnel"

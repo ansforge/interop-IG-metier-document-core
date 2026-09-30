@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * orderInformation 0..1 FRLMServiceRequest "Entrée Demande d'examen d'imagerie / Demande de biologie médicale"
+  * orderInformation 0..1 FRLMServiceRequest "Demande d'examen d'imagerie / Demande de biologie médicale"

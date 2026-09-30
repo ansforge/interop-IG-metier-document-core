@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * carePlans 0..* FRLMCarePlan "Entrée Plan de soins"
+  * carePlans 0..* FRLMCarePlan "Plan de soins"

@@ -7,7 +7,7 @@ Characteristics: #can-be-target
 
 * header.status 1..1 
   * ^binding.strength = #required
-  * ^binding.description = "Statut de l'entrée provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status"
+  * ^binding.description = "Statut provenant du jdv FHIR https://hl7.org/fhir/R4/valueset-history-status"
   * ^binding.valueSet = "https://hl7.org/fhir/R4/valueset-history-status.html"
 * relatedPerson 1..1 FRLMRelatedPerson "Membre de la famille"
 * condition 0..* BackboneElement "Problème du membre de la famille"

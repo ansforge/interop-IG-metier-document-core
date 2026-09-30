@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * subSection 0..0
 * titleSection 1..1 
 * entry 1..*  
-  * adverseEvent  1..* FRLMAdverseDrugReaction "Entrée Effet indesirable"
+  * adverseEvent  1..* FRLMAdverseDrugReaction "Effet indésirable"

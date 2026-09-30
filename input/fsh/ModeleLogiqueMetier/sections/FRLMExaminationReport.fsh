@@ -9,7 +9,7 @@ Characteristics: #can-be-target
 * subSection
   * conclusion 0..1	FRLMConclusion "Conclusion de l'examen"
 * entry
-  * imagingProcedures 1..1 FRLMProcedure "Entrée Techniques d'imagerie"
-  * medicationAdministrations 0..* FRLMMedicationAdministration "Entrée Produits de santé administrés pendant l'acte d'imagerie"
-  * adverseReactions 0..* FRLMAllergyIntolerance "Entrée allergies et intolérances"
+  * imagingProcedures 1..1 FRLMProcedure "Techniques d'imagerie"
+  * medicationAdministrations 0..* FRLMMedicationAdministration "Produits de santé administrés pendant l'acte d'imagerie"
+  * adverseReactions 0..* FRLMAllergyIntolerance "Allergies et intolérances"
   * results[x] 0..* FRLMObservation or string "Résultats d'examens"

@@ -8,4 +8,4 @@ Characteristics: #can-be-target
 * titleSection 1..1 
 * subSection 0..0
 * entry
-  * observationSocialHistory  0..* FRLMObservationSocialHistory "Entrée Habitus, Mode de vie"
+  * observationSocialHistory  0..* FRLMObservationSocialHistory "Habitus, Mode de vie"

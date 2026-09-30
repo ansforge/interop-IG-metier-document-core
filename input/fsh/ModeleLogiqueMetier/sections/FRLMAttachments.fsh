@@ -7,5 +7,5 @@ Characteristics: #can-be-target
 
 * subSection 0..0 
 * entry
-  * observation 0..1 FRLMObservation "Entrée Simple observation : Permet d'indiquer la nature des documents ajoutés"
-  * attachment 1..* FRLMAttachment "Entrée Document attaché"
+  * observation 0..1 FRLMObservation "Simple observation : Permet d'indiquer la nature des documents ajoutés"
+  * attachment 1..* FRLMAttachment "Document attaché"
