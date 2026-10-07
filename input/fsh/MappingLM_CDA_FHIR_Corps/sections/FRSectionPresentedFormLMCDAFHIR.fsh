@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMPresentedForm vers l
 // élément racine
 * group[=].element[+].code = #FRLMPresentedForm
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDADocumentPDFCopie"
+* group[=].element[=].target[=].display = "FRCDASectionDocumentPDFCopie"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMPresentedForm.codeSection

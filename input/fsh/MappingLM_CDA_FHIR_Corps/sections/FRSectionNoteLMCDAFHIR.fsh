@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMNote vers la section
 // Élément racine
 * group[=].element[+].code = #FRLMNote
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDACommentaireNonCode"
+* group[=].element[=].target.display = "FRCDASectionCommentaireNonCode"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMNote.codeSection

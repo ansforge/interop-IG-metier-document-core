@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMHospitalDischargeMed
 // Élément racine
 * group[=].element[+].code = #FRLMHospitalDischargeMedications
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDATraitementsALaSortie"
+* group[=].element[=].target.display = "FRCDASectionTraitementsALaSortie"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMHospitalDischargeMedications.codeSection

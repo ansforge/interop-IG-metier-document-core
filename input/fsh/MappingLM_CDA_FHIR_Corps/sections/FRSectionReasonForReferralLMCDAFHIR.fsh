@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMReasonForReferral ve
 // élément racine
 * group[=].element[+].code = #FRLMReasonForReferral
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDARaisonDeLaRecommandation"
+* group[=].element[=].target[=].display = "FRCDASectionRaisonDeLaRecommandation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMReasonForReferral.codeSection
@@ -30,10 +30,12 @@ Description: "Mapping des éléments du modèle métier FRLMReasonForReferral ve
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMReasonForReferral.entry.observation
 * group[=].element[=].target[+].code = #Section.entry:frSimpleObservation.observation
+* group[=].element[=].target[=].display = "FRCDASimpleObservation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Problème
 * group[=].element[+].code = #FRLMReasonForReferral.entry.problemes
 * group[=].element[=].target[+].code = #Section.entry:frProbleme.observation
+* group[=].element[=].target[=].display = "FRCDAProbleme"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR

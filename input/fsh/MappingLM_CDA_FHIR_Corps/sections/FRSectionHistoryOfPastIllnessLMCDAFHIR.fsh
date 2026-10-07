@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMHistoryOfPastIllness
 // Élément racine
 * group[=].element[+].code = #FRLMHistoryOfPastIllness
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDAAntecedentsMedicaux"
+* group[=].element[=].target.display = "FRCDASectionAntecedentsMedicaux"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMHistoryOfPastIllness.codeSection

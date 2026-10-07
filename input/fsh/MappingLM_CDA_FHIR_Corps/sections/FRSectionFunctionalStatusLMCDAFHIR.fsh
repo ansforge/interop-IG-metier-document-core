@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 // Élément racine
 * group[=].element[+].code = #FRLMFunctionalStatus
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDAStatutFonctionnel"
+* group[=].element[=].target.display = "FRCDASectionStatutFonctionnel"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMFunctionalStatus.codeSection

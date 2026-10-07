@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMResultData vers la s
 // Élément racine
 * group[=].element[+].code = #FRLMResultData
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDACRBIOChapitre"
+* group[=].element[=].target.display = "FRCDASectionCRBIOChapitre"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMResultData.codeSection

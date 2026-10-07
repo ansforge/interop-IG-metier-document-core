@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicePrescri
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAPrescriptionDispositifsMedicaux"
+* group[=].element[=].target[=].display = "FRCDASectionPrescriptionDispositifsMedicaux"
 * group[=].element[=].target[=].equivalence = #equivalent
 // auteur de la prescription
 * group[=].element[+].code = #FRLMMedicalDevicePrescriptions.author[x]

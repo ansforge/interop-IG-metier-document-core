@@ -15,7 +15,7 @@ Description: "Mapping des éléments du modèle métier FRLMHazardousWorkingCond
 // élément racine
 * group[=].element[+].code = #FRLMHazardousWorkingConditions
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAFacteursDeRisqueProfessionnelsNonCode"
+* group[=].element[=].target[=].display = "FRCDASectionFacteursDeRisqueProfessionnelsNonCode"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMHazardousWorkingConditions.codeSection

@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMPatientEducation ver
 // élément racine
 * group[=].element[+].code = #FRLMPatientEducation
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAEducationDuPatient"
+* group[=].element[=].target[=].display = "FRCDASectionEducationDuPatient"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMPatientEducation.codeSection
@@ -29,15 +29,18 @@ Description: "Mapping des éléments du modèle métier FRLMPatientEducation ver
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMPatientEducation.entry.procedure
-* group[=].element[=].target[+].code = #Section.entry:frActe.procedure
+* group[=].element[=].target[+].code = #Section.entry.procedure
+* group[=].element[=].target[=].display = "FRCDAActe"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMPatientEducation.entry.observation
-* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation.observation
+* group[=].element[=].target[+].code = #Section.entry.observation
+* group[=].element[=].target[=].display = "FRCDASimpleObservation"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée References externes
 * group[=].element[+].code = #FRLMPatientEducation.entry.reference
-* group[=].element[=].target[+].code = #Section.entry:frReferencesExternes.act
+* group[=].element[=].target[+].code = #Section.entry.act
+* group[=].element[=].target[=].display = "FRCDAReferencesExternes"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR

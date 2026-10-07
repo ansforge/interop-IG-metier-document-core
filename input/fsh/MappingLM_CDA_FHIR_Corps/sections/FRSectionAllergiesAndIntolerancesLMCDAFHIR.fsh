@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 // Élément racine
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDAAllergiesEtHypersensibilites"
+* group[=].element[=].target.display = "FRCDASectionAllergiesEtHypersensibilites"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances.codeSection

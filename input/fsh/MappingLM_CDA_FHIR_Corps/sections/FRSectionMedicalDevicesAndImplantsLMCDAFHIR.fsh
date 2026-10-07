@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicalDevicesAndImp
 // élément racine
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDADispositifsMedicaux"
+* group[=].element[=].target[=].display = "FRCDASectionDispositifsMedicaux"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMMedicalDevicesAndImplants.codeSection
