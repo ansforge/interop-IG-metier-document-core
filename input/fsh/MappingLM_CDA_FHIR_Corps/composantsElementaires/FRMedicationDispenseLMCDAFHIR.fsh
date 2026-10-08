@@ -49,11 +49,16 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 // Date et heure de dispense
 * group[=].element[+].code = #FRLMMedicationDispense.timeOfDispensation
 * group[=].element[=].target.equivalence = #unmatched
-// Autorisation de substitution
-* group[=].element[+].code = #FRLMMedicationDispense.substitutionOccurred
-* group[=].element[=].target.code = #Supply.entryRelationship:frActeSubstitution
+// Autorisation de substitution : type de substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.type
+* group[=].element[=].target.code = #Supply.entryRelationship:frActeSubstitution.code
 * group[=].element[=].target.display = "FRCDAActeSubstitution"
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Le code de l'acte de substitution est fixé à G (substitution autorisée par un produit générique) dans FRCDAActeSubstitution, alors que le modèle métier admet deux valeurs (jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis) : la cible CDA est plus restreinte que la source."
+// Autorisation de substitution : motif de non substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.reason[x]
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut CDA identifié dans FRCDAActeSubstitution pour le motif de non substitution."
 // Posologie (référence vers l'entrée CDA FR-Traitement imbriquée)
 * group[=].element[+].code = #FRLMMedicationDispense.dosageInstructions
 * group[=].element[=].target.code = #Supply.entryRelationship:frTraitement

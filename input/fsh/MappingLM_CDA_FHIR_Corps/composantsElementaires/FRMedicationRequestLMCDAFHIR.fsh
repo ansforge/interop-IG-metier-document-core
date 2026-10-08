@@ -71,9 +71,10 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 
 // Autorisation de substitution
 * group[=].element[+].code = #FRLMPrescriptionItem.substitution.allowed[x]
-* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frAutorisationSubstitution
+* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frAutorisationSubstitution.code
 * group[=].element[=].target.display = "FRCDAAutorisationSubstitution"
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Le code de FRCDAAutorisationSubstitution porte le type de substitution (jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis). La source peut aussi être un booléen, qui n'est pas représentable par ce code : la cible est plus restreinte que la source."
 
 // Motif de non substitution : nouvel élément
 * group[=].element[+].code = #FRLMPrescriptionItem.substitution.reason[x]
