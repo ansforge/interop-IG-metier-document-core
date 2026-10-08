@@ -18,6 +18,14 @@ Characteristics: #can-be-target
 * dispensedQuantity 1..1 Quantity "Quantite de produit. 
 Nombre d'emballages distribués si leur format est connu, ou nombre d'articles/unités plus petits, selon le médicament distribué. Une unité est attendue."
 * timeOfDispensation	0..1 dateTime	"Date et heure de dispense du médicament. Si non présent, la date de dispensation est celle du header."
-* substitutionOccurred 1..1 boolean "Autorisation de substitution"
+* substitution 0..1 Base "Autorisation de substitution"
+  * type 0..1 CodeableConcept "Type de substitution"
+    * ^binding.strength = #required
+    * ^binding.description = "jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis (2.16.840.1.113883.1.11.16621)"
+    * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis"
+  * reason[x] 0..1 CodeableConcept or string  "Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle)."
+    * ^binding.strength = #required
+    * ^binding.description = "Valeur issue du jdv-substitution-medicament-dispensateur-cisis (1.2.250.1.213.1.1.5.861)"
+    * ^binding.valueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-substitution-medicament-dispensateur-cisis"
 * dosageInstructions 0..1 FRLMDosageInstructions "Posologie"
 * note 0..1 string "Notes du dispensateur"
