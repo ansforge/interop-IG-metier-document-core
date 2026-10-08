@@ -178,6 +178,7 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 * group[=].element[+].code = #FRLMPrescriptionItem.substitution.reason[x]
 * group[=].element[=].target.code = #MedicationRequest.substitution.reason
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Valeur issue du jeu de valeurs jdv-substitution-medicament-prescripteur-cisis (binding required côté modèle métier). Si la source est de type string, elle est portée par MedicationRequest.substitution.reason.text."
 // Nombre de renouvellements
 * group[=].element[+].code = #FRLMPrescriptionItem.numberOfRepeats
 * group[=].element[=].target.code = #MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
