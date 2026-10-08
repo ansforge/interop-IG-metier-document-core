@@ -339,7 +339,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMEncounter.type | Encounter.code | Encounter.class |
 | FRLMEncounter.period | Encounter.effectiveTime | Encounter.period |
 | FRLMEncounter.priority | Encounter.priorityCode | Encounter.priority |
-| FRLMEncounter.participant | Encounter.participant:autresParticipants | Encounter.participant |
+| FRLMEncounter.participant | Encounter.participant (FRCDAParticipantCorps) | Encounter.participant |
 | FRLMEncounter.serviceProvider | Encounter.performer.assignedEntity | Encounter.serviceProvider |
 | FRLMEncounter.referringProfessional | Encounter.performer | Encounter.participant.individual |
 | FRLMEncounter.basedOn[x] |  | Encounter.basedOn |

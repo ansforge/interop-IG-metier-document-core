@@ -33,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMProcedure.csv
   "name" : "FRLMProcedure",
   "title" : "Logical model- FR LM Procedure",
   "status" : "draft",
-  "date" : "2026-10-07T13:52:25+00:00",
+  "date" : "2026-10-08T12:48:01+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
