@@ -42,7 +42,8 @@ Description: "Mapping des éléments du modèle métier FRLMEncounter vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Participants de la rencontre
 * group[=].element[+].code = #FRLMEncounter.participant
-* group[=].element[=].target.code = #Encounter.participant:autresParticipants
+* group[=].element[=].target.code = #Encounter.participant
+* group[=].element[=].target.display = "FRCDAParticipantCorps"
 * group[=].element[=].target.equivalence = #equivalent
 // Organisation responsable
 * group[=].element[+].code = #FRLMEncounter.serviceProvider
