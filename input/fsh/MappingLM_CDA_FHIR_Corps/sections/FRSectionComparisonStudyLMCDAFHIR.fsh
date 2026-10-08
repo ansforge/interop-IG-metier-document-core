@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMComparisonStudy vers
 // Élément racine
 * group[=].element[+].code = #FRLMComparisonStudy
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMExamenComparatif"
+* group[=].element[=].target.display = "FRCDASectionDICOMExamenComparatif"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMComparisonStudy.codeSection

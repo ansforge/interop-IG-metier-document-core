@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMAlerts vers la secti
 // élément racine
 * group[=].element[+].code = #FRLMAlerts
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAPointsDeVigilancesNonCode"
+* group[=].element[=].target[=].display = "FRCDASectionPointsDeVigilancesNonCode"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMAlerts.codeSection

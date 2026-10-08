@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 // élément racine
 * group[=].element[+].code = #FRLMProblems
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAProblemesActifs"
+* group[=].element[=].target[=].display = "FRCDASectionProblemesActifs"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMProblems.codeSection

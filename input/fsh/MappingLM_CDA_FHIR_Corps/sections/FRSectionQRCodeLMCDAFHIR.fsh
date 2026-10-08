@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMQRCode vers la secti
 // Élément racine
 * group[=].element[+].code = #FRLMQRCode
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDACodeABarres"
+* group[=].element[=].target.display = "FRCDASectionCodeABarres"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMQRCode.codeSection

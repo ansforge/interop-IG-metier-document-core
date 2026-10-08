@@ -1,8 +1,8 @@
 Instance: FRSectionSocialHistoryLMCDAFHIR
 InstanceOf: ConceptMap
 Usage: #definition
-Title: "Mapping FRLMSocialHistory → FRCDAHabitusModeDeVieSection / FRLMSocialHistory → FRCompositionDocument.section:sectionSocialHistory"
-Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA FRCDAHabitusModeDeVieSection, puis vers le profil FHIR FRCompositionDocument.section:sectionSocialHistory."
+Title: "Mapping FRLMSocialHistory → FRCDASectionHabitusModeDeVie / FRLMSocialHistory → FRCompositionDocument.section:sectionSocialHistory"
+Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers la section CDA FRCDASectionHabitusModeDeVie, puis vers le profil FHIR FRCompositionDocument.section:sectionSocialHistory."
 * name = "FRSectionSocialHistoryLMCDAFHIR"
 * title = "Mapping Métier/CDA/FHIR : Habitus et modes de vie"
 * experimental = false
@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 // Élément racine
 * group[=].element[+].code = #FRLMSocialHistory
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDAHabitusModeDeVieSection"
+* group[=].element[=].target.display = "FRCDASectionHabitusModeDeVie"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMSocialHistory.codeSection
@@ -29,7 +29,7 @@ Description: "Mapping des éléments du modèle métier FRLMSocialHistory vers l
 * group[=].element[=].target.equivalence = #equivalent
 // entrées Habitus, Mode de vie
 * group[=].element[+].code = #FRLMSocialHistory.entry.observationSocialHistory
-* group[=].element[=].target.code = #Section.entry
+* group[=].element[=].target.code = #Section.entry.observation
 * group[=].element[=].target.display = "FRCDAHabitusModeDeVie"
 * group[=].element[=].target.equivalence = #equivalent
 

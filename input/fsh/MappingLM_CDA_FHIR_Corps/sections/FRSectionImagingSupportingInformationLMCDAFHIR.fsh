@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMSupportingInformatio
 // élément racine
 * group[=].element[+].code = #FRLMSupportingInformation
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMHistoriqueMedical"
+* group[=].element[=].target.display = "FRCDASectionDICOMHistoriqueMedical"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMSupportingInformation.codeSection

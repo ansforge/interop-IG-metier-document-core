@@ -18,24 +18,24 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[=].target.equivalence = #equivalent
 // Identifiant
 * group[=].element[+].code = #FRLMSpecimen.identifier
-* group[=].element[=].target.code = #Procedure.id
+* group[=].element[=].target.code = #Procedure.participant:EchantillonPreleve.participantRole.id
 * group[=].element[=].target.equivalence = #equivalent
-// Statut
+// Statut / disponibilité de l'échantillon
 * group[=].element[+].code = #FRLMSpecimen.status
-* group[=].element[=].target.code = #Procedure.statusCode
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Le statut du modèle métier décrit la disponibilité ou l'état de l'échantillon. Il ne correspond pas au statut de l'acte de prélèvement porté par Procedure.statusCode. Aucun élément équivalent n'est actuellement identifié dans FRCDAPrelevement."
 // Type d'échantillon
 * group[=].element[+].code = #FRLMSpecimen.type
-* group[=].element[=].target.code = #Procedure.code
+* group[=].element[=].target.code = #Procedure.participant:EchantillonPreleve.participantRole.playingEntity.code
 * group[=].element[=].target.equivalence = #equivalent
 // Origine du prélèvement
 * group[=].element[+].code = #FRLMSpecimen.specimenSource[x]
-* group[=].element[=].target.code = #Procedure.participant
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut CDA identifié dans FRCDAPrelevement pour l'origine du prélèvement (patient, lieu ou dispositif) : participant:DispositifUtilise désigne le dispositif utilisé pour le prélèvement, pas son origine."
 // Prélèvement parent
 * group[=].element[+].code = #FRLMSpecimen.parentSpecimen
-* group[=].element[=].target.code = #Procedure.participant:EchantillonPreleve
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut CDA identifié dans FRCDAPrelevement pour référencer le prélèvement dont provient l'échantillon : participant:EchantillonPreleve porte l'échantillon lui-même (identifiant, nature, quantité)."
 // Demande à l'origine du prélèvement
 * group[=].element[+].code = #FRLMSpecimen.request
 * group[=].element[=].target.equivalence = #unmatched
@@ -46,16 +46,19 @@ Description: "Mapping des éléments du modèle métier FRLMSpecimen vers le pro
 * group[=].element[+].code = #FRLMSpecimen.collection.performer[x]
 * group[=].element[=].target.code = #Procedure.performer
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Correspondance applicable lorsque collection.performer[x] représente l'organisation prélevante. Les autres types de performer du modèle métier ne sont pas nécessairement représentables par FRCDAPerformerCorps."
 // Détails de la collecte - Date du prélèvement
 * group[=].element[+].code = #FRLMSpecimen.collection.collected[x]
 * group[=].element[=].target.code = #Procedure.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Détails de la collecte - Quantité
 * group[=].element[+].code = #FRLMSpecimen.collection.quantity
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #Procedure.participant:EchantillonPreleve.participantRole.playingEntity.quantity
+* group[=].element[=].target.equivalence = #equivalent
 // Détails de la collecte - Acte de prélèvement
 * group[=].element[+].code = #FRLMSpecimen.collection.method
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #Procedure.code
+* group[=].element[=].target.equivalence = #equivalent
 // Détails de la collecte - Dispositif utilisé
 * group[=].element[+].code = #FRLMSpecimen.collection.device
 * group[=].element[=].target.code = #Procedure.participant:DispositifUtilise

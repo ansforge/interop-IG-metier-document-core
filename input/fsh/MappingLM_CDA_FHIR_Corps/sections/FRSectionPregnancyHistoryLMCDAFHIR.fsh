@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 // élément racine
 * group[=].element[+].code = #FRLMSectionPregnancyHistory
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAHistoriqueDesGrossesses"
+* group[=].element[=].target[=].display = "FRCDASectionHistoriqueDesGrossesses"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.codeSection
@@ -30,11 +30,13 @@ Description: "Mapping des éléments du modèle métier FRLMSectionPregnancyHist
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Observation sur la grossesse
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyStatus
-* group[=].element[=].target[+].code = #Section.entry:frObservationSurLaGrossesse.observation
+* group[=].element[=].target[+].code = #Section.entry.observation
+* group[=].element[=].target[=].display = "FRCDAObservationSurLaGrossesse"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Historique des grossesses
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.entry.pregnancyHistory
-* group[=].element[=].target[+].code = #Section.entry:frHistoriqueDeLaGrossesse.organizer
+* group[=].element[=].target[+].code = #Section.entry.organizer
+* group[=].element[=].target[=].display = "FRCDAHistoriqueDeLaGrossesse"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Commentaire de la section : aucune cible directe
 * group[=].element[+].code = #FRLMSectionPregnancyHistory.note

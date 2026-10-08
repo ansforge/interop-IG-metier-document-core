@@ -36,6 +36,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 // Référence de la prescription
 * group[=].element[+].code = #FRLMMedicationDispense.relatedRequest
 * group[=].element[=].target.code = #Supply.entryRelationship:frReferenceItemPrescription
+* group[=].element[=].target.display = "FRCDAReferenceItemPrescription"
 * group[=].element[=].target.equivalence = #equivalent
 // Médicament délivré
 * group[=].element[+].code = #FRLMMedicationDispense.medicament
@@ -48,17 +49,25 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 // Date et heure de dispense
 * group[=].element[+].code = #FRLMMedicationDispense.timeOfDispensation
 * group[=].element[=].target.equivalence = #unmatched
-// Autorisation de substitution
-* group[=].element[+].code = #FRLMMedicationDispense.substitutionOccurred
-* group[=].element[=].target.code = #Supply.entryRelationship:frActeSubstitution
-* group[=].element[=].target.equivalence = #equivalent
+// Autorisation de substitution : type de substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.type
+* group[=].element[=].target.code = #Supply.entryRelationship:frActeSubstitution.code
+* group[=].element[=].target.display = "FRCDAActeSubstitution"
+* group[=].element[=].target.equivalence = #narrower
+* group[=].element[=].target.comment = "Le code de l'acte de substitution est fixé à G (substitution autorisée par un produit générique) dans FRCDAActeSubstitution, alors que le modèle métier admet deux valeurs (jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis) : la cible CDA est plus restreinte que la source."
+// Autorisation de substitution : motif de non substitution
+* group[=].element[+].code = #FRLMMedicationDispense.substitution.reason[x]
+* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.comment = "Aucun attribut CDA identifié dans FRCDAActeSubstitution pour le motif de non substitution."
 // Posologie (référence vers l'entrée CDA FR-Traitement imbriquée)
 * group[=].element[+].code = #FRLMMedicationDispense.dosageInstructions
 * group[=].element[=].target.code = #Supply.entryRelationship:frTraitement
+* group[=].element[=].target.display = "FRCDATraitement"
 * group[=].element[=].target.equivalence = #equivalent
 // Notes du dispensateur
 * group[=].element[+].code = #FRLMMedicationDispense.note
 * group[=].element[=].target.code = #Supply.entryRelationship:frNotesDuDispensateur
+* group[=].element[=].target.display = "FRCDANotesDuDispensateur"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe 2 : modèle métier (FRLMMedicationDispense) → FHIR (FRMedicationDispenseDocument)
@@ -140,6 +149,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 // Instructions au patient
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.note
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frInstructionsAuPatient
+* group[=].element[=].target.display = "FRCDAInstructionsAuPatient"
 * group[=].element[=].target.equivalence = #equivalent
 // Dose administrée par prise
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.doseAndRate.dose[x]
@@ -151,31 +161,32 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 * group[=].element[=].target.equivalence = #equivalent
 // Fréquence de prise
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeFrequence
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #equivalent
 // Nombre de prises par période
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency.numberOfTimes
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeFrequence
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."
+* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime avec operator='A' (structure PIVL-TS/EIVL-TS/SXPR-TS)."
 // Période associée à la fréquence
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency.period
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeFrequence
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."
+* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime avec operator='A' (structure PIVL-TS/EIVL-TS/SXPR-TS)."
 // Jour de la semaine
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency.dayOfWeek
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeFrequence
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."
+* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime avec operator='A' (structure PIVL-TS/EIVL-TS/SXPR-TS)."
 // Heure de prise
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency.timeOfDay
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeFrequence
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime:effectiveTimeFrequence (structure PIVL-TS/EIVL-TS/SXPR-TS)."
+* group[=].element[=].target.comment = "Ce profil CDA n'expose pas les sous-éléments de la fréquence séparément ; ils sont portés globalement par effectiveTime avec operator='A' (structure PIVL-TS/EIVL-TS/SXPR-TS)."
 // Instruction additionnelle liée à la fréquence
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.frequency.additionalInstructions
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frInstructionsAuPatient
+* group[=].element[=].target.display = "FRCDAInstructionsAuPatient"
 * group[=].element[=].target.equivalence = #equivalent
 // Date précise de prise
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.dateOfAdministration
@@ -187,9 +198,9 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 * group[=].element[=].target.equivalence = #equivalent
 // Date / période / durée de la séquence de traitement
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.date[x]
-* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime:effectiveTimeDuree
+* group[=].element[=].target.code = #SubstanceAdministration.effectiveTime
 * group[=].element[=].target.equivalence = #wider
-* group[=].element[=].target.comment = "effectiveTime:effectiveTimeDuree porte la durée de traitement globale (IVL-TS) ; le modèle métier permet en plus une durée ou un intervalle de durée non distingués séparément côté CDA."
+* group[=].element[=].target.comment = "effectiveTime (IVL-TS, operator absent ou différent de 'A') porte la durée de traitement globale ; le modèle métier permet en plus une durée ou un intervalle de durée non distingués séparément côté CDA."
 // Durée d'administration
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.duration
 * group[=].element[=].target.equivalence = #unmatched
@@ -197,6 +208,7 @@ Description: "Mapping des éléments du modèle métier FRLMMedicationDispense v
 // Événement de prise (ex : avant repas)
 * group[=].element[+].code = #FRLMDosageInstructions.dosageDetails.eventTime
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frInstructionsAuPatient
+* group[=].element[=].target.display = "FRCDAInstructionsAuPatient"
 * group[=].element[=].target.equivalence = #wider
 * group[=].element[=].target.comment = "Pas d'élément CDA structuré pour un événement déclencheur ; porté par le texte libre des instructions au patient."
 // Événement de fin de séquence

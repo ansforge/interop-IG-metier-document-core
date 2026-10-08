@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMConclusion vers la s
 // Élément racine
 * group[=].element[+].code = #FRLMConclusion
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMConclusion"
+* group[=].element[=].target.display = "FRCDASectionDICOMConclusion"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMConclusion.codeSection

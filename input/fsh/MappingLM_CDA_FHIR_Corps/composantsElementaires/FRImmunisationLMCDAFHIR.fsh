@@ -40,10 +40,11 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 // Maladie ou agent contre lequel la vaccination offre une protection
 * group[=].element[+].code = #FRLMImmunisation.diseaseOrAgentTargeted
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frProbleme
+* group[=].element[=].target.display = "FRCDAProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 // Vaccin
 * group[=].element[+].code = #FRLMImmunisation.administeredProduct
-* group[=].element[=].target.code = #SubstanceAdministration.consumable
+* group[=].element[=].target.code = #SubstanceAdministration.consumable.manufacturedProduct
 * group[=].element[=].target.display = "FRCDAProduitDeSante"
 * group[=].element[=].target.equivalence = #equivalent
 // Voie d’administration
@@ -61,18 +62,22 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisation vers le
 // Rang de la vaccination
 * group[=].element[+].code = #FRLMImmunisation.doseNumber
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frRangDeLaVaccination
+* group[=].element[=].target.display = "FRCDARangDeLaVaccination"
 * group[=].element[=].target.equivalence = #equivalent
 // Commentaire
 * group[=].element[+].code = #FRLMImmunisation.note
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frCommentaireER
+* group[=].element[=].target.display = "FRCDACommentaireER"
 * group[=].element[=].target.equivalence = #equivalent
 // Référence de la prescription
 * group[=].element[+].code = #FRLMImmunisation.prescription
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frPrescription
+* group[=].element[=].target.display = "FRCDAPrescription"
 * group[=].element[=].target.equivalence = #equivalent
 // Réaction observée suite au vaccin
 * group[=].element[+].code = #FRLMImmunisation.reaction
 * group[=].element[=].target.code = #SubstanceAdministration.entryRelationship:frProbleme
+* group[=].element[=].target.display = "FRCDAProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 // Raison de la vaccination
 * group[=].element[+].code = #FRLMImmunisation.reasonCode
