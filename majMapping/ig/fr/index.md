@@ -81,7 +81,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 * [ParticipationType](http://terminology.hl7.org/7.4.0/CodeSystem-v3-ParticipationType.html): [FRLMParticipant](StructureDefinition-FRLMParticipant.md)
 * [RoleCode](http://terminology.hl7.org/7.4.0/CodeSystem-v3-RoleCode.html): [FRLMRelatedPerson](StructureDefinition-FRLMRelatedPerson.md)
 * [SpecimenType](http://terminology.hl7.org/7.4.0/CodeSystem-v3-SpecimenType.html): [FRLMSpecimen](StructureDefinition-FRLMSpecimen.md)
-* [Substance Admin Substitution](http://terminology.hl7.org/7.4.0/CodeSystem-v3-substanceAdminSubstitution.html): [FRLMPrescriptionItem](StructureDefinition-FRLMPrescriptionItem.md)
+* [Substance Admin Substitution](http://terminology.hl7.org/7.4.0/CodeSystem-v3-substanceAdminSubstitution.html): [FRLMMedicationDispense](StructureDefinition-FRLMMedicationDispense.md) and [FRLMPrescriptionItem](StructureDefinition-FRLMPrescriptionItem.md)
 
 
 Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://smt.esante.gouv.fr/) de l'ANS précisent la licence d'utilisation associée.
@@ -89,7 +89,6 @@ Les terminologies publiées sur le [Serveur Multi-terminologies (SMT)](https://s
 Pour les terminologies qui ne sont pas publiées dans le SMT, se renseigner auprès de l'unité de production.
 
 ### Dépendances
-
 
 
 

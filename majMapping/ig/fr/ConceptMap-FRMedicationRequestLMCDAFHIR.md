@@ -16,7 +16,7 @@
   "title" : "Mapping Métier/CDA/FHIR : Traitement prescrit",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-10-08T12:48:01+00:00",
+  "date" : "2026-10-08T13:13:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -121,9 +121,10 @@
     {
       "code" : "FRLMPrescriptionItem.substitution.allowed[x]",
       "target" : [{
-        "code" : "SubstanceAdministration.entryRelationship:frAutorisationSubstitution",
+        "code" : "SubstanceAdministration.entryRelationship:frAutorisationSubstitution.code",
         "display" : "FRCDAAutorisationSubstitution",
-        "equivalence" : "equivalent"
+        "equivalence" : "narrower",
+        "comment" : "Le code de FRCDAAutorisationSubstitution porte le type de substitution (jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis). La source peut aussi être un booléen, qui n'est pas représentable par ce code : la cible est plus restreinte que la source."
       }]
     },
     {
@@ -299,7 +300,8 @@
       "code" : "FRLMPrescriptionItem.substitution.reason[x]",
       "target" : [{
         "code" : "MedicationRequest.substitution.reason",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Valeur issue du jeu de valeurs jdv-substitution-medicament-prescripteur-cisis (binding required côté modèle métier). Si la source est de type string, elle est portée par MedicationRequest.substitution.reason.text."
       }]
     },
     {

@@ -16,7 +16,7 @@
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement dispensé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-10-08T12:48:01+00:00",
+  "date" : "2026-10-08T13:13:48+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -102,11 +102,19 @@
       }]
     },
     {
-      "code" : "FRLMMedicationDispense.substitutionOccurred",
+      "code" : "FRLMMedicationDispense.substitution.type",
       "target" : [{
-        "code" : "Supply.entryRelationship:frActeSubstitution",
+        "code" : "Supply.entryRelationship:frActeSubstitution.code",
         "display" : "FRCDAActeSubstitution",
-        "equivalence" : "equivalent"
+        "equivalence" : "narrower",
+        "comment" : "Le code de l'acte de substitution est fixé à G (substitution autorisée par un produit générique) dans FRCDAActeSubstitution, alors que le modèle métier admet deux valeurs (jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis) : la cible CDA est plus restreinte que la source."
+      }]
+    },
+    {
+      "code" : "FRLMMedicationDispense.substitution.reason[x]",
+      "target" : [{
+        "equivalence" : "unmatched",
+        "comment" : "Aucun attribut CDA identifié dans FRCDAActeSubstitution pour le motif de non substitution."
       }]
     },
     {
@@ -196,9 +204,16 @@
       }]
     },
     {
-      "code" : "FRLMMedicationDispense.substitutionOccurred",
+      "code" : "FRLMMedicationDispense.substitution.type",
       "target" : [{
-        "code" : "MedicationDispense.substitution.wasSubstituted",
+        "code" : "MedicationDispense.substitution.type",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationDispense.substitution.reason[x]",
+      "target" : [{
+        "code" : "MedicationDispense.substitution.reason",
         "equivalence" : "equivalent"
       }]
     },

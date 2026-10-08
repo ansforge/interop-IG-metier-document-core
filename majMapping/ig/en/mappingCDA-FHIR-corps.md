@@ -216,7 +216,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
-| FRLMObservationResults.entry.observationResult | Section.entry.organizer (FRCDAResultats) | Composition.section.entry (Observation) |
+| FRLMObservationResults.entry.observationResult | Section.entry.organizer (FRCDAResultats) | Composition.section.entry (DiagnosticReport(FRDiagnosticReportDocument)) |
 | **FRLMSocialHistory** | **FRCDASectionHabitusModeDeVie** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
@@ -574,7 +574,8 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMMedicationDispense.medicament | Supply.product | MedicationDispense.medication[x] |
 | FRLMMedicationDispense.dispensedQuantity | Supply.quantity | MedicationDispense.quantity |
 | FRLMMedicationDispense.timeOfDispensation |  | MedicationDispense.whenHandedOver |
-| FRLMMedicationDispense.substitutionOccurred | Supply.entryRelationship:frActeSubstitution (FRCDAActeSubstitution) | MedicationDispense.substitution.wasSubstituted |
+| FRLMMedicationDispense.substitution.type | Supply.entryRelationship:frActeSubstitution.code (FRCDAActeSubstitution) | MedicationDispense.substitution.type |
+| FRLMMedicationDispense.substitution.reason[x] |  | MedicationDispense.substitution.reason |
 | FRLMMedicationDispense.dosageInstructions | Supply.entryRelationship:frTraitement (FRCDATraitement) | MedicationDispense.dosageInstruction |
 | FRLMMedicationDispense.note | Supply.entryRelationship:frNotesDuDispensateur (FRCDANotesDuDispensateur) | MedicationDispense.note |
 | FRLMDosageInstructions.renderedDosageInstruction | SubstanceAdministration.text | MedicationDispense.dosageInstruction.text |
@@ -629,7 +630,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMPrescriptionItem.periodOfUse | SubstanceAdministration.effectiveTime |  |
 | FRLMPrescriptionItem.quantityPrescribed | SubstanceAdministration.entryRelationship:frQuantiteDeProduit (FRCDAQuantiteDeProduit) | MedicationRequest.dispenseRequest.quantity |
 | FRLMPrescriptionItem.validityPeriod | SubstanceAdministration.entryRelationship:frPeriodeDeRenouvellement (FRCDAPeriodeDeRenouvellement) | MedicationRequest.dispenseRequest.validityPeriod |
-| FRLMPrescriptionItem.substitution.allowed[x] | SubstanceAdministration.entryRelationship:frAutorisationSubstitution (FRCDAAutorisationSubstitution) | MedicationRequest.substitution.allowed[x] |
+| FRLMPrescriptionItem.substitution.allowed[x] | SubstanceAdministration.entryRelationship:frAutorisationSubstitution.code (FRCDAAutorisationSubstitution) | MedicationRequest.substitution.allowed[x] |
 | FRLMPrescriptionItem.substitution.reason[x] |  | MedicationRequest.substitution.reason |
 | FRLMPrescriptionItem.numberOfRepeats | SubstanceAdministration.repeatNumber | MedicationRequest.dispenseRequest.numberOfRepeatsAllowed |
 | FRLMPrescriptionItem.minimumDispenseInterval |  | MedicationRequest.dispenseRequest.dispenseInterval |
@@ -1041,7 +1042,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
-| FRLMObservationResults.entry.observationResult | Section.entry.organizer (FRCDAResultats) | Composition.section.entry (Observation) |
+| FRLMObservationResults.entry.observationResult | Section.entry.organizer (FRCDAResultats) | Composition.section.entry (DiagnosticReport(FRDiagnosticReportDocument)) |
 | **FRLMSocialHistory** | **FRCDASectionHabitusModeDeVie** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
