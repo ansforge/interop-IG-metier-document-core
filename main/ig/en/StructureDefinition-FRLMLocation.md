@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Location 
 
- 
-Lieu 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Location](StructureDefinition-FRLMLocation.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMLocation.csv)
   "name" : "FRLMLocation",
   "title" : "Logical model - FR LM Location",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

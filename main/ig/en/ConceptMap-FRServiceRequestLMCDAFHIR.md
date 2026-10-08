@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMServiceRequest → FRCDADemandeDExamenOuDeSuivi / FRLMServiceRequest → FRServiceRequestDocument 
 
- 
-Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA FRCDADemandeDExamenOuDeSuivi, puis vers le profil FHIR FRServiceRequestDocument. 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMServiceRequest vers le profil CDA 
   "title" : "Mapping Métier/CDA/FHIR : \"Demande d'examen ou de suivi\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

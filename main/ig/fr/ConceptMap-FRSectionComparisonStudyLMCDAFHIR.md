@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMComparisonStudy → FRCDADICOMExamenComparatif / FRLMComparisonStudy → FRCompositionDocument.section:sectionComparison 
 
- 
-Mapping des éléments du modèle métier FRLMComparisonStudy vers le profil CDA FRCDADICOMExamenComparatif, puis vers la section FHIR FRCompositionDocument.section:sectionComparison. 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMComparisonStudy vers le profil CDA
   "title" : "Mapping Métier/CDA/FHIR : \"Comparaison d'examens d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

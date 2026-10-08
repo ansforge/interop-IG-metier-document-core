@@ -216,7 +216,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
-| FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (Observation) |
+| FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (DiagnosticReport(FRDiagnosticReportDocument)) |
 | **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |
@@ -575,7 +575,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMMedicationDispense.medicament | Supply.product | MedicationDispense.medication[x] |
 | FRLMMedicationDispense.dispensedQuantity | Supply.quantity | MedicationDispense.quantity |
 | FRLMMedicationDispense.timeOfDispensation |  | MedicationDispense.whenHandedOver |
-| FRLMMedicationDispense.substitutionOccurred | Supply.entryRelationship:frActeSubstitution | MedicationDispense.substitution.wasSubstituted |
+| FRLMMedicationDispense.substitutionOccurred | Supply.entryRelationship:frActeSubstitution |  |
 | FRLMMedicationDispense.dosageInstructions | Supply.entryRelationship:frTraitement | MedicationDispense.dosageInstruction |
 | FRLMMedicationDispense.note | Supply.entryRelationship:frNotesDuDispensateur | MedicationDispense.note |
 | FRLMDosageInstructions.renderedDosageInstruction | SubstanceAdministration.text | MedicationDispense.dosageInstruction.text |
@@ -1044,7 +1044,7 @@ Liste des ConceptMap détaillant le mapping entre les éléments du modèle mét
 | FRLMObservationResults.codeSection | Section.code | Composition.section.code |
 | FRLMObservationResults.titleSection | Section.title | Composition.section.title |
 | FRLMObservationResults.description | Section.text | Composition.section.text |
-| FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (Observation) |
+| FRLMObservationResults.entry.observationResult | Section.entry (FRCDAResultats) | Composition.section.entry (DiagnosticReport(FRDiagnosticReportDocument)) |
 | **FRLMSocialHistory** | **FRCDAHabitusModeDeVieSection** | **FRCompositionDocument.section:sectionSocialHistory** |
 | FRLMSocialHistory.codeSection | Section.code | Composition.section.code |
 | FRLMSocialHistory.titleSection | Section.title | Composition.section.title |

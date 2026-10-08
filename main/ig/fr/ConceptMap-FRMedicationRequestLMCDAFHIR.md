@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMPrescriptionItem → FRCDATraitementPrescrit / FRLMPrescriptionItem → FRMedicationRequestDocument 
 
- 
-Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CDA FRCDATraitementPrescrit, puis vers le profil FHIR FRMedicationRequestDocument. 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CD
   "title" : "Mapping Métier/CDA/FHIR : Traitement prescrit",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -291,7 +288,8 @@ Mapping des éléments du modèle métier FRLMPrescriptionItem vers l'entrée CD
       "code" : "FRLMPrescriptionItem.substitution.reason[x]",
       "target" : [{
         "code" : "MedicationRequest.substitution.reason",
-        "equivalence" : "equivalent"
+        "equivalence" : "equivalent",
+        "comment" : "Valeur issue du jeu de valeurs jdv-substitution-medicament-prescripteur-cisis (binding required côté modèle métier). Si la source est de type string, elle est portée par MedicationRequest.substitution.reason.text."
       }]
     },
     {

@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Encounter 
 
- 
-Rencontre 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Admission Evaluation](StructureDefinition-FRLMAdmissionEvaluation.md), [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Encounter Information](StructureDefinition-FRLMEncounterInformation.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md)... Show 3 more, [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md) and [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMEncounter.csv
   "name" : "FRLMEncounter",
   "title" : "Logical model - FR LM Encounter",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

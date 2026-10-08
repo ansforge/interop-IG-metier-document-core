@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Dose Number 
 
- 
-Rang de la vaccination 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Immunisation](StructureDefinition-FRLMImmunisation.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDoseNumber.cs
   "name" : "FRLMDoseNumber",
   "title" : "Logical model - FR LM Dose Number",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

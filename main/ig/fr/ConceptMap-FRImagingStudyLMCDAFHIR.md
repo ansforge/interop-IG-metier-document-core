@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMImagingStudy → FRCDADICOMExamenImagerie / FRLMImagingStudy → FRImagingStudyDocument 
 
- 
-Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FRCDADICOMExamenImagerie, puis vers le profil FHIR FRImagingStudyDocument. 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMImagingStudy vers le profil CDA FR
   "title" : "Mapping Métier/CDA/FHIR : \"Examen d'imagerie\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

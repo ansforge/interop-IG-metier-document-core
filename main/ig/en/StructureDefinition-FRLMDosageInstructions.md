@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model- FR LM Dosage Instructions 
 
- 
-Posologie 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model- FR LM Medication Administration ](StructureDefinition-FRLMMedicationAdministration.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md) and [Logical model - FR LM Medication Prescription](StructureDefinition-FRLMPrescriptionItem.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMDosageInstruc
   "name" : "FRLMDosageInstructions",
   "title" : "Logical model- FR LM Dosage Instructions",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

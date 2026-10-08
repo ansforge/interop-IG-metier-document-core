@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMMicroOrganismSearch → FRCDARechercheDeMicroOrganismes / FRLMMicroOrganismSearch → FRObservationMicroorganismDetectionDocument 
 
- 
-Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil CDA FRCDARechercheDeMicroOrganismes, puis vers le profil FHIR FRObservationMicroorganismDetectionDocument. 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMMicroOrganismSearch vers le profil
   "title" : "Mapping Métier/CDA/FHIR : \"Recherche de micro organismes\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

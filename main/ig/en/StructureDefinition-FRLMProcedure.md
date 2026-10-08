@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model- FR LM Procedure 
 
- 
-Acte 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Examination Report](StructureDefinition-FRLMExaminationReport.md)... Show 7 more, [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Patient Education](StructureDefinition-FRLMPatientEducation.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [logical model - FR LM Procedures](StructureDefinition-FRLMProcedures.md) and [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMProcedure.csv
   "name" : "FRLMProcedure",
   "title" : "Logical model- FR LM Procedure",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -4,7 +4,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "metier-composants-communs": "<p>Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR.</p>\n"
@@ -209,7 +210,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "metier-composants-communs": "<p>Modèles de données métier représentant les concepts communs, modélisés indépendamment de la syntaxe et de façon plus accessible pour le métier que les éléments techniques CDA et FHIR.</p>\n"

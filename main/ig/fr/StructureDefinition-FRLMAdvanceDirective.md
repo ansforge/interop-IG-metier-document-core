@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Advance Directive 
 
- 
-Directive anticipée 
-
 **Utilisations:**
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Advance Directives](StructureDefinition-FRLMAdvanceDirectives.md)
@@ -69,7 +66,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMAdvanceDire
   "name" : "FRLMAdvanceDirective",
   "title" : "Logical model - FR LM Advance Directive",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

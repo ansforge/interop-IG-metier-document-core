@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Body Structure 
 
- 
-Localisation anatomique 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Condition](StructureDefinition-FRLMCondition.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Family Member History](StructureDefinition-FRLMFamilyMemberHistory.md), [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md)... Show 8 more, [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Assessment](StructureDefinition-FRLMObservationAssessment.md), [Logical model - FR LM Observation Vital Sign](StructureDefinition-FRLMObservationVitalSign.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [Logical model - FR LM Quantity Exposure](StructureDefinition-FRLMQuantityExposure.md), [Logical model - FR LM Series](StructureDefinition-FRLMSeries.md), [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMBodyStructure
   "name" : "FRLMBodyStructure",
   "title" : "Logical model - FR LM Body Structure",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

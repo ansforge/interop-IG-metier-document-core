@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Patient 
 
- 
-Patient/Usager concerné par le document. 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Data Enterer](StructureDefinition-FRLMDataEnterer.md), [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md), [Logical model - FR LM Informant](StructureDefinition-FRLMInformant.md)... Show 9 more, [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Logical model - FR LM Legal Authentication](StructureDefinition-FRLMLegalAuthentication.md), [Logical model - FR LM Medication Dispense](StructureDefinition-FRLMMedicationDispense.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Order](StructureDefinition-FRLMOrder.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model - FR LM Related Person](StructureDefinition-FRLMRelatedPerson.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
@@ -37,7 +34,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMPatient.csv),
   "name" : "FRLMPatient",
   "title" : "Logical model - FR LM Patient",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

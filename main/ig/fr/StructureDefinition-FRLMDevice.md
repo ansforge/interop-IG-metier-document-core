@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - Device 
 
- 
-Dispositif médical 
-
 **Utilisations:**
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Attester](StructureDefinition-FRLMAttester.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Entry](StructureDefinition-FRLMEntry.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md)... Show 11 more, [Logical model - FR LM Intended Recipient](StructureDefinition-FRLMIntendedRecipient.md), [Logical model - Laboratory Observation](StructureDefinition-FRLMLaboratoryObservation.md), [Logical model - FR LM Legal Authentication](StructureDefinition-FRLMLegalAuthentication.md), [Logical model - FR LM Medication](StructureDefinition-FRLMMedication.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Participant](StructureDefinition-FRLMParticipant.md), [Logical model- FR LM Pregnancy History](StructureDefinition-FRLMPregnancyHistory.md), [Logical model- FR LM Pregnancy Observation](StructureDefinition-FRLMPregnancyObservation.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [Logical model - FR LM Section](StructureDefinition-FRLMSection.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
@@ -61,7 +58,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMDevice.csv)
   "name" : "FRLMDevice",
   "title" : "Logical model - Device",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

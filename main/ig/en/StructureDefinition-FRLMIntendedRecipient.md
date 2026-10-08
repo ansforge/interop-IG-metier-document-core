@@ -2,11 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Intended Recipient 
 
- 
-Personne déclarée comme destinataire prévu du document. 
-* Attention : Cet élément ne contient que le(s) destinataire(s) initialement prévu(s) à la création du document. Rien ne permet par la suite, de certifier que le document a réellement été envoyé à ce(s) destinataire(s). Par ailleurs, il ne faut pas créer de nouvelle version du document si on souhaite l'envoyer à d'autres destinataires.
- 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md)
@@ -38,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMIntendedRecip
   "name" : "FRLMIntendedRecipient",
   "title" : "Logical model - FR LM Intended Recipient",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

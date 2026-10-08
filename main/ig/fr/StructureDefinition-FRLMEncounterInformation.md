@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Encounter Information 
 
- 
-Section Informations sur la rencontre 
-
 **Utilisations:**
 
 * Ce Modèle logique n'est utilisé par aucun autre profil dans ce guide d'implémentation
@@ -67,7 +64,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMEncounterIn
   "name" : "FRLMEncounterInformation",
   "title" : "Logical model - FR LM Encounter Information",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Attachments 
 
- 
-Section Documents ajoutés 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
@@ -40,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAttachments.c
   "name" : "FRLMAttachments",
   "title" : "Logical model - FR LM Attachments",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

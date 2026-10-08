@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Order 
 
- 
-Association to an order that is the origin of the act resulting in the document. 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMOrder.csv), [
   "name" : "FRLMOrder",
   "title" : "Logical model - FR LM Order",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

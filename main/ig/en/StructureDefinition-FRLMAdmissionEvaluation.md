@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Admission Evaluation 
 
- 
-Section Évaluation à l'admission 
-
 **Usages:**
 
 * This Logical Model is not used by any profiles in this Specification
@@ -40,7 +37,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAdmissionEval
   "name" : "FRLMAdmissionEvaluation",
   "title" : "Logical model - FR LM Admission Evaluation",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

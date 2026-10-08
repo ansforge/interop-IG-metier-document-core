@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMLaboratoryObservation → FRCDAResultatsExamensDeBiologieMedicale / FRCDABatterieExamensDeBiologieMedicale / FRCDAIsolatMicrobiologique / FRCDAResultatExamensDeBiologieElementCliniquePertinent / FRLMLaboratoryObservation → FRObservationLaboratoryReportResultsDocument 
 
- 
-Mapping des éléments du modèle métier FRLMLaboratoryObservation vers ses quatre représentations CDA possibles selon le niveau de la hiérarchie du compte rendu de biologie (Examen de biologie médicale, Batterie, Isolat microbiologique, Résultat/élément clinique pertinent), puis vers l'unique profil FHIR FRObservationLaboratoryReportResultsDocument (qui porte lui-même ces quatre rôles, la hiérarchie étant représentée par Observation.hasMember). 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMLaboratoryObservation vers ses qua
   "title" : "Mapping Métier/CDA/FHIR : \"Résultat d'examen de biologie médicale\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

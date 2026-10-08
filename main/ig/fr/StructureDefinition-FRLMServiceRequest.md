@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Service Request 
 
- 
-Demande d'examen ou de suivi / Objectif à atteindre 
-
 **Utilisations:**
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM Imaging Study](StructureDefinition-FRLMImagingStudy.md), [Logical model - FR LM Observation](StructureDefinition-FRLMObservation.md), [Logical model - FR LM Order Information](StructureDefinition-FRLMOrderInformation.md) and [Logical model - FR LM Specimen](StructureDefinition-FRLMSpecimen.md)
@@ -69,7 +66,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMServiceRequ
   "name" : "FRLMServiceRequest",
   "title" : "Logical model - FR LM Service Request",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

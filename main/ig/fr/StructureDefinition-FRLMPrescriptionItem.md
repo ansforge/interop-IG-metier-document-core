@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Medication Prescription 
 
- 
-Traitement prescrit 
-
 **Utilisations:**
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Medication Prescription](StructureDefinition-FRLMMedicationPrescription.md) and [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md)
@@ -69,7 +66,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMPrescriptio
   "name" : "FRLMPrescriptionItem",
   "title" : "Logical model - FR LM Medication Prescription",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -257,7 +254,12 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMPrescriptio
       },
       {
         "code" : "string"
-      }]
+      }],
+      "binding" : {
+        "strength" : "required",
+        "description" : "Valeur issue du jdv-substitution-medicament-prescripteur-cisis (1.2.250.1.213.1.1.5.860)",
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-substitution-medicament-prescripteur-cisis|20260916095453"
+      }
     },
     {
       "id" : "FRLMPrescriptionItem.numberOfRepeats",

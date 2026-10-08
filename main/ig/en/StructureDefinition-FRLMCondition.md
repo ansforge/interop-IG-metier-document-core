@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Condition 
 
- 
-Problème 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Admission Evaluation](StructureDefinition-FRLMAdmissionEvaluation.md), [Modèle logique métier - FR LM Adverse Drug Reaction](StructureDefinition-FRLMAdverseDrugReaction.md), [Logical model - FR LM Care Plan](StructureDefinition-FRLMCarePlan.md), [Logical model - FR LM Conclusion](StructureDefinition-FRLMConclusion.md)... Show 12 more, [Logical model - FR LM Course of encounter](StructureDefinition-FRLMCourseOfEncounter.md), [Logical model - FR LM Device use](StructureDefinition-FRLMDeviceUse.md), [Logical model - FR LM Encounter](StructureDefinition-FRLMEncounter.md), [Logical model - FR LM FRLM History Of Past Illness](StructureDefinition-FRLMHistoryOfPastIllness.md), [Logical model - FR LM Immunisation](StructureDefinition-FRLMImmunisation.md), [Logical model- FR LM Medication Administration ](StructureDefinition-FRLMMedicationAdministration.md), [Logical model - FR LM Order](StructureDefinition-FRLMOrder.md), [Logical model - FR LM Problems](StructureDefinition-FRLMProblems.md), [Logical model- FR LM Procedure](StructureDefinition-FRLMProcedure.md), [Logical model - FR LM Reason for referral](StructureDefinition-FRLMReasonForReferral.md), [Logical model - FR LM Service Request](StructureDefinition-FRLMServiceRequest.md) and [Logical model - FR LM Supporting Information](StructureDefinition-FRLMSupportingInformation.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMCondition.csv
   "name" : "FRLMCondition",
   "title" : "Logical model - FR LM Condition",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

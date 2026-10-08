@@ -2,14 +2,6 @@
 
 ## ConceptMap: Mapping FRLMHealthProfessional → FRCDAAssignedEntity/FRCDAAssignedAuthor → FrPractitionerRoleDocument / FrPractitionerDocument 
 
- 
-Ce ConceptMap présente trois groupes de mapping : 
-* Mapping 1 : entre le modèle métier "FRLMHealthProfessional" et les éléments CDA "assignedEntity"/"assignedAuthor"
-* Mapping 2 : entre le modèle métier "FRLMHealthProfessional" et le profil FHIR "FrPractitionerRoleDocument"
-* Mapping 3 : entre le modèle métier "FRLMHealthProfessional" et le profil FHIR "FrPractitionerDocument" (référencé depuis PractitionerRole.practitioner)
- 
-Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît dans l'entête du document (auteur, responsable, validateur, opérateur de saisie, informateur, participant, destinataire, prescripteur, professionnel référent d'une prise en charge, etc.). 
-
 
 
 ## Resource Content
@@ -24,7 +16,7 @@ Ce mapping est réutilisé chaque fois qu'un professionnel de santé apparaît d
   "title" : "Mapping Métier/CDA/FHIR : \"Professionnel de santé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM ObservationResults 
 
- 
-Section Résultats 
-
 **Utilisations:**
 
 * Utilise ce/t/te Modèle logique: [Logical model - FR LM Corps document](StructureDefinition-FRLMCorpsDocument.md)
@@ -67,7 +64,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
   "name" : "FRLMObservationResults",
   "title" : "Logical model - FR LM ObservationResults",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

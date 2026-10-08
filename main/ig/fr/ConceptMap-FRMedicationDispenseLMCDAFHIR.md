@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMMedicationDispense → FRCDATraitementDispense / FRLMMedicationDispense → FRMedicationDispenseDocument 
 
- 
-Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil CDA FRCDATraitementDispense (Groupe 1), et vers le profil FHIR FRMedicationDispenseDocument (Groupe 2). 
-
 
 
 ## Resource Content
@@ -19,7 +16,7 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
   "title" : "Mapping Métier/CDA/FHIR : \"Traitement dispensé\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -195,9 +192,16 @@ Mapping des éléments du modèle métier FRLMMedicationDispense vers le profil 
       }]
     },
     {
-      "code" : "FRLMMedicationDispense.substitutionOccurred",
+      "code" : "FRLMMedicationDispense.substitution.type",
       "target" : [{
-        "code" : "MedicationDispense.substitution.wasSubstituted",
+        "code" : "MedicationDispense.substitution.type",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationDispense.substitution.reason[x]",
+      "target" : [{
+        "code" : "MedicationDispense.substitution.reason",
         "equivalence" : "equivalent"
       }]
     },

@@ -2,9 +2,6 @@
 
 ## ConceptMap: Mapping FRLMPregnancyHistory → FRCDAHistoriqueDeLaGrossesse / FRLMPregnancyHistory → FRObservationPregnancyHistoryDocument 
 
- 
-Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CDA FRCDAHistoriqueDeLaGrossesse, puis vers le profil FHIR FRObservationPregnancyHistoryDocument. 
-
 
 
 ## Resource Content
@@ -17,7 +14,7 @@ Mapping des éléments du modèle métier FRLMPregnancyHistory vers le profil CD
   "version" : "0.1.0",
   "title" : "Mapping Métier/CDA/FHIR : \"Historique de la grossesse\"",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

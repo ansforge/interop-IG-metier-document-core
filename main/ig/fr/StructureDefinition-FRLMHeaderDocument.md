@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Header Document 
 
- 
-Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc…). 
-
 **Utilisations:**
 
 * Ce Modèle logique n'est utilisé par aucun autre profil dans ce guide d'implémentation
@@ -65,7 +62,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMHeaderDocum
   "name" : "FRLMHeaderDocument",
   "title" : "Logical model - FR LM Header Document",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

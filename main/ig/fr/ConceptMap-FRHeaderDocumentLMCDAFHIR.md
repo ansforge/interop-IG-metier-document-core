@@ -2,13 +2,6 @@
 
 ## ConceptMap: Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument 
 
- 
-Ce ConceptMap présente trois groupes de mapping : 
-* Mapping 1 : entre le modèle métier "FRLMHeaderDocument" et l'élément CDA "clinicalDocument"
-* Mapping 2 : entre le modèle métier "FRLMHeaderDocument" et le profil FHIR "FrBundleDocument"
-* Mapping 3 : entre le modèle métier "FRLMHeaderDocument" et le profil FHIR "FrCompositionDocument"
- 
-
 
 
 ## Resource Content
@@ -23,7 +16,7 @@ Ce ConceptMap présente trois groupes de mapping :
   "title" : "Mapping FRLMHeaderDocument → FRCDAClinicalDocument → FrBundleDocument / FrCompositionDocument",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

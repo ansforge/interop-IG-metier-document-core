@@ -2,9 +2,6 @@
 
 ## Modèle logique: Logical model - FR LM Observation 
 
- 
-Résultat d'une observation réalisée sur le patient ou un dispositif médical. 
-
 **Utilisations:**
 
 * Dérivé de ce Modèle logique: [Logical model - Laboratory Observation](StructureDefinition-FRLMLaboratoryObservation.md)
@@ -70,7 +67,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-FRLMObservation
   "name" : "FRLMObservation",
   "title" : "Logical model - FR LM Observation",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

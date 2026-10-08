@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Medication Dispense 
 
- 
-Traitement dispense 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Medication Dispensations](StructureDefinition-FRLMMedicationDispensations.md) and [Logical model - FR LM Medication Use](StructureDefinition-FRLMMedicationUse.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationDis
   "name" : "FRLMMedicationDispense",
   "title" : "Logical model - FR LM Medication Dispense",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -146,15 +143,50 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMMedicationDis
       }]
     },
     {
-      "id" : "FRLMMedicationDispense.substitutionOccurred",
-      "path" : "FRLMMedicationDispense.substitutionOccurred",
+      "id" : "FRLMMedicationDispense.substitution",
+      "path" : "FRLMMedicationDispense.substitution",
       "short" : "Autorisation de substitution",
       "definition" : "Autorisation de substitution",
-      "min" : 1,
+      "min" : 0,
       "max" : "1",
       "type" : [{
-        "code" : "boolean"
+        "code" : "Base"
       }]
+    },
+    {
+      "id" : "FRLMMedicationDispense.substitution.type",
+      "path" : "FRLMMedicationDispense.substitution.type",
+      "short" : "Type de substitution",
+      "definition" : "Type de substitution",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "description" : "jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis (2.16.840.1.113883.1.11.16621)",
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis|20260916095455"
+      }
+    },
+    {
+      "id" : "FRLMMedicationDispense.substitution.reason[x]",
+      "path" : "FRLMMedicationDispense.substitution.reason[x]",
+      "short" : "Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle).",
+      "definition" : "Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "string"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "description" : "Valeur issue du jdv-substitution-medicament-dispensateur-cisis (1.2.250.1.213.1.1.5.861)",
+        "valueSet" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-substitution-medicament-dispensateur-cisis|20260916095453"
+      }
     },
     {
       "id" : "FRLMMedicationDispense.dosageInstructions",

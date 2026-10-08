@@ -2,9 +2,6 @@
 
 ## Logical Model: Modèle logique métier - FR LM Adverse Drug Reaction 
 
- 
-Effet indésirable médicamenteux 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Predictable Adverse Drug Reaction](StructureDefinition-FRLMPredictableAdverseDrugReaction.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAdverseDrugRe
   "name" : "FRLMAdverseDrugReaction",
   "title" : "Modèle logique métier - FR LM Adverse Drug Reaction",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

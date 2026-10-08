@@ -2,13 +2,6 @@
 
 ## ConceptMap: Mapping FRLMOrganisation → FRCDAAssignedEntity.representedOrganization → Organization 
 
- 
-Ce ConceptMap présente deux groupes de mapping : 
-* Mapping 1 : entre le modèle métier "FRLMOrganisation" et la structure CDA générique portant une organisation
-* Mapping 2 : entre le modèle métier "FRLMOrganisation" et la ressource FHIR "Organization"
- 
-Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête du document (structure d'exercice d'un professionnel de santé, structure de conservation, structure destinataire, structure informatrice, structure participante, organisation prescriptrice, organisation responsable d'une prise en charge, etc.). 
-
 
 
 ## Resource Content
@@ -23,7 +16,7 @@ Ce mapping est réutilisé chaque fois qu'une structure apparaît dans l'entête
   "title" : "Mapping Métier/CDA/FHIR : \"Structure\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

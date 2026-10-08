@@ -2,13 +2,6 @@
 
 ## ConceptMap: Mapping FRLMRelatedPerson → FRCDARelatedEntity → RelatedPerson 
 
- 
-Ce ConceptMap présente deux groupes de mapping : 
-* Mapping 1 : entre le modèle métier "FRLMRelatedPerson" et l'élément CDA "relatedEntity"
-* Mapping 2 : entre le modèle métier "FRLMRelatedPerson" et la ressource FHIR "RelatedPerson"
- 
-Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (autre qu'un professionnel de santé) apparaît dans l'entête du document (informateur, destinataire, participant, etc.). 
-
 
 
 ## Resource Content
@@ -23,7 +16,7 @@ Ce mapping est réutilisé chaque fois qu'une personne liée au patient/usager (
   "title" : "Mapping Métier/CDA/FHIR : \"Personne liée au patient\"",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

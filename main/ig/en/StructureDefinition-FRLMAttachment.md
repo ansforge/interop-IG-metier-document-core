@@ -2,9 +2,6 @@
 
 ## Logical Model: Logical model - FR LM Attachment 
 
- 
-Document attaché 
-
 **Usages:**
 
 * Use this Logical Model: [Logical model - FR LM Advance Directive](StructureDefinition-FRLMAdvanceDirective.md), [Logical model - FR LM Attachments](StructureDefinition-FRLMAttachments.md), [Logical model - FR LM Header Document](StructureDefinition-FRLMHeaderDocument.md), [Logical model - FR LM ObservationMedia](StructureDefinition-FRLMObservationMedia.md)... Show 2 more, [Logical model - FR LM Patient Education](StructureDefinition-FRLMPatientEducation.md) and [Logical model - FR LM Presented Form](StructureDefinition-FRLMPresentedForm.md)
@@ -36,7 +33,7 @@ Other representations of profile: [CSV](../StructureDefinition-FRLMAttachment.cs
   "name" : "FRLMAttachment",
   "title" : "Logical model - FR LM Attachment",
   "status" : "draft",
-  "date" : "2026-09-30T20:10:21+00:00",
+  "date" : "2026-10-08T12:56:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
