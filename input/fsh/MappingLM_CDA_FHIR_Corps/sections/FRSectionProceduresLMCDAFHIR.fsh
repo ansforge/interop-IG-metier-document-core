@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 // élément racine
 * group[=].element[+].code = #FRLMProcedures
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAHistoriqueDesActes"
+* group[=].element[=].target[=].display = "FRCDASectionHistoriqueDesActes"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMProcedures.codeSection
@@ -30,7 +30,8 @@ Description: "Mapping des éléments du modèle métier FRLMProcedures vers la s
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Acte
 * group[=].element[+].code = #FRLMProcedures.entry.procedure
-* group[=].element[=].target[+].code = #Section.entry:frActe.procedure
+* group[=].element[=].target[+].code = #Section.entry.procedure
+* group[=].element[=].target[=].display = "FRCDAActe"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR

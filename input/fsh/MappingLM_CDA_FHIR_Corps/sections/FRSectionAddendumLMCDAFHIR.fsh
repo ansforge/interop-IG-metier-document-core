@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMAddendum vers la sec
 // Élément racine
 * group[=].element[+].code = #FRLMAddendum
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADicomAddendum"
+* group[=].element[=].target.display = "FRCDASectionDICOMAddendum"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMAddendum.codeSection

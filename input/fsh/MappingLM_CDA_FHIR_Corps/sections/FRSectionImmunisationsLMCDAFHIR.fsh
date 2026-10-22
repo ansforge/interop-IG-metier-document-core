@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMImmunisations vers l
 // Élément racine
 * group[=].element[+].code = #FRLMImmunisations
 * group[=].element[=].target.code = #Section  
-* group[=].element[=].target.display = "FRCDAVaccinations"
+* group[=].element[=].target.display = "FRCDASectionVaccinations"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMImmunisations.codeSection

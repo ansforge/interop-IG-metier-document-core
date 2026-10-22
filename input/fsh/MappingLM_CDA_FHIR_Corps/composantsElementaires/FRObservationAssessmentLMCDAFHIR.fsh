@@ -54,6 +54,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationAssessmen
 // Composants de l'évaluation
 * group[=].element[+].code = #FRLMObservationAssessment.component
 * group[=].element[=].target.code = #Observation.entryRelationship:frEvaluationComposant
+* group[=].element[=].target.display = "FRCDAEvaluationComposant"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : ML → FHIR

@@ -28,10 +28,6 @@ Description: "Mapping des éléments du modèle métier FRLMEncounter vers le pr
 * group[=].element[+].code = #FRLMEncounter.header.author[x]
 * group[=].element[=].target.code = #Encounter.author
 * group[=].element[=].target.equivalence = #equivalent
-// header.participant[x] 
-* group[=].element[+].code = #FRLMEncounter.participant
-* group[=].element[=].target.code = #Encounter.participant
-* group[=].element[=].target.equivalence = #equivalent
 // Type de rencontre
 * group[=].element[+].code = #FRLMEncounter.type
 * group[=].element[=].target.code = #Encounter.code
@@ -46,7 +42,8 @@ Description: "Mapping des éléments du modèle métier FRLMEncounter vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Participants de la rencontre
 * group[=].element[+].code = #FRLMEncounter.participant
-* group[=].element[=].target.code = #Encounter.participant:autresParticipants
+* group[=].element[=].target.code = #Encounter.participant
+* group[=].element[=].target.display = "FRCDAParticipantCorps"
 * group[=].element[=].target.equivalence = #equivalent
 // Organisation responsable
 * group[=].element[+].code = #FRLMEncounter.serviceProvider

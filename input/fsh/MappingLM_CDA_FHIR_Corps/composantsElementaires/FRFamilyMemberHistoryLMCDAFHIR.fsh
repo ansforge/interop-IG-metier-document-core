@@ -27,6 +27,7 @@ Description: "Mapping des éléments du modèle métier FRLMFamilyMemberHistory 
 // Problème du membre de la famille
 * group[=].element[+].code = #FRLMFamilyMemberHistory.condition
 * group[=].element[=].target.code = #Organizer.component.observation
+* group[=].element[=].target.display = "FRCDAAntecedentFamilialObserve"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Organizer.component.observation référence le profil CDA FRCDAAntecedentFamilialObserve ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
 // Commentaire

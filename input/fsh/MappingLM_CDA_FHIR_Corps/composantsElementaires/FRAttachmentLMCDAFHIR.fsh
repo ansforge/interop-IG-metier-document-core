@@ -11,32 +11,32 @@ Description: "Mapping des éléments du modèle métier FRLMAttachment vers le p
 * group[=].target = "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-document-attache"
 // Élément racine
 * group[=].element[+].code = #FRLMAttachment
-* group[=].element[=].target.code = #Organizer.component:frObservationMedia.observationMedia
-* group[=].element[=].target.display = "FRCDADocumentAttache.component:frObservationMedia.observationMedia"
+* group[=].element[=].target.code = #Organizer.component.observationMedia
+* group[=].element[=].target.display = "FRCDADocumentAttache"
 * group[=].element[=].target.equivalence = #equivalent
 // Type MIME
 * group[=].element[+].code = #FRLMAttachment.contentType
-* group[=].element[=].target.code = #Organizer.component:frObservationMedia.observationMedia.value.mediaType
+* group[=].element[=].target.code = #Organizer.component.observationMedia.value.mediaType
 * group[=].element[=].target.equivalence = #equivalent
 // Langue du document attaché
 * group[=].element[+].code = #FRLMAttachment.language
-* group[=].element[=].target.code = #Organizer.component:frObservationMedia.observationMedia.languageCode
+* group[=].element[=].target.code = #Organizer.component.observationMedia.languageCode
 * group[=].element[=].target.equivalence = #equivalent
 // Document attaché encodé en Base64
 * group[=].element[+].code = #FRLMAttachment.data
-* group[=].element[=].target.code = #Organizer.component:frObservationMedia.observationMedia.value
+* group[=].element[=].target.code = #Organizer.component.observationMedia.value
 * group[=].element[=].target.equivalence = #equivalent
 // URL de la ressource
 * group[=].element[+].code = #FRLMAttachment.url
-* group[=].element[=].target.code = #Organizer.component:frObservationMedia.observationMedia.value.reference
+* group[=].element[=].target.code = #Organizer.component.observationMedia.value.reference
 * group[=].element[=].target.equivalence = #equivalent
 // Taille du document attaché
 * group[=].element[+].code = #FRLMAttachment.size
 * group[=].element[=].target.equivalence = #unmatched
 * group[=].element[=].target.comment = "Aucun attribut CDA direct identifié pour la taille de la pièce jointe."
 // Titre du document attaché
-* group[=].element[+].code = #FRLMAttachment.title
-* group[=].element[=].target.equivalence = #Organizer.component:frTypeDocumentAttache.observation.text.reference
+* group[=].element[+].code = #FRLMAttachment.title 
+* group[=].element[=].target.code = #Organizer.component.observation.text.reference
 * group[=].element[=].target.comment = "Le titre du document attaché est mappé vers le texte de l'observation du type de document attaché."
 * group[=].element[=].target.equivalence = #equivalent
 

@@ -51,26 +51,31 @@ Description: "Mapping des éléments du modèle métier FRLMAdverseDrugReaction 
 // Traitement
 * group[=].element[+].code = #FRLMAdverseDrugReaction.medicationAdministration
 * group[=].element[=].target.code = #Observation.entryRelationship:frTraitement
+* group[=].element[=].target.display = "FRCDATraitement"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Réaction observée
 * group[=].element[+].code = #FRLMAdverseDrugReaction.reaction
 * group[=].element[=].target.code = #Observation.entryRelationship:frProbleme
+* group[=].element[=].target.display = "FRCDAProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Imputabilité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.causalityAssessment
 * group[=].element[=].target.code = #Observation.entryRelationship:frImputabiliteEffetIndesirable
+* group[=].element[=].target.display = "FRCDAImputabiliteEffetIndesirable"
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Gravité
 * group[=].element[+].code = #FRLMAdverseDrugReaction.severity
 * group[=].element[=].target.code = #Observation.entryRelationship:frGraviteEffetIndesirable
+* group[=].element[=].target.display = "FRCDAGraviteEffetIndesirable"
 * group[=].element[=].target.equivalence = #equivalent  
 
 // Évolution
 * group[=].element[+].code = #FRLMAdverseDrugReaction.outcome
 * group[=].element[=].target.code = #Observation.entryRelationship:frEvolutionEffetIndesirable
+* group[=].element[=].target.display = "FRCDAEvolutionEffetIndesirable"
 * group[=].element[=].target.equivalence = #equivalent
 
 

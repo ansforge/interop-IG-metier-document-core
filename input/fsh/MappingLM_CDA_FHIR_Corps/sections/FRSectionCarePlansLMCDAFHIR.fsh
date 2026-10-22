@@ -15,7 +15,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 // élément racine
 * group[=].element[+].code = #FRLMCarePlans
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAPlanDeSoins"
+* group[=].element[=].target[=].display = "FRCDASectionPlanDeSoins"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMCarePlans.codeSection
@@ -32,8 +32,9 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlans vers la se
 // Entrée Plan de soins
 * group[=].element[+].code = #FRLMCarePlans.entry.carePlans
 * group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[=].display = "FRCDAActe, FRCDADemandeDExamenOuDeSuivi, FRCDATraitement, FRCDAVaccinRecommande, FRCDARencontre"
 * group[=].element[=].target[=].equivalence = #inexact
-* group[=].element[=].target[=].comment = "Selon le type d'activité portée par FRLMCarePlan.activity, l'entrée CDA concrète est l'une des slices : Section.entry:frActe, :frDemandeDexamenOuDeSuivi, :frTraitement, :frVaccinRecommande ou :frRencontre."
+* group[=].element[=].target[=].comment = "Selon le type d'activité portée par FRLMCarePlan.activity, l'entrée CDA concrète est l'une des entrées suivantes : FRCDAActe, FRCDADemandeDExamenOuDeSuivi, FRCDATraitement, FRCDAVaccinRecommande, FRCDARencontre"
 
 // Groupe Mapping 2 : Métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCarePlans"

@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMAttachments vers la 
 // élément racine
 * group[=].element[+].code = #FRLMAttachments
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDADocumentsAjoutes"
+* group[=].element[=].target[=].display = "FRCDASectionDocumentsAjoutes"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMAttachments.codeSection
@@ -30,11 +30,13 @@ Description: "Mapping des éléments du modèle métier FRLMAttachments vers la 
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Document attaché
 * group[=].element[+].code = #FRLMAttachments.entry.attachment
-* group[=].element[=].target[+].code = #Section.entry:frDocumentAttache
-* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target.code = #Section.entry.organizer
+* group[=].element[=].target.display = "FRCDADocumentAttache"
+* group[=].element[=].target.equivalence = #equivalent
 // Entrée Simple observation
 * group[=].element[+].code = #FRLMAttachments.entry.observation
-* group[=].element[=].target[+].code = #Section.entry:frSimpleObservation
+* group[=].element[=].target[+].code = #Section.entry.observation
+* group[=].element[=].target[=].display = "FRCDASimpleObservation"
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // Groupe Mapping 2 : métier → FHIR

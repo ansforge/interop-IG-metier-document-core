@@ -29,7 +29,7 @@ Description: "Mapping des éléments du modèle métier FRLMObservationResults v
 * group[=].element[=].target[=].equivalence = #equivalent
 // Entrée Resultats
 * group[=].element[+].code = #FRLMObservationResults.entry.observationResult
-* group[=].element[=].target[+].code = #Section.entry
+* group[=].element[=].target[+].code = #Section.entry.organizer
 * group[=].element[=].target[=].display = "FRCDAResultats"
 * group[=].element[=].target[=].equivalence = #equivalent
 

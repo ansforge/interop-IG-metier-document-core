@@ -47,7 +47,8 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyHistory ver
 
 // Informations relatives à la grossesse
 * group[=].element[+].code = #FRLMPregnancyHistory.result
-* group[=].element[=].target.code = #Organizer.component:frObservationSurLaGrossesse
+* group[=].element[=].target.code = #Organizer.component.observation
+* group[=].element[=].target.display = "FRCDAObservationSurLaGrossesse"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Interprétation du résultat
@@ -62,7 +63,8 @@ Description: "Mapping des éléments du modèle métier FRLMPregnancyHistory ver
 
 // Composant détaillé de l'observation
 * group[=].element[+].code = #FRLMPregnancyHistory.component
-* group[=].element[=].target.code = #Organizer.component:frNaissance
+* group[=].element[=].target.code = #Organizer.component.organizer
+* group[=].element[=].target.display = "FRCDANaissance"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Observation ou examen source dont dérive cette information
