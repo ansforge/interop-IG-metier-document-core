@@ -31,8 +31,9 @@ Description: "Mapping des éléments du modèle métier FRLMHistoryOfPastIllness
 // Entrée : problème
 * group[=].element[+].code = #FRLMHistoryOfPastIllness.entry.problem
 * group[=].element[=].target.code = #Section.entry
-* group[=].element[=].target.display = "FRCDAProbleme"
+* group[=].element[=].target.display = "FRCDAListeDesProblemes"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "L'entrée de la section est FRCDAListeDesProblemes ; le problème (FRCDAProbleme) est porté par son entryRelationship."
 
 // Groupe Mapping 2 : ML → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHistoryOfPastIllness"

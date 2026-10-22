@@ -31,8 +31,9 @@ Description: "Mapping des éléments du modèle métier FRLMAllergiesEtHypersens
 // Entrée : Allergie ou intolérance
 * group[=].element[+].code = #FRLMAllergiesAndIntolerances.entry.allergieIntolerance
 * group[=].element[=].target.code = #Section.entry
-* group[=].element[=].target.display = "FRCDAAllergieOuHypersensibilite"
+* group[=].element[=].target.display = "FRCDAListeDesAllergiesEtHypersensibilites"
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "L'entrée de la section est FRCDAListeDesAllergiesEtHypersensibilites ; l'allergie ou hypersensibilité (FRCDAAllergieOuHypersensibilite) est portée par son entryRelationship."
 
 // Groupe Mapping 2 : métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAllergiesAndIntolerances"
