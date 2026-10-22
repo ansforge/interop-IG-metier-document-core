@@ -1,0 +1,51 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMAdvanceDirective","FRLMAdvanceDirective","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Advance Directive","Directive anticipée","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMAdvanceDirective.header","FRLMAdvanceDirective.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMAdvanceDirective.header.subject","FRLMAdvanceDirective.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMAdvanceDirective.header.identifier","FRLMAdvanceDirective.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMAdvanceDirective.header.author[x]","FRLMAdvanceDirective.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMAdvanceDirective.header.author[x].authorProfessional","FRLMAdvanceDirective.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMAdvanceDirective.header.author[x].authorOrganisation","FRLMAdvanceDirective.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMAdvanceDirective.header.author[x].authorDevice","FRLMAdvanceDirective.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMAdvanceDirective.header.performer[x]","FRLMAdvanceDirective.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMAdvanceDirective.header.participant[x]","FRLMAdvanceDirective.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMAdvanceDirective.header.participant[x].participantProfessional","FRLMAdvanceDirective.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMAdvanceDirective.header.participant[x].participantOrganisation","FRLMAdvanceDirective.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMAdvanceDirective.header.participant[x].participantDevice","FRLMAdvanceDirective.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMAdvanceDirective.header.informant","FRLMAdvanceDirective.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMAdvanceDirective.header.date","FRLMAdvanceDirective.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMAdvanceDirective.header.status","FRLMAdvanceDirective.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la directive anticipée","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMAdvanceDirective.header.source","FRLMAdvanceDirective.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMAdvanceDirective.header.language","FRLMAdvanceDirective.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMAdvanceDirective.date","FRLMAdvanceDirective.date","","","",1,1,"","","","dateTime {[]} {[]}
+","Date de la directive anticipée","Date de la directive anticipée","","","","","","","","","",,,,,"",,,,"FRLMAdvanceDirective.date",1,1,"",""
+"FRLMAdvanceDirective.category","FRLMAdvanceDirective.category","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de directive","Type de directive","","","","","","","","","",,"required","jdv-type-directive-anticipee-cisis (1.2.250.1.213.1.1.5.136)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-type-directive-anticipee-cisis|20260716085853","",,,,"FRLMAdvanceDirective.category",1,1,"",""
+"FRLMAdvanceDirective.value","FRLMAdvanceDirective.value","","","",1,1,"","","","boolean {[]} {[]}
+","Procédure autorisée ou pas","Procédure autorisée ou pas","","","","","","","","","",,,,,"",,,,"FRLMAdvanceDirective.value",1,1,"",""
+"FRLMAdvanceDirective.note","FRLMAdvanceDirective.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMAdvanceDirective.note",0,1,"",""
+"FRLMAdvanceDirective.attachment","FRLMAdvanceDirective.attachment","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment {[]} {[]}
+","Piece jointe associee a la directive","Piece jointe associee a la directive","","","","","","","","","",,,,,"",,,,"FRLMAdvanceDirective.attachment",0,1,"",""

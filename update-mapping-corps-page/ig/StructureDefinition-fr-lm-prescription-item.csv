@@ -1,0 +1,85 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-prescription-item","fr-lm-prescription-item","","","",1,*,"","","","null {[]} {[]}
+","Logical model - FR LM Medication Prescription","Traitement prescrit","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-prescription-item.header","fr-lm-prescription-item.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-prescription-item.header.subject","fr-lm-prescription-item.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-prescription-item.header.identifier","fr-lm-prescription-item.header.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-prescription-item.header.author[x]","fr-lm-prescription-item.header.author[x]","","","",0,1,"","","","Base {[]} {[]}
+","Auteur de la prescription","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-prescription-item.header.author[x].authorProfessional","fr-lm-prescription-item.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-prescription-item.header.author[x].authorOrganisation","fr-lm-prescription-item.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-prescription-item.header.author[x].authorDevice","fr-lm-prescription-item.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-prescription-item.header.performer[x]","fr-lm-prescription-item.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-prescription-item.header.participant[x]","fr-lm-prescription-item.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-prescription-item.header.participant[x].participantProfessional","fr-lm-prescription-item.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-prescription-item.header.participant[x].participantOrganisation","fr-lm-prescription-item.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-prescription-item.header.participant[x].participantDevice","fr-lm-prescription-item.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-prescription-item.header.informant","fr-lm-prescription-item.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-prescription-item.header.date","fr-lm-prescription-item.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-prescription-item.header.status","fr-lm-prescription-item.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la ligne de prescription","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-prescription-item.header.source","fr-lm-prescription-item.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-prescription-item.header.language","fr-lm-prescription-item.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-prescription-item.statusReason[x]","fr-lm-prescription-item.statusReason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Motif du statut de la ligne de prescription.
+Par exemple, motif pour lequelle la ligne de prescription a été invalidée ou modifiée par rapport à la version précédente.","Motif du statut de la ligne de prescription.
+Par exemple, motif pour lequelle la ligne de prescription a été invalidée ou modifiée par rapport à la version précédente.","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.statusReason[x]",0,1,"",""
+"fr-lm-prescription-item.medication","fr-lm-prescription-item.medication","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication {[]} {[]}
+","Produit de santé","Produit de santé","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.medication",1,1,"",""
+"fr-lm-prescription-item.indication[x]","fr-lm-prescription-item.indication[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Motif du traitement (problème ou acte).","Motif du traitement (problème ou acte).","","","","","","","","","",,"preferred","ICD-10, SNOMED CT, Orphacode","","",,,,"fr-lm-prescription-item.indication[x]",0,*,"",""
+"fr-lm-prescription-item.intendedUseType","fr-lm-prescription-item.intendedUseType","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Objet de la prescription - prophylaxie, traitement, anesthésie, etc","Objet de la prescription - prophylaxie, traitement, anesthésie, etc","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.intendedUseType",0,1,"",""
+"fr-lm-prescription-item.periodOfUse","fr-lm-prescription-item.periodOfUse","","","",0,1,"","","","Period {[]} {[]}
+","Durée du traitement","Durée du traitement","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.periodOfUse",0,1,"",""
+"fr-lm-prescription-item.dosageInstructions","fr-lm-prescription-item.dosageInstructions","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dosageInstructions {[]} {[]}
+","Posologie","Posologie","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.dosageInstructions",1,1,"",""
+"fr-lm-prescription-item.quantityPrescribed","fr-lm-prescription-item.quantityPrescribed","","","",0,1,"","","","Quantity {[]} {[]}
+","Quantite de produit","Quantite de produit","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.quantityPrescribed",0,1,"",""
+"fr-lm-prescription-item.validityPeriod","fr-lm-prescription-item.validityPeriod","","","",0,1,"","","","Period {[]} {[]}
+","Periode de validité de la ligne de prescription","Periode de validité de la ligne de prescription","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.validityPeriod",0,1,"",""
+"fr-lm-prescription-item.substitution","fr-lm-prescription-item.substitution","","","",0,1,"","","","Base {[]} {[]}
+","Autorisation de substitution","Autorisation de substitution","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.substitution",0,1,"",""
+"fr-lm-prescription-item.substitution.allowed[x]","fr-lm-prescription-item.substitution.allowed[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+boolean {[]} {[]}","Type de substitution","Type de substitution","","","","","","","","","",,"","jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis (2.16.840.1.113883.1.11.16621)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ActSubstanceAdminSubstitutionCode-cisis|20260619134042","",,,,"fr-lm-prescription-item.substitution.allowed[x]",0,1,"",""
+"fr-lm-prescription-item.substitution.reason[x]","fr-lm-prescription-item.substitution.reason[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle).","Motif de non substitution (Marge thérapeutique étroite, Enfant forme galénique, Contre-indication formelle).","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.substitution.reason[x]",0,1,"",""
+"fr-lm-prescription-item.numberOfRepeats","fr-lm-prescription-item.numberOfRepeats","","","",0,1,"","","","integer {[]} {[]}
+","Nombre de renouvellement(s) possible(s). Non renseigné si pas de limite du nombre de dispensation. '0'=dispensation unique. Le nombre total de dispensation = nombre de renouvellement + 1.","Nombre de renouvellement(s) possible(s). Non renseigné si pas de limite du nombre de dispensation. '0'=dispensation unique. Le nombre total de dispensation = nombre de renouvellement + 1.","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.numberOfRepeats",0,1,"",""
+"fr-lm-prescription-item.minimumDispenseInterval","fr-lm-prescription-item.minimumDispenseInterval","","","",0,1,"","","","Quantity {[]} {[]}
+","Intervalle minimal de délivrance. Si une ordonnance autorise des délivrances répétées, l'intervalle entre ces délivrances doit être indiqué ici.","Intervalle minimal de délivrance. Si une ordonnance autorise des délivrances répétées, l'intervalle entre ces délivrances doit être indiqué ici.","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.minimumDispenseInterval",0,1,"",""
+"fr-lm-prescription-item.offLabel","fr-lm-prescription-item.offLabel","","","",1,1,"","","","Base {[]} {[]}
+","Hors AMM. Indique que le prescripteur a sciemment prescrit le médicament pour une indication, un groupe d'âge, une posologie ou une voie d'administration non approuvée par les organismes de réglementation et non mentionnée dans la notice du médicament.","Hors AMM. Indique que le prescripteur a sciemment prescrit le médicament pour une indication, un groupe d'âge, une posologie ou une voie d'administration non approuvée par les organismes de réglementation et non mentionnée dans la notice du médicament.","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.offLabel",1,1,"",""
+"fr-lm-prescription-item.offLabel.isOffLabelUse","fr-lm-prescription-item.offLabel.isOffLabelUse","","","",1,1,"","","","boolean {[]} {[]}
+","Indique si la prescription est hors AMM. Doit être égal à « true » lorsque la raison est fournie.","Indique si la prescription est hors AMM. Doit être égal à « true » lorsque la raison est fournie.","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.offLabel.isOffLabelUse",1,1,"",""
+"fr-lm-prescription-item.offLabel.reason[x]","fr-lm-prescription-item.offLabel.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+string {[]} {[]}","Raison de la prescription hors AMM","Raison de la prescription hors AMM","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.offLabel.reason[x]",0,*,"",""
+"fr-lm-prescription-item.note","fr-lm-prescription-item.note","","","",0,1,"","","","string {[]} {[]}
+","Instructions au dispensateur","Instructions au dispensateur","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.note",0,1,"",""
+"fr-lm-prescription-item.enRapportAvecALD","fr-lm-prescription-item.enRapportAvecALD","","","",1,1,"","","","boolean {[]} {[]}
+","En rapport avec ALD","En rapport avec ALD","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.enRapportAvecALD",1,1,"",""
+"fr-lm-prescription-item.enRapportAvecAccidentTravail","fr-lm-prescription-item.enRapportAvecAccidentTravail","","","",1,1,"","","","boolean {[]} {[]}
+","En rapport avec accident travail","En rapport avec accident travail","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.enRapportAvecAccidentTravail",1,1,"",""
+"fr-lm-prescription-item.enRapportAvecPrevention","fr-lm-prescription-item.enRapportAvecPrevention","","","",1,1,"","","","boolean {[]} {[]}
+","En rapport avec la prevention","En rapport avec la prevention","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.enRapportAvecPrevention",1,1,"",""
+"fr-lm-prescription-item.nonRemboursable","fr-lm-prescription-item.nonRemboursable","","","",1,1,"","","","boolean {[]} {[]}
+","Non remboursable","Non remboursable","","","","","","","","","",,,,,"",,,,"fr-lm-prescription-item.nonRemboursable",1,1,"",""

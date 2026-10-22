@@ -1,0 +1,73 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMDICOMMedicationAdministration","FRLMDICOMMedicationAdministration","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM DICOM Medication Administration","Administration de produit de santé dans le contexte de l'imagerie médicale","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMDICOMMedicationAdministration.header","FRLMDICOMMedicationAdministration.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMDICOMMedicationAdministration.header.subject","FRLMDICOMMedicationAdministration.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMDICOMMedicationAdministration.header.identifier","FRLMDICOMMedicationAdministration.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.author[x]","FRLMDICOMMedicationAdministration.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.author[x].authorProfessional","FRLMDICOMMedicationAdministration.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.author[x].authorOrganisation","FRLMDICOMMedicationAdministration.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.author[x].authorDevice","FRLMDICOMMedicationAdministration.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.performer[x]","FRLMDICOMMedicationAdministration.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.participant[x]","FRLMDICOMMedicationAdministration.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.participant[x].participantProfessional","FRLMDICOMMedicationAdministration.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.participant[x].participantOrganisation","FRLMDICOMMedicationAdministration.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.participant[x].participantDevice","FRLMDICOMMedicationAdministration.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.informant","FRLMDICOMMedicationAdministration.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMDICOMMedicationAdministration.header.date","FRLMDICOMMedicationAdministration.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMDICOMMedicationAdministration.header.status","FRLMDICOMMedicationAdministration.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMDICOMMedicationAdministration.header.source","FRLMDICOMMedicationAdministration.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMDICOMMedicationAdministration.header.language","FRLMDICOMMedicationAdministration.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMDICOMMedicationAdministration.voieAdministration","FRLMDICOMMedicationAdministration.voieAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d'administration","Voie d'administration","","","","","","","","","",,"required","EDQM (0.4.0.127.0.16.1.1.2.1)","","",,,,"FRLMDICOMMedicationAdministration.voieAdministration",0,1,"",""
+"FRLMDICOMMedicationAdministration.dose","FRLMDICOMMedicationAdministration.dose","","","",0,1,"","","","Quantity {[]} {[]}
+","Dose à administrer","Dose à administrer","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.dose",0,1,"",""
+"FRLMDICOMMedicationAdministration.rythme","FRLMDICOMMedicationAdministration.rythme","","","",0,1,"","","","Range {[]} {[]}
+","Rythme d'administration","Rythme d'administration","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.rythme",0,1,"",""
+"FRLMDICOMMedicationAdministration.medicament","FRLMDICOMMedicationAdministration.medicament","","","",1,1,"","","","Base {[]} {[]}
+","Médicament","Médicament","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.medicament",1,1,"",""
+"FRLMDICOMMedicationAdministration.medicament.produit","FRLMDICOMMedicationAdministration.medicament.produit","","","",1,1,"","","","Base {[]} {[]}
+","Produit de santé","Produit de santé","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.medicament.produit",1,1,"",""
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code du produit","Code du produit","","","","","","","","","",,"required","UCD (1.2.250.1.213.2.61) + code ATC","","",,,,"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.id","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.extension","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.coding","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.text","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.autreCodification","FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.autreCodification","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Autre(s) codification(s)","Autre(s) codification(s)","","","","","","","","","",,"required","ATC (2.16.840.1.113883.6.73) or CIS (1.2.250.1.213.2.3.1) or MV (1.2.250.1.213.2.59)","","",,,,"FRLMDICOMMedicationAdministration.medicament.produit.codeProduit.autreCodification",0,1,"",""
+"FRLMDICOMMedicationAdministration.medicament.produit.nomMarque","FRLMDICOMMedicationAdministration.medicament.produit.nomMarque","","","",0,1,"","","","string {[]} {[]}
+","Nom de marque du produit","Nom de marque du produit","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.medicament.produit.nomMarque",0,1,"",""
+"FRLMDICOMMedicationAdministration.medicament.produit.numeroLot","FRLMDICOMMedicationAdministration.medicament.produit.numeroLot","","","",0,1,"","","","string {[]} {[]}
+","Numéro de lot","Numéro de lot","","","","","","","","","",,,,,"",,,,"FRLMDICOMMedicationAdministration.medicament.produit.numeroLot",0,1,"",""
