@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirectives ve
 // Élément racine
 * group[=].element[+].code = #FRLMAdvanceDirectives
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADirectivesAnticipees"
+* group[=].element[=].target.display = "FRCDASectionDirectivesAnticipees"
 * group[=].element[=].target.equivalence = #equivalent
 //code de la section
 * group[=].element[+].code = #FRLMAdvanceDirectives.codeSection

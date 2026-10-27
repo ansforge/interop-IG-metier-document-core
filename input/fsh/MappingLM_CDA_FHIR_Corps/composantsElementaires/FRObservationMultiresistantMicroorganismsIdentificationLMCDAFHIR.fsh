@@ -67,11 +67,6 @@ Description: "Mapping des éléments du modèle métier FRLMMultidrugResistantMi
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.header.source
 * group[=].element[=].target.equivalence = #unmatched
 
-// Date de l'observation
-* group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.header.date
-* group[=].element[=].target.code = #Observation.effectiveTime
-* group[=].element[=].target.equivalence = #equivalent
-
 // Type
 * group[=].element[+].code = #FRLMMultidrugResistantMicroorganismIdentification.type
 * group[=].element[=].target.code = #Observation.code

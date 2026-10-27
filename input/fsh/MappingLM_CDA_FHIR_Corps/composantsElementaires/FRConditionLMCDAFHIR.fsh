@@ -54,21 +54,25 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 // Statut du problème
 * group[=].element[+].code = #FRLMCondition.header.status
 * group[=].element[=].target.code = #Observation.entryRelationship:frStatutDuProbleme
+* group[=].element[=].target.display = "FRCDAStatutDuProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Sévérité
 * group[=].element[+].code = #FRLMCondition.severity
 * group[=].element[=].target.code = #Observation.entryRelationship:frSeverite
+* group[=].element[=].target.display = "FRCDASeverite"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Certitude
 * group[=].element[+].code = #FRLMCondition.diagnosisAssertionStatus
 * group[=].element[=].target.code = #Observation.entryRelationship:frCertitude
+* group[=].element[=].target.display = "FRCDACertitude"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Statut clinique du patient
 * group[=].element[+].code = #FRLMCondition.clinicalStatus
 * group[=].element[=].target.code = #Observation.entryRelationship:frStatutCliniqueDuPatient
+* group[=].element[=].target.display = "FRCDAStatutCliniqueDuPatient"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Localisation anatomique
@@ -89,6 +93,7 @@ Description: "Mapping des éléments du modèle métier FRLMCondition vers le pr
 // Commentaire
 * group[=].element[+].code = #FRLMCondition.note
 * group[=].element[=].target.code = #Observation.entryRelationship:frCommentaireER
+* group[=].element[=].target.display = "FRCDACommentaireER"
 * group[=].element[=].target.equivalence = #equivalent
 
 

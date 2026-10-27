@@ -137,7 +137,7 @@ Description: "Mapping des éléments du modèle métier FRLMLaboratoryObservatio
 * group[=].element[=].target.equivalence = #equivalent
 // Prélèvement
 * group[=].element[+].code = #FRLMLaboratoryObservation.specimen
-* group[=].element[=].target.code = #Organizer.component:frPrelevement
+* group[=].element[=].target.code = #Organizer.component.procedure
 * group[=].element[=].target.display = "FRCDAPrelevement"
 * group[=].element[=].target.equivalence = #equivalent
 // Demande d'examen correspondante
@@ -161,7 +161,7 @@ Description: "Mapping des éléments du modèle métier FRLMLaboratoryObservatio
 * group[=].element[=].target.equivalence = #unmatched
 // Commentaire
 * group[=].element[+].code = #FRLMLaboratoryObservation.note
-* group[=].element[=].target.code = #Organizer.component:frCommentaireER
+* group[=].element[=].target.code = #Organizer.component.act
 * group[=].element[=].target.display = "FRCDACommentaireER"
 * group[=].element[=].target.equivalence = #equivalent
 // Composant(s)
@@ -169,15 +169,15 @@ Description: "Mapping des éléments du modèle métier FRLMLaboratoryObservatio
 * group[=].element[=].target.equivalence = #unmatched
 // Référence de l'observation (image illustrative)
 * group[=].element[+].code = #FRLMLaboratoryObservation.derivedFrom[x]
-* group[=].element[=].target.code = #Organizer.component:frImageIllustrative
+* group[=].element[=].target.code = #Organizer.component.observationMedia
 * group[=].element[=].target.display = "FRCDAImageIllustrative"
 * group[=].element[=].target.equivalence = #wider
 // Groupe d'observations
 * group[=].element[+].code = #FRLMLaboratoryObservation.hasMember[x]
-* group[=].element[=].target.code = #Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent
+* group[=].element[=].target.code = #Organizer.component.observation
 * group[=].element[=].target.display = "FRCDAResultatExamensDeBiologieElementCliniquePertinent"
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Une Batterie ne peut regrouper que des Résultats/éléments cliniques pertinents ; ces deux types d'entrées sont représentés par des entryRelationship distincts dans le CDA, mais par un seul hasMember dans le FHIR (la hiérarchie étant représentée par hasMember)."
+* group[=].element[=].target.comment = "Une Batterie ne peut regrouper, au titre de hasMember, que des Résultats/éléments cliniques pertinents (component.observation) ; la hiérarchie est représentée par hasMember dans le FHIR."
 // Résultats précédents
 * group[=].element[+].code = #FRLMLaboratoryObservation.previousResults
 * group[=].element[=].target.equivalence = #unmatched
@@ -251,7 +251,7 @@ Description: "Mapping des éléments du modèle métier FRLMLaboratoryObservatio
 * group[=].element[=].target.equivalence = #unmatched
 // Commentaire
 * group[=].element[+].code = #FRLMLaboratoryObservation.note
-* group[=].element[=].target.code = #Organizer.component:frCommentaireER
+* group[=].element[=].target.code = #Organizer.component.act
 * group[=].element[=].target.display = "FRCDACommentaireER"
 * group[=].element[=].target.equivalence = #equivalent
 // Composant(s)
@@ -259,15 +259,15 @@ Description: "Mapping des éléments du modèle métier FRLMLaboratoryObservatio
 * group[=].element[=].target.equivalence = #unmatched
 // Référence de l'observation (image illustrative)
 * group[=].element[+].code = #FRLMLaboratoryObservation.derivedFrom[x]
-* group[=].element[=].target.code = #Organizer.component:frImageIllustrative
+* group[=].element[=].target.code = #Organizer.component.observationMedia
 * group[=].element[=].target.display = "FRCDAImageIllustrative"
 * group[=].element[=].target.equivalence = #wider
 // Groupe d'observations - deux cibles possibles à ce niveau
 * group[=].element[+].code = #FRLMLaboratoryObservation.hasMember[x]
-* group[=].element[=].target[+].code = #Organizer.component:frBatterieExamensDeBiologieMedicale
+* group[=].element[=].target[+].code = #Organizer.component.organizer
 * group[=].element[=].target[=].display = "FRCDABatterieExamensDeBiologieMedicale"
 * group[=].element[=].target[=].equivalence = #equivalent
-* group[=].element[=].target[+].code = #Organizer.component:frResultatExamensDeBiologieElementCliniquePertinent
+* group[=].element[=].target[+].code = #Organizer.component.observation
 * group[=].element[=].target[=].display = "FRCDAResultatExamensDeBiologieElementCliniquePertinent"
 * group[=].element[=].target[=].equivalence = #equivalent
 // Résultats précédents

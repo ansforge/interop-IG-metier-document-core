@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMDicomStudyMetadata v
 // Élément racine
 * group[=].element[+].code = #FRLMDicomStudyMetadata
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMObjectCatalog"
+* group[=].element[=].target.display = "FRCDASectionDICOMObjectCatalog"
 * group[=].element[=].target.equivalence = #equivalent
 // Titre de la section
 * group[=].element[+].code = #FRLMDicomStudyMetadata.titleSection

@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMPredictableAdverseDr
 // élément racine
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAEffetsIndesirables"
+* group[=].element[=].target[=].display = "FRCDASectionEffetsIndesirables"
 * group[=].element[=].target[=].equivalence = #equivalent
 // titre de la section
 * group[=].element[+].code = #FRLMPredictableAdverseDrugReaction.titleSection

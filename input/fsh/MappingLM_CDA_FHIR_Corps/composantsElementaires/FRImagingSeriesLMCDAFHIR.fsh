@@ -42,7 +42,7 @@ Description: "Mapping des éléments du modèle métier FRLMSeries vers le profi
 * group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMSerieImagerie pour numberOfInstances."
 // Endpoint de la série
 * group[=].element[+].code = #FRLMSeries.seriesEndpoint
-* group[=].element[=].target.code = #Act.entryRelationship.observation
+* group[=].element[=].target.code = #Act.entryRelationship.observation.text.reference
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "seriesEndpoint référence un FRLMEndpoint ; ses sous-champs sont mappés dans le sous-groupe Endpoint ci-dessous (Observation.text.reference/.mediaType)."
 // Date de début de la série
@@ -52,6 +52,7 @@ Description: "Mapping des éléments du modèle métier FRLMSeries vers le profi
 // SOP instance
 * group[=].element[+].code = #FRLMSeries.instanceSOP
 * group[=].element[=].target.code = #Act.entryRelationship.observation
+* group[=].element[=].target.display = "FRCDADICOMSOPInstanceObservation"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Act.entryRelationship.observation référence le profil CDA FRCDADICOMSOPInstanceObservation ; ses sous-champs sont mappés dans le groupe dédié ci-dessous."
 

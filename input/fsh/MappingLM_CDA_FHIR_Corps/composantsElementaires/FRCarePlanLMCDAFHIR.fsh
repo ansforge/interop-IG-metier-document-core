@@ -44,7 +44,7 @@ Description: "Mapping des éléments du modèle métier FRLMCarePlan vers le pro
 // Actions incluses dans le plan
 // l'équivalence relatedto est utilisée car le profil CDA cible ne porte pas explicitement les actions incluses dans le plan, mais il est possible de relier les deux via l'élément entryRelationship.
 * group[=].element[+].code = #FRLMCarePlan.activity
-* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship
+* group[=].element[=].target.code = #SubstanceAdministration.entryRelationship.substanceAdministration
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Correspondance approximative: FRLMCarePlan.activity est générique, alors que la cible CDA représente une ligne de traitement prescrite."
 

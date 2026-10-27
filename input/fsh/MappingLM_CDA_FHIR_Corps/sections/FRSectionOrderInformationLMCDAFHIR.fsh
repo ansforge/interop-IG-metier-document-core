@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMOrderInformation ver
 // élément racine (section Demande d'examen d'imagerie non codée)
 * group[=].element[+].code = #FRLMOrderInformation
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMDemandeExamen"
+* group[=].element[=].target.display = "FRCDASectionDICOMDemandeExamen"
 * group[=].element[=].target.equivalence = #equivalent
 // titre de la section non codée
 * group[=].element[+].code = #FRLMOrderInformation.titleSection

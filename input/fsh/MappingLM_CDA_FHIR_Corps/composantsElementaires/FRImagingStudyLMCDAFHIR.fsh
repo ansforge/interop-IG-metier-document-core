@@ -40,27 +40,27 @@ Description: "Mapping des éléments du modèle métier FRLMImagingStudy vers le
 // demande d'examen
 * group[=].element[+].code = #FRLMImagingStudy.basedOn
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)."
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour basedOn mais plutôt dans un autre contexte (demande d'imagerie)."
 // Nombre de séries
 * group[=].element[+].code = #FRLMImagingStudy.numberOfSeries
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfSeries."
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour numberOfSeries."
 // Nombre d'instances
 * group[=].element[+].code = #FRLMImagingStudy.numberOfInstances
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMTechniqueImagerie pour numberOfInstances."
+* group[=].element[=].target.comment = "Aucun attribut explicite identifié dans FRCDADICOMExamenImagerie pour numberOfInstances."
 // Organisation responsable de l'examen
 * group[=].element[+].code = #FRLMImagingStudy.studyCustodian
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour organisation."
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour organisation."
 // Endpoint
 * group[=].element[+].code = #FRLMImagingStudy.studyEndpoint
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ."
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour studyEndpoint. Les détails de l'endpoint sont portés par la ressource Endpoint cible dans FRCDADICOMSerieImagerie.entryRelationship:FRCDADICOMSOPInstanceObservation.text. ."
 // series
 * group[=].element[+].code = #FRLMImagingStudy.series
 * group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMTechniqueImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."
+* group[=].element[=].target.comment = "Aucune correspondance explicite identifiée dans FRCDADICOMExamenImagerie pour series. Les détails de la série sont portés par la ressource FRCDADICOMExamenImagerie.entryRelationship.act:FRCDADICOMSerieImagerie."
 
 // Groupe Mapping 2 : métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMImagingStudy"

@@ -44,11 +44,13 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 * group[=].element[=].target.equivalence = #equivalent
 // Difficulté opératoire -> observation liée en CDA
 * group[=].element[+].code = #FRLMProcedure.difficulty
-* group[=].element[=].target.code = #Procedure.entryRelationship:frSimpleObservationDifficulte
+* group[=].element[=].target.code = #Procedure.entryRelationship:frSimpleObservation
+* group[=].element[=].target.display = "FRCDASimpleObservation"
 * group[=].element[=].target.equivalence = #equivalent
 // Motif de l'acte
 * group[=].element[+].code = #FRLMProcedure.reason[x]
 * group[=].element[=].target.code = #Procedure.entryRelationship:frReferenceInterneMotifActe
+* group[=].element[=].target.display = "FRCDAReferenceInterne"
 * group[=].element[=].target.equivalence = #equivalent
 // Outcome : pas d'équivalent structuré en CDA
 * group[=].element[+].code = #FRLMProcedure.outcome
@@ -61,6 +63,7 @@ Description: "Mapping des éléments du modèle métier FRLMProcedure vers le pr
 // Dispositif médical utilisé : référence au DM en entrée CDA
 * group[=].element[+].code = #FRLMProcedure.deviceUsed
 * group[=].element[=].target.code = #Procedure.entryRelationship:frReferenceInterneDM
+* group[=].element[=].target.display = "FRCDAReferenceInterne"
 * group[=].element[=].target.equivalence = #equivalent
 // Focal device : pas d'équivalent direct dans ce profil CDA
 * group[=].element[+].code = #FRLMProcedure.focalDevice

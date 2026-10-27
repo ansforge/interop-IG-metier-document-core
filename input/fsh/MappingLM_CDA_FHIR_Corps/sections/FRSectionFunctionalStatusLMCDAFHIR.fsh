@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 // Élément racine
 * group[=].element[+].code = #FRLMFunctionalStatus
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDAStatutFonctionnel"
+* group[=].element[=].target.display = "FRCDASectionStatutFonctionnel"
 * group[=].element[=].target.equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMFunctionalStatus.codeSection
@@ -38,7 +38,7 @@ Description: "Mapping des éléments du modèle métier FRLMFunctionalStatus ver
 // entree - groupeQuestionnairesEvaluation
 * group[=].element[+].code = #FRLMFunctionalStatus.entry.assessment
 * group[=].element[=].target.code = #Section.entry
-* group[=].element[=].target.display = "FRCDAEvaluation"
+* group[=].element[=].target.display = "FRCDAGroupeDeQuestionnairesDEvaluation"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Groupe Mapping 2 : modèle métier → FHIR

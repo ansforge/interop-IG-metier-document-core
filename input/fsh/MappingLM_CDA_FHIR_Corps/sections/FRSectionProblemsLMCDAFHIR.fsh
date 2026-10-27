@@ -13,7 +13,7 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 // élément racine
 * group[=].element[+].code = #FRLMProblems
 * group[=].element[=].target[+].code = #Section
-* group[=].element[=].target[=].display = "FRCDAProblemesActifs"
+* group[=].element[=].target[=].display = "FRCDASectionProblemesActifs"
 * group[=].element[=].target[=].equivalence = #equivalent
 // code de la section
 * group[=].element[+].code = #FRLMProblems.codeSection
@@ -30,8 +30,9 @@ Description: "Mapping des éléments du modèle métier FRLMProblems vers la sec
 // Entrée Problèmes actifs
 * group[=].element[+].code = #FRLMProblems.entry.problem
 * group[=].element[=].target[+].code = #Section.entry
-* group[=].element[=].target[=].display = "FRCDAProbleme"
+* group[=].element[=].target[=].display = "FRCDAListeDesProblemes"
 * group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[=].target[=].comment = "L'entrée de la section est FRCDAListeDesProblemes ; le problème (FRCDAProbleme) est porté par son entryRelationship."
 
 // Groupe Mapping 2 : métier → FHIR
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMProblems"

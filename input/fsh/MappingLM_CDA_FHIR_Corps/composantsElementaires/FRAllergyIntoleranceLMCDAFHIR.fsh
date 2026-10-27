@@ -37,6 +37,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 // Statut
 * group[=].element[+].code = #FRLMAllergyIntolerance.header.status
 * group[=].element[=].target.code = #Observation.entryRelationship:frStatutDuProbleme
+* group[=].element[=].target.display = "FRCDAStatutDuProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Date de début et de fin
@@ -64,6 +65,7 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 // Réaction observée
 * group[=].element[+].code = #FRLMAllergyIntolerance.reaction
 * group[=].element[=].target.code = #Observation.entryRelationship:frProbleme
+* group[=].element[=].target.display = "FRCDAProbleme"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Agent responsable de la réaction
@@ -99,11 +101,13 @@ Description: "Mapping des éléments du modèle métier FRLMAllergyIntolerance v
 // Certitude
 * group[=].element[+].code = #FRLMAllergyIntolerance.certainty
 * group[=].element[=].target.code = #Observation.entryRelationship:frCertitude
+* group[=].element[=].target.display = "FRCDACertitude"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Criticité
 * group[=].element[+].code = #FRLMAllergyIntolerance.criticality
 * group[=].element[=].target.code = #Observation.entryRelationship:frCriticite
+* group[=].element[=].target.display = "FRCDACriticite"
 * group[=].element[=].target.equivalence = #equivalent
 
 // Catégorie

@@ -65,11 +65,6 @@ Description: "Mapping des éléments du modèle métier FRLMMicroOrganismSearch 
 * group[=].element[+].code = #FRLMMicroOrganismSearch.header.source
 * group[=].element[=].target.equivalence = #unmatched
 
-// Date de l'observation
-* group[=].element[+].code = #FRLMMicroOrganismSearch.header.date
-* group[=].element[=].target.code = #Observation.effectiveTime
-* group[=].element[=].target.equivalence = #equivalent
-
 // Type
 * group[=].element[+].code = #FRLMMicroOrganismSearch.type
 * group[=].element[=].target.code = #Observation.code

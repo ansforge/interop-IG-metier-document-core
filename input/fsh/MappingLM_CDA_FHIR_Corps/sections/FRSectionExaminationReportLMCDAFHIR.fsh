@@ -14,7 +14,7 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 // Élément racine
 * group[=].element[+].code = #FRLMExaminationReport
 * group[=].element[=].target.code = #Section
-* group[=].element[=].target.display = "FRCDADICOMActeImagerie"
+* group[=].element[=].target.display = "FRCDASectionDICOMActeImagerie"
 * group[=].element[=].target.equivalence = #equivalent
 // Code de la section
 * group[=].element[+].code = #FRLMExaminationReport.codeSection
@@ -30,11 +30,13 @@ Description: "Mapping des éléments du modèle métier FRLMExaminationReport ve
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Techniques d'imagerie
 * group[=].element[+].code = #FRLMExaminationReport.entry.imagingProcedures
-* group[=].element[=].target.code = #Section.entry:frDicomTechniqueImagerie.procedure
+* group[=].element[=].target.code = #Section.entry.procedure
+* group[=].element[=].target.display = "FRCDADICOMTechniqueImagerie"
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Produits de santé administrés
 * group[=].element[+].code = #FRLMExaminationReport.entry.medicationAdministrations
-* group[=].element[=].target.code = #Section.entry:frDicomAdministrationProduitDeSante.substanceAdministration
+* group[=].element[=].target.code = #Section.entry.substanceAdministration
+* group[=].element[=].target.display = "FRCDADICOMAdministrationProduitDeSante"
 * group[=].element[=].target.equivalence = #equivalent
 // Entrée : Allergies et intolérances
 * group[=].element[+].code = #FRLMExaminationReport.entry.adverseReactions
