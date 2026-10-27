@@ -1,0 +1,97 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-observation-media","fr-lm-observation-media","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM ObservationMedia","Image illustrative.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-observation-media.header","fr-lm-observation-media.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-observation-media.header.subject","fr-lm-observation-media.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-observation-media.header.identifier","fr-lm-observation-media.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-observation-media.header.author[x]","fr-lm-observation-media.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-observation-media.header.author[x].authorProfessional","fr-lm-observation-media.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-observation-media.header.author[x].authorOrganisation","fr-lm-observation-media.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-observation-media.header.author[x].authorDevice","fr-lm-observation-media.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-observation-media.header.performer[x]","fr-lm-observation-media.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-observation-media.header.participant[x]","fr-lm-observation-media.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-observation-media.header.participant[x].participantProfessional","fr-lm-observation-media.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-observation-media.header.participant[x].participantOrganisation","fr-lm-observation-media.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-observation-media.header.participant[x].participantDevice","fr-lm-observation-media.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-observation-media.header.informant","fr-lm-observation-media.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-observation-media.header.date","fr-lm-observation-media.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-observation-media.header.status","fr-lm-observation-media.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-observation-media.header.source","fr-lm-observation-media.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-observation-media.header.language","fr-lm-observation-media.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-observation-media.content","fr-lm-observation-media.content","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attachment {[]} {[]}
+","Image encodée en Base64","Image encodée en Base64","","","","","","","","","",,,,,"",,,,"fr-lm-observation-media.content",1,1,"",""
+"fr-lm-observation-media.content.header","fr-lm-observation-media.content.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-observation-media.content.header.subject","fr-lm-observation-media.content.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-observation-media.content.header.identifier","fr-lm-observation-media.content.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-observation-media.content.header.author[x]","fr-lm-observation-media.content.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-observation-media.content.header.author[x].authorProfessional","fr-lm-observation-media.content.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-observation-media.content.header.author[x].authorOrganisation","fr-lm-observation-media.content.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-observation-media.content.header.author[x].authorDevice","fr-lm-observation-media.content.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-observation-media.content.header.performer[x]","fr-lm-observation-media.content.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-observation-media.content.header.participant[x]","fr-lm-observation-media.content.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-observation-media.content.header.participant[x].participantProfessional","fr-lm-observation-media.content.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-observation-media.content.header.participant[x].participantOrganisation","fr-lm-observation-media.content.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-observation-media.content.header.participant[x].participantDevice","fr-lm-observation-media.content.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-observation-media.content.header.informant","fr-lm-observation-media.content.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-observation-media.content.header.date","fr-lm-observation-media.content.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-observation-media.content.header.status","fr-lm-observation-media.content.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-observation-media.content.header.source","fr-lm-observation-media.content.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-observation-media.content.header.language","fr-lm-observation-media.content.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-observation-media.content.contentType","fr-lm-observation-media.content.contentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type MIME de la piece jointe, avec encodage de caracteres, etc.","Type MIME de la piece jointe, avec encodage de caracteres, etc.","","","","","","","","","",,"","(preferred): BCP-13","","",,,,"fr-lm-attachment.contentType",0,1,"",""
+"fr-lm-observation-media.content.language","fr-lm-observation-media.content.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Langue du contenu","Langue du contenu","","","","","","","","","",,"","(preferred): BCP 47","","",,,,"fr-lm-attachment.language",0,1,"",""
+"fr-lm-observation-media.content.data","fr-lm-observation-media.content.data","","","",1,1,"","","","base64Binary {[]} {[]}
+","Contenu encode en base64","Contenu encode en base64","","","","","","","","","",,,,,"",,,,"fr-lm-attachment.data",0,1,"",""
+"fr-lm-observation-media.content.url","fr-lm-observation-media.content.url","","","",0,1,"","","","uri {[]} {[]}
+","URL de la ressource","URL de la ressource","","","","","","","","","",,,,,"",,,,"fr-lm-attachment.url",0,1,"",""
+"fr-lm-observation-media.content.size","fr-lm-observation-media.content.size","","","",0,1,"","","","unsignedInt {[]} {[]}
+","Taille de la piece jointe avant encodage en base64","Taille de la piece jointe avant encodage en base64","","","","","","","","","",,,,,"",,,,"fr-lm-attachment.size",0,1,"",""
+"fr-lm-observation-media.content.title","fr-lm-observation-media.content.title","","","",0,1,"","","","string {[]} {[]}
+","Titre de la piece jointe","Titre de la piece jointe","","","","","","","","","",,,,,"",,,,"fr-lm-attachment.title",0,1,"",""
+"fr-lm-observation-media.subject[x]","fr-lm-observation-media.subject[x]","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient|0.1.0], CanonicalType[https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen|0.1.0]]}
+","Patient ou spécimen concerné par l’image","Patient ou spécimen concerné par l’image","","","","","","","","","",,,,,"",,,,"fr-lm-observation-media.subject[x]",1,1,"",""
+"fr-lm-observation-media.note","fr-lm-observation-media.note","","","",0,*,"","","","string {[]} {[]}
+","Précondition","Précondition","","","","","","","","","",,,,,"",,,,"fr-lm-observation-media.note",0,*,"",""

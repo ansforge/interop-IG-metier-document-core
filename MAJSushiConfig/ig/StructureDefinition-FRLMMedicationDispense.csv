@@ -1,0 +1,59 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMMedicationDispense","FRLMMedicationDispense","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Medication Dispense","Traitement dispense","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMMedicationDispense.header","FRLMMedicationDispense.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMMedicationDispense.header.subject","FRLMMedicationDispense.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMMedicationDispense.header.identifier","FRLMMedicationDispense.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMMedicationDispense.header.author[x]","FRLMMedicationDispense.header.author[x]","","","",1,*,"","","","Base {[]} {[]}
+","Auteur de la Auteur de la dispensation","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMMedicationDispense.header.author[x].authorProfessional","FRLMMedicationDispense.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMMedicationDispense.header.author[x].authorOrganisation","FRLMMedicationDispense.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMMedicationDispense.header.author[x].authorDevice","FRLMMedicationDispense.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMMedicationDispense.header.performer[x]","FRLMMedicationDispense.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMMedicationDispense.header.participant[x]","FRLMMedicationDispense.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMMedicationDispense.header.participant[x].participantProfessional","FRLMMedicationDispense.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMMedicationDispense.header.participant[x].participantOrganisation","FRLMMedicationDispense.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMMedicationDispense.header.participant[x].participantDevice","FRLMMedicationDispense.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMMedicationDispense.header.informant","FRLMMedicationDispense.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMMedicationDispense.header.date","FRLMMedicationDispense.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMMedicationDispense.header.status","FRLMMedicationDispense.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la ligne de prescription","Statut","","","","","","","","","",,"required","Valeur issue du JDV_CompletudeDispensation_CISIS (1.2.250.1.213.1.1.5.765)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis|20260716085851","",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMMedicationDispense.header.source","FRLMMedicationDispense.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMMedicationDispense.header.language","FRLMMedicationDispense.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMMedicationDispense.receiver[x]","FRLMMedicationDispense.receiver[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMRelatedPerson {[]} {[]}","Identification de la personne ayant reçu le médicament délivré, notamment lorsqu'il ne s'agit pas du patient. Si non présent, le patient est considéré comme le destinataire.","Identification de la personne ayant reçu le médicament délivré, notamment lorsqu'il ne s'agit pas du patient. Si non présent, le patient est considéré comme le destinataire.","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.receiver[x]",0,1,"",""
+"FRLMMedicationDispense.relatedRequest","FRLMMedicationDispense.relatedRequest","","","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/elementdefinition-identifier|5.3.0]]} {[]}
+","Référence de la prescription","Référence de la prescription","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.relatedRequest",0,*,"",""
+"FRLMMedicationDispense.medicament","FRLMMedicationDispense.medicament","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication {[]} {[]}
+","Médicament délivré","Médicament délivré","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.medicament",1,1,"",""
+"FRLMMedicationDispense.dispensedQuantity","FRLMMedicationDispense.dispensedQuantity","","","",1,1,"","","","Quantity {[]} {[]}
+","Quantite de produit. 
+Nombre d'emballages distribués si leur format est connu, ou nombre d'articles/unités plus petits, selon le médicament distribué. Une unité est attendue.","Quantite de produit. 
+Nombre d'emballages distribués si leur format est connu, ou nombre d'articles/unités plus petits, selon le médicament distribué. Une unité est attendue.","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.dispensedQuantity",1,1,"",""
+"FRLMMedicationDispense.timeOfDispensation","FRLMMedicationDispense.timeOfDispensation","","","",0,1,"","","","dateTime {[]} {[]}
+","Date et heure de dispense du médicament. Si non présent, la date de dispensation est celle du header.","Date et heure de dispense du médicament. Si non présent, la date de dispensation est celle du header.","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.timeOfDispensation",0,1,"",""
+"FRLMMedicationDispense.substitutionOccurred","FRLMMedicationDispense.substitutionOccurred","","","",1,1,"","","","boolean {[]} {[]}
+","Autorisation de substitution","Autorisation de substitution","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.substitutionOccurred",1,1,"",""
+"FRLMMedicationDispense.dosageInstructions","FRLMMedicationDispense.dosageInstructions","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDosageInstructions {[]} {[]}
+","Posologie","Posologie","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.dosageInstructions",0,1,"",""
+"FRLMMedicationDispense.note","FRLMMedicationDispense.note","","","",0,1,"","","","string {[]} {[]}
+","Notes du dispensateur","Notes du dispensateur","","","","","","","","","",,,,,"",,,,"FRLMMedicationDispense.note",0,1,"",""
