@@ -145,15 +145,17 @@ Description: "Mapping des éléments du modèle métier FRLMMedication vers le p
 * group[=].element[+].code = #FRLMMedication.item.amount
 * group[=].element[=].target.code = #Medication.amount
 * group[=].element[=].target.equivalence = #equivalent
-// Type de conditionnement primaire - extension:packageType à créer côté IG FHIR
+// Type de conditionnement primaire
 * group[=].element[+].code = #FRLMMedication.item.packageType
-* group[=].element[=].target.equivalence = #unmatched
-// Dispositif d'administration - extension:device à créer côté IG FHIR
+* group[=].element[=].target.code = #Medication.extension:packageType
+* group[=].element[=].target.equivalence = #equivalent
+// Dispositif d'administration
 * group[=].element[+].code = #FRLMMedication.device
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #Medication.extension:device
+* group[=].element[=].target.equivalence = #equivalent
 // Caractéristique supplémentaire
 * group[=].element[+].code = #FRLMMedication.characteristic
-* group[=].element[=].target.code = #Medication.extension:conditionnement
+* group[=].element[=].target.code = #Medication.extension:characteristic
 * group[=].element[=].target.equivalence = #equivalent
 // Numéro de lot
 * group[=].element[+].code = #FRLMMedication.batch.lotNumber

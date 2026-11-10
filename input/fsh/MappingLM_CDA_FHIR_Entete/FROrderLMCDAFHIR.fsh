@@ -67,9 +67,8 @@ Description: """Ce ConceptMap présente deux groupes de mapping :
 
 // Accession Number
 * group[=].element[+].code = #FRLMOrder.accessionNumber
-* group[=].element[=].target.code = #ServiceRequest.identifier
+* group[=].element[=].target.code = #ServiceRequest.identifier:accessionNumber
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Autre occurrence de ServiceRequest.identifier."
 
 // Date et heure de la demande
 * group[=].element[+].code = #FRLMOrder.orderDateAndTime
