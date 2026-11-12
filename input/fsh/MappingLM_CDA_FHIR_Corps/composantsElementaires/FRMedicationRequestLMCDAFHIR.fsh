@@ -201,11 +201,12 @@ Description: "Mapping des éléments du modèle métier FRLMPrescriptionItem ver
 * group[=].element[=].target.equivalence = #equivalent
 // Hors AMM
 * group[=].element[+].code = #FRLMPrescriptionItem.offLabel.isOffLabelUse
-* group[=].element[=].target.code = #MedicationRequest.extension:horsAMM
+* group[=].element[=].target.code = #MedicationRequest.extension:offLabelUse
 * group[=].element[=].target.equivalence = #equivalent
-// Raison hors AMM : nouvel élément
+// Raison hors AMM
 * group[=].element[+].code = #FRLMPrescriptionItem.offLabel.reason[x]
-* group[=].element[=].target.equivalence = #unmatched
+* group[=].element[=].target.code = #MedicationRequest.extension:offLabelUse.extension:reason
+* group[=].element[=].target.equivalence = #equivalent
 // Instructions dispensateur
 * group[=].element[+].code = #FRLMPrescriptionItem.note
 * group[=].element[=].target.code = #MedicationRequest.dispenseRequest.extension:dispenserInstructionR5

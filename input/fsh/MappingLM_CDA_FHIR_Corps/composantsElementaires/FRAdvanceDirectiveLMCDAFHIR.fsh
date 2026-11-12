@@ -129,7 +129,7 @@ Description: "Mapping des éléments du modèle métier FRLMAdvanceDirective ver
 
 
 // Groupe Mapping 4 : pièce jointe (FRLMAttachment) → FHIR
-// Consent.source[x] est slicé (sourceReference / sourceAttachment) ; les sous-éléments
+// Consent.source[x] est un choix de type (Attachment / Reference) ; FRCoreConsentProfile ne slice plus sourceAttachment ; les sous-éléments
 // s'expriment donc via Consent.source[x]:sourceAttachment.xxx.
 * group[+].source = "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment"
 * group[=].target = "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-advance-directive-document"
