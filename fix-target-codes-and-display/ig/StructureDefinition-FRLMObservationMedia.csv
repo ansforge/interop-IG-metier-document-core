@@ -1,0 +1,97 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMObservationMedia","FRLMObservationMedia","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM ObservationMedia","Image illustrative.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMObservationMedia.header","FRLMObservationMedia.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMObservationMedia.header.subject","FRLMObservationMedia.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMObservationMedia.header.identifier","FRLMObservationMedia.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMObservationMedia.header.author[x]","FRLMObservationMedia.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMObservationMedia.header.author[x].authorProfessional","FRLMObservationMedia.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMObservationMedia.header.author[x].authorOrganisation","FRLMObservationMedia.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMObservationMedia.header.author[x].authorDevice","FRLMObservationMedia.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMObservationMedia.header.performer[x]","FRLMObservationMedia.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMObservationMedia.header.participant[x]","FRLMObservationMedia.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMObservationMedia.header.participant[x].participantProfessional","FRLMObservationMedia.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMObservationMedia.header.participant[x].participantOrganisation","FRLMObservationMedia.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMObservationMedia.header.participant[x].participantDevice","FRLMObservationMedia.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMObservationMedia.header.informant","FRLMObservationMedia.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMObservationMedia.header.date","FRLMObservationMedia.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMObservationMedia.header.status","FRLMObservationMedia.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMObservationMedia.header.source","FRLMObservationMedia.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMObservationMedia.header.language","FRLMObservationMedia.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMObservationMedia.content","FRLMObservationMedia.content","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttachment {[]} {[]}
+","Image encodée en Base64","Image encodée en Base64","","","","","","","","","",,,,,"",,,,"FRLMObservationMedia.content",1,1,"",""
+"FRLMObservationMedia.content.header","FRLMObservationMedia.content.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMObservationMedia.content.header.subject","FRLMObservationMedia.content.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMObservationMedia.content.header.identifier","FRLMObservationMedia.content.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMObservationMedia.content.header.author[x]","FRLMObservationMedia.content.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMObservationMedia.content.header.author[x].authorProfessional","FRLMObservationMedia.content.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMObservationMedia.content.header.author[x].authorOrganisation","FRLMObservationMedia.content.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMObservationMedia.content.header.author[x].authorDevice","FRLMObservationMedia.content.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMObservationMedia.content.header.performer[x]","FRLMObservationMedia.content.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMObservationMedia.content.header.participant[x]","FRLMObservationMedia.content.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMObservationMedia.content.header.participant[x].participantProfessional","FRLMObservationMedia.content.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMObservationMedia.content.header.participant[x].participantOrganisation","FRLMObservationMedia.content.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMObservationMedia.content.header.participant[x].participantDevice","FRLMObservationMedia.content.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMObservationMedia.content.header.informant","FRLMObservationMedia.content.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMObservationMedia.content.header.date","FRLMObservationMedia.content.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMObservationMedia.content.header.status","FRLMObservationMedia.content.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMObservationMedia.content.header.source","FRLMObservationMedia.content.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMObservationMedia.content.header.language","FRLMObservationMedia.content.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMObservationMedia.content.contentType","FRLMObservationMedia.content.contentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type MIME de la piece jointe, avec encodage de caracteres, etc.","Type MIME de la piece jointe, avec encodage de caracteres, etc.","","","","","","","","","",,"preferred","(preferred): BCP-13","","",,,,"FRLMAttachment.contentType",0,1,"",""
+"FRLMObservationMedia.content.language","FRLMObservationMedia.content.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Langue du contenu","Langue du contenu","","","","","","","","","",,"preferred","(preferred): BCP 47","","",,,,"FRLMAttachment.language",0,1,"",""
+"FRLMObservationMedia.content.data","FRLMObservationMedia.content.data","","","",1,1,"","","","base64Binary {[]} {[]}
+","Contenu encode en base64","Contenu encode en base64","","","","","","","","","",,,,,"",,,,"FRLMAttachment.data",0,1,"",""
+"FRLMObservationMedia.content.url","FRLMObservationMedia.content.url","","","",0,1,"","","","uri {[]} {[]}
+","URL de la ressource","URL de la ressource","","","","","","","","","",,,,,"",,,,"FRLMAttachment.url",0,1,"",""
+"FRLMObservationMedia.content.size","FRLMObservationMedia.content.size","","","",0,1,"","","","unsignedInt {[]} {[]}
+","Taille de la piece jointe avant encodage en base64","Taille de la piece jointe avant encodage en base64","","","","","","","","","",,,,,"",,,,"FRLMAttachment.size",0,1,"",""
+"FRLMObservationMedia.content.title","FRLMObservationMedia.content.title","","","",0,1,"","","","string {[]} {[]}
+","Titre de la piece jointe","Titre de la piece jointe","","","","","","","","","",,,,,"",,,,"FRLMAttachment.title",0,1,"",""
+"FRLMObservationMedia.subject","FRLMObservationMedia.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient|0.1.0], CanonicalType[https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMSpecimen|0.1.0]]}
+","Patient ou spécimen concerné par l’image","Patient ou spécimen concerné par l’image","","","","","","","","","",,,,,"",,,,"FRLMObservationMedia.subject",1,1,"",""
+"FRLMObservationMedia.note","FRLMObservationMedia.note","","","",0,*,"","","","string {[]} {[]}
+","Précondition","Précondition","","","","","","","","","",,,,,"",,,,"FRLMObservationMedia.note",0,*,"",""

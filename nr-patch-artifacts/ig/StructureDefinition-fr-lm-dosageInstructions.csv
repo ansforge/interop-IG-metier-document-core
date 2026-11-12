@@ -1,0 +1,79 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-dosageInstructions","fr-lm-dosageInstructions","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Dosage Instructions","Posologie","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-dosageInstructions.renderedDosageInstruction","fr-lm-dosageInstructions.renderedDosageInstruction","","","",0,1,"","","","string {[]} {[]}
+","Posologie sous forme textuelle","Posologie sous forme textuelle","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.renderedDosageInstruction",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails","fr-lm-dosageInstructions.dosageDetails","","","",0,*,"","","","Base {[]} {[]}
+","Posologie Structurée","Posologie Structurée","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.sequence","fr-lm-dosageInstructions.dosageDetails.sequence","","","",0,1,"","","","decimal {[]} {[]}
+","Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","Numéro de séquence permettant d'indiquer l'ordre des posologies dans le cas où il y a plusieurs posologies. La séquence s+1 commence à la fin de la séquence s. En cas de séquences ayant le même numéro, celles-ci se déroulent simultanément.","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.sequence",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.note","fr-lm-dosageInstructions.dosageDetails.note","","","",0,1,"","","","string {[]} {[]}
+","Instructions au patient","Instructions au patient","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.note",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.doseAndRate","fr-lm-dosageInstructions.dosageDetails.doseAndRate","","","",0,*,"","","","Base {[]} {[]}
+","Quantité de médicament administrée par prise","Quantité de médicament administrée par prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.doseAndRate",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.doseAndRate.dose[x]","fr-lm-dosageInstructions.dosageDetails.doseAndRate.dose[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Range {[]} {[]}","La quantité de médicament administrée par prise
+Exemple - 20mg: {'value':20,'unit':'mg','system':'http://unitsofmeasure.org','code':'mg'}
+Exemple - 1 à 3 comprimés: {'low':{'value':1,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'},'high':{'value':3,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'}}","La quantité de médicament administrée par prise
+Exemple - 20mg: {'value':20,'unit':'mg','system':'http://unitsofmeasure.org','code':'mg'}
+Exemple - 1 à 3 comprimés: {'low':{'value':1,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'},'high':{'value':3,'unit':'Comprimé','system':'http://standardterms.edqm.eu','code':'15054000'}}","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.doseAndRate.dose[x]",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.doseAndRate.rate[x]","fr-lm-dosageInstructions.dosageDetails.doseAndRate.rate[x]","","","",0,1,"","","","Quantity {[]} {[]}
+Ratio {[]} {[]}Range {[]} {[]}","Rythme d'administration
+Période temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.
+Exemple - 400µg pendant une minute (perfusion): {'numerator':{'value':400,'unit':'µg','system':'http://unitsofmeasure.org','code':'µg'},'denominator':{'value':1,'unit':'min','system':'http://unitsofmeasure.org','code':'min'}}","Rythme d'administration
+Période temporelle pendant laquelle une dose définie est administrée, pour les perfusions par exemple.
+Exemple - 400µg pendant une minute (perfusion): {'numerator':{'value':400,'unit':'µg','system':'http://unitsofmeasure.org','code':'µg'},'denominator':{'value':1,'unit':'min','system':'http://unitsofmeasure.org','code':'min'}}","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.doseAndRate.rate[x]",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.dateOfAdministration","fr-lm-dosageInstructions.dosageDetails.dateOfAdministration","","","",0,*,"","","","dateTime {[]} {[]}
+","Date précise du moment de prise","Date précise du moment de prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.dateOfAdministration",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.conditionOfAdministration","fr-lm-dosageInstructions.dosageDetails.conditionOfAdministration","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","Code ou texte de la condition sous laquelle le traitement doit être pris (ex : en cas de douleurs).","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.conditionOfAdministration",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.date[x]","fr-lm-dosageInstructions.dosageDetails.date[x]","","","",0,1,"","","","Period {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}","Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)
+Exemple - La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours)): {}","Période (date de début et de fin), durée ou intervalle de durée de la séquence de traitement (un parmi les trois)
+Exemple - La période représente une date de début et de fin (ex : du 1/10/2025 au 10/10/2025), la durée représente une quantité (ex : 5 jours), l'intervalle représente une quantité minimale et une quantité maximale (ex : de 5 à 10 jours)): {}","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.date[x]",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.duration","fr-lm-dosageInstructions.dosageDetails.duration","","","",0,1,"","","","Base {[]} {[]}
+","Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)
+Exemple - Administration pendant 10 minutes: {}","Durée ou rythme d'administration - indique le temps d'administration des prises de la séquence (exemple d'utilisation : perfusion ou patch)
+Exemple - Administration pendant 10 minutes: {}","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.duration",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.duration.durationValue","fr-lm-dosageInstructions.dosageDetails.duration.durationValue","","","",0,1,"","","","decimal {[]} {[]}
+","Durée de l'administration","Durée de l'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.duration.durationValue",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.duration.durationUnit","fr-lm-dosageInstructions.dosageDetails.duration.durationUnit","","","",0,1,"","","","code {[]} {[]}
+","Unité de la durée d'administration","Unité de la durée d'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.duration.durationUnit",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.duration.durationMax","fr-lm-dosageInstructions.dosageDetails.duration.durationMax","","","",0,1,"","","","decimal {[]} {[]}
+","Durée maximale de l'administration","Durée maximale de l'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.duration.durationMax",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency","fr-lm-dosageInstructions.dosageDetails.frequency","","","",0,1,"","","","Base {[]} {[]}
+","Fréquence de prise","Fréquence de prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency.numberOfTimes","fr-lm-dosageInstructions.dosageDetails.frequency.numberOfTimes","","","",0,1,"","","","decimal {[]} {[]}
+","Nombre de prise de la quantité 'quantitePrescrite' par période (ex : *une fois* dans une fois tous les trois jours)","Nombre de prise de la quantité 'quantitePrescrite' par période (ex : *une fois* dans une fois tous les trois jours)","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency.numberOfTimes",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency.period","fr-lm-dosageInstructions.dosageDetails.frequency.period","","","",0,1,"","","","Quantity {[]} {[]}
+","Durée sur laquelle la fréquence s'applique (ex : *tous les trois jours* une fois tous les trois jours)","Durée sur laquelle la fréquence s'applique (ex : *tous les trois jours* une fois tous les trois jours)","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency.period",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency.dayOfWeek","fr-lm-dosageInstructions.dosageDetails.frequency.dayOfWeek","","","",0,*,"","","","code {[]} {[]}
+","Jour de la semaine de la prise","Jour de la semaine de la prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency.dayOfWeek",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency.timeOfDay","fr-lm-dosageInstructions.dosageDetails.frequency.timeOfDay","","","",0,1,"","","","time {[]} {[]}
+","Heure de la prise","Heure de la prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency.timeOfDay",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.frequency.additionalInstructions","fr-lm-dosageInstructions.dosageDetails.frequency.additionalInstructions","","","",0,1,"","","","string {[]} {[]}
+","Instruction additionnelle","Instruction additionnelle","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.frequency.additionalInstructions",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.eventTime","fr-lm-dosageInstructions.dosageDetails.eventTime","","","",0,*,"","","","Base {[]} {[]}
+","Définition du moment de prise au cours de la journée (ex : 30 minutes avant le repas)","Définition du moment de prise au cours de la journée (ex : 30 minutes avant le repas)","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.eventTime",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.eventTime.eventTimeCode","fr-lm-dosageInstructions.dosageDetails.eventTime.eventTimeCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code ou texte du moment de prise","Code ou texte du moment de prise","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.eventTime.eventTimeCode",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.eventTime.offset","fr-lm-dosageInstructions.dosageDetails.eventTime.offset","","","",0,1,"","","","unsignedInt {[]} {[]}
+","Temps en minute avant/après l'élément déclenchant","Temps en minute avant/après l'élément déclenchant","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.eventTime.offset",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.eventEndSequence","fr-lm-dosageInstructions.dosageDetails.eventEndSequence","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Evenement de fin de la séquence","Evenement de fin de la séquence","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.eventEndSequence",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.bodySite","fr-lm-dosageInstructions.dosageDetails.bodySite","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","région anatomique d'administration","région anatomique d'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.bodySite",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.routeOfAdministration","fr-lm-dosageInstructions.dosageDetails.routeOfAdministration","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d'administration","Voie d'administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.routeOfAdministration",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod","fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod","","","",0,*,"","","","Base {[]} {[]}
+","Dose maximale pour un temps donné (exemple : prise maximale pour 24h).","Dose maximale pour un temps donné (exemple : prise maximale pour 24h).","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod",0,*,"",""
+"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.quantity","fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.quantity","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1]]} {[]}
+","Dose maximale à administrer pour l'unité de temps donnée","Dose maximale à administrer pour l'unité de temps donnée","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.quantity",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.duration","fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.duration","","","",0,1,"","","","Quantity {[]} {[]}
+","Durée pour laquelle il y a une dose maximale administrable
+Exemple - Par jour, par semaine, par mois, ...: {}","Durée pour laquelle il y a une dose maximale administrable
+Exemple - Par jour, par semaine, par mois, ...: {}","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.maxDosePerPeriod.duration",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.maxDosePerAdministration","fr-lm-dosageInstructions.dosageDetails.maxDosePerAdministration","","","",0,1,"","","","Quantity {[]} {[]}
+","Dose maximale pour une administration","Dose maximale pour une administration","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.maxDosePerAdministration",0,1,"",""
+"fr-lm-dosageInstructions.dosageDetails.maxLifetimeDose","fr-lm-dosageInstructions.dosageDetails.maxLifetimeDose","","","",0,1,"","","","Quantity {[]} {[]}
+","Dose maximale sur une vie","Dose maximale sur une vie","","","","","","","","","",,,,,"",,,,"fr-lm-dosageInstructions.dosageDetails.maxLifetimeDose",0,1,"",""

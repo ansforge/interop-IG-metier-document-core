@@ -1,0 +1,61 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-observation-assessment","fr-lm-observation-assessment","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Assessment","Evaluation","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-observation-assessment.header","fr-lm-observation-assessment.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-observation-assessment.header.subject","fr-lm-observation-assessment.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-observation-assessment.header.identifier","fr-lm-observation-assessment.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-observation-assessment.header.author[x]","fr-lm-observation-assessment.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-observation-assessment.header.author[x].authorProfessional","fr-lm-observation-assessment.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-observation-assessment.header.author[x].authorOrganisation","fr-lm-observation-assessment.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-observation-assessment.header.author[x].authorDevice","fr-lm-observation-assessment.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-observation-assessment.header.performer[x]","fr-lm-observation-assessment.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-observation-assessment.header.participant[x]","fr-lm-observation-assessment.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-observation-assessment.header.participant[x].participantProfessional","fr-lm-observation-assessment.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-observation-assessment.header.participant[x].participantOrganisation","fr-lm-observation-assessment.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-observation-assessment.header.participant[x].participantDevice","fr-lm-observation-assessment.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-observation-assessment.header.informant","fr-lm-observation-assessment.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-observation-assessment.header.date","fr-lm-observation-assessment.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-observation-assessment.header.status","fr-lm-observation-assessment.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'évaluation","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-observation-assessment.header.source","fr-lm-observation-assessment.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-observation-assessment.header.language","fr-lm-observation-assessment.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-observation-assessment.observationDate[x]","fr-lm-observation-assessment.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","date de l'évaluation","date de l'évaluation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.observationDate[x]",1,1,"",""
+"fr-lm-observation-assessment.type","fr-lm-observation-assessment.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type d'observation. 
+- LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre
+- Si le type d'évaluation n'est pas trouvé dans les terminologies proposées, utiliser le code='54522-8' displayName='Statut fonctionnel' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'","Type d'observation. 
+- LOINC (2.16.840.1.113883.6.1) ou ICF (2.16.840.1.113883.6.254) ou autre
+- Si le type d'évaluation n'est pas trouvé dans les terminologies proposées, utiliser le code='54522-8' displayName='Statut fonctionnel' codeSystem='2.16.840.1.113883.6.1' codeSystemName='LOINC'","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.type",1,1,"",""
+"fr-lm-observation-assessment.method","fr-lm-observation-assessment.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Méthode utilisée pour l'observation","Méthode utilisée pour l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.method",0,1,"",""
+"fr-lm-observation-assessment.bodySite","fr-lm-observation-assessment.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
+","Site de l'observation","Site de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.bodySite",0,1,"",""
+"fr-lm-observation-assessment.result","fr-lm-observation-assessment.result","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Valeur de l’évaluation","Valeur de l’évaluation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.result",1,1,"",""
+"fr-lm-observation-assessment.interpretation","fr-lm-observation-assessment.interpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Interprétation","Interprétation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.interpretation",0,*,"",""
+"fr-lm-observation-assessment.note","fr-lm-observation-assessment.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.note",0,1,"",""
+"fr-lm-observation-assessment.component","fr-lm-observation-assessment.component","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation-assessment {[]} {[]}
+","Composant de l'évaluation","Composant de l'évaluation","","","","","","","","","",,,,,"",,,,"fr-lm-observation-assessment.component",0,*,"",""

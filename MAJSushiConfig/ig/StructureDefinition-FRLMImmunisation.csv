@@ -1,0 +1,80 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMImmunisation","FRLMImmunisation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Immunisation","Vaccination","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMImmunisation.header","FRLMImmunisation.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMImmunisation.header.subject","FRLMImmunisation.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMImmunisation.header.identifier","FRLMImmunisation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMImmunisation.header.author[x]","FRLMImmunisation.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMImmunisation.header.author[x].authorProfessional","FRLMImmunisation.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMImmunisation.header.author[x].authorOrganisation","FRLMImmunisation.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMImmunisation.header.author[x].authorDevice","FRLMImmunisation.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMImmunisation.header.performer[x]","FRLMImmunisation.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMImmunisation.header.participant[x]","FRLMImmunisation.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMImmunisation.header.participant[x].participantProfessional","FRLMImmunisation.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMImmunisation.header.participant[x].participantOrganisation","FRLMImmunisation.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMImmunisation.header.participant[x].participantDevice","FRLMImmunisation.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMImmunisation.header.informant","FRLMImmunisation.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMImmunisation.header.date","FRLMImmunisation.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMImmunisation.header.status","FRLMImmunisation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la vaccination (réalisé, non fait, ...).","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMImmunisation.header.source","FRLMImmunisation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMImmunisation.header.language","FRLMImmunisation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMImmunisation.periodOfImmunisation","FRLMImmunisation.periodOfImmunisation","","","",1,1,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/organization-period|5.3.0]]} {[]}
+","Période de vaccination - Si vaccin effectuée => que la dateDebutVaccination est renseignée - Si vaccin à effectuer => dateDebutVaccination et dateFinVaccination peuvent être renseignée (période souhaitée pour la vaccination)","Période de vaccination - Si vaccin effectuée => que la dateDebutVaccination est renseignée - Si vaccin à effectuer => dateDebutVaccination et dateFinVaccination peuvent être renseignée (période souhaitée pour la vaccination)","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.periodOfImmunisation",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMImmunisation.periodOfImmunisation.id","FRLMImmunisation.periodOfImmunisation.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"FRLMImmunisation.periodOfImmunisation.extension","FRLMImmunisation.periodOfImmunisation.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"FRLMImmunisation.periodOfImmunisation.url","FRLMImmunisation.periodOfImmunisation.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"FRLMImmunisation.periodOfImmunisation.value[x]","FRLMImmunisation.periodOfImmunisation.value[x]","","","",0,1,"","","","base64Binary {[]} {[]}
+boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"FRLMImmunisation.periodOfImmunisation.startDate","FRLMImmunisation.periodOfImmunisation.startDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de début","Date de début","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.periodOfImmunisation.startDate",0,1,"",""
+"FRLMImmunisation.periodOfImmunisation.endDate","FRLMImmunisation.periodOfImmunisation.endDate","","","",0,1,"","","","dateTime {[]} {[]}
+","Date de fin","Date de fin","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.periodOfImmunisation.endDate",0,1,"",""
+"FRLMImmunisation.diseaseOrAgentTargeted","FRLMImmunisation.diseaseOrAgentTargeted","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Maladie ou agent contre lequel la vaccination offre une protection. Binding Description: (preferred): ICD-10","Maladie ou agent contre lequel la vaccination offre une protection. Binding Description: (preferred): ICD-10","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.diseaseOrAgentTargeted",0,*,"",""
+"FRLMImmunisation.administeredProduct","FRLMImmunisation.administeredProduct","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMMedication {[]} {[]}
+","Vaccin","Vaccin","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.administeredProduct",1,1,"",""
+"FRLMImmunisation.route","FRLMImmunisation.route","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Voie d'administration","Voie d'administration","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.route",0,1,"",""
+"FRLMImmunisation.site","FRLMImmunisation.site","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Région anatomique d'administration","Région anatomique d'administration","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.site",0,*,"",""
+"FRLMImmunisation.doseQuantity","FRLMImmunisation.doseQuantity","","","",0,1,"","","","Quantity {[]} {[]}
+","Dose administrée","Dose administrée","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.doseQuantity",0,1,"",""
+"FRLMImmunisation.doseNumber","FRLMImmunisation.doseNumber","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDoseNumber {[]} {[]}
+","Rang de la vaccination","Rang de la vaccination","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.doseNumber",0,1,"",""
+"FRLMImmunisation.note","FRLMImmunisation.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.note",0,1,"",""
+"FRLMImmunisation.prescription","FRLMImmunisation.prescription","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPrescriptionEntree {[]} {[]}
+","Référence de la prescription","Référence de la prescription","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.prescription",0,1,"",""
+"FRLMImmunisation.reaction","FRLMImmunisation.reaction","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMCondition {[]} {[]}
+","Réaction observée suite au vaccin","Réaction observée suite au vaccin","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.reaction",0,*,"",""
+"FRLMImmunisation.reasonCode","FRLMImmunisation.reasonCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Raison de la vaccination (voyage, professionnel, etc.)","Raison de la vaccination (voyage, professionnel, etc.)","","","","","","","","","",,,,,"",,,,"FRLMImmunisation.reasonCode",0,*,"",""

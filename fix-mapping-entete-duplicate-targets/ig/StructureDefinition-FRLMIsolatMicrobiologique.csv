@@ -1,0 +1,63 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMIsolatMicrobiologique","FRLMIsolatMicrobiologique","","","",0,*,"","","","null {[]} {[]}
+","Modèle logique métier - FR LM Isolat microbiologique","Isolat microbiologique","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMIsolatMicrobiologique.header","FRLMIsolatMicrobiologique.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"FRLMEntry.header",1,1,"",""
+"FRLMIsolatMicrobiologique.header.subject","FRLMIsolatMicrobiologique.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.subject",1,1,"",""
+"FRLMIsolatMicrobiologique.header.identifier","FRLMIsolatMicrobiologique.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.identifier",0,*,"",""
+"FRLMIsolatMicrobiologique.header.author[x]","FRLMIsolatMicrobiologique.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x]",0,*,"",""
+"FRLMIsolatMicrobiologique.header.author[x].authorProfessional","FRLMIsolatMicrobiologique.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorProfessional",0,*,"",""
+"FRLMIsolatMicrobiologique.header.author[x].authorOrganisation","FRLMIsolatMicrobiologique.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorOrganisation",0,*,"",""
+"FRLMIsolatMicrobiologique.header.author[x].authorDevice","FRLMIsolatMicrobiologique.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.author[x].authorDevice",0,*,"",""
+"FRLMIsolatMicrobiologique.header.performer[x]","FRLMIsolatMicrobiologique.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.performer[x]",0,*,"",""
+"FRLMIsolatMicrobiologique.header.participant[x]","FRLMIsolatMicrobiologique.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x]",0,*,"",""
+"FRLMIsolatMicrobiologique.header.participant[x].participantProfessional","FRLMIsolatMicrobiologique.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantProfessional",0,*,"",""
+"FRLMIsolatMicrobiologique.header.participant[x].participantOrganisation","FRLMIsolatMicrobiologique.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantOrganisation",0,*,"",""
+"FRLMIsolatMicrobiologique.header.participant[x].participantDevice","FRLMIsolatMicrobiologique.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.participant[x].participantDevice",0,*,"",""
+"FRLMIsolatMicrobiologique.header.informant","FRLMIsolatMicrobiologique.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.informant",0,*,"",""
+"FRLMIsolatMicrobiologique.header.date","FRLMIsolatMicrobiologique.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date et heure des résultats","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.date",0,1,"",""
+"FRLMIsolatMicrobiologique.header.status","FRLMIsolatMicrobiologique.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.status",0,1,"",""
+"FRLMIsolatMicrobiologique.header.source","FRLMIsolatMicrobiologique.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.source",0,1,"",""
+"FRLMIsolatMicrobiologique.header.language","FRLMIsolatMicrobiologique.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"FRLMEntry.header.language",0,1,"",""
+"FRLMIsolatMicrobiologique.codeIsolat","FRLMIsolatMicrobiologique.codeIsolat","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Code isolat","Code isolat","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.codeIsolat",0,1,"",""
+"FRLMIsolatMicrobiologique.isolatMicrobiologique","FRLMIsolatMicrobiologique.isolatMicrobiologique","","","",1,1,"","","","Base {[]} {[]}
+","Isolat microbiologique","Isolat microbiologique","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.isolatMicrobiologique",1,1,"",""
+"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat","FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat","","","",1,1,"","","","Base {[]} {[]}
+","Isolat microbiologique","Isolat microbiologique","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat",1,1,"",""
+"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.identifiant","FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.identifiant","","","",1,1,"","","","Identifier {[]} {[]}
+","Identifiant de l'isolat","Identifiant de l'isolat","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.identifiant",1,1,"",""
+"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent","FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent","","","",1,1,"","","","Base {[]} {[]}
+","L'agent infectieux cultivé (bactérie, levure, virus, parasite)","L'agent infectieux cultivé (bactérie, levure, virus, parasite)","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent",1,1,"",""
+"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent.code","FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code isolat","Code isolat","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.isolatMicrobiologique.isolat.agent.code",1,1,"",""
+"FRLMIsolatMicrobiologique.laboratoireExecutant","FRLMIsolatMicrobiologique.laboratoireExecutant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLaboratoireExecutant {[]} {[]}
+","Laboratoire sous-traitant. Apparaît à ce niveau si et et seulement si ce résultat a été produit par un laboratoire exécutant distinct du laboratoire exécutant déclaré aux niveaux supérieurs.","Laboratoire sous-traitant. Apparaît à ce niveau si et et seulement si ce résultat a été produit par un laboratoire exécutant distinct du laboratoire exécutant déclaré aux niveaux supérieurs.","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.laboratoireExecutant",0,*,"",""
+"FRLMIsolatMicrobiologique.batterieExamensDeBiologieMedicale","FRLMIsolatMicrobiologique.batterieExamensDeBiologieMedicale","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMBatterieExamensBiologieMedicale {[]} {[]}
+","Batterie d'examens de biologie médicale","Batterie d'examens de biologie médicale","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.batterieExamensDeBiologieMedicale",0,*,"",""
+"FRLMIsolatMicrobiologique.resultatElementCliniquePertinent","FRLMIsolatMicrobiologique.resultatElementCliniquePertinent","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMResultatExamensBiologieElementCliniquePertinent {[]} {[]}
+","Résultat d'examen de biologie / élément clinique pertinent","Résultat d'examen de biologie / élément clinique pertinent","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.resultatElementCliniquePertinent",0,*,"",""
+"FRLMIsolatMicrobiologique.imageIllustrative","FRLMIsolatMicrobiologique.imageIllustrative","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMObservationMedia {[]} {[]}
+","Image ou graphe","Image ou graphe","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.imageIllustrative",0,*,"",""
+"FRLMIsolatMicrobiologique.commentaire","FRLMIsolatMicrobiologique.commentaire","","","",0,*,"","","","string {[]} {[]}
+","Commentaire de section interprétant l'ensemble des résultats","Commentaire de section interprétant l'ensemble des résultats","","","","","","","","","",,,,,"",,,,"FRLMIsolatMicrobiologique.commentaire",0,*,"",""

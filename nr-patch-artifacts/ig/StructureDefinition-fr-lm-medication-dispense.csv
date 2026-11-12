@@ -1,0 +1,59 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-medication-dispense","fr-lm-medication-dispense","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Medication Dispense","Traitement dispense","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-medication-dispense.header","fr-lm-medication-dispense.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-medication-dispense.header.subject","fr-lm-medication-dispense.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-medication-dispense.header.identifier","fr-lm-medication-dispense.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-medication-dispense.header.author[x]","fr-lm-medication-dispense.header.author[x]","","","",1,*,"","","","Base {[]} {[]}
+","Auteur de la Auteur de la dispensation","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-medication-dispense.header.author[x].authorProfessional","fr-lm-medication-dispense.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-medication-dispense.header.author[x].authorOrganisation","fr-lm-medication-dispense.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-medication-dispense.header.author[x].authorDevice","fr-lm-medication-dispense.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-medication-dispense.header.performer[x]","fr-lm-medication-dispense.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-medication-dispense.header.participant[x]","fr-lm-medication-dispense.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-medication-dispense.header.participant[x].participantProfessional","fr-lm-medication-dispense.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-medication-dispense.header.participant[x].participantOrganisation","fr-lm-medication-dispense.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-medication-dispense.header.participant[x].participantDevice","fr-lm-medication-dispense.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-medication-dispense.header.informant","fr-lm-medication-dispense.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-medication-dispense.header.date","fr-lm-medication-dispense.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-medication-dispense.header.status","fr-lm-medication-dispense.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de la ligne de prescription","Statut","","","","","","","","","",,"","Valeur issue du JDV_CompletudeDispensation_CISIS (1.2.250.1.213.1.1.5.765)","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-completude-dispensation-cisis|20260619134041","",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-medication-dispense.header.source","fr-lm-medication-dispense.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-medication-dispense.header.language","fr-lm-medication-dispense.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-medication-dispense.receiver[x]","fr-lm-medication-dispense.receiver[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-related-person {[]} {[]}","Identification de la personne ayant reçu le médicament délivré, notamment lorsqu'il ne s'agit pas du patient. Si non présent, le patient est considéré comme le destinataire.","Identification de la personne ayant reçu le médicament délivré, notamment lorsqu'il ne s'agit pas du patient. Si non présent, le patient est considéré comme le destinataire.","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.receiver[x]",0,1,"",""
+"fr-lm-medication-dispense.relatedRequest","fr-lm-medication-dispense.relatedRequest","","","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/elementdefinition-identifier|5.3.0]]} {[]}
+","Référence de la prescription","Référence de la prescription","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.relatedRequest",0,*,"",""
+"fr-lm-medication-dispense.medicament","fr-lm-medication-dispense.medicament","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication {[]} {[]}
+","Médicament délivré","Médicament délivré","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.medicament",1,1,"",""
+"fr-lm-medication-dispense.dispensedQuantity","fr-lm-medication-dispense.dispensedQuantity","","","",1,1,"","","","Quantity {[]} {[]}
+","Quantite de produit. 
+Nombre d'emballages distribués si leur format est connu, ou nombre d'articles/unités plus petits, selon le médicament distribué. Une unité est attendue.","Quantite de produit. 
+Nombre d'emballages distribués si leur format est connu, ou nombre d'articles/unités plus petits, selon le médicament distribué. Une unité est attendue.","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.dispensedQuantity",1,1,"",""
+"fr-lm-medication-dispense.timeOfDispensation","fr-lm-medication-dispense.timeOfDispensation","","","",0,1,"","","","dateTime {[]} {[]}
+","Date et heure de dispense du médicament. Si non présent, la date de dispensation est celle du header.","Date et heure de dispense du médicament. Si non présent, la date de dispensation est celle du header.","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.timeOfDispensation",0,1,"",""
+"fr-lm-medication-dispense.substitutionOccurred","fr-lm-medication-dispense.substitutionOccurred","","","",1,1,"","","","boolean {[]} {[]}
+","Autorisation de substitution","Autorisation de substitution","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.substitutionOccurred",1,1,"",""
+"fr-lm-medication-dispense.dosageInstructions","fr-lm-medication-dispense.dosageInstructions","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-dosageInstructions {[]} {[]}
+","Posologie","Posologie","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.dosageInstructions",0,1,"",""
+"fr-lm-medication-dispense.note","fr-lm-medication-dispense.note","","","",0,1,"","","","string {[]} {[]}
+","Notes du dispensateur","Notes du dispensateur","","","","","","","","","",,,,,"",,,,"fr-lm-medication-dispense.note",0,1,"",""

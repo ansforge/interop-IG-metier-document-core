@@ -1,0 +1,54 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"FRLMHeaderDocument","FRLMHeaderDocument","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Header Document","Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"FRLMHeaderDocument.identifier","FRLMHeaderDocument.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifiant unique du document et/ou du lot de version du meme document.","Identifiant unique du document et/ou du lot de version du meme document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.identifier",1,*,"",""
+"FRLMHeaderDocument.documentType","FRLMHeaderDocument.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de document.","Type de document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.documentType",1,1,"",""
+"FRLMHeaderDocument.documentTitle","FRLMHeaderDocument.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Titre du document.","Titre du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.documentTitle",1,1,"",""
+"FRLMHeaderDocument.date","FRLMHeaderDocument.date","","","",1,1,"","","","dateTime {[]} {[]}
+","Date de création du document.","Date de création du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.date",1,1,"",""
+"FRLMHeaderDocument.confidentiality","FRLMHeaderDocument.confidentiality","","","",1,1,"","","","code {[]} {[]}
+","Niveau de confidentialité du document.","Niveau de confidentialité du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.confidentiality",1,1,"",""
+"FRLMHeaderDocument.language","FRLMHeaderDocument.language","","","",1,1,"","","","code {[]} {[]}
+","Langue principale du document.","Langue principale du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.language",1,1,"",""
+"FRLMHeaderDocument.version","FRLMHeaderDocument.version","","","",1,1,"","","","string {[]} {[]}
+","Numéro de version du document.","Numéro de version du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.version",1,1,"",""
+"FRLMHeaderDocument.status","FRLMHeaderDocument.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut du document.","Statut du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.status",1,1,"",""
+"FRLMHeaderDocument.eventType","FRLMHeaderDocument.eventType","","","",1,*,"","","","CodeableConcept {[]} {[]}
+","Evènement documenté et notamment le cadre d'exercice.","Evènement documenté et notamment le cadre d'exercice.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.eventType",1,*,"",""
+"FRLMHeaderDocument.subject","FRLMHeaderDocument.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMPatient {[]} {[]}
+","Patient / Usager.","Patient / Usager.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.subject",1,1,"",""
+"FRLMHeaderDocument.author[x]","FRLMHeaderDocument.author[x]","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMHealthProfessional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDevice {[]} {[]}","Auteur du document.","Auteur du document.","Voici les cas d'usage des documents et leurs auteurs :
+
+| Cas d'usage | Auteur(s) du document | Structure de l'auteur |
+|-------------|----------------------|-----------------------|
+| Création d'un document par un professionnel sur son logiciel professionnel | Professionnel | Structure |
+| Création d'un document patient par un professionnel sur son logiciel professionnel pour le compte du patient | Professionnel | Structure |
+| Création d'un document patient par le patient | Patient | non utilisé |
+| Création d'un document par un système (dispositif, automate, …) de structure (ES, …) | Système de structure | Structure |
+| Création d'un document par un Service numérique référencé (SNR) | SNR | Editeur |
+| Création d'un document par le DP | CNOP/DP | CNOP |","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.author[x]",1,*,"",""
+"FRLMHeaderDocument.dataEnterer","FRLMHeaderDocument.dataEnterer","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMDataEnterer {[]} {[]}
+","Opérateur de saisie.","Opérateur de saisie.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.dataEnterer",0,1,"",""
+"FRLMHeaderDocument.informant","FRLMHeaderDocument.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMInformant {[]} {[]}
+","Informateur ayant fourni des informations utiles à la production du document.","Informateur ayant fourni des informations utiles à la production du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.informant",0,*,"",""
+"FRLMHeaderDocument.custodian","FRLMHeaderDocument.custodian","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrganisation {[]} {[]}
+","Structure chargée de la conservation du document.","Structure chargée de la conservation du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.custodian",1,1,"",""
+"FRLMHeaderDocument.intendedRecipient","FRLMHeaderDocument.intendedRecipient","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMIntendedRecipient {[]} {[]}
+","Destinataire prévu du document.","Destinataire prévu du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.intendedRecipient",0,*,"",""
+"FRLMHeaderDocument.legalAuthentication","FRLMHeaderDocument.legalAuthentication","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMLegalAuthentication {[]} {[]}
+","Responsable du document.","Responsable du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.legalAuthentication",1,1,"",""
+"FRLMHeaderDocument.attester","FRLMHeaderDocument.attester","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMAttester {[]} {[]}
+","Professionnel attestant la validité du contenu du document.","Professionnel attestant la validité du contenu du document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.attester",0,*,"",""
+"FRLMHeaderDocument.participant","FRLMHeaderDocument.participant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMParticipant {[]} {[]}
+","Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire.","Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.participant",0,*,"",""
+"FRLMHeaderDocument.order","FRLMHeaderDocument.order","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMOrder {[]} {[]}
+","Association du document à une prescription.","Association du document à une prescription.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.order",0,*,"",""
+"FRLMHeaderDocument.consent","FRLMHeaderDocument.consent","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMConsent {[]} {[]}
+","Consentement associé au document.","Consentement associé au document.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.consent",0,*,"",""
+"FRLMHeaderDocument.encounter","FRLMHeaderDocument.encounter","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/FRLMEncounter {[]} {[]}
+","Association du document à une prise en charge.","Association du document à une prise en charge.","","","","","","","","","",,,,,"",,,,"FRLMHeaderDocument.encounter",1,1,"",""
