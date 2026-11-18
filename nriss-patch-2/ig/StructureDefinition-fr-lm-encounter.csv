@@ -1,0 +1,81 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-encounter","fr-lm-encounter","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Encounter","Rencontre","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-encounter.header","fr-lm-encounter.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-encounter.header.subject","fr-lm-encounter.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-encounter.header.identifier","fr-lm-encounter.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-encounter.header.author[x]","fr-lm-encounter.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","Responsable de la rencontre","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-encounter.header.author[x].authorProfessional","fr-lm-encounter.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-encounter.header.author[x].authorOrganisation","fr-lm-encounter.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-encounter.header.author[x].authorDevice","fr-lm-encounter.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-encounter.header.performer[x]","fr-lm-encounter.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-encounter.header.participant[x]","fr-lm-encounter.header.participant[x]","","","",0,0,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-encounter.header.participant[x].participantProfessional","fr-lm-encounter.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-encounter.header.participant[x].participantOrganisation","fr-lm-encounter.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-encounter.header.participant[x].participantDevice","fr-lm-encounter.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-encounter.header.informant","fr-lm-encounter.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-encounter.header.date","fr-lm-encounter.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-encounter.header.status","fr-lm-encounter.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-encounter.header.source","fr-lm-encounter.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-encounter.header.language","fr-lm-encounter.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-encounter.participant","fr-lm-encounter.participant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant {[]} {[]}
+","Personne impliquée dans la rencontre","Personne impliquée dans la rencontre","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.participant",0,*,"",""
+"fr-lm-encounter.period","fr-lm-encounter.period","","","",1,1,"","","","Period {[]} {[]}
+","Date de début et de fin de la rencontre.","Date de début et de fin de la rencontre.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.period",1,1,"",""
+"fr-lm-encounter.priority","fr-lm-encounter.priority","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Priorité de la rencontre (ex : urgence, etc.).","Priorité de la rencontre (ex : urgence, etc.).","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.priority",0,1,"",""
+"fr-lm-encounter.type","fr-lm-encounter.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de la rencontre (hospitalisation, soins à domicile, etc.).","Type de la rencontre (hospitalisation, soins à domicile, etc.).","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.type",1,1,"",""
+"fr-lm-encounter.serviceProvider","fr-lm-encounter.serviceProvider","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Organisation (établissement) responsable de cette rencontre","Organisation (établissement) responsable de cette rencontre","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.serviceProvider",0,1,"",""
+"fr-lm-encounter.referringProfessional","fr-lm-encounter.referringProfessional","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Professionnel de santé référent","Professionnel de santé référent","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.referringProfessional",0,1,"",""
+"fr-lm-encounter.basedOn[x]","fr-lm-encounter.basedOn[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-care-plan {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-service-request {[]} {[]}","Référence à la demande ayant initié cette rencontre","Référence à la demande ayant initié cette rencontre","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.basedOn[x]",0,*,"",""
+"fr-lm-encounter.reason[x]","fr-lm-encounter.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}string {[]} {[]}","Motif(s) de l'admission, ex : problème, procédure ou constatation.","Motif(s) de l'admission, ex : problème, procédure ou constatation.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.reason[x]",0,*,"",""
+"fr-lm-encounter.admission","fr-lm-encounter.admission","","","",0,1,"","","","Base {[]} {[]}
+","Détails de l'admission","Détails de l'admission","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.admission",0,1,"",""
+"fr-lm-encounter.admission.admitter","fr-lm-encounter.admission.admitter","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Professionnel de santé ayant admis le patient","Professionnel de santé ayant admis le patient","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.admission.admitter",0,1,"",""
+"fr-lm-encounter.admission.admitSource","fr-lm-encounter.admission.admitSource","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Modalité d'entrée d'un patient en ES (urgence, programmée, etc...).","Modalité d'entrée d'un patient en ES (urgence, programmée, etc...).","","","","","","","","","",,"","jdv-modalite-entree : Modalité d'entrée en établissement de santé","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-modalite-entree-cisis|20260619134043","",,,,"fr-lm-encounter.admission.admitSource",0,1,"",""
+"fr-lm-encounter.dischargeDiagnosis[x]","fr-lm-encounter.dischargeDiagnosis[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-condition {[]} {[]}","Les diagnostics au moment de la sortie.","Les diagnostics au moment de la sortie.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.dischargeDiagnosis[x]",0,*,"",""
+"fr-lm-encounter.dischargeDestination","fr-lm-encounter.dischargeDestination","","","",0,1,"","","","Base {[]} {[]}
+","modalité de sortie du patient d'un ES (retour à domicile, EHPAD, HAD, etc...)","modalité de sortie du patient d'un ES (retour à domicile, EHPAD, HAD, etc...)","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.dischargeDestination",0,1,"",""
+"fr-lm-encounter.dischargeDestination.type","fr-lm-encounter.dischargeDestination.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type de sortie","Type de sortie","","","","","","","","","",,"","JDV_ModaliteSortie_CISIS (1.2.250.1.213.1.1.5.74) ou autre JDV spécifique à un volet","","",,,,"fr-lm-encounter.dischargeDestination.type",0,1,"",""
+"fr-lm-encounter.dischargeDestination.location[x]","fr-lm-encounter.dischargeDestination.location[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-location {[]} {[]}","Le lieu ou l'organisation","Le lieu ou l'organisation","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.dischargeDestination.location[x]",0,1,"",""
+"fr-lm-encounter.serviceLocation","fr-lm-encounter.serviceLocation","","","",0,*,"","","","Base {[]} {[]}
+","Liste des lieux où le patient était présent pendant cette rencontre.","Liste des lieux où le patient était présent pendant cette rencontre.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.serviceLocation",0,*,"",""
+"fr-lm-encounter.serviceLocation.period","fr-lm-encounter.serviceLocation.period","","","",0,1,"","","","Period {[]} {[]}
+","Période pendant laquelle le patient était présent au lieu","Période pendant laquelle le patient était présent au lieu","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.serviceLocation.period",0,1,"",""
+"fr-lm-encounter.serviceLocation.organisationPart[x]","fr-lm-encounter.serviceLocation.organisationPart[x]","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-location {[]} {[]}","Organisation ou partie d'une organisation (ex : département) où le patient était présent pendant la rencontre.","Organisation ou partie d'une organisation (ex : département) où le patient était présent pendant la rencontre.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.serviceLocation.organisationPart[x]",1,1,"",""
+"fr-lm-encounter.subEncounter","fr-lm-encounter.subEncounter","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter {[]} {[]}
+","référence aux rencontres considérées comme faisant partie de cette rencontre.","référence aux rencontres considérées comme faisant partie de cette rencontre.","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.subEncounter",0,*,"",""
+"fr-lm-encounter.note","fr-lm-encounter.note","","","",0,1,"","","","string {[]} {[]}
+","Notes","Notes","","","","","","","","","",,,,,"",,,,"fr-lm-encounter.note",0,1,"",""

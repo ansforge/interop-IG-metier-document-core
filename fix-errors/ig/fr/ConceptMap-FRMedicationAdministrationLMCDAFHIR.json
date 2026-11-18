@@ -1,0 +1,335 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRMedicationAdministrationLMCDAFHIR",
+  "language" : "fr",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CarteDeConcepts FRMedicationAdministrationLMCDAFHIR</b></p><a name=\"FRMedicationAdministrationLMCDAFHIR\"> </a><a name=\"hcFRMedicationAdministrationLMCDAFHIR\"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <a href=\"StructureDefinition-fr-lm-medication-administration.html\">Logical model- FR LM Medication Administration\t</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-cda-document-core/StructureDefinition-fr-cda-traitement.html\">CDA - FR Traitement</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.medication</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.consumable</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.occurrence[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime[not(@operator='A')]</td></tr><tr><td colspan=\"3\" style=\"opacity: 0.5\">&quot;</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime[@operator='A']</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.reason[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.entryRelationship:frTraitement.entryRelationship:frReferenceInterne</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.renderedDosageInstruction</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.text</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.sequence</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.entryRelationship:frInstructionsAuPatient</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.doseQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.rateQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency.numberOfTimes</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime.frequency</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency.period</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime.period</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency.dayOfWeek</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency.timeOfDay</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.frequency.additionalInstructions</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.entryRelationship:frInstructionsAuPatient</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.dateOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.conditionOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.precondition</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.date[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.duration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.effectiveTime</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.eventTime</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.entryRelationship:frInstructionsAuPatient</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.eventEndSequence</td><td colspan=\"5\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.approachSiteCode</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.routeCode</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.quantity</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.maxDoseQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.duration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.maxDoseQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.maxDoseQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.maxLifetimeDose</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.maxDoseQuantity</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRCDATraitement.text</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <a href=\"StructureDefinition-fr-lm-medication-administration.html\">Logical model- FR LM Medication Administration\t</a> to <a href=\"https://build.fhir.org/ig/ansforge/interop-IG-fhir-document-core/StructureDefinition-fr-medication-administration-document.html\">MedicationAdministration - FR Medication Administration Document</a></p><table class=\"grid\"><tr><td><b>Code source</b></td><td><b>Card.</b></td><td><b>Type</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Card.</b></td><td><b>Type</b></td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.medication</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.medication:FRMedicationDocument</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.occurrence[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.effectivePeriod</td></tr><tr><td colspan=\"3\" style=\"opacity: 0.5\">&quot;</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.extension:medicationAdministration-occurence-r5</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.reason[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.reasonReference</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.reason[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.reasonCode</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.renderedDosageInstruction</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage.text</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.bodySite</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage.site</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage.route</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage.dose</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.dosage.rate[x]</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.dosage.dosageDetails.sequence</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRLMMedicationAdministration.dosage.extension:FRMedicationAdministrationSequenceExtension</td></tr><tr><td colspan=\"3\">FRLMMedicationAdministration.note</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td colspan=\"3\">FRMedicationAdministrationDocument.note</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRMedicationAdministrationLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Traitement déjà administré\"",
+  "status" : "draft",
+  "date" : "2026-08-18T11:25:47+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMMedicationAdministration vers le profil CDA FRCDATraitement (Groupe 1), et vers le profil FHIR FRMedicationAdministrationDocument (Groupe 2).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/cda/document-core/StructureDefinition/fr-cda-traitement",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedicationAdministration",
+      "target" : [{
+        "code" : "FRCDATraitement",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.medication",
+      "target" : [{
+        "code" : "FRCDATraitement.consumable",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.occurrence[x]",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime[not(@operator='A')]",
+        "equivalence" : "equivalent"
+      },
+      {
+        "code" : "FRCDATraitement.effectiveTime[@operator='A']",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.reason[x]",
+      "target" : [{
+        "code" : "FRCDATraitement.entryRelationship:frTraitement.entryRelationship:frReferenceInterne",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
+      "target" : [{
+        "code" : "FRCDATraitement.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.sequence",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.note",
+      "target" : [{
+        "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "FRCDATraitement.doseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "FRCDATraitement.rateQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.numberOfTimes",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime.frequency",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.period",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime.period",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.dayOfWeek",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.timeOfDay",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.frequency.additionalInstructions",
+      "target" : [{
+        "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.dateOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.conditionOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitement.precondition",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.date[x]",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.duration",
+      "target" : [{
+        "code" : "FRCDATraitement.effectiveTime",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.eventTime",
+      "target" : [{
+        "code" : "FRCDATraitement.entryRelationship:frInstructionsAuPatient",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.eventEndSequence",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRCDATraitement.approachSiteCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "FRCDATraitement.routeCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.quantity",
+      "target" : [{
+        "code" : "FRCDATraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerPeriod.duration",
+      "target" : [{
+        "code" : "FRCDATraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxDosePerAdministration",
+      "target" : [{
+        "code" : "FRCDATraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.maxLifetimeDose",
+      "target" : [{
+        "code" : "FRCDATraitement.maxDoseQuantity",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.note",
+      "target" : [{
+        "code" : "FRCDATraitement.text",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-medication-administration",
+    "sourceVersion" : "0.1.0",
+    "target" : "https://interop.esante.gouv.fr/ig/fhir/document-core/StructureDefinition/fr-medication-administration-document",
+    "targetVersion" : "0.1.0",
+    "element" : [{
+      "code" : "FRLMMedicationAdministration",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.medication",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.medication:FRMedicationDocument",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.occurrence[x]",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.effectivePeriod",
+        "equivalence" : "equivalent"
+      },
+      {
+        "code" : "FRMedicationAdministrationDocument.extension:medicationAdministration-occurence-r5",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.reason[x]",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.reasonReference",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.reason[x]",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.reasonCode",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.renderedDosageInstruction",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.bodySite",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.site",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.routeOfAdministration",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.route",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.dose[x]",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.dose",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.doseAndRate.rate[x]",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.dosage.rate[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.dosage.dosageDetails.sequence",
+      "target" : [{
+        "code" : "FRLMMedicationAdministration.dosage.extension:FRMedicationAdministrationSequenceExtension",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMMedicationAdministration.note",
+      "target" : [{
+        "code" : "FRMedicationAdministrationDocument.note",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

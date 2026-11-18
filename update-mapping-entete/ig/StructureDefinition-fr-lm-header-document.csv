@@ -1,0 +1,45 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-header-document","fr-lm-header-document","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Header Document","Eléments de l'entête d'un document contenant les informations générales et nécessaires à la gestion du document (identification et type du document, patient/usager, auteur, évènement documenté, etc...).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-header-document.identifier","fr-lm-header-document.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifiant unique du document et/ou du lot de version du meme document.","Identifiant unique du document et/ou du lot de version du meme document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.identifier",1,*,"",""
+"fr-lm-header-document.documentType","fr-lm-header-document.documentType","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type de document.","Type de document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.documentType",1,1,"",""
+"fr-lm-header-document.documentTitle","fr-lm-header-document.documentTitle","","","",1,1,"","","","string {[]} {[]}
+","Titre du document.","Titre du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.documentTitle",1,1,"",""
+"fr-lm-header-document.date","fr-lm-header-document.date","","","",1,1,"","","","dateTime {[]} {[]}
+","Date de création du document.","Date de création du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.date",1,1,"",""
+"fr-lm-header-document.confidentiality","fr-lm-header-document.confidentiality","","","",1,1,"","","","code {[]} {[]}
+","Niveau de confidentialité du document.","Niveau de confidentialité du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.confidentiality",1,1,"",""
+"fr-lm-header-document.language","fr-lm-header-document.language","","","",1,1,"","","","code {[]} {[]}
+","Langue principale du document.","Langue principale du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.language",1,1,"",""
+"fr-lm-header-document.version","fr-lm-header-document.version","","","",1,1,"","","","string {[]} {[]}
+","Numéro de version du document.","Numéro de version du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.version",1,1,"",""
+"fr-lm-header-document.status","fr-lm-header-document.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut du document.","Statut du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.status",1,1,"",""
+"fr-lm-header-document.eventType","fr-lm-header-document.eventType","","","",1,*,"","","","CodeableConcept {[]} {[]}
+","Evènement documenté et notamment le cadre d'exercice.","Evènement documenté et notamment le cadre d'exercice.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.eventType",1,*,"",""
+"fr-lm-header-document.subject","fr-lm-header-document.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager.","Patient / Usager.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.subject",1,1,"",""
+"fr-lm-header-document.author[x]","fr-lm-header-document.author[x]","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}","Auteur du document.","Auteur du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.author[x]",1,*,"",""
+"fr-lm-header-document.dataEnterer","fr-lm-header-document.dataEnterer","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-data-enterer {[]} {[]}
+","Opérateur de saisie.","Opérateur de saisie.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.dataEnterer",0,1,"",""
+"fr-lm-header-document.informant","fr-lm-header-document.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur ayant fourni des informations utiles à la production du document.","Informateur ayant fourni des informations utiles à la production du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.informant",0,*,"",""
+"fr-lm-header-document.custodian","fr-lm-header-document.custodian","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Structure chargée de la conservation du document.","Structure chargée de la conservation du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.custodian",1,1,"",""
+"fr-lm-header-document.intendedRecipient","fr-lm-header-document.intendedRecipient","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-intended-recipient {[]} {[]}
+","Destinataire prévu du document.","Destinataire prévu du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.intendedRecipient",0,*,"",""
+"fr-lm-header-document.legalAuthentication","fr-lm-header-document.legalAuthentication","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-legal-authentication {[]} {[]}
+","Responsable du document.","Responsable du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.legalAuthentication",1,1,"",""
+"fr-lm-header-document.attester","fr-lm-header-document.attester","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-attester {[]} {[]}
+","Professionnel attestant la validité du contenu du document.","Professionnel attestant la validité du contenu du document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.attester",0,*,"",""
+"fr-lm-header-document.participant","fr-lm-header-document.participant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-participant {[]} {[]}
+","Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire.","Participant, différent de l'auteur, du responsable, de l'opérateur de saisie, de l'informateur ou du destinataire.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.participant",0,*,"",""
+"fr-lm-header-document.order","fr-lm-header-document.order","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-order {[]} {[]}
+","Association du document à une prescription.","Association du document à une prescription.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.order",0,*,"",""
+"fr-lm-header-document.consent","fr-lm-header-document.consent","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-consent {[]} {[]}
+","Consentement associé au document.","Consentement associé au document.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.consent",0,*,"",""
+"fr-lm-header-document.encounter","fr-lm-header-document.encounter","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-encounter {[]} {[]}
+","Association du document à une prise en charge.","Association du document à une prise en charge.","","","","","","","","","",,,,,"",,,,"fr-lm-header-document.encounter",1,1,"",""

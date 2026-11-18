@@ -1,0 +1,83 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-technique-imagerie","fr-lm-technique-imagerie","","","",0,*,"","","","null {[]} {[]}
+","Logical model- FR LM Technique imagerie","Entrée Technique imagerie","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-technique-imagerie.header","fr-lm-technique-imagerie.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-technique-imagerie.header.subject","fr-lm-technique-imagerie.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-technique-imagerie.header.identifier","fr-lm-technique-imagerie.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-technique-imagerie.header.author[x]","fr-lm-technique-imagerie.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-technique-imagerie.header.author[x].authorProfessional","fr-lm-technique-imagerie.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-technique-imagerie.header.author[x].authorOrganisation","fr-lm-technique-imagerie.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-technique-imagerie.header.author[x].authorDevice","fr-lm-technique-imagerie.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-technique-imagerie.header.performer[x]","fr-lm-technique-imagerie.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-technique-imagerie.header.participant[x]","fr-lm-technique-imagerie.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-technique-imagerie.header.participant[x].participantProfessional","fr-lm-technique-imagerie.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-technique-imagerie.header.participant[x].participantOrganisation","fr-lm-technique-imagerie.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-technique-imagerie.header.participant[x].participantDevice","fr-lm-technique-imagerie.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-technique-imagerie.header.informant","fr-lm-technique-imagerie.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-technique-imagerie.header.date","fr-lm-technique-imagerie.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-technique-imagerie.header.status","fr-lm-technique-imagerie.header.status","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Statut","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-technique-imagerie.header.source","fr-lm-technique-imagerie.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-technique-imagerie.header.language","fr-lm-technique-imagerie.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-technique-imagerie.codeActe","fr-lm-technique-imagerie.codeActe","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Code de l'acte d'imagerie","Code de l'acte d'imagerie","","","","","","","","","",,"","jdv-code-document-imagerie-cisis (1.2.250.1.213.1.1.5.687)","","",,,,"fr-lm-technique-imagerie.codeActe",1,1,"",""
+"fr-lm-technique-imagerie.description","fr-lm-technique-imagerie.description","","","",0,1,"","","","Narrative {[]} {[]}
+","Partie narrative de l'observation","Partie narrative de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-technique-imagerie.description",0,1,"",""
+"fr-lm-technique-imagerie.modaliteAcquisition","fr-lm-technique-imagerie.modaliteAcquisition","","","",1,*,"","","","CodeableConcept {[]} {[]}
+","Modalité d’acquisition","Modalité d’acquisition","","","","","","","","","",,"","jdv-modalite-acquisition-cisis (1.2.250.1.213.1.1.5.618)","","",,,,"fr-lm-technique-imagerie.modaliteAcquisition",1,*,"",""
+"fr-lm-technique-imagerie.lateralite","fr-lm-technique-imagerie.lateralite","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Latéralité et topographie","Latéralité et topographie","","","","","","","","","",,"","SNOMED CT (2.16.840.1.113883.6.96)","","",,,,"fr-lm-technique-imagerie.lateralite",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.id","fr-lm-technique-imagerie.lateralite.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-technique-imagerie.lateralite.extension","fr-lm-technique-imagerie.lateralite.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-technique-imagerie.lateralite.coding","fr-lm-technique-imagerie.lateralite.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.text","fr-lm-technique-imagerie.lateralite.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.precisionTopographique","fr-lm-technique-imagerie.lateralite.precisionTopographique","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Précision topographique","Précision topographique","","","","","","","","","",,,,,"",,,,"fr-lm-technique-imagerie.lateralite.precisionTopographique",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.id","fr-lm-technique-imagerie.lateralite.precisionTopographique.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.extension","fr-lm-technique-imagerie.lateralite.precisionTopographique.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.coding","fr-lm-technique-imagerie.lateralite.precisionTopographique.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.text","fr-lm-technique-imagerie.lateralite.precisionTopographique.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.nom","fr-lm-technique-imagerie.lateralite.precisionTopographique.nom","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","name","name","","","","","","","","","",,,,,"",,,,"fr-lm-technique-imagerie.lateralite.precisionTopographique.nom",1,1,"",""
+"fr-lm-technique-imagerie.lateralite.precisionTopographique.valeur","fr-lm-technique-imagerie.lateralite.precisionTopographique.valeur","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Valeur de la topographie","Valeur de la topographie","","","","","","","","","",,"","jdv-modificateur-topographique-cisis (1.2.250.1.213.1.1.5.688)","","",,,,"fr-lm-technique-imagerie.lateralite.precisionTopographique.valeur",1,1,"",""

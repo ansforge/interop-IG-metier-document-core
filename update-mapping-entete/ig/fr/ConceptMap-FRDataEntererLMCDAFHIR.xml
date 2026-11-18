@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRDataEntererLMCDAFHIR"/>
+  <language value="fr"/>
+  <text>
+    <status value="generated"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : CarteDeConcepts FRDataEntererLMCDAFHIR</b></p><a name="FRDataEntererLMCDAFHIR"> </a><a name="hcFRDataEntererLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Groupe 1 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-data-enterer</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer</code></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMDataEnterer</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>dataEnterer</td><td/></tr><tr><td>FRLMDataEnterer.date</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>dataEnterer.time</td><td/></tr><tr><td>FRLMDataEnterer.dataEnterer:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>dataEnterer.assignedEntity</td><td>L'opérateur de saisie professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMDataEnterer.dataEnterer:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>dataEnterer.assignedEntity</td><td>L'opérateur de saisie patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR.</td></tr></table><hr/><p><b>Groupe 2 </b>Mapping de <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-data-enterer</code> to <a href="http://hl7.org/fhir/uv/fhir-clinical-document/STU1.1/StructureDefinition-data-enterer-extension.html">Data Enterer Extensionversion : 1.1.0)</a></p><table class="grid"><tr><td><b>Code source</b></td><td><b>relation</b></td><td><b>Code cible</b></td><td><b>Commentaire</b></td></tr><tr><td>FRLMDataEnterer</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Extension (Data Enterer Extension)</td><td/></tr><tr><td>FRLMDataEnterer.date</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Extension.extension:time.value[x] (Value of extension)</td><td/></tr><tr><td>FRLMDataEnterer.dataEnterer:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMDataEnterer.dataEnterer:patient</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Extension.extension:party.value[x] (Value of extension)</td><td>Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR.</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRDataEntererLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Opérateur de saisie&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:19:20+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMDataEnterer\&quot; et l'élément CDA \&quot;dataEnterer\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMDataEnterer\&quot; et l'extension FHIR \&quot;DataEntererExtension\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-data-enterer"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-data-enterer"/>
+    <element>
+      <code value="FRLMDataEnterer"/>
+      <target>
+        <code value="dataEnterer"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.date"/>
+      <target>
+        <code value="dataEnterer.time"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.dataEnterer:healthProfessional"/>
+      <target>
+        <code value="dataEnterer.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'opérateur de saisie professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.dataEnterer:patient"/>
+      <target>
+        <code value="dataEnterer.assignedEntity"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'opérateur de saisie patient/usager est de type FRLMPatient, cf. FRPatientLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-data-enterer"/>
+    <target value="http://hl7.org/fhir/uv/fhir-clinical-document/StructureDefinition/data-enterer-extension"/>
+    <targetVersion value="1.1.0"/>
+    <element>
+      <code value="FRLMDataEnterer"/>
+      <target>
+        <code value="Extension"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.date"/>
+      <target>
+        <code value="Extension.extension:time.value[x]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.dataEnterer:healthProfessional"/>
+      <target>
+        <code value="Extension.extension:party.value[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="Extension.extension:party.value[x].resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMDataEnterer.dataEnterer:patient"/>
+      <target>
+        <code value="Extension.extension:party.value[x]"/>
+        <equivalence value="equivalent"/>
+        <comment value="Extension.extension:party.value[x].resolve().ofType(Patient) — cf. FRPatientLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

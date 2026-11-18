@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FRAuthorLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FRAuthorLMCDAFHIR</b></p><a name="en-FRAuthorLMCDAFHIR"> </a><a name="en-hcFRAuthorLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMHeaderDocument.author</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author</td><td/></tr><tr><td>FRLMHeaderDocument.author:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'auteur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMHeaderDocument.author:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.assignedAuthor</td><td>L'auteur structure est de type FRLMOrganisation, porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR.</td></tr><tr><td>FRLMHeaderDocument.author:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>author.assignedAuthor.assignedAuthoringDevice</td><td>L'auteur système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMHeaderDocument.author</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author</td><td>Composition.author.resolve().ofType(PractitionerRole or Organization or Device)</td></tr><tr><td>FRLMHeaderDocument.author:healthProfessional</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.PractitionerRole</td><td>Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR.</td></tr><tr><td>FRLMHeaderDocument.author:organisation</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Organization</td><td>Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR.</td></tr><tr><td>FRLMHeaderDocument.author:device</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Device</td><td>Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun).</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRAuthorLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Auteur&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:19:20+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre l'élément métier \&quot;author[x]\&quot; du modèle FRLMHeaderDocument et l'élément CDA \&quot;author\&quot;&#xA; - Mapping 2 : entre l'élément métier \&quot;author[x]\&quot; et l'élément FHIR \&quot;Composition.author\&quot; "/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-author"/>
+    <element>
+      <code value="FRLMHeaderDocument.author"/>
+      <target>
+        <code value="author"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:healthProfessional"/>
+      <target>
+        <code value="author.assignedAuthor"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'auteur professionnel de santé est de type FRLMHealthProfessional, cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:organisation"/>
+      <target>
+        <code value="author.assignedAuthor"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'auteur structure est de type FRLMOrganisation, porté par assignedAuthor.representedOrganization, cf. FROrganisationLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:device"/>
+      <target>
+        <code value="author.assignedAuthor.assignedAuthoringDevice"/>
+        <equivalence value="equivalent"/>
+        <comment value="L'auteur système est de type FRLMDevice, cf. FRDeviceLMCDAFHIR."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-header-document"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document"/>
+    <element>
+      <code value="FRLMHeaderDocument.author"/>
+      <target>
+        <code value="Composition.author"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(PractitionerRole or Organization or Device)"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:healthProfessional"/>
+      <target>
+        <code value="Composition.author.PractitionerRole"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(PractitionerRole) — cf. FRHealthProfessionalLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:organisation"/>
+      <target>
+        <code value="Composition.author.Organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(Organization) — cf. FROrganisationLMCDAFHIR."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMHeaderDocument.author:device"/>
+      <target>
+        <code value="Composition.author.Device"/>
+        <equivalence value="equivalent"/>
+        <comment value="Composition.author.resolve().ofType(Device) — cf. FRDeviceLMCDAFHIR (composant commun)."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

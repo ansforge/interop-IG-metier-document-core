@@ -1,0 +1,87 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-observation","fr-lm-observation","","","",0,*,"","","","null {[]} {[]}
+","Logical model - FR LM Observation","Résultat d'une observation réalisée sur le patient ou un dispositif médical.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-observation.header","fr-lm-observation.header","","","",1,1,"","","","Base {[]} {[]}
+","Métadonnées de base","Métadonnées de base","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header",1,1,"",""
+"fr-lm-observation.header.subject","fr-lm-observation.header.subject","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+","Patient / Usager","Patient / Usager","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.subject",1,1,"",""
+"fr-lm-observation.header.identifier","fr-lm-observation.header.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","Identifiant de l’entrée","Identifiant de l’entrée","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.identifier",0,*,"",""
+"fr-lm-observation.header.author[x]","fr-lm-observation.header.author[x]","","","",0,*,"","","","Base {[]} {[]}
+","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","author[x] peut correspondre soit à un professionnel, soit à une organisation, soit à un système.","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x]",0,*,"",""
+"fr-lm-observation.header.author[x].authorProfessional","fr-lm-observation.header.author[x].authorProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","L'auteur est un professionnel de santé","L'auteur est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorProfessional",0,*,"",""
+"fr-lm-observation.header.author[x].authorOrganisation","fr-lm-observation.header.author[x].authorOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","L'auteur est une organisation","L'auteur est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorOrganisation",0,*,"",""
+"fr-lm-observation.header.author[x].authorDevice","fr-lm-observation.header.author[x].authorDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","L'auteur est un système","L'auteur est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.author[x].authorDevice",0,*,"",""
+"fr-lm-observation.header.performer[x]","fr-lm-observation.header.performer[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}","Exécutant (performer)","Exécutant (performer)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.performer[x]",0,*,"",""
+"fr-lm-observation.header.participant[x]","fr-lm-observation.header.participant[x]","","","",0,*,"","","","Base {[]} {[]}
+","Participant","Participant","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x]",0,*,"",""
+"fr-lm-observation.header.participant[x].participantProfessional","fr-lm-observation.header.participant[x].participantProfessional","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}
+","Le participant est un professionnel de santé","Le participant est un professionnel de santé","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantProfessional",0,*,"",""
+"fr-lm-observation.header.participant[x].participantOrganisation","fr-lm-observation.header.participant[x].participantOrganisation","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Le participant est une organisation","Le participant est une organisation","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantOrganisation",0,*,"",""
+"fr-lm-observation.header.participant[x].participantDevice","fr-lm-observation.header.participant[x].participantDevice","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}
+","Le participant est un système","Le participant est un système","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.participant[x].participantDevice",0,*,"",""
+"fr-lm-observation.header.informant","fr-lm-observation.header.informant","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-informant {[]} {[]}
+","Informateur","Informateur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.informant",0,*,"",""
+"fr-lm-observation.header.date","fr-lm-observation.header.date","","","",0,1,"","","","dateTime {[]} {[]}
+","Date/Heure de création par l'auteur","Date/Heure de création par l'auteur","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.date",0,1,"",""
+"fr-lm-observation.header.status","fr-lm-observation.header.status","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Statut de l'observation","Statut","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.status",0,1,"",""
+"fr-lm-observation.header.source","fr-lm-observation.header.source","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Source","Source","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.source",0,1,"",""
+"fr-lm-observation.header.language","fr-lm-observation.header.language","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","'fr-FR' pour français métropolitain (la casse des caractères doit être respectée)
+La partie en minuscules indique le code de la langue utilisée (ISO-639-1)
+La partie en majuscules indique le code pays (ISO-3166)","","","","","","","","","",,,,,"",,,,"fr-lm-entry.header.language",0,1,"",""
+"fr-lm-observation.directSubject[x]","fr-lm-observation.directSubject[x]","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-patient {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-device {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-health-professional {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-procedure {[]} {[]}","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","Sujet direct de l'observation si différent du patient, par exemple dans le cas d’une observation portant sur un dispositif implanté. D’autres types de sujets peuvent être autorisés selon les implémentations.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.directSubject[x]",0,1,"",""
+"fr-lm-observation.observationDate[x]","fr-lm-observation.observationDate[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date de l'observation","Date de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.observationDate[x]",1,1,"",""
+"fr-lm-observation.type","fr-lm-observation.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type d'observation","Type d'observation","","","","","","","","","",,"","LOINC (2.16.840.1.113883.6.1) ou autre","","",,,,"fr-lm-observation.type",1,1,"",""
+"fr-lm-observation.originalName","fr-lm-observation.originalName","","","",0,1,"","","","string {[]} {[]}
+","Nom de l'observation","Nom de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.originalName",0,1,"",""
+"fr-lm-observation.method","fr-lm-observation.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Méthode utilisée pour l'observation","Méthode utilisée pour l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.method",0,1,"",""
+"fr-lm-observation.specimen","fr-lm-observation.specimen","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-specimen {[]} {[]}
+","Prélèvement","Prélèvement","","","","","","","","","",,,,,"",,,,"fr-lm-observation.specimen",0,1,"",""
+"fr-lm-observation.order","fr-lm-observation.order","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-service-request {[]} {[]}
+","Demande d'examen correspondante","Demande d'examen correspondante","","","","","","","","","",,,,,"",,,,"fr-lm-observation.order",0,1,"",""
+"fr-lm-observation.bodySite","fr-lm-observation.bodySite","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-body-structure {[]} {[]}
+","Localisation anatomique","Localisation anatomique","","","","","","","","","",,,,,"",,,,"fr-lm-observation.bodySite",0,1,"",""
+"fr-lm-observation.result","fr-lm-observation.result","","","",1,1,"","","","Base {[]} {[]}
+","Valeur de l'observation","Valeur de l'observation","","","","","","","","","",,,,,"",,,,"fr-lm-observation.result",1,1,"",""
+"fr-lm-observation.result.Value[x]","fr-lm-observation.result.Value[x]","","","",0,1,"","","","string {[]} {[]}
+Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}CodeableConcept {[]} {[]}boolean {[]} {[]}","Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.","Valeur de l'observation. Le type de donnée doit être adapté au type d'observation.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.result.Value[x]",0,1,"",""
+"fr-lm-observation.referenceRange","fr-lm-observation.referenceRange","","","",0,*,"","","","Base {[]} {[]}
+","Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis.","Intervalle de référence. Plusieurs intervalles de référence, de types différents, peuvent être fournis.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.referenceRange",0,*,"",""
+"fr-lm-observation.referenceRange.low","fr-lm-observation.referenceRange.low","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite inférieure de l'intervalle","Limite inférieure de l'intervalle","","","","","","","","","",,"","(preferred): UCUM for units","","",,,,"fr-lm-observation.referenceRange.low",0,1,"",""
+"fr-lm-observation.referenceRange.high","fr-lm-observation.referenceRange.high","","","",0,1,"","","","Quantity {[]} {[]}
+","Limite supérieure de l'intervalle","Limite supérieure de l'intervalle","","","","","","","","","",,"","(preferred): UCUM for units","","",,,,"fr-lm-observation.referenceRange.high",0,1,"",""
+"fr-lm-observation.referenceRange.normalValue","fr-lm-observation.referenceRange.normalValue","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Valeur normale si pertinente pour l'intervalle","Valeur normale si pertinente pour l'intervalle","","","","","","","","","",,"","(preferred): SNOMED CT","","",,,,"fr-lm-observation.referenceRange.normalValue",0,1,"",""
+"fr-lm-observation.referenceRange.type","fr-lm-observation.referenceRange.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type d'intervalle de référence","Type d'intervalle de référence","","","","","","","","","",,"","(preferred): HL7 Observation Reference Range Meaning Codes","","",,,,"fr-lm-observation.referenceRange.type",0,1,"",""
+"fr-lm-observation.referenceRange.appliesTo","fr-lm-observation.referenceRange.appliesTo","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Population concernée pour cet intervalle","Population concernée pour cet intervalle","","","","","","","","","",,"","(preferred): SNOMED CT, HL7 v3-Race","","",,,,"fr-lm-observation.referenceRange.appliesTo",0,*,"",""
+"fr-lm-observation.referenceRange.age","fr-lm-observation.referenceRange.age","","","",0,1,"","","","Range {[]} {[]}
+","Tranche d'âge pour cet intervalle","Tranche d'âge pour cet intervalle","","","","","","","","","",,"","(preferred): UCUM for units","","",,,,"fr-lm-observation.referenceRange.age",0,1,"",""
+"fr-lm-observation.referenceRange.text","fr-lm-observation.referenceRange.text","","","",0,1,"","","","string {[]} {[]}
+","Texte libre","Texte libre","","","","","","","","","",,,,,"",,,,"fr-lm-observation.referenceRange.text",0,1,"",""
+"fr-lm-observation.interpretation","fr-lm-observation.interpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Interprétation","Interprétation","","","","","","","","","",,"","(preferred): HL7 Observation Interpretation Codes","https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-ObservationInterpretation-cisis|20260619134042","",,,,"fr-lm-observation.interpretation",0,*,"",""
+"fr-lm-observation.note","fr-lm-observation.note","","","",0,1,"","","","string {[]} {[]}
+","Commentaire","Commentaire","","","","","","","","","",,,,,"",,,,"fr-lm-observation.note",0,1,"",""
+"fr-lm-observation.component","fr-lm-observation.component","","","",0,*,"","","","Base {[]} {[]}
+","Composant dans le cas d'une observation composée de plusieurs sous-observations","Composant dans le cas d'une observation composée de plusieurs sous-observations","","","","","","","","","",,,,,"",,,,"fr-lm-observation.component",0,*,"",""
+"fr-lm-observation.derivedFrom[x]","fr-lm-observation.derivedFrom[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-laboratory-observation {[]} {[]}https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-imaging-study {[]} {[]}","Référence de la resource à partir de laquelle l'observation a été faite. Par exemple, une image échographique à partir de laquelle une mesure fœtale est réalisée.","Référence de la resource à partir de laquelle l'observation a été faite. Par exemple, une image échographique à partir de laquelle une mesure fœtale est réalisée.","","","","","","","","","",,,,,"",,,,"fr-lm-observation.derivedFrom[x]",0,*,"",""
+"fr-lm-observation.hasMember[x]","fr-lm-observation.hasMember[x]","","","",0,*,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-laboratory-observation {[]} {[]}
+https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-observation {[]} {[]}","Cette observation est un groupe d'observations (par exemple, une batterie de tests, un ensemble de mesures de signes vitaux).","Cette observation est un groupe d'observations (par exemple, une batterie de tests, un ensemble de mesures de signes vitaux).","","","","","","","","","",,,,,"",,,,"fr-lm-observation.hasMember[x]",0,*,"",""

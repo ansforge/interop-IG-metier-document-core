@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="FROrderLMCDAFHIR"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ConceptMap FROrderLMCDAFHIR</b></p><a name="en-FROrderLMCDAFHIR"> </a><a name="en-hcFROrderLMCDAFHIR"> </a><p>This mapping does not specify any particular context of use.</p><br/><p><b>Group 1 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order</code> to <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-inFulfillment-of</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMOrder</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf</td><td/></tr><tr><td>FRLMOrder.orderId</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf.order.id</td><td/></tr><tr><td>FRLMOrder.accessionNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>inFulfillmentOf.order.ps3-20:accessionNumber</td><td/></tr><tr><td>FRLMOrder.orderDateAndTime</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter sa date.</td></tr><tr><td>FRLMOrder.orderPlacer</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur.</td></tr><tr><td>FRLMOrder.orderReason</td><td colspan="2" style="background-color: #efefef">(not mapped)</td><td style="background-color: #efefef">inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif.</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <code>https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order</code> to <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequestversion: 4.0.1)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>FRLMOrder</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest (A request for a service to be performed)</td><td>Référencé depuis Composition.extension:basedOn (event-basedOn.value[x]).</td></tr><tr><td>FRLMOrder.orderId</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.identifier (Identifiers assigned to this order)</td><td/></tr><tr><td>FRLMOrder.accessionNumber</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.identifier (Identifiers assigned to this order)</td><td>Autre occurrence de ServiceRequest.identifier.</td></tr><tr><td>FRLMOrder.orderDateAndTime</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.authoredOn (Date request signed)</td><td/></tr><tr><td>FRLMOrder.orderPlacer</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.requester (Who/what is requesting service)</td><td>ServiceRequest.requester.resolve().ofType(PractitionerRole, Organization ou Patient).</td></tr><tr><td>FRLMOrder.orderReason</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.reasonCode (Explanation/Justification for procedure or service)</td><td>orderReason peut porter un CodeableConcept simple (porté par ServiceRequest.reasonCode) ou une référence FRLMCondition/FRLMObservation (portée alors par ServiceRequest.reasonReference).</td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FROrderLMCDAFHIR"/>
+  <version value="0.1.0"/>
+  <title value="Mapping Métier/CDA/FHIR : &quot;Prescription&quot;"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-08-13T13:19:20+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Ce ConceptMap présente deux groupes de mapping :&#xA; - Mapping 1 : entre le modèle métier \&quot;FRLMOrder\&quot; et l'élément CDA \&quot;inFulfillmentOf\&quot;&#xA; - Mapping 2 : entre le modèle métier \&quot;FRLMOrder\&quot; et la ressource FHIR \&quot;ServiceRequest\&quot; (référencée depuis Composition via l'extension basedOn)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order"/>
+    <target value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-inFulfillment-of"/>
+    <element>
+      <code value="FRLMOrder"/>
+      <target>
+        <code value="inFulfillmentOf"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderId"/>
+      <target>
+        <code value="inFulfillmentOf.order.id"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.accessionNumber"/>
+      <target>
+        <code value="inFulfillmentOf.order.ps3-20:accessionNumber"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderDateAndTime"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter sa date."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderPlacer"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son demandeur."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderReason"/>
+      <target>
+        <equivalence value="unmatched"/>
+        <comment value="inFulfillmentOf ne référence l'order que par id/accessionNumber, sans porter son motif."/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-order"/>
+    <target value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <targetVersion value="4.0.1"/>
+    <element>
+      <code value="FRLMOrder"/>
+      <target>
+        <code value="ServiceRequest"/>
+        <equivalence value="equivalent"/>
+        <comment value="Référencé depuis Composition.extension:basedOn (event-basedOn.value[x])."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderId"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.accessionNumber"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="Autre occurrence de ServiceRequest.identifier."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderDateAndTime"/>
+      <target>
+        <code value="ServiceRequest.authoredOn"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderPlacer"/>
+      <target>
+        <code value="ServiceRequest.requester"/>
+        <equivalence value="equivalent"/>
+        <comment value="ServiceRequest.requester.resolve().ofType(PractitionerRole, Organization ou Patient)."/>
+      </target>
+    </element>
+    <element>
+      <code value="FRLMOrder.orderReason"/>
+      <target>
+        <code value="ServiceRequest.reasonCode"/>
+        <equivalence value="relatedto"/>
+        <comment value="orderReason peut porter un CodeableConcept simple (porté par ServiceRequest.reasonCode) ou une référence FRLMCondition/FRLMObservation (portée alors par ServiceRequest.reasonReference)."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,145 @@
+# Mapping FRLMFunctionalStatus → FRCDAStatutFonctionnel / FRLMFunctionalStatus → FRCompositionDocument.section:sectionFunctionalStatus - FR Document Core (Modèle métier) v0.1.0
+
+## ConceptMap: Mapping FRLMFunctionalStatus → FRCDAStatutFonctionnel / FRLMFunctionalStatus → FRCompositionDocument.section:sectionFunctionalStatus 
+
+ 
+Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:sectionFunctionalStatus. 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ConceptMap",
+  "id" : "FRSectionFunctionalStatusLMCDAFHIR",
+  "url" : "https://interop.esante.gouv.fr/ig/document-core/ConceptMap/FRSectionFunctionalStatusLMCDAFHIR",
+  "version" : "0.1.0",
+  "title" : "Mapping Métier/CDA/FHIR : \"Statut fonctionnel\"",
+  "status" : "draft",
+  "date" : "2026-08-14T14:32:48+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Mapping des éléments du modèle métier FRLMFunctionalStatus vers la section CDA FRCDAStatutFonctionnel, puis vers la section FHIR FRCompositionDocument.section:sectionFunctionalStatus.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "group" : [{
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-functional-status",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-cda-statut-fonctionnel",
+    "element" : [{
+      "code" : "FRLMFunctionalStatus",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.codeSection",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.titleSection",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.description",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.author",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.author",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.informant",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.informant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.entry.assessment",
+      "target" : [{
+        "code" : "FRCDAStatutFonctionnel.entry:FRCDAGroupDeQuestionnairesDEvaluation",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-lm-functional-status",
+    "target" : "https://interop.esante.gouv.fr/ig/document/core/StructureDefinition/fr-composition-document",
+    "element" : [{
+      "code" : "FRLMFunctionalStatus",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionFunctionalStatus",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.codeSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionFunctionalStatus.code",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.titleSection",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionFunctionalStatus.title",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.description",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionFunctionalStatus.text",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.author",
+      "target" : [{
+        "code" : "FRCompositionDocument.author",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.informant",
+      "target" : [{
+        "code" : "FRCompositionDocument.extension:informant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "FRLMFunctionalStatus.entry.assessment",
+      "target" : [{
+        "code" : "FRCompositionDocument.section:sectionFunctionalStatus.entry:FRObservationAssessmentDocument",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}
+
+```

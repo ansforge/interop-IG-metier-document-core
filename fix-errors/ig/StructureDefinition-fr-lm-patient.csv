@@ -1,0 +1,39 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"fr-lm-patient","fr-lm-patient","","","",1,1,"","","","null {[]} {[]}
+","Logical model - FR LM Patient","Patient/Usager concerné par le document.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"fr-lm-patient.identifier","fr-lm-patient.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifiant du patient / usager.
+- Première occurrence obligatoire pour un document mis en partage dans un système d’information de santé partagé : Matricule INS du patient/usager tel que défini dans le cadre juridique.
+- Occurrence(s) suivante(s) (optionnelles) : Identifiant connu pour le patient/usager dans le système d’information du producteur du document (IPP, NIP, etc.).","Identifiant du patient / usager.
+- Première occurrence obligatoire pour un document mis en partage dans un système d’information de santé partagé : Matricule INS du patient/usager tel que défini dans le cadre juridique.
+- Occurrence(s) suivante(s) (optionnelles) : Identifiant connu pour le patient/usager dans le système d’information du producteur du document (IPP, NIP, etc.).","","","","","","","","","",,,,,"",,,,"fr-lm-patient.identifier",1,*,"",""
+"fr-lm-patient.address","fr-lm-patient.address","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale du patient/usager.","Adresse géopostale du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.address",0,*,"",""
+"fr-lm-patient.telecom","fr-lm-patient.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","Coordonnées télécom du patient/usager (numéro de téléphone, adresse e-mail, …).","","","","","","","","","",,,,,"",,,,"fr-lm-patient.telecom",0,*,"",""
+"fr-lm-patient.name","fr-lm-patient.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-human-name {[]} {[]}
+","Noms et prénoms du patient/usager.","Noms et prénoms du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.name",1,1,"",""
+"fr-lm-patient.administrativeGender","fr-lm-patient.administrativeGender","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Sexe administratif du patient/usager.","Sexe administratif du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.administrativeGender",1,1,"",""
+"fr-lm-patient.dateOfBirth","fr-lm-patient.dateOfBirth","","","",1,1,"","","","dateTime {[]} {[]}
+","Date et heure de naissance du patient/usager.","Date et heure de naissance du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.dateOfBirth",1,1,"",""
+"fr-lm-patient.deceased[x]","fr-lm-patient.deceased[x]","","","",0,1,"","","","boolean {[]} {[]}
+dateTime {[]} {[]}","Patient/usager décédé / Date et heure du décès.","Patient/usager décédé / Date et heure du décès.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.deceased[x]",0,1,"",""
+"fr-lm-patient.multipleBirth[x]","fr-lm-patient.multipleBirth[x]","","","",0,1,"","","","boolean {[]} {[]}
+integer {[]} {[]}","Patient/usager né d'une grossesse multiple / Nombre d'ordres de naissance.","Patient/usager né d'une grossesse multiple / Nombre d'ordres de naissance.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.multipleBirth[x]",0,1,"",""
+"fr-lm-patient.birthPlace","fr-lm-patient.birthPlace","","","",0,1,"","","","Address {[]} {[]}
+","Lieu de naissance.
+  - Obligatoire si le matricule INS est présent pour porter le code officiel géographique (COG) du lieu de naissance.
+  - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager.","Lieu de naissance.
+  - Obligatoire si le matricule INS est présent pour porter le code officiel géographique (COG) du lieu de naissance.
+  - Le lieu de naissance est constitué du nom et/ou de l’adresse du lieu de naissance du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.birthPlace",0,1,"",""
+"fr-lm-patient.contact","fr-lm-patient.contact","","","",0,*,"","","","Base {[]} {[]}
+","Représentant du patient/usager.","Représentant du patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.contact",0,*,"",""
+"fr-lm-patient.contact.address","fr-lm-patient.contact.address","","","",0,*,"","","","Address {[]} {[]}
+","Adresse géopostale.","Adresse géopostale.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.contact.address",0,*,"",""
+"fr-lm-patient.contact.telecom","fr-lm-patient.contact.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","Coordonnées télécom.","Coordonnées télécom.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.contact.telecom",0,*,"",""
+"fr-lm-patient.contact.name","fr-lm-patient.contact.name","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-human-name {[]} {[]}
+","Noms et Prénoms du représentant.","Noms et Prénoms du représentant.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.contact.name",1,1,"",""
+"fr-lm-patient.contact.organization","fr-lm-patient.contact.organization","","","",0,1,"","","","https://interop.esante.gouv.fr/ig/document-core/StructureDefinition/fr-lm-organisation {[]} {[]}
+","Structure représentant le patient/usager.","Structure représentant le patient/usager.","","","","","","","","","",,,,,"",,,,"fr-lm-patient.contact.organization",0,1,"",""
